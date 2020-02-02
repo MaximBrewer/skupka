@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" method="upgrade" group="slogin_auth">
+	<name>Social Login Facebook auth</name>
+	<author>Arkadiy, Joomline</author>
+	<creationDate>28.01.2019</creationDate>
+	<copyright>(C) 2012-2019. All rights reserved.</copyright>
+	<license>GNU/GPL v.3 or later.</license>
+	<authorEmail></authorEmail>
+	<authorUrl>http://joomline.ru</authorUrl>
+	<version>1.2.0</version>
+	<description>Facebook auth</description>
+	<files>
+		<filename plugin="facebook">facebook.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>element</folder>
+	</files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="plugins/slogin_auth/facebook/element">
+                <field name="id" type="text" default=""
+                       description="Facebook Application Id"
+                       label="App ID/API Key"
+                        />
+                <field name="password" type="text" default=""
+                       description="Facebook Application Secret"
+                       label="Secret"
+                        />
+                <field
+                        name="callback_url"
+                        type="callbackurl"
+                        label="Callback URI"
+                        description="Callback URI"
+                        filter="unset"
+                        value="facebook"
+                        readonly="true"
+                        class="readonly"
+                        />
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>

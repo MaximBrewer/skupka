@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+		<creationDate>January 2017</creationDate>
+		<name>Vdata Display</name>
+		<author>Team WDMtech</author>
+		<version>1.0.1</version>
+    <description>Vdata Display</description>
+    <files>
+        <filename>mod_vdisplay.xml</filename>
+        <filename module="mod_vdisplay">mod_vdisplay.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+		<folder>css</folder>
+		<folder>language</folder>
+        <filename>tmpl/index.html</filename>
+    </files>
+    <config>
+	<fields name="params">
+		<fieldset name="basic">
+			<field 
+				name="displayid"
+				type="sql"
+				query="SELECT id,title FROM #__vd_display where state=1"
+				label="COM_VDATA_DISPLAY"
+				description="COM_VDATA_DISPLAY_DESC"
+				key_field="id"
+				value_field="title"
+				required="true"
+			/>
+			
+			
+		</fieldset>
+	</fields>
+    </config>
+</extension>

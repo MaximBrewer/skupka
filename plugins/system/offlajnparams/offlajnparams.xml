@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" version="2.5" method="upgrade">
+	<name>System - Offlajn Params</name>
+	<description></description>
+	<version>1.2.1</version>
+	<creationDate>Marc 2016</creationDate>
+	<author>Balint Polgarfi</author>
+	<authorEmail>info@offlajn.com</authorEmail>
+	<authorUrl>http://offlajn.com</authorUrl>
+	<copyright>Copyright (C) Offlajn.com</copyright>
+	<license>http://www.gnu.org/licenseses/gpl-2.0.html GNU/GPL</license>
+	<files>
+		<folder>compat</folder>
+		<filename plugin="offlajnparams">offlajnparams.php</filename>
+		<filename>offlajnjoomlacompat.php</filename>
+		<filename>tab15.tpl.php</filename>
+		<filename>tab16.tpl.php</filename>
+		<filename>offlajnparams.xml</filename>
+		<filename>index.html</filename>
+		<filename>menuloader.php</filename>
+		<filename>imageuploader.php</filename>
+		<filename>formrenderer.php</filename>
+		<filename>importexport.php</filename>
+		<filename>relatednews.php</filename>
+		<filename>generalinfo.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="gsap_cdn" type="radio" default="0" label="Load GSAP from CDN">
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

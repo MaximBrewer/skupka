@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade" client="admin">
+    <name>com_unitegallery</name>
+    <creationDate>July 2014</creationDate>
+    <author>Unite CMS / Valiano</author>
+	<copyright>Copyright (C) 2014 UniteCMS.net / Valiano, All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>support@unitecms.net</authorEmail>
+	<authorUrl>http://unitecms.net</authorUrl>
+    <version>1.7.46b1</version>
+	
+	<description>
+		Unite Gallery extension and module installation success! Thank you for purchasing on Joomlok.com
+	</description>
+	
+	<install>
+		<sql>
+            <file charset="utf8" driver="mysql">sql/install.sql</file>
+        </sql>
+    </install>
+	
+	<uninstall>
+		<sql>
+            <file charset="utf8" driver="mysql">sql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+		
+	<media destination="com_unitegallery" folder="media">
+		<filename>index.html</filename>
+		<folder>cache</folder>
+		<folder>assets</folder>
+	</media>
+	
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>unitegallery.php</filename>
+	</files>
+	
+    <administration>
+    	
+    	<menu img="components/com_unitegallery/images/icon-16-unitegallery.png">com_unitegallery</menu>
+		
+		<submenu>
+			
+			<menu link="option=com_unitegallery" view="galleries"
+				alt="UniteGallery / Galleries">COM_UNITEGALLERY_GALLERIES</menu>
+			
+			<menu link="option=com_unitegallery&amp;view=items"
+				view="items" alt="UniteGallery / Items">COM_UNITEGALLERY_ITEMS</menu>
+			
+			<menu link="option=com_unitegallery&amp;view=settings"
+				view="settings" alt="UniteGallery / Settings">COM_UNITEGALLERY_SETTINGS</menu>
+		
+		</submenu>
+		
+    	<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>		
+			<filename>index.html</filename>
+			<filename>includes.php</filename>
+            <filename>install.php</filename>
+        	<filename>unitegallery.php</filename>			
+        	<filename>unitegallery_admin.php</filename>			
+			<filename>release_log.txt</filename>
+			
+			
+			<folder>css</folder>
+			<folder>fullversion</folder>
+			<folder>galleries</folder>
+			<folder>helpers</folder>
+			<folder>images</folder>
+            <folder>inc_php</folder>
+            <folder>js</folder>
+            <folder>language</folder>
+            <folder>libraries</folder>
+            <folder>settings</folder>
+            <folder>sql</folder>
+            <folder>views</folder>
+        </files>
+        
+    </administration>
+	
+	<modules>
+		<module folder="modules" module="mod_unite_gallery" name="Unite Gallery" />
+	</modules>
+
+	<plugins>
+		<plugin folder="plugins" plugin="unitegallery" name="Unite Gallery Plugin" />
+	</plugins>	
+	
+	<scriptfile>install.php</scriptfile>
+	
+</extension>

@@ -1,0 +1,15 @@
+/** Сообщение благодарности **/
+
+.sys-messages {
+    padding: 15px;
+    text-align: center;
+}
+.success-title {
+    color: #1FAD21;
+    font-size: 22px;
+    margin: 0 0 15px;
+}
+.success-text {
+    color: #333;
+    font-size: 14px;
+}

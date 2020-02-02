@@ -1,0 +1,5 @@
+<root>
+    <params name="filter" label="Filter">
+        <param name="username" type="text" label="Username"/>
+    </params>
+</root>

@@ -1,0 +1,36 @@
+/* CSS file for hsexpander plugin popup */
+
+.mceActionPanel {
+	margin-top: 7px;
+}
+
+.ui-tabs-panel {
+	height: 692px;
+}
+
+.panel_wrapper div.current {
+	height: 600px;
+	overflow: auto;
+}
+
+#classlist, #title, #href, #src, #psrc, #imgtitle, #headingtext, #alt, #captiontext, #targetlist, .link-items {
+	width: 320px;
+}
+
+#caption, #heading, #overlay {
+	width: 500px;
+}
+
+#id, #style, #imgid, #imgclass, #imgstyle, #divid, #wrapperclass,
+#captionstyle, #headingstyle, #overlaystyle, #thumbid, #overlayid,
+#headingid, #captionid, #thumbnailid, #slideshowgroup,
+#coclassname, #hoclassname, #ovclassname {
+	width: 200px;
+}
+
+label {
+	min-width: 2px;
+}
+td.nowrap {
+	white-space: nowrap;
+}

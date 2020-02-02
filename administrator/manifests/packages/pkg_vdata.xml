@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5" method="upgrade">
+<name>vData Package</name>
+<packagename>vdata</packagename>
+<creationDate>25th June 2018</creationDate>
+<author>Team WDMtech</author>
+<authorEmail>support@wdmtech.com</authorEmail>
+<copyright>Copyright (C) 2014 - 2018 wdmtech.com. All Rights Reserved.</copyright>
+<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+<version>2.9.23</version>
+<packager>WDMTech</packager>
+<packagerurl>http://www.wdmtech.com</packagerurl>
+<description></description>
+<scriptfile>script.php</scriptfile>
+<files>
+	<file type="component" id="com_vdata" >com_vdata.zip</file>
+	<file type="plugin" id="custom" group="vdata">custom.zip</file>
+	<file type="module" id="mod_vdata_admin_menu" client="administrator">mod_vdata_admin_menu.zip</file>
+	<file type="module" id="mod_vdata_icons" client="administrator">mod_vdata_icons.zip</file>
+	<file type="module" id="mod_widget" client="site">mod_widget.zip</file>
+	<file type="module" id="mod_vdisplay" client="site">mod_vdisplay.zip</file>
+</files>
+</extension>

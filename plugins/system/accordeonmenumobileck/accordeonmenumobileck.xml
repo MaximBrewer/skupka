@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>System - AccordeonMenu Mobile CK</name>
+	<author>Cédric KEIFLIN</author>
+	<creationDate>Janvier 2013</creationDate>
+	<copyright>Cédric KEIFLIN</copyright>
+	<license>http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>ced1870@gmail.com</authorEmail>
+	<authorUrl>http://www.joomlack.fr</authorUrl>
+	<version>1.1.7</version>
+	<description>PLG_ACCORDEONMENUMOBILECK_XML_DESC</description>
+	<files>
+		<filename plugin="accordeonmenumobileck">accordeonmenumobileck.php</filename>
+		<filename>index.html</filename>
+		<filename>Mobile_Detect.php</filename>
+		<folder>assets</folder>
+		<folder>language</folder>
+		<folder>themes</folder>
+		<folder>params</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_accordeonmenumobileck.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_accordeonmenumobileck.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.plg_system_accordeonmenumobileck.sys.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.plg_system_accordeonmenumobileck.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_accordeonck/elements">
+				<field
+					name="accordeonmobile_detectiontype"
+					type="cklist"
+					default="resolution"
+					label="PLG_ACCORDEONMENUMOBILECK_DETECTIONTYPE_LABEL"
+					description="PLG_ACCORDEONMENUMOBILECK_DETECTIONTYPE_DESC"
+					icon="application_form_magnify.png"
+				>
+					<option value="resolution">PLG_ACCORDEONMENUMOBILECK_RESOLUTION</option>
+					<option value="tablet">PLG_ACCORDEONMENUMOBILECK_TABLET</option>
+					<option value="phone">PLG_ACCORDEONMENUMOBILECK_PHONE</option>
+				</field>
+				<field
+					name="accordeonmobile_resolution"
+					type="cktext"
+					label="PLG_ACCORDEONMENUMOBILECK_RESOLUTION_LABEL"
+					description="PLG_ACCORDEONMENUMOBILECK_RESOLUTION_DESC"
+					icon="width.png"
+					suffix="px"
+					default="640" 
+				/>
+				<field
+					name="accordeonmobile_theme"
+					type="ckfolderlist"
+					directory="plugins/system/accordeonmenumobileck/themes"
+					hide_none="true"
+					hide_default="true"
+					default="default"
+					label="PLG_ACCORDEONMENUMOBILECK_THEME_LABEL"
+					description="PLG_ACCORDEONMENUMOBILECK_THEME_DESC"
+					icon="palette.png" 
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.0" client="administrator" method="upgrade">
+	<name>mod_vdata_admin_menu</name>
+	<author>Team WDMTech</author>
+	<creationDate>January 2016</creationDate>
+	<copyright>Copyright (C) 2016 www.wdmtech.com. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@wdmtech.com</authorEmail>
+	<authorUrl>www.wdmtech.com</authorUrl>
+	<version>1.0.1</version>
+	<description>MOD_VDATA_MENU_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_vdata_admin_menu">mod_vdata_admin_menu.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

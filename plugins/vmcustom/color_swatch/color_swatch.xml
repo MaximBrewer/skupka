@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension method="upgrade" version="3.1" type="plugin" group="vmcustom" >
+    <name>Color Swatch Plugin for Virtuemart</name>
+    <creationDate>2016</creationDate>
+    <author>CmsMart Team</author>
+    <authorUrl>http://cmsmart.net</authorUrl>
+    <copyright>Copyright (C) 2012 Virtuemart Team. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>2.7.0</version>
+    <description>
+		<![CDATA[ 
+			<link href="../plugins/vmcustom/color_swatch/assets/css/style-font.css" rel="stylesheet" type="text/css" media="all" />
+			<link href="../plugins/vmcustom/color_swatch/assets/css/admin/style.css" rel="stylesheet" type="text/css" media="all" />	
+    		<script src="../plugins/vmcustom/color_swatch/assets/js/admin.js"></script>
+		]]>
+	</description>
+
+    <files>
+        <filename plugin="color_swatch">color_swatch.php</filename>
+        <folder>assets</folder>
+		<folder>color_swatch</folder>
+		<folder>helpers</folder>
+		<folder>uploads</folder>
+    </files>
+    
+    <languages>
+		<language tag="en-GB">language/en-GB.plg_vmcustom_color_swatch.ini</language>
+	</languages>
+	
+    <params addpath="/administrator/components/com_virtuemart/elements">
+        <param type="vmjpluginwarning" />
+        <param name="name" type="text" size="20"  default="" label="PLG_COLORSWATCH_NAME" description="PLG_COLORSWATCH_NAME_DES" />
+    </params>
+	
+    <vmconfig>
+		<fields name="params" addfieldpath="plugins/vmcustom/color_swatch/elements">
+			<fieldset name="basic">
+				<field name="style_thumbnail" type="radio" description="PLG_COLORSWATCH_STYLE_DES" label="PLG_COLORSWATCH_STYLE" default="square">	
+					<option value="square">JSQUARE</option>
+					<option value="circle">JCIRCLE</option>
+				</field>
+				
+				<field name="widthth" type="text" description="PLG_COLORSWATCH_WIDTH_DES" label="PLG_COLORSWATCH_WIDTH" default="50" size="30"/>
+				<field name="heightth" type="text" description="PLG_COLORSWATCH_HEIGHT_DES" label="PLG_COLORSWATCH_HEIGHT" default="50" size="30"/>
+
+				<field class="cms_switch5" name="loadjs" type="list" default="0" label="PLG_COLORSWATCH_LOADJS" description="PLG_COLORSWATCH_LOADJS_DES">
+				  <option value="0">No</option>
+				  <option value="1">Yes</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field name="widths" type="text" description="PLG_COLORSWATCH_WIDTHS_DES" label="PLG_COLORSWATCH_WIDTHS" default="50" size="30"/>
+				<field name="heights" type="text" description="PLG_COLORSWATCH_HEIGHTS_DES" label="PLG_COLORSWATCH_HEIGHTS" default="50" size="30"/>	
+				
+				<field name="show_type" type="radio" description="PLG_COLORSWATCH_SHOWTYPE_DES" label="PLG_COLORSWATCH_SHOWTYPE" default="horizontal">	
+					<option value="horizontal">JHORIZONTAL</option>
+					<option value="vertical">JVERTICAL</option>
+				</field>
+				
+				<field class="cms_switch3" name="show_title_cs" type="list" description="PLG_COLORSWATCH_SHOWTITLE_DES" label="PLG_COLORSWATCH_SHOWTITLE" default="1">	
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field class="cms_switch4" name="show_tooltip" type="list" description="PLG_COLORSWATCH_SHOWTOOLTIP_DES" label="PLG_COLORSWATCH_SHOWTOOLTIP" default="1">	
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="zoom" label="COLOR_ZOOM_OPTION">
+				<field name="usezoom" type="list" description="PLG_COLORSWATCH_USEZOOM_DES" label="PLG_COLORSWATCH_USEZOOM" default="1">	
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="widthp" type="text" description="PLG_COLORSWATCH_WIDTHP_DES" label="PLG_COLORSWATCH_WIDTHP" default="300" size="30"/>
+				<field name="heightp" type="text" description="PLG_COLORSWATCH_HEIGHTP_DES" label="PLG_COLORSWATCH_HEIGHTP" default="300" size="30"/>
+			</fieldset>
+		</fields>
+	</vmconfig>
+</extension>

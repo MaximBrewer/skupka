@@ -1,0 +1,44 @@
+ .chzn-container-multi .chzn-choices .search-field input {
+	 height: 25px; 
+	} 
+	#panel82 {
+	  float: left; 
+	  clear: both; 
+	  max-width: 100%; 
+	}
+	#panel82 fieldset.adminformF {
+	 overflow-x: scroll !important; 
+	 display: block; 
+	     min-width: 100px; 
+	}
+	iframe {
+	  width: 95%; 
+	  height: 300px;
+	  border: 1px solid #ddd; 
+	}
+	.op_color_codes {
+	 min-width: 100px; 
+	}
+	.chzn-container, .chzn-container-multi, .chzn-container-active, .chzn-drop, .chzn-drop .chzn-search, .chzn-drop .chzn-search input, .search-field input
+	 {
+			min-width: 150px; 
+	 }
+	fieldset.adminform select {
+	 max-width: 170px; 
+	}
+	fieldset.adminform {
+	  overflow: visible !important; 
+	  width: auto !important; 
+	}
+		#opc_config_wrapper form#adminForm  dd {
+		  display: none; 
+		}
+		
+		#table_thankyou_config select, #ttable_thankyou_config select {
+		 max-width: 120px; 
+		}
+
+table.admintable > tbody > tr:hover, table.admintable > tbody > tr:hover td, table.table > tbody > tr:hover, table.table > tbody  > tr:hover td {
+	background-color: #eee !important; 
+}
+		

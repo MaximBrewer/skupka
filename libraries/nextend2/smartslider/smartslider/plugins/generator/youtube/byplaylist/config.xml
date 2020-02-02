@@ -1,0 +1,5 @@
+<root>
+    <params name="filter" label="Filter">
+        <param name="playlist-id" label="Playlist" type="youtubeplaylistbyuser" default=""/>
+    </params>
+</root>

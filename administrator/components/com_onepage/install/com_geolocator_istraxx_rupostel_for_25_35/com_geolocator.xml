@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+	<name>GeoLocator</name>
+	<!-- The following elements are optional and free of formatting conttraints -->
+	<creationDate>2012-1-03</creationDate>
+	<author>RuposTel s.r.o. and Max Milbers</author>
+	<authorEmail>extensions@virtuemart.net</authorEmail>
+	<authorUrl>http://extensions.virtuemart.net</authorUrl>
+	<copyright>RuposTel.com (c) and iStraxx UG (haftungsbeschränkt)</copyright>
+	<license>GPL for the php code and OPEN DATA LICENSE (GeoLite Country and GeoLite City databases)</license>
+	<!--  The version string is recorded in the components table -->
+	<version>10.346.1454</version>
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+
+	<!-- The description is optional and defaults to the name -->
+	<description><![CDATA[
+	GeoLocator Helper Component
+	<script type="text/javascript">
+	 window.location = 'index.php?option=com_geolocator&firstrun=true';
+	</script>
+	]]></description>
+
+	<!-- Site Main File Copy Section -->
+	<!-- Note the folder attribute: This attribute describes the folder
+      to copy FROM in the package to install therefore files copied
+      in this section are copied from /site/ in the package -->
+	<installfile>uninstall.geolocator.php</installfile> 
+	<uninstallfile>uninstall.geolocator.php</uninstallfile> 
+	<files folder="site">
+	 <filename>geolocator.php</filename>
+	</files>
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu view="default" link="option=com_geolocator">COM_GEOLOCATOR</menu>
+		<languages>
+			<language tag="en-GB">language/en-GB/en-GB.com_geolocator.menu.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_geolocator.sys.ini</language>
+		</languages>
+
+		<!-- Administration Main File Copy Section -->
+		<files>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>assets</folder>
+			<folder>config</folder>
+			<folder>controllers</folder>
+			<folder>views</folder>
+			<filename>admin.geolocator.php</filename>
+			<filename>geolocator.php</filename>
+			<filename>controllerBase.php</filename>
+			<filename>admin.geolocator.php</filename>
+		</files>  
+	</administration>
+	<scriptfile>uninstall.geolocator_j17.php</scriptfile>
+</extension>

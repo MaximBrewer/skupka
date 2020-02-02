@@ -1,0 +1,152 @@
+
+				
+/*---------------------------------------------
+---	 Module styles from Accordeon CK Params     ---
+----------------------------------------------*/
+
+#accordeonck124 {
+	 padding:0;
+	margin:0;
+	background: #32323C;
+	background-color: #32323C;
+	-moz-border-radius: 8px 8px 8px 8px;
+	-webkit-border-radius: 8px 8px 8px 8px;
+	border-radius: 8px 8px 8px 8px;
+	-moz-box-shadow: 0px 5px 5px -5px #878787;
+	-webkit-box-shadow: 0px 5px 5px -5px #878787;
+	box-shadow: 0px 5px 5px -5px #878787;
+	border-top: #D2D2D2 1px solid ;
+	border-right: #D2D2D2 1px solid ;
+	border-bottom: #D2D2D2 1px solid ;
+	border-left: #D2D2D2 1px solid ;
+	 } 
+#accordeonck124 li.accordeonck {
+	 list-style: none;
+	overflow: hidden;
+	 }
+#accordeonck124 ul[class^="content"] {
+	 margin:0;
+	padding:0;
+	 }
+#accordeonck124 li.accordeonck > span {
+	 position: relative;
+	 display: block;
+	 }
+#accordeonck124 li.accordeonck.parent > span {
+	 padding-right: 20px;
+	}
+#accordeonck124 li.parent > span span.toggler_icon {
+	 position: absolute;
+	 cursor: pointer;
+	 display: block;
+	 height: 100%;
+	 z-index: 10;
+	right:0;
+	 background: url(/joomla3_dev/modules/mod_accordeonck/assets/white_plus_11x12.png) center center no-repeat !important;
+	width: 20px;
+	}
+#accordeonck124 li.parent.open > span span.toggler_icon {
+	 right:0;
+	 background: url(/joomla3_dev/modules/mod_accordeonck/assets/white_minus_11x12.png) center center no-repeat !important;
+	}
+#accordeonck124 li.accordeonck.level2 > span {
+	 padding-right: 0px;
+	}
+#accordeonck124 li.level3 li.accordeonck > span {
+	 padding-right: 0px;
+	}
+#accordeonck124 a.accordeonck {
+	 display: block;
+	text-decoration: none;
+	 color: #FFFFFF;
+	}
+#accordeonck124 a.accordeonck:hover {
+	 text-decoration: none;
+	 color: #39DFDD;
+	}
+#accordeonck124 li.parent > span a {
+	 display: block;
+	outline: none;
+	 }
+#accordeonck124 li.parent.open > span a {
+	  }
+#accordeonck124 li.level1 > span {
+	 border-bottom: #4A4A59 1px solid ;
+	 } 
+#accordeonck124 li.level1 > span a {
+	 padding-top: 15px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	color: #FFFFFF;
+	 } 
+#accordeonck124 li.level1:hover > span {
+	 background: rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.1);
+	 } 
+#accordeonck124 li.level1:hover > span a {
+	 color: #39DFDD;
+	 } 
+#accordeonck124 li.level1.active > span {
+	 background: rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.1);
+	 } 
+#accordeonck124 li.level1.active > span a {
+	 color: #39DFDD;
+	 } 
+#accordeonck124 li.level1 > ul {
+	 background: #FFFFFF;
+	background-color: #FFFFFF;
+	 } 
+#accordeonck124 li.level2 > span {
+	 border-bottom: #E2E2E2 1px solid ;
+	 } 
+#accordeonck124 li.level2 > span a {
+	 padding-top: 13px;
+	padding-right: 10px;
+	padding-bottom: 13px;
+	padding-left: 20px;
+	color: #7E7E7E;
+	 } 
+#accordeonck124 li.level2:hover > span {
+	 background: rgba(0,0,0,0.05);
+	background-color: rgba(0,0,0,0.05);
+	 } 
+#accordeonck124 li.level2:hover > span a {
+	 color: #393939;
+	 } 
+#accordeonck124 li.level2.active > span {
+	 background: rgba(0,0,0,0.05);
+	background-color: rgba(0,0,0,0.05);
+	 } 
+#accordeonck124 li.level2.active > span a {
+	 color: #393939;
+	 } 
+#accordeonck124 li.level2 ul[class^="content"] {
+	 background: #F3F3F3;
+	background-color: #F3F3F3;
+	 } 
+#accordeonck124 li.level2 li.accordeonck > span {
+	 border-bottom: #E8E8E8 1px solid ;
+	 } 
+#accordeonck124 li.level2 li.accordeonck > span a {
+	 padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	color: #9E9E9E;
+	 } 
+#accordeonck124 li.level2 li.accordeonck:hover > span {
+	 background: rgba(0,0,0,0.05);
+	background-color: rgba(0,0,0,0.05);
+	 } 
+#accordeonck124 li.level2 li.accordeonck:hover > span a {
+	 color: #696969;
+	 } 
+#accordeonck124 li.level2 li.accordeonck.active > span {
+	 background: rgba(0,0,0,0.05);
+	background-color: rgba(0,0,0,0.05);
+	 } 
+#accordeonck124 li.level2 li.accordeonck.active > span a {
+	 color: #696969;
+	 } []

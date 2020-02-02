@@ -1,0 +1,39 @@
+<root>
+    <params name="k2items" label="Filter">
+        <param type="group" label="Source">
+            <param name="k2itemssourcecategories" label="Categories" type="k2categories" default="0" multiple="1"
+                   size="10"/>
+            <param name="k2itemssourcetags" label="Tags" type="k2tags" default="0" multiple="1"
+                   size="10"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="k2itemssourcefeatured" label="Featured" type="filter" default="0"/>
+            <param name="k2itemssourceuserid" label="User id" type="text" default=""/>
+            <param name="k2itemssourcelanguage" label="Language filter" type="text" default=""/>
+            <param name="k2itemsitemid" label="Target menuitem for urls (item ID)" type="menuitems" default="0"/>
+        </param>
+        <param type="group" label="Date and time">
+            <param name="sourcedateformat" label="Date format" type="text" default="Y-m-d"/>
+            <param name="sourcetimeformat" label="Time format" type="text" default="G:i"/>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="k2itemsorder" type="mixed" label="Order" default="con.created|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="con.title">Title</option>
+                <option value="cat_title">Category title</option>
+                <option value="created_by_alias">User name</option>
+                <option value="con.featured">Featured</option>
+                <option value="con.ordering">Ordering</option>
+                <option value="con.hits">Hits</option>
+                <option value="con.created">Creation time</option>
+                <option value="con.modified">Modification time</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

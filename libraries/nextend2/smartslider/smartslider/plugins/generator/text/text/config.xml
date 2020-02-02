@@ -1,0 +1,6 @@
+<root>
+    <params name="filter" label="Filter">
+        <param name="sourcefile" label="Source file URL" type="text" style="width: 300px;"/>
+        <param name="delimiter" label="Delimiter" type="text" default=","/>
+    </params>
+</root>

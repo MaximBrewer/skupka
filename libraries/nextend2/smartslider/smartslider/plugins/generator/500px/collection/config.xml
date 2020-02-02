@@ -1,0 +1,5 @@
+<root>
+    <params name="filter" label="Filter">
+        <param name="collection" label="Collection" type="500pxcollections" default=""/>
+    </params>
+</root>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0" method="upgrade">
+	<name>Maximenu CK Params Package</name>
+	<author>Cédric KEIFLIN</author>
+	<copyright>Copyright (C) 2014. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<creationDate>Avril 2013</creationDate>
+ 	<packagename>maximenuckparams</packagename>
+	 <version>4.1.0</version>
+	 <url>http://www.joomlack.fr</url>
+	 <description>Maximenu CK Params allows you to control your menu, set the columns in the menu item edition, and style your menu in the Maximenu params component.</description>
+	 <files folder="packages">
+		 <file type="component" id="com_maximenu">com_maximenuck_4.1.0.zip</file>
+		 <file type="plugin" id="maximenuckparams" client="site" folder="system">maximenuckparams_4.1.0.zip</file>
+	 </files>
+</extension>

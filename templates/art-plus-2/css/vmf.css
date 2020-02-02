@@ -1,0 +1,243 @@
+/*для товаров в категории ----------------------------------------------------------------------------------*/
+
+.ssilki_vir1 A:link, .ssilki_vir1 A:visited, .ssilki_vir1 A:active {
+
+	Text-decoration: underline;
+
+	color: #555555;
+
+	font-weight: bold;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 16px;
+
+}
+
+.ssilki_vir1 A:hover {
+
+	Text-decoration: none;
+
+	color: #555555;
+
+	font-weight: bold;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 16px;
+
+}
+
+.wmvo_otstyp {
+	width: 200px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 30px;
+}
+
+.wmvo_vnewnaa_granica {
+
+	padding: 5px;
+
+	border: 1px solid #d2d2d2;
+
+}
+
+
+.wmvo_nazvanie {
+
+
+}
+.wmvo_izobrajenie {
+	height: 150px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.wmvo_izobrajenie2 {
+	width: 190px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.wmvo_nazvanie_kategoria {
+	text-align: center;
+	display: table-cell;
+	height: 50px;
+	vertical-align: middle;
+}
+.wmvo_nazvanie_kategoria_2 {
+	width: 190px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.wmvo_kratkoe_opisanie {
+	text-align: center;
+}
+.wmvo_cena {
+	text-align: center;
+}
+.wmvo_kypit {
+	text-align: center;
+}
+.tovar_izpbrajenie {
+	width: 250px;
+	float: left;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+.tovar_right_bloc {
+	float: left;
+}
+
+.tovar_nazvanie {
+	margin-bottom: 15px;
+}
+.tovar_cena {
+	margin-bottom: 15px;
+}
+.tovar_v_korziny {
+	margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+/*для модуля ----------------------------------------------------------------------------------*/
+.virmod_ssilki_vir1 A:link, .virmod_ssilki_vir1 A:visited, .virmod_ssilki_vir1 A:active {
+	Text-decoration: underline;
+	color: #555555;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+.virmod_ssilki_vir1 A:hover {
+	Text-decoration: none;
+	color: #555555;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+.virmod_otstyp {
+	padding-bottom: 15px;
+	width: 200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.virmod_vnewnaa_granica {
+	padding: 5px;
+	border: 1px solid #d2d2d2;
+}
+.virmod_izobrajenie {
+	text-align: center;
+}
+
+
+/*сопутсвующие товары --------------------------------------------------------------*/
+.product-field-type-R {
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.product-field-type-R img {
+    max-width: 90%;
+    max-height: 100%;
+    height: auto;
+    padding: 10px 0;
+    display: block;
+    margin: 0 auto
+}
+.related-product-image {
+    display: table;
+    width: 100%;
+}
+.related-product-image a {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.kategoria_o .nazvanie {
+	text-align: center;
+}
+.kategoria_o .izobrajenie {
+	text-align: center;
+}
+.cl_bo {
+	clear: both;
+}
+/*товары сеткой списком --------------------------------------------------------------*/
+.product-view-button a{
+    display: inline-block;
+    
+}
+.product-view-button a.active{
+    
+}
+.list-view .product,
+.list-view .spacer{
+    width: 100%;
+}
+.list-view .spacer .vm-product-media-container{
+    width: 20%;
+    float: left;
+}
+.list-view .spacer .vm-product-descr-container{
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+.list-view .spacer .vm-product-descr-container .vm-product-rating-container span{
+    float: left;
+}
+.list-view .spacer .vm-product-detail-container{
+    width: 30%;
+    float: left;
+}
+.product-view-button .setkoi {
+	width: 26px;
+	height: 26px;
+	border: 1px solid #cccccc;
+	background-image: url(../images/setkoi.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.product-view-button .spiskom {
+	width: 26px;
+	height: 26px;
+	border: 1px solid #cccccc;
+	background-image: url(../images/spiskom.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+a.grid.active .setkoi {
+	background-color: #D74346;
+}
+a.list.active .spiskom {
+	background-color: #D74346;
+}
+.product-view-button {
+	width: 20%;
+	float: right;
+	text-align: right;
+}
+.product-view-button span {
+	display: block;
+	width: 50%;
+	float: left;
+	text-align: right;
+	padding-top: 6px;
+	padding-right: 4px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.product-view-button .button_fi {
+	width: 50%;
+	float: left;
+	text-align: left;
+}

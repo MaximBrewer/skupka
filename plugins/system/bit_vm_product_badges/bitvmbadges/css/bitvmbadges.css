@@ -1,0 +1,31 @@
+.product_badge {
+	position:relative;
+}
+.bit_badge_new {
+	position:absolute;
+	z-index:99;
+}
+.bit_badge_sale{
+	position:absolute;
+	z-index:99;
+}
+.bit_badge_discount{
+	position:absolute;
+	z-index:99;
+}
+.bit_badge_hot{
+	position:absolute;
+	z-index:99;
+}
+.bit_badge_lowstock{
+	position:absolute;
+	z-index:99;
+}
+.bit_badge_product{
+	position:absolute;
+	z-index:99;
+}
+.bit_badge_category{
+	position:absolute;
+	z-index:99;
+}

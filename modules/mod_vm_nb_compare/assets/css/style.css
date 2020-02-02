@@ -1,0 +1,40 @@
+.nb_compare{padding:0px!important;position: fixed;z-index:999!important;top:110px;box-shadow:0px 1px 1px 1px #eee;}
+.nb_sort_compare span{width:34px;height:154px;display:inline-block;cursor:pointer;}
+.nb_list_compare{width:250px;border:1px solid #dadada;max-height:500px;min-height:275px;background:#fff;padding:0px!important;font-size:15px!important;}
+.nb_list_compare h3{padding:0px 0px;margin:0px!important;height:30px;line-height:30px!important;text-align:left;background:#3d7aac;color:#fff!important;font-size:10.5pt!important;}
+.nb_list_compare h3 .nb_hide_list{float:left;line-height:30px;cursor:pointer;background:#035685;width:25px;padding:0px 5px 0px 10px;margin:0px 15px 0px 0px;font-size:15px;}
+.nb_list{min-height:210px;max-height:210px;padding:5px 5px;overflow:auto}
+.nb_action{text-align:right;height:35px;padding:0px 0px;line-height:35px;padding-top:10px;margin-bottom:10px;border-top:1px solid #eee}
+.nb_action span{display:inline-block;margin-right:щpx;font-size:14px;color:#fff;cursor:pointer;border:1px solid #eee;padding:0px 15px 0px 10px;background:#3d7aac;}
+.nb_action span:hover{background:#777;}
+.nb_action span i{margin-right:5px;}
+.nb_list .nb_product_compare{height:50px;text-align:left;padding:10px 0px;position:relative;border-bottom:1px solid #eee;}
+.nb_list .nb_product_compare img{float:left;border-left:1px solid #e1e1e1;border-right:1px solid #e1e1e1;padding:0px 3px;border-radius:5px}
+.nb_list .nb_product_compare .nb_name{padding:0px 5px 0px 10px;font-size:12px;display:inline-block;width:140px;line-height:50px;color:#095197;}
+.nb_list .nb_product_compare .nb_remove_product{cursor:pointer;position:absolute;top:25px;right:10px;font-size:12px;color:#555;}
+.nb_list .nb_product_compare .nb_remove_product:hover{color:#000}
+.nb_no-item{position:absolute;top:40%;left:25%}
+.nb_compare_clear_all{margin-right:10px}
+.nb_action i{font-size:14px;}
+.nb_action a:hover{background:none!important;width:0px!important;height:0px!important}
+.box_list_compare{padding:20px}
+.box_list_compare{padding:20px}
+.item_box_product{float:left;width:200px;border:1px solid #eee;border-right:none;}
+.item_box_product:last-child{border-right:1px solid #eee}
+.item_box_product_header{float:left;width:150px;border:1px solid #eee;min-height:19px;border-right:none;}
+.box_list_compare{width:9999px}
+.popup_compare{overflow:auto!important;width:100px!important}
+.nb_list .nb_product_compare .nb_name a{text-decoration:none;color:#333;}
+.nb_list .nb_product_compare .nb_name a:hover{background:none;}
+.remove_loading{display:inline-block;z-index:2000;width: 10px;height: 10px;border:solid 2px transparent;border-top-color: #777;border-left-color: #555;border-radius: 10px;-webkit-animation:pace-spinner 400ms linear infinite;-moz-animation:pace-spinner 400ms linear infinite;-ms-animation:pace-spinner 400ms linear infinite;-o-animation:pace-spinner 400ms linear infinite;animation:pace-spinner 400ms linear infinite;}
+.remove_all_loading>i{display:inline-block;z-index:2000;width: 10px;height: 10px;border:solid 2px transparent;border-top-color: #fff;border-left-color: #fafafa;border-radius: 10px;-webkit-animation:pace-spinner 400ms linear infinite;-moz-animation:pace-spinner 400ms linear infinite;-ms-animation:pace-spinner 400ms linear infinite;-o-animation:pace-spinner 400ms linear infinite;animation:pace-spinner 400ms linear infinite;}
+@-webkit-keyframes pace-spinner{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}}
+@-moz-keyframes pace-spinner{0%{-moz-transform:rotate(0deg);transform:rotate(0deg);}
+100%{-moz-transform:rotate(360deg);transform:rotate(360deg);}}
+@-o-keyframes pace-spinner{0%{-o-transform:rotate(0deg);transform:rotate(0deg);}
+100%{-o-transform:rotate(360deg);transform:rotate(360deg);}}
+@-ms-keyframes pace-spinner{0%{-ms-transform:rotate(0deg);transform:rotate(0deg);}
+100%{-ms-transform:rotate(360deg);transform:rotate(360deg);}}
+@keyframes pace-spinner{0%{transform:rotate(0deg);transform:rotate(0deg);}
+100%{transform:rotate(360deg);transform:rotate(360deg);}}

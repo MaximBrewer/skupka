@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extension version="3.4" type="package" method="upgrade">
+    <name>pkg_rokbox</name>
+    <packagename>rokbox</packagename>
+    <author>RocketTheme, LLC</author>
+    <creationDate>January 16, 2019</creationDate>
+    <copyright>(C) 2005 - 2019 RocketTheme, LLC. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>support@rockettheme.com</authorEmail>
+    <authorUrl>http://www.rockettheme.com</authorUrl>
+    <version>2.0.15</version>
+    <description>RokBox</description>
+
+    <scriptfile>install.php</scriptfile>
+
+    <blockChildUninstall>true</blockChildUninstall>
+    <files folder="packages">
+        <file type="plugin"    group="system"     id="rokbox"               enabled="1">plg_system_rokbox-2.0.15.zip</file>
+        <file type="plugin"    group="content"    id="rokbox"               enabled="1">plg_content_rokbox-2.0.15.zip</file>
+        <file type="plugin"    group="editors-xtd" id="rokbox"              enabled="1">plg_editors-xtd_rokbox-2.0.15.zip</file>
+    </files>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.pkg_rokbox.sys.ini</language>
+    </languages>
+
+    <updateservers>
+        <server type="collection" priority="1" name="RocketTheme Update Directory">http://updates.rockettheme.com/joomla/updates.xml</server>
+    </updateservers>
+</extension>

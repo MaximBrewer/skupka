@@ -1,0 +1,13 @@
+<root>
+  <params name="iframe-item" label="iframe item settings" hidetitle="1">
+    <param name="url" type="text" label="iframe url" default="" style="width:280px;"/>
+    <param name="size" type="mixed" default="100%|*|100%" translateable="1" class="n2-expert">
+      <param type="text" label="Width" style="width:40px;"/>
+      <param type="text" label="Height" style="width:40px;"/></param>
+    <param type="list" name="scroll" label="Scroll" translateable="1">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+      <option value="auto">Auto</option>
+    </param>
+  </params>
+</root>

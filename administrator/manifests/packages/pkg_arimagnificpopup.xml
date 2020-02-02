@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0.0" type="package" method="upgrade">
+	<name>ARI Magnific Popup</name>
+	<packagename>arimagnificpopup</packagename>
+	<author>ARI Soft</author>
+	<creationDate>April 2017</creationDate>
+	<copyright>ARI Soft</copyright>
+	<license>GNU/GPL license (http://www.gnu.org/copyleft/gpl.html)</license>
+	<authorEmail>info@ari-soft.com</authorEmail>
+	<authorUrl>www.ari-soft.com</authorUrl>
+	<version>1.0.2</version>
+	<description>The package contains 'ARI Magnific Popup' library, plugin and editor button. Documentation is &lt;a href='http://www.ari-soft.com/docs/arimagnificpopup/v1/en/html/index.html' target='_blank'&gt;here&lt;/a&gt;.</description>
+	<scriptfile>script.php</scriptfile>
+	<files folder="packages">
+	    <file type="library" id="arimagnificpopup">lib_arimagnificpopup.zip</file>
+	    <file type="plugin" id="arimagnificpopup" group="system">plg_system_arimagnificpopup.zip</file>
+	    <file type="plugin" id="arimagnificpopup" group="editors-xtd">plg_editors_xtd_arimagnificpopup.zip</file>
+	</files>
+</extension>

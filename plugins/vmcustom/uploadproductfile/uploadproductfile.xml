@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2018 UploadProductFile image. All rights reserved.
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+-->
+<extension type="plugin" version="3.0" group="vmcustom" method="upgrade">
+	<name>Upload Photo</name>
+	<author>Aleks MAjlo</author>
+	<creationDate>December 2018</creationDate>
+	<copyright>Copyright (c) 2018 UploadProductFile image. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>aleksandrmajlo@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0.0</version>
+	<description>
+	<![CDATA[
+		Загрузка фото
+	]]>
+	</description>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+
+
+	<files>
+		<filename plugin="uploadproductfile">uploadproductfile.php</filename>
+		<filename>index.html</filename>
+
+		<folder>helpers</folder>
+		<folder>sql</folder>
+		<folder>template</folder>
+		<folder>app</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>libs</folder>
+
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.plg_vmcustom_uploadproductfile.ini</language>
+		<language tag="en-GB">en-GB.plg_vmcustom_uploadproductfile.sys.ini</language>
+	</languages>
+
+
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="plugin_folders" type="text"  default="phototexture"   label="Название папки в директории images" description="Название папки в директории images" />
+			</fieldset>
+		</fields>
+	</config>
+
+
+
+</extension>

@@ -1,0 +1,21 @@
+.mobilemaximenuck {
+    text-shadow: 1px -1px 2px #000;
+}
+
+.mobilemaximenuck div span.descck {
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.mobilemaximenuck div.level4.maximenuck > a {
+    padding-left: 85px;
+}
+
+.mobilemaximenuck div.level5.maximenuck > a {
+    padding-left: 95px;
+}
+
+/* for accordeon */
+.open .mobilemaximenucktogglericon:after {
+	background-image: url(../../presets/prototype/minus.png);
+}

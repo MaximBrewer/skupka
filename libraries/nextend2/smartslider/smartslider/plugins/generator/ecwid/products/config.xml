@@ -1,0 +1,5 @@
+<root>
+    <params name="filter" label="Filter">
+        <param name="categories" label="Category" type="ecwidcategories" default="0"/>
+    </params>
+</root>

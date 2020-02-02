@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2013 Skyline Software (http://extstore.com). All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+ -->
+
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="text"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description="JGLOBAL_FIELD_ID_DESC"
+			class="readonly"
+			readonly="true"
+			default="0"
+		/>
+
+		<field
+			name="title"
+			type="text"
+			label="JGLOBAL_TITLE"
+			description="COM_SL_ADVPOLL_ANSWER_FIELD_TITLE_DESC"
+			class="inputbox"
+			required="true"
+			size="40"
+		/>
+
+		<field
+			name="pollid"
+			type="poll"
+			label="COM_SL_ADVPOLL_ANSWER_FIELD_POLL_LABEL"
+			description="COM_SL_ADVPOLL_ANSWER_FIELD_POLL_DESC"
+			class="inputbox"
+		/>
+
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="COM_SL_ADVPOLL_ANSWER_FIELD_STATE_DESC"
+			class="inputbox"
+			size="1"
+			default="1"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+		<field
+			name="ordering"
+			type="text"
+			label="JFIELD_ORDERING_LABEL"
+			description="JFIELD_ORDERING_DESC"
+			class="inputbox"
+		/>
+	</fieldset>
+</form>

@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	
+    <fieldset name="general">
+		
+        <field name="title"
+               type="text"
+               label="JGLOBAL_TITLE"
+               description="COM_NIVOSLIDERPRO_TITLE_DESC"
+               class="inputbox"
+               size="30"
+               required="true"
+        />
+		 
+        <field name="alias"
+               type="text"
+               label="JFIELD_ALIAS_LABEL"
+               description="JFIELD_ALIAS_DESC"
+               class="inputbox"
+               size="30"
+        />
+		
+        <field id="published"
+               name="published"
+               type="list"
+               label="JGLOBAL_STATE"
+               description="JFIELD_PUBLISHED_DESC"
+               class="inputbox"
+               size="1"
+               default="1"
+        >
+            <option value="1">
+                JPUBLISHED</option>
+            <option value="0">
+                JUNPUBLISHED</option>			
+        </field>
+		
+        <field name="id"
+               type="text"
+               label="JGLOBAL_FIELD_ID_LABEL"
+               description="JGLOBAL_FIELD_ID_DESC"
+               size="10"
+               default="0"
+               readonly="true"
+               class="readonly"
+        />
+			
+    </fieldset>
+	
+    <!-- ======================== Slider Visual ============================= -->
+	
+    <fields name="visual" addfieldpath="/administrator/components/com_nivosliderpro/models/fields">
+        <fieldset name="visual_general" label="Visual Settings">
+            <field name="width" 
+                   type="text" 
+                   label="Width"
+                   default="618"
+                   class="textbox-small" 
+                   description="The slider image width">
+            </field>
+					   
+            <field name="height" 
+                   type="text"  
+                   label="Height"
+                   default="246"
+                   class="textbox-small"
+                   description="The slider image height">
+            </field>
+					   
+            <!-- ======= Border ======== -->
+				
+            <field name="has_border" 
+                   type="mycheckbox"  
+                   label="Has Border"
+                   value="false"
+                   description="If the slider has border">
+            </field>
+
+            <field name="border_size" 
+                   type="text"  
+                   label="Border Size"
+                   default="2"
+                   class="textbox-small"
+                   description="Border size">
+            </field>
+					   
+            <field name="border_color" 
+                   type="colorpicker"
+                   label="Border Color"
+                   default="#ffffff"
+                   description="Border color">
+            </field>
+					   
+            <!-- ======= Shadow ======== -->
+				
+            <field name="has_shadow" 
+                   type="mycheckbox"
+                   label="Has Shadow"
+                   value="false"
+                   description="Turn on / off border shadow">
+            </field>
+					   
+            <field name="shadow_color" 
+                   type="colorpicker"  
+                   label="Shadow Color"
+                   default="#000000"
+                   description="Border color">
+            </field>
+					   
+            <!-- ======= Arrows ======== -->
+				
+            <field name="has_arrows" 
+                   type="mycheckbox"
+                   label="Show Arrows"
+                   value="true"
+                   description="Turn on / off the direction arrows">
+            </field>
+				
+            <field name="arrows_set"
+                   type="arrows"
+                   default="default"
+                   description="Choose arrows set among prefefined sets."
+            />
+				
+            <field type="spacer" 
+                   name="spacer_left_arrow" 
+                   label="Left Arrow:"
+                   description="Right arrow coordinates" 
+            />
+									   
+            <field name="arrow_left_x" 
+                   type="text"  
+                   label="X"
+                   default=""
+                   class="textbox-small"
+                   description="Left arrow X coordinate">
+            </field>
+
+            <field name="arrow_left_y" 
+                   type="text"  
+                   label="Y"
+                   default=""
+                   class="textbox-small"
+                   description="Left arrow Y coordinate">
+            </field>
+					  
+            <field type="spacer" 
+                   name="spacer_right_arrow" 
+                   label="Right Arrow:"
+                   description="Right arrow coordinates" 
+            />
+					   
+            <field name="arrow_right_x" 
+                   type="text"  
+                   label="X"
+                   default=""
+                   class="textbox-small"
+                   description="Right arrow X coordinate">
+            </field>
+
+            <field name="arrow_right_y" 
+                   type="text"
+                   label="Y"
+                   default=""
+                   class="textbox-small"
+                   description="Right arrow Y coordinate">
+            </field>
+
+            <field name="arrows_free_drag" 
+                   type="mycheckbox"
+                   label="Free Drag"
+                   value="false"
+                   description="If unchecked, the arrows will be connected to each other.">
+            </field>
+
+            <field name="arrows_gocenter" 
+                   type="mybutton"
+                   label="Align To Center"
+                   description="Align the arrows to vertical center.">
+            </field>
+	    				   
+            <!-- ======= Bullets ======== -->
+				
+            <field name="has_bullets" 
+                   type="mycheckbox"
+                   label="Show Bullets"
+                   value="true"
+                   description="Turn on / off the direction arrows">
+            </field>
+				
+            <field name="bullets_set"
+                   type="bullets"
+                   default="default"
+                   description="Choose bullets from the predefined bullets set."
+            />
+				
+            <field name="bullets_align"
+                   type="list"
+                   label="Align"
+                   description="The align of bullets. if left or right, additional position will be displayed."
+                   default="center"
+            >
+                <option value="left">Left</option>
+                <option value="center">Center</option>
+                <option value="right">Right</option>									
+            </field>
+
+            <field name="bullets_y" 
+                   type="text"
+                   label="Y"
+                   default=""
+                   class="textbox-small"
+                   description="Bullets Y coordinate">
+            </field>
+
+            <field name="bullets_xleft" 
+                   type="mytext"
+                   label="X left"
+                   default=""
+                   class="textbox-small"
+                   description="Bullets X coordinate from left side">
+            </field>
+
+            <field name="bullets_xright" 
+                   type="mytext"
+                   label="X right"
+                   default=""
+                   class="textbox-small"
+                   description="Bullets X coordinate from right side">
+            </field>
+
+            <field name="bullets_spacing" 
+                   type="text"
+                   label="Spacing"
+                   default=""
+                   class="textbox-small"
+                   description="Space between bullets">
+            </field>
+
+            <field name="reverse_bullets" 
+                   type="mycheckbox"
+                   label="Revese"
+                   value="false"
+                   description="Reverse Bullets">
+            </field>
+
+            <!-- ======= Caption ======== -->
+				
+            <field name="has_caption" 
+                   type="mycheckbox"
+                   label="Show Captions"
+                   value="true"
+                   description="If on, the html captions will be shown, for slides with captions set">
+            </field>
+				
+            <field name="caption_back_color" 
+                   type="colorpicker"
+                   label="Background Color"
+                   default="#000000"
+                   description="Captions background color">
+            </field>
+
+            <field name="caption_back_alpha" 
+                   type="caption_bgcolor"
+                   label="Background Alpha"
+                   default="80"
+                   class="textbox-small"
+                   description="Background transparency alpha (0-100)">
+            </field>
+					   				 
+            <field name="caption_position"
+                   type="list"
+                   label="Position"
+                   description="Caption position on the banner, may be top or bottom."
+                   default="bottom"
+            >
+                <option value="bottom">Bottom</option>
+                <option value="top">Top</option>									
+            </field>
+					   
+            <field name="text_color" 
+                   type="colorpicker"
+                   label="Text Color"
+                   default="#ffffff"
+                   description="Caption text color">
+            </field>
+					   
+            <field name="text_align"
+                   type="list"
+                   label="Text Align"
+                   default="left"
+                   description="Caption text align">
+                <option value="left">Left</option>
+                <option value="center">Center</option>
+                <option value="right">Right</option>
+            </field>
+			   
+            <field name="text_padding"
+                   type="text"
+                   label="Text Padding"
+                   class="textbox-small"
+                   default="8"
+                   description="Caption text padding">
+            </field>
+				
+            <field name="font_size"
+                   type="text"
+                   label="Font Size"
+                   class="textbox-small"
+                   default="14"
+                   description="Caption text font size">
+            </field>
+			   
+				
+        </fieldset>
+    </fields>
+	
+    <!-- ======================== Slider Params ============================= -->
+	
+    <fields name="params" >
+        <fieldset name="main_props" label="General Settings">
+				
+            <field name="pauseTime" 
+                   type="text" 
+                   label="Pause Time"
+                   default="3000" 
+                   description="How long each slide will show">
+            </field>
+								
+            <field name="animSpeed" 
+                   type="text" 
+                   label="Animation Speed"
+                   default="500" 
+                   description="Slide transition speed">
+            </field>
+				
+            <field name="effect" 
+                   type="list" 
+                   default="" 
+                   label="Custom Effects"
+                   multiple = "true"
+                   size="7"
+                   description="The slide effect. Can choose several effects per slider, if no effects selected, it will be 'random'">
+                <option value="sliceDown">sliceDown</option>
+                <option value="sliceDownLeft">sliceDownLeft</option>
+                <option value="sliceUp">sliceUp</option>
+                <option value="sliceUpLeft">sliceUpLeft</option>
+                <option value="sliceUpDown">sliceUpDown</option>
+                <option value="sliceUpDownLeft">sliceUpDownLeft</option>
+                <option value="fold">fold</option>
+                <option value="fade">fade</option>
+                <option value="slideInRight">slideInRight</option>
+                <option value="slideInLeft">slideInLeft</option>
+                <option value="boxRandom">boxRandom</option>
+                <option value="boxRain">boxRain</option>
+                <option value="boxRainReverse">boxRainReverse</option>
+                <option value="boxRainGrow">boxRainGrow</option>
+                <option value="boxRainGrowReverse">boxRainGrowReverse</option>
+            </field>
+			
+
+        </fieldset>
+
+        <!--  Position Settings -->
+			
+        <fieldset name="position" label="Position Settings">
+			
+            <field name="position"
+                   type="list"
+                   label="Slider Position"
+                   description="The position of the slider. Center is margin:0px auto; left / right is float:left and float:right. The left and right margin valid only for float positions accordingly."
+                   default="center">
+                <option value="center">Center</option>
+                <option value="left">Left</option>
+                <option value="right">Right</option>
+            </field>
+
+            <field name="margin_left" 
+                   type="mytext" 
+                   label="Left Margin"
+                   default="0"
+                   class="number"
+                   unit="px"
+                   description="Space from left. Works only if left / right position set.">
+            </field>
+					   
+            <field name="margin_right" 
+                   type="mytext" 
+                   label="Right Margin"
+                   default="0"
+                   class="number"
+                   unit="px"
+                   description="Space from right. Works only if left / right position set.">
+            </field>
+
+            <field name="margin_top" 
+                   type="mytext" 
+                   label="Top Margin"
+                   default="0"
+                   class="number"
+                   unit="px"
+                   description="Space from top">
+            </field>
+					   
+            <field name="margin_bottom"
+                   type="mytext" 
+                   label="Bottom Margin"
+                   default="0"
+                   class="number"
+                   unit="px"
+                   description="Space from bottom">
+            </field>
+					   
+            <field name="clear_both"
+                   type="list"
+                   label="Add Clear Both"
+                   description="Add clear:both div to the end of the slider html. It removes the floating position. "
+                   default="false">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </field>
+				
+        </fieldset> <!--  Position Settings End -->
+			
+			
+        <fieldset name="other" label="Other Settings">
+
+            <field name="directionNavHide" 
+                   type="radio" 
+                   default="true" 
+                   label="Direction Nav Hide" 
+                   description="Show navigation buttons only on hover">
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </field>
+				
+            <field type="spacer" hr="true" />
+            
+	    	<field name="hide_bullet_on"
+                   type="text"
+                   label="Hide Bullets Under Width"
+                   description="Hide buttons under some screen width, example 400 px. 0 means the buttons will be visible always"
+                   default="0">									
+            </field>	
+	    
+	    	<field name="hide_arrows_on"
+                   type="text"
+                   label="Hide Arrows Under Width"
+                   description="Hide arrows under some screen width, example 500 px. 0 means the arrows will be visible always"
+                   default="0">					
+            </field>
+            
+            <field type="spacer" hr="true" />
+					   
+            <field name="startSlide" 
+                   type="text" 
+                   label="Start Slide"
+                   default="0" 
+                   description="Set starting Slide (0 index)">
+            </field>
+
+            <field name="randomStart" 
+                   type="radio" 
+                   default="false" 
+                   label="Random Start" 
+                   description="Start on a random slide">
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </field>
+								
+            <field type="spacer" hr="true" />
+
+            <field name="pauseOnHover" 
+                   type="radio" 
+                   default="true" 
+                   label="Pause On Hover" 
+                   description="Stop animation while hovering">
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </field>
+
+            <field name="manualAdvance" 
+                   type="radio" 
+                   default="false" 
+                   label="Manual Advance" 
+                   description="Force manual transitions (the slides will change only menually from user js api call)">
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </field>
+				
+            <field type="spacer" hr="true" />
+
+            <field name="keyboardNav" 
+                   type="radio" 
+                   default="true" 
+                   label="Use Keyboard" 
+                   description="Use left and right arrows">
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </field>				
+
+            <field type="spacer" hr="true" />
+				
+            <field name="slices" 
+                   type="text" 
+                   label="Slices"
+                   default="15" 
+                   description="For slice animations">
+            </field>
+
+            <field name="boxCols" 
+                   type="text" 
+                   label="Box Columns"
+                   default="8" 
+                   description="For box animations">
+            </field>
+
+            <field name="boxRows" 
+                   type="text" 
+                   label="Box Rows"
+                   default="4" 
+                   description="For box animations">
+            </field>
+
+        </fieldset> <!--  Other Settings -->
+				
+        <fieldset name="event_functions" label="Event Functions Settings">
+				
+            <field name="beforeChange" 
+                   type="text" 
+                   label="beforeChange"
+                   default="function(){}" 
+                   description="Triggers before a slide transition">
+            </field>
+	
+            <field name="afterChange" 
+                   type="text" 
+                   label="afterChange"
+                   default="function(){}" 
+                   description="Triggers after a slide transition">
+            </field>
+	
+            <field name="slideshowEnd" 
+                   type="text" 
+                   label="slideshowEnd"
+                   default="function(){}" 
+                   description="Triggers after all slides have been shown">
+            </field>
+	
+            <field name="lastSlide" 
+                   type="text" 
+                   label="lastSlide"
+                   default="function(){}" 
+                   description="Triggers when last slide is shown">
+            </field>
+	
+            <field name="afterLoad" 
+                   type="text" 
+                   label="afterLoad"
+                   default="function(){}" 
+                   description="Triggers when slider has loaded">
+            </field>
+					   
+        </fieldset>	<!-- end event functions -->
+			
+			
+    </fields>
+
+</form>

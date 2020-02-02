@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade">
+	<name>RuposTel Product Customs</name>
+	<author>www.rupostel.com</author>
+	<creationDate>20110107</creationDate>
+	<copyright>(C) rupostel.com</copyright>
+	<license>Commercial</license>
+	<authorEmail>info@rupostel.com</authorEmail>
+	<authorUrl>http://www.rupostel.com</authorUrl>
+	<version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+	<description><![CDATA[
+Product Customs Module <a href="http://www.rupostel.com/">rupostel.com</a> team. 
+	]]>
+	</description>
+	<files>
+		<filename module="mod_productcustoms">mod_productcustoms.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>fields</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+	</files>
+	
+	<config>
+	 <fields name = "params" addfieldpath="/modules/mod_productcustoms/fields">
+	   <fieldset name="basic">
+		<field
+            name="cache"
+            type="list"
+            default="0"
+            label="Joomla Caching"
+            description="">
+            <option value="0">Disabled</option>
+			<option value="1">Enabled</option>
+        </field>
+		
+		
+		<field
+            name="customs_with_childs"
+            type="customswithchilds"
+            default="0"
+            label="Choose custom fields that will show child products as well"
+            description=""
+			multiple="multiple"
+			>
+            
+        </field>
+		
+		
+	   
+		</fieldset>
+		
+		
+	</fields>
+	</config> 
+	
+	
+</extension>

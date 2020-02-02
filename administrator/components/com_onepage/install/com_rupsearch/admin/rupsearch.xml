@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/component-install.dtd">
+<extension type="component" version="2.5" method="upgrade">
+
+	<!-- ========================= -->
+	<!-- PRODUCT -->	
+	<!-- ========================= -->
+
+	<name>com_rupsearch</name>
+	<version>10.346.1454</version>	
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+
+	<copyright>RuposTel s.r.o.</copyright>
+	<creationDate>19/12/13</creationDate>
+	<productName>RuposTel Ajax Search Pro for Virtuemart 2</productName>
+	<author>RuposTel s.r.o. Team (Stan Scholtz)</author>
+	<authorEmail>onepage@rupostel.sk</authorEmail>
+	<authorUrl>http://www.rupostel.com/</authorUrl>	
+	<license>This extension is released under the GNU/GPL License</license>
+
+	<!-- ========================= -->
+	<!-- DESCRIPTION -->	
+	<!-- ========================= -->
+	  <languages folder="site/language/en-GB/">
+        <language tag="en-GB" >en-GB.com_rupsearch.ini</language>
+		<language tag="en-GB" >en-GB.com_rupsearch.sys.ini</language>
+		
+    </languages>
+	<description> 
+	<![CDATA[
+	 RuposTel Virtuemart Ajax Search Pro
+	]]>
+	</description>
+	
+<files folder="site">
+ <folder>helpers</folder>
+ <folder>views</folder>
+ <folder>language</folder>
+ <folder>models</folder>
+ <folder>controllers</folder>
+ <filename>rupsearch.php</filename>
+ <filename>controller.php</filename>
+ <filename>router.php</filename>
+ <filename>index.html</filename>
+</files>
+
+	
+ <administration>
+    <files folder="admin">
+	    <folder>language</folder>
+		<filename>rupsearch.php</filename>
+		<filename>index.html</filename>
+	</files>
+
+      <menu>COM_RUPSEARCH</menu>
+   </administration>
+</extension>

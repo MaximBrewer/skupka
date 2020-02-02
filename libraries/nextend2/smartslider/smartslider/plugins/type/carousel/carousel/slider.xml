@@ -1,0 +1,57 @@
+<root>
+  <params name="carouselslidertype" label="Carousel slider type settings">
+    <param type="group" label="Slide size">
+      <param name="slide-width" type="numberautocomplete" style="width: 30px;" label="Width" default="600" values="400,600,800,1000">
+        <unit>px</unit>
+      </param>
+      <param name="slide-height" type="numberautocomplete" style="width: 30px;" label="Height" default="400" values="300,400,600,800,1000">
+        <unit>px</unit>
+      </param>
+    </param>
+    <param name="maximum-pane-width" type="numberautocomplete" style="width: 30px;" label="Maximum pane width" default="3000" values="300,600,980,3000" tip="Maximum width, where the slides are visible.">
+      <unit>px</unit>
+    </param>
+    <param name="minimum-slide-gap" type="numberautocomplete" style="width: 30px;" label="Minimum slide distance" default="10" values="10,50,100,200">
+      <unit>px</unit>
+    </param>
+    <param type="group" label="Slider background image">
+      <param type="color" name="background-color" label="Color" alpha="1" default="dee3e6ff"/>
+      <param type="image" name="background" default="" label="Image"/>
+      <param type="onoff" name="background-fixed" default="0" label="Fixed"/>
+      <param type="textautocomplete" name="background-size" default="cover" label="Size" class="n2-expert" values="cover,contain,auto"/></param>
+    <param type="group" label="Border" class="n2-expert">
+      <param name="border-width" type="text" style="width: 30px;" label="Width" default="0">
+        <unit>px</unit>
+      </param>
+      <param name="border-color" type="color" alpha="1" label="Color" default="3E3E3Eff"/>
+      <param name="border-radius" type="text" style="width: 30px;" label="Border radius" default="0">
+        <unit>px</unit>
+      </param>
+    </param>
+    <param type="group" label="Slide">
+      <param name="slide-background-color" type="color" label="Color" alpha="1" default="ffffffff"/>
+      <param name="slide-border-radius" type="text" style="width: 30px;" label="Border radius" default="0">
+        <unit>px</unit>
+      </param>
+    </param>
+  </params>
+  <params name="carouselslidertypeanimation" label="Animation settings">
+    <param name="animation" type="radio" label="Main animation" default="horizontal" translateable="1" class="n2-expert" tip="This animation moves the slides.">
+      <option value="no">No animation</option>
+      <option value="horizontal">Horizontal</option>
+      <option value="vertical">Vertical</option>
+      <option value="fade">Fade</option>
+    </param>
+    <param type="group" label="Main animation properties">
+      <param name="animation-duration" type="numberautocomplete" label="Duration" style="width:35px;" default="800" values="800,1500,2000">
+        <unit>ms</unit>
+      </param>
+      <param name="animation-delay" type="text" label="Delay" style="width:35px;" default="0" class="n2-expert">
+        <unit>ms</unit>
+      </param>
+      <param name="animation-easing" type="jqueryeasing" label="Easing" default="easeOutQuad" class="n2-expert"/></param>
+    <param type="onoff" name="carousel" label="Carousel" default="1" class="n2-expert" tip="If you turn off this option, you can&apos;t switch to the first slide from the last one."/>
+    <param type="onoff" name="single-switch" default="0" label="Single switch" tip="It switches one slide instead of moving all the visible slides."/>
+    <param type="onoff" name="carousel-dynamic-slider-height" default="0" label="Dynamic slider height"/>
+  </params>
+</root>

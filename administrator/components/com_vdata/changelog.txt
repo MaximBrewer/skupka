@@ -1,0 +1,142 @@
+; com_vdata - vData
+; author    Team WDMTech
+; copyright Copyright (C) 2015 wdmtech.com. All Rights Reserved.
+; @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+; Websites: http://www.wdmtech.com
+; Technical Support:  Forum - http://www.wdmtech.com/support-forum
+
+
+From 2.0.0
+
+vData 2.0.1
+^ Create profile option in import/export/schedule view and page redirect to respective page after profile creation
+^ Now reference to option is used to match the records only earlier it was used to import Data
++ Data synchronization option in import profiles and remote database export
++ Cron/feed from import/export matching fields
+
+vData 2.0.2
+^ Now you can choose any field of table/csv/xml/json in 'As Defined' field earlier only included fields were allowed
+
+vData 2.0.3
++ Option to assign heading for defined fields
+
+vData 2.1.0
++ Now you can create import feed to import the data from GET or POST method
++ Fields customization options ( like defined,reference etc) in child tables
++ Front end dashboard widget ACL
++ Now xml fields are dynamic
+
+vData 2.1.1
++ Option to load dynamic custom root tag in xml
+
+vData 2.1.2
++ Now json fields are dynamic
+
+vData 2.1.3
++ 'join'(inner) option in base and child table join
++ child table record updation
+
+vData 2.1.4
+^ import/export child table left join/right join/join
+
+vData 2.1.5
+^ user groups other than 'super user' can also access cron/feed
+
+vData 2.1.6
+- csv/xml multiple column reference data export in child tables
+
+vData 2.1.7
+- profiles model post data bug fixed
+- site vdata model update
++ vdata widget module included
+
+vData 2.1.8
+^ Remote(predefined) profile/widget source(host) changed
+
+vData 2.1.9
++ csv multiple file import
+
+vData 2.1.10
+- xml/json file upload bug fixed
+
+vData 2.1.11
+^ module import/export
+- dashboard PHP7 bug fixed
+
+vData 2.1.12
+^ profile wizard
+
+vData 2.1.13
+^ Export record result set row number filter added to export view
+
+vData 2.2.0
+^ Notification view added
+
+vData 2.2.1
+- bug fixed xml tags having colon in tag name, Using || to separate parent/child in tag hierarchy 
+
+vData 2.9.0
++ option to override php settings
++ csv/xml dynamic header options
+^ Now user can select multiple key in profile 
++ import/export statistic email notification
++ remote server read/write option using FTP
++ operation type delete in import profiles
++ data display view added
++ data display search module added
+
+vData 2.9.1
+- vData installation issue resolved with PDO driver
+- profile data updated for multiple primary key
+
+vData 2.9.2
+- primary key validation in profile and import views
+
+vData 2.9.3
+- bug fixed
+
+vData 2.9.4
+- xml/json quick export as csv issue resolved
+- remote database table column loading issue resolved
+
+vData 2.9.5
+- bug fixed
+
+vData 2.9.6
+- dashboard bug fixed
+
+vData 2.9.7
+- PHP 7 bug fixed
+
+vData 2.9.8
+- import file using absolute URI implemented
+
+vData 2.9.9
+- package upgrade enabled
+
+vData2.9.10
+- display database tables added for vData version upgrade
+
+vData2.9.11
+- bug fixed
+
+vData2.9.12
+- bug fixed
+
+vData2.9.13
+- bug fixed
+
+vData2.9.14
+- bug fixed 
+
+vData2.9.15
+
+- Import more than two table issue resolved
+- Update child table issue resolved
+- Data display of database in quick view issue resolved
+
+vData2.9.16
+-Import data with cron issue resolved
+
+vData2.9.17
+-Profiles Listing bug fix (disabled sorting)

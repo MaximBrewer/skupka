@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>System - RSForm! Pro SMS Notification</name>
+	<author>RSJoomla!</author>
+	<creationDate>November 2015</creationDate>
+	<copyright>(C) 2015-2016 www.rsjoomla.com</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>www.rsjoomla.com</authorUrl>
+	<version>1.51.6</version>
+	<description><![CDATA[RSFP_SMSNOTIFICATION]]></description>
+	<scriptfile>script.php</scriptfile>
+	
+	<updateservers>
+        <server type="extension" priority="1" name="RSForm! Pro - SMS Notification Plugin">https://www.rsjoomla.com/updates/plg_rsform_plugins/plg_rsfpsmsnotification/plg_rsfpsmsnotification.xml</server>
+    </updateservers>
+	
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/mysql/install.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/mysql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+
+
+	<files>
+		<folder>sql</folder>
+		<filename plugin="rsfpsmsnotification">rsfpsmsnotification.php</filename>
+		<filename>index.html</filename>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_rsfpsmsnotification.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_rsfpsmsnotification.sys.ini</language>
+	</languages>
+</extension>

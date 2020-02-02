@@ -1,0 +1,7 @@
+#vmMainPageOPC input#agreed_field , #vmMainPageOPC input#sachone {
+ position: static !important; 
+ left: 0 !important; 
+}
+#vmMainPageOPC  label  {
+ background-image: none !important; 
+}

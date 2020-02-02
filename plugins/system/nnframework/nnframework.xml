@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="plugin" group="system" method="upgrade">
+	<name>plg_system_nnframework</name>
+	<description>PLG_SYSTEM_NNFRAMEWORK_DESC</description>
+	<version>100.0.0PRO</version>
+	<creationDate>November 2018</creationDate>
+	<author>Regular Labs (Peter van Westen)</author>
+	<authorEmail>info@regularlabs.com</authorEmail>
+	<authorUrl>https://www.regularlabs.com</authorUrl>
+	<copyright>Copyright © 2018 Regular Labs - All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<scriptfile>script.install.php</scriptfile>
+
+	<files>
+		<filename plugin="nnframework">nnframework.php</filename>
+		<folder>fields</folder>
+		<folder>helpers</folder>
+		<folder>language</folder>
+	</files>
+
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/nnframework/fields">
+			<fieldset name="basic">
+				<field name="@toggler_enable_not_used_message_a" type="nn_toggler" param="enable_not_used_message" value="1" />
+				<field name="@framework_used" type="nn_framework_needed" />
+				<field name="@toggler_enable_not_used_message_b" type="nn_toggler" />
+				<field name="enable_not_used_message" type="radio" class="btn-group" default="1"
+					   label="NN_ENABLE_NOT_USED_MESSAGE"
+					   description="NN_ENABLE_NOT_USED_MESSAGE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="max_list_count" type="number" size="10" class="input-mini" default="2500"
+					   label="NN_MAX_LIST_COUNT"
+					   description="NN_MAX_LIST_COUNT_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

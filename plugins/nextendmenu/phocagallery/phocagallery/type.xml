@@ -1,0 +1,19 @@
+<root translate="accordionmenu">
+    <params label="Phoca_gallery_menu_properties">
+        <param type="phocagallerycategories" name="root" default="1" label="Menu_root" multiple="1" size="10" description="If_you_select_only_one_category_only__" />
+        <param name="rootasitem" type="onoff" default="0" label="Singe_root_as_menuitem" description="If_enabled_and_one_selected_in_the_previous__"/>
+        <param name="showproducts" type="onoff" default="0" label="Show_images" description="If_enabled_images_are_included_in_the_menu"/>
+        <param name="maxitemsincat" type="text" default="20" label="Max_images_per_Category" description="Used_if_Show_images_enabled_0_means_unlimited" />
+        <param name="displaynum" type="radio" default="0" label="Display_number_of_images" description="Display_the_images_count_available_in_a_category_if_any">
+            <option value="0">No</option>
+            <option value="1">Yes_the_real_count</option>
+            <option value="2">Yes_the_aggregated_count</option>
+        </param>
+        <param name="emptycategory" type="onoff" default="1" label="Show_empty_categories" />
+        <param name="order" type="radio" label="Order" default="0">
+            <option value="0">Components_default</option>
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+        </param>
+    </params>
+</root>

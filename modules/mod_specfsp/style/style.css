@@ -1,0 +1,53 @@
+/* Style CSS */
+
+.mod_spec_all {
+    display: table;
+    border: 1px solid #ccc;  
+    margin: 20px 15px 20px 15px;
+}
+.mod_spec_all  > .mod_spec {
+    display: table-row;
+}
+.mod_spec_all  > .mod_spec > div {
+    display: table-cell;
+    padding: 5px;
+    vertical-align: top;
+}
+.mod_spec .spec_photo {
+    width: 29%;
+}
+.mod_spec .mod_specs  {
+    width: 21%;
+}
+.mod_spec .spec_photo img.photo_img {
+    border: 1px solid #ccc;  padding: 5px;
+    width: 94%;
+    max-width: 94%;
+}
+.mod_spec .mod_fiospec a {
+    font-size: 16px;
+    text-decoration: none;
+}
+.mod_spec .mod_descspec {}
+.mod_spec .mod_buttonvs {
+    width: 12%;
+}
+.mod_spec .mod_buttonvs a {
+    padding: 10px;
+font-size: 14px;
+background-color: #eeeeee;
+border: 1px dotted #CCCCCC;
+font-weight: bold;
+display: block;
+    color: #999;
+    text-align: center!important;
+    text-decoration: none;
+}
+.mod_spec .mod_buttonvs a:hover {
+ background-color: #DBDBDB;
+border: 1px dotted #898989;
+color: #767676;
+}
+.mod_spec .mod_jcomment_btn {
+    margin-top: 10px;
+}

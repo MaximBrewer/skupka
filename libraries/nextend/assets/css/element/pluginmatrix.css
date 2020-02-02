@@ -1,0 +1,97 @@
+.nextend-pluginmatrix-views{
+    border-bottom: 1px solid #A3ADB7;
+    cursor: default;
+}
+
+.nextend-pluginmatrix-view {
+    width: 100px;
+    float:left;
+    height: 59px;
+}
+
+.nextend-pluginmatrix-views .nextend-border{
+    background: url('../../images/slideediticons.png') no-repeat 0 0;
+    height: 100%;
+    border: 0px;
+    border-right: 1px solid #a3adb7;
+    font-size: 14px;
+    line-height: 94px;
+    text-align: center;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #7B828B;
+}
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view.active .nextend-border{
+    color: #eff3fc;
+}
+
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view-arrow .nextend-border{
+    background-position: center -350px;
+}
+
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view-arrow.active .nextend-border{
+    background-position: center -410px;
+}
+
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view-bullet .nextend-border{
+    background-position: center -470px;
+}
+
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view-bullet.active .nextend-border{
+    background-position: center -530px;
+}
+
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view-autoplay .nextend-border{
+    background-position: center -590px;
+}
+
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view-autoplay.active .nextend-border{
+    background-position: center -650px;
+}
+
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view-thumbnail .nextend-border{
+    background-position: center -710px;
+}
+
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view-thumbnail.active .nextend-border{
+    background-position: center -770px;
+}
+
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view-bar .nextend-border{
+    background-position: center -830px;
+}
+
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view-bar.active .nextend-border{
+    background-position: center -890px;
+}
+
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view-shadow .nextend-border{
+    background-position: center -950px;
+}
+
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view-shadow.active .nextend-border{
+    background-position: center -1010px;
+}
+
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view-indicator .nextend-border{
+    background-position: center -1070px;
+}
+
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view-indicator.active .nextend-border{
+    background-position: center -1130px;
+}
+
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view-html .nextend-border{
+    background-position: center -1190px;
+}
+
+.nextend-pluginmatrix-views .nextend-pluginmatrix-view-html.active .nextend-border{
+    background-position: center -1250px;
+}
+
+.nextend-pluginmatrix-pane{
+    display: none;
+}
+
+.nextend-pluginmatrix-pane.active{
+    display: block;
+}

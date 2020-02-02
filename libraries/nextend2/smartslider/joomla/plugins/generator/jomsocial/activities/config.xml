@@ -1,0 +1,45 @@
+<root>
+    <params name="jomsocial" label="Filter">
+        <param type="group" label="Source">
+            <param name="jomsocialevents" label="Events" type="jomsocialevents" default="0" multiple="1"
+                   size="10"/>
+            <param name="jomsocialgroups" label="Groups" type="jomsocialgroups" default="0" multiple="1"
+                   size="10"/>
+            <param name="jomsocialprofiles" label="Profiles" type="jomsocialprofiles" default="0" multiple="1"
+                   size="10"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="acttype" type="list" label="Type" default="wall" translateable="1">
+                <option value="wall">Status</option>
+                <option value="photos">Photo</option>
+                <option value="videos">Video</option>
+                <option value="groups.bulletin">Group announcement</option>
+                <option value="groups.discussion">Group discussion</option>
+            </param>
+            <param name="hidden" label="Show hidden" type="onoff" default="0"/>
+            <param name="userid" label="User IDs" type="text" default="*"/>
+        </param>
+        <param type="group" label="If type is video" class="n2-expert">
+            <param name="videotype" label="Video type" type="jomsocialvideotype" default="youtube"/>
+        </param>
+        <param type="group" label="Featured" class="n2-expert">
+            <param name="featuredevents" label="From featured events" type="filter" default="0"/>
+            <param name="featuredgroups" label="From featured groups" type="filter" default="0"/>
+            <param name="featuredusers" label="Created by featured users" type="filter" default="0"/>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="jomsocialorder" type="mixed" label="Order" default="created|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="created">Creation time</option>
+                <option value="updated_at">Update time</option>
+                <option value="id">ID</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

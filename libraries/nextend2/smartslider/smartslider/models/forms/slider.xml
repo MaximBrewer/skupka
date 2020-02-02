@@ -1,0 +1,340 @@
+<root>
+  <params name="slider-settings" type="tabbed" active="1" underlined="1">
+    <params name="publish" type="groupped" label="Publish">
+      <params name="publish" label="Publish" hidetitle="1">
+        <param type="publishslider"/>
+      </params>
+    </params>
+    <params name="general" type="groupped" label="General">
+      <params name="slider" label="Slider settings" hidetitle="1">
+        <param name="title" type="text" label="Name" default="Slider" style="width:200px;"/>
+        <param label="Controls" type="group">
+          <param name="controlsScroll" type="onoff" label="Mouse scroll" default="0"/>
+          <param name="controlsDrag" type="onoff" label="Mouse drag" default="1"/>
+          <param name="controlsTouch" type="radio" label="Touch" default="horizontal">
+            <option value="0">Disabled</option>
+            <option value="horizontal">Horizontal</option>
+            <option value="vertical">Vertical</option>
+          </param>
+          <param name="controlsKeyboard" type="onoff" label="Keyboard" default="1"/>
+          <param name="controlsTilt" type="onoff" label="Tilt" default="0"/></param>
+        <param name="thumbnail" label="Thumbnail" type="image" default=""/>
+        <param name="align" type="radio" label="Align" default="normal">
+          <option value="normal">Normal</option>
+          <option value="left">Left</option>
+          <option value="center">Center</option>
+          <option value="right">Right</option>
+        </param>
+        <param name="backgroundMode" type="imagelistlabel" label="Slide background image fill" tip="If the size of your image is not the same as your slide&apos;s, you can improve the result with the filling modes." default="fill" translateable="1">
+          <option value="fill" image="$ss$/images/fillmode/fill.png">Fill</option>
+          <option value="fit" image="$ss$/images/fillmode/fit.png">Fit</option>
+          <option value="stretch" image="$ss$/images/fillmode/stretch.png">Stretch</option>
+          <option value="center" image="$ss$/images/fillmode/center.png">Center</option>
+          <option value="tile" image="$ss$/images/fillmode/tile.png">Tile</option>
+          <option value="fixed" image="$ss$/images/fillmode/fixed.png">Parallax</option>
+        </param>
+      </params>
+      <params name="slidertype" label="Slider Type" class="n2-expert">
+        <param name="type" type="slidertype" ajaxurl="slider/renderform" label="Type" default="simple" file="slider.xml"/>
+      </params>
+      <params name="slidertypeplaceholder" label="Slider Type placeholder" id="nextend-type-panel" type="placeholder"></params>
+    </params>
+    <params name="size" type="groupped" label="Size">
+      <params name="slider-responsive" label="Responsive" hidetitle="1">
+        <param type="group" label="Slider size">
+          <param name="width" type="numberautocomplete" label="Width" default="900" style="width:35px" values="1920,1400,1000,800,600,400">
+            <unit>px</unit>
+          </param>
+          <param name="height" type="numberautocomplete" label="Height" default="500" style="width:35px" values="800,600,500,400,300,200">
+            <unit>px</unit>
+          </param>
+          <param name="desktop-portrait-minimum-font-size" type="numberautocomplete" label="Min. font size" default="1" style="width:20px" class="n2-expert" values="0,4,8,12">
+            <unit>px</unit>
+          </param>
+        </param>
+        <param type="group" label="Desktop landscape slider size" class="n2-expert" tip="Slider size becomes portrait slider size. It is recommended for fullpage responsive mode.">
+          <param name="desktop-landscape" type="onoff" label="Enabled" default="0"/>
+          <param name="desktop-landscape-width" type="numberautocomplete" label="Width" default="1440" style="width:35px" values="1440,1000,800,600,400">
+            <unit>px</unit>
+          </param>
+          <param name="desktop-landscape-height" type="numberautocomplete" label="Height" default="0" style="width:35px" values="800,600,500,400,300">
+            <unit>px</unit>
+          </param>
+          <param name="desktop-landscape-minimum-font-size" type="numberautocomplete" label="Min. font size" default="1" style="width:20px" values="0,4,8,12">
+            <unit>px</unit>
+          </param>
+        </param>
+        <param type="number" name="fontsize" label="Font size" default="16" style="width:20px" class="n2-hidden">
+          <unit>px</unit>
+        </param>
+        <param label="Show on devices" type="group">
+          <param name="desktop" type="onoff" label="Desktop" default="1"/>
+          <param name="tablet" type="onoff" label="Tablet" default="1"/>
+          <param name="mobile" type="onoff" label="Mobile" default="1"/></param>
+        <param name="margin" label="Margin" type="mixed" default="0|*|0|*|0|*|0" translateable="1">
+          <param type="text" style="width: 22px;" label="Top">
+            <unit value="px">px</unit>
+          </param>
+          <param type="text" style="width: 22px;" label="Right">
+            <unit value="px">px</unit>
+          </param>
+          <param type="text" style="width: 22px;" label="Bottom">
+            <unit value="px">px</unit>
+          </param>
+          <param type="text" style="width: 22px;" label="Left">
+            <unit value="px">px</unit>
+          </param>
+        </param>
+      </params>
+      <params name="slider-size-tablet" label="Slider size - Tablet" class="n2-expert">
+        <param type="group" label="Portrait">
+          <param name="tablet-portrait" type="onoff" label="Enabled" default="0"/>
+          <param name="tablet-portrait-width" type="numberautocomplete" label="Width" default="800" style="width:35px" values="800,600,500,400">
+            <unit>px</unit>
+          </param>
+          <param name="tablet-portrait-height" type="numberautocomplete" label="Height" default="0" style="width:35px" values="0,800,600,500">
+            <unit>px</unit>
+          </param>
+          <param name="tablet-portrait-minimum-font-size" type="numberautocomplete" label="Min. font size" default="1" style="width:20px" values="0,4,8,12">
+            <unit>px</unit>
+          </param>
+        </param>
+        <param type="group" label="Landscape">
+          <param name="tablet-landscape" type="onoff" label="Enabled" default="0"/>
+          <param name="tablet-landscape-width" type="numberautocomplete" label="Width" default="1024" style="width:35px" values="1024,800,600,500">
+            <unit>px</unit>
+          </param>
+          <param name="tablet-landscape-height" type="numberautocomplete" label="Height" default="0" style="width:35px" values="0,600,500,400">
+            <unit>px</unit>
+          </param>
+          <param name="tablet-landscape-minimum-font-size" type="numberautocomplete" label="Min. font size" default="1" style="width:20px" values="0,4,8,12">
+            <unit>px</unit>
+          </param>
+        </param>
+      </params>
+      <params name="slider-size-mobile" label="Slider size - Mobile" class="n2-expert">
+        <param type="group" label="Portrait">
+          <param name="mobile-portrait" type="onoff" label="Enabled" default="0"/>
+          <param name="mobile-portrait-width" type="numberautocomplete" label="Width" default="440" style="width:35px" values="440,400,300,200">
+            <unit>px</unit>
+          </param>
+          <param name="mobile-portrait-height" type="numberautocomplete" label="Height" default="0" style="width:35px" values="0,400,300,200">
+            <unit>px</unit>
+          </param>
+          <param name="mobile-portrait-minimum-font-size" type="numberautocomplete" label="Min. font size" default="1" style="width:20px" values="0,4,8,12">
+            <unit>px</unit>
+          </param>
+        </param>
+        <param type="group" label="Landscape">
+          <param name="mobile-landscape" type="onoff" label="Enabled" default="0"/>
+          <param name="mobile-landscape-width" type="numberautocomplete" label="Width" default="740" style="width:35px" values="740,600,500,400">
+            <unit>px</unit>
+          </param>
+          <param name="mobile-landscape-height" type="numberautocomplete" label="Height" default="0" style="width:35px" values="0,400,300,200">
+            <unit>px</unit>
+          </param>
+          <param name="mobile-landscape-minimum-font-size" type="numberautocomplete" label="Min. font size" default="1" style="width:20px" values="0,4,8,12">
+            <unit>px</unit>
+          </param>
+        </param>
+      </params>
+      <params name="slider-responsive1" label="Responsive mode">
+        <param name="responsive-mode" type="sliderresponsive" ajaxurl="slider/renderform" default="auto" file="responsive.xml"/>
+      </params>
+      <params name="slider-responsive-placeholder" id="nextend-responsive-mode-panel" type="placeholder"/></params>
+    <params name="autoplay" type="groupped" label="Autoplay">
+      <params name="autoplay" label="Autoplay settings" hidetitle="1">
+        <param type="group" label="Autoplay">
+          <param name="autoplay" type="onoff" label="Enabled" default="0"/>
+          <param name="autoplayDuration" type="number" label="Interval" default="8000" style="width:35px;">
+            <unit>ms</unit>
+          </param>
+          <param name="autoplayStart" type="onoff" label="Autostart" default="1"/></param>
+        <param name="autoplayfinish" type="mixed" label="Finish autoplay on" default="0|*|loop|*|current">
+          <param type="number" style="width: 20px;" label="Count"/>
+          <param type="switcher" label=" ">
+            <unit value="loop">loops</unit>
+            <unit value="slide">slide count</unit>
+            <unit value="slideindex">slide index</unit>
+          </param>
+          <param type="switcher" label=" ">
+            <unit value="current">last slide</unit>
+            <unit value="next">next slide</unit>
+          </param>
+        </param>
+        <param name="autoplayAllowReStart" type="onoff" label="Allow restart after finish" default="0" tip="Use the Finish autoplay on option for this setting."/>
+        <param type="group" label="Stop autoplay on">
+          <param name="autoplayStopClick" type="onoff" label="Click" default="1"/>
+          <param name="autoplayStopMouse" type="list" label="Mouse" default="0" translateable="1">
+            <option value="0">Off</option>
+            <option value="enter">Enter</option>
+            <option value="leave">Leave</option>
+          </param>
+          <param name="autoplayStopMedia" type="onoff" label="Media started" default="1"/></param>
+        <param type="group" label="Resume autoplay on">
+          <param name="autoplayResumeClick" type="onoff" label="Click" default="0"/>
+          <param name="autoplayResumeMouse" type="list" label="Mouse" default="0" translateable="1">
+            <option value="0">Off</option>
+            <option value="leave">Leave</option>
+            <option value="enter">Enter</option>
+          </param>
+          <param name="autoplayResumeMedia" type="onoff" label="Media ended" default="1"/></param>
+      </params>
+    </params>
+    <params name="slider-layer" label="Layer animations" hidetitle="1">
+      <param type="group" label="Layer animations">
+        <param type="onoff" name="playfirstlayer" label="Play on first load" default="1"/>
+        <param type="onoff" name="playonce" label="Play once" default="0"/>
+        <param type="list" name="layer-animation-play-in" label="Play on" default="end">
+          <option value="start">Main animation start</option>
+          <option value="end">Main animation end</option>
+        </param>
+        <param type="list" name="layer-animation-play-mode" label="Mode" default="skippable">
+          <option value="skippable">Skippable</option>
+          <option value="forced">Forced</option>
+        </param>
+      </param>
+      <param type="group" label="Parallax">
+        <param type="onoff" name="parallax-enabled" label="Enabled" default="1"/>
+        <param type="onoff" name="parallax-enabled-mobile" label="Mobile" default="0"/>
+        <param type="onoff" name="parallax-3d" label="3D" default="0"/>
+        <param type="onoff" name="parallax-animate" label="Animate" default="1"/>
+        <param type="list" name="parallax-horizontal" label="Horizontal" default="mouse">
+          <option value="0">Off</option>
+          <option value="mouse">Mouse</option>
+          <option value="mouse-invert">Mouse - invert</option>
+        </param>
+        <param type="list" name="parallax-vertical" label="Vertical" default="mouse">
+          <option value="0">Off</option>
+          <option value="mouse">Mouse</option>
+          <option value="scroll">Scroll</option>
+          <option value="mouse-invert">Mouse - invert</option>
+          <option value="scroll-invert">Scroll - invert</option>
+        </param>
+        <param type="list" name="parallax-mouse-origin" label="Mouse origin" default="slider">
+          <option value="slider">Slider center</option>
+          <option value="enter">Mouse enter position</option>
+        </param>
+        <param type="list" name="parallax-scroll-move" label="Scroll move" default="both">
+          <option value="both">Both</option>
+          <option value="bottom">To bottom</option>
+          <option value="top">To top</option>
+        </param>
+      </param>
+      <param name="perspective" type="numberautocomplete" label="Perspective" default="1000" style="width:35px" values="0,500,1000,1500,2000,3000">
+        <unit>px</unit>
+      </param>
+    </params>
+    <params name="optimize" type="groupped" label="Optimize">
+      <params name="optimize-images" label="Slide background images">
+        <param type="group" label="Loading">
+          <param name="imageload" type="radio" label="Mode" default="0">
+            <option value="0">Normal</option>
+            <option value="2">Delayed loading</option>
+            <option value="1">Lazy loading</option>
+          </param>
+          <param name="imageloadNeighborSlides" type="number" label="Load neighbor" default="0" style="width:15px;">
+            <unit value="slides">slides</unit>
+          </param>
+        </param>
+        <param type="group" label="Optimize images">
+          <param name="optimize" type="onoff" label="Enabled" default="0"/>
+          <param name="optimize-quality" type="number" label="Quality" default="70" min="0" max="100" style="width: 40px;">
+            <unit value="%">%</unit>
+          </param>
+        </param>
+        <param label="Background image" type="group" tip="Switch on the Optimize images option for this setting.">
+          <param name="optimize-background-image-custom" type="onoff" label="Custom size" default="0"/>
+          <param name="optimize-background-image-width" type="text" style="width: 40px;" label="Width" default="800">
+            <unit value="px">px</unit>
+          </param>
+          <param name="optimize-background-image-height" type="text" style="width: 40px;" label="Height" default="600">
+            <unit value="px">px</unit>
+          </param>
+        </param>
+        <param label="Thumbnail size" type="group" tip="Switch on the Optimize images option for this setting.">
+          <param name="optimizeThumbnailWidth" type="text" style="width: 40px;" label="Width" default="100">
+            <unit value="px">px</unit>
+          </param>
+          <param name="optimizeThumbnailHeight" type="text" style="width: 40px;" label="Height" default="60">
+            <unit value="px">px</unit>
+          </param>
+        </param>
+      </params>
+      <params name="optimize-core" label="Layer images">
+        <param type="group" label="Layer image optimization">
+          <param type="onoff" name="layer-image-optimize" label="Devices" default="0"/>
+          <param type="number" name="layer-image-tablet" label="Tablet scale" default="50" style="width:30px;">
+            <unit value="%">%</unit>
+          </param>
+          <param type="number" name="layer-image-mobile" label="Mobile scale" default="30" style="width:30px;">
+            <unit value="%">%</unit>
+          </param>
+        </param>
+        <param type="group" label="Layer image embed into HTML">
+          <param type="onoff" name="layer-image-base64" label="Base64 embed" default="0"/>
+          <param type="number" name="layer-image-base64-size" label="Maximum file size" default="5" style="width:30px;">
+            <unit value="kb">kb</unit>
+          </param>
+        </param>
+      </params>
+    </params>
+    <params name="loading" type="groupped" label="Loading">
+      <params name="loading-core" label="" hidetitle="1">
+        <param name="playWhenVisible" type="onoff" label="Play when visible" default="1"/>
+        <param type="group" label="Fadein">
+          <param name="fadeOnLoad" type="onoff" label="on load" default="1"/>
+          <param name="fadeOnScroll" type="onoff" label="on scroll" default="0"/></param>
+        <param type="imagelistfromfoldervalue" name="spinner" label="Loading animation" folder="$ss$/spinner/" default="simpleWhite" class="n2-white"/>
+        <param type="group" label="Custom loading animation image" class="n2-expert">
+          <param type="image" name="custom-spinner" label="Image"/>
+          <param name="custom-spinner-width" type="numberautocomplete" label="Width" default="100" style="width:35px" values="300,200,100,50">
+            <unit>px</unit>
+          </param>
+          <param name="custom-spinner-height" type="numberautocomplete" label="Height" default="100" style="width:35px" values="300,200,100,50">
+            <unit>px</unit>
+          </param>
+          <param name="custom-display" type="onoff" label="Hide until complete load" default="1"/></param>
+        <param type="number" name="dependency" label="Pre loaded slider ID" tip="The current slider will not start loading until the set slider is loaded completely."/>
+        <param name="delay" type="number" label="Delay" default="0" style="width:30px;">
+          <unit value="ms">ms</unit>
+        </param>
+        <param name="is-delayed" type="onoff" label="Delayed (for lightbox/tabs)" default="0"/>
+      </params>
+    </params>
+    <params name="slides" type="groupped" label="slides">
+      <params name="slides-options" hidetitle="1">
+        <param type="group" label="Randomize">
+          <param name="randomize" type="onoff" label="Randomize" default="0"/>
+          <param name="randomizeFirst" type="onoff" label="Randomize first" default="0"/>
+          <param name="randomize-cache" type="onoff" label="Cache support" default="1"/>
+          <param name="variations" type="number" label="Variations" default="5" style="width:40px;"/></param>
+        <param type="number" name="maximumslidecount" label="Maximum slide count" default="1000" style="width:40px;"/>
+        <param type="group" label="Lightbox from backgrounds">
+          <param type="onoff" name="global-lightbox" label="Enabled" default="0"/>
+          <param name="global-lightbox-label" type="radio" label="Show label" default="0">
+            <option value="0">No</option>
+            <option value="name">Only slide name</option>
+            <option value="namemore">Slide name and description</option>
+          </param>
+        </param>
+        <param name="maintain-session" type="onoff" label="Maintain slide session" default="0"/>
+      </params>
+    </params>
+    <params name="developer" type="groupped" label="Developer">
+      <params name="developer-options" hidetitle="1">
+        <param type="onoff" name="blockrightclick" label="Block right click" default="0"/>
+        <param name="overflow-hidden-page" type="onoff" label="Hide page overflow" default="0"/>
+        <param name="scroll-fix" type="onoff" label="Browser scroll fix (Full page)" default="0"/>
+        <param name="clear-both" type="onoff" label="Clear both before slider" tip="If your slider doesn&apos;t resize correctly, turn this option on." default="0"/>
+        <param type="group" label="Background parallax">
+          <param name="bg-parallax-tablet" type="onoff" label="Tablet" default="1"/>
+          <param name="bg-parallax-mobile" type="onoff" label="Mobile" default="1"/></param>
+        <param type="textarea" name="callbacks" label="JavaScript callbacks" style2="width:600px;height:600px;"/>
+      </params>
+    </params>
+  </params>
+  <params name="widgets" label="Widgets" type="raw" hidetitle="1">
+    <param name="widgets" type="pluginmatrix" label="" group="sswidget" method="onWidgetList" default="arrow"/>
+  </params>
+</root>

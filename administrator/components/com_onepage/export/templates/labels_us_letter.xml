@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opcexport" method="upgrade" >	
+    <name>OPC Export - ODS-PDF Labels Export</name>
+    <creationDate>Mar 2017</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>Labels settings</description>
+    <files>
+        <filename>labels_us_letter.odt</filename>
+    </files>
+
+<params>
+</params>	
+</extension>

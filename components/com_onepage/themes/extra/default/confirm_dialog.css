@@ -1,0 +1,40 @@
+#opc_cf_dialog div.opccf_confirm_row  .opccf_quantity, 
+#opc_cf_dialog div.opccf_confirm_row  .opccf_times, 
+#opc_cf_dialog div.opccf_confirm_row  .opccf_productname, 
+#opc_cf_dialog div.opccf_confirm_row  .opccf_productsubtotal, 
+#opc_cf_dialog div.opccf_confirm_row  .vm-display , 
+#opc_cf_dialog div.opccf_confirm_row  .vm-price-value
+{
+display: inline; 
+
+}
+#opc_cf_dialog div.opccf_confirm_row  .opc_PricesalesPrice,#opc_cf_dialog .row_value, #opc_cf_dialog .vm-price-value {
+ float: right; 
+}
+
+.opc_cf_dialog .ui-dialog-titlebar-close {
+ display: none; 
+}
+
+.opc_cf_dialog .ui-dialog-buttonpane {
+ border: none; 
+}
+#opc_cf_dialog {
+ border: none; 
+}
+.opc_cf_dialog .cancel_button  {
+ float: left; 
+ margin-left: 5%; 
+ min-width: 40%;
+ margin-bottom: 10px; 
+}
+
+.opc_cf_dialog .ok_button  {
+
+float: right; 
+ margin-right: 5%; 
+ margin-bottom: 10px; 
+ min-width: 40%;
+ 
+ 
+}

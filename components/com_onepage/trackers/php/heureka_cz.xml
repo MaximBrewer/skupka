@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>OPC Tracking - Heureka.cz</name>
+    <creationDate>Oct 2013</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>Heureka.cz per description at http://sluzby.heureka.cz/napoveda/mereni-konverzi/</description>
+    <files>
+        <filename>heureka_cz.php</filename>
+    </files>
+
+<params>
+    
+    
+			<param
+        type="text"
+        name="heureka_key"
+        id="heureka_key"
+        label="Heureka Key (klic) for converstion tracking"
+        description="Enter your Heureka key from http://sluzby.heureka.cz/obchody/mereni-konverzi/"
+        size="80"
+		default="ABCDEFGH12345NOPQRS1111123456789"
+        maxLength="255" />
+		
+		<param
+        type="list"
+        name="allow_visitor_data"
+        id="allow_visitor_data"
+        label="Povolit funkciu Overene zakaznikmi" 
+        description="Will send email to heureka.cz"
+		default="0"
+        >
+		 <option value="0">No</option>
+		 <option value="1">Yes</option>
+		</param>
+		
+		
+		<param
+        type="text"
+        name="heureka_secret_key"
+        id="heureka_secret_key"
+        label="Heureka Kľúč pre Overene zakazniky"
+        description="Enter your secret Heureka key from http://sluzby.heureka.cz/sluzby/certifikat-spokojenosti/"
+        size="80"
+		default="ABCDEFGH12345NOPQRS1111123456789"
+        maxLength="255" />
+			
+		
+		
+		
+		
+		<param
+        type="list"
+        name="dual_mode"
+        id="dual_mode"
+        label="Zobraziť kód Heureka.cz iba v prípade" 
+        description="Ak používate aj heureka.sk je nutné aby overené zákazníkmi sa spustilo iba raz"
+		default="0"
+        >
+		 <option value="0">Vždy</option>
+		 <option value="1">Iba pre zákazníkov z ČR</option>
+		 <option value="2">Iba pre zákazníkov s platbou v CZK</option>
+		</param>
+			
+		
+			
+		
+       
+    
+</params>	
+</extension>

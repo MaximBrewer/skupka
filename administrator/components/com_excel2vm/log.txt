@@ -1,0 +1,1 @@
+{"cur_row":5,"num_row":"5","pn":3,"pu":0,"cn":0,"cu":0,"time":0,"cur_time":1478676899,"cur_cat":null,"cur_prod":"\u0422\u0435\u0441\u0442\u043e\u0432\u044b\u0439 \u0442\u043e\u0432\u0430\u0440-57-57","mem":5.75,"mem_total":256,"mem_peak":6.5,"filename":"export2016-11-09_08-33-15.xlsx","file_index":0,"total_files":1,"status":"","timeout":0}

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="level2menustyles">
+		<fieldset name="level2menustyles_maximenuparams">
+			<field
+				name="level2menustylesmarginckspacer"
+				type="ckspacer"
+				label="MOD_MAXIMENUCK_SPACER_STYLESMARGIN"
+				style="title"
+			/>
+			<field
+				name="level2menustylesusemargin"
+				type="ckradio"
+				default="0"
+				label="MOD_MAXIMENUCK_USEMARGIN_LABEL"
+				description="MOD_MAXIMENUCK_USEMARGIN_DESC"
+				class="level2menustyles btn-group"
+			>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field 
+				name="level2menustylespaddingtop" 
+				type="cktext" 
+				default="0" 
+				label="MOD_MAXIMENUCK_PADDINGTOP_LABEL" 
+				description="MOD_MAXIMENUCK_PADDINGTOP_DESC" 
+				icon="padding_top.png" 
+				suffix="px" 
+				class="level2menustyles"
+			/>
+			<field 
+				name="level2menustylespaddingbottom" 
+				type="cktext" 
+				default="0" 
+				label="MOD_MAXIMENUCK_PADDINGBOTTOM_LABEL" 
+				description="MOD_MAXIMENUCK_PADDINGBOTTOM_DESC" 
+				icon="padding_bottom.png" 
+				suffix="px" 
+				class="level2menustyles"
+			/>
+			<field
+				name="level2menustylesbackgroundckspacer"
+				type="ckspacer"
+				label="MOD_MAXIMENUCK_SPACER_STYLESBACKGROUND"
+				style="title"
+			/>
+			<field
+				name="level2menustylesusebackground"
+				type="ckradio"
+				default="0"
+				label="MOD_MAXIMENUCK_USEBACKGROUND_LABEL"
+				description="MOD_MAXIMENUCK_USEBACKGROUND_DESC"
+				class="level2menustyles btn-group"
+			>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field 
+				name="level2menustylesbgcolor1" 
+				type="ckcolor" 
+				default="" 
+				label="MOD_MAXIMENUCK_BGCOLOR1_LABEL" 
+				description="MOD_MAXIMENUCK_BGCOLOR1_DESC" 
+				class="level2menustyles"
+			/>
+			<field
+				name="level2menustylesbgopacity"
+				type="cktext"
+				default=""
+				label="MOD_MAXIMENUCK_BGOPACITY_LABEL"
+				description="MOD_MAXIMENUCK_BGOPACITY_DESC"
+				class="level2menustyles"
+			/>
+			<field
+				name="level2menustylesbgimage"
+				type="ckmedia"
+				label="MOD_MAXIMENUCK_BACKGROUNDIMAGE_LABEL"
+				labelstyles=""
+				description="MOD_MAXIMENUCK_BACKGROUNDIMAGE_DESC" 
+				class="level2menustyles"
+			/>
+			<field
+				name="level2menustylesbgpositionx"
+				type="cktext"
+				default="left"
+				icon="offsetx.png"
+				label="MOD_MAXIMENUCK_BACKGROUNDPOSITIONX_LABEL"
+				description="MOD_MAXIMENUCK_BACKGROUNDPOSITIONX_DESC" 
+				class="level2menustyles"
+			/>
+			<field
+				name="level2menustylesbgpositiony"
+				type="cktext"
+				default="top"
+				icon="offsetx.png"
+				label="MOD_MAXIMENUCK_BACKGROUNDPOSITIONY_LABEL"
+				description="MOD_MAXIMENUCK_BACKGROUNDPOSITIONY_DESC" 
+				class="level2menustyles"/>
+			<field
+				name="level2menustylesbgimagerepeat"
+				type="ckradio"
+				default="repeat"
+				label=""
+				optionstyles="width:40px;" 
+				class="level2menustyles btn-group"
+			>
+				<option value="repeat">img:bg_repeat.png</option>
+				<option value="repeat-x">img:bg_repeat-x.png</option>
+				<option value="repeat-y">img:bg_repeat-y.png</option>
+				<option value="no-repeat">img:bg_no-repeat.png</option>
+			</field>
+			<field
+				name="level2menustylesbgimagespacer"
+				type="spacer"
+				hr="true" />
+			<field
+				name="level2menustylesusegradient"
+				type="ckradio"
+				default="0"
+				label="MOD_MAXIMENUCK_USEGRADIENT_LABEL"
+				description="MOD_MAXIMENUCK_USEGRADIENT_DESC"
+				class="level2menustyles btn-group"
+			>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field 
+				name="level2menustylesbgcolor2" 
+				type="ckcolor" 
+				default="" 
+				label="MOD_MAXIMENUCK_BGCOLOR2_LABEL" 
+				description="MOD_MAXIMENUCK_BGCOLOR2_DESC" 
+				class="level2menustyles"
+			/>
+			<field
+				name="level2menustylesroundedcornersckspacer"
+				type="ckspacer"
+				label="MOD_MAXIMENUCK_SPACER_STYLESROUNDEDCORNERS"
+				style="title"
+			/>
+			<field
+				name="level2menustylesuseroundedcorners"
+				type="ckradio"
+				default="0"
+				label="MOD_MAXIMENUCK_USEROUNDEDCORNERS_LABEL"
+				description="MOD_MAXIMENUCK_USEROUNDEDCORNERS_DESC"
+				class="level2menustyles btn-group"
+			>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field 
+				name="level2menustylesroundedcornerstl" 
+				type="cktext" 
+				default="5" 
+				label="MOD_MAXIMENUCK_ROUNDEDCORNERSTL_LABEL" 
+				description="MOD_MAXIMENUCK_ROUNDEDCORNERSTL_DESC" 
+				icon="border_radius_tl.png" 
+				suffix="px" 
+				class="level2menustyles"
+			/>
+			<field 
+				name="level2menustylesroundedcornerstr" 
+				type="cktext" 
+				default="5" 
+				label="MOD_MAXIMENUCK_ROUNDEDCORNERSTR_LABEL" 
+				description="MOD_MAXIMENUCK_ROUNDEDCORNERSTR_DESC" 
+				icon="border_radius_tr.png" 
+				suffix="px" 
+				class="level2menustyles"
+			/>
+			<field 
+				name="level2menustylesroundedcornersbr" 
+				type="cktext" 
+				default="5" 
+				label="MOD_MAXIMENUCK_ROUNDEDCORNERSBR_LABEL" 
+				description="MOD_MAXIMENUCK_ROUNDEDCORNERSBR_DESC" 
+				icon="border_radius_br.png" 
+				suffix="px" 
+				class="level2menustyles"
+			/>
+			<field 
+				name="level2menustylesroundedcornersbl" 
+				type="cktext" 
+				default="5" 
+				label="MOD_MAXIMENUCK_ROUNDEDCORNERSBL_LABEL" 
+				description="MOD_MAXIMENUCK_ROUNDEDCORNERSBL_DESC" 
+				icon="border_radius_bl.png" 
+				suffix="px" 
+				class="level2menustyles"
+			/>
+			<field
+				name="level2menustylesshadowckspacer"
+				type="ckspacer"
+				label="MOD_MAXIMENUCK_SPACER_STYLESSHADOW"
+				style="title"
+			/>
+			<field
+				name="level2menustylesuseshadow"
+				type="ckradio"
+				default="0"
+				label="MOD_MAXIMENUCK_USESHADOW_LABEL"
+				description="MOD_MAXIMENUCK_USESHADOW_DESC"
+				class="level2menustyles btn-group"
+			>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field 
+				name="level2menustylesshadowcolor" 
+				type="ckcolor" 
+				default="" 
+				label="MOD_MAXIMENUCK_SHADOWCOLOR_LABEL" 
+				description="MOD_MAXIMENUCK_SHADOWCOLOR_DESC" 
+				class="level2menustyles"
+			/>
+			<field 
+				name="level2menustylesshadowblur" 
+				type="cktext" 
+				default="3" 
+				label="MOD_MAXIMENUCK_SHADOWBLUR_LABEL" 
+				description="MOD_MAXIMENUCK_SHADOWBLUR_DESC" 
+				icon="shadow_blur.png" 
+				suffix="px" 
+				class="level2menustyles"
+			/>
+			<field 
+				name="level2menustylesshadowspread" 
+				type="cktext" 
+				default="0" 
+				label="MOD_MAXIMENUCK_SHADOWSPREAD_LABEL" 
+				description="MOD_MAXIMENUCK_SHADOWSPREAD_DESC" 
+				icon="shadow_spread.png" 
+				suffix="px" 
+				class="level2menustyles"
+			/>
+			<field 
+				name="level2menustylesshadowoffsetx" 
+				type="cktext" 
+				default="0" 
+				label="MOD_MAXIMENUCK_OFFSETX_LABEL" 
+				description="MOD_MAXIMENUCK_OFFSETX_DESC" 
+				icon="offsetx.png" 
+				suffix="px" 
+				class="level2menustyles"
+			/>
+			<field 
+				name="level2menustylesshadowoffsety" 
+				type="cktext" 
+				default="0" 
+				label="MOD_MAXIMENUCK_OFFSETY_LABEL" 
+				description="MOD_MAXIMENUCK_OFFSETY_DESC" 
+				icon="offsety.png" 
+				suffix="px" 
+				class="level2menustyles"
+			/>
+			<field 
+				name="level2menustylesshadowinset" 
+				type="ckradio" 
+				default="0" 
+				label="MOD_MAXIMENUCK_SHADOWINSET_LABEL" 
+				description="MOD_MAXIMENUCK_SHADOWINSET_DESC" 
+				class="level2menustyles btn-group"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="level2menustylesbordersckspacer"
+				type="ckspacer"
+				label="MOD_MAXIMENUCK_SPACER_STYLESBORDERS"
+				style="title"
+			/>
+			<field
+				name="level2menustylesuseborders"
+				type="ckradio"
+				default="0"
+				label="MOD_MAXIMENUCK_USEBORDERS_LABEL"
+				description="MOD_MAXIMENUCK_USEBORDERS_DESC"
+				class="level2menustyles btn-group"
+			>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field 
+				name="level2menustylesbordercolor" 
+				type="ckcolor" 
+				default="" 
+				label="MOD_MAXIMENUCK_BORDERCOLOR_LABEL" 
+				description="MOD_MAXIMENUCK_BORDERCOLOR_DESC" 
+				class="level2menustyles"
+			/>
+			<field 
+				name="level2menustylesbordertopwidth" 
+				type="cktext" 
+				default="" 
+				label="PLG_MAXIMENUCK_BORDERTOPWIDTH_LABEL" 
+				description="PLG_MAXIMENUCK_BORDERTOPWIDTH_DESC" 
+				icon="shape_borders.png" 
+				suffix="px" 
+				class="level2menustyles"
+			/>
+			<field 
+				name="level2menustylesborderrightwidth" 
+				type="cktext" 
+				default="" 
+				label="PLG_MAXIMENUCK_BORDERRIGHTWIDTH_LABEL" 
+				description="PLG_MAXIMENUCK_BORDERRIGHTWIDTH_DESC" 
+				icon="shape_borders.png" 
+				suffix="px" 
+				class="level2menustyles"
+			/>
+			<field 
+				name="level2menustylesborderbottomwidth" 
+				type="cktext" 
+				default="" 
+				label="PLG_MAXIMENUCK_BORDERBOTTOMWIDTH_LABEL" 
+				description="PLG_MAXIMENUCK_BORDERBOTTOMWIDTH_DESC" 
+				icon="shape_borders.png" 
+				suffix="px" 
+				class="level2menustyles"
+			/>
+			<field 
+				name="level2menustylesborderleftwidth" 
+				type="cktext" 
+				default="" 
+				label="PLG_MAXIMENUCK_BORDERLEFTWIDTH_LABEL" 
+				description="PLG_MAXIMENUCK_BORDERLEFTWIDTH_DESC" 
+				icon="shape_borders.png" 
+				suffix="px" 
+				class="level2menustyles"
+			/>
+		</fieldset>
+	</fields>
+</form>

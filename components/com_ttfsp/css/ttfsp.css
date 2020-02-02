@@ -1,0 +1,513 @@
+tr, td {
+    border: none!important;
+}
+
+.user_rec td, .user_rec tr {
+	border:1px solid #CCCCCC!important;
+}
+
+
+.fiospec {
+font-size: 140%;
+}
+.descspec {
+}
+.spec {
+}
+.specdesc {
+}
+.ttfsptime td, .ttfsptime tr {
+	border:none;
+}
+.ttfspspec td, .ttfspspec tr {
+	border:none;
+}
+.dop_text {
+	font-size:10px!important;
+	text-align:center!important;
+}
+#fspsubmenu {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#fspsubmenu li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#fspsubmenu li a, #fspsubmenu span.nolink {
+    border-right: 1px solid #CCCCCC;
+    color: #0B55C4;
+    cursor: pointer;
+    font-weight: bold;
+    height: 12px;
+    line-height: 12px;
+    padding: 0 15px;
+}
+/* ------------ edit panel ------------------- */
+.panel {
+	height:16px;
+	border:none!important;
+	margin-top:5px!important;
+	margin-bottom:-5px!important;
+	margin-right:-5px;
+}
+.panel_publ {
+float:right;
+background:url(/administrator/components/com_ttfsp/imgs/tick.png) no-repeat; 
+padding:8px;
+cursor:pointer;
+}	
+.panel_nopubl {
+float:right;
+background:url(/administrator/components/com_ttfsp/imgs/publish_x.png) no-repeat; 
+padding:8px;
+cursor:pointer;
+}	
+.panel_open {
+float:right;
+background:url(/administrator/components/com_ttfsp/imgs/open.png) no-repeat; 
+padding:8px;
+cursor:pointer;
+}	
+.panel_close {
+float:right;
+background:url(/administrator/components/com_ttfsp/imgs/close.png) no-repeat; 
+padding:8px;
+cursor:pointer;
+}	
+.panel_yes {
+float:left;
+background:url(/administrator/components/com_ttfsp/imgs/plus.png) no-repeat; 
+padding:8px;
+cursor:pointer;
+}	
+.panel_no {
+float:left;
+background:url(/administrator/components/com_ttfsp/imgs/minus.png) no-repeat; 
+padding:8px;
+cursor:pointer;
+}	
+
+/* ----------- tpl addclient.php ---------------*/ 
+.addclient {
+padding:10px;
+background:#ebebeb;
+margin:5px 0 5px 0;
+}
+
+.addclient td, .addclient tr {
+	border:none;
+}
+
+.addclient .inputbox{
+width:300px;
+}
+
+/* ----------- tpl viewtime.php ---------------*/ 
+.tablevt {
+	border:1px solid #ccc;
+}
+.photovt {
+	border:1px solid #ccc;
+	padding:5px;
+}
+.tdvt {
+	padding:5px;
+	width:100px;
+}
+.tdvd {
+	padding:5px;
+}
+.tdvw {
+	padding:5px;
+}
+
+/* ----------- tpl viewspec.php ---------------*/ 
+.tablevs {
+	border:1px solid #ccc;
+	margin:10px 0 10px 0;
+}
+.photovs {
+	border:1px solid #ccc;
+	padding:5px;
+}
+.tdvs {
+	padding:5px;
+}
+.buttonvs {
+	padding: 10px;
+	font-size: 14px;
+	background-color: #eeeeee;
+	border: 1px dotted #CCCCCC;
+	font-weight: bold;
+	text-align:center!important;
+}
+.buttonvs a {
+	color: #999;
+	text-decoration: none;
+}
+/* ----------- tpl addtime.php ---------------*/ 
+
+.yesrecept {
+	font-size: 16px;
+	font-weight: bold!important;
+	text-align:center!important;
+}
+
+.recept {
+	color: #9C80C4;
+	padding: 10px;
+	font-size: 16px;
+	background-color: #eeeeee;
+	border: 1px dotted #CCCCCC;
+	font-weight: bold!important;
+	text-align:center!important;
+}
+.recept a {
+		font-weight: bold!important;
+		color: #9C80C4!important;
+		text-decoration: none!important;
+}
+
+.norecept {
+	color: #7FC375;
+	padding: 10px;
+	font-size: 16px;
+	background-color: #eeeeee;
+	border: 1px dotted #CCCCCC;
+	text-align:center!important;
+	text-decoration: none;	
+}
+ .norecept a {
+	color: #7FC375!important;
+	text-align:center!important;
+	text-decoration: none!important;	
+}
+
+.offrecept {
+	color: #999999;
+	text-align:center!important;
+	font-size: 16px;
+	background-color: #eeeeee;
+	border: 1px dotted #CCCCCC;
+	padding:3px;
+}
+
+.day {
+	font-size:16px;
+	text-align:center!important;
+}
+.month {
+	color:#ccc;
+	text-align:center!important;	
+}
+.dayname {
+	color:#ccc;
+	text-align:center!important;	
+}
+/* -------------------------------------------------- */ 
+
+/* button navigation */
+.pagenav {
+border:1px solid #cdba9c;
+background:#f4efe5 url(/components/com_ttfsp/images/bgbtn.gif) repeat-x; 
+padding:3px;
+margin:10px 1px 10px 0;
+cursor:pointer;
+}
+.pagenavdisab {
+border:1px solid #cdba9c;
+background:#f4efe5 url(/components/com_ttfsp/images/bgbtn.gif) repeat-x; 
+padding:3px;
+margin:10px 1px 10px 0;
+color:#CCC !important;
+}
+.pagenavsel {
+border:1px solid #cdba9c;
+background:#f4efe5 url(/components/com_ttfsp/images/bgbtn.gif) repeat-x; 
+padding:7px 3px 7px 3px;
+margin:10px 1px 10px 0;
+}
+
+/* ---------------------------- tooltip --------------------*/
+
+.urltooltip
+{
+  margin:0 3px 0 3px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #222!important;
+  outline: none;
+}
+
+.urltooltip span
+{
+  color: #222!important;
+  text-align:left;
+  font-size:11px;
+  visibility: hidden;
+  position: absolute; 
+  bottom: 30px;
+  left: 50%;
+  z-index: 1001;
+  width: 230px;
+  margin-left: -127px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  opacity: .9;
+  background-color: #ddd;                     
+  -moz-border-radius: 4px;
+  border-radius: 4px;  
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+  box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;  
+  text-shadow: 0 1px 0 rgba(255,255,255,.4); 
+  white-space: normal!important;
+}
+
+.urltooltip:hover
+{
+  border: 0; /* IE6 fix */
+   text-decoration: none!important; 
+}
+
+.urltooltip:hover span
+{
+  visibility: visible;
+}
+
+.urltooltip span:before,
+.urltooltip span:after
+{
+  content: "";
+  position: absolute;
+  z-index: 1001;
+  bottom: -7px;
+  left: 50%;
+  margin-left: -8px;  
+  border-top: 8px solid #ddd;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;        
+  border-bottom: 0;  
+}
+
+.urltooltip span:before
+{
+  border-top-color: #ccc;
+  bottom: -8px;
+}
+
+/* color */
+
+.color_tooltip span
+{
+
+  border-color: #e1ca82;
+  background-color: #ffeaa6;                     
+}
+
+.color_tooltip span:after
+{ 
+  border-top-color: #ffeaa6;
+}
+
+.color_tooltip span:before
+{
+  border-top-color: #e1ca82;
+}
+div.pricezap {
+	color: green;
+	font-size: 10px;
+}
+p.nameprice {
+	padding: 0;
+	margin: 0;
+	font-size: 8px;
+	color: green;
+}
+div.pricezap2 {
+	text-align: right;
+	color: green;
+	font-size: 16px;
+	background: #f4f6f7;
+	padding: 5px 10px 5px 0;
+}
+div.cantd {
+	text-align: right;
+	margin-bottom: 20px;
+	background: #fff;
+	padding: 5px;
+}
+div.cantd input.button {
+	border: solid #ccc 1px;
+	background: #fff;
+	color: red;
+}
+div.radiodiv {
+	margin: 10px 0 0 5px!important;
+	
+}
+input.senbutt {
+	margin-top: 10px;
+}
+table.tablevt, table.tablevs {
+	border-collapse: inherit;
+	border-spacing: 10px;
+}
+div.spec_images {
+	padding: 0 10px 0 0;
+	margin: 0 10px 0 0;
+}
+div.info_paymentpage {
+	background: green;
+	color: #fff;
+	padding: 5px;
+	font-size: 16px;
+	margin: 3px 0 10px 0;
+}
+div.payment_buttons input {
+	padding: 60px;
+	border-radius: 5px;
+	border: solid #ccc 3px;
+	background: goldenrod;
+	color: #000;
+	width: 100%;
+	display: block;
+	white-space: normal;
+	min-height: 170px;
+}
+div.payment_buttons input:hover {
+	background: green;
+	color: #fff;
+}
+.buttonblock {
+	width: 45%;
+	float: left;
+	margin: 10px 30px 10px 0;
+}
+div.paymentpage {
+	display: inline-block;
+	width: 100%;
+}
+div.order_desc_block.image_block {
+	display: inline-block;
+	width: 35%;
+	float: left;
+}
+div.addclient.info_order_block {
+	display: inline-block;
+	width: 97%;
+}
+div.descspec {
+	padding: 5px 2px 5px 4px;
+	background: #fff;
+	margin: 3px 0 3px 0;
+}
+div.order_desc_block {
+	display: inline-block;
+	width: 65%
+}
+div.order_page_block_time {
+	background: #ebebeb;
+	padding: 7px;
+	margin: 3px 0 3px 0;
+}
+div.order_page_block input {
+
+	width: 64%;
+	
+}
+div.order_page_block input.senbutt { 
+	width: auto;
+	border: none;
+	background: green;
+	color: #fff;
+	padding: 10px;
+	border-radius: 5px;
+}
+div.order_page_block input.senbutt:hover {
+	background: red;
+}
+
+div.psfd_form_title span {
+	padding-bottom: 10px;
+	display: block;
+}
+div.form_paswwd input {
+	display: block;
+	margin-bottom: 5px;
+}
+a.link_succc {
+	padding: 10px;
+	color: #fff;
+}
+a.link_succc:hover {
+	background: red!important;
+	color: #fff;
+}
+a.return_component.link_succc {
+	background: green;
+}
+a.print_talon.link_succc {
+	background: #1589c9;
+}
+div.field_buttons {
+	display: block;
+	margin: 30px 0 20px 0;
+}
+div.mainpage_successpagettfsp {
+	padding: 10px;
+	border: dotted  #ccc 3px;
+}
+div.adrsssect {
+	margin-top: 5px;
+	background: #f4f6f7;
+	padding: 10px;
+	font-size: 120%;
+}
+table.tablevt.offtbl {
+	border-collapse: collapse;
+	border: none;
+}
+tr.offblock {
+	border-bottom: solid #ccc 1px!important;
+}
+div.splist {
+	text-align: right;
+}
+table.tablevt.offtbl .photovt {
+	padding: 0;
+	border: none;
+}
+a.btnrtn {
+	padding: 3px;
+	width: 250px;
+	display: block;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	float: right;
+}
+div.retpm_butt {
+	padding: 5px;
+	font-size: 120%;
+}
+a.retpm_butt_link.retbuts {
+	background: red;
+	color: #fff;
+	padding: 4px;
+}
+a.retpm_butt_link.retbuts:hover {
+	background: green;
+}
+td.info_list_user_cab {
+	padding: 10px;
+}
+h2.number_ord_list_title {
+	border-bottom: solid #ccc 2px;
+	padding-bottom: 3px;
+	font-size: 14px;
+}

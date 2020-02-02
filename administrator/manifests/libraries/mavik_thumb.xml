@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" method="upgrade" version="1.7">
+    <name>mAvik Thumb</name>
+    <libraryname>mavik/thumb</libraryname>
+    <author>Vitaliy Marenkov</author>
+    <creationDate>September 2012</creationDate>
+    <copyright>2012 (C) Vitaliy Marenkov</copyright>
+    <license>GNU/GPLv3</license>
+    <authorEmail>admin@mavik.com.ua</authorEmail>
+    <authorUrl>www.mavik.com.ua</authorUrl>
+    <version>1.0.15</version>
+    <description> 
+    	Library for creating thumbnails
+    </description>
+
+    <files>
+    	<file>index.html</file>
+        <file>mavik_thumb.xml</file>	
+        <file>generator.php</file>
+        <file>info.php</file>
+        <folder>resizetype</folder>
+    </files>
+</extension>

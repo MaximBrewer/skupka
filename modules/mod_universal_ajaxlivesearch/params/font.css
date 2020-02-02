@@ -1,0 +1,51 @@
+h3.title{
+  border:0;
+  padding:0;
+  background-repeat: no-repeat;
+  background-position: right 8px;
+  background-color: #f4f4f4;
+  height: 40px;
+  line-height: 40px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  border-radius: 8px 8px 0px 0px; 
+  border: none;
+  border-bottom : 1px solid #CCC;
+  padding-left: 10px;
+  margin:0;
+}
+
+h3.title span{
+  font-size: 18px;
+  text-transform: none;
+  line-height:40px;
+  color:#025A8D;
+}
+
+
+.fontchooser td {
+  text-decoration: none;
+  color: #555555;
+  padding: 5px 5px 5px 10px;
+}
+
+.fontchooser tr {
+  border-bottom: 1px solid #cccccc;
+  border-left: 5px solid #ededed; 
+}
+
+.fontchooser tr.blue {
+  background: #dce8ef;
+  border-left: 5px solid #ccd8de;    
+}
+
+#fontshadowx, #fontshadowy, #fontshadowsize {
+  width: 58px;
+  margin-bottom: 4px;
+}
+
+.fontchooser select,
+.fontchooser input[type="text"]{
+  margin:0;
+}

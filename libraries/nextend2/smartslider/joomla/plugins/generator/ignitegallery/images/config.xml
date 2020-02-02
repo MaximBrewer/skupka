@@ -1,0 +1,22 @@
+<root>
+    <params name="ignitegalleryimages" label="Filter">
+        <param name="ignitegallerysourcecategory" label="Category" type="ignitegallerycategories" default="0"
+               multiple="1" size="10"/>
+    </params>
+    <params name="order" label="Order by">
+        <param name="ignitegalleryorder" type="mixed" label="Order" default="con.date|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="con.filename">Filename</option>
+                <option value="cat_title">Category title</option>
+                <option value="con.ordering">Ordering</option>
+                <option value="con.hits">Hits</option>
+                <option value="con.date">Date</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

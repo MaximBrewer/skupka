@@ -1,0 +1,48 @@
+<root>
+  <params name="caption-item" label="Caption item settings" hidetitle="1">
+    <param type="group">
+      <param name="image" type="image" label="Image" default="" fixed="1" style="width:236px;" alt="item_captionalt"/>
+      <param name="alt" type="text" label="Alt" default="" class="n2-expert" style="width:280px;"/></param>
+    <param name="animation" type="mixed" default="Full|*|Left|*|0">
+      <param type="list" label="Animation" translateable="1">
+        <option value="Full">Full</option>
+        <option value="Simple">Simple</option>
+        <option value="Fade">Fade</option>
+      </param>
+      <param type="list" label="Direction" translateable="1">
+        <option value="top">Top</option>
+        <option value="right">Right</option>
+        <option value="bottom">Bottom</option>
+        <option value="left">Left</option>
+      </param>
+      <param type="onoff" label="Scale"/></param>
+    <param type="group">
+      <param name="color" type="color" label="Caption backgound" alpha="1" default="00000080"/>
+      <param name="verticalalign" type="list" label="Vertical align">
+        <option value="flex-start">Top</option>
+        <option value="center">Center</option>
+        <option value="flex-end">Bottom</option>
+      </param>
+    </param>
+    <param name="content" type="text" label="Title" default="Button" style="width:280px;"/>
+    <param name="fonttitle" type="font" previewmode="paragraph" label="Title font" class="n2-hidden"/>
+    <param name="description" type="textarea" label="Description" default="" class="n2-expert"/>
+    <param name="font" type="font" previewmode="paragraph" label="Description font" class="n2-hidden"/>
+    <param name="link" type="mixed" default="|*|_self">
+      <param type="url" label="Link" style="width:236px;"/>
+      <param type="list" label="Target" translateable="1">
+        <option value="_self">Self</option>
+        <option value="_blank">Blank</option>
+      </param>
+      <param type="list" label="Rel">
+        <option value=""/>
+        <option value="nofollow">nofollow</option>
+        <option value="noreferrer">noreferrer</option>
+        <option value="author">author</option>
+        <option value="external">external</option>
+        <option value="help">help</option>
+      </param>
+    </param>
+    <param type="onoff" name="image-optimize" label="Optimize" default="1" class="n2-expert"/>
+  </params>
+</root>

@@ -1,0 +1,1 @@
+drop table `#__yandex_maps_datetimes`;

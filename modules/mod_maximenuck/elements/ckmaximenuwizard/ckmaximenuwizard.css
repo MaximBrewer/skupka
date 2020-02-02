@@ -1,0 +1,395 @@
+/**
+ * @copyright	Copyright (C) 2012 Cedric KEIFLIN alias ced1870
+ * http://www.joomlack.fr
+ * @license		GNU/GPL
+ * */
+
+.ckpopupwizard {
+    border: #666 1px solid;
+    box-shadow: #000 0px 0px 5px;
+    -moz-box-shadow: #000 0px 0px 5px;
+    background: #fff url('fondpopup.png') left top repeat-x;   
+    padding: 10px;
+    left: 50%;
+    top: 10px;   
+    padding-bottom: 100px;
+	z-index: 10000;
+	height: 500px;
+	margin-left: -400px;
+	width: 800px;
+	position: absolute;
+}
+
+.ckboxmodal .ckpopupwizard {
+	display: block !important;
+	box-shadow: none;
+	border: none;
+	position: relative;
+	margin : 0;
+	padding: 10px;
+	left: auto;
+	top: auto;
+}
+/*.ckpopupwizard_save {
+    background-image: url('validate.png');
+}
+
+.ckpopupwizard_save:hover {
+    background-image: url('validate_hover.png');
+}
+
+.ckpopupwizard_cancel {
+    background-image: url('cancel.png');
+}
+
+.ckpopupwizard_cancel:hover {
+    background-image: url('cancel_hover.png');
+}
+
+.ckpopupwizard_button {
+    color: #aaa;
+    padding: 5px 20px 5px 5px;
+    background-color: #333;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-top: #666 1px solid;
+    border-left: #444 1px solid;
+    border-right: #444 1px solid;
+    border-bottom: #000 1px solid;
+    float: right;
+    margin: 3px 3px 15px 3px;
+    width: 50px;
+    cursor: pointer;
+    font-family: 'Segoe UI';
+}
+
+.ckpopupwizard_button:hover {
+    background-color: #222;
+    color: #fff;
+}*/
+
+#ckpopupwizard div.ck_button {
+    color: #c1c1c1;
+    float: left;
+    font-size: 12px;
+    margin: 0;
+    padding: 0 5px;
+    text-align: center;
+}
+
+#ckpopupwizard div.ck_button a {
+	display: block;
+	margin: 5px;
+	padding: 0;
+	font-size: 12px;
+	text-align: center;
+	color: #c1c1c1;
+	height: 25px;
+	color: #c1c1c1;
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	text-decoration: none;
+	text-transform: none;
+	background-position: 0px 2px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#ckpopupwizard div.ck_button a:hover {
+	color: #fff;
+}
+
+#ckpopupwizard div.ck_button.big a {
+	display: block;
+	float: right;
+	width: 60px;
+	height: 45px;
+	color: #c1c1c1;
+	padding-top: 25px;
+	text-align: center;
+	margin: 10px 6px 0 0;
+	background-position: center 0px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#ckpopupwizard div.ck_button.big a:hover {
+	color: #fff;
+}
+
+#ckpopupwizard .ck_buttons_right {
+	float: right;
+	margin-top:  -10px;
+}
+
+#ckpopupwizard div.ck_button a.ckcancel {
+	background-image: url(cancel.png);
+}
+
+#ckpopupwizard div.ck_button a.ckcancel:hover {
+	background-image: url(cancel_hover.png);
+}
+
+#ckpopupwizard div.ck_button a.cksave {
+	width: 75px;
+	background-image: url(validate.png);
+}
+
+#ckpopupwizard div.ck_button a.cksave:hover {
+	background-image: url(validate_hover.png);
+}
+
+#ckpopupwizard #ckpopupwizard_prev {
+	text-align: right;
+	padding-left: 20px;
+	padding-right: 3px;
+	width: 80px;
+	display: none;
+}
+
+#ckpopupwizard #ckpopupwizard_prev:before {
+	content: "<";
+    display: block;
+    float: left;
+    font-size: 20px;
+    height: 20px;
+    /*margin-left: -15px;*/
+    width: 15px;
+}
+
+#ckpopupwizard #ckpopupwizard_next {
+	text-align: left;
+	padding-right: 20px;
+	padding-left: 3px;
+	width: 80px;
+	display: none;
+}
+
+#ckpopupwizard #ckpopupwizard_next:after {
+	content: ">";
+    display: block;
+    float: right;
+    font-size: 20px;
+    height: 20px;
+    /*margin-right: -15px;*/
+    width: 15px;
+}
+
+.ckpopupwizard_title {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Segoe UI';
+	padding: 10px;
+}
+
+.ckpopupwizardmanager_button {
+    padding: 5px 5px 5px 30px;
+	color: #333;
+	text-decoration: none;
+	font-weight: normal;
+	text-align: center;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: none;
+	cursor: pointer;
+	background: #e1e1e1 url('magic.png') 5px center no-repeat;
+	text-indent: 30px;
+	height: 65px;
+    width: 100%;
+    text-align: left;
+}
+
+.ckpopupwizardmanager_button:hover {
+    background-color: #0088CC;
+    color: #fff;
+}
+
+.ckpopupwizard_index {
+	float: left;
+	height: 24px;
+	width: 24px;
+	margin: 30px 17% 5px 0;
+	background: #eee;
+	color: #fff;
+	border-radius: 12px;
+	font-size: 16px;
+	text-align: center;
+	line-height: 24px;
+	cursor: pointer;
+	position: relative;
+	z-index: 10;
+}
+
+.ckpopupwizard_index.active {
+	background: #aaa;
+}
+
+.ckpopupwizard_indexline {
+	height: 4px;
+	background: #eee;
+	width: 780px;
+	position: relative;
+    top: -18px;
+	z-index: 0;
+	clear: both;
+}
+
+.ckpopupwizard_indexline.active {
+	z-index: 1;
+	background: #aaa;
+	width: 0;
+	top: -22px;
+}
+
+#ckpopupwizard_slider {
+	/*height: 430px;*/
+	width: 780px;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+
+.ckpopupwizard_slider {
+	float: left;
+	height: 440px;
+	width: 780px;
+}
+
+#ckpopupwizard_slider > .inner {
+	width: 3900px;
+}
+
+.ckpopupwizard_heading {
+	font-size: 22px;
+	line-height: 22px;
+	padding: 20px 0;
+}
+
+.ckpopupwizard_select {
+	background: #F5F5F5;
+    margin-bottom: 1px;
+    padding: 5px 5px 5px 20px;
+	cursor: pointer;
+}
+
+.ckpopupwizard_select:hover, .ckpopupwizard_select.active {
+	background: #0088CC;
+	color: #fff;
+}
+
+.ckpopupwizard_select_desc {
+	display: none;
+}
+
+.ckpopupwizard .control-group {
+	margin-bottom: 5px !important;
+}
+
+.ckpopupwizard_optionsselect_area {
+	float: left;
+	width: 380px;
+}
+
+.ckpopupwizard_options_area {
+	float: right;
+	width: 380px;
+	margin-left: 20px;
+}
+
+.ckpopupwizard_optionsselect_area + .ckpopupwizard_optionsselect_area {
+	float: right;
+	width: 380px;
+	margin-left: 20px;
+}
+
+.ckpopupwizard_options_area > div {
+	display: none;
+}
+
+.ckpopupwizard_label {
+	padding-right: 5px;
+	text-align: left;
+	width: auto;
+	float: left;
+}
+
+.ckpopupwizard_input {
+	margin-left: 180px;
+}
+
+.ckpopupwizard_row {
+	clear: both;
+	margin-bottom: 5px;
+}
+
+#ckpopupwizard_select_desc_area {
+	border-top: 1px dotted #ccc;
+	color: #aaa;
+	margin-top: 15px;
+	padding-top: 15px;
+}
+
+.tooltip {
+	z-index: 10001 !important;
+}
+
+.ckpopupwizard_page {
+	border: 1px solid #EEEEEE;
+	padding: 5px;
+}
+/*
+.ckpopupwizard_page > div.ckpopupwizard_select + div.ckpopupwizard_select {
+	margin: 15px 0 15px 0;
+}
+
+.ckpopupwizard_page > div.ckpopupwizard_select + div.ckpopupwizard_select + div.ckpopupwizard_select {
+	margin: 0;
+}
+*/
+.ckpopupwizard_page > .ckpopupwizard_block  {
+	float: left;
+	height: 50px;
+	background: #d8d8d8;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.ckpopupwizard_logo {
+	float: left;
+	width: 40%;
+}
+
+.ckpopupwizard_logomodule {
+	margin-left: 5%;
+	width: 55%;
+}
+
+.ckpopupwizard_leftcol {
+	margin-right: 5%;
+	width: 20%;
+}
+
+.ckpopupwizard_centercol {
+
+	width: 50%;
+}
+
+.ckpopupwizard_right {
+	margin-left: 5%;
+	width: 20%;
+}
+
+.ckoverlay {
+    background: rgba(0,0,0, 0.3);   
+    padding: 0;
+    left: 50%;
+    top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	margin: 0;
+	position:fixed;
+}
+

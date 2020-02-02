@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+	<name>vdata</name>
+	<creationDate>25th June 2018</creationDate>
+	<author>Team WDMtech</author>
+	<authorEmail>support@wdmtech.com</authorEmail>
+	<authorUrl>http://www.wdmtech.com</authorUrl>
+	<copyright>Copyright (C) 2014 - 2018 wdmtech.com. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>2.9.23</version>
+	<description>COM_VDATA_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysqli">sql/install.sql</file>
+		</sql>
+	</install>
+	<update> 
+		<schemas> 
+			<schemapath type="mysql">sql/updates/mysql</schemapath> 
+			<schemapath type="mysqli">sql/updates/mysqli</schemapath> 
+		</schemas> 
+	</update>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysqli">sql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+	
+	<media folder="media" destination="com_vdata">
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+	</media>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>controller.php</filename>
+		<filename>vdata.php</filename>
+		<filename>router.php</filename>
+		<folder>controllers</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>operating</folder>
+		<folder>tables</folder>
+		<folder>uploads</folder>
+		<folder>views</folder>
+	</files>
+	<administration>
+		<menu img="../media/com_vdata/images/icon-16-vdata.png">VDATA</menu>
+		<submenu>
+			<menu view="vdata" img="../media/com_vdata/images/icon-16-dashboard.png">DASHBOARD</menu>
+			<menu view="config" img="../media/com_vdata/images/icon-16-config.png">CONFIGURATION</menu>
+			<menu view="profiles" img="../media/com_vdata/images/icon-16-profiles.png">PROFILES</menu>
+			<menu view="import" img="../media/com_vdata/images/icon-16-import.png">IMPORT</menu>
+			<menu view="export" img="../media/com_vdata/images/icon-16-export.png">EXPORT</menu>
+			<menu view="schedules" img="../media/com_vdata/images/icon-16-schedules.png">SCHEDULES</menu>
+			<menu view="quick" img="../media/com_vdata/images/icon-16-quick.png">QUICK</menu>
+			<menu view="notification" img="../media/com_vdata/images/icon-16-notification.png">NOTIFICATION</menu>
+			<menu view="display" img="../media/com_vdata/images/icon-16-display.png">DISPLAY</menu>
+			<menu view="logs" img="../media/com_vdata/images/icon-16-logs.png">LOGS</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>vdata.php</filename>
+			<filename>controller.php</filename>
+			<filename>changelog.txt</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<folder>classes</folder>
+			<folder>controllers</folder>
+			<folder>exportformat</folder>
+			<folder>help</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>operating</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>uploads</folder>
+			<folder>views</folder>
+		</files>
+	</administration>
+	
+	<!-- UPDATESERVER DEFINITION -->
+	<!-- Note: No spaces or linebreaks allowed between the server tags -->
+	<updateservers>
+		<server type="extension" priority="1" name="VDATA_UPDATE_SITE">http://www.wdmtech.com/prod_updates/vdata-upgrade.xml</server>
+		<!-- <server type="collection">http://example.com/list.xml</server>
+		<server type="extension" priority="2" name="vData Extension's Updates">http://example.com/extension.xml</server> -->
+	</updateservers>
+	
+</extension>

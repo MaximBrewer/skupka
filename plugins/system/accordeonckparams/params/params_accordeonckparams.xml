@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="params">
+        <fieldset name="accordeonckparams_params" label="PLG_ACCORDEONCKPARAMS_PARAMS_FIELDSET_LABEL">
+            <field name="accordeonckparams_desc" type="cktext" size="30" default="" label="PLG_ACCORDEONCKPARAMS_DESCRIPTION_LABEL" description="PLG_ACCORDEONCKPARAMS_DESCRIPTION_DESC" icon="style_edit.png" />
+            <field name="accordeonckparams_relattr" type="cktext" size="30" default="" label="PLG_ACCORDEONCKPARAMS_REL_LABEL" description="PLG_ACCORDEONCKPARAMS_REL_DESC" icon="link_go.png" />
+            <field name="accordeonckparams_anchor" type="cktext" size="30" default="" label="PLG_ACCORDEONCKPARAMS_ANCHOR_LABEL" description="PLG_ACCORDEONCKPARAMS_ANCHOR_DESC" icon="link_go.png" />
+			<field name="accordeonckparams_liclass" type="cktext" size="30" default="" label="PLG_ACCORDEONCKPARAMS_CSSCLASS_LABEL" description="PLG_ACCORDEONCKPARAMS_CSSCLASS_DESC" icon="css_add.png"/>
+            <field name="spacermodule" type="ckspacer" label="PLG_ACCORDEONCKPARAMS_MODULE_SPACER_LABEL" style="title"/>
+            <field name="accordeonckparams_insertmodule" type="ckradio" class="btn-group" default="0" label="PLG_ACCORDEONCKPARAMS_LOADMODULE_LABEL" description="PLG_ACCORDEONCKPARAMS_LOADMODULE_DESC" icon="application_view_gallery.png" >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="accordeonckparams_module" type="cksql" default="0" label="PLG_ACCORDEONCKPARAMS_SELECTMODULE_LABEL" description="PLG_ACCORDEONCKPARAMS_SELECTMODULE_DESC" query="SELECT id AS value, title AS accordeonckparams_module FROM #__modules WHERE client_id=0 AND published=1 ORDER BY title ASC" icon="application_form_magnify.png" />
+            <field name="accordeonckparams_forcemoduletitle" type="ckradio" default="0" label="PLG_ACCORDEONCKPARAMS_MODULETITLE_LABEL" description="PLG_ACCORDEONCKPARAMS_MODULETITLE_DESC" class="btn-group">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+        </fieldset>
+        <fieldset name="accordeonckparams_linkstyles" label="PLG_ACCORDEONCKPARAMS_LINKSTYLES_FIELDSET_LABEL">
+            <field 
+                name="accordeonckparams_linkstylesfontckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESFONT" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkusefont"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEFONT_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEFONT_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkfontsize" type="cktext" default="12px" label="PLG_ACCORDEONCKPARAMS_FONTSIZE_LABEL" description="PLG_ACCORDEONCKPARAMS_FONTSIZE_DESC" icon="style.png" />
+            <field name="accordeonckparams_linkfontcolor" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_FONTCOLOR_LABEL" description="PLG_ACCORDEONCKPARAMS_FONTCOLOR_DESC" />
+            <field name="accordeonckparams_linkdescfontsize" type="cktext" default="10px" label="PLG_ACCORDEONCKPARAMS_DESCFONTSIZE_LABEL" description="PLG_ACCORDEONCKPARAMS_DESCFONTSIZE_DESC" icon="style.png" />
+            <field name="accordeonckparams_linkdescfontcolor" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_DESCFONTCOLOR_LABEL" description="PLG_ACCORDEONCKPARAMS_DESCFONTCOLOR_DESC" />
+            <field 
+                name="accordeonckparams_linkstylesmarginckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESMARGIN" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkusemargin"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEMARGIN_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEMARGIN_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkmargintop" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_MARGINTOP_LABEL" description="PLG_ACCORDEONCKPARAMS_MARGINTOP_DESC" icon="margintop.png" suffix="px" />
+            <field name="accordeonckparams_linkmarginright" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_MARGINRIGHT_LABEL" description="PLG_ACCORDEONCKPARAMS_MARGINRIGHT_DESC" icon="marginright.png" suffix="px" />
+            <field name="accordeonckparams_linkmarginbottom" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_MARGINBOTTOM_LABEL" description="PLG_ACCORDEONCKPARAMS_MARGINBOTTOM_DESC" icon="marginbottom.png" suffix="px" />
+            <field name="accordeonckparams_linkmarginleft" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_MARGINLEFT_LABEL" description="PLG_ACCORDEONCKPARAMS_MARGINLEFT_DESC" icon="marginleft.png" suffix="px" />
+            <field name="accordeonckparams_linkpaddingtop" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_PADDINGTOP_LABEL" description="PLG_ACCORDEONCKPARAMS_PADDINGTOP_DESC" icon="paddingtop.png" suffix="px" />
+            <field name="accordeonckparams_linkpaddingright" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_PADDINGRIGHT_LABEL" description="PLG_ACCORDEONCKPARAMS_PADDINGRIGHT_DESC" icon="paddingright.png" suffix="px" />
+            <field name="accordeonckparams_linkpaddingbottom" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_PADDINGBOTTOM_LABEL" description="PLG_ACCORDEONCKPARAMS_PADDINGBOTTOM_DESC" icon="paddingbottom.png" suffix="px" />
+            <field name="accordeonckparams_linkpaddingleft" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_PADDINGLEFT_LABEL" description="PLG_ACCORDEONCKPARAMS_PADDINGLEFT_DESC" icon="paddingleft.png" suffix="px" />
+            <field 
+                name="accordeonckparams_linkstylesbackgroundckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESBACKGROUND" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkusebackground"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEBACKGROUND_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEBACKGROUND_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkbgcolor1" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_BGCOLOR1_LABEL" description="PLG_ACCORDEONCKPARAMS_BGCOLOR1_DESC" />
+            <field
+                name="accordeonckparams_linkbgimage"
+                type="ckmedia"
+                label="PLG_ACCORDEONCKPARAMS_BACKGROUNDIMAGE_LABEL"
+                labelstyles=""
+                description="PLG_ACCORDEONCKPARAMS_BACKGROUNDIMAGE_DESC" />
+            <field
+                name="accordeonckparams_linkbgpositionx"
+                type="cktext"
+                default="left"
+                icon="offsetx.png"
+                label="PLG_ACCORDEONCKPARAMS_BACKGROUNDPOSITIONX_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_BACKGROUNDPOSITIONX_DESC" />
+            <field
+                name="accordeonckparams_linkbgpositiony"
+                type="cktext"
+                default="top"
+                icon="offsety.png"
+                label="PLG_ACCORDEONCKPARAMS_BACKGROUNDPOSITIONY_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_BACKGROUNDPOSITIONY_DESC" />
+            <field
+                name="accordeonckparams_linkbgimagerepeat"
+                type="ckradio"
+                default="repeat"
+                label=""
+                optionstyles="" 
+				class="btn-group">
+                <option value="repeat">img:bg_repeat.png</option>
+                <option value="repeat-x">img:bg_repeat-x.png</option>
+                <option value="repeat-y">img:bg_repeat-y.png</option>
+                <option value="no-repeat">img:bg_no-repeat.png</option>
+            </field>
+            <field
+                name="accordeonckparams_linkbgimagespacer"
+                type="spacer"
+                hr="true" />
+            <field
+                name="accordeonckparams_linkusegradient"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEGRADIENT_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEGRADIENT_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkbgcolor2" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_BGCOLOR2_LABEL" description="PLG_ACCORDEONCKPARAMS_BGCOLOR2_DESC" />
+            <field 
+                name="accordeonckparams_linkstylesroundedcornersckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESROUNDEDCORNERS" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkuseroundedcorners"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEROUNDEDCORNERS_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEROUNDEDCORNERS_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkroundedcornerstl" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSTL_LABEL" description="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSTL_DESC" icon="border_radius_tl.png" suffix="px" />
+            <field name="accordeonckparams_linkroundedcornerstr" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSTR_LABEL" description="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSTR_DESC" icon="border_radius_tr.png" suffix="px" />
+            <field name="accordeonckparams_linkroundedcornersbr" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSBR_LABEL" description="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSBR_DESC" icon="border_radius_br.png" suffix="px" />
+            <field name="accordeonckparams_linkroundedcornersbl" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSBL_LABEL" description="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSBL_DESC" icon="border_radius_bl.png" suffix="px" />
+            <field 
+                name="accordeonckparams_linkstylesshadowckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESSHADOW" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkuseshadow"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USESHADOW_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USESHADOW_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkshadowcolor" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_SHADOWCOLOR_LABEL" description="PLG_ACCORDEONCKPARAMS_SHADOWCOLOR_DESC" />
+            <field name="accordeonckparams_linkshadowblur" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_SHADOWBLUR_LABEL" description="PLG_ACCORDEONCKPARAMS_SHADOWBLUR_DESC" icon="shadow_blur.png" suffix="px" />
+            <field name="accordeonckparams_linkshadowspread" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_SHADOWSPREAD_LABEL" description="PLG_ACCORDEONCKPARAMS_SHADOWSPREAD_DESC" icon="shadow_spread.png" suffix="px" />
+            <field name="accordeonckparams_linkshadowoffsetx" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_OFFSETX_LABEL" description="PLG_ACCORDEONCKPARAMS_OFFSETX_DESC" icon="offsetx.png" suffix="px" />
+            <field name="accordeonckparams_linkshadowoffsety" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_OFFSETY_LABEL" description="PLG_ACCORDEONCKPARAMS_OFFSETY_DESC" icon="offsety.png" suffix="px" />
+            <field name="accordeonckparams_linkshadowinset" type="ckradio" class="btn-group" default="0" label="PLG_ACCORDEONCKPARAMS_SHADOWINSET_LABEL" description="PLG_ACCORDEONCKPARAMS_SHADOWINSET_DESC" >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>					
+            <field 
+                name="accordeonckparams_linkstylesbordersckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESBORDERS" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkuseborders"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEBORDERS_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEBORDERS_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkbordercolor" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_BORDERCOLOR_LABEL" description="PLG_ACCORDEONCKPARAMS_BORDERCOLOR_DESC" />
+            <field name="accordeonckparams_linkborderwidth" type="cktext" default="1" label="PLG_ACCORDEONCKPARAMS_BORDERWIDTH_LABEL" description="PLG_ACCORDEONCKPARAMS_BORDERWIDTH_DESC" icon="shape_borders.png" suffix="px" />
+        </fieldset>
+        <fieldset name="accordeonckparams_linkhoverstyles" label="PLG_ACCORDEONCKPARAMS_LINKHOVERSTYLES_FIELDSET_LABEL">
+            <field 
+                name="accordeonckparams_linkhoverstylesfontckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESFONT" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkhoverusefont"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEFONT_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEFONT_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkhoverfontsize" type="cktext" default="12px" label="PLG_ACCORDEONCKPARAMS_FONTSIZE_LABEL" description="PLG_ACCORDEONCKPARAMS_FONTSIZE_DESC" icon="style.png" />
+            <field name="accordeonckparams_linkhoverfontcolor" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_FONTCOLOR_LABEL" description="PLG_ACCORDEONCKPARAMS_FONTCOLOR_DESC" />
+            <field name="accordeonckparams_linkhoverdescfontsize" type="cktext" default="10px" label="PLG_ACCORDEONCKPARAMS_DESCFONTSIZE_LABEL" description="PLG_ACCORDEONCKPARAMS_DESCFONTSIZE_DESC" icon="style.png" />
+            <field name="accordeonckparams_linkhoverdescfontcolor" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_DESCFONTCOLOR_LABEL" description="PLG_ACCORDEONCKPARAMS_DESCFONTCOLOR_DESC" />
+            <field 
+                name="accordeonckparams_linkhoverstylesmarginckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESMARGIN" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkhoverusemargin"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEMARGIN_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEMARGIN_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkhovermargintop" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_MARGINTOP_LABEL" description="PLG_ACCORDEONCKPARAMS_MARGINTOP_DESC" icon="margintop.png" suffix="px" />
+            <field name="accordeonckparams_linkhovermarginright" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_MARGINRIGHT_LABEL" description="PLG_ACCORDEONCKPARAMS_MARGINRIGHT_DESC" icon="marginright.png" suffix="px" />
+            <field name="accordeonckparams_linkhovermarginbottom" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_MARGINBOTTOM_LABEL" description="PLG_ACCORDEONCKPARAMS_MARGINBOTTOM_DESC" icon="marginbottom.png" suffix="px" />
+            <field name="accordeonckparams_linkhovermarginleft" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_MARGINLEFT_LABEL" description="PLG_ACCORDEONCKPARAMS_MARGINLEFT_DESC" icon="marginleft.png" suffix="px" />
+            <field name="accordeonckparams_linkhoverpaddingtop" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_PADDINGTOP_LABEL" description="PLG_ACCORDEONCKPARAMS_PADDINGTOP_DESC" icon="paddingtop.png" suffix="px" />
+            <field name="accordeonckparams_linkhoverpaddingright" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_PADDINGRIGHT_LABEL" description="PLG_ACCORDEONCKPARAMS_PADDINGRIGHT_DESC" icon="paddingright.png" suffix="px" />
+            <field name="accordeonckparams_linkhoverpaddingbottom" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_PADDINGBOTTOM_LABEL" description="PLG_ACCORDEONCKPARAMS_PADDINGBOTTOM_DESC" icon="paddingbottom.png" suffix="px" />
+            <field name="accordeonckparams_linkhoverpaddingleft" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_PADDINGLEFT_LABEL" description="PLG_ACCORDEONCKPARAMS_PADDINGLEFT_DESC" icon="paddingleft.png" suffix="px" />
+            <field 
+                name="accordeonckparams_linkhoverstylesbackgroundckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESBACKGROUND" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkhoverusebackground"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEBACKGROUND_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEBACKGROUND_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkhoverbgcolor1" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_BGCOLOR1_LABEL" description="PLG_ACCORDEONCKPARAMS_BGCOLOR1_DESC" />
+            <field
+                name="accordeonckparams_linkhoverbgimage"
+                type="ckmedia"
+                label="PLG_ACCORDEONCKPARAMS_BACKGROUNDIMAGE_LABEL"
+                labelstyles=""
+                description="PLG_ACCORDEONCKPARAMS_BACKGROUNDIMAGE_DESC" />
+            <field
+                name="accordeonckparams_linkhoverbgpositionx"
+                type="cktext"
+                default="left"
+                icon="offsetx.png"
+                label="PLG_ACCORDEONCKPARAMS_BACKGROUNDPOSITIONX_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_BACKGROUNDPOSITIONX_DESC" />
+            <field
+                name="accordeonckparams_linkhoverbgpositiony"
+                type="cktext"
+                default="top"
+                icon="offsety.png"
+                label="PLG_ACCORDEONCKPARAMS_BACKGROUNDPOSITIONY_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_BACKGROUNDPOSITIONY_DESC" />
+            <field
+                name="accordeonckparams_linkhoverbgimagerepeat"
+                type="ckradio2"
+                default="repeat"
+                label=""
+                optionstyles="width:40px;" >
+                <option value="repeat">img:bg_repeat.png</option>
+                <option value="repeat-x">img:bg_repeat-x.png</option>
+                <option value="repeat-y">img:bg_repeat-y.png</option>
+                <option value="no-repeat">img:bg_no-repeat.png</option>
+            </field>
+            <field
+                name="accordeonckparams_linkhoverbgimagespacer"
+                type="spacer"
+                hr="true" />
+            <field
+                name="accordeonckparams_linkhoverusegradient"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEGRADIENT_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEGRADIENT_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkhoverbgcolor2" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_BGCOLOR2_LABEL" description="PLG_ACCORDEONCKPARAMS_BGCOLOR2_DESC" />
+            <field 
+                name="accordeonckparams_linkhoverstylesroundedcornersckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESROUNDEDCORNERS" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkhoveruseroundedcorners"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEROUNDEDCORNERS_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEROUNDEDCORNERS_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkhoverroundedcornerstl" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSTL_LABEL" description="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSTL_DESC" icon="border_radius_tl.png" suffix="px" />
+            <field name="accordeonckparams_linkhoverroundedcornerstr" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSTR_LABEL" description="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSTR_DESC" icon="border_radius_tr.png" suffix="px" />
+            <field name="accordeonckparams_linkhoverroundedcornersbr" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSBR_LABEL" description="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSBR_DESC" icon="border_radius_br.png" suffix="px" />
+            <field name="accordeonckparams_linkhoverroundedcornersbl" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSBL_LABEL" description="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSBL_DESC" icon="border_radius_bl.png" suffix="px" />
+            <field 
+                name="accordeonckparams_linkhoverstylesshadowckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESSHADOW" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkhoveruseshadow"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USESHADOW_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USESHADOW_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkhovershadowcolor" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_SHADOWCOLOR_LABEL" description="PLG_ACCORDEONCKPARAMS_SHADOWCOLOR_DESC" />
+            <field name="accordeonckparams_linkhovershadowblur" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_SHADOWBLUR_LABEL" description="PLG_ACCORDEONCKPARAMS_SHADOWBLUR_DESC" icon="shadow_blur.png" suffix="px" />
+            <field name="accordeonckparams_linkhovershadowspread" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_SHADOWSPREAD_LABEL" description="PLG_ACCORDEONCKPARAMS_SHADOWSPREAD_DESC" icon="shadow_spread.png" suffix="px" />
+            <field name="accordeonckparams_linkhovershadowoffsetx" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_OFFSETX_LABEL" description="PLG_ACCORDEONCKPARAMS_OFFSETX_DESC" icon="offsetx.png" suffix="px" />
+            <field name="accordeonckparams_linkhovershadowoffsety" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_OFFSETY_LABEL" description="PLG_ACCORDEONCKPARAMS_OFFSETY_DESC" icon="offsety.png" suffix="px" />
+            <field name="accordeonckparams_linkhovershadowinset" type="ckradio" class="btn-group" default="0" label="PLG_ACCORDEONCKPARAMS_SHADOWINSET_LABEL" description="PLG_ACCORDEONCKPARAMS_SHADOWINSET_DESC" >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>					
+            <field 
+                name="accordeonckparams_linkhoverstylesbordersckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESBORDERS" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkhoveruseborders"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEBORDERS_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEBORDERS_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkhoverbordercolor" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_BORDERCOLOR_LABEL" description="PLG_ACCORDEONCKPARAMS_BORDERCOLOR_DESC" />
+            <field name="accordeonckparams_linkhoverborderwidth" type="cktext" default="1" label="PLG_ACCORDEONCKPARAMS_BORDERWIDTH_LABEL" description="PLG_ACCORDEONCKPARAMS_BORDERWIDTH_DESC" icon="shape_borders.png" suffix="px" />
+        </fieldset>
+        <fieldset name="accordeonckparams_linkactivestyles" label="PLG_ACCORDEONCKPARAMS_LINKACTIVESTYLES_FIELDSET_LABEL">
+            <field 
+                name="accordeonckparams_linkactivestylesfontckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESFONT" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkactiveusefont"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEFONT_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEFONT_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkactivefontsize" type="cktext" default="12px" label="PLG_ACCORDEONCKPARAMS_FONTSIZE_LABEL" description="PLG_ACCORDEONCKPARAMS_FONTSIZE_DESC" icon="style.png" />
+            <field name="accordeonckparams_linkactivefontcolor" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_FONTCOLOR_LABEL" description="PLG_ACCORDEONCKPARAMS_FONTCOLOR_DESC" />
+            <field name="accordeonckparams_linkactivedescfontsize" type="cktext" default="10px" label="PLG_ACCORDEONCKPARAMS_DESCFONTSIZE_LABEL" description="PLG_ACCORDEONCKPARAMS_DESCFONTSIZE_DESC" icon="style.png" />
+            <field name="accordeonckparams_linkactivedescfontcolor" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_DESCFONTCOLOR_LABEL" description="PLG_ACCORDEONCKPARAMS_DESCFONTCOLOR_DESC" />
+            <field 
+                name="accordeonckparams_linkactivestylesmarginckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESMARGIN" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkactiveusemargin"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEMARGIN_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEMARGIN_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkactivemargintop" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_MARGINTOP_LABEL" description="PLG_ACCORDEONCKPARAMS_MARGINTOP_DESC" icon="margintop.png" suffix="px" />
+            <field name="accordeonckparams_linkactivemarginright" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_MARGINRIGHT_LABEL" description="PLG_ACCORDEONCKPARAMS_MARGINRIGHT_DESC" icon="marginright.png" suffix="px" />
+            <field name="accordeonckparams_linkactivemarginbottom" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_MARGINBOTTOM_LABEL" description="PLG_ACCORDEONCKPARAMS_MARGINBOTTOM_DESC" icon="marginbottom.png" suffix="px" />
+            <field name="accordeonckparams_linkactivemarginleft" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_MARGINLEFT_LABEL" description="PLG_ACCORDEONCKPARAMS_MARGINLEFT_DESC" icon="marginleft.png" suffix="px" />
+            <field name="accordeonckparams_linkactivepaddingtop" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_PADDINGTOP_LABEL" description="PLG_ACCORDEONCKPARAMS_PADDINGTOP_DESC" icon="paddingtop.png" suffix="px" />
+            <field name="accordeonckparams_linkactivepaddingright" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_PADDINGRIGHT_LABEL" description="PLG_ACCORDEONCKPARAMS_PADDINGRIGHT_DESC" icon="paddingright.png" suffix="px" />
+            <field name="accordeonckparams_linkactivepaddingbottom" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_PADDINGBOTTOM_LABEL" description="PLG_ACCORDEONCKPARAMS_PADDINGBOTTOM_DESC" icon="paddingbottom.png" suffix="px" />
+            <field name="accordeonckparams_linkactivepaddingleft" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_PADDINGLEFT_LABEL" description="PLG_ACCORDEONCKPARAMS_PADDINGLEFT_DESC" icon="paddingleft.png" suffix="px" />
+            <field 
+                name="accordeonckparams_linkactivestylesbackgroundckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESBACKGROUND" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkactiveusebackground"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEBACKGROUND_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEBACKGROUND_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkactivebgcolor1" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_BGCOLOR1_LABEL" description="PLG_ACCORDEONCKPARAMS_BGCOLOR1_DESC" />
+            <field
+                name="accordeonckparams_linkactivebgimage"
+                type="ckmedia"
+                label="PLG_ACCORDEONCKPARAMS_BACKGROUNDIMAGE_LABEL"
+                labelstyles=""
+                description="PLG_ACCORDEONCKPARAMS_BACKGROUNDIMAGE_DESC" />
+            <field
+                name="accordeonckparams_linkactivebgpositionx"
+                type="cktext"
+                default="left"
+                icon="offsetx.png"
+                label="PLG_ACCORDEONCKPARAMS_BACKGROUNDPOSITIONX_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_BACKGROUNDPOSITIONX_DESC" />
+            <field
+                name="accordeonckparams_linkactivebgpositiony"
+                type="cktext"
+                default="top"
+                icon="offsety.png"
+                label="PLG_ACCORDEONCKPARAMS_BACKGROUNDPOSITIONY_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_BACKGROUNDPOSITIONY_DESC" />
+            <field
+                name="accordeonckparams_linkactivebgimagerepeat"
+                type="ckradio2"
+                default="repeat"
+                label=""
+                optionstyles="width:40px;" >
+                <option value="repeat">img:bg_repeat.png</option>
+                <option value="repeat-x">img:bg_repeat-x.png</option>
+                <option value="repeat-y">img:bg_repeat-y.png</option>
+                <option value="no-repeat">img:bg_no-repeat.png</option>
+            </field>
+            <field
+                name="accordeonckparams_linkactivebgimagespacer"
+                type="spacer"
+                hr="true" />
+            <field
+                name="accordeonckparams_linkactiveusegradient"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEGRADIENT_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEGRADIENT_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkactivebgcolor2" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_BGCOLOR2_LABEL" description="PLG_ACCORDEONCKPARAMS_BGCOLOR2_DESC" />
+            <field 
+                name="accordeonckparams_linkactivestylesroundedcornersckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESROUNDEDCORNERS" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkactiveuseroundedcorners"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEROUNDEDCORNERS_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEROUNDEDCORNERS_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkactiveroundedcornerstl" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSTL_LABEL" description="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSTL_DESC" icon="border_radius_tl.png" suffix="px" />
+            <field name="accordeonckparams_linkactiveroundedcornerstr" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSTR_LABEL" description="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSTR_DESC" icon="border_radius_tr.png" suffix="px" />
+            <field name="accordeonckparams_linkactiveroundedcornersbr" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSBR_LABEL" description="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSBR_DESC" icon="border_radius_br.png" suffix="px" />
+            <field name="accordeonckparams_linkactiveroundedcornersbl" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSBL_LABEL" description="PLG_ACCORDEONCKPARAMS_ROUNDEDCORNERSBL_DESC" icon="border_radius_bl.png" suffix="px" />
+            <field 
+                name="accordeonckparams_linkactivestylesshadowckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESSHADOW" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkactiveuseshadow"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USESHADOW_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USESHADOW_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkactiveshadowcolor" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_SHADOWCOLOR_LABEL" description="PLG_ACCORDEONCKPARAMS_SHADOWCOLOR_DESC" />
+            <field name="accordeonckparams_linkactiveshadowblur" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_SHADOWBLUR_LABEL" description="PLG_ACCORDEONCKPARAMS_SHADOWBLUR_DESC" icon="shadow_blur.png" suffix="px" />
+            <field name="accordeonckparams_linkactiveshadowspread" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_SHADOWSPREAD_LABEL" description="PLG_ACCORDEONCKPARAMS_SHADOWSPREAD_DESC" icon="shadow_spread.png" suffix="px" />
+            <field name="accordeonckparams_linkactiveshadowoffsetx" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_OFFSETX_LABEL" description="PLG_ACCORDEONCKPARAMS_OFFSETX_DESC" icon="offsetx.png" suffix="px" />
+            <field name="accordeonckparams_linkactiveshadowoffsety" type="cktext" default="0" label="PLG_ACCORDEONCKPARAMS_OFFSETY_LABEL" description="PLG_ACCORDEONCKPARAMS_OFFSETY_DESC" icon="offsety.png" suffix="px" />
+            <field name="accordeonckparams_linkactiveshadowinset" type="ckradio" class="btn-group" default="0" label="PLG_ACCORDEONCKPARAMS_SHADOWINSET_LABEL" description="PLG_ACCORDEONCKPARAMS_SHADOWINSET_DESC" >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>					
+            <field 
+                name="accordeonckparams_linkactivestylesbordersckspacer" 
+                type="ckspacer" 
+                label="PLG_ACCORDEONCKPARAMS_SPACER_STYLESBORDERS" 
+                style="title"/>
+            <field
+                name="accordeonckparams_linkactiveuseborders"
+                type="ckradio"
+                default="0"
+                label="PLG_ACCORDEONCKPARAMS_USEBORDERS_LABEL"
+                description="PLG_ACCORDEONCKPARAMS_USEBORDERS_DESC" class="btn-group">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="accordeonckparams_linkactivebordercolor" type="ckcolor" default="" label="PLG_ACCORDEONCKPARAMS_BORDERCOLOR_LABEL" description="PLG_ACCORDEONCKPARAMS_BORDERCOLOR_DESC" />
+            <field name="accordeonckparams_linkactiveborderwidth" type="cktext" default="1" label="PLG_ACCORDEONCKPARAMS_BORDERWIDTH_LABEL" description="PLG_ACCORDEONCKPARAMS_BORDERWIDTH_DESC" icon="shape_borders.png" suffix="px" />
+        </fieldset>
+    </fields>
+</form>

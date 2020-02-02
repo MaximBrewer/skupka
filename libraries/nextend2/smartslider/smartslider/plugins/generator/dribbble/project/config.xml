@@ -1,0 +1,8 @@
+<root>
+    <params name="filter" label="Filter">
+        <param label="Project" type="group">
+            <param name="dribbble-user-id" type="text" label="User name" default="me"/>
+            <param name="dribbble-project-id" label="Project" type="dribbbleprojects" default=""/>
+        </param>
+    </params>
+</root>

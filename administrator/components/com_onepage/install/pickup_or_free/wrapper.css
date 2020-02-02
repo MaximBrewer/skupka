@@ -1,0 +1,143 @@
+div#vmMainPageOPC div#opc_pfw  div.opc_menu_active,div#vmMainPageOPC div#opc_pfw  div.opc_heading {
+  background-color: #0087CA; 
+ color: white; 
+}
+
+div#vmMainPageOPC div#opc_pfw  div.opc_menu_active,div#vmMainPageOPC div#opc_pfw  div.opc_heading {
+ height: 40px; 
+ vertical-align: middle; 
+ text-align: left; 
+ text-indent: 20px; 
+ background: none; 
+
+ clear: right; 
+ width: 100%;  
+ position: relative;
+
+
+}
+
+
+div#vmMainPageOPC div#opc_pfw  button.button_checkbox_ed, div#vmMainPageOPC div#opc_pfw  button.button_checkbox_uned  {
+ /* make sure it's insde a opc_title which is relative */
+ position: absolute; 
+ height: 100%;
+ background: none; 
+ outline: none none; 
+ overflow: visible; 
+ white-space: nowrap; 
+ width: 90%;
+ margin: 0; 
+ padding: 0; 
+ left: 0; 
+ text-align: left; 
+}
+div#vmMainPageOPC div#opc_pfw  button.button_checkbox_ed span, div#vmMainPageOPC div#opc_pfw  button.button_checkbox_uned span {
+ /*position: absolute; 
+ left: 14%; 
+ top: 0; 
+ 
+ margin-top: 13px; */
+ margin: 12px 0 0;
+ float: left; 
+ 
+  
+}
+
+div#vmMainPageOPC div#opc_pfw .opc_heading button,div#vmMainPageOPC div#opc_pfw .opc_heading button:focus {
+ outline: none !important; 
+} 
+div#vmMainPageOPC div#opc_pfw div.opc_menu span.opc_title,div#vmMainPageOPC div#opc_pfw div.opc_heading button span.opc_title {
+ top: auto !important; 
+}
+div#vmMainPageOPC div#opc_pfw div.opc_menu span.opc_title,div#vmMainPageOPC div#opc_pfw div.opc_heading span.opc_title {
+vertical-align: middle; 
+ margin-top: auto; 
+ margin-bottom: auto; 
+ height: 40px; 
+ position: relative; 
+ top: 30%;
+ font-size: 12px; 
+}
+div#vmMainPageOPC div#opc_pfw div.opc_menu_active,div#vmMainPageOPC div#opc_pfw div.opc_heading {
+ height: 40px; 
+ vertical-align: middle; 
+ text-align: left; 
+ text-indent: 20px; 
+ background: none; 
+
+ clear: right; 
+ width: 100%;  
+ position: relative;
+
+
+}
+
+
+div#vmMainPageOPC div#opc_pfw .opc_inside {
+border-bottom: 1px solid #D1D3D4;
+ border-left: 1px solid #D1D3D4;
+ border-right: 1px solid #D1D3D4;
+
+}
+
+div#vmMainPageOPC div#opc_pfw div.opc_menu_active,div#vmMainPageOPC div#opc_pfw div.opc_heading {
+ background-color: #0087CA; 
+ color: white; 
+ }  
+ div#vmMainPageOPC div#opc_pfw .opc_inside {
+border-bottom: 1px solid #D1D3D4;
+ border-left: 1px solid #D1D3D4;
+ border-right: 1px solid #D1D3D4;
+
+}
+
+
+
+div#vmMainPageOPC div#opc_pfw  div.opc_inside div.multicheckbox {
+ position: relative; 
+ clear: both; 
+ float: none; 
+ overflow: visible; 
+ width: 100%; 
+ height: auto !important;
+ min-height: 30px; 
+} 
+div#vmMainPageOPC div#opc_pfw  div.opc_inside div.radio {
+ position: relative; 
+ clear: both; 
+ float: none; 
+ overflow: visible; 
+ width: 100%; 
+ height: auto !important;
+ min-height: 30px; 
+ padding-left:0px;
+}
+div#vmMainPageOPC div#opc_pfw  div.opc_inside div.checkbox {
+ padding-left:0px;
+}
+div#vmMainPageOPC div#opc_pfw .opc_inside {
+ 
+ margin: -2px -2px -2px -2px; 
+ margin-left: 0px; 
+ margin-right: 0px; 
+ padding: 10px 10px 10px 30px; 
+ 
+  padding: 20px 10px 10px 20px;
+}
+div#vmMainPageOPC div#opc_pfw  div.field_wrapper {
+ position: relative; 
+ clear: both; 
+ float: none; 
+ overflow: visible; 
+ width: 100%; 
+ min-height: 30px; 
+ padding-bottom: 10px;
+} 
+
+#vmMainPageOPC div#opc_pfw label {
+ margin: 0; 
+ padding: 0; 
+ line-height: 1em; 
+ text-align: left; 
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<fields>
+		
+		<fieldset name="gallery_options" loadfrom="current"></fieldset>
+	
+		<fieldset name="loadmore" loadfrom="helper"></fieldset>
+		
+		<fieldset name="position_tiles" loadfrom="helper"></fieldset>
+		
+		<fieldset name="tiles_design" loadfrom="helper"></fieldset>
+
+		<fieldset name="tiles_textpanel" loadfrom="helper"></fieldset>
+		
+		<fieldset name="lightbox" loadfrom="helper"></fieldset>
+			
+		<fieldset name="troubleshooting" loadfrom="helper"></fieldset>
+		
+	</fields>
+		

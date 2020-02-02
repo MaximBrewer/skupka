@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,900&subset=Latin");
+
+#module-form .accordion-inner {
+  padding: 0;
+}
+
+#module-form .row-fluid .span6{
+  width:100%;
+  margin-left:0px;
+}
+
+#module-form .form-horizontal .control-label,
+#module-form.form-horizontal .control-label{
+  min-width: 300px;
+  text-align: left;
+}
+
+#module-form .form-horizontal .control-group:nth-child(2n),
+#module-form.form-horizontal .control-group:nth-child(2n){
+  background-color: #EEEEEE;
+  border-bottom: 1px solid #E5E5E5;
+  border-left: 5px solid #C3C3C3;
+  border-top: 1px solid #FFFFFF;
+}
+
+#module-form .form-horizontal .control-group,
+#module-form.form-horizontal .control-group{
+  padding: 10px;
+  border-left: 5px solid #8D8D8D;
+  background-color: #FBFBFB;
+  margin: 0;
+}
+
+#module-form .form-horizontal .control-group.spacer,
+#module-form.form-horizontal .control-group.spacer{
+  font-family: "Lato", Arial,Helvetica,sans-serif;
+  padding: 4px 0 0 0;
+  margin: 0;
+  border-left: 5px solid #8D8D8D;
+  background-color: #8D8D8D;
+  color:#fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) inset;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+/*Input and Label fix*/
+
+#module-form .form-horizontal .control-group label,
+#module-form.form-horizontal .control-group label{
+  display: inline;
+}
+
+#module-form .form-horizontal .control-group .radio input,
+#module-form.form-horizontal .control-group .radio input{
+  display: inline;
+  float: none;
+  margin: 8px;
+}
+
+#module-form .form-horizontal .control-group .radio img,
+#module-form.form-horizontal .control-group .radio img{
+  max-height: 45px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#module-form .form-horizontal #details .control-group .radio input,
+#module-form.form-horizontal #details .control-group .radio input{
+  display: none;
+}
+
+#module-form .form-horizontal input.color,
+#module-form.form-horizontal input.color{
+  padding:2px;
+}
+
+#module-form .form-horizontal .controls .controls,
+#module-form.form-horizontal .controls .controls {
+  margin-left: 0px;
+}
+
+/*THEME MANAGER DESIGN*/
+#module-form .form-horizontal .offlajn-title,
+#module-form.form-horizontal .offlajn-title {
+  border:0;
+  border-bottom: 1px solid #ffffff;
+  padding:0;
+  background-repeat: no-repeat;
+  background-position: right 8px;
+  background-color: #FCFCFC;
+  height: 40px;
+  line-height: 40px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
+  padding-left: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+#module-form .form-horizontal .offlajn-title span,
+#module-form.form-horizontal .offlajn-title span{
+  font-size: 18px;
+  text-transform: none;
+  line-height:40px;
+  color:#025A8D;
+}
+
+#module-form .form-horizontal .panel,
+#module-form.form-horizontal .panel{
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #CCCCCC;
+  border-bottom:5px solid #CCCCCC;
+}
+
+#module-form .form-horizontal .control-group.theme,
+#module-form.form-horizontal .control-group.theme{
+  background-color: #EEEEEE;
+  border-left: 5px solid #C3C3C3;
+  border-bottom:1px solid #C3C3C3;
+}
+
+/*Offlajn Dashboard*/
+
+#module-form div.panel.dashboard h3.title{
+  border:0;
+  border-bottom: 1px solid #cccccc;
+  padding:0;
+  background-repeat: no-repeat;
+  background-position: right 8px;
+  background-color: #f4f4f4;
+  height: 40px;
+  line-height: 40px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
+  padding-left: 10px;
+  margin:0;
+}
+
+#module-form div.panel.dashboard h3.title span{
+  font-size: 18px;
+  text-transform: none;
+  line-height:40px;
+  color:#025A8D;
+}
+
+#module-form div.panel.dashboard{
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+#module-form div.panel.dashboard .pane-slider{
+  height: 100%;
+}
+
+#module-form div.panel.dashboard .column{
+  float: left;
+  width: 33.333%;
+  overflow:hidden;
+}
+
+#module-form div.panel.dashboard .dashboard-box{
+  width:100%;
+}
+
+#module-form div.panel.dashboard .dashboard-box .box-title{
+  height:30px;
+  border-left: 5px solid #ededed;
+  padding-left: 5px;
+  background-color: #f4f4f4;
+  font-family: 'Cabin', sans-serif;
+  font-size: 14px;
+  color:#2577ad;
+  line-height:30px;
+  text-transform:uppercase;
+  overflow: hidden;
+}
+
+#module-form div.panel.dashboard .dashboard-box{
+  border: 1px solid #cccccc;
+  border-top:0;
+}
+
+#module-form div.panel.dashboard .left .dashboard-box{
+  border-left:0;
+  border-bottom:0;
+}
+
+#related-news-iframe{
+  height: 200px;
+}
+
+#module-form div.panel.dashboard .mid .dashboard-box{
+  border-right: 0;
+  border-bottom: 0;
+}
+
+#module-form div.panel.dashboard .dashboard-box .box-content{
+  border-top: 1px solid #cccccc;
+  background-color: #FFFFFF;
+}
+
+#module-form div.panel.dashboard .dashboard-box .box-content .content-inner{
+  padding: 7px;
+  border-left: 5px solid #ededed;
+  color: #393939;
+}
+
+#module-form div.panel.dashboard .dashboard-box .box-content .content-inner .support-ticket-button{
+  height: 21px;
+  width: 110px;
+  margin: 12px 5px 2px 5px;
+}
+
+#module-form div.panel.dashboard .dashboard-box .box-content .content-inner .support-ticket-button a{
+  height: 21px;
+  width: 110px;
+  display: block;
+}
+
+#module-form div.panel.dashboard .dashboard-box .box-content .content-inner .support-us-button{
+  height: 21px;
+  width: 88px;
+  margin: 12px 5px 2px 5px;
+}
+
+#module-form div.panel.dashboard .dashboard-box .box-content .content-inner .support-us-button a{
+  height: 21px;
+  width: 88px;
+  display: block;
+}
+
+.dashboard-box .content-inner {
+  font-size: 11px;
+  font-family: Arial,Helvetica,sans-serif;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.5" type="plugin" group="system" method="upgrade">
+    <name>Nextend Accordion Menu AJAX</name>
+    <author>Roland Soos</author>
+    <creationDate>Feb 2013</creationDate>
+    <copyright>Copyright (C) 2013 Nextendweb.com. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.txt GNU General Public License</license>
+    <authorEmail>roland@nextendweb.com</authorEmail>
+    <authorUrl>http://nextendweb.com</authorUrl>
+    <version>1.0.0</version>
+    <description></description>
+    <files>
+        <filename plugin="nextendaccordionmenu">nextendaccordionmenu.php</filename>
+        <filename>index.html</filename>
+    </files>
+</extension>
+

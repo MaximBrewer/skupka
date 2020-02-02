@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="component" version="1.7" method="upgrade">
+	<name>com_sl_advpoll</name>
+	<author>Pham Minh Tuan</author>
+	<creationDate>August 2012</creationDate>
+	<copyright>(C) 2010 - 2012 Skyline Software. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@extstore.com</authorEmail>
+	<authorUrl>http://extstore.com</authorUrl>
+	<version>2.7.0</version>
+	<description>
+	<![CDATA[
+		Developed by extstore. Адаптация от Joomla-i.ru
+	]]>
+	</description>
+
+	<scriptfile>install.php</scriptfile>
+
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>sl_advpoll.php</filename>
+		<filename>controller.php</filename>
+		<filename>metadata.xml</filename>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB.com_sl_advpoll.ini</language>
+		<language tag="ru-RU">language/ru-RU.com_sl_advpoll.ini</language>
+	</languages>
+
+	<media folder="media" destination="com_sl_advpoll">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+	</media>
+	
+	<administration>
+		<menu>com_sl_advpoll</menu>
+		<submenu>
+			<menu link="option=com_sl_advpoll&amp;view=polls" view="polls" alt=" Advanced Poll/Polls">com_sl_advpoll_submenu_polls</menu>
+			<menu link="option=com_categories&amp;extension=com_sl_advpoll" view="categories" alt=" Advanced Poll/Categories">com_sl_advpoll_submenu_categories</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>sl_advpoll.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB.com_sl_advpoll.ini</language>
+			<language tag="en-GB">language/en-GB.com_sl_advpoll.sys.ini</language>
+			<language tag="ru-RU">language/ru-RU.com_sl_advpoll.ini</language>
+			<language tag="ru-RU">language/ru-RU.com_sl_advpoll.sys.ini</language>
+		</languages>
+	</administration>
+
+	<modules folder="modules">
+		<module name="mod_sl_advpoll" />
+	</modules>
+	<plugins folder="plugins">
+		<plugin folder="editors-xtd" name="sl_advpoll" group="editors-xtd" />
+		<plugin folder="content" name="sl_advpoll" group="content" />
+	</plugins>
+</extension>
+

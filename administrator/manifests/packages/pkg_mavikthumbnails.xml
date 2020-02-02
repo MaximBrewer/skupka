@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="package" method="upgrade">
+    <name>mAvik thumbnails</name>
+    <packagename>mavikthumbnails</packagename>
+    <author>Vitaliy Marenkov</author>
+    <creationDate>March 2014</creationDate>
+    <copyright>2009-2014 (c) Vitaliy Marenkov</copyright>
+    <license>GNU/GPLv3</license>
+    <authorEmail>admin@mavik.com.ua</authorEmail>
+    <authorUrl>http://mavik.com.ua</authorUrl>
+    <version>2.1.5.pro</version>
+    <description>
+        Plugin creates previews for images. Plugin should enable in Extension Manager.
+    </description>
+    <files>
+        <file type="plugin" group="content" id="mavikthumbnails">plg_content_mavikthumbnails.zip</file>
+        <file type="library" id="mavik_thumb">lib_mavik_thumb.zip</file>
+    </files>
+    
+    <updateservers>
+        <server type="extension" name="mavikthumbnails"></server>
+    </updateservers>    
+</extension>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="plugin" group="vmpayment" method="upgrade">
+    <name>eWay Direct Payment plugin by RuposTel.com for VM3</name>
+    <creationDate>January 10 2014</creationDate>
+    <author>RuposTel.com</author>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <copyright>Copyright (C) 2004-2014 RuposTel.com. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <element>eway_rupostel</element>
+    <files>
+	
+	<filename plugin="eway_rupostel">eway_rupostel.php</filename>
+	<filename >index.html</filename>
+	<folder>eway_rupostel</folder>
+	<folder>language</folder>
+    </files>
+	<languages >
+	<language tag="en-GB">language/en-GB/en-GB.plg_vmpayment_eway_rupostel.ini</language>
+	<language tag="en-AU">language/en-GB/en-GB.plg_vmpayment_eway_rupostel.ini</language>
+    </languages>
+	<vmconfig>
+    
+    
+    <fields name="params">
+
+    <fieldset name="config" addfieldpath="/plugins/vmpayment/authorizenet/authorizenet/fields">
+	<field type="spacer" default="eWay Payment Plugin configuration. Please note that in sandbox mode only totals rounded to 0 decimals will get confirmed. " level="level1" />
+	
+	
+	<field type="spacer" default="You must have a valid SSL certificate" level="level1" />
+	<field type="vmtitle" default="API credentials" level="level1" />
+	
+	<field name="customer_id" type="text" size="70" default="" label="Your Customer ID" description=""/>
+	
+	<field name="sandbox" type="radio" default="1" label="Sandbox Mode" description="Enable sandbox mode">
+	    <option value="0">COM_VIRTUEMART_NO</option>
+	    <option value="1">COM_VIRTUEMART_YES</option>
+	</field>
+
+	<field type="vmtitle" default="eWay Parameters" level="level1" />
+	 <field name="EWAY_DEFAULT_PAYMENT_METHOD" type="list"   default="REAL_TIME" label="eWay Payment Method" description="Set this to the payment gateway you would like to use">
+            <option value="REAL_TIME">REAL_TIME</option>
+            <option value="REAL_TIME_CVN">REAL_TIME_CVN</option>
+            <option value="GEO_IP_ANTI_FRAUD">GEO_IP_ANTI_FRAUD</option>
+            
+        </field>
+	
+       
+		
+		           <field name="creditcards" type="checkboxes" default="" multiple="multiple"
+                       label="VMPAYMENT_AUTHORIZENET_CREDITCARDS" description="VMPAYMENT_AUTHORIZENET_CREDITCARDS_DESC">
+                    <option value="Visa">VMPAYMENT_AUTHORIZENET_VISA</option>
+                    <option value="Mastercard">VMPAYMENT_AUTHORIZENET_MASTERCARD</option>
+                    <option value="AmericanExpress">VMPAYMENT_AUTHORIZENET_AMERICANEXPRESS</option>
+                    <option value="Discover">VMPAYMENT_AUTHORIZENET_DISCOVER</option>
+                    <option value="DinersClub">VMPAYMENT_AUTHORIZENET_DINERSCLUB</option>
+                    <option value="JCB">VMPAYMENT_AUTHORIZENET_JCB</option>
+                </field>
+
+		
+		
+
+	<field  type="vmtitle" default="VMPAYMENT_AUTHORIZENET_ORDER_STATUS_PARAMS" level="level1" />
+	<field name="payment_approved_status" type="vmorderstate" scope="com_virtuemart" default="C" label="VMPAYMENT_AUTHORIZENET_ORDERSTATUS_APPROVED" description="VMPAYMENT_AUTHORIZENET_ORDERSTATUS_SUCCESS_DESC" />
+	<field name="payment_declined_status" type="vmorderstate" scope="com_virtuemart" default="X" label="VMPAYMENT_AUTHORIZENET_ORDERSTATUS_DECLINED" description="VMPAYMENT_AUTHORIZENET_ORDERSTATUS_INVALID_DESC" />
+	<field name="payment_held_status" type="vmorderstate" scope="com_virtuemart" default="P" label="VMPAYMENT_AUTHORIZENET_ORDERSTATUS_HELD" description="VMPAYMENT_AUTHORIZENET_ORDERSTATUS_CANCEL_DESC" />
+        <field  type="vmtitle" default="VMPAYMENT_AUTHORIZENET_TEMPLATE_PARAMS" level="level1" />
+        <field name="payment_logos" type="vmfiles"  multiple="true" label="VMPAYMENT_AUTHORIZENET_LOGOS"
+                       description="VMPAYMENT_AUTHORIZENET_LOGOS_DESC"
+                       directory="/images/stories/virtuemart/payment"
+                       default="default" hide_default="1" hide_none="1"
+                       stripext="0" exclude="^_"/>
+        <field	name="cvv_images" type="vmfiles" label="VMPAYMENT_AUTHORIZENET_CVVIMAGES" multiple="true"
+                  description="VMPAYMENT_AUTHORIZENET_CVVIMAGES_DESC"
+                  directory="/images/stories/virtuemart/payment"
+                  default="default" hide_default="1" hide_none="1"
+                  stripext="0"  exclude="^_" />
+
+        <field  type="vmtitle" default="VMPAYMENT_AUTHORIZENET_OPTION_PARAMS" level="level1" />
+        <field name="countries" type="vmcountries"  scope="com_virtuemart" default="" label="VMPAYMENT_AUTHORIZENET_COUNTRIES_DESC" description="VMPAYMENT_AUTHORIZENET_COUNTRIES_DESC"/>
+	<field name="min_amount" type="text"  label="VMPAYMENT_AUTHORIZENET_MIN_AMOUNT" description="VMPAYMENT_AUTHORIZENET_MIN_AMOUNT_DESC" />
+	<field name="max_amount" type="text"  label="VMPAYMENT_AUTHORIZENET_MAX_AMOUNT" description="VMPAYMENT_AUTHORIZENET_MAX_AMOUNT_DESC" />
+	<field name="cost_per_transaction" type="text"  label="VMPAYMENT_AUTHORIZENET_COST_PER_TRANSACTION" description="VMPAYMENT_AUTHORIZENET_COST_TRANSACTION_DESC" />
+	<field name="cost_percent_total" type="text"  label="VMPAYMENT_AUTHORIZENET_COST_PERCENT_TOTAL" description="VMPAYMENT_AUTHORIZENET_COST_TOTAL_DESC" />
+        <!--param name="payment_currency" type="vmacceptedcurrency" default="" label="VMPAYMENT_AUTHORIZENET_PAYMENT_CURRENCY"
+               description="VMPAYMENT_AUTHORIZENET_PAYMENT_CURRENCY_DESC"/>
+        <field name="email_currency" type="list" default="vendor" label="VMPAYMENT_AUTHORIZENET_EMAIL_CURRENCY"
+               description="VMPAYMENT_AUTHORIZENET_EMAIL_CURRENCY_DESC">
+            <option value="vendor">VMPAYMENT_AUTHORIZENET_EMAIL_CURRENCY_VENDOR</option>
+            <option value="payment">VMPAYMENT_AUTHORIZENET_EMAIL_CURRENCY_PAYMENT</option>
+        </param -->
+	<field name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="VMPAYMENT_AUTHORIZENET_TAX" description="VMPAYMENT_AUTHORIZENET_TAX_DESC" />
+        <field name="debug" type="radio" default="0" label="VMPAYMENT_AUTHORIZENET_DEBUG" description="VMPAYMENT_AUTHORIZENET_DEBUG_DESC" >
+            <option value="0">COM_VIRTUEMART_NO</option>
+            <option value="1">COM_VIRTUEMART_YES</option>
+        </field>
+        <field name="log" type="radio" default="0" label="VMPAYMENT_AUTHORIZENET_LOG" description="VMPAYMENT_AUTHORIZENET_LOG_DESC" >
+            <option value="0">COM_VIRTUEMART_NO</option>
+            <option value="1">COM_VIRTUEMART_YES</option>
+        </field>
+    </fieldset>
+	</fields>
+	</vmconfig>
+
+</extension>

@@ -1,0 +1,25 @@
+.mobilemaximenuck div span.descck {
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.mobilemaximenuck div.level2.maximenuck > a:before {
+	display: block;
+	float: left;
+	height: 100%;
+	content: "- ";
+	margin-right: 3px;
+}
+
+.mobilemaximenuck div.level3.maximenuck > a:before {
+	display: block;
+	float: left;
+	height: 100%;
+	content: "-— ";
+	margin-right: 3px;
+}
+
+.mobilemaximenuck div.level4.maximenuck > a {
+    background: #e3e3e3;
+    padding-left: 45px;
+}

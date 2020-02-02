@@ -1,0 +1,8 @@
+<root>
+    <params name="shadow" label="HTML settings" hidetitle="1">
+
+        <param name="widget-html-position" type="widgetposition" label="Position" />
+
+        <param type="textarea" name="widget-html-code" label="HTML" style2="width: 600px; height: 600px;resize: vertical;" />
+    </params>
+</root>

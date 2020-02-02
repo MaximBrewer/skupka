@@ -1,0 +1,210 @@
+.icon-48-yandex_maps{
+background-image:url(../images/com_yandex_maps-icon-48x48.png);
+}
+.icon-48-objects{
+background-image:url(../images/com_yandex_maps-objects-icon-48x48.png);
+}
+.icon-categories{
+background-image:url(../images/com_yandex_maps-categories-icon-16x16.png);
+height:16px !important;
+width:16px !important;
+}
+.icon-48-maps{
+background-image:url(../images/com_yandex_maps-maps-icon-48x48.png);
+}
+.com_yandex_maps>.section{
+display:inline-block;
+padding:20px;
+border:1px solid #ccc;
+border-radius:5px;
+width:170px;
+height:240px;
+-moz-box-sizing:border-box !important;
+box-sizing:border-box !important;
+vertical-align:middle;
+margin-bottom:10px;
+}
+.com_yandex_maps>.section>img{
+opacity:0.8;
+width:100%;
+max-width:100%;
+}
+.com_yandex_maps>.section:hover>img{
+opacity:1.0;
+}
+.com_yandex_maps>.section>span{
+	display:block;
+	font-size:1.3em;
+	text-align:center;
+	padding:15px 0px;
+}
+
+#map>iframe{
+	box-sizing: border-box;
+	border:0px;
+	width:100%;
+	display:block;
+	background-color:transparent;
+}
+#map{
+	border: 5px solid #eee;
+	box-sizing: border-box;
+}
+#exten_toolbar{
+	margin-top:10px;
+}
+.main_menu{
+	margin-bottom:10px;
+}
+
+@media screen and (min-width: 1000px) {
+	.control-group.control  .controls,
+	.control-group.behavior  .controls,
+	.control-group.default  .controls,
+	.control-group.behaviors_default  .controls{
+		margin-left: 180px;
+	}
+	.control-group.control  .control-label,
+	.control-group.behavior  .control-label,
+	.control-group.default  .control-label,
+	.control-group.behaviors_default .control-label{
+		width: 160px;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.control-group.control  .controls,
+	.control-group.behavior  .controls,
+	.control-group.default  .controls,
+	.control-group.behaviors_default  .controls{
+		margin-left: 280px;
+	}
+	.control-group.control  .control-label,
+	.control-group.behavior  .control-label,
+	.control-group.default  .control-label,
+	.control-group.behaviors_default .control-label{
+		width: 260px;
+	}
+}
+
+@media screen and (min-width: 1500px) {
+	.control-group.control  .controls,
+	.control-group.behavior  .controls,
+	.control-group.default  .controls,
+	.control-group.behaviors_default  .controls{
+		margin-left: 380px;
+	}
+}
+
+#status_stroke{
+padding:5px 3px;
+color:#050505;
+}
+
+.xdsoft_button_add{
+	background:url(../images/constructor.png) no-repeat;
+	width:32px;
+	height:32px;
+	margin-right: 3px;
+	background: -webkit-linear-gradient(top,rgba(0,0,0,.2) 0,rgba(0,0,0,0.38) 100%);
+    background: -moz-linear-gradient(top,rgba(0,0,0,.2) 0,rgba(0,0,0,0.38) 100%);
+    background: -ms-linear-gradient(top,rgba(0,0,0,.2) 0,rgba(0,0,0,0.38) 100%);
+    background: -o-linear-gradient(top,rgba(0,0,0,.2) 0,rgba(0,0,0,0.38) 100%);
+    background: linear-gradient(top,rgba(0,0,0,.2) 0,rgba(0,0,0,0.38) 100%);
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.07);
+    -moz-box-shadow: 0 1px 0 rgba(0,0,0,.07);
+    -ie-box-shadow: 0 1px 0 rgba(0,0,0,.07);
+    -o-box-shadow: 0 1px 0 rgba(0,0,0,.07);
+    box-shadow: 0 1px 0 rgba(0,0,0,.07);
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+	display: inline-block;
+	position:relative;
+	cursor:pointer;
+	text-align:center;
+}
+.xdsoft_button_add:hover,.xdsoft_button_add.active{
+    background: rgba(255,236,166,.4);
+    -webkit-box-shadow: 0 1px 7px rgba(30,23,0,.8) inset,0 2px 0 -1px rgba(255,255,255,.2);
+    -moz-box-shadow: 0 1px 7px rgba(30,23,0,.8) inset,0 2px 0 -1px rgba(255,255,255,.2);
+    -ie-box-shadow: 0 1px 7px rgba(30,23,0,.8) inset,0 2px 0 -1px rgba(255,255,255,.2);
+    -o-box-shadow: 0 1px 7px rgba(30,23,0,.8) inset,0 2px 0 -1px rgba(255,255,255,.2);
+    box-shadow: 0 1px 7px rgba(30,23,0,.8) inset,0 2px 0 -1px rgba(255,255,255,.2);
+}
+.xdsoft_button_add > span{
+	background:url(../images/constructor.png) no-repeat center 0px;
+	width:16px;
+	height:16px;
+	display: inline-block;
+	position:relative;
+	z-index:10;
+	margin-top:8px;
+}
+.xdsoft_toolbar td{
+	vertical-align:top;
+	padding: 0px;
+	padding-right:10px;
+	padding-bottom:10px;
+}
+.xdsoft_toolbar td:last-child{
+	padding-left:15px;
+}
+.xdsoft_button_add.xdsoft_button_polyline > span{background-position: -3px -3px;}
+.xdsoft_button_add.xdsoft_button_placemark > span{background-position: -3px -25px;}
+.xdsoft_button_add.xdsoft_button_polygon > span{background-position: -3px -69px;}
+.xdsoft_button_add.xdsoft_button_circle > span{background-position: -3px -46px;}
+.xdsoft_button_add.xdsoft_button_find {width:auto;}
+.xdsoft_button_add.xdsoft_button_find > span{background: transparent;width:70px;font-family: arial, sans-serif;font-size: 15px;position:relative}
+.xdsoft_toolbar .xdsoft_map_search{
+	height:22px !important;
+	line-height:22px !important;
+	width: 240px;
+	color:#333;
+}
+.xdsoft_button_add:before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ie-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    background: -webkit-linear-gradient(top,#FFF 0,#EEE 100%);
+    background: -moz-linear-gradient(top,#FFF 0,#EEE 100%);
+    background: -ie-linear-gradient(top,#FFF 0,#EEE 100%);
+    background: -o-linear-gradient(top,#FFF 0,#EEE 100%);
+    background: linear-gradient(top,#FFF 0,#EEE 100%);
+}
+.xdsoft_button_add.active:before {
+    background: -webkit-linear-gradient(top,#ffeca6 0,#fff6d5 100%);
+    background: -moz-linear-gradient(top,#ffeca6 0,#fff6d5 100%);
+    background: -ie-linear-gradient(top,#ffeca6 0,#fff6d5 100%);
+    background: -o-linear-gradient(top,#ffeca6 0,#fff6d5 100%);
+    background: linear-gradient(top,#ffeca6 0,#fff6d5 100%);
+    -webkit-box-shadow: 0 1px 3px -1px rgba(0,0,0,0.45) inset;
+    -moz-box-shadow: 0 1px 3px -1px rgba(0,0,0,0.45) inset;
+    -ie-box-shadow: 0 1px 3px -1px rgba(0,0,0,0.45) inset;
+    -o-box-shadow: 0 1px 3px -1px rgba(0,0,0,0.45) inset;
+    box-shadow: 0 1px 3px -1px rgba(0,0,0,0.45) inset;
+}
+.xdsoft_button_add:active {
+    -webkit-box-shadow: 0 2px 1px -1px rgba(0,0,0,.4) inset,0 1px 0 rgba(255,255,255,.2);
+    -moz-box-shadow: 0 2px 1px -1px rgba(0,0,0,.4) inset,0 1px 0 rgba(255,255,255,.2);
+    -ie-box-shadow: 0 2px 1px -1px rgba(0,0,0,.4) inset,0 1px 0 rgba(255,255,255,.2);
+    -o-box-shadow: 0 2px 1px -1px rgba(0,0,0,.4) inset,0 1px 0 rgba(255,255,255,.2);
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.4) inset,0 1px 0 rgba(255,255,255,.2);
+}
+.xdsoft_button_add:active:before {
+    -webkit-box-shadow: 0 1px 3px -1px rgba(0,0,0,.5) inset;
+    -moz-box-shadow: 0 1px 3px -1px rgba(0,0,0,.5) inset;
+    -ie-box-shadow: 0 1px 3px -1px rgba(0,0,0,.5) inset;
+    -o-box-shadow: 0 1px 3px -1px rgba(0,0,0,.5) inset;
+    box-shadow: 0 1px 3px -1px rgba(0,0,0,.5) inset;
+}

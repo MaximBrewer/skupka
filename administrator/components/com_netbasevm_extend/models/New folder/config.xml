@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<params group="COM_VMINVOICE_GENERAL_CONFIG" name="general" addpath="/administrator/components/com_vminvoice/elements/">
+		<param name="auto_manual" type="radio" default="0" label="COM_VMINVOICE_OPERATION_MODE"
+			description="COM_VMINVOICE_HELP_OPERATION_MODE">
+			<option value="1">COM_VMINVOICE_AUTOMATIC</option>
+			<option value="0">COM_VMINVOICE_MANUAL</option>
+			
+		</param>
+		
+		<param name="order_status" type="multilistsql" default="C"
+			label="COM_VMINVOICE_REQUIRED_ORDER_STATUS" description="COM_VMINVOICE_HELP_ORDER_STATUS" multiple="1" size="5" 
+			query="SELECT order_status_code AS value, order_status_name AS title FROM `#__vm_order_status`"
+			value_field="title" />
+		
+		
+		<param name="pre_def_time_h" type="text" size="3" default="0"
+			label="COM_VMINVOICE_MAILING_INTERVAL_HRS" description="COM_VMINVOICE_HELP_MAILING_INTERVAL" />
+		<param name="pre_def_time" type="text" size="3" default="30"
+			label="COM_VMINVOICE_MAILING_INTERVAL_MIN" description="COM_VMINVOICE_HELP_MAILING_INTERVAL" />
+		<param name="currency_char" type="text" size="50" default=""
+			label="COM_VMINVOICE_CURRENCY_UNIT_REPLACEMENT" description="COM_VMINVOICE_HELP_CURRENCY_UNIT_REPLACEMENT" />
+		<param name="date_pattern" type="text" size="15" default="d.m.Y"
+			label="COM_VMINVOICE_DATE_PATTERN" description="COM_VMINVOICE_HELP_DATE_PATTERN" />
+	</params>
+	<params group="COM_VMINVOICE_TECHNICAL_CONFIG" name="technical" >
+		
+		
+		<param name="cache_pdf" type="radio" default="1"
+			label="COM_VMINVOICE_CACHE_PDF" description="COM_VMINVOICE_HELP_CACHE_PDF">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		
+		<param name="use_tidy" type="radio" default="1"
+			label="COM_VMINVOICE_USE_HTML_TIDY" description="COM_VMINVOICE_HELP_USE_TIDY">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="images_paths" type="list" default="rel_path" label="COM_VMINVOICE_IMAGE_PATHS"
+			description="COM_VMINVOICE_HELP_IMAGE_PATHS">
+			<option value="abs">COM_VMINVOICE_ABSOLUTE</option>
+			<option value="rel_path">COM_VMINVOICE_RELATIVE_WITH_PATH</option>
+			<option value="rel">COM_VMINVOICE_RELATIVE</option>
+			<option value="rel_full_path">COM_VMINVOICE_RELATIVE_FULL_PATH</option>
+		</param>
+		<param name="debug" type="list" default="0"
+			label="COM_VMINVOICE_DEBUG_MODE" description="COM_VMINVOICE_HELP_DEBUG">
+			<option value="2">COM_VMINVOICE_DEBUG_2</option>
+			<option value="1">COM_VMINVOICE_DEBUG_1</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="font_subset" type="radio" default="1"
+			label="COM_VMINVOICE_FONT_SUBSETTING" description="COM_VMINVOICE_HELP_FONT_SUBSETTING">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="remove_empty_tags" type="text" size="30" default=""
+			label="COM_VMINVOICE_REMOVE_EMPTY_TAGS" description="COM_VMINVOICE_HELP_REMOVE_EMPTY_TAGS" />
+	</params>
+	
+	<params group="COM_VMINVOICE_CUSTOMER_INFO_EXTRA_FIELDS" name="extra_fields" >
+		<param name="show_extra_field_label" type="radio" default="0"
+			label="COM_VMINVOICE_SHOW_EXTRA_FIELDS_LABEL" description="COM_VMINVOICE_HELP_EXTRA_FIELDS_LABEL">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="extra_field1" type="sql" size="15" default=""
+			label="COM_VMINVOICE_EXTRA_FIELD_1" description="COM_VMINVOICE_HELP_EXTRA_FIELD"
+			query="SELECT '' AS fieldid,'' AS name UNION SELECT fieldid, name FROM #__vm_userfield"
+			key_field="fieldid" value_field="name" />
+		<param name="extra_field2" type="sql" size="15" default=""
+			label="COM_VMINVOICE_EXTRA_FIELD_2" description="COM_VMINVOICE_HELP_EXTRA_FIELD"
+			query="SELECT '' AS fieldid,'' AS name UNION SELECT fieldid, name FROM #__vm_userfield"
+			key_field="fieldid" value_field="name" />
+		<param name="extra_field3" type="sql" size="15" default=""
+			label="COM_VMINVOICE_EXTRA_FIELD_3" description="COM_VMINVOICE_HELP_EXTRA_FIELD"
+			query="SELECT '' AS fieldid,'' AS name UNION SELECT fieldid, name FROM #__vm_userfield"
+			key_field="fieldid" value_field="name" />
+		<param name="extra_field4" type="sql" size="15" default=""
+			label="COM_VMINVOICE_EXTRA_FIELD_4" description="COM_VMINVOICE_HELP_EXTRA_FIELD"
+			query="SELECT '' AS fieldid,'' AS name UNION SELECT fieldid, name FROM #__vm_userfield"
+			key_field="fieldid" value_field="name" />
+	</params>
+	
+	
+	<params group="COM_VMINVOICE_ORDER_EDITING" name="order">
+		<param name="default_vendor" type="sql" size="15" default=""
+			label="COM_VMINVOICE_DEFAULT_VENDOR" description="COM_VMINVOICE_HELP_DEFAULT_VENDOR"
+			query="SELECT `vendor_id`, `vendor_name` FROM `#__vm_vendor` ORDER BY `vendor_name` ASC"
+			key_field="vendor_id" value_field="vendor_name" />
+		<param name="default_currency" type="sql" size="15" default=""
+			label="COM_VMINVOICE_DEFAULT_CURRENCY" description="COM_VMINVOICE_HELP_DEFAULT_CURRENCY"
+			query="SELECT `currency_code` AS id, CONCAT(`currency_name`,', ',`currency_code`) AS name FROM `#__vm_currency` ORDER BY `currency_id` ASC"
+			key_field="id" value_field="name" />
+		<param name="default_status" type="sql" size="15" default=""
+			label="COM_VMINVOICE_DEFAULT_STATUS" description="COM_VMINVOICE_HELP_DEFAULT_STATUS"
+			query=""
+			key_field="id" value_field="name" />
+	</params>
+	
+	<params group="COM_VMINVOICE_PAGE_APPEARANCE" addpath="/administrator/components/com_vminvoice/elements/" name="page">
+		<param name="user_language" type="radio" default="1"
+			label="COM_VMINVOICE_USE_CUSTOMER_LANGUAGE" description="COM_VMINVOICE_HELP_USER_LANGUAGE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="frontend_current_lang" type="radio" default="1"
+			label="COM_VMINVOICE_USE_FRONTEND_LANGUAGE" description="COM_VMINVOICE_HELP_USE_FRONTEND_LANGUAGE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<!-- NOTE: fonts list is dynamically created now based on fons presnted in TCPDF fonts folder. 
+		However, these options are taken into account as source if better description (encoding info), but if font is presented -->
+		<param name="font" type="list" default="freesans" label="COM_VMINVOICE_PDF_FONT"
+			description="COM_VMINVOICE_HELP_PDF_FONT">
+			<option value="courier">Courier (cp1252: Western Europe)</option>
+			<!-- <option value="dejavusans">DejaVu Sans (UTF-8)</option> -->
+			<!-- <option value="dejavusanscondensed">DejaVu Sans Condensed (UTF-8)</option> -->
+			<!-- <option value="dejavusansmono">DejaVu Sans Monospaced (UTF-8)</option> -->
+			<!-- <option value="dejavuserif">DejaVu Serif (UTF-8)</option> -->
+			<!-- <option value="dejavuserifcondensed">DejaVu Serif Condensed (UTF-8)</option> -->
+			<option value="freesans">Free Sans (UTF-8)</option>
+			<!-- <option value="freemono">Free Monospaced (UTF-8)</option> -->
+			<!-- <option value="freeserif">Free Serif (UTF-8)</option> -->
+			<option value="helvetica">Helvetica (cp1252: Western Europe)</option>
+			<option value="times">Times (cp1252: Western Europe)</option>
+		</param>
+		<param name="font_size" type="text" size="2" default="10" label="COM_VMINVOICE_FONT_SIZE"
+			description="COM_VMINVOICE_HELP_PDF_FONTSIZE" />
+		<param name="margin_top" type="text" size="2" default="15"
+			label="COM_VMINVOICE_MARGIN_TOP" description="COM_VMINVOICE_HELP_PDF_MARGIN_TOP" />
+		<param name="margin_bottom" type="text" size="2" default="10"
+			label="COM_VMINVOICE_MARGIN_BOTTOM" description="COM_VMINVOICE_HELP_PDF_MARGIN_BOTTOM" />
+		<param name="margin_left" type="text" size="2" default="15"
+			label="COM_VMINVOICE_MARGIN_LEFT" description="COM_VMINVOICE_HELP_PDF_MARGIN_LEFT" />
+		<param name="margin_right" type="text" size="2" default="15"
+			label="COM_VMINVOICE_MARGIN_RIGHT" description="COM_VMINVOICE_HELP_PDF_MARGIN_RIGHT" />
+		<param name="to_words_upper" type="list" default="0"
+			label="COM_VMINVOICE_TO_WORDS_UPPER" description="COM_VMINVOICE_HELP_TO_WORDS_UPPER" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+			
+	</params>
+	
+	<params group="COM_VMINVOICE_HEADER"  name="header">
+		<param name="show_contact" type="radio" default="1" label="COM_VMINVOICE_SHOW_CONTACT"
+			description="COM_VMINVOICE_HELP_SHOW_CONTACT">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="show_logo" type="radio" default="1" label="COM_VMINVOICE_SHOW_LOGO"
+			description="COM_VMINVOICE_HELP_SHOW_LOGO">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="logo_width" type="text" size="7" default=""
+			label="COM_VMINVOICE_LOGO_WIDTH" description="COM_VMINVOICE_HELP_LOGO_WIDTH" />
+	</params>
+	
+	<params group="COM_VMINVOICE_FOOTER" name="footer">
+		<param name="show_signature" type="radio" default="1"
+			label="COM_VMINVOICE_SHOW_SIGNATURE" description="COM_VMINVOICE_HELP_SHOW_SIGNATURE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="show_pagination" type="list" default="2"
+			label="COM_VMINVOICE_SHOW_PAGINATION" description="COM_VMINVOICE_HELP_SHOW_PAGINATION">
+			<option value="0">COM_VMINVOICE_NEVER</option>
+			<option value="1">COM_VMINVOICE_ALWAYS</option>
+			<option value="2">COM_VMINVOICE_WHEN_MORE_PAGES</option>
+		</param>
+		<param name="fields_pos" type="list" default="0"
+			label="COM_VMINVOICE_INFORMATION_FIELDS_POSITION" description="COM_VMINVOICE_HELP_SHOW_FIELDSPOS">
+			<option value="1">COM_VMINVOICE_TEMPLATE_BODY</option>
+			<option value="0">COM_VMINVOICE_FOOTER_ALL_PAGES</option>
+			<option value="3">COM_VMINVOICE_FOOTER_LAST_PAGE</option><!-- new -->
+			<option value="2">COM_VMINVOICE_DO_NOT_SHOW</option>
+		</param>
+		<param name="fields_bg" type="text" size="7" default="#F0F0F0"
+			label="COM_VMINVOICE_FIELDS_BACKGROUND_COLOR" description="COM_VMINVOICE_HELP_FIELDSBG" />
+	</params>
+	<params group="COM_VMINVOICE_BACKGROUND" name="background">
+		<param name="background_image" type="image" label="COM_VMINVOICE_BACKGROUND_IMAGE"
+			description="COM_VMINVOICE_HELP_BACKGROUND_IMAGE" />
+		<param name="background_image_pos" type="list" default="TC"
+			label="COM_VMINVOICE_IMAGE_POSITION" description="COM_VMINVOICE_HELP_BACKGROUND_IMAGE_POS">
+			<option value="TL">COM_VMINVOICE_TOP_LEFT</option>
+			<option value="TC">COM_VMINVOICE_TOP_CENTER</option>
+			<option value="TR">COM_VMINVOICE_TOP_RIGHT</option>
+			<option value="ML">COM_VMINVOICE_MIDDLE_LEFT</option>
+			<option value="MC">COM_VMINVOICE_MIDDLE_CENTER</option>
+			<option value="MR">COM_VMINVOICE_MIDDLE_RIGHT</option>
+			<option value="BL">COM_VMINVOICE_BOTTOM_LEFT</option>
+			<option value="BC">COM_VMINVOICE_BOTTOM_CENTER</option>
+			<option value="BR">COM_VMINVOICE_BOTTOM_RIGHT</option>
+		</param>
+		<param name="background_image_pos_x" type="text" size="4"
+			default="" label="COM_VMINVOICE_IMAGE_OFFSET_FROM_LEFT" description="COM_VMINVOICE_HELP_BACKGROUND_IMAGE_POS_X" />
+		<param name="background_image_pos_y" type="text" size="4"
+			default="" label="COM_VMINVOICE_IMAGE_OFFSET_FROM_TOP" description="COM_VMINVOICE_HELP_BACKGROUND_IMAGE_POS_Y" />
+		<param name="background_stretch" type="radio" default="0"
+			label="COM_VMINVOICE_STRETCH_TO_PAGE" description="COM_VMINVOICE_HELP_BACKGROUND_STRETCH">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+	</params>
+	<params group="COM_VMINVOICE_INVOICE_NUMBERING" name="numbering">
+		<param name="invoice_number" type="list" default="own"
+			label="COM_VMINVOICE_INVOICE_NUMBER" description="COM_VMINVOICE_HELP_INVOICE_NUMBER">
+			<option value="order">COM_VMINVOICE_USE_ORDER_ID</option>
+			<option value="order_number">COM_VMINVOICE_USE_ORDER_NUMBER</option>
+			<option value="own">COM_VMINVOICE_OWN_NUMBERING</option>
+		</param>
+		<param name="starting_order" type="text" size="8" default="0"
+			label="COM_VMINVOICE_STARTING_ORDER_FOR_NUMBERING" description="COM_VMINVOICE_HELP_OWN_STARTING_OID" />
+		<param name="number_prefix" type="text" size="8" default="11-"
+			label="COM_VMINVOICE_NUMBERING_PREFIX" description="COM_VMINVOICE_HELP_NUMBERING_PREFIX" />
+		<param name="start_number" type="text" size="8" default="0001"
+			label="COM_VMINVOICE_START_NUMBER" description="COM_VMINVOICE_HELP_START_NUMBER" />
+		<param name="allow_prefix_editing" type="radio" default="0"
+			label="COM_VMINVOICE_ALLOW_INVOICE_NUMBER_PREFIX_EDITING" description="COM_VMINVOICE_HELP_ALLOW_PREFIX_EDITING">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+	</params>
+	<params group="COM_VMINVOICE_INVOICE_CONFIGURATION" name="invoice">
+		
+		<param name="invoice_address" type="list" default="bothi"
+			label="COM_VMINVOICE_ADDRESS_SHOWN" description="COM_VMINVOICE_HELP_ADDRESS_SHOWN">
+			<option value="both">COM_VMINVOICE_BOTH_-_ALWAYS</option>
+			<option value="bothi">COM_VMINVOICE_BOTH_-_IF_SHIPPING_IS_DIFFERENT</option>
+			<option value="BT">COM_VMINVOICE_BILLING_ADDRESS</option>
+			<option value="ST">COM_VMINVOICE_SHIPPING_ADDRESS</option>
+		</param>
+		<param name="address_label" type="radio" default="1"
+			label="COM_VMINVOICE_SHOW_ADDRESS_LABEL" description="COM_VMINVOICE_HELP_LABEL_ADDRESS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		
+		<param name="address_format" type="list" default="standard"
+			label="COM_VMINVOICE_ADDRESS_FORMAT" description="COM_VMINVOICE_HELP_ADDRESS_FORMAT">
+			<option value="standard">COM_VMINVOICE_STANDARD_ADDRESS_FORMAT</option>
+			<option value="usa">COM_VMINVOICE_USA_ADDRESS_FORMAT</option>
+			<option value="uk">COM_VMINVOICE_UK_ADDRESS_FORMAT</option>
+			<option value="german">COM_VMINVOICE_GERMAN_ADDRESS_FORMAT</option>
+		</param>
+		<param name="show_customer_number" type="radio" default="0"
+			label="COM_VMINVOICE_SHOW_CUSTOMER_NUMBER" description="COM_VMINVOICE_HELP_SHOW_CUSTOMER_NUMBER">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		
+		<param name="show_shopper_group" type="radio" default="0"
+			label="COM_VMINVOICE_SHOW_SHOPPER_GROUP" description="COM_VMINVOICE_HELP_SHOW_SHOPPER_GROUP">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		
+		<param name="invoice_date_label" type="radio" default="1"
+			label="COM_VMINVOICE_SHOW_DATE_LABEL" description="COM_VMINVOICE_HELP_LABEL_DATE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		
+		<param name="invoice_date" type="list" default="mdate"
+			label="COM_VMINVOICE_DEFAULT_INVOICE_DATE" description="COM_VMINVOICE_HELP_INVOICE_DATE">
+			<option value="cdate">COM_VMINVOICE_ORDER_CREATE_DATE</option>
+			<option value="mdate">COM_VMINVOICE_ORDER_LAST_MODIFY_DATE</option>
+			<option value="ndate">COM_VMINVOICE_INVOICE_CREATE_DATE</option>
+		</param>
+		
+		<param name="show_taxable_payment_date" type="radio" default="0"
+			label="COM_VMINVOICE_SHOW_TAXABLE_PAYMENT_DATE" description="COM_VMINVOICE_HELP_SHOW_TAXABLE_PAYMENT_DATE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		
+		<param name="taxable_payment_date" type="list" default="cdate"
+			label="COM_VMINVOICE_TAXABLE_PAYMENT_DATE" description="COM_VMINVOICE_HELP_TAXABLE_PAYMENT_DATE">
+			<option value="cdate">COM_VMINVOICE_ORDER_CREATE_DATE</option>
+			<option value="mdate">COM_VMINVOICE_ORDER_LAST_MODIFY_DATE</option>
+			<option value="invdate">COM_VMINVOICE_INVOICE_DATE</option>
+		</param>
+		
+		<param name="show_maturity_date" type="radio" default="0"
+			label="COM_VMINVOICE_SHOW_MATURITY_DATE" description="COM_VMINVOICE_HELP_SHOW_MATURITY_DATE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="maturity" type="text" size="3" default="7"
+			label="COM_VMINVOICE_MATURITY_DAYS" description="COM_VMINVOICE_HELP_MATURITY" />
+		
+		<param name="show_shipping_date" type="radio" default="0"
+			label="COM_VMINVOICE_SHOW_SHIPPING_DATE" description="COM_VMINVOICE_HELP_SHOW_SHIPPING_DATE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		
+		<param name="show_payment_type" type="radio" default="1"
+			label="COM_VMINVOICE_SHOW_PAYMENT_TYPE" description="COM_VMINVOICE_HELP_SHOP_PAYMENT_TYPE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		
+		<param name="show_variable_symbol" type="radio" default="1"
+			label="COM_VMINVOICE_SHOW_VARIABLE_SYMBOL" description="COM_VMINVOICE_HELP_SHOW_VARIABLE_SYMBOL">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="variable_symbol" type="list" default="order_no"
+			label="COM_VMINVOICE_VARIABLE_SYMBOL" description="COM_VMINVOICE_HELP_VARIABLE_SYMBOL">
+			<option value="order_no">COM_VMINVOICE_ORDER_ID</option>
+			<option value="invoice_no">COM_VMINVOICE_INVOICE_NO</option>
+			<option value="order_number">COM_VMINVOICE_ORDER_NUMBER</option>
+		</param>
+		
+		<param name="in_customer_note" type="radio" default="1"
+			label="COM_VMINVOICE_SHOW_CUSTOMER_NOTE" description="COM_VMINVOICE_HELP_IN_SHOW_CUSTOMER_NOTE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		
+		<param name="index_number_fi" type="radio" default="0"
+			label="COM_VMINVOICE_SHOW_FINNISH_INDEX_NUMBER" description="COM_VMINVOICE_HELP_INDEX_NUMBER_FI">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		
+	</params>
+	<params group="COM_VMINVOICE_INVOICE_ITEMS_CONFIGURATION" name="items">
+		
+		<param name="items_ordering" type="list" default="id ASC"
+			label="COM_VMINVOICE_ITEMS_ORDERING" description="COM_VMINVOICE_HELP_ITEMS_ORDERING">
+			<option value="id ASC">COM_VMINVOICE_ORDER_ITEM_ID_ASC</option>
+			<option value="id DESC">COM_VMINVOICE_ORDER_ITEM_ID_DESC</option>
+			
+			<option value="name ASC">COM_VMINVOICE_PRODUCT_NAME_ASC</option>
+			<option value="name DESC">COM_VMINVOICE_PRODUCT_NAME_DESC</option>
+			<option value="sku ASC">COM_VMINVOICE_SKU_ASC</option>
+			<option value="sku DESC">COM_VMINVOICE_SKU_DESC</option>
+			<option value="price ASC">COM_VMINVOICE_PRICE_ASC</option>
+			<option value="price DESC">COM_VMINVOICE_PRICE_DESC</option>
+			
+			
+
+		</param>
+		
+		<param name="repeat_header" type="radio" default="0"
+			label="COM_VMINVOICE_REPEAT_HEADER" description="COM_VMINVOICE_HELP_REPEAT_HEADER">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="show_quantity_unit" type="radio" default="0"
+			label="COM_VMINVOICE_SHOW_QUANTITY_UNIT" description="COM_VMINVOICE_HELP_COL_QUANTITY_UNIT">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="show_sku" type="radio" default="1" label="COM_VMINVOICE_SHOW_PRODUCT_SKU"
+			description="COM_VMINVOICE_HELP_COL_SKU">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="show_attributes" type="radio" default="1"
+			label="COM_VMINVOICE_SHOW_PRODUCT_ATTRIBUTES" description="COM_VMINVOICE_HELP_COL_ATTRIBUTES">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		
+		<param name="show_price_notax" type="radio" default="1"
+			label="COM_VMINVOICE_SHOW_PRICE_EXCL_TAX" description="COM_VMINVOICE_HELP_COL_PRICE_NOTAX">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="show_tax_rate" type="radio" default="1" label="COM_VMINVOICE_SHOW_TAX_RATE"
+			description="COM_VMINVOICE_HELP_COL_TAX_RATE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="taxrate_tolerance" type="text" size="10" default="0.2"
+			label="COM_VMINVOICE_TAX_RATE_TOLERANCE" description="COM_VMINVOICE_HELP_TAXRATE_TOLERANCE" />
+		<param name="product_price_calculation" type="list" default="vm"
+			label="COM_VMINVOICE_PRODUCT_TAX_AND_SUBTOTAL" description="COM_VMINVOICE_HELP_COL_PROD_PRICE_CALCULATION">
+			<option value="vm">COM_VMINVOICE_TAKEN_FROM_VIRTUEMART</option>
+			<option value="tax">COM_VMINVOICE_CALCULATED_FROM_BASE_AND_VAT</option>
+		</param>
+		<param name="show_tax_price" type="radio" default="1"
+			label="COM_VMINVOICE_SHOW_TAX_VALUE" description="COM_VMINVOICE_HELP_COL_TAX_VALUE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="show_discount" type="list" default="2"
+			label="COM_VMINVOICE_SHOW_DISCOUNT" description="COM_VMINVOICE_HELP_SHOW_DISCOUNT">
+			<option value="0">COM_VMINVOICE_NEVER</option>
+			<option value="1">COM_VMINVOICE_ALWAYS</option>
+			<option value="2">COM_VMINVOICE_ONLY_IF_DISCOUNT_EXIST</option>
+		</param>
+		<param name="item_subtotal_with_discount" type="radio" default="1"
+			label="COM_VMINVOICE_ITEM_SUBTOTAL_WITH_DISCOUNT" description="COM_VMINVOICE_HELP_ITEM_SUBTOTAL_WITH_DISCOUNT">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		
+		<param name="always_show_currency" type="radio" default="0"
+			label="COM_VMINVOICE_ALWAYS_SHOW_CURRENCY_UNIT" description="COM_VMINVOICE_HELP_ALWAYS_SHOW_CURRENCY">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		
+		
+		<param name="show_shipping_row" type="list" default="0"
+			label="COM_VMINVOICE_SHOW_SHIPPING_ROW" description="COM_VMINVOICE_HELP_SHOW_SHIPPING_ROW">
+			<option value="0">COM_VMINVOICE_ALWAYS</option>
+			<option value="1">COM_VMINVOICE_ONLY_IF_NOT_EMPTY</option>
+			<option value="2">COM_VMINVOICE_NEVER</option>
+		</param>
+		<param name="show_shipping_carrier" type="radio" default="1"
+			label="COM_VMINVOICE_SHOW_SHIPPING_CARRIER" description="COM_VMINVOICE_HELP_SHOW_SHIPPING_CARRIER">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="show_shipping_prices" type="radio" default="0"
+			label="COM_VMINVOICE_SHOW_SHIPPING_PRICES" description="COM_VMINVOICE_HELP_SHOW_SHIPPING_PRICES">
+			<option value="1">COM_VMINVOICE_ALWAYS</option>
+			<option value="0">COM_VMINVOICE_ONLY_IF_NOT_EMPTY</option>
+		</param>
+		<param name="show_payment_row" type="list" default="1"
+			label="COM_VMINVOICE_SHOW_PAYMENT_ROW" description="COM_VMINVOICE_HELP_SHOW_PAYMENT_ROW">
+			<option value="0">COM_VMINVOICE_ALWAYS</option>
+			<option value="1">COM_VMINVOICE_ONLY_IF_NOT_EMPTY</option>
+			<option value="2">COM_VMINVOICE_NEVER</option>
+		</param>
+		<param name="show_payment_row_type" type="radio" default="0"
+			label="COM_VMINVOICE_SHOW_PAYMENT_ROW_TYPE" description="COM_VMINVOICE_HELP_SHOW_PAYMENT_ROW_TYPE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+                <param name="show_product_image_in_invoice" type="radio" default="0"
+			label="COM_VMINVOICE_SHOW_PRODUCT_IMAGE_IN_INVOICE" description="COM_VMINVOICE_SHOW_PRODUCT_IMAGE_IN_INVOICE_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+                <param name="invoice_image_width" type="text" size="5" default="50"
+			label="INVOICE_IMAGE_WIDTH" description="INVOICE_IMAGE_WIDTH_DESC" />
+                <param name="invoice_image_height" type="text" size="5" default="50"
+			label="INVOICE_IMAGE_HEIGHT" description="INVOICE_IMAGE_HEIGHT_DESC" />
+		<param name="payment_amount_source" type="list" default="1"
+			label="COM_VMINVOICE_PAYMENT_AMOUNT_SOURCE" description="COM_VMINVOICE_HELP_PAYMENT_AMOUNT_SOURCE">
+			<option value="1">COM_VMINVOICE_USE_ORDER_DISCOUNT</option>
+			<option value="0">COM_VMINVOICE_USE_PAYMENT_METHOD</option>
+		</param>
+		<param name="paymenet_taxrate" type="text" size="10" default="0"
+			label="COM_VMINVOICE_PAYMENT_TAXRATE" description="COM_VMINVOICE_HELP_PAYMENT_TAXRATE" />
+		
+		<param name="rounding" type="list" default="1"
+			label="COM_VMINVOICE_ROUNDING" description="COM_VMINVOICE_HELP_ROUNDING">
+			<option value="0">COM_VMINVOICE_DOWN</option>
+			<option value="1">COM_VMINVOICE_MATHEMATICAL</option>
+			<option value="2">COM_VMINVOICE_UP</option>
+		</param>
+	</params>
+	
+	<params group="COM_VMINVOICE_INVOICE_TOTALS_CONFIGURATION" name="totals">
+		<param name="take_discount_into_summary" type="radio" default="0"
+			label="COM_VMINVOICE_TAKE_DISCOUNT_INTO_SUMMARY" description="COM_VMINVOICE_HELP_TAKE_DISCOUNT_INTO_SUMMARY">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="show_tax_summary" type="radio" default="1"
+			label="COM_VMINVOICE_SHOW_TAX_SUMMARY" description="COM_VMINVOICE_HELP_SHOW_TAX_SUMMARY">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="show_tax_summary_label" type="radio" default="1"
+			label="COM_VMINVOICE_SHOW_TAX_SUMMARY_LABEL" description="COM_VMINVOICE_HELP_LABEL_TAX_SUMMARY">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="tax_sums_rounded" type="radio" default="1"
+			label="COM_VMINVOICE_TAX_SUMS_ROUNDED" description="COM_VMINVOICE_HELP_TAX_SUMS_ROUNDED">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="show_subtotal" type="radio" default="1" label="COM_VMINVOICE_SHOW_SUBTOTAL"
+			description="COM_VMINVOICE_HELP_SHOW_SUBTOTAL">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="coupon_extended" type="radio" default="0" label="COM_VMINVOICE_COUPON_EXTENDED"
+			description="COM_VMINVOICE_HELP_COUPON_EXTENDED">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="coupon_vat" type="text" size="15" default=""
+			label="COM_VMINVOICE_COUPON_VAT" description="COM_VMINVOICE_HELP_COUPON_VAT" />
+		<param name="show_total_net" type="list" default="0" label="COM_VMINVOICE_SHOW_TOTAL_NET"
+			description="COM_VMINVOICE_HELP_SHOW_TOTAL_NET">
+			<option value="3">COM_VMINVOICE_YES_DEDUCT_ITEMS_DISCOUNTS</option>
+			<option value="4">COM_VMINVOICE_YES_DEDUCT_ALL_DISCOUNTS</option>
+			<option value="2">COM_VMINVOICE_YES_WITHOUT_DISCOUNTS</option>
+			<option value="1">COM_VMINVOICE_YES_WITH_COUPON</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="show_total_tax" type="list" default="0" label="COM_VMINVOICE_SHOW_TOTAL_TAX"
+			description="COM_VMINVOICE_HELP_SHOW_TOTAL_TAX">
+			<option value="2">COM_VMINVOICE_YES_WITHOUT_COUPON</option>
+			<option value="1">COM_VMINVOICE_YES_WITH_COUPON</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="show_total_tax_percent" type="radio" default="0" label="COM_VMINVOICE_SHOW_TOTAL_TAX_PERCENT"
+			description="COM_VMINVOICE_HELP_SHOW_TOTAL_TAX_PERCENT">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="show_total_discount" type="list" default="0" label="COM_VMINVOICE_SHOW_TOTAL_DISCOUNT"
+			description="COM_VMINVOICE_HELP_SHOW_TOTAL_DISCOUNT">
+			<option value="2">COM_VMINVOICE_YES_WITHOUT_COUPON</option>
+			<option value="1">COM_VMINVOICE_YES_WITH_COUPON</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="total_extended" type="list" default="0" label="COM_VMINVOICE_TOTAL_EXTENDED"
+			description="COM_VMINVOICE_HELP_TOTAL_EXTENDED">
+			<option value="2">COM_VMINVOICE_YES_WITHOUT_COUPON</option>
+			<option value="1">COM_VMINVOICE_YES_WITH_COUPON</option>
+			<option value="0">JNO</option>
+		</param>
+	</params>
+	
+	<params group="COM_VMINVOICE_INVOICE_MAILS" name="invoice_mails">
+		<param name="mail_send_to" type="list" default="0" label="COM_VMINVOICE_SEND_MAIL_TO"
+			description="COM_VMINVOICE_HELP_SEND_MAIL_TO">
+			<option value="0">COM_VMINVOICE_SHOPPER_AND_SHOPKEEPER</option>
+			<option value="1">COM_VMINVOICE_SHOPPER_ONLY</option>
+			<option value="2">COM_VMINVOICE_SHOPKEEPER_ONLY</option>
+			<option value="3">COM_VMINVOICE_EMAIL_SPECIFIED</option>
+		</param>
+		<param name="copy" type="text" size="50" default=""
+			label="COM_VMINVOICE_COPY" description="COM_VMINVOICE_HELP_COPY" />
+		<param name="bcc" type="text" size="50" default=""
+			label="COM_VMINVOICE_BCC" description="COM_VMINVOICE_HELP_BCC" />
+		<param name="mail_subject" type="text" size="50" default="Invoice"
+			label="COM_VMINVOICE_MAIL_SUBJECT" description="COM_VMINVOICE_HELP_MAIL_SUBJECT" />
+		<param name="mail_message" type="editor" cols="60" rows="10" height="300" 
+			default="We are attaching an invoice for your purchase." label="COM_VMINVOICE_MAIL_BODY"
+			description="COM_VMINVOICE_HELP_MAIL_BODY" />
+		<param name="invoice_filename" type="text" size="30" default=""
+			label="COM_VMINVOICE_MAIL_FILENAME" description="COM_VMINVOICE_HELP_MAIL_FILENAME" />
+	</params>	
+	
+	<params group="COM_VMINVOICE_DELIVERY_NOTE_CONFIGURATION" name="delivery_note">
+		<param name="delivery_note" type="radio" default="0"
+			label="COM_VMINVOICE_DELIVERY_NOTES_ENABLED" description="COM_VMINVOICE_HELP_DELIVERY_NOTES_ENABLED">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="show_quantity_unit_dn" type="radio" default="0"
+			label="COM_VMINVOICE_SHOW_QUANTITY_UNIT" description="COM_VMINVOICE_HELP_COL_QUANTITY_UNIT_DN">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="show_sku_dn" type="radio" default="1"
+			label="COM_VMINVOICE_SHOW_PRODUCT_SKU" description="COM_VMINVOICE_HELP_COL_SKU">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="dn_address" type="list" default="ST" label="COM_VMINVOICE_ADDRESS_SHOWN"
+			description="COM_VMINVOICE_HELP_ADDRESS_SHOWN">
+			<option value="both">COM_VMINVOICE_BOTH_-_ALWAYS</option>
+			<option value="bothi">COM_VMINVOICE_BOTH_-_IF_SHIPPING_IS_DIFFERENT</option>
+			<option value="BT">COM_VMINVOICE_BILLING_ADDRESS</option>
+			<option value="ST">COM_VMINVOICE_SHIPPING_ADDRESS</option>
+		</param>
+		<param name="dn_date_label" type="radio" default="1"
+			label="COM_VMINVOICE_SHOW_DATE_LABEL" description="COM_VMINVOICE_HELP_LABEL_DATE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="dn_customer_note" type="radio" default="1"
+			label="COM_VMINVOICE_SHOW_CUSTOMER_NOTE" description="COM_VMINVOICE_HELP_DN_SHOW_CUSTOMER_NOTE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+	</params>
+	<params group="COM_VMINVOICE_DN_MAILS" name="dn_mails">
+		<param name="send_both" type="radio" default="1" label="COM_VMINVOICE_SEND_WITH_INVOICE"
+			description="COM_VMINVOICE_HELP_SEND_WITH_INVOICE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="mail_send_to_dn" type="list" default="0" label="COM_VMINVOICE_SEND_MAIL_TO"
+			description="COM_VMINVOICE_HELP_SEND_MAIL_TO">
+			<option value="0">COM_VMINVOICE_SHOPPER_AND_SHOPKEEPER</option>
+			<option value="1">COM_VMINVOICE_SHOPPER_ONLY</option>
+			<option value="2">COM_VMINVOICE_SHOPKEEPER_ONLY</option>
+			<option value="3">COM_VMINVOICE_EMAIL_SPECIFIED</option>
+		</param>
+		<param name="copy_dn" type="text" size="50" default=""
+			label="COM_VMINVOICE_COPY" description="COM_VMINVOICE_HELP_COPY" />
+		<param name="bcc_dn" type="text" size="50" default=""
+			label="COM_VMINVOICE_BCC" description="COM_VMINVOICE_HELP_BCC" />
+		<param name="mail_dn_subject" type="text" size="50" default="Delivery note"
+			label="COM_VMINVOICE_DELIVERY_NOTE_SUBJECT" description="COM_VMINVOICE_HELP_MAIL_DN_SUBJECT" />
+		<param name="mail_dn_message" type="editor" cols="60" rows="10" height="300" 
+			default="We are attaching an delivery note of your purchase." label="COM_VMINVOICE_DELIVERY_NOTE_BODY"
+			description="COM_VMINVOICE_HELP_MAIL_DN_BODY" />
+		<param name="dn_filename" type="text" size="30" default=""
+			label="COM_VMINVOICE_MAIL_DN_FILENAME" description="COM_VMINVOICE_HELP_MAIL_FILENAME" />
+	</params>	
+	
+	<params group="COM_VMINVOICE_MAILING_CONFIGURATION" addpath="/administrator/components/com_vminvoice/elements/" name="mailing">
+		<param name="use_conf" type="list" default="0"
+			label="COM_VMINVOICE_USE_MAILER_INFO_FROM" description="COM_VMINVOICE_HELP_USE_MAILER_INFO_FROM">
+			<option value="0">COM_VMINVOICE_JOOMLA_CONFIGURATION</option>
+			
+			<option value="1">COM_VMINVOICE_VIRTUEMART_CONFIGURATION</option>
+			<option value="2">COM_VMINVOICE_VM_INVOICE_CONFIGURATION</option>
+			
+			
+			
+		</param>
+		
+		<param name="admin_email" type="text" size="50" default="vminvoice@gmail.com"
+			label="COM_VMINVOICE_SENDER_EMAIL" description="COM_VMINVOICE_HELP_SENDER_EMAIL" />
+		
+		
+		
+		<param name="from_name" type="text" size="50" default="ARTIO VM Invoice"
+			label="COM_VMINVOICE_SENDER_NAME" description="COM_VMINVOICE_HELP_SENDER_NAME" />
+		
+		
+	</params>
+	<params group="COM_VMINVOICE_REGISTRATION">
+		<param name="download_id" type="text" size="32" default=""
+			label="COM_VMINVOICE_VM_INVOICE_DOWNLOAD_ID" description="COM_VMINVOICE_HELP_DOWNLOAD_ID" />
+		<param name="version_checker" type="radio" default="1"
+			label="COM_VMINVOICE_VERSION_CHECKER" description="COM_VMINVOICE_HELP_VERSION_CHECKER">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+	</params>
+	
+	
+	<param name="items_footer_ordering" type="hidden" default=""  />
+	<param name="items_footer_dn_ordering" type="hidden" default=""  />
+	
+	
+</config>

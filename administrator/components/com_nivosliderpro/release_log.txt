@@ -1,0 +1,82 @@
+3.1
+
+- bug fix: the task was not get properly on the redirects
+
+3.0.9
+
+- bug fix: padding didn't show in the new version 
+
+3.0.8
+
+- feature: made the slider responsive
+- feature: added options to remove bullets and arrows under some screen width
+
+3.0.6
+
+- bug fix: fixed some compatability for joomla 3.2
+
+3.0.5
+
+- bug fix: fixed front end jquery include for https
+
+3.0.4
+
+-bug fix: fix conflict with K2 component
+
+3.0.3
+
+-bug fix: fixed javascritp includes in backend
+
+3.0.2
+
+- Add reverse function
+
+3.0.1
+
+- bug fix: fix the bullets vertical position in joomla 3
+- bug fix: fixed the image preview in slide view
+- bug fix: fixed the jump on joomla 3 slide view visual settings
+
+3.0
+
+-feature: Make the component work well on Joomla 3.x
+
+1.2.5
+
+- bug fix: fixed some vulnarability with image view output
+
+1.2.4
+
+- bug fix: fixed some strict standarts warnings
+
+1.2.3
+
+-bug fix: fixed some bugs with html validator
+
+1.2.2
+
+- bug fix: make some protection agains image padding and margin.
+
+1.2
+
+- bug fix: fixed the power admin issue
+
+1.1
+
+-feature: added more bullets. Now it's 100 together.
+-feature: added alt html attribute for the links.
+-bug fix: added width and height for the slide images in slider html output.
+-bug fix: moved all the styles to "media" folder, so now it will work on password protected directories.
+
+1.0.9
+
+-bug fix: added text-align:left to the slider wrapper to avoid text show on bullets and arrows
+
+1.0.8
+
+-feature: added position settings
+
+1.0.7
+
+-bug fix: get generated css file with index.php?options, sometimes without index.php maked bugs.
+-feature: added noconflict mode on / off to the module.

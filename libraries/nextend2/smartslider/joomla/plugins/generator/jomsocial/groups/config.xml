@@ -1,0 +1,35 @@
+<root>
+    <params name="jomsocial" label="Filter">
+        <param type="group" label="Source">
+            <param name="jomsocialgroupcategories" label="Categories" type="jomsocialgroupcategories" default="0"
+                   multiple="1"
+                   size="10"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="featured" label="Featured" type="filter" default="0"/>
+            <param name="grouptype" label="Group type" type="list" default="0">
+                <option value="-1">All</option>
+                <option value="0">Public</option>
+                <option value="1">Private</option>
+            </param>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="jomsocialorder" type="mixed" label="Order" default="created|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="name">Name</option>
+                <option value="created">Creation time</option>
+                <option value="discusscount">Number of discussions</option>
+                <option value="wallcount">Number of walls</option>
+                <option value="membercount">Number of members</option>
+                <option value="hits">Hits</option>
+                <option value="id">ID</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

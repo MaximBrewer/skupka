@@ -1,0 +1,47 @@
+<root>
+    <params name="jeventsevents" label="Filter">
+        <param type="group" label="Source">
+            <param name="sourcecategories" label="Categories" type="jeventscategories" default="0"
+                   multiple="1" size="10"/>
+            <param name="sourcecalendars" label="Calendars" type="jeventscalendars"
+                   default="0"
+                   multiple="1" size="10"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="started" label="Started" type="filter" default="0"/>
+            <param name="ended" label="Ended" type="filter" default="-1"/>
+            <param name="noendtime" label="Specified end time" type="filter" default="0"/>
+            <param name="location" label="Location" type="text" default="*"/>
+            <param name="dateformat" label="Date format" type="text" default="Y-m-d"/>
+            <param name="timeformat" label="Time format" type="text" default="H:i:s"/>
+            <param name="itemid" label="Target menuitem for urls (item ID)" type="menuitems" default="0"/>
+            <param name="eventstate" label="Event status" type="list" default="1">
+                <option value="">All</option>
+                <option value="1">Published</option>
+                <option value="0">Unpublished</option>
+                <option value="-1">Trashed</option>
+            </param>
+        </param>
+        <param type="group" label="JEvents Standard Image and File Uploads plugin" class="n2-expert">
+            <param name="multiimages" label="Multiple images/events" type="onoff" default="0"/>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="jeventsorder" type="mixed" label="Order" default="a.dtstart|*|asc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="a.dtstart">Start date</option>
+                <option value="a.dtend">End date</option>
+                <option value="a.modified">Modification date</option>
+                <option value="b.created">Creation date</option>
+                <option value="a.summary">Title</option>
+                <option value="a.hits">Hits</option>
+                <option value="b.ev_id">ID</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

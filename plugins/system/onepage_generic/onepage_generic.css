@@ -1,0 +1,4320 @@
+input.inputbox, textarea, .textarea, select.inputbox, input.validate-email, select.inputbox, .quantity-input, table.user-details input, #com-form-login-username input, select, #company_field, #title, #first_name_field, #middle_name_field, #last_name_field, #address_1_field, #address_2_field, #zip_field, #city_field, #virtuemart_country_id, #phone_1_field, #phone_2_field, #fax_field, #agreed_field, .contentpane #name, .contentpane #email, .contentpane #counter, .contact-input-box input, .form-validate input, .login-fields #username, .login-fields #password, .coupon, input.vm-default,  .opg-form input:not([type="radio"]):not([type="checkbox"]), .opg-form select { min-height: 30px; font-family; inherit !important; font-weight: normal !important: font-size: 1.1em !important; }
+
+.opg-list li
+{
+list-style:none !important;
+}
+.opg-list label
+{ 
+display:inline-block;
+}  
+
+#paymentdetails .error_div
+{
+display:none;
+}
+ 
+.opg-modal-dialog  #paymentsdiv ul li { list-style-type: none !important; }
+
+#klarna-checkout-other-payment-options
+{
+ display:none !important;
+}
+div.product 
+{
+   float:none !important;
+   border:1px none !important;
+}
+
+
+@media (max-width: 480px){
+  div.product 
+  {
+  	width: 100% !important; 
+  }
+}  
+.overlaylow
+{
+ opacity : 0.5;
+}
+.overlayhigh
+{
+ display: block !important;
+ opacity : 1 !important;
+}
+.overlaycss
+{
+ background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+    bottom: 0;
+    display: none;
+    left: 0;
+    opacity: 0;
+    overflow-y: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateZ(0px);
+    transition: opacity 0.15s linear 0s;
+    z-index: 1010;
+}
+.errorcheck
+{
+  border:1px solid #ff0000;
+} 
+
+.quantity-input
+{
+  width:30px !important;
+  margin-bottom:0px !important;
+  border-radius:0 !important;
+  color:inherit !important;
+  border:1px solid !important;
+  padding:2px !important;
+}
+td#paymentdetails  #klarna-checkout-containers_div, #paymentsdiv #klarna-checkout-containers_div, td#paymentdetails #error_div, #paymentsdiv #error_div
+{
+ display:none !important;
+}
+
+.squaredTwo label
+{
+padding:0 !important;
+}
+input.quantity-input
+{
+	 color:inherit !important;
+}
+.opg-alert, #system-message-container
+{
+
+}
+#customerror .opg-alert, #loginerror .opg-alert, #cartalert .opg-alert, #email_error .opg-alert, #user_error .opg-alert
+{
+  display:block;
+}
+#right_div .opg-width-1-1 input[type="text"], #right_div .opg-width-1-1 input[type="password"], #right_div .opg-width-1-1 select
+{
+width:100% !important;
+}
+
+.line-through 
+{
+text-decoration:line-through;
+}
+
+.squaredTwo {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  margin: 20px auto;
+  background: #fcfff4;
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.squaredTwo label {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  background: -webkit-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+.squaredTwo label:after {
+  content: '';
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border: 3px solid #fcfff4;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg); 
+}
+.squaredTwo label:hover::after {
+  opacity: 0.3;
+}
+.squaredTwo input[type=checkbox] {
+  visibility: hidden;
+}
+.squaredTwo input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+
+
+#checkoutForm .shipto_fields_div
+{
+  margin:10px !important;
+}
+
+.checkout-button-top
+{
+padding:0 !important;
+ text-align:center !important;
+}
+.opg-table td
+{
+ border-bottom:1px none !important;
+ border-top:1px none !important;
+ 
+}
+.opg-table tr td, .opg-table tbody td 
+{ 
+ border: none !important; 
+}
+.virtuemart_country_id, #virtuemart_state_id, #shipto_virtuemart_country_id, #shipto_virtuemart_state_id {
+ margin-bottom: 2px;
+    padding: 5px 5px 4px;
+    width: 212px;
+}
+
+.opg-form input,
+.opg-form select,
+.opg-form textarea {
+  /* 1 */
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  border-radius: 0;
+  /* 4 */
+  font: inherit;
+  color: inherit;
+}
+/*
+ * Address inconsistent `text-transform` inheritance which is only inherit in Firefox
+ */
+.opg-form select {
+  text-transform: none;
+}
+/*
+ * 1. Correct `font` properties not being inherited.
+ * 2. Don't inherit the `font-weight` and use `bold` instead.
+ * NOTE: Both declarations don't work in Chrome, Safari and Opera.
+ */
+.opg-form optgroup {
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  font-weight: bold;
+}
+/*
+ * Removes inner padding and border in Firefox 4+.
+ */
+.opg-form input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/*
+ * Removes excess padding in IE 8/9/10.
+ */
+.opg-form input[type="checkbox"],
+.opg-form input[type="radio"] {
+  padding: 0;
+}
+/*
+ * Improves consistency of cursor style for clickable elements
+ */
+.opg-form input[type="checkbox"]:not(:disabled),
+.opg-form input[type="radio"]:not(:disabled) {
+  cursor: pointer;
+}
+/*
+ * Remove default style in iOS.
+ */
+.opg-form textarea,
+.opg-form input:not([type]),
+.opg-form input[type="text"],
+.opg-form input[type="password"],
+.opg-form input[type="email"],
+.opg-form input[type="url"],
+.opg-form input[type="search"],
+.opg-form input[type="tel"],
+.opg-form input[type="number"],
+.opg-form input[type="datetime"] {
+  -webkit-appearance: none;
+}
+/*
+ * Remove inner padding and search cancel button in Chrome, Safari and Opera on OS X.
+ */
+.opg-form input[type="search"]::-webkit-search-cancel-button,
+.opg-form input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/*
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+.opg-form input[type="number"]::-webkit-inner-spin-button,
+.opg-form input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/*
+ * Define consistent border, margin, and padding.
+ */
+.opg-form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * 1. Remove default vertical scrollbar in IE 8/9/10/11.
+ * 2. Improve readability and alignment in all browsers.
+ */
+.opg-form textarea {
+  /* 1 */
+  overflow: auto;
+  /* 2 */
+  vertical-align: top;
+}
+/*
+ * Removes placeholder transparency in Firefox.
+ */
+.opg-form ::-moz-placeholder {
+  opacity: 1;
+}
+/*
+ * Removes `box-shadow` for invalid controls in Firefox.
+ */
+.opg-form :invalid {
+  box-shadow: none;
+}
+/*
+ * Vertical alignment
+ */
+.opg-form input:not([type="radio"]):not([type="checkbox"]),
+.opg-form select {
+  vertical-align: middle;
+}
+/* Style
+ ========================================================================== */
+/*
+ * Remove margin from the last-child
+ */
+.opg-form > :last-child {
+  margin-bottom: 0;
+}
+/*
+ * Controls
+ * Except for `range`, `radio`, `checkbox`, `file`, `submit`, `reset`, `button` and `image`
+ * 1. Must be `height` because `min-height` is not working in OSX
+ * 2. Responsiveness: Sets a maximum width relative to the parent to scale on narrower viewports
+ * 3. Vertical `padding` needed for `select` elements in Firefox
+ * 4. Style
+ */
+.opg-form select,
+.opg-form textarea,
+.opg-form input:not([type]),
+.opg-form input[type="text"],
+.opg-form input[type="password"],
+.opg-form input[type="datetime"],
+.opg-form input[type="datetime-local"],
+.opg-form input[type="date"],
+.opg-form input[type="month"],
+.opg-form input[type="time"],
+.opg-form input[type="week"],
+.opg-form input[type="number"],
+.opg-form input[type="email"],
+.opg-form input[type="url"],
+.opg-form input[type="search"],
+.opg-form input[type="tel"],
+.opg-form input[type="color"] {
+  /* 1 */
+
+  /* 2 */
+
+  /* 3 */
+
+  /* 4 */
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+.opg-form select:focus,
+.opg-form textarea:focus,
+.opg-form input:not([type]):focus,
+.opg-form input[type="text"]:focus,
+.opg-form input[type="password"]:focus,
+.opg-form input[type="datetime"]:focus,
+.opg-form input[type="datetime-local"]:focus,
+.opg-form input[type="date"]:focus,
+.opg-form input[type="month"]:focus,
+.opg-form input[type="time"]:focus,
+.opg-form input[type="week"]:focus,
+.opg-form input[type="number"]:focus,
+.opg-form input[type="email"]:focus,
+.opg-form input[type="url"]:focus,
+.opg-form input[type="search"]:focus,
+.opg-form input[type="tel"]:focus,
+.opg-form input[type="color"]:focus {
+  border-color: #99baca;
+  outline: 0;
+  background: #f5fbfe;
+  color: #444444;
+}
+.opg-form select:disabled,
+.opg-form textarea:disabled,
+.opg-form input:not([type]):disabled,
+.opg-form input[type="text"]:disabled,
+.opg-form input[type="password"]:disabled,
+.opg-form input[type="datetime"]:disabled,
+.opg-form input[type="datetime-local"]:disabled,
+.opg-form input[type="date"]:disabled,
+.opg-form input[type="month"]:disabled,
+.opg-form input[type="time"]:disabled,
+.opg-form input[type="week"]:disabled,
+.opg-form input[type="number"]:disabled,
+.opg-form input[type="email"]:disabled,
+.opg-form input[type="url"]:disabled,
+.opg-form input[type="search"]:disabled,
+.opg-form input[type="tel"]:disabled,
+.opg-form input[type="color"]:disabled {
+  border-color: #dddddd;
+  background-color: #f5f5f5;
+  color: #999999;
+}
+/*
+ * Placeholder
+ */
+.opg-form :-ms-input-placeholder {
+  color: #999999 !important;
+}
+.opg-form ::-moz-placeholder {
+  color: #999999;
+}
+.opg-form ::-webkit-input-placeholder {
+  color: #999999;
+}
+.opg-form :disabled:-ms-input-placeholder {
+  color: #999999 !important;
+}
+.opg-form :disabled::-moz-placeholder {
+  color: #999999;
+}
+.opg-form :disabled::-webkit-input-placeholder {
+  color: #999999;
+}
+/*
+ * Legend
+ * 1. Behave like block element
+ * 2. Correct `color` not being inherited in IE 8/9/10/11.
+ * 3. Remove padding
+ * 4. `margin-bottom` is not working in Safari and Opera.
+ *    Using `padding` and :after instead to create the border
+ * 5. Style
+ */
+.opg-form legend {
+  /* 1 */
+  width: 100%;
+  /* 2 */
+  border: 0;
+  /* 3 */
+  padding: 0;
+  /* 4 */
+  padding-bottom: 15px;
+  /* 5 */
+  font-size: 18px;
+  line-height: 30px;
+}
+/*
+ * 1. Fixes IE9
+ */
+.opg-form legend:after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #dddddd;
+  /* 1 */
+  width: 100%;
+}
+/* Size modifiers
+ * Higher specificity needed to override defaults
+ ========================================================================== */
+select.opg-form-small,
+textarea.opg-form-small,
+input[type].opg-form-small,
+input:not([type]).opg-form-small {
+  height: 25px;
+  padding: 3px 3px;
+
+  font-size: 12px;
+}
+select.opg-form-large,
+textarea.opg-form-large,
+input[type].opg-form-large,
+input:not([type]).opg-form-large {
+  height: 40px;
+  padding: 8px 6px;
+  font-size: 16px;
+}
+/* Reset height
+ * Must be after size modifiers
+ ========================================================================== */
+.opg-form textarea,
+.opg-form select[multiple],
+.opg-form select[size] {
+  height: auto;
+}
+/* Validation states
+ * Using !important to keep the selector simple
+ ========================================================================== */
+/*
+ * Error state
+ */
+.opg-form-danger {
+  border-color: #dc8d99 !important;
+  background: #fff7f8 !important;
+  color: #d85030 !important;
+}
+/*
+ * Success state
+ */
+.opg-form-success {
+  border-color: #8ec73b !important;
+  background: #fafff2 !important;
+  color: #659f13 !important;
+}
+/* Style modifiers
+ * Using !important to keep the selector simple
+ ========================================================================== */
+/*
+ * Blank form
+ */
+.opg-form-blank {
+  border-color: transparent !important;
+  border-style: dashed !important;
+  background: none !important;
+}
+.opg-form-blank:focus {
+  border-color: #dddddd !important;
+}
+/* Size sub-modifiers
+ ========================================================================== */
+/*
+ * Fixed widths
+ * Different widths for mini sized `input` and `select` elements
+ */
+input.opg-form-width-mini {
+  width: 40px;
+}
+select.opg-form-width-mini {
+  width: 65px;
+}
+.opg-form-width-small {
+  width: 130px;
+}
+.opg-form-width-medium {
+  width: 200px;
+}
+.opg-form-width-large {
+  width: 500px;
+}
+/* Sub-objects: `opg-form-row`
+ * Groups labels and controls in rows
+ ========================================================================== */
+/*
+ * Micro clearfix
+ * Needed for `opg-form-horizontal` modifier
+ */
+.opg-form-row:before,
+.opg-form-row:after {
+  content: "";
+  display: table;
+}
+.opg-form-row:after {
+  clear: both;
+}
+/*
+ * Vertical gutter
+ */
+.opg-form-row + .opg-form-row {
+  margin-top: 15px;
+}
+/* Help text
+ * Sub-object: `opg-form-help-inline`, `opg-form-help-block`
+ ========================================================================== */
+.opg-form-help-inline {
+  display: inline-block;
+  margin: 0 0 0 10px;
+}
+.opg-form-help-block {
+  margin: 5px 0 0 0;
+}
+/* Controls content
+ * Sub-object: `opg-form-controls`, `opg-form-controls-condensed`
+ ========================================================================== */
+/*
+ * Remove margins
+ */
+.opg-form-controls > :first-child {
+  margin-top: 0;
+}
+.opg-form-controls > :last-child {
+  margin-bottom: 0;
+}
+/*
+ * Group controls and text into blocks with a small spacing between blocks
+ */
+.opg-form-controls-condensed {
+  margin: 5px 0;
+}
+/* Modifier: `opg-form-stacked`
+ * Requires sub-object: `opg-form-label`
+ ========================================================================== */
+.opg-form-stacked .opg-form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+/* Modifier: `opg-form-horizontal`
+ * Requires sub-objects: `opg-form-label`, `opg-form-controls`
+ ========================================================================== */
+/* Tablet portrait and smaller */
+@media (max-width: 959px) {
+  /* Behave like `opg-form-stacked` */
+  .opg-form-horizontal .opg-form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+}
+/* Desktop and bigger */
+@media (min-width: 960px) {
+  .opg-form-horizontal .opg-form-label {
+    width: 200px;
+    margin-top: 5px;
+    float: left;
+  }
+  .opg-form-horizontal .opg-form-controls {
+    margin-left: 215px;
+  }
+  /* Better vertical alignment if controls are checkboxes and radio buttons with text */
+  .opg-form-horizontal .opg-form-controls-text {
+    padding-top: 5px;
+  }
+}
+/* Sub-object: `opg-form-icon`
+ ========================================================================== */
+/*
+ * 1. Container width fits its content
+ * 2. Create position context
+ * 3. Prevent `inline-block` consequences
+ */
+.opg-form-icon {
+  /* 1 */
+  display: inline-block;
+  /* 2 */
+  position: relative;
+  /* 3 */
+  max-width: 100%;
+}
+/*
+ * 1. Make form element clickable through icon
+ */
+.opg-form-icon > [class*='opg-icon-'] {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  margin-top: -7px;
+  font-size: 14px;
+  color: #999999;
+  text-align: center;
+  /* 1 */
+  pointer-events: none;
+}
+.opg-form-icon:not(.opg-form-icon-flip) > input {
+  padding-left: 30px !important;
+}
+/*
+ * Sub-modifier: `opg-form-icon-flip`
+ */
+.opg-form-icon-flip > [class*='opg-icon-'] {
+  right: 0;
+}
+.opg-form-icon-flip > input {
+  padding-right: 30px !important;
+}
+
+
+.opg-grid {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* 1 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*
+ * DEPRECATED
+ * Micro clearfix
+ * Can't use `table` because it creates a 1px gap when it becomes a flex item, only in Webkit
+ */
+.opg-grid:before,
+.opg-grid:after {
+  content: "";
+  display: block;
+  overflow: hidden;
+}
+.opg-grid:after {
+  clear: both;
+}
+/*
+ * Grid cell
+ * 1. Space is allocated solely based on content dimensions
+ * 2. Makes grid more robust so that it can be used with other block elements
+ * 3. DEPRECATED Using `float` to support IE9
+ */
+.opg-grid > * {
+  /* 1 */
+  -ms-flex: none;
+  -webkit-flex: none;
+  flex: none;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  float: left;
+}
+/*
+ * Remove margin from the last-child
+ */
+.opg-grid > * > :last-child {
+  margin-bottom: 0;
+}
+/* Grid gutter
+ ========================================================================== */
+/*
+ * Default gutter
+ */
+/* Horizontal */
+.opg-grid {
+  margin-left: -25px;
+}
+.opg-grid > * {
+  padding-left: 25px;
+}
+/* Vertical */
+.opg-grid + .opg-grid,
+.opg-grid-margin,
+.opg-grid > * > .opg-panel + .opg-panel {
+  margin-top: 5px;
+}
+.opg-grid
+{
+margin-top: 5px; !important;
+}
+/* Large screen and bigger */
+@media (min-width: 1220px) {
+  /* Horizontal */
+  .opg-grid {
+    margin-left: -15px;
+  }
+  .opg-grid > * {
+    padding-left: 15px;
+  }
+  /* Vertical */
+  .opg-grid + .opg-grid,
+  .opg-grid-margin,
+  .opg-grid > * > .opg-panel + .opg-panel {
+    margin-top: 5px;
+  }
+}
+/*
+ * Collapse gutter
+ */
+/* Horizontal */
+.opg-grid-collapse {
+  margin-left: 0;
+}
+.opg-grid-collapse > * {
+  padding-left: 0;
+}
+/* Vertical */
+.opg-grid-collapse + .opg-grid-collapse,
+.opg-grid-collapse > .opg-grid-margin,
+.opg-grid-collapse > * > .opg-panel + .opg-panel {
+  margin-top: 0;
+}
+/*
+ * Small gutter
+ */
+/* Horizontal */
+.opg-grid-small {
+  margin-left: -10px;
+}
+.opg-grid-small > * {
+  padding-left: 10px;
+}
+/* Vertical */
+.opg-grid-small + .opg-grid-small,
+.opg-grid-small > .opg-grid-margin,
+.opg-grid-small > * > .opg-panel + .opg-panel {
+  margin-top: 10px;
+}
+/*
+ * Medium gutter
+ */
+/* Horizontal */
+.opg-grid-medium {
+  margin-left: -25px;
+}
+.opg-grid-medium > * {
+  padding-left: 25px;
+}
+/* Vertical */
+.opg-grid-medium + .opg-grid-medium,
+.opg-grid-medium > .opg-grid-margin,
+.opg-grid-medium > * > .opg-panel + .opg-panel {
+  margin-top: 25px;
+}
+/* Modifier: `opg-grid-divider`
+ ========================================================================== */
+/*
+ * Horizontal divider
+ * Only works with the default gutter. Does not work with gutter collapse, small or large.
+ * Does not work with `opg-push-*`, `opg-pull-*` and not if the columns float into the next row.
+ */
+.opg-grid-divider:not(:empty) {
+  margin-left: -25px;
+  margin-right: -25px;
+}
+.opg-grid-divider > * {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.opg-grid-divider > [class*='opg-width-1-']:not(.opg-width-1-1):nth-child(n+2),
+.opg-grid-divider > [class*='opg-width-2-']:nth-child(n+2),
+.opg-grid-divider > [class*='opg-width-3-']:nth-child(n+2),
+.opg-grid-divider > [class*='opg-width-4-']:nth-child(n+2),
+.opg-grid-divider > [class*='opg-width-5-']:nth-child(n+2),
+.opg-grid-divider > [class*='opg-width-6-']:nth-child(n+2),
+.opg-grid-divider > [class*='opg-width-7-']:nth-child(n+2),
+.opg-grid-divider > [class*='opg-width-8-']:nth-child(n+2),
+.opg-grid-divider > [class*='opg-width-9-']:nth-child(n+2) {
+  border-left: 1px solid #dddddd;
+}
+/* Tablet and bigger */
+@media (min-width: 768px) {
+  .opg-grid-divider > [class*='opg-width-medium-']:not(.opg-width-medium-1-1):nth-child(n+2) {
+    border-left: 1px solid #dddddd;
+  }
+}
+/* Desktop and bigger */
+@media (min-width: 960px) {
+  .opg-grid-divider > [class*='opg-width-large-']:not(.opg-width-large-1-1):nth-child(n+2) {
+    border-left: 1px solid #dddddd;
+  }
+}
+/* Large screen and bigger */
+@media (min-width: 1220px) {
+  /*
+     * Large gutter
+     */
+  .opg-grid-divider:not(:empty) {
+    margin-left: -35px;
+    margin-right: -35px;
+  }
+  .opg-grid-divider > * {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  .opg-grid-divider:empty {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+}
+/*
+ * Vertical divider
+ */
+.opg-grid-divider:empty {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-top: 1px solid #dddddd;
+}
+/* Match panels in grids
+ ========================================================================== */
+.opg-grid-match > * {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/*
+ * 1. Behave like a block element
+ */
+.opg-grid-match > * > * {
+  -ms-flex: none;
+  -webkit-flex: none;
+  flex: none;
+  /* 1 */
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+/* Even grid cell widths
+ ========================================================================== */
+[class*='opg-grid-width'] > * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+.opg-grid-width-1-2 > * {
+  width: 50%;
+}
+.opg-grid-width-1-3 > * {
+  width: 33.333%;
+}
+.opg-grid-width-1-4 > * {
+  width: 25%;
+}
+.opg-grid-width-1-5 > * {
+  width: 20%;
+}
+.opg-grid-width-1-6 > * {
+  width: 16.666%;
+}
+.opg-grid-width-1-10 > * {
+  width: 10%;
+}
+/* Phone landscape and bigger */
+@media (min-width: 480px) {
+  .opg-grid-width-small-1-2 > * {
+    width: 50%;
+  }
+  .opg-grid-width-small-1-3 > * {
+    width: 33.333%;
+  }
+  .opg-grid-width-small-1-4 > * {
+    width: 25%;
+  }
+  .opg-grid-width-small-1-5 > * {
+    width: 20%;
+  }
+  .opg-grid-width-small-1-6 > * {
+    width: 16.666%;
+  }
+  .opg-grid-width-small-1-10 > * {
+    width: 10%;
+  }
+}
+/* Tablet and bigger */
+@media (min-width: 768px) {
+  .opg-grid-width-medium-1-2 > * {
+    width: 50%;
+  }
+  .opg-grid-width-medium-1-3 > * {
+    width: 33.333%;
+  }
+  .opg-grid-width-medium-1-4 > * {
+    width: 25%;
+  }
+  .opg-grid-width-medium-1-5 > * {
+    width: 20%;
+  }
+  .opg-grid-width-medium-1-6 > * {
+    width: 16.666%;
+  }
+  .opg-grid-width-medium-1-10 > * {
+    width: 10%;
+  }
+}
+/* Desktop and bigger */
+@media (min-width: 960px) {
+  .opg-grid-width-large-1-2 > * {
+    width: 50%;
+  }
+  .opg-grid-width-large-1-3 > * {
+    width: 33.333%;
+  }
+  .opg-grid-width-large-1-4 > * {
+    width: 25%;
+  }
+  .opg-grid-width-large-1-5 > * {
+    width: 20%;
+  }
+  .opg-grid-width-large-1-6 > * {
+    width: 16.666%;
+  }
+  .opg-grid-width-large-1-10 > * {
+    width: 10%;
+  }
+}
+/* Large screen and bigger */
+@media (min-width: 1220px) {
+  .opg-grid-width-xlarge-1-2 > * {
+    width: 50%;
+  }
+  .opg-grid-width-xlarge-1-3 > * {
+    width: 33.333%;
+  }
+  .opg-grid-width-xlarge-1-4 > * {
+    width: 25%;
+  }
+  .opg-grid-width-xlarge-1-5 > * {
+    width: 20%;
+  }
+  .opg-grid-width-xlarge-1-6 > * {
+    width: 16.666%;
+  }
+  .opg-grid-width-xlarge-1-10 > * {
+    width: 10%;
+  }
+}
+/* Sub-objects: `opg-width-*`
+ ========================================================================== */
+[class*='opg-width'] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+/*
+ * Widths
+ */
+/* Whole */
+.opg-width-1-1 {
+  width: 100%;
+}
+/* Halves */
+.opg-width-1-2,
+.opg-width-2-4,
+.opg-width-3-6,
+.opg-width-5-10 {
+  width: 50%;
+}
+/* Thirds */
+.opg-width-1-3,
+.opg-width-2-6 {
+  width: 33.333%;
+}
+.opg-width-2-3,
+.opg-width-4-6 {
+  width: 66.666%;
+}
+/* Quarters */
+.opg-width-1-4 {
+  width: 25%;
+}
+.opg-width-3-4 {
+  width: 75%;
+}
+/* Fifths */
+.opg-width-1-5,
+.opg-width-2-10 {
+  width: 20%;
+}
+.opg-width-2-5,
+.opg-width-4-10 {
+  width: 40%;
+}
+.opg-width-3-5,
+.opg-width-6-10 {
+  width: 60%;
+}
+.opg-width-4-5,
+.opg-width-8-10 {
+  width: 80%;
+}
+/* Sixths */
+.opg-width-1-6 {
+  width: 16.666%;
+}
+.opg-width-5-6 {
+  width: 83.333%;
+}
+/* Tenths */
+.opg-width-1-10 {
+  width: 10%;
+}
+.opg-width-3-10 {
+  width: 30%;
+}
+.opg-width-7-10 {
+  width: 70%;
+}
+.opg-width-9-10 {
+  width: 90%;
+}
+/* Phone landscape and bigger */
+@media (min-width: 480px) {
+  /* Whole */
+  .opg-width-small-1-1 {
+    width: 100%;
+  }
+  /* Halves */
+  .opg-width-small-1-2,
+  .opg-width-small-2-4,
+  .opg-width-small-3-6,
+  .opg-width-small-5-10 {
+    width: 50%;
+  }
+  /* Thirds */
+  .opg-width-small-1-3,
+  .opg-width-small-2-6 {
+    width: 33.333%;
+  }
+  .opg-width-small-2-3,
+  .opg-width-small-4-6 {
+    width: 66.666%;
+  }
+  /* Quarters */
+  .opg-width-small-1-4 {
+    width: 25%;
+  }
+  .opg-width-small-3-4 {
+    width: 75%;
+  }
+  /* Fifths */
+  .opg-width-small-1-5,
+  .opg-width-small-2-10 {
+    width: 20%;
+  }
+  .opg-width-small-2-5,
+  .opg-width-small-4-10 {
+    width: 40%;
+  }
+  .opg-width-small-3-5,
+  .opg-width-small-6-10 {
+    width: 60%;
+  }
+  .opg-width-small-4-5,
+  .opg-width-small-8-10 {
+    width: 80%;
+  }
+  /* Sixths */
+  .opg-width-small-1-6 {
+    width: 16.666%;
+  }
+  .opg-width-small-5-6 {
+    width: 83.333%;
+  }
+  /* Tenths */
+  .opg-width-small-1-10 {
+    width: 10%;
+  }
+  .opg-width-small-3-10 {
+    width: 30%;
+  }
+  .opg-width-small-7-10 {
+    width: 70%;
+  }
+  .opg-width-small-9-10 {
+    width: 90%;
+  }
+}
+/* Tablet and bigger */
+@media (min-width: 768px) {
+  /* Whole */
+  .opg-width-medium-1-1 {
+    width: 100%;
+  }
+  /* Halves */
+  .opg-width-medium-1-2,
+  .opg-width-medium-2-4,
+  .opg-width-medium-3-6,
+  .opg-width-medium-5-10 {
+    width: 50%;
+  }
+  /* Thirds */
+  .opg-width-medium-1-3,
+  .opg-width-medium-2-6 {
+    width: 33.333%;
+  }
+  .opg-width-medium-2-3,
+  .opg-width-medium-4-6 {
+    width: 66.666%;
+  }
+  /* Quarters */
+  .opg-width-medium-1-4 {
+    width: 25%;
+  }
+  .opg-width-medium-3-4 {
+    width: 75%;
+  }
+  /* Fifths */
+  .opg-width-medium-1-5,
+  .opg-width-medium-2-10 {
+    width: 20%;
+  }
+  .opg-width-medium-2-5,
+  .opg-width-medium-4-10 {
+    width: 40%;
+  }
+  .opg-width-medium-3-5,
+  .opg-width-medium-6-10 {
+    width: 60%;
+  }
+  .opg-width-medium-4-5,
+  .opg-width-medium-8-10 {
+    width: 80%;
+  }
+  /* Sixths */
+  .opg-width-medium-1-6 {
+    width: 16.666%;
+  }
+  .opg-width-medium-5-6 {
+    width: 83.333%;
+  }
+  /* Tenths */
+  .opg-width-medium-1-10 {
+    width: 10%;
+  }
+  .opg-width-medium-3-10 {
+    width: 30%;
+  }
+  .opg-width-medium-7-10 {
+    width: 70%;
+  }
+  .opg-width-medium-9-10 {
+    width: 90%;
+  }
+}
+/* Desktop and bigger */
+@media (min-width: 960px) {
+  /* Whole */
+  .opg-width-large-1-1 {
+    width: 100%;
+  }
+  /* Halves */
+  .opg-width-large-1-2,
+  .opg-width-large-2-4,
+  .opg-width-large-3-6,
+  .opg-width-large-5-10 {
+    width: 50%;
+  }
+  /* Thirds */
+  .opg-width-large-1-3,
+  .opg-width-large-2-6 {
+    width: 33.333%;
+  }
+  .opg-width-large-2-3,
+  .opg-width-large-4-6 {
+    width: 66.666%;
+  }
+  /* Quarters */
+  .opg-width-large-1-4 {
+    width: 25%;
+  }
+  .opg-width-large-3-4 {
+    width: 75%;
+  }
+  /* Fifths */
+  .opg-width-large-1-5,
+  .opg-width-large-2-10 {
+    width: 20%;
+  }
+  .opg-width-large-2-5,
+  .opg-width-large-4-10 {
+    width: 40%;
+  }
+  .opg-width-large-3-5,
+  .opg-width-large-6-10 {
+    width: 60%;
+  }
+  .opg-width-large-4-5,
+  .opg-width-large-8-10 {
+    width: 80%;
+  }
+  /* Sixths */
+  .opg-width-large-1-6 {
+    width: 16.666%;
+  }
+  .opg-width-large-5-6 {
+    width: 83.333%;
+  }
+  /* Tenths */
+  .opg-width-large-1-10 {
+    width: 10%;
+  }
+  .opg-width-large-3-10 {
+    width: 30%;
+  }
+  .opg-width-large-7-10 {
+    width: 70%;
+  }
+  .opg-width-large-9-10 {
+    width: 90%;
+  }
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("fonts/fontawesome-webfont.eot");
+  src: url("fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff2") format('woff2'), url("fonts/fontawesome-webfont.woff") format("woff"), url("fonts/fontawesome-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*
+ * 1. Allow margin
+ * 2. Prevent inherit font style
+ * 4. Correct line-height
+ * 5. Better font rendering
+ * 6. Remove `text-decoration` for anchors
+ */
+[class*='opg-icon-'] {
+  font-family: FontAwesome;
+  /* 1 */
+  display: inline-block;
+  /* 2 */
+  font-weight: normal;
+  font-style: normal;
+  /* 4 */
+  line-height: 1;
+  /* 5 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* 6 */
+[class*='opg-icon-'],
+[class*='opg-icon-']:hover,
+[class*='opg-icon-']:focus {
+  text-decoration: none;
+}
+/* Size modifiers
+ ========================================================================== */
+.opg-icon-small:before {
+  font-size: 150%;
+  vertical-align: -10%;
+}
+.opg-icon-medium:before {
+  font-size: 200%;
+  vertical-align: -16%;
+}
+.opg-icon-large:before {
+  font-size: 250%;
+  vertical-align: -22%;
+}
+/* Modifier: `opg-icon-spin`
+ ========================================================================== */
+.opg-icon-spin {
+  display: inline-block;
+  -webkit-animation: opg-rotate 2s infinite linear;
+  animation: opg-rotate 2s infinite linear;
+}
+/* Modifier: `opg-icon-hover`
+ ========================================================================== */
+.opg-icon-hover {
+  color: #999999;
+}
+/*
+ * Hover
+ */
+.opg-icon-hover:hover {
+  color: #444444;
+}
+/* Modifier: `opg-icon-button`
+ ========================================================================== */
+.opg-icon-button {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background: #eeeeee;
+  line-height: 35px;
+  color: #444444;
+  font-size: 18px;
+  text-align: center;
+}
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ * 2. Remove default focus style
+ */
+.opg-icon-button:hover,
+.opg-icon-button:focus {
+  background-color: #f5f5f5;
+  color: #444444;
+  /* 2 */
+  outline: none;
+}
+/* Active */
+.opg-icon-button:active {
+  background-color: #dddddd;
+  color: #444444;
+}
+/* Icon mapping
+ ========================================================================== */
+.opg-icon-glass:before {
+  content: "\f000";
+}
+.opg-icon-music:before {
+  content: "\f001";
+}
+.opg-icon-search:before {
+  content: "\f002";
+}
+.opg-icon-envelope-o:before {
+  content: "\f003";
+}
+.opg-icon-heart:before {
+  content: "\f004";
+}
+.opg-icon-star:before {
+  content: "\f005";
+}
+.opg-icon-star-o:before {
+  content: "\f006";
+}
+.opg-icon-user:before {
+  content: "\f007";
+}
+.opg-icon-film:before {
+  content: "\f008";
+}
+.opg-icon-th-large:before {
+  content: "\f009";
+}
+.opg-icon-th:before {
+  content: "\f00a";
+}
+.opg-icon-th-list:before {
+  content: "\f00b";
+}
+.opg-icon-check:before {
+  content: "\f00c";
+}
+.opg-icon-remove:before,
+.opg-icon-close:before,
+.opg-icon-times:before {
+  content: "\f00d";
+}
+.opg-icon-search-plus:before {
+  content: "\f00e";
+}
+.opg-icon-search-minus:before {
+  content: "\f010";
+}
+.opg-icon-power-off:before {
+  content: "\f011";
+}
+.opg-icon-signal:before {
+  content: "\f012";
+}
+.opg-icon-gear:before,
+.opg-icon-cog:before {
+  content: "\f013";
+}
+.opg-icon-trash-o:before {
+  content: "\f014";
+}
+.opg-icon-home:before {
+  content: "\f015";
+}
+.opg-icon-file-o:before {
+  content: "\f016";
+}
+.opg-icon-clock-o:before {
+  content: "\f017";
+}
+.opg-icon-road:before {
+  content: "\f018";
+}
+.opg-icon-download:before {
+  content: "\f019";
+}
+.opg-icon-arrow-circle-o-down:before {
+  content: "\f01a";
+}
+.opg-icon-arrow-circle-o-up:before {
+  content: "\f01b";
+}
+.opg-icon-inbox:before {
+  content: "\f01c";
+}
+.opg-icon-play-circle-o:before {
+  content: "\f01d";
+}
+.opg-icon-rotate-right:before,
+.opg-icon-repeat:before {
+  content: "\f01e";
+}
+.opg-icon-refresh:before {
+  content: "\f021";
+}
+.opg-icon-list-alt:before {
+  content: "\f022";
+}
+.opg-icon-lock:before {
+  content: "\f023";
+}
+.opg-icon-flag:before {
+  content: "\f024";
+}
+.opg-icon-headphones:before {
+  content: "\f025";
+}
+.opg-icon-volume-off:before {
+  content: "\f026";
+}
+.opg-icon-volume-down:before {
+  content: "\f027";
+}
+.opg-icon-volume-up:before {
+  content: "\f028";
+}
+.opg-icon-qrcode:before {
+  content: "\f029";
+}
+.opg-icon-barcode:before {
+  content: "\f02a";
+}
+.opg-icon-tag:before {
+  content: "\f02b";
+}
+.opg-icon-tags:before {
+  content: "\f02c";
+}
+.opg-icon-book:before {
+  content: "\f02d";
+}
+.opg-icon-bookmark:before {
+  content: "\f02e";
+}
+.opg-icon-print:before {
+  content: "\f02f";
+}
+.opg-icon-camera:before {
+  content: "\f030";
+}
+.opg-icon-font:before {
+  content: "\f031";
+}
+.opg-icon-bold:before {
+  content: "\f032";
+}
+.opg-icon-italic:before {
+  content: "\f033";
+}
+.opg-icon-text-height:before {
+  content: "\f034";
+}
+.opg-icon-text-width:before {
+  content: "\f035";
+}
+.opg-icon-align-left:before {
+  content: "\f036";
+}
+.opg-icon-align-center:before {
+  content: "\f037";
+}
+.opg-icon-align-right:before {
+  content: "\f038";
+}
+.opg-icon-align-justify:before {
+  content: "\f039";
+}
+.opg-icon-list:before {
+  content: "\f03a";
+}
+.opg-icon-dedent:before,
+.opg-icon-outdent:before {
+  content: "\f03b";
+}
+.opg-icon-indent:before {
+  content: "\f03c";
+}
+.opg-icon-video-camera:before {
+  content: "\f03d";
+}
+.opg-icon-photo:before,
+.opg-icon-image:before,
+.opg-icon-picture-o:before {
+  content: "\f03e";
+}
+.opg-icon-pencil:before {
+  content: "\f040";
+}
+.opg-icon-map-marker:before {
+  content: "\f041";
+}
+.opg-icon-adjust:before {
+  content: "\f042";
+}
+.opg-icon-tint:before {
+  content: "\f043";
+}
+.opg-icon-edit:before,
+.opg-icon-pencil-square-o:before {
+  content: "\f044";
+}
+.opg-icon-share-square-o:before {
+  content: "\f045";
+}
+.opg-icon-check-square-o:before {
+  content: "\f046";
+}
+.opg-icon-arrows:before {
+  content: "\f047";
+}
+.opg-icon-step-backward:before {
+  content: "\f048";
+}
+.opg-icon-fast-backward:before {
+  content: "\f049";
+}
+.opg-icon-backward:before {
+  content: "\f04a";
+}
+.opg-icon-play:before {
+  content: "\f04b";
+}
+.opg-icon-pause:before {
+  content: "\f04c";
+}
+.opg-icon-stop:before {
+  content: "\f04d";
+}
+.opg-icon-forward:before {
+  content: "\f04e";
+}
+.opg-icon-fast-forward:before {
+  content: "\f050";
+}
+.opg-icon-step-forward:before {
+  content: "\f051";
+}
+.opg-icon-eject:before {
+  content: "\f052";
+}
+.opg-icon-chevron-left:before {
+  content: "\f053";
+}
+.opg-icon-chevron-right:before {
+  content: "\f054";
+}
+.opg-icon-plus-circle:before {
+  content: "\f055";
+}
+.opg-icon-minus-circle:before {
+  content: "\f056";
+}
+.opg-icon-times-circle:before {
+  content: "\f057";
+}
+.opg-icon-check-circle:before {
+  content: "\f058";
+}
+.opg-icon-question-circle:before {
+  content: "\f059";
+}
+.opg-icon-info-circle:before {
+  content: "\f05a";
+}
+.opg-icon-crosshairs:before {
+  content: "\f05b";
+}
+.opg-icon-times-circle-o:before {
+  content: "\f05c";
+}
+.opg-icon-check-circle-o:before {
+  content: "\f05d";
+}
+.opg-icon-ban:before {
+  content: "\f05e";
+}
+.opg-icon-arrow-left:before {
+  content: "\f060";
+}
+.opg-icon-arrow-right:before {
+  content: "\f061";
+}
+.opg-icon-arrow-up:before {
+  content: "\f062";
+}
+.opg-icon-arrow-down:before {
+  content: "\f063";
+}
+.opg-icon-mail-forward:before,
+.opg-icon-share:before {
+  content: "\f064";
+}
+.opg-icon-expand:before {
+  content: "\f065";
+}
+.opg-icon-compress:before {
+  content: "\f066";
+}
+.opg-icon-plus:before {
+  content: "\f067";
+}
+.opg-icon-minus:before {
+  content: "\f068";
+}
+.opg-icon-asterisk:before {
+  content: "\f069";
+}
+.opg-icon-exclamation-circle:before {
+  content: "\f06a";
+}
+.opg-icon-gift:before {
+  content: "\f06b";
+}
+.opg-icon-leaf:before {
+  content: "\f06c";
+}
+.opg-icon-fire:before {
+  content: "\f06d";
+}
+.opg-icon-eye:before {
+  content: "\f06e";
+}
+.opg-icon-eye-slash:before {
+  content: "\f070";
+}
+.opg-icon-warning:before,
+.opg-icon-exclamation-triangle:before {
+  content: "\f071";
+}
+.opg-icon-plane:before {
+  content: "\f072";
+}
+.opg-icon-calendar:before {
+  content: "\f073";
+}
+.opg-icon-random:before {
+  content: "\f074";
+}
+.opg-icon-comment:before {
+  content: "\f075";
+}
+.opg-icon-magnet:before {
+  content: "\f076";
+}
+.opg-icon-chevron-up:before {
+  content: "\f077";
+}
+.opg-icon-chevron-down:before {
+  content: "\f078";
+}
+.opg-icon-retweet:before {
+  content: "\f079";
+}
+.opg-icon-shopping-cart:before {
+  content: "\f07a";
+}
+.opg-icon-folder:before {
+  content: "\f07b";
+}
+.opg-icon-folder-open:before {
+  content: "\f07c";
+}
+.opg-icon-arrows-v:before {
+  content: "\f07d";
+}
+.opg-icon-arrows-h:before {
+  content: "\f07e";
+}
+.opg-icon-bar-chart-o:before,
+.opg-icon-bar-chart:before {
+  content: "\f080";
+}
+.opg-icon-twitter-square:before {
+  content: "\f081";
+}
+.opg-icon-facebook-square:before {
+  content: "\f082";
+}
+.opg-icon-camera-retro:before {
+  content: "\f083";
+}
+.opg-icon-key:before {
+  content: "\f084";
+}
+.opg-icon-gears:before,
+.opg-icon-cogs:before {
+  content: "\f085";
+}
+.opg-icon-comments:before {
+  content: "\f086";
+}
+.opg-icon-thumbs-o-up:before {
+  content: "\f087";
+}
+.opg-icon-thumbs-o-down:before {
+  content: "\f088";
+}
+.opg-icon-star-half:before {
+  content: "\f089";
+}
+.opg-icon-heart-o:before {
+  content: "\f08a";
+}
+.opg-icon-sign-out:before {
+  content: "\f08b";
+}
+.opg-icon-linkedin-square:before {
+  content: "\f08c";
+}
+.opg-icon-thumb-tack:before {
+  content: "\f08d";
+}
+.opg-icon-external-link:before {
+  content: "\f08e";
+}
+.opg-icon-sign-in:before {
+  content: "\f090";
+}
+.opg-icon-trophy:before {
+  content: "\f091";
+}
+.opg-icon-github-square:before {
+  content: "\f092";
+}
+.opg-icon-upload:before {
+  content: "\f093";
+}
+.opg-icon-lemon-o:before {
+  content: "\f094";
+}
+.opg-icon-phone:before {
+  content: "\f095";
+}
+.opg-icon-square-o:before {
+  content: "\f096";
+}
+.opg-icon-bookmark-o:before {
+  content: "\f097";
+}
+.opg-icon-phone-square:before {
+  content: "\f098";
+}
+.opg-icon-twitter:before {
+  content: "\f099";
+}
+.opg-icon-facebook-f:before,
+.opg-icon-facebook:before {
+  content: "\f09a";
+}
+.opg-icon-github:before {
+  content: "\f09b";
+}
+.opg-icon-unlock:before {
+  content: "\f09c";
+}
+.opg-icon-credit-card:before {
+  content: "\f09d";
+}
+.opg-icon-rss:before {
+  content: "\f09e";
+}
+.opg-icon-hdd-o:before {
+  content: "\f0a0";
+}
+.opg-icon-bullhorn:before {
+  content: "\f0a1";
+}
+.opg-icon-bell:before {
+  content: "\f0f3";
+}
+.opg-icon-certificate:before {
+  content: "\f0a3";
+}
+.opg-icon-hand-o-right:before {
+  content: "\f0a4";
+}
+.opg-icon-hand-o-left:before {
+  content: "\f0a5";
+}
+.opg-icon-hand-o-up:before {
+  content: "\f0a6";
+}
+.opg-icon-hand-o-down:before {
+  content: "\f0a7";
+}
+.opg-icon-arrow-circle-left:before {
+  content: "\f0a8";
+}
+.opg-icon-arrow-circle-right:before {
+  content: "\f0a9";
+}
+.opg-icon-arrow-circle-up:before {
+  content: "\f0aa";
+}
+.opg-icon-arrow-circle-down:before {
+  content: "\f0ab";
+}
+.opg-icon-globe:before {
+  content: "\f0ac";
+}
+.opg-icon-wrench:before {
+  content: "\f0ad";
+}
+.opg-icon-tasks:before {
+  content: "\f0ae";
+}
+.opg-icon-filter:before {
+  content: "\f0b0";
+}
+.opg-icon-briefcase:before {
+  content: "\f0b1";
+}
+.opg-icon-arrows-alt:before {
+  content: "\f0b2";
+}
+.opg-icon-group:before,
+.opg-icon-users:before {
+  content: "\f0c0";
+}
+.opg-icon-chain:before,
+.opg-icon-link:before {
+  content: "\f0c1";
+}
+.opg-icon-cloud:before {
+  content: "\f0c2";
+}
+.opg-icon-flask:before {
+  content: "\f0c3";
+}
+.opg-icon-cut:before,
+.opg-icon-scissors:before {
+  content: "\f0c4";
+}
+.opg-icon-copy:before,
+.opg-icon-files-o:before {
+  content: "\f0c5";
+}
+.opg-icon-paperclip:before {
+  content: "\f0c6";
+}
+.opg-icon-save:before,
+.opg-icon-floppy-o:before {
+  content: "\f0c7";
+}
+.opg-icon-square:before {
+  content: "\f0c8";
+}
+.opg-icon-navicon:before,
+.opg-icon-reorder:before,
+.opg-icon-bars:before {
+  content: "\f0c9";
+}
+.opg-icon-list-ul:before {
+  content: "\f0ca";
+}
+.opg-icon-list-ol:before {
+  content: "\f0cb";
+}
+.opg-icon-strikethrough:before {
+  content: "\f0cc";
+}
+.opg-icon-underline:before {
+  content: "\f0cd";
+}
+.opg-icon-table:before {
+  content: "\f0ce";
+}
+.opg-icon-magic:before {
+  content: "\f0d0";
+}
+.opg-icon-truck:before {
+  content: "\f0d1";
+}
+.opg-icon-pinterest:before {
+  content: "\f0d2";
+}
+.opg-icon-pinterest-square:before {
+  content: "\f0d3";
+}
+.opg-icon-google-plus-square:before {
+  content: "\f0d4";
+}
+.opg-icon-google-plus:before {
+  content: "\f0d5";
+}
+.opg-icon-money:before {
+  content: "\f0d6";
+}
+.opg-icon-caret-down:before {
+  content: "\f0d7";
+}
+.opg-icon-caret-up:before {
+  content: "\f0d8";
+}
+.opg-icon-caret-left:before {
+  content: "\f0d9";
+}
+.opg-icon-caret-right:before {
+  content: "\f0da";
+}
+.opg-icon-columns:before {
+  content: "\f0db";
+}
+.opg-icon-unsorted:before,
+.opg-icon-sort:before {
+  content: "\f0dc";
+}
+.opg-icon-sort-down:before,
+.opg-icon-sort-desc:before {
+  content: "\f0dd";
+}
+.opg-icon-sort-up:before,
+.opg-icon-sort-asc:before {
+  content: "\f0de";
+}
+.opg-icon-envelope:before {
+  content: "\f0e0";
+}
+.opg-icon-linkedin:before {
+  content: "\f0e1";
+}
+.opg-icon-rotate-left:before,
+.opg-icon-undo:before {
+  content: "\f0e2";
+}
+.opg-icon-legal:before,
+.opg-icon-gavel:before {
+  content: "\f0e3";
+}
+.opg-icon-dashboard:before,
+.opg-icon-tachometer:before {
+  content: "\f0e4";
+}
+.opg-icon-comment-o:before {
+  content: "\f0e5";
+}
+.opg-icon-comments-o:before {
+  content: "\f0e6";
+}
+.opg-icon-flash:before,
+.opg-icon-bolt:before {
+  content: "\f0e7";
+}
+.opg-icon-sitemap:before {
+  content: "\f0e8";
+}
+.opg-icon-umbrella:before {
+  content: "\f0e9";
+}
+.opg-icon-paste:before,
+.opg-icon-clipboard:before {
+  content: "\f0ea";
+}
+.opg-icon-lightbulb-o:before {
+  content: "\f0eb";
+}
+.opg-icon-exchange:before {
+  content: "\f0ec";
+}
+.opg-icon-cloud-download:before {
+  content: "\f0ed";
+}
+.opg-icon-cloud-upload:before {
+  content: "\f0ee";
+}
+.opg-icon-user-md:before {
+  content: "\f0f0";
+}
+.opg-icon-stethoscope:before {
+  content: "\f0f1";
+}
+.opg-icon-suitcase:before {
+  content: "\f0f2";
+}
+.opg-icon-bell-o:before {
+  content: "\f0a2";
+}
+.opg-icon-coffee:before {
+  content: "\f0f4";
+}
+.opg-icon-cutlery:before {
+  content: "\f0f5";
+}
+.opg-icon-file-text-o:before {
+  content: "\f0f6";
+}
+.opg-icon-building-o:before {
+  content: "\f0f7";
+}
+.opg-icon-hospital-o:before {
+  content: "\f0f8";
+}
+.opg-icon-ambulance:before {
+  content: "\f0f9";
+}
+.opg-icon-medkit:before {
+  content: "\f0fa";
+}
+.opg-icon-fighter-jet:before {
+  content: "\f0fb";
+}
+.opg-icon-beer:before {
+  content: "\f0fc";
+}
+.opg-icon-h-square:before {
+  content: "\f0fd";
+}
+.opg-icon-plus-square:before {
+  content: "\f0fe";
+}
+.opg-icon-angle-double-left:before {
+  content: "\f100";
+}
+.opg-icon-angle-double-right:before {
+  content: "\f101";
+}
+.opg-icon-angle-double-up:before {
+  content: "\f102";
+}
+.opg-icon-angle-double-down:before {
+  content: "\f103";
+}
+.opg-icon-angle-left:before {
+  content: "\f104";
+}
+.opg-icon-angle-right:before {
+  content: "\f105";
+}
+.opg-icon-angle-up:before {
+  content: "\f106";
+}
+.opg-icon-angle-down:before {
+  content: "\f107";
+}
+.opg-icon-desktop:before {
+  content: "\f108";
+}
+.opg-icon-laptop:before {
+  content: "\f109";
+}
+.opg-icon-tablet:before {
+  content: "\f10a";
+}
+.opg-icon-mobile-phone:before,
+.opg-icon-mobile:before {
+  content: "\f10b";
+}
+.opg-icon-circle-o:before {
+  content: "\f10c";
+}
+.opg-icon-quote-left:before {
+  content: "\f10d";
+}
+.opg-icon-quote-right:before {
+  content: "\f10e";
+}
+.opg-icon-spinner:before {
+  content: "\f110";
+}
+.opg-icon-circle:before {
+  content: "\f111";
+}
+.opg-icon-mail-reply:before,
+.opg-icon-reply:before {
+  content: "\f112";
+}
+.opg-icon-github-alt:before {
+  content: "\f113";
+}
+.opg-icon-folder-o:before {
+  content: "\f114";
+}
+.opg-icon-folder-open-o:before {
+  content: "\f115";
+}
+.opg-icon-smile-o:before {
+  content: "\f118";
+}
+.opg-icon-frown-o:before {
+  content: "\f119";
+}
+.opg-icon-meh-o:before {
+  content: "\f11a";
+}
+.opg-icon-gamepad:before {
+  content: "\f11b";
+}
+.opg-icon-keyboard-o:before {
+  content: "\f11c";
+}
+.opg-icon-flag-o:before {
+  content: "\f11d";
+}
+.opg-icon-flag-checkered:before {
+  content: "\f11e";
+}
+.opg-icon-terminal:before {
+  content: "\f120";
+}
+.opg-icon-code:before {
+  content: "\f121";
+}
+.opg-icon-mail-reply-all:before,
+.opg-icon-reply-all:before {
+  content: "\f122";
+}
+.opg-icon-star-half-empty:before,
+.opg-icon-star-half-full:before,
+.opg-icon-star-half-o:before {
+  content: "\f123";
+}
+.opg-icon-location-arrow:before {
+  content: "\f124";
+}
+.opg-icon-crop:before {
+  content: "\f125";
+}
+.opg-icon-code-fork:before {
+  content: "\f126";
+}
+.opg-icon-unlink:before,
+.opg-icon-chain-broken:before {
+  content: "\f127";
+}
+.opg-icon-question:before {
+  content: "\f128";
+}
+.opg-icon-info:before {
+  content: "\f129";
+}
+.opg-icon-exclamation:before {
+  content: "\f12a";
+}
+.opg-icon-superscript:before {
+  content: "\f12b";
+}
+.opg-icon-subscript:before {
+  content: "\f12c";
+}
+.opg-icon-eraser:before {
+  content: "\f12d";
+}
+.opg-icon-puzzle-piece:before {
+  content: "\f12e";
+}
+.opg-icon-microphone:before {
+  content: "\f130";
+}
+.opg-icon-microphone-slash:before {
+  content: "\f131";
+}
+.opg-icon-shield:before {
+  content: "\f132";
+}
+.opg-icon-calendar-o:before {
+  content: "\f133";
+}
+.opg-icon-fire-extinguisher:before {
+  content: "\f134";
+}
+.opg-icon-rocket:before {
+  content: "\f135";
+}
+.opg-icon-maxcdn:before {
+  content: "\f136";
+}
+.opg-icon-chevron-circle-left:before {
+  content: "\f137";
+}
+.opg-icon-chevron-circle-right:before {
+  content: "\f138";
+}
+.opg-icon-chevron-circle-up:before {
+  content: "\f139";
+}
+.opg-icon-chevron-circle-down:before {
+  content: "\f13a";
+}
+.opg-icon-html5:before {
+  content: "\f13b";
+}
+.opg-icon-css3:before {
+  content: "\f13c";
+}
+.opg-icon-anchor:before {
+  content: "\f13d";
+}
+.opg-icon-unlock-alt:before {
+  content: "\f13e";
+}
+.opg-icon-bullseye:before {
+  content: "\f140";
+}
+.opg-icon-ellipsis-h:before {
+  content: "\f141";
+}
+.opg-icon-ellipsis-v:before {
+  content: "\f142";
+}
+.opg-icon-rss-square:before {
+  content: "\f143";
+}
+.opg-icon-play-circle:before {
+  content: "\f144";
+}
+.opg-icon-ticket:before {
+  content: "\f145";
+}
+.opg-icon-minus-square:before {
+  content: "\f146";
+}
+.opg-icon-minus-square-o:before {
+  content: "\f147";
+}
+.opg-icon-level-up:before {
+  content: "\f148";
+}
+.opg-icon-level-down:before {
+  content: "\f149";
+}
+.opg-icon-check-square:before {
+  content: "\f14a";
+}
+.opg-icon-pencil-square:before {
+  content: "\f14b";
+}
+.opg-icon-external-link-square:before {
+  content: "\f14c";
+}
+.opg-icon-share-square:before {
+  content: "\f14d";
+}
+.opg-icon-compass:before {
+  content: "\f14e";
+}
+.opg-icon-toggle-down:before,
+.opg-icon-caret-square-o-down:before {
+  content: "\f150";
+}
+.opg-icon-toggle-up:before,
+.opg-icon-caret-square-o-up:before {
+  content: "\f151";
+}
+.opg-icon-toggle-right:before,
+.opg-icon-caret-square-o-right:before {
+  content: "\f152";
+}
+.opg-icon-euro:before,
+.opg-icon-eur:before {
+  content: "\f153";
+}
+.opg-icon-gbp:before {
+  content: "\f154";
+}
+.opg-icon-dollar:before,
+.opg-icon-usd:before {
+  content: "\f155";
+}
+.opg-icon-rupee:before,
+.opg-icon-inr:before {
+  content: "\f156";
+}
+.opg-icon-cny:before,
+.opg-icon-rmb:before,
+.opg-icon-yen:before,
+.opg-icon-jpy:before {
+  content: "\f157";
+}
+.opg-icon-ruble:before,
+.opg-icon-rouble:before,
+.opg-icon-rub:before {
+  content: "\f158";
+}
+.opg-icon-won:before,
+.opg-icon-krw:before {
+  content: "\f159";
+}
+.opg-icon-bitcoin:before,
+.opg-icon-btc:before {
+  content: "\f15a";
+}
+.opg-icon-file:before {
+  content: "\f15b";
+}
+.opg-icon-file-text:before {
+  content: "\f15c";
+}
+.opg-icon-sort-alpha-asc:before {
+  content: "\f15d";
+}
+.opg-icon-sort-alpha-desc:before {
+  content: "\f15e";
+}
+.opg-icon-sort-amount-asc:before {
+  content: "\f160";
+}
+.opg-icon-sort-amount-desc:before {
+  content: "\f161";
+}
+.opg-icon-sort-numeric-asc:before {
+  content: "\f162";
+}
+.opg-icon-sort-numeric-desc:before {
+  content: "\f163";
+}
+.opg-icon-thumbs-up:before {
+  content: "\f164";
+}
+.opg-icon-thumbs-down:before {
+  content: "\f165";
+}
+.opg-icon-youtube-square:before {
+  content: "\f166";
+}
+.opg-icon-youtube:before {
+  content: "\f167";
+}
+.opg-icon-xing:before {
+  content: "\f168";
+}
+.opg-icon-xing-square:before {
+  content: "\f169";
+}
+.opg-icon-youtube-play:before {
+  content: "\f16a";
+}
+.opg-icon-dropbox:before {
+  content: "\f16b";
+}
+.opg-icon-stack-overflow:before {
+  content: "\f16c";
+}
+.opg-icon-instagram:before {
+  content: "\f16d";
+}
+.opg-icon-flickr:before {
+  content: "\f16e";
+}
+.opg-icon-adn:before {
+  content: "\f170";
+}
+.opg-icon-bitbucket:before {
+  content: "\f171";
+}
+.opg-icon-bitbucket-square:before {
+  content: "\f172";
+}
+.opg-icon-tumblr:before {
+  content: "\f173";
+}
+.opg-icon-tumblr-square:before {
+  content: "\f174";
+}
+.opg-icon-long-arrow-down:before {
+  content: "\f175";
+}
+.opg-icon-long-arrow-up:before {
+  content: "\f176";
+}
+.opg-icon-long-arrow-left:before {
+  content: "\f177";
+}
+.opg-icon-long-arrow-right:before {
+  content: "\f178";
+}
+.opg-icon-apple:before {
+  content: "\f179";
+}
+.opg-icon-windows:before {
+  content: "\f17a";
+}
+.opg-icon-android:before {
+  content: "\f17b";
+}
+.opg-icon-linux:before {
+  content: "\f17c";
+}
+.opg-icon-dribbble:before {
+  content: "\f17d";
+}
+.opg-icon-skype:before {
+  content: "\f17e";
+}
+.opg-icon-foursquare:before {
+  content: "\f180";
+}
+.opg-icon-trello:before {
+  content: "\f181";
+}
+.opg-icon-female:before {
+  content: "\f182";
+}
+.opg-icon-male:before {
+  content: "\f183";
+}
+.opg-icon-gittip:before,
+.opg-icon-gratipay:before {
+  content: "\f184";
+}
+.opg-icon-sun-o:before {
+  content: "\f185";
+}
+.opg-icon-moon-o:before {
+  content: "\f186";
+}
+.opg-icon-archive:before {
+  content: "\f187";
+}
+.opg-icon-bug:before {
+  content: "\f188";
+}
+.opg-icon-vk:before {
+  content: "\f189";
+}
+.opg-icon-weibo:before {
+  content: "\f18a";
+}
+.opg-icon-renren:before {
+  content: "\f18b";
+}
+.opg-icon-pagelines:before {
+  content: "\f18c";
+}
+.opg-icon-stack-exchange:before {
+  content: "\f18d";
+}
+.opg-icon-arrow-circle-o-right:before {
+  content: "\f18e";
+}
+.opg-icon-arrow-circle-o-left:before {
+  content: "\f190";
+}
+.opg-icon-toggle-left:before,
+.opg-icon-caret-square-o-left:before {
+  content: "\f191";
+}
+.opg-icon-dot-circle-o:before {
+  content: "\f192";
+}
+.opg-icon-wheelchair:before {
+  content: "\f193";
+}
+.opg-icon-vimeo-square:before {
+  content: "\f194";
+}
+.opg-icon-turkish-lira:before,
+.opg-icon-try:before {
+  content: "\f195";
+}
+.opg-icon-plus-square-o:before {
+  content: "\f196";
+}
+.opg-icon-space-shuttle:before {
+  content: "\f197";
+}
+.opg-icon-slack:before {
+  content: "\f198";
+}
+.opg-icon-envelope-square:before {
+  content: "\f199";
+}
+.opg-icon-wordpress:before {
+  content: "\f19a";
+}
+.opg-icon-openid:before {
+  content: "\f19b";
+}
+.opg-icon-institution:before,
+.opg-icon-bank:before,
+.opg-icon-university:before {
+  content: "\f19c";
+}
+.opg-icon-mortar-board:before,
+.opg-icon-graduation-cap:before {
+  content: "\f19d";
+}
+.opg-icon-yahoo:before {
+  content: "\f19e";
+}
+.opg-icon-google:before {
+  content: "\f1a0";
+}
+.opg-icon-reddit:before {
+  content: "\f1a1";
+}
+.opg-icon-reddit-square:before {
+  content: "\f1a2";
+}
+.opg-icon-stumbleupon-circle:before {
+  content: "\f1a3";
+}
+.opg-icon-stumbleupon:before {
+  content: "\f1a4";
+}
+.opg-icon-delicious:before {
+  content: "\f1a5";
+}
+.opg-icon-digg:before {
+  content: "\f1a6";
+}
+.opg-icon-pied-piper:before {
+  content: "\f1a7";
+}
+.opg-icon-pied-piper-alt:before {
+  content: "\f1a8";
+}
+.opg-icon-drupal:before {
+  content: "\f1a9";
+}
+.opg-icon-joomla:before {
+  content: "\f1aa";
+}
+.opg-icon-language:before {
+  content: "\f1ab";
+}
+.opg-icon-fax:before {
+  content: "\f1ac";
+}
+.opg-icon-building:before {
+  content: "\f1ad";
+}
+.opg-icon-child:before {
+  content: "\f1ae";
+}
+.opg-icon-paw:before {
+  content: "\f1b0";
+}
+.opg-icon-spoon:before {
+  content: "\f1b1";
+}
+.opg-icon-cube:before {
+  content: "\f1b2";
+}
+.opg-icon-cubes:before {
+  content: "\f1b3";
+}
+.opg-icon-behance:before {
+  content: "\f1b4";
+}
+.opg-icon-behance-square:before {
+  content: "\f1b5";
+}
+.opg-icon-steam:before {
+  content: "\f1b6";
+}
+.opg-icon-steam-square:before {
+  content: "\f1b7";
+}
+.opg-icon-recycle:before {
+  content: "\f1b8";
+}
+.opg-icon-automobile:before,
+.opg-icon-car:before {
+  content: "\f1b9";
+}
+.opg-icon-cab:before,
+.opg-icon-taxi:before {
+  content: "\f1ba";
+}
+.opg-icon-tree:before {
+  content: "\f1bb";
+}
+.opg-icon-spotify:before {
+  content: "\f1bc";
+}
+.opg-icon-deviantart:before {
+  content: "\f1bd";
+}
+.opg-icon-soundcloud:before {
+  content: "\f1be";
+}
+.opg-icon-database:before {
+  content: "\f1c0";
+}
+.opg-icon-file-pdf-o:before {
+  content: "\f1c1";
+}
+.opg-icon-file-word-o:before {
+  content: "\f1c2";
+}
+.opg-icon-file-excel-o:before {
+  content: "\f1c3";
+}
+.opg-icon-file-powerpoint-o:before {
+  content: "\f1c4";
+}
+.opg-icon-file-photo-o:before,
+.opg-icon-file-picture-o:before,
+.opg-icon-file-image-o:before {
+  content: "\f1c5";
+}
+.opg-icon-file-zip-o:before,
+.opg-icon-file-archive-o:before {
+  content: "\f1c6";
+}
+.opg-icon-file-sound-o:before,
+.opg-icon-file-audio-o:before {
+  content: "\f1c7";
+}
+.opg-icon-file-movie-o:before,
+.opg-icon-file-video-o:before {
+  content: "\f1c8";
+}
+.opg-icon-file-code-o:before {
+  content: "\f1c9";
+}
+.opg-icon-vine:before {
+  content: "\f1ca";
+}
+.opg-icon-codepen:before {
+  content: "\f1cb";
+}
+.opg-icon-jsfiddle:before {
+  content: "\f1cc";
+}
+.opg-icon-life-bouy:before,
+.opg-icon-life-buoy:before,
+.opg-icon-life-saver:before,
+.opg-icon-support:before,
+.opg-icon-life-ring:before {
+  content: "\f1cd";
+}
+.opg-icon-circle-o-notch:before {
+  content: "\f1ce";
+}
+.opg-icon-ra:before,
+.opg-icon-rebel:before {
+  content: "\f1d0";
+}
+.opg-icon-ge:before,
+.opg-icon-empire:before {
+  content: "\f1d1";
+}
+.opg-icon-git-square:before {
+  content: "\f1d2";
+}
+.opg-icon-git:before {
+  content: "\f1d3";
+}
+.opg-icon-hacker-news:before {
+  content: "\f1d4";
+}
+.opg-icon-tencent-weibo:before {
+  content: "\f1d5";
+}
+.opg-icon-qq:before {
+  content: "\f1d6";
+}
+.opg-icon-wechat:before,
+.opg-icon-weixin:before {
+  content: "\f1d7";
+}
+.opg-icon-send:before,
+.opg-icon-paper-plane:before {
+  content: "\f1d8";
+}
+.opg-icon-send-o:before,
+.opg-icon-paper-plane-o:before {
+  content: "\f1d9";
+}
+.opg-icon-history:before {
+  content: "\f1da";
+}
+.opg-icon-genderless:before,
+.opg-icon-circle-thin:before {
+  content: "\f1db";
+}
+.opg-icon-header:before {
+  content: "\f1dc";
+}
+.opg-icon-paragraph:before {
+  content: "\f1dd";
+}
+.opg-icon-sliders:before {
+  content: "\f1de";
+}
+.opg-icon-share-alt:before {
+  content: "\f1e0";
+}
+.opg-icon-share-alt-square:before {
+  content: "\f1e1";
+}
+.opg-icon-bomb:before {
+  content: "\f1e2";
+}
+.opg-icon-soccer-ball-o:before,
+.opg-icon-futbol-o:before {
+  content: "\f1e3";
+}
+.opg-icon-tty:before {
+  content: "\f1e4";
+}
+.opg-icon-binoculars:before {
+  content: "\f1e5";
+}
+.opg-icon-plug:before {
+  content: "\f1e6";
+}
+.opg-icon-slideshare:before {
+  content: "\f1e7";
+}
+.opg-icon-twitch:before {
+  content: "\f1e8";
+}
+.opg-icon-yelp:before {
+  content: "\f1e9";
+}
+.opg-icon-newspaper-o:before {
+  content: "\f1ea";
+}
+.opg-icon-wifi:before {
+  content: "\f1eb";
+}
+.opg-icon-calculator:before {
+  content: "\f1ec";
+}
+.opg-icon-paypal:before {
+  content: "\f1ed";
+}
+.opg-icon-google-wallet:before {
+  content: "\f1ee";
+}
+.opg-icon-cc-visa:before {
+  content: "\f1f0";
+}
+.opg-icon-cc-mastercard:before {
+  content: "\f1f1";
+}
+.opg-icon-cc-discover:before {
+  content: "\f1f2";
+}
+.opg-icon-cc-amex:before {
+  content: "\f1f3";
+}
+.opg-icon-cc-paypal:before {
+  content: "\f1f4";
+}
+.opg-icon-cc-stripe:before {
+  content: "\f1f5";
+}
+.opg-icon-bell-slash:before {
+  content: "\f1f6";
+}
+.opg-icon-bell-slash-o:before {
+  content: "\f1f7";
+}
+.opg-icon-trash:before {
+  content: "\f1f8";
+}
+.opg-icon-copyright:before {
+  content: "\f1f9";
+}
+.opg-icon-at:before {
+  content: "\f1fa";
+}
+.opg-icon-eyedropper:before {
+  content: "\f1fb";
+}
+.opg-icon-paint-brush:before {
+  content: "\f1fc";
+}
+.opg-icon-birthday-cake:before {
+  content: "\f1fd";
+}
+.opg-icon-area-chart:before {
+  content: "\f1fe";
+}
+.opg-icon-pie-chart:before {
+  content: "\f200";
+}
+.opg-icon-line-chart:before {
+  content: "\f201";
+}
+.opg-icon-lastfm:before {
+  content: "\f202";
+}
+.opg-icon-lastfm-square:before {
+  content: "\f203";
+}
+.opg-icon-toggle-off:before {
+  content: "\f204";
+}
+.opg-icon-toggle-on:before {
+  content: "\f205";
+}
+.opg-icon-bicycle:before {
+  content: "\f206";
+}
+.opg-icon-bus:before {
+  content: "\f207";
+}
+.opg-icon-ioxhost:before {
+  content: "\f208";
+}
+.opg-icon-angellist:before {
+  content: "\f209";
+}
+.opg-icon-cc:before {
+  content: "\f20a";
+}
+.opg-icon-shekel:before,
+.opg-icon-sheqel:before,
+.opg-icon-ils:before {
+  content: "\f20b";
+}
+.opg-icon-meanpath:before {
+  content: "\f20c";
+}
+.opg-icon-buysellads:before {
+  content: "\f20d";
+}
+.opg-icon-connectdevelop:before {
+  content: "\f20e";
+}
+.opg-icon-dashcube:before {
+  content: "\f210";
+}
+.opg-icon-forumbee:before {
+  content: "\f211";
+}
+.opg-icon-leanpub:before {
+  content: "\f212";
+}
+.opg-icon-sellsy:before {
+  content: "\f213";
+}
+.opg-icon-shirtsinbulk:before {
+  content: "\f214";
+}
+.opg-icon-simplybuilt:before {
+  content: "\f215";
+}
+.opg-icon-skyatlas:before {
+  content: "\f216";
+}
+.opg-icon-cart-plus:before {
+  content: "\f217";
+}
+.opg-icon-cart-arrow-down:before {
+  content: "\f218";
+}
+.opg-icon-diamond:before {
+  content: "\f219";
+}
+.opg-icon-ship:before {
+  content: "\f21a";
+}
+.opg-icon-user-secret:before {
+  content: "\f21b";
+}
+.opg-icon-motorcycle:before {
+  content: "\f21c";
+}
+.opg-icon-street-view:before {
+  content: "\f21d";
+}
+.opg-icon-heartbeat:before {
+  content: "\f21e";
+}
+.opg-icon-venus:before {
+  content: "\f221";
+}
+.opg-icon-mars:before {
+  content: "\f222";
+}
+.opg-icon-mercury:before {
+  content: "\f223";
+}
+.opg-icon-transgender:before {
+  content: "\f224";
+}
+.opg-icon-transgender-alt:before {
+  content: "\f225";
+}
+.opg-icon-venus-double:before {
+  content: "\f226";
+}
+.opg-icon-mars-double:before {
+  content: "\f227";
+}
+.opg-icon-venus-mars:before {
+  content: "\f228";
+}
+.opg-icon-mars-stroke:before {
+  content: "\f229";
+}
+.opg-icon-mars-stroke-v:before {
+  content: "\f22a";
+}
+.opg-icon-mars-stroke-h:before {
+  content: "\f22b";
+}
+.opg-icon-neuter:before {
+  content: "\f22c";
+}
+.opg-icon-facebook-official:before {
+  content: "\f230";
+}
+.opg-icon-pinterest-p:before {
+  content: "\f231";
+}
+.opg-icon-whatsapp:before {
+  content: "\f232";
+}
+.opg-icon-server:before {
+  content: "\f233";
+}
+.opg-icon-user-plus:before {
+  content: "\f234";
+}
+.opg-icon-user-times:before {
+  content: "\f235";
+}
+.opg-icon-hotel:before,
+.opg-icon-bed:before {
+  content: "\f236";
+}
+.opg-icon-viacoin:before {
+  content: "\f237";
+}
+.opg-icon-train:before {
+  content: "\f238";
+}
+.opg-icon-subway:before {
+  content: "\f239";
+}
+.opg-icon-medium-logo:before {
+  content: "\f23a";
+}
+
+.opg-close::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/*
+ * 1. Correct inability to style clickable `input` types in iOS.
+ * 2. Remove margins in Chrome, Safari and Opera.
+ * 3. Remove borders for `button`.
+ * 4. Address `overflow` set to `hidden` in IE 8/9/10/11.
+ * 5. Correct `font` properties and `color` not being inherited for `button`.
+ * 6. Address inconsistent `text-transform` inheritance which is only inherit in Firefox and IE
+ * 7. Remove default `button` padding and background color
+ * 8. Style
+ */
+.opg-close {
+  /* 1 */
+  -webkit-appearance: none;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  border: none;
+  /* 4 */
+  overflow: visible;
+  /* 5 */
+  font: inherit;
+  color: inherit;
+  /* 6 */
+  text-transform: none;
+  /* 7. */
+  padding: 0;
+  background: transparent;
+  /* 8 */
+  display: inline-block;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 20px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  opacity: 0.3;
+}
+/* Icon */
+.opg-close:after {
+  display: block;
+  content: "\f00d";
+  font-family: FontAwesome;
+}
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ * 2. Remove default focus style
+ * 3. Required for `a` elements
+ */
+.opg-close:hover,
+.opg-close:focus {
+  opacity: 0.5;
+  /* 2 */
+  outline: none;
+  /* 3 */
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Modifier
+ ========================================================================== */
+.opg-close-alt {
+  padding: 2px;
+  border-radius: 50%;
+  background: #eeeeee;
+  opacity: 1;
+}
+/* Hover */
+.opg-close-alt:hover,
+.opg-close-alt:focus {
+  opacity: 1;
+}
+/* Icon */
+.opg-close-alt:after {
+  opacity: 0.5;
+}
+.opg-close-alt:hover:after,
+.opg-close-alt:focus:after {
+  opacity: 0.8;
+}
+
+.opg-modal {
+  /* 1 */
+  display: none;
+  /* 2 */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 500000;
+  /* 3 */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  /* 4 */
+  background: rgba(0, 0, 0, 0.6);
+  /* 5 */
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+  /* 6 */
+  touch-action: cross-slide-y pinch-zoom double-tap-zoom;
+  /* 7 */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+/*
+ * Open state
+ */
+.opg-modal.opg-open {
+  opacity: 1;
+}
+/*
+ * Prevents duplicated scrollbar caused by 4.
+ */
+.opg-modal-page,
+.opg-modal-page body {
+  overflow: hidden;
+}
+/* Sub-object: `opg-modal-dialog`
+ ========================================================================== */
+/*
+ * 1. Create position context for caption, spinner and close button
+ * 2. Set box sizing
+ * 3. Set style
+ * 4. Slide-in transition
+ */
+.opg-modal-dialog {
+  /* 1 */
+  position: relative;
+  /* 2 */
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 50px auto;
+  padding: 20px;
+  width: 600px;
+  max-width: 100%;
+  max-width: calc(100% - 20px);
+  /* 3 */
+  background: #ffffff;
+  /* 4 */
+  opacity: 0;
+  -webkit-transform: translateY(-100px);
+  transform: translateY(-100px);
+  -webkit-transition: opacity 0.3s linear, -webkit-transform 0.3s ease-out;
+  transition: opacity 0.3s linear, transform 0.3s ease-out;
+}
+/* Phone landscape and smaller */
+@media (max-width: 767px) {
+  /*
+     * Fit in small screen
+     */
+  .opg-modal-dialog {
+    width: auto;
+    margin: 10px auto;
+  }
+}
+/*
+ * Open state
+ */
+.opg-open .opg-modal-dialog {
+  /* 4 */
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+/*
+ * Remove margin from the last-child
+ */
+.opg-modal-dialog > :not([class*='opg-modal-']):last-child {
+  margin-bottom: 0;
+}
+/* Close in modal
+ ========================================================================== */
+.opg-modal-dialog > .opg-close:first-child {
+  margin: -10px -10px 0 0;
+  float: right;
+}
+/*
+ * Remove margin from adjacent element
+ */
+.opg-modal-dialog > .opg-close:first-child + *:not([class*='opg-modal-']) {
+  margin-top: 0;
+}
+/* Modifier: `opg-modal-dialog-lightbox`
+ ========================================================================== */
+.opg-modal-dialog-lightbox {
+  margin: 15px auto;
+  padding: 0;
+  max-width: 95%;
+  max-width: calc(100% - 30px);
+}
+/*
+ * Close button
+ */
+.opg-modal-dialog-lightbox > .opg-close:first-child {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  margin: 0;
+  float: none;
+}
+/* Phone landscape and smaller */
+@media (max-width: 767px) {
+  .opg-modal-dialog-lightbox > .opg-close:first-child {
+    top: -7px;
+    right: -7px;
+  }
+}
+/* Modifier: `opg-modal-dialog-large`
+ ========================================================================== */
+/* Tablet and bigger */
+@media (min-width: 768px) {
+  .opg-modal-dialog-large {
+    width: 930px;
+  }
+}
+/* Large screen and bigger */
+@media (min-width: 1220px) {
+  .opg-modal-dialog-large {
+    width: 1130px;
+  }
+}
+/* Sub-Object: `opg-modal-header` and `opg-modal-footer`
+ ========================================================================== */
+.opg-modal-header {
+  margin-bottom: 15px;
+}
+.opg-modal-footer {
+  margin-top: 15px;
+}
+/*
+ * Remove margin from the last-child
+ */
+.opg-modal-header > :last-child,
+.opg-modal-footer > :last-child {
+  margin-bottom: 0;
+}
+/* Sub-Object: `opg-modal-caption`
+ ========================================================================== */
+.opg-modal-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  margin-bottom: -10px;
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* Sub-Object: `opg-modal-spinner`
+ ========================================================================== */
+.opg-modal-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  color: #ddd;
+}
+.opg-modal-spinner:after {
+  content: "\f110";
+  font-family: FontAwesome;
+  -webkit-animation: opg-rotate 2s infinite linear;
+  animation: opg-rotate 2s infinite linear;
+}
+
+
+.opg-margin {
+  margin-bottom: 15px;
+}
+* + .opg-margin {
+  margin-top: 15px;
+}
+.opg-margin-top {
+  margin-top: 15px !important;
+}
+.opg-margin-bottom {
+  margin-bottom: 15px !important;
+}
+.opg-margin-left {
+  margin-left: 15px !important;
+}
+.opg-margin-right {
+  margin-right: 15px !important;
+}
+/*
+ * Larger margins
+ */
+.opg-margin-large {
+  margin-bottom: 50px;
+}
+* + .opg-margin-large {
+  margin-top: 50px;
+}
+.opg-margin-large-top {
+  margin-top: 50px !important;
+}
+.opg-margin-large-bottom {
+  margin-bottom: 50px !important;
+}
+.opg-margin-large-left {
+  margin-left: 50px !important;
+}
+.opg-margin-large-right {
+  margin-right: 50px !important;
+}
+/*
+ * Smaller margins
+ */
+.opg-margin-small {
+  margin-bottom: 5px;
+}
+* + .opg-margin-small {
+  margin-top: 5px;
+}
+.opg-margin-small-top {
+  margin-top: 5px !important;
+}
+.opg-margin-small-bottom {
+  margin-bottom: 5px !important;
+}
+.opg-margin-small-left {
+  margin-left: 5px !important;
+}
+.opg-margin-small-right {
+  margin-right: 5px !important;
+}
+/*
+ * Remove margins
+ */
+.opg-margin-remove {
+  margin: 0 !important;
+}
+.opg-margin-top-remove {
+  margin-top: 0 !important;
+}
+.opg-margin-bottom-remove {
+  margin-bottom: 0 !important;
+}
+
+
+.opg-display-block {
+  display: block !important;
+}
+.opg-display-inline {
+  display: inline !important;
+}
+.opg-display-inline-block {
+  display: inline-block !important;
+}
+/*
+ * Visibility
+ * Avoids setting display to `block` so it works also with `inline-block` and `table`
+ */
+/* Desktop and bigger */
+@media (min-width: 960px) {
+  .opg-visible-small {
+    display: none !important;
+  }
+  .opg-visible-medium {
+    display: none !important;
+  }
+  .opg-hidden-large {
+    display: none !important;
+  }
+}
+/* Tablets portrait */
+@media (min-width: 768px) and (max-width: 959px) {
+  .opg-visible-small {
+    display: none !important;
+  }
+  .opg-visible-large {
+    display: none !important ;
+  }
+  .opg-hidden-medium {
+    display: none !important;
+  }
+}
+/* Phone landscape and smaller*/
+@media (max-width: 767px) {
+  .opg-visible-medium {
+    display: none !important;
+  }
+  .opg-visible-large {
+    display: none !important;
+  }
+  .opg-hidden-small {
+    display: none !important;
+
+  }
+}
+/* Remove from the flow and screen readers on any device */
+.opg-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+/* It's hidden, but still affects layout */
+.opg-invisible {
+  visibility: hidden !important;
+}
+/* Show on hover */
+.opg-visible-hover:hover .opg-hidden,
+.opg-visible-hover:hover .opg-invisible {
+  display: block !important;
+  visibility: visible !important;
+}
+.opg-visible-hover-inline:hover .opg-hidden,
+.opg-visible-hover-inline:hover .opg-invisible {
+  display: inline-block !important;
+  visibility: visible !important;
+}
+/* Hide on touch */
+.opg-touch .opg-hidden-touch,
+.opg-notouch .opg-hidden-notouch {
+  display: none !important;
+}
+
+
+.opg-float-left {
+  float: left;
+}
+.opg-float-right {
+  float: right;
+}
+/* 1 */
+[class*='opg-float-'] {
+  max-width: 100%;
+}
+
+.opg-text-small {
+  font-size: 11px;
+  line-height: 16px;
+}
+.opg-text-large {
+  font-size: 18px !important;
+  line-height: 24px;
+  font-weight: normal;
+}
+/* Weight modifiers
+ ========================================================================== */
+.opg-text-bold {
+  font-weight: bold;
+}
+/* Color modifiers
+ ========================================================================== */
+.opg-text-muted {
+  color: #999999 !important;
+}
+.opg-text-primary {
+  color: #2d7091 !important;
+}
+.opg-text-success {
+  color: #659f13 !important;
+}
+.opg-text-warning {
+  color: #e28327 !important;
+}
+.opg-text-danger {
+  color: #d85030 !important;
+}
+.opg-text-contrast {
+  color: #ffffff !important;
+}
+/* Alignment modifiers
+ ========================================================================== */
+.opg-text-left {
+  text-align: left !important;
+}
+.opg-text-right {
+  text-align: right !important;
+}
+.opg-text-center {
+  text-align: center !important;
+}
+.opg-text-justify {
+  text-align: justify !important;
+}
+.opg-text-top {
+  vertical-align: top !important;
+}
+.opg-text-middle {
+  vertical-align: middle !important;
+}
+.opg-text-bottom {
+  vertical-align: bottom !important;
+}
+/* Only tablets portrait and smaller */
+@media (max-width: 959px) {
+  .opg-text-center-medium {
+    text-align: center !important;
+  }
+  .opg-text-left-medium {
+    text-align: left !important;
+  }
+}
+/* Phone landscape and smaller */
+@media (max-width: 767px) {
+  .opg-text-center-small {
+    text-align: center !important;
+  }
+  .opg-text-left-small {
+    text-align: left !important;
+  }
+}
+/* Wrap modifiers
+ ========================================================================== */
+/*
+ * Prevent text from wrapping onto multiple lines
+ */
+.opg-text-nowrap {
+  white-space: nowrap;
+}
+/*
+ * Prevent text from wrapping onto multiple lines, and truncate with an ellipsis
+ */
+.opg-text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*
+ * Break strings if their length exceeds the width of their container
+ */
+.opg-text-break {
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+/* ========================================================================
+   Component: Utility
+ ========================================================================== */
+/* Container
+ ========================================================================== */
+.opg-container {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 980px;
+  padding: 0 25px;
+}
+/* Large screen and bigger */
+@media (min-width: 1220px) {
+  .opg-container {
+    max-width: 1200px;
+    padding: 0 35px;
+  }
+}
+/*
+ * Micro clearfix
+ */
+.opg-container:before,
+.opg-container:after {
+  content: "";
+  display: table;
+}
+.opg-container:after {
+  clear: both;
+}
+/*
+ * Center container
+ */
+.opg-container-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.opg-button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/*
+ * 1. Correct inability to style clickable `input` types in iOS.
+ * 2. Remove margins in Chrome, Safari and Opera.
+ * 3. Remove borders for `button`.
+ * 4. Address `overflow` set to `hidden` in IE 8/9/10/11.
+ * 5. Correct `font` properties and `color` not being inherited for `button`.
+ * 6. Address inconsistent `text-transform` inheritance which is only inherit in Firefox and IE
+ * 7. Style
+ * 8. `line-height` is used to create a height
+ * 9. `min-height` is necessary for `input` elements in Firefox and Opera because `line-height` is not working.
+ * 10. Reset button group whitespace hack
+ * 11. Required for `a`.
+ */
+.opg-button {
+  /* 1 */
+  -webkit-appearance: none;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  border: none;
+  /* 4 */
+  overflow: visible;
+  /* 5 */
+  font: inherit;
+  color: #444444;
+  /* 6 */
+  text-transform: none;
+  /* 7 */
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 12px;
+  background: #eeeeee;
+  vertical-align: middle;
+  /* 8 */
+  line-height: 30px;
+  /* 9 */
+  min-height: 30px;
+  /* 10 */
+  font-size: 1rem;
+  /* 11 */
+  text-decoration: none;
+  text-align: center;
+}
+.opg-button:not(:disabled) {
+  cursor: pointer;
+}
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ * 2. Remove default focus style
+ * 3. Required for `a` elements
+ */
+.opg-button:hover,
+.opg-button:focus {
+  background-color: #f5f5f5;
+  color: #444444;
+  /* 2 */
+  outline: none;
+  /* 3 */
+  text-decoration: none;
+}
+/* Active */
+.opg-button:active,
+.opg-button.opg-active {
+  background-color: #dddddd;
+  color: #444444;
+}
+/* Color modifiers
+ ========================================================================== */
+/*
+ * Modifier: `opg-button-primary`
+ */
+.opg-button-primary {
+  background-color: #00a8e6;
+  color: #ffffff;
+}
+/* Hover */
+.opg-button-primary:hover,
+.opg-button-primary:focus {
+  background-color: #35b3ee;
+  color: #ffffff;
+}
+/* Active */
+.opg-button-primary:active,
+.opg-button-primary.opg-active {
+  background-color: #0091ca;
+  color: #ffffff;
+}
+/*
+ * Modifier: `opg-button-success`
+ */
+.opg-button-success {
+  background-color: #8cc14c;
+  color: #ffffff;
+}
+/* Hover */
+.opg-button-success:hover,
+.opg-button-success:focus {
+  background-color: #8ec73b;
+  color: #ffffff;
+}
+/* Active */
+.opg-button-success:active,
+.opg-button-success.opg-active {
+  background-color: #72ae41;
+  color: #ffffff;
+}
+/*
+ * Modifier: `opg-button-danger`
+ */
+.opg-button-danger {
+  background-color: #da314b;
+  color: #ffffff;
+}
+/* Hover */
+.opg-button-danger:hover,
+.opg-button-danger:focus {
+  background-color: #e4354f;
+  color: #ffffff;
+}
+/* Active */
+.opg-button-danger:active,
+.opg-button-danger.opg-active {
+  background-color: #c91032;
+  color: #ffffff;
+}
+/* Disabled state
+ * Overrides also the color modifiers
+ ========================================================================== */
+/* Equal for all button types */
+.opg-button:disabled {
+  background-color: #f5f5f5;
+  color: #999999;
+}
+/* Modifier: `opg-button-link`
+ ========================================================================== */
+/* Reset */
+.opg-button-link,
+.opg-button-link:hover,
+.opg-button-link:focus,
+.opg-button-link:active,
+.opg-button-link.opg-active,
+.opg-button-link:disabled {
+  border-color: transparent;
+  background: none;
+}
+/* Color */
+.opg-button-link {
+  color: #0077dd;
+}
+.opg-button-link:hover,
+.opg-button-link:focus,
+.opg-button-link:active,
+.opg-button-link.opg-active {
+  color: #005599;
+  text-decoration: underline;
+}
+.opg-button-link:disabled {
+  color: #999999;
+}
+/* Focus */
+.opg-button-link:focus {
+  outline: 1px dotted;
+}
+/* Size modifiers
+ ========================================================================== */
+.opg-button-mini {
+  min-height: 20px;
+  padding: 0 6px;
+  line-height: 20px;
+  font-size: 11px;
+}
+.opg-button-small {
+  min-height: 25px;
+  padding: 0 10px;
+
+  line-height: 25px;
+  font-size: 12px;
+}
+.opg-button-large {
+  min-height: 40px;
+  padding: 0 15px;
+  line-height: 40px;
+  font-size: 16px;
+}
+/* Sub-object `opg-button-group`
+ ========================================================================== */
+/*
+ * 1. Behave like buttons
+ * 2. Create position context for dropdowns
+ * 3. Remove whitespace between child elements when using `inline-block`
+ * 4. Prevent buttons from wrapping
+ * 5. Remove whitespace between child elements when using `inline-block`
+ */
+.opg-button-group {
+  /* 1 */
+  display: inline-block;
+  vertical-align: middle;
+  /* 2 */
+  position: relative;
+  /* 3 */
+  font-size: 0.001px;
+  /* 4 */
+  white-space: nowrap;
+}
+.opg-button-group > * {
+  display: inline-block;
+}
+/* 5 */
+.opg-button-group .opg-button {
+  vertical-align: top;
+}
+/* Sub-object: `opg-button-dropdown`
+ ========================================================================== */
+/*
+ * 1. Behave like buttons
+ * 2. Create position context for dropdowns
+ */
+.opg-button-dropdown {
+  /* 1 */
+  display: inline-block;
+  vertical-align: middle;
+  /* 2 */
+  position: relative;
+}
+
+.opg-link-muted,
+.opg-link-muted a {
+  color: #444444;
+}
+.opg-link-muted:hover,
+.opg-link-muted a:hover {
+  color: #444444;
+}
+/*
+ * Reset link style
+ */
+.opg-link-reset,
+.opg-link-reset a,
+.opg-link-reset:hover,
+.opg-link-reset a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.opg-panel {
+  /* 1 */
+  display: block;
+  /* 2 */
+  position: relative;
+}
+/*
+ * Allow panels to be anchors
+ */
+.opg-panel,
+.opg-panel:hover {
+  text-decoration: none;
+}
+/*
+ * Micro clearfix to make panels more robust
+ */
+.opg-panel:before,
+.opg-panel:after {
+  content: "";
+  display: table;
+}
+.opg-panel:after {
+  clear: both;
+}
+/*
+ * Remove margin from the last-child
+ */
+.opg-panel > :last-child {
+  margin-bottom: 0;
+}
+/* Sub-object: `opg-panel-title`
+ ========================================================================== */
+.opg-panel-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  text-transform: none;
+  color: #444444;
+}
+/* Sub-object: `opg-panel-badge`
+ ========================================================================== */
+.opg-panel-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+/* Sub-object: `opg-panel-teaser`
+ ========================================================================== */
+.opg-panel-teaser {
+  margin-bottom: 15px;
+}
+/* Modifier: `opg-panel-box`
+ ========================================================================== */
+.opg-panel-box {
+  padding: 15px;
+  background: #f5f5f5;
+  color: #444444;
+}
+.opg-panel-box-hover:hover {
+  color: #444444;
+}
+.opg-panel-box .opg-panel-title {
+  color: #444444;
+}
+.opg-panel-box .opg-panel-badge {
+  top: 10px;
+  right: 10px;
+}
+.opg-panel-box .opg-panel-teaser {
+  margin-top: -15px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+/*
+ * Nav in panel
+ */
+.opg-panel-box > .opg-nav-side {
+  margin: 0 -15px;
+}
+/*
+ * Sub-modifier: `opg-panel-box-primary`
+ */
+.opg-panel-box-primary {
+  background-color: #ebf7fd;
+  color: #2d7091;
+}
+.opg-panel-box-primary-hover:hover {
+  color: #2d7091;
+}
+.opg-panel-box-primary .opg-panel-title {
+  color: #2d7091;
+}
+/*
+ * Sub-modifier: `opg-panel-box-secondary`
+ */
+.opg-panel-box-secondary {
+  background-color: #eeeeee;
+  color: #444444;
+}
+.opg-panel-box-secondary-hover:hover {
+  color: #444444;
+}
+.opg-panel-box-secondary .opg-panel-title {
+  color: #444444;
+}
+/* Modifier: `opg-panel-hover`
+ ========================================================================== */
+.opg-panel-hover {
+  padding: 15px;
+  color: #444444;
+}
+.opg-panel-hover:hover {
+  background: #f5f5f5;
+  color: #444444;
+}
+.opg-panel-hover .opg-panel-badge {
+  top: 10px;
+  right: 10px;
+}
+.opg-panel-hover .opg-panel-teaser {
+  margin-top: -15px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+/* Modifier: `opg-panel-header`
+ ========================================================================== */
+.opg-panel-header .opg-panel-title {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+  color: #444444;
+}
+/* Modifier: `opg-panel-space`
+ ========================================================================== */
+.opg-panel-space {
+  padding: 30px;
+}
+.opg-panel-space .opg-panel-badge {
+  top: 30px;
+  right: 30px;
+}
+/* Modifier: `opg-panel-divider`
+ ========================================================================== */
+.opg-panel + .opg-panel-divider {
+  margin-top: 50px !important;
+}
+.opg-panel + .opg-panel-divider:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -25px;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #dddddd;
+}
+/* Large screen and bigger */
+@media (min-width: 1220px) {
+  .opg-panel + .opg-panel-divider {
+    margin-top: 70px !important;
+  }
+  .opg-panel + .opg-panel-divider:before {
+    top: -35px;
+  }
+}
+
+.opg-table {
+  /* 1 */
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* 2 */
+  width: 100%;
+  /* 3 */
+  margin-bottom: 15px;
+}
+/*
+ * Add margin if adjacent element
+ */
+* + .opg-table {
+  margin-top: 15px;
+}
+.opg-table th,
+.opg-table td {
+
+}
+/*
+ * Set alignment
+ */
+.opg-table th {
+  text-align: left;
+}
+.opg-table td {
+  vertical-align: top;
+}
+.opg-table thead th {
+  vertical-align: bottom;
+}
+/*
+ * Caption and footer
+ */
+.opg-table caption,
+.opg-table tfoot {
+  font-size: 12px;
+  font-style: italic;
+}
+.opg-table caption {
+  text-align: left;
+  color: #999999;
+}
+/* Sub-modifier: `opg-table-middle`
+ ========================================================================== */
+.opg-table-middle,
+.opg-table-middle td {
+  vertical-align: middle !important;
+}
+/* Modifier: `opg-table-striped`
+ ========================================================================== */
+.opg-table-striped tbody tr:nth-of-type(odd) {
+  background: #f5f5f5;
+}
+/* Modifier: `opg-table-condensed`
+ ========================================================================== */
+.opg-table-condensed td {
+  padding: 4px 8px;
+}
+/* Modifier: `opg-table-hover`
+ ========================================================================== */
+.opg-table-hover tbody tr:hover {
+  background: #eeeeee;
+}
+
+.opg-alert {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #ebf7fd;
+  color: #2d7091;
+}
+/*
+ * Add margin if adjacent element
+ */
+* + .opg-alert {
+  margin-top: 15px;
+}
+/*
+ * Remove margin from the last-child
+ */
+.opg-alert > :last-child {
+  margin-bottom: 0;
+}
+/*
+ * Keep color for headings if the default heading color is changed
+ */
+.opg-alert h1,
+.opg-alert h2,
+.opg-alert h3,
+.opg-alert h4,
+.opg-alert h5,
+.opg-alert h6 {
+  color: inherit;
+}
+/* Close in alert
+ ========================================================================== */
+.opg-alert > .opg-close:first-child {
+  float: right;
+}
+/*
+ * Remove margin from adjacent element
+ */
+.opg-alert > .opg-close:first-child + * {
+  margin-top: 0;
+}
+/* Modifier: `opg-alert-success`
+ ========================================================================== */
+.opg-alert-success {
+  background: #f2fae3;
+  color: #659f13;
+}
+/* Modifier: `opg-alert-warning`
+ ========================================================================== */
+.opg-alert-warning {
+  background: #fffceb;
+  color: #e28327;
+}
+/* Modifier: `opg-alert-danger`
+ ========================================================================== */
+.opg-alert-danger {
+  background: #fff1f0;
+  color: #d85030;
+}
+/* Modifier: `opg-alert-large`
+ ========================================================================== */
+.opg-alert-large {
+  padding: 20px;
+}
+.opg-alert-large > .opg-close:first-child {
+  margin: -10px -10px 0 0;
+}
+
+@media (min-width: 768px) {
+  [class*='opg-push-'],
+  [class*='opg-pull-'] {
+    position: relative;
+  }
+  /*
+     * Push
+     */
+  /* Halves */
+  .opg-push-1-2,
+  .opg-push-2-4,
+  .opg-push-3-6,
+  .opg-push-5-10 {
+    left: 50%;
+  }
+  /* Thirds */
+  .opg-push-1-3,
+  .opg-push-2-6 {
+    left: 33.333%;
+  }
+  .opg-push-2-3,
+  .opg-push-4-6 {
+    left: 66.666%;
+  }
+  /* Quarters */
+  .opg-push-1-4 {
+    left: 25%;
+  }
+  .opg-push-3-4 {
+    left: 75%;
+  }
+  /* Fifths */
+  .opg-push-1-5,
+  .opg-push-2-10 {
+    left: 20%;
+  }
+  .opg-push-2-5,
+  .opg-push-4-10 {
+    left: 40%;
+  }
+  .opg-push-3-5,
+  .opg-push-6-10 {
+    left: 60%;
+  }
+  .opg-push-4-5,
+  .opg-push-8-10 {
+    left: 80%;
+  }
+  /* Sixths */
+  .opg-push-1-6 {
+    left: 16.666%;
+  }
+  .opg-push-5-6 {
+    left: 83.333%;
+  }
+  /* Tenths */
+  .opg-push-1-10 {
+    left: 10%;
+  }
+  .opg-push-3-10 {
+    left: 30%;
+  }
+  .opg-push-7-10 {
+    left: 70%;
+  }
+  .opg-push-9-10 {
+    left: 90%;
+  }
+  /*
+     * Pull
+     */
+  /* Halves */
+  .opg-pull-1-2,
+  .opg-pull-2-4,
+  .opg-pull-3-6,
+  .opg-pull-5-10 {
+    left: -50%;
+  }
+  /* Thirds */
+  .opg-pull-1-3,
+  .opg-pull-2-6 {
+    left: -33.333%;
+  }
+  .opg-pull-2-3,
+  .opg-pull-4-6 {
+    left: -66.666%;
+  }
+  /* Quarters */
+  .opg-pull-1-4 {
+    left: -25%;
+  }
+  .opg-pull-3-4 {
+    left: -75%;
+  }
+  /* Fifths */
+  .opg-pull-1-5,
+  .opg-pull-2-10 {
+    left: -20%;
+  }
+  .opg-pull-2-5,
+  .opg-pull-4-10 {
+    left: -40%;
+  }
+  .opg-pull-3-5,
+  .opg-pull-6-10 {
+    left: -60%;
+  }
+  .opg-pull-4-5,
+  .opg-pull-8-10 {
+    left: -80%;
+  }
+  /* Sixths */
+  .opg-pull-1-6 {
+    left: -16.666%;
+  }
+  .opg-pull-5-6 {
+    left: -83.333%;
+  }
+  /* Tenths */
+  .opg-pull-1-10 {
+    left: -10%;
+  }
+  .opg-pull-3-10 {
+    left: -30%;
+  }
+  .opg-pull-7-10 {
+    left: -70%;
+  }
+  .opg-pull-9-10 {
+    left: -90%;
+  }
+}
+
+.opg-progress {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 20px;
+  margin-bottom: 15px;
+ 
+  /* 1 */
+  overflow: hidden;
+  /* 2 */
+  line-height: 20px;
+}
+/*
+ * Add margin if adjacent element
+ */
+* + .opg-progress {
+  margin-top: 15px;
+}
+/* Sub-object: `opg-progress-bar`
+ ========================================================================== */
+/*
+ * 1. Transition
+ * 2. Needed for text
+ */
+.opg-progress-bar {
+  width: 0;
+  height: 100%;
+  background: #F7F2F2;
+  float: left;
+  /* 1 */
+  -webkit-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+  /* 2 */
+  font-size: 13px;
+  color: #ffffff;
+  text-align: center;
+}
+/* Size modifiers
+ ========================================================================== */
+/* Mini */
+.opg-progress-mini {
+  height: 6px;
+}
+/* Small */
+.opg-progress-small {
+  height: 12px;
+}
+/* Color modifiers
+ ========================================================================== */
+.opg-progress-success .opg-progress-bar {
+  background-color: #8cc14c;
+}
+.opg-progress-warning .opg-progress-bar {
+  background-color: #faa732;
+}
+.opg-progress-danger .opg-progress-bar {
+  background-color: #da314b;
+}
+/* Modifier: `opg-progress-striped`
+ ========================================================================== */
+
+/*
+ * Animation
+ */
+.opg-progress-striped.opg-active .opg-progress-bar {
+  -webkit-animation: opg-progress-bar-stripes 2s linear infinite;
+  animation: opg-progress-bar-stripes 2s linear infinite;
+}
+@-webkit-keyframes opg-progress-bar-stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 0;
+  }
+}
+@keyframes opg-progress-bar-stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 0;
+  }
+}

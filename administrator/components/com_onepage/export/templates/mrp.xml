@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opcexport" method="upgrade" >	
+    <name>OPC Export - MRP</name>
+    <creationDate>Mar 2017</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>Nastavenie pre autonómny režim MRP</description>
+    <files>
+        <filename>mrp.php</filename>
+    </files>
+
+<params>
+    <param
+        type="list"
+        name="allowconfirm"
+        id="allowconfirm"
+        label="Povoliť medzistránku potvrdenia (umožní dvojitý import)"
+        description="Povolí stránku potvrdenia importu a výberu objednávok pre import"
+        size="25"
+		default="0"
+        maxLength="1">
+		  <option value="0">Potvrdenie vypnuté</option>
+		  <option value="1">Potvrdenie zapnuté</option>
+		</param>
+    
+			<param
+        type="text"
+        name="prefix"
+        id="prefix"
+        label="Číselná rada objednávok - prefix"
+        description="Nastavte číselnú radu objednávok v MRP"
+        size="80"
+		default=""
+        maxLength="255" />
+		
+		<param
+        type="text"
+        name="cisloSkladu"
+        id="cisloSkladu"
+        label="Číslo skladu"
+        description="Nastavte číselnú radu objednávok v MRP"
+        size="80"
+		default="1"
+        maxLength="255" />
+		
+		
+		<param
+        type="text"
+        name="stredisko"
+        id="stredisko"
+        label="Stredisko"
+        description="Nastavte číselnú radu objednávok v MRP"
+        size="80"
+		default="0"
+        maxLength="255" />
+		
+		<param
+        type="text"
+        name="cisloZakazky"
+        id="cisloZakazky"
+        label="Číslo zákazky"
+        description="Nastavte číselnú radu objednávok v MRP"
+        size="80"
+		default="0"
+        maxLength="255" />
+		
+		<param
+        type="text"
+        name="cenamrp"
+        id="cenamrp"
+        label="Číslo ceny v MRP"
+        description=""
+        size="25"
+		default="4"
+        maxLength="3" />
+		
+		
+			<param
+        type="text"
+        name="url"
+        id="url"
+        label="URL MRP Servra"
+        description="Nastavte URL a port vo formáte http://domena.com:8888/"
+        size="255"
+		default=""
+        maxLength="2550" />
+		
+			<param
+        type="text"
+        name="ico"
+        id="ico"
+        label="Virtuemart pole pre ICO"
+        description=""
+        size="255"
+		default="extra_1"
+        maxLength="2550" />
+		
+		<param
+        type="text"
+        name="dic"
+        id="dic"
+        label="Virtuemart pole pre DIC"
+        description=""
+        size="255"
+		default="eu_vat"
+        maxLength="2550" />
+		
+		
+		<param
+        type="text"
+        name="csvfile"
+        id="csvfile"
+        label="Párovací súbor CSV"
+        description="Párovací subor CSV, product_sku, atribut, PLU v MRP. Zadajte súboer bez lomítka na začiatku vnútri inštalácie Joomly"
+        size="255"
+		default="import/product-sku-mrp.csv"
+        maxLength="2550" />
+		
+		
+		<param
+        type="text"
+        name="csvfilesep"
+        id="csvfilesep"
+        label="Oddelovač stĺpcov v CSV"
+        description="Oddeľovač stĺpcov v CSV"
+        size="25"
+		default=";"
+        maxLength="1" />
+		
+		
+			
+		
+       
+    
+</params>	
+</extension>

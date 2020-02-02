@@ -1,0 +1,275 @@
+/**
+ * @copyright	Copyright (C) 2012 Cedric KEIFLIN alias ced1870
+ * http://www.joomlack.fr
+ * @license		GNU/GPL
+ * */
+
+#ckpopupstyleswizard.ckpopupwizard {
+    border: #666 1px solid;
+    box-shadow: #000 0px 0px 5px;
+    -moz-box-shadow: #000 0px 0px 5px;
+    background: #fff url('fondpopup.png') left top repeat-x;   
+    padding: 10px;
+    left: 50%;
+    top: 10px;   
+    padding-bottom: 100px;
+	z-index: 10000;
+	height: 500px;
+	margin-left: -400px;
+	width: 800px;
+	position:absolute;
+}
+
+#ckoverlayer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0, 0.5);
+	z-index: 9999;
+}
+
+.ckpopupwizard_save {
+    background-image: url('validate.png');
+}
+
+.ckpopupwizard_save:hover {
+    background-image: url('validate_hover.png');
+}
+
+.ckpopupwizard_cancel {
+    background-image: url('cancel.png');
+}
+
+.ckpopupwizard_cancel:hover {
+    background-image: url('cancel_hover.png');
+}
+
+.ckpopupwizard_button {
+    color: #aaa;
+    padding: 5px 20px 5px 5px;
+    background-color: #333;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-top: #666 1px solid;
+    border-left: #444 1px solid;
+    border-right: #444 1px solid;
+    border-bottom: #000 1px solid;
+    float: right;
+    margin: 3px 3px 15px 3px;
+    width: 50px;
+    cursor: pointer;
+    font-family: 'Segoe UI';
+}
+
+.ckpopupwizard_button:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.ckpopupwizard_title {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Segoe UI';
+}
+
+.tooltip {
+	z-index: 10001 !important;
+}
+
+.tab {
+	height: 280px;
+	overflow-y: auto;
+	position: relative;
+}
+
+.menulink {
+	float: left;
+	padding: 5px 10px;
+	margin: 5px 5px 0 5px;
+	/*border-right: 1px solid #ddd;*/
+	cursor: pointer;
+	color: #a6a6a6;
+	background: #eee;
+	border-radius: 5px 5px 0 0;
+	border: 1px solid #ddd;
+	position: relative;
+	z-index: 1;
+}
+
+.tablinkdesc {
+	text-align: center;
+	font-size: 10px;
+	color: #a6a6a6;
+	line-height: 10px;
+}
+
+.menulink:hover, .menulink.current {
+	color: #000;
+	background: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.menulink + .clr {
+	clear: both;
+	border-top: 1px solid #ddd;
+	margin-bottom: 5px;
+	position: relative;
+	z-index: 0;
+	top: -1px;
+}
+
+.tab input[type="radio"], input[type="checkbox"] {
+	border: none;
+}
+
+#ckpopupstyleswizard_options {
+	margin-top: 20px;
+}
+
+#ckpopupstyleswizard label {
+	display: inline-block !important;
+	width: 150px;
+}
+
+#ckpopupstyleswizard input {
+	display: inline-block !important;
+	max-width: 100px;
+	border-radius: 0;
+	height: 18px;
+}
+
+#ckpopupstyleswizard span {
+	margin-right: 3px;
+}
+
+#ckpopupstyleswizard label.radiobutton {
+	display: inline-block !important;
+	width: 30px;
+	padding: 3px;
+	margin: 0 1px 0 0;
+	text-align: center;
+	background: #f1f1f1;
+	border: 1px solid #bbb;
+	height: 20px;
+}
+
+#ckpopupstyleswizard input[type=radio].radiobutton {
+	display: none !important;
+}
+
+#ckpopupstyleswizard input[type=radio].radiobutton:checked + label {
+	background: #2e9fd2; /* Old browsers */
+	background: -moz-linear-gradient(top,  #2e9fd2 0%, #21759b 100%, #21759b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2e9fd2), color-stop(100%,#21759b), color-stop(100%,#21759b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #2e9fd2 0%,#21759b 100%,#21759b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #2e9fd2 0%,#21759b 100%,#21759b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #2e9fd2 0%,#21759b 100%,#21759b 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #2e9fd2 0%,#21759b 100%,#21759b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e9fd2', endColorstr='#21759b',GradientType=0 ); /* IE6-9 */
+	color: #FFFFFF;
+	border: 1px solid #21759b ;
+}
+
+.ckrow {
+	margin-top: 3px;
+}
+
+.ckheading {
+	color: #2EA2CC;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.ckheading:first-child {
+	margin-top: 0px;
+}
+
+#ckpopupstyleswizard_preview {
+	height: 180px;
+	left: 0;
+    position: absolute;
+    right: 0;
+	bottom: 0;
+	background: #fff;
+	border-top: 1px solid #fff;
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+}
+
+.imgfake {
+	display:inline-block;
+	width:16px;
+}
+
+.ckpopupstyleswizard_col_left {
+	float: left;
+	width: 200px;
+	height: 250px;
+}
+/*
+.ckpopupstyleswizard_col_left:after {
+	display: block;
+	content: "";
+	float: right;
+	height: 100%;
+	width: 1px;
+	border-right: 1px solid #ddd;
+	margin: 10px;
+}*/
+
+.ckpopupstyleswizard_col_right {
+	float: left;
+	width: 580px;
+}
+
+.menulink2 {
+	cursor: pointer;
+	color: #666;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+	z-index: 1;
+	height: 20px;
+	padding: 15px;
+	background: #fff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #e3e3e3 100%, #e3e3e3 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e3e3e3), color-stop(100%,#e3e3e3)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#e3e3e3 100%,#e3e3e3 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#e3e3e3 100%,#e3e3e3 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#e3e3e3 100%,#e3e3e3 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#e3e3e3 100%,#e3e3e3 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e3e3e3',GradientType=0 ); /* IE6-9 */
+}
+
+.menulink2:hover, .menulink2.current {
+	background: #2e9fd2; /* Old browsers */
+	background: -moz-linear-gradient(top,  #2e9fd2 0%, #21759b 100%, #21759b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2e9fd2), color-stop(100%,#21759b), color-stop(100%,#21759b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #2e9fd2 0%,#21759b 100%,#21759b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #2e9fd2 0%,#21759b 100%,#21759b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #2e9fd2 0%,#21759b 100%,#21759b 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #2e9fd2 0%,#21759b 100%,#21759b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e9fd2', endColorstr='#21759b',GradientType=0 ); /* IE6-9 */
+	color: #FFFFFF;
+	border-bottom: 1px solid #21759b;
+}
+
+.tab2 {
+	padding: 0 0 0 10px;
+}
+
+.tab:after {
+	border-right: 1px solid #ddd;
+	content: "";
+	display: block;
+	float: left;
+	height: 100%;
+	left: 200px;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	width: 0;
+}

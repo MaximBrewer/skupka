@@ -1,0 +1,303 @@
+@CHARSET "UTF-8";
+
+.icon-48-interamind_logo {
+	background:url(../images/plus_logo_48x48.png);
+}
+
+#resultsDiv {
+	height:570px;
+	overflow:auto;
+	width:100%;
+}
+
+#noResults {
+	color:red;
+	font-size:130%;
+	padding-top:30px;
+}
+
+table.adminform td {
+	border:1px solid #D5D5D5;
+}
+
+table.dateRange td {
+	border: none;
+}
+.reportParamFieldName {
+	width:30%;
+}
+
+table.adminform {
+	border-collapse:
+}
+#downloadAsCsv {
+	/* background-image:url(../images/csv.jpg);
+	background-position:left center;
+	background-repeat:no-repeat;
+	padding-bottom:10px;
+	padding-top:10px; */
+}
+#downloadAsCsv form {
+	/* margin-left: 60px; */
+}
+.adminform select {
+	width:300px;
+}
+
+#extraDataTable {
+	border:1px solid black;
+	border-collapse:collapse;
+	margin:auto;
+	margin-bottom:10px;
+}
+
+#extraDataTable td {
+	padding:5px;
+	border: 1px solid black;
+}
+
+#extraDataTable .fieldName {
+	color:blue;
+	border-right:1px solid lightGrey;
+}
+
+#extraDataTable .fieldValue {
+	border-left:1px solid lightGrey;
+}
+
+.fieldName {
+	font-weight:bold;
+}
+ 
+.reportList {
+	padding-left:0px;
+}
+.reportList li {
+	font-weight: bold;
+	border-top:1px solid lightBlue;
+	padding-bottom:5px;
+	padding-top:5px;
+	list-style-position: inside;
+}
+
+.presetList {
+	padding-left:10px;
+}
+.presetList li {
+	font-weight: normal;
+	border-top: none;
+	padding-bottom:2px;
+	padding-top:2px;
+}
+
+.selectedReport {
+	color:red;
+}
+	
+.selectedPreset {
+	color:red;
+}
+
+#generateBtn {
+	background-color:lightBlue;
+	color:black;
+	font-weight:bold;
+}
+.miniToolbar {
+	clear:both;
+	text-align: right;
+	border-top: 1px solid black;
+	padding-bottom:5px;
+	padding-top:5px;
+	width:100%;
+}
+
+.title {
+	font-weight: bold;
+	color:blue;
+}
+
+#reportTitle {
+	
+}
+
+.text {
+	color:black;
+	font-weight:bold;
+	padding-left:10px;
+	padding-right:20px;
+}
+
+
+/* #generateReport input {
+	background-color:#006699;
+	color:white;
+	font-size:140%;
+	font-weight:bold;
+} */
+
+#presetDialog {
+	background:white none repeat scroll 0 0;
+	border:2px solid;
+	height:220px;
+	left:200px;
+	position:fixed;
+	top:100px;
+	width:250px;
+}
+#presetDialogTitle {
+	background:lightgrey none repeat scroll 0 0;
+	font-weight:bold;
+	margin-bottom:3px;
+	padding:6px;
+	width:95%;
+}
+#presetToolbar {
+	margin-top:5px;
+	width:235px;
+}
+
+#templatesTable {
+	border-collapse:collapse;
+	width: 100%;
+}
+#templatesTable th{
+	text-align:left;
+	color:blue;
+	border:1px solid lightgrey;
+	padding:5px;
+}
+
+#templatesTable td {
+	text-align:left;
+	color:black;
+	border:1px solid lightgrey;
+	padding:5px;
+}
+
+#bookmark a{
+	
+}
+
+
+#resultsDiv table {
+	background-color:#E7E7E7;
+	border-spacing:1px;
+	color:#666666;
+}
+#resultsDiv .totals1 {
+	background: lightgrey;
+	font-weight: bold;
+}
+
+#resultsDiv .totals2 {
+	background: grey;
+	font-weight: bold;
+	color: white;
+}
+
+.rule_precond{
+	vertical-align: bottom;
+	display: inline;
+}
+
+.precondition{
+	margin-bottom: 5px;
+}
+
+fieldset.vmeeproFs {
+    border: 0 none;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+fieldset.vmeeproFs legend {
+    border-bottom: 3px solid #E3E3E3;
+    color: #333333;
+    display: block;
+    font-size: 20px;
+    height: 26px;
+    line-height: 26px;
+    width: 100%;
+}
+
+input.inputbox {
+    width: 265px;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+input.inputbox, #valuesselect {
+    height: 17px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+input.inputbox, #valuesselect, #createNew {
+	font-size: 13px;
+}
+
+table td.templatetd{
+	border: 0px;
+}
+
+.paramHeaderContainer {
+    background: none repeat scroll 0 0 #D5E7FA;
+    border-bottom: 2px solid #96B0CB;
+    clear: both;
+    color: #336699;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 12px 0 4px;
+    padding: 0;
+    width: 100%;
+}
+
+.paramHeaderContent {
+    padding: 6px 8px;
+}
+
+body.contentpane ul.config-option-list li > label {
+    background: none repeat scroll 0 0 #F6F6F6;
+    border-bottom: 1px solid #E9E9E9;
+    border-right: 1px solid #E9E9E9;
+    color: #666666;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0 0 1px;
+    padding: 4px;
+    text-align: right;
+    width: 150px;
+}
+
+body.contentpane ul.config-option-list li fieldset.radio,  body.contentpane ul.config-option-list li > select{
+    padding-bottom: 0px;
+    clear: none;
+    float: left;
+    margin: 3px 0 0 2px;
+}
+
+.rule_precond span.hasTip img{
+	float: none;
+	margin-left: 5px;
+	vertical-align: middle;
+}
+
+#newConditionForm label, #newConditionForm input, #adminForm label, #adminForm input, #adminForm select{
+	display: inline;
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+
+.input-vmeeplus-config{
+	width: 250px;
+	word-wrap: break-word;
+}
+
+.conditionvalue{
+	height: 30px !important;
+    margin-top: -9px !important;
+}

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="vmshipment" method="upgrade">
+	<!--  The extension commercial name: make it different form others at JED http://extensions.joomla.org/-->
+	<name>RuposTel Ulozenka VM2 a VM3</name>
+	<element>rupostel_ulozenka</element>
+	<!-- The following elements are optional and free of formatting constraints --> 
+	<!-- Original creation date. Recommended: YYYY-MM-DD -->
+	<creationDate>2013-06-02</creationDate>
+	<author>RuposTel.com</author>
+	<authorEmail>ulozenka@rupostel.com</authorEmail>
+	<authorUrl>http://www.rupostel.com/</authorUrl>
+	<copyright>(c) RuposTel.com</copyright>
+	<license>GPL</license>
+	<!--  The version string is recorded in the components table -->
+	<version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+
+	<license_key>014aea8fa63586cf7c87d6aa521bed80_10702</license_key>
+	<!--  The date for the actual version release -->
+	<releaseDate>2014-07-02</releaseDate>
+	<!--  Type of release: Bug fix, Security Fix, Minor update, Major update -->
+	
+	
+	<!-- The description is optional and defaults to the name -->
+	<description>Ulozenka for Virtuemart by RuposTel.com</description>
+
+	
+    <files>
+		
+		<filename >api.php</filename>
+		
+		<filename >helper.php</filename>
+		<filename >rest.php</filename>
+		<filename >index.html</filename>
+		<filename plugin="rupostel_ulozenka">rupostel_ulozenka.php</filename>
+		<folder >elements</folder>
+		<folder >fields</folder>
+		<folder >rupostel_ulozenka</folder>
+		<folder >media</folder>
+    </files> 
+	<vmconfig>
+	  <fields addpath="/administrator/components/com_virtuemart/fields" />
+	 <fields name="params" >
+	 <fieldset name="rupostel_ulozenka" addfieldpath="/plugins/vmshipment/rupostel_ulozenka/fields" >
+	       
+		<field name="xkey" type="text" size="30" default="" label="Registrační kód Uloženka.cz (API KEY)"
+               description="Modul je možn&#233; využ&#237;vat až na z&#225;kladě registrace na webu &lt;br /&gt;
+www.ulozenka.cz, pokud už využ&#237;v&#225;te služby uloženky, tak si o &lt;br /&gt;
+registračn&#237; k&#243;d napište na email marketing@ulozenka.cz. V opačn&#233;m &lt;br /&gt;
+př&#237;padě se můžete zaregistrovat zde: http://www.ulozenka.cz/registrace"/>
+		<field name="shopid" type="text" size="30" default="" label="ID Obchodu"
+               description="ID Obchodu"/>
+	    <field name="partners" type="list" size="30" default="1" label="Pouzivat aj partnerske pobocky"  description="">
+			 <option value="1">Ano</option>
+			 <option value="0">Ne</option>
+	    </field>
+		
+		<field name="api_url" type="text" size="30" description="Zadajte testovaciu alebo realnu domenu pre API (vid: docs.ulozenka.apiary.io) Domena nesmie obsahovat ziadne lomitko!" label="API URL"
+               default="api.ulozenka.cz" />
+	
+		<field name="vyberte_pobocku_label" type="text" size="30" description="Text pre Vyberte pobocku." label="Text - vyberte pobocku"
+               default="Vyberte pobocku" />
+
+
+			   
+        <field type="spacer" default="VMSHIPMENT_WEIGHT_COUNTRIES_PLUGIN" level="level1"/>
+       <field name="shipment_logos" type="vmfiles" directory="/images/stories/virtuemart/shipment"
+                        label="VMSHIPMENT_WEIGHT_COUNTRIES_LOGOS"
+                       size="40"
+                       default="" hide_default="1" hide_none="true"
+                       stripext="0" exclude="index.html"
+                       description="VMSHIPMENT_WEIGHT_COUNTRIES_LOGOS_DESC"/>
+       <field name="chyba" type="text" size="10" default="Vyberte prosím pobočku pre Uloženku" label="Text v prípade že nie je vybraná žiadna pobočka."
+               description=""/>
+       
+        <field name="weight_start" type="text" size="10" default="0" label="Zadajte 0.001 v prípade že nechcete aby sa zobrazovala uloženka pre digitálne produkty."
+               description=""/>
+        <field name="weight_stop" type="text" size="10" default="20" label="Zadajte limitnú váhu uloženky a jej partnerov (20kg). Ak košík presiahne túto váhu, vyberte spôsob výpočtu nižšie."
+               description=""/>
+        <field name="weight_unit" type="vmweightunit" size="10" default="KG"
+               label="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_UNIT"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_UNIT_DESC"/>
+        
+		
+		<field name="orderamount_start" type="text" size="10" default=""
+               label="Zadajte limity pre cenu objednávky pre zobrazenie tejto dopravy. Objednávky od: "
+               description="Nechajte prázdne v prípade že nechcete obmedzovať dopravu podľa ceny objednávky"/>
+        
+		<field name="orderamount_stop" type="text" size="10" default=""
+               label="Zadajte limity pre cenu objednávky pre zobrazenie tejto dopravy. Objednávky do: "
+               description="Nechajte prázdne v prípade že nechcete obmedzovať dopravu podľa ceny objednávky"/>
+
+        	   
+        <field name="tax_id" type="vmtaxes" scope="com_virtuemart" label="VMSHIPMENT_WEIGHT_COUNTRIES_TAX"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_TAX_DESC"/>
+       
+		<field name="status_register" type="vmorderstate" scope="com_virtuemart" default="" multiple="multiple"
+                       label="Zaregistrovať balík pri týchto stavoch obj." description=""/>
+					   
+       <field name="home_pobocka" type="pobockyselect" label="Domáca pobočka kde budete nosiť zásielky" />					   
+		
+		<field name="free_start_ulozenka" type="text" label="Bezplatna doprava ak objednavka presiahne tuto sumu (iba pre CZ)"
+               description="Zadajte sumu pre bezplatnú dopravu pre vlastné pobočky uloženky"/>
+		<field name="free_start_partner" type="text" label="Bezplatna doprava ak objednavka presiahne tuto sumu (partner)"
+               description="Zadajte sumu pre bezplatnú dopravu pre partnerov uloženky"/>
+		
+		<field name="free_start_sk" type="text" label="Bezplatna doprava ak objednavka presiahne tuto sumu (slovensko)"
+               description="Zadajte sumu pre bezplatnú dopravu na Slovensko"/>
+		
+	    <field name="single_price" type="text" label="Jednotná cena pre všetky pobočky"
+               description="Dôležité, ak necháte prázdne môžete určovať cenu každej pobočky osobitne (POZOR: VYŽADUJE 256MB RAM}. Ak nastavíte cenu tu, tak všetky pobočku budú mať jednu cenu. "/> 
+			   
+		<field name="single_price_partner" type="text" label="Jednotná cena pre všetky partnerské pobočky"
+               description="Dôležité, ak necháte prázdne môžete určovať cenu každej pobočky osobitne (POZOR: VYŽADUJE 256MB RAM}. Ak nastavíte cenu tu, tak všetky pobočku budú mať jednu cenu. "/> 		
+
+		
+		<field name="dobierka_priplatok" type="text" label="Príplatok za dobierku. V prípade že je vybraná táto uloženka spolu s nižšie vybranými platobnými spôsobmi, bude cena dopravy navýšená o tento príplatok. "/> 	
+		
+		<field name="dobierka_priplatok_limit" type="text" label="Príplatok za dobierku. nebude účtovaný ak hodnota objednávky je vyššia ako zadaná hodnota. "/> 
+		
+	
+		
+		 <field name="cache" type="list" size="30" default="1" label="Pouzivat Cache"  description="(zapnite pre live stranku)">
+			 <option value="1">Ano</option>
+			 <option value="0">Ne</option> 
+	    </field>
+		
+		<field name="strategy" type="list" size="30" default="1" label="Spôsob výpočtu dopravy"  description="Ak presiahne jeden produkt v košiku 20kg, doprava nebude zobrazená. Ak presiahne celková hmotnosť košíku 20kg, tak doprava bude vynásobená počtom balíkov.">
+			 <option value="1">Ak presiahne objednávka 20kg, tak vynásobiť cenu dopravného alikvótne</option>
+			 <option value="0">Nezobrazovať dopravu ak presiahne objednávka 20kg</option>
+	    </field>
+		
+		<field name="currency" type="currencyselect" default="33" label="Mena cien (vid nizsie ceny pre pobocky)"
+                       description="Vyberte v ktorej mene su ceny nizsie"/>
+		<field type="payments" name="cod_payments" multiple="multiple" label="Vyberte dobierky pre ktoré bude účtovaný poplatok za dobierku." description="" />
+		
+		
+		
+		<field name="debug" type="list" size="30" default="0" label="Debug"  description="Zobrazí dodatočné správy">
+			 <option value="1">Ano</option>
+			 <option value="0">Ne</option> 
+	    </field>
+		
+		</fieldset>
+	 
+	 </fields>
+	</vmconfig>
+	
+	
+   <params addpath="/plugins/vmshipment/rupostel_ulozenka/elements" />
+   <params addpath="/administrator/components/com_virtuemart/elements">
+        <param type="vmjpluginwarning"/>
+		<param name="xkey" type="text" size="30" default="" label="Registrační kód Uloženka.cz"
+               description="Modul je možn&#233; využ&#237;vat až na z&#225;kladě registrace na webu &lt;br /&gt;
+www.ulozenka.cz, pokud už využ&#237;v&#225;te služby uloženky, tak si o &lt;br /&gt;
+registračn&#237; k&#243;d napište na email marketing@ulozenka.cz. V opačn&#233;m &lt;br /&gt;
+př&#237;padě se můžete zaregistrovat zde: http://www.ulozenka.cz/registrace"/>
+		<param name="shopid" type="text" size="30" default="" label="ID Obchodu"
+               description="ID Obchodu"/>
+	    <param name="partners" type="list" size="30" default="1" label="Pouzivat aj partnerske pobocky"  description="">
+			 <option value="1">Ano</option>
+			 <option value="0">Ne</option>
+	    </param>
+		
+		 <param name="chyba" type="text" size="10" default="Vyberte prosím pobočku pre Uloženku" label="Text v prípade že nie je vybraná žiadna pobočka."
+               description=""/>
+		
+		<param name="api_url" type="text" size="30" description="Zadajte testovaciu alebo realnu domenu pre API (vid: docs.ulozenka.apiary.io) Domena nesmie obsahovat ziadne lomitko!" label="API URL"
+               default="api.ulozenka.cz" />
+	
+		<param name="vyberte_pobocku_label" type="text" size="30" description="Text pre Vyberte pobocku." label="Text - vyberte pobocku"
+               default="Vyberte pobocku" />
+
+
+			   
+        <param type="spacer" default="VMSHIPMENT_WEIGHT_COUNTRIES_PLUGIN" level="level1"/>
+        <param name="shipment_logos" type="vmfiles" label="VMSHIPMENT_WEIGHT_COUNTRIES_LOGOS"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_LOGOS_DESC"
+               directory="/images/stories/virtuemart/shipment"
+               default="default" hide_default="1" hide_none="1"
+               stripext="0" exclude="^_"/>
+       
+       
+	   <param name="status_register" type="vmorderstate" scope="com_virtuemart" default="" multiple="multiple"
+                       label="Zaregistrovať balík pri týchto stavoch obj." description=""/>
+	   
+        <param name="weight_start" type="text" size="10" default="0" label="Zadajte 0.001 v prípade že nechcete aby sa zobrazovala uloženka pre digitálne produkty."
+               description=""/>
+        <param name="weight_stop" type="text" size="10" default="20" label="Zadajte limitnú váhu uloženky a jej partnerov (20kg). Ak košík presiahne túto váhu, vyberte spôsob výpočtu nižšie."
+               description=""/>
+        <param name="weight_unit" type="vmweightunit" size="10" default="KG"
+               label="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_UNIT"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_UNIT_DESC"/>
+        
+		
+		<param name="orderamount_start" type="text" size="10" default=""
+               label="Zadajte limity pre cenu objednávky pre zobrazenie tejto dopravy. Objednávky od: "
+               description="Nechajte prázdne v prípade že nechcete obmedzovať dopravu podľa ceny objednávky"/>
+        
+		<param name="orderamount_stop" type="text" size="10" default=""
+               label="Zadajte limity pre cenu objednávky pre zobrazenie tejto dopravy. Objednávky do: "
+               description="Nechajte prázdne v prípade že nechcete obmedzovať dopravu podľa ceny objednávky"/>
+
+        	   
+        <param name="tax_id" type="vmtaxes" scope="com_virtuemart" label="VMSHIPMENT_WEIGHT_COUNTRIES_TAX"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_TAX_DESC"/>
+       
+		
+		
+		<param name="free_start_ulozenka" type="text" label="Bezplatna doprava ak objednavka presiahne tuto sumu (ulozenka)"
+               description="Zadajte sumu pre bezplatnú dopravu pre vlastné pobočky uloženky"/>
+		<param name="free_start_partner" type="text" label="Bezplatna doprava ak objednavka presiahne tuto sumu (partner)"
+               description="Zadajte sumu pre bezplatnú dopravu pre partnerov uloženky"/>
+		<param name="free_start_sk" type="text" label="Bezplatna doprava ak objednavka presiahne tuto sumu (slovensko)"
+               description="Zadajte sumu pre bezplatnú dopravu na Slovensko"/>
+		
+		 <param name="home_pobocka" type="pobockyselect" label="Domáca pobočka kde budete nosiť zásielky" />	
+		
+		 <param name="single_price" type="text" label="Jednotná cena pre všetky pobočky"
+               description="Dôležité, ak necháte prázdne môžete určovať cenu každej pobočky osobitne (POZOR: VYŽADUJE 256MB RAM}. Ak nastavíte cenu tu, tak všetky pobočku budú mať jednu cenu. "/> 
+			   
+		<param name="single_price_partner" type="text" label="Jednotná cena pre všetky partnerské pobočky"
+               description="Dôležité, ak necháte prázdne môžete určovať cenu každej pobočky osobitne (POZOR: VYŽADUJE 256MB RAM}. Ak nastavíte cenu tu, tak všetky pobočku budú mať jednu cenu. "/> 
+		
+		 <param name="cache" type="list" size="30" default="1" label="Pouzivat Cache"  description="(zapnite pre live stranku)">
+			 <option value="1">Ano</option>
+			 <option value="0">Ne</option> 
+	    </param>
+		
+		<param name="strategy" type="list" size="30" default="1" label="Spôsob výpočtu dopravy"  description="Ak presiahne jeden produkt v košiku 20kg, doprava nebude zobrazená. Ak presiahne celková hmotnosť košíku 20kg, tak doprava bude vynásobená počtom balíkov.">
+			 <option value="1">Ak presiahne objednávka 20kg, tak vynásobiť cenu dopravného alikvótne</option>
+			 <option value="0">Nezobrazovať dopravu ak presiahne objednávka 20kg</option>
+	    </param>
+		
+		<param name="currency" type="currencyselect" default="33" label="Mena cien (vid nizsie ceny pre pobocky)" description="Vyberte v ktorej mene su ceny nizsie"/>
+		<param type="payments" name="cod_payments" label="Vyberte dobierky pre ktoré bude účtovaný poplatok za dobierku." description="" />
+		
+		
+		
+		
+    </params>
+        
+ 
+	<administration>
+		<!-- <languages>
+			<language tag="en-GB">en-GB.plg_vmshipment_zasilkovna.ini</language>
+        </languages> -->	
+	</administration>
+</extension>

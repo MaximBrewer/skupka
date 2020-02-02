@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>OPC Tracking - Adwords Conversion and Remarketing Code with Google Tag Params</name>
+    <creationDate>Oct 2013</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description><![CDATA[Adwords Tracking With Google Tag Params, REMARKETING ONLY for all pages, REMARKETING DISABLED for purchase, see the code in /components/com_onepage/trackers/php/adwords_conversions.php  Enable to run on all pages.
+	]]></description>
+    <files>
+        <filename>adwords_conversions.php</filename>
+    </files>
+
+<params>
+    
+    
+			<param
+        type="text"
+        name="google_conversion_id"
+        id="google_conversion_id"
+        label="Adwords google_conversion_id"
+        description="Enter your Adwords google_conversion_id"
+        size="80"
+		default=""
+        maxLength="255" />
+		
+		
+		<param
+        type="text"
+        name="google_conversion_label"
+        id="google_conversion_label"
+        label="Adwords conversion label"
+        description="Enter your Adwords label from the conversion code"
+        size="80"
+		default=""
+        maxLength="255" />
+		
+		
+		
+	
+		
+			
+					<param
+        type="text"
+        name="sku_prefix"
+        id="sku_prefix"
+        label="SKU Prefix per your language"
+        description="Enter your SKU prefix"
+        size="80"
+		default=""
+		multilang="multilang"
+        maxLength="255" />
+
+		
+       			<param
+        type="text"
+        name="sku_suffix"
+        id="sku_suffix"
+        label="SKU Suffix per your language"
+        description="Enter your SKU suffix"
+        size="80"
+		default=""
+		multilang="multilang"
+        maxLength="255" />
+		
+		
+       
+    
+</params>	
+</extension>

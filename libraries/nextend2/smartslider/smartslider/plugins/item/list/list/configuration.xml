@@ -1,0 +1,54 @@
+<root>
+    <params name="list-item" label="List item" hidetitle="1">
+        <param name="content" type="textarea" label="Items" default="disc"
+               style2="height: 120px; width: 230px;resize: vertical;"/>
+        <param name="type" type="list" label="List type" translateable="1">
+            <option value="none">None</option>
+            <option value="disc">Disc</option>
+            <option value="square">Square</option>
+            <option value="circle">Circle</option>
+            <option value="decimal">Decimal</option>
+
+            <option value="armenian">Armenian</option>
+            <option value="cjk-ideographic">Cjk-ideographic</option>
+            <option value="decimal-leading-zero">Decimal-leading-zero</option>
+            <option value="georgian">Georgian</option>
+            <option value="hebrew">Hebrew</option>
+            <option value="hiragana">Hiragana</option>
+            <option value="hiragana-iroha">Hiragana-iroha</option>
+            <option value="katakana">Katakana</option>
+            <option value="katakana-iroha">Katakana-iroha</option>
+            <option value="lower-alpha">Lower-alpha</option>
+            <option value="lower-greek">Lower-greek</option>
+            <option value="lower-latin">Lower-latin</option>
+            <option value="lower-roman">Lower-roman</option>
+            <option value="upper-alpha">Upper-alpha</option>
+            <option value="upper-latin">Upper-latin</option>
+            <option value="upper-roman">Upper-roman</option>
+        </param>
+        <param name="font" type="font" previewmode="list" style="item_listliststyle" style2="item_listitemstyle"
+               label="Font" class="n2-hidden">
+            <![CDATA[<ol style="list-style-type: {$('#item_listtype').val()}" class="{styleClassName} {fontClassName}" style="width:{nextend.activeLayer.width()}px;">
+   <li class="{styleClassName2}">Item 1</li>
+   <li class="{styleClassName2}">Item 2</li>
+   <li class="{styleClassName2}">Item 3</li>
+</ol>]]>
+        </param>
+        <param name="liststyle" type="style" previewmode="heading" font="item_listfont" label="List style"
+               class="n2-hidden" style2="item_listitemstyle">
+            <![CDATA[<ol style="list-style-type: {$('#item_listtype').val()}" class="{styleClassName} {fontClassName}" style="width:{nextend.activeLayer.width()}px;">
+   <li class="{styleClassName2}">Item 1</li>
+   <li class="{styleClassName2}">Item 2</li>
+   <li class="{styleClassName2}">Item 3</li>
+</ol>]]>
+        </param>
+        <param name="itemstyle" type="style" previewmode="heading" font="item_listfont" label="Item style"
+               class="n2-hidden" style2="item_listliststyle">
+            <![CDATA[<ol style="list-style-type: {$('#item_listtype').val()}" class="{styleClassName2} {fontClassName}" style="width:{nextend.activeLayer.width()}px;">
+   <li class="{styleClassName}">Item 1</li>
+   <li class="{styleClassName}">Item 2</li>
+   <li class="{styleClassName}">Item 3</li>
+</ol>]]>
+        </param>
+    </params>
+</root>

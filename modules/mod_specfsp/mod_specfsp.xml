@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" method="upgrade">
+	<name>SpecFSP</name>
+	<creationDate>01 2015</creationDate>
+	<author>None</author>
+	<copyright>(C) 2017</copyright>
+	<license>Gnu Gpl</license>
+	<authorEmail>sup@545454.ru</authorEmail>
+	<authorUrl>joomlok.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Module Spec for component TTFsp</description>
+	<files>
+		<filename module="mod_specfsp">mod_specfsp.php</filename>
+		<filename module="mod_specfsp">helper.php</filename>
+		<filename module="mod_specfsp">index.html</filename>
+		<filename module="mod_specfsp">tmpl/index.html</filename>
+		<filename module="mod_specfsp">tmpl/default.php</filename>
+		<folder>elements</folder>
+		<folder>style</folder>		
+	</files>
+	<languages folder="language">
+		<language tag="ru-RU">ru-RU.mod_specfsp.ini</language>
+		<language tag="en-GB">en-GB.mod_specfsp.ini</language>	
+	</languages>	
+	<config>
+	<fields name="params">
+	  <fieldset name="basic" addfieldpath="/modules/mod_specfsp/elements">
+		<field name="office" type="office" default="" label="NAMEOFFICE" description="" />
+		<field name="spec" type="spec" default="" label="NAMESPEC" description="" />
+		<field name="scount" type="text" default="5" label="AMOUNTSPEC" description="" />
+		<field name="desc" type="radio" default="0" label="SHOWDESC" description="">
+			<option value="0">SPECFSP_NO</option>
+			<option value="1">SPECFSP_YES</option>
+		</field>
+		<field name="sspec" type="radio" default="0" label="SHOWSPEC" description="">
+			<option value="0">SPECFSP_NO</option>
+			<option value="1">SPECFSP_YES</option>
+		</field>
+		<field name="comment" type="radio" default="0" label="SHOWCOMMENT" description="">
+			<option value="0">SPECFSP_NO</option>
+			<option value="1">SPECFSP_YES</option>
+		</field>
+		<field name="link" type="radio" default="1" label="LINKSPEC" description="">
+			<option value="0">SPECFSP_NO</option>
+			<option value="1">SPECFSP_YES</option>
+		</field>
+		<field name="button" type="radio" default="0" label="LINKBUTTON" description="">
+			<option value="0">SPECFSP_NO</option>
+			<option value="1">SPECFSP_YES</option>
+		</field>
+		<field name="photo" type="radio" default="0" label="SHOWPHOTO" description="">
+			<option value="0">SPECFSP_NO</option>
+			<option value="1">SPECFSP_YES</option>
+		</field>
+		 <field name="add_link" type="text" default="" label="ADDLINK" description="" />
+		 <field name="text_add_link" type="text" default="" label="TEXTADDLINK" description="" />
+	  </fieldset>
+		</fields>
+		</config>
+</extension>

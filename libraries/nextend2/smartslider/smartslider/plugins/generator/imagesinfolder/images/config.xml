@@ -1,0 +1,21 @@
+<root>
+    <params name="filter" label="Filter">
+        <param name="sourcefolder" label="Source folder" type="folders" style="width: 300px;"/>
+    </params>
+    <params name="options" label="Options" class="n2-expert">
+        <param name="iptc" label="EXIF" type="onoff" default="0"/>
+    </params>
+    <params name="order" label="Order by">
+        <param name="order" type="mixed" label="Order" default="0|*|asc">
+            <param type="list" label="Field" translateable="1">
+                <option value="0">None</option>
+                <option value="1">Filename</option>
+                <option value="2">Creation date</option>
+            </param>
+            <param type="radio" label="order" translateable="1">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

@@ -1,0 +1,13 @@
+ 
+div.mt_input_div {
+ float: left; 
+ clear: none; 
+}
+
+input.mt_input { 
+ /*max-width: 100px; */
+}
+
+td.hide_me {
+ visibility: hidden; 
+}

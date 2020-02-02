@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset></fieldset>
+	<fields name="metadata" label="JGLOBAL_FIELDSET_METADATA_OPTIONS">
+		<fieldset label="JGLOBAL_FIELDSET_METADATA_OPTIONS" name="metadata">
+			<field name="metakey" type="textarea"
+			label="JFIELD_META_KEYWORDS_LABEL" description="JFIELD_META_KEYWORDS_DESC"
+			rows="3" cols="30" />
+
+			<field name="metadesc" type="textarea"
+				label="JFIELD_META_DESCRIPTION_LABEL" description="JFIELD_META_DESCRIPTION_DESC"
+				rows="3" cols="30" />
+		</fieldset>
+	</fields>
+	<fields name="params">
+		<fieldset
+			name="registration_settings"
+			label="Общие настройки"
+			description=""
+			addfieldpath="/administrator/components/com_yandex_maps/models/fields"
+		>
+			<field name="" label="&lt;h3&gt;Источник&lt;/h3&gt;&lt;hr&gt;" type="spacer"  class="text" />
+			<field name="source" label="Источник" type="sources"/>
+			<field name="" type="spacer" label="&lt;h3&gt;Настройки карты&lt;/h3&gt;&lt;hr&gt;" />
+			<field name="template" label="Шаблон" type="files"/>
+			<field
+				name="show_map"
+				type="list"
+				label="Показывать карту&lt;br&gt;на странице карты"
+				description="Показывать карту&lt;br&gt;на странице карты"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="show_map_description"
+				type="list"
+				label="Показывать описание карты&lt;br&gt;на странице карты"
+				description="Показывать описание карты&lt;br&gt;на странице карты"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="" label="&lt;h3&gt;Иконка&lt;/h3&gt;&lt;hr&gt;" type="spacer"  class="text" />
+            <field
+                name="object_iconImageSize"
+                type="xy"
+                label="COM_YANDEX_MAPS_OBJECT_ICONIMAGESIZE"
+            />
+            <field
+                name="object_iconImageOffset"
+                type="xy"
+                label="COM_YANDEX_MAPS_OBJECT_ICONIMAGEOFFSET"
+            />
+            <field name="" label="&lt;hr&gt;" type="spacer"  class="text" />
+            <field
+				name="add_osm_layer"
+				type="list"
+				label="Показывать на карте&lt;br&gt;слой OpenStreetMaps(OSM)"
+				description="Показывать на карте&lt;br&gt;слой OpenStreetMaps(OSM)"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="center_to_user_place"
+				type="list"
+				label="Центрировать карту на&lt;br&gt;местоположение пользователя"
+				description="Центрировать карту на&lt;br&gt;местоположение пользователя"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="auto">Да, провести геолокацию всеми доступными способами и выбрать лучшее значение</option>
+				<option value="browser">Да, использовать встроенную геолокацию браузера</option>
+				<option value="yandex">Да, использовать геолокацию по данным Яндекса на основе ip пользователя</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="show_title_map"
+				type="list"
+				label="Показывать заголовок карты&lt;br&gt;на странице карты"
+				description="Показывать заголовок карты&lt;br&gt;на странице карты"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="map_on_fullscreen"
+				type="list"
+				label="Карта на весь экран"
+				description="Карта на весь экран"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="use_cluster"
+				type="list"
+				label="Объединять метки в &lt;br&gt;кластер при большом&lt;br&gt; количестве меток"
+				description="Объединять метки в кластер при большом количестве меток"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="" label="&lt;h3&gt;Поиск&lt;/h3&gt;&lt;hr&gt;" type="spacer"  class="text" />
+			<field
+				name="use_search_only_in_self_objects"
+				type="list"
+				label="Искать только среди &lt;br&gt;своих объектов"
+				description="Искать только среди &lt;br&gt;своих объектов. Опция позволяет сделать так чтобы стандартный поисковый виджет Яндекс Карт искал только среди объектов на карте"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="map_style"
+				type="text"
+				label="Дополнительные CSS&lt;br&gt;стили для контейнера карты"
+			/>
+
+			<field name="" label="COM_YANDEX_MAPS_BALLOON" type="spacer"  class="text" />
+            <field name="balloon_width" label="COM_YANDEX_MAPS_BALLOON_WIDTH_LABEL" description="COM_YANDEX_MAPS_BALLOON_WIDTH_DESCRIPTION" type="number"/>
+            <field name="balloon_height" label="COM_YANDEX_MAPS_BALLOON_HEIGHT_LABEL" description="COM_YANDEX_MAPS_BALLOON_HEIGHT_DESCRIPTION" type="number"/>
+            <field
+                name="how_open_balloon"
+                type="list"
+                label="COM_YANDEX_MAPS_HOW_OPEN_BALLOON_LABEL"
+                description="COM_YANDEX_MAPS_HOW_OPEN_BALLOON_DESCRIPTION"
+                default=""
+            >
+                <option value="">JDEFAULT</option>
+                <option value="click">COM_YANDEX_MAPS_BALLOON_OPEN_BY_CLICK</option>
+                <option value="dblclick">COM_YANDEX_MAPS_BALLOON_OPEN_BY_DBLCLICK</option>
+                <option value="mouseenter">COM_YANDEX_MAPS_BALLOON_OPEN_BY_HOVER</option>
+                <option value="none">COM_YANDEX_MAPS_BALLOON_NO_OPEN</option>
+            </field>
+            <field
+                name="show_description_in_custom_balloon"
+                type="list"
+                label="COM_YANDEX_MAPS_BALLOON_SHOW_DESCRIPTION_IN_CUSTOM_BALLOON_LABEL"
+                description="COM_YANDEX_MAPS_BALLOON_SHOW_DESCRIPTION_IN_CUSTOM_BALLOON_DESCRIPTION"
+            >
+                <option value="">JDEFAULT</option>
+                <option value="4">COM_YANDEX_MAPS_IN_UP</option>
+                <option value="3">COM_YANDEX_MAPS_IN_DOWN</option>
+                <option value="2">COM_YANDEX_MAPS_IN_LEFT</option>
+                <option value="1">COM_YANDEX_MAPS_IN_RIGHT</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="" label="COM_YANDEX_MAPS_BLOCK_END" type="spacer"  class="text" />
+            <field name="" label="&lt;h3&gt;Фильтр&lt;/h3&gt;&lt;hr&gt;" type="spacer"  class="text" />
+			<field
+				name="show_category_filter"
+				type="list"
+				label="Показывать фильтр&lt;br&gt;по категории"
+				description="Показывать фильтр&lt;br&gt;по категории"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="8">COM_YANDEX_MAPS_IN_UP</option>
+				<option value="7">COM_YANDEX_MAPS_IN_DOWN</option>
+				<option value="6">COM_YANDEX_MAPS_UNDER_OBJECT_LIST</option>
+				<option value="5">COM_YANDEX_MAPS_ABOVE_OBJECT_LIST</option>
+				<option value="4">COM_YANDEX_MAPS_IN_UP_INSIDE</option>
+				<option value="3">COM_YANDEX_MAPS_IN_DOWN_INSIDE</option>
+				<option value="2">COM_YANDEX_MAPS_IN_RIGHT_INSIDE</option>
+				<option value="1">COM_YANDEX_MAPS_IN_LEFT_INSIDE</option>
+				<option value="0">JNO</option>
+			</field>
+            <field
+                name="show_label_filter"
+                type="list"
+                label="COM_YANDEX_MAPS_SHOW_LABEL_FILTER_LABEL"
+                class="btn-group"
+            >
+                <option value="">JDEFAULT</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+			<field
+				name="label_category_filter"
+				type="text"
+				label="Заголовок фильтра"
+				description="Заголовок фильтра"
+			/>
+			<field
+				name="active_categories_in_filter"
+				type="categories"
+				multiple="true"
+				label="Активные категории фильтра"
+				description="В этом списке те категории которые в фильтре будут активны. Т.е. при загрузке карты на них будет стоять галка"
+			/>
+			<field
+				name="categories_in_filter"
+				type="categories"
+				multiple="true"
+				label="Выводить категории фильтра"
+				description="В этом списке те категории которые в будут показаны фильтре"
+			/>
+			<field
+				name="filter_height"
+				type="number"
+				label="Высота фильтра в px"
+			/>
+			<field
+                name="filter_extended_style"
+                type="text"
+                label="COM_YANDEX_MAPS_FILTER_EXTENDED_STYLE_LABEL"
+            />
+            <field
+                name="filter_style"
+                type="list"
+                label="COM_YANDEX_MAPS_FILTER_STYLE_LABEL"
+            >
+                <option value="">JDEFAULT</option>
+                <option value="1">COM_YANDEX_MAPS_FILTER_STYLE_VERTICAL</option>
+                <option value="0">COM_YANDEX_MAPS_FILTER_STYLE_HORIZONTAL</option>
+            </field>
+			<field name="" label="&lt;h3&gt;Список объектов&lt;/h3&gt;&lt;hr&gt;" type="spacer"  class="text" />
+			<field
+				name="show_object_list"
+				type="list"
+				label="Показывать список&lt;br&gt;объектов карты"
+				description="Показывать список&lt;br&gt;объектов карты"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="4">COM_YANDEX_MAPS_IN_UP</option>
+				<option value="3">COM_YANDEX_MAPS_IN_DOWN</option>
+				<option value="2">COM_YANDEX_MAPS_IN_LEFT</option>
+				<option value="1">COM_YANDEX_MAPS_IN_RIGHT</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="show_search_on_map"
+				type="list"
+				label="Показывать строку поиска"
+				description="Показывать строку поиска"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="show_object_intros"
+				type="hidden"
+				label="Показывать список&lt;br&gt;объектов c коротким&lt;br&gt; описанием под картой"
+				description="Показывать список&lt;br&gt;объектов c коротким&lt;br&gt; описанием под картой"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>			
+			<field
+				name="show_select_category"
+				type="list"
+				label="Показывать поле&lt;br&gt;выбора категории"
+				description="Показывать поле&lt;br&gt;выбора категории"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="ratio_map_to_list"
+				type="number"
+				label="Соотношение ширины&lt;br&gt;колонки со списком&lt;br&gt;объектов к колонке&lt;br&gt;с картой (1/12)"
+				description="Соотношение ширины&lt;br&gt;колонки со списком&lt;br&gt;объектов к колонке&lt;br&gt;с картой"
+			/>
+			<field
+				name="save_map_position_in_hash"
+				type="list"
+				label="Сохранять положение &lt;br&gt;карты в hash адресе"
+				description="Сохранять положение карты в hash адресе"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="show_link_open_in_yandex_maps"
+				type="list"
+				label="Показывать ссылку&lt;br&gt;Открыть в Яндекс Картах"
+				description="Показывать ссылку&lt;br&gt;Открыть в Яндекс Картах"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="" label="&lt;h3&gt;Добавление нового объекта&lt;/h3&gt;&lt;hr&gt;" type="spacer"  class="text" />
+			<field
+				name="show_btn_add_new_object"
+				type="list"
+				label="Показывать кнопку&lt;br&gt;Добавить объект"
+				description="Показывать кнопку&lt;br&gt;Добавить объект"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="" type="spacer" label="Настройки Добавления новых объектов" />
+			<!-- Возможность добавлять свои метки для пользователей!-->
+			<field
+				name="registration_organization_active"
+				type="list"
+				label="Пользователи могут &lt;br&gt;регистрировать свои метки"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+				<option value="2">Только зарегестрированные</option>
+			</field>
+			<!-- Сообщать о новом объекте администратору!-->
+			<field
+				name="registration_organization_send_notification_to_admin"
+				type="list"
+				label="Сообщать о новом&lt;br&gt;объекте администратору"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<!-- Премодерация | постмодерация!-->
+			<field name="" type="spacer" hr="true" />
+			<!-- Премодерация | постмодерация!-->
+			<field
+				name="registration_organization_moderation"
+				type="list"
+				label="Как осуществлять&lt;br&gt;модерацию"
+				description="Если постмодерация - метки будут добавлены на сайт только после того  как вы поставите им галочку Активен. При постмодерации - метки будут публиковаться автоматически."
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="0">Премодерация</option>
+				<option value="1">Постмодерация</option>
+			</field>
+			<!-- Категория!-->
+			<field name="" type="spacer" hr="true" />
+			<field
+				name="registration_organization_category_source"
+				type="list"
+				label="Катгория будет взята"
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="0">Автоматически</option>
+				<option value="1">Выбранная ниже</option>
+			</field>
+			<field
+				name="registration_organization_category_id"
+				type="categorybymap"
+				label="Категория для вставки"
+			/>
+			<!-- Выбор иконки!-->
+			<field name="" type="spacer" hr="true" />
+			<field
+				name="registration_organization_icon"
+				type="list"
+				label="Предлагать выбор &lt;br&gt;иконки"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_icon_some_file"
+				type="list"
+				label="Предлагать выбор &lt;br&gt;любого изображения &lt;br&gt;для иконки"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_icon_some_file_size"
+				type="xy"
+				label="Размер иконки&lt;br&gt;к которому будет &lt;br&gt;приведено закаченное фото"
+			/>
+			<!-- Название организации!-->
+			<field name="" type="spacer" hr="true" />
+			<field
+				name="registration_organization_form"
+				type="list"
+				label="Организационно-правовая&lt;br&gt; форма"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_name"
+				type="list"
+				label="Название организации"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<!-- Руководитель организации!-->
+			<field name="" type="spacer" hr="true" />
+			<field
+				name="registration_organization_lider_fio"
+				type="list"
+				label="ФИО руководителя&lt;br&gt; организации"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_lider_position"
+				type="list"
+				label="Должность руководителя&lt;br&gt; организации"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_acting_basis"
+				type="list"
+				label="Действует на основании"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_acting_basis_number"
+				type="list"
+				label="Действует на &lt;br&gt;основании:Номер"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_acting_basis_date"
+				type="list"
+				label="Действует на &lt;br&gt;основании:Дата"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<!-- Тип организации!-->
+			<field name="" type="spacer" hr="true" />
+			<field
+				name="registration_organization_type"
+				type="list"
+				label="Торговая марка"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_type_variants"
+				type="textarea"
+				label="Тип организации"
+				description="Типы организации  через запятую"
+				class="span4"
+			/>
+			<field
+				name="registration_organization_trademark"
+				type="list"
+				label="Торговая марка"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<!-- Контактное лицо -->
+			<field name="" type="spacer" hr="true" />
+			<field
+				name="registration_organization_contact_fio"
+				type="list"
+				label="ФИО контактного&lt;br&gt; лица"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_contact_phone"
+				type="list"
+				label="Телефон контактного&lt;br&gt; лица"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_phone_format"
+				type="text"
+				label="Формат телефона"
+				description=""
+			/>
+			<field
+				name="registration_organization_contact_position"
+				type="list"
+				label="Должность контактного&lt;br&gt; лица"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<!-- Местоположения -->
+			<field name="" type="spacer" hr="true" />
+			<field
+				name="registration_organization_address_input_view"
+				type="list"
+				label="Вид ввода адреса"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="1">В одну строку</option>
+				<option value="0">Отдельные поля</option>
+			</field>
+			<field
+				name="registration_organization_legal_address"
+				type="list"
+				label="Запрашивать юридический&lt;br&gt; адрес"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_address"
+				type="list"
+				label="Запрашивать фактический&lt;br&gt; адрес"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_address_zip"
+				type="list"
+				label="Запрашивать индекс"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_address_city"
+				type="list"
+				label="Запрашивать населенный&lt;br&gt; пункт"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_address_street"
+				type="list"
+				label="Запрашивать улицу"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_address_building"
+				type="list"
+				label="Запрашивать номер&lt;br&gt; дома"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_fact_and_legal_equal"
+				type="list"
+				label="Показывать переключатель:&lt;br&gt; Фактический совпадают&lt;br&gt; с юридическим"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			
+			<field
+				name="registration_organization_use_addres_position"
+				type="list"
+				label="Использовать координаты &lt;br&gt;из адреса для позиционирования&lt;br&gt; объекта на карте"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<!-- Телефон для справок -->
+			<field name="" type="spacer" hr="true" />
+			<field
+				name="registration_organization_phone"
+				type="list"
+				label="Телефон для справок"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<!-- График работы -->
+			<field name="" type="spacer" hr="true" />
+			<field
+				name="registration_organization_self_schedule"
+				type="list"
+				label="Заполнять график работы &lt;br&gt;вручную&lt;br&gt; в текстовое поле"
+				description=""
+			>
+				<option value="">JDEFAULT</option>
+				<option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_shedule_24"
+				type="list"
+				label="Запрашивать &lt;br&gt;круглосуточный&lt;br&gt; ли магазин"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_shedule_days"
+				type="list"
+				label="Рабочие дни"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_start_in"
+				type="list"
+				label="Если не круглосуточный&lt;br&gt; то со скольки&lt;br&gt; до скольки"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<!-- Доставка -->
+			<field name="" type="spacer" hr="true" />
+			<field
+				name="registration_organization_service_delivery"
+				type="list"
+				label="Запрашивать есть&lt;br&gt; ли доставка"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_service_delivery_variants"
+				type="list"
+				label="Если есть доставка&lt;br&gt; запрашивать варианты"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_service_delivery_variants_list"
+				type="text"
+				label="Варианты доставки"
+				description=""
+			/>
+			
+			<!-- Лицензия -->
+			<field name="" type="spacer" hr="true" />
+			<field
+				name="registration_organization_license_number"
+				type="list"
+				label="Запрашивать номер&lt;br&gt; лицензии"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_license_date"
+				type="list"
+				label="Запрашивать дату&lt;br&gt; выдачи лицензии"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<!-- Банковские реквизиты -->
+			<field name="" type="spacer" hr="true" />
+			<field
+				name="registration_organization_bank"
+				type="list"
+				label="Запрашивать банковские&lt;br&gt; риквизиты"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_bank_inn"
+				type="list"
+				label="Запрашивать ИНН"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_bank_kpp"
+				type="list"
+				label="Запрашивать КПП"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_bank_rs"
+				type="list"
+				label="Запрашивать р/с"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_bank_name"
+				type="list"
+				label="Запрашивать Название&lt;br&gt; банка"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_bank_ks"
+				type="list"
+				label="Запрашивать к/с"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_bank_bik"
+				type="list"
+				label="Запрашивать БИК"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			
+			<!-- Дополнительная информация -->
+			<field name="" type="spacer" hr="true" />
+			<field
+				name="registration_organization_aditional_info"
+				type="list"
+				label="Запрашивать Дополнительная&lt;br&gt; информацию"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Только если не зарегестрирован</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_email"
+				type="list"
+				label="Запрашивать email"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="3">Да - обязательно  если не зарегестрирован</option>
+				<option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_website"
+				type="list"
+				label="Запрашивать адрес&lt;br&gt; сайта"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_image"
+				type="list"
+				label="Запрашивать логотип"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_image_size"
+				type="xy"
+				label="Размер &lt;br&gt;к которому будет &lt;br&gt;приведено закаченное фото"
+			/>
+			<field
+				name="registration_organization_info"
+				type="list"
+				label="Запрашивать дополнительно&lt;br&gt; текстовое описание"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="2">Да - обязательное</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_info_size"
+				type="number"
+				label="Максимальный размер&lt;br&gt; текста"
+				description=""
+				class="btn-group"
+			/>
+			<field
+				name="registration_organization_password1"
+				type="list"
+				label="Запрашивать ввод&lt;br&gt; пароля"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="1">Да - обязательное  если не зарегестрирован</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_password2"
+				type="list"
+				label="Запрашивать повторный&lt;br&gt; ввод пароля"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="1">Да - обязательное  если не зарегестрирован</option>
+				<option value="0">JNO</option>
+			</field>
+			<!-- Согласие с условиями -->
+			<field name="" type="spacer" hr="true" />
+			<field
+				name="registration_organization_oferta"
+				type="list"
+				label="Запрашивать Согласие&lt;br&gt; с условиями оферты"
+				description=""
+				class="btn-group"
+			>
+				<option value="">JDEFAULT</option><option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="registration_organization_oferta_link"
+				type="text"
+				label="Ссылка на договор&lt;br&gt; оферты"
+				description=""
+				class="btn-group"
+			/>
+		</fieldset>
+			<fieldset
+			name="wdm_nearest_objects"
+			label="Виджет Ближайшие объекты"
+			description=""
+			addfieldpath="/administrator/components/com_yandex_maps/models/fields"
+		>
+			
+			
+			<field name="" label="Доступно только в PRO версии компонента.&lt;br&gt;&lt;a target='_blank' href='https://xdan.ru/komponent-yandeks-karty-dlya-joomla.html#download'&gt;Перейти на PRO&lt;/a&gt;" type="spacer"  class="text" />
+			
+		</fieldset>
+	</fields>
+</form>

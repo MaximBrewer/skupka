@@ -1,0 +1,18 @@
+
+# Notes:
+# - The hash-sign (#) is a comment character, but only if it's the first non-blank char on a line
+# - The equal-sign (=) when the default value is empty, is optional
+# - Constant values can be used by enclosing them in curly brackets ({}), eg:
+	# some_path_value={JPATH_ROOT}{DS}virtuemart{DS}somewhere
+
+[config]
+##General Settings
+default_expiration=0
+default_limit=0
+
+##Product Settings
+product_expiration=1209600
+product_limit=5
+order_states=array:C|S
+direct_link=1
+info_format=<br />[link]{download_name}<br />[/link]Size: {file_size}<br />File Name: {file_name}<br />Type: {file_type}<br />Path: {file_path}<br />Expires: {expiration}<br />Limit: {limit}<br />Count: {count}<br />Remaining: {remaining}<br />Code: {code}<br />

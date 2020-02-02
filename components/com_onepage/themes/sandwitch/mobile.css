@@ -1,0 +1,202 @@
+@media (max-width: 850px ){
+div#vmMainPageOPC  div#virtuemart_state_id_div{
+	margin-top:-15px;
+}
+div#vmMainPageOPC  div#socialNumber_div{
+	margin-top:-15px;
+}
+}
+@media (min-width:760px) and (max-width:900px) {
+div#vmMainPageOPC  div.formLabel label {
+	white-space: normal;
+	width: 150px;
+	margin-top: -8px;
+}
+}
+
+@media screen and (min-width: 100px) and (max-width: 700px) {
+div#title_input select, div#shipto_title_input select {
+ width: 100%; 
+}
+div#vmMainPageOPC div.formLabel  {
+ float: left; 
+ clear: both; 
+ position: relative; 
+ margin-bottom: 10px; 
+ width: 100%; 
+}
+div#vmMainPageOPC div.formField, div#vmMainPageOPC div.field_selects {
+ top: auto !important; 
+ left: 0; 
+ float: left; 
+ clear: both; 
+ margin-bottom: 10px; 
+ width: 95%; 
+ 
+}
+div#vmMainPageOPC div.field_selects select, div#vmMainPageOPC div.field_selects input {
+ float: left; 
+}
+
+div#vmMainPageOPC div.opc_menu {
+ width: 100%; 
+ clear: both; 
+ position: relative; 
+ height: 40px; 
+}
+div#vmMainPageOPC div.opc_top_inner {
+ width: 100%; 
+ clear: both; 
+ margin: 0; 
+ 
+}
+div#onepage_main_div .opc_section {
+  width: 100%; 
+}
+#onepage_main_div div.menu_overflow {
+ width: 33%; 
+ position: relative; 
+ float: left; 
+ clear: none; 
+ margin: 0 !important; 
+ height: 42px; 
+}
+div#vmMainPageOPC div.opc_menu_item {
+  margin-top: 0px !important; 
+}
+div#vmMainPageOPC  div.visitor_arrow, div#vmMainPageOPC div.opc_arrow_white, div#vmMainPageOPC  div.business_arrow, div#vmMainPageOPC  div.login_arrow, div#vmMainPageOPC  div.opc_arrow {
+ display: none; 
+}
+div.opc_menu_active, div.opc_heading {
+ 
+}
+div#vmMainPageOPC input#coupon_code {
+ margin: 0; 
+ width: 49%; 
+ float: left; 
+ min-width: auto; 
+ padding: 0; 
+ height: 28px; 
+}
+div#vmMainPageOPC div.coupon_wrapper {
+  width: 100%; 
+  position: relative; 
+  clear: both; 
+}
+div#vmMainPageOPC div.coupon_text_field div.formField {
+ position: relative; 
+ right: auto; 
+ left: auto; 
+}
+div#vmMainPageOPC div.coupon_wrapper div.formField, div#vmMainPageOPC div.coupon_wrapper div.formField {
+position: relative; 
+}
+
+button#submit_coupon_button {
+  max-width: 50%; 
+  float: left; 
+  
+}
+#vmMainPageOPC #basket_container div.qlabel {
+ display: none; 
+}
+#vmMainPageOPC #basket_container div.ulabel input.inputbox {
+  position: relative; 
+  
+}
+#vmMainPageOPC #basket_container div.dlabel a {
+ position: relative; 
+ float: left; 
+ margin: 0; 
+ left: auto; 
+ clear: both; 
+}
+#vmMainPageOPC #basket_container input.updatebtn {
+ float: left; 
+ clear: left; 
+ position: relative; 
+ 
+}
+div.op_col7 div.div2 div span {
+ min-width: 120px; 
+}
+div#vmMainPageOPC .opc_login .opc_inside {
+ padding-bottom: 30px; 
+}
+#basket_container div.vertical_line {
+ display: none; 
+}
+
+div.op_col1 img {
+    filter: alpha(opacity=20);
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+	opacity:0.4;
+	
+}
+div.op_col1 {
+ position: absolute; 
+ left: 0; 
+}
+div.op_col1 img.resize{
+    width: 200px; /* you can use % */
+    height: auto;
+}
+div#basket_container div.op_basket_row  div.op_col7 {
+ float: right; 
+}
+
+div.totals {
+  position: absolute; 
+}
+div.op_col1_4 div {
+ position: relative; 
+ top: 0px; 
+}
+div#basket_container div.op_basket_row div.op_col5_3 {
+  position: absolute; 
+  width: auto; 
+  right: 0px; 
+}
+
+#onepage_main_div div.opc_menu_item {
+ width: 100%; 
+}
+div.opc_menu_active, div.opc_menu_inactive  {
+ text-indent: 0px; 
+}
+#onepage_main_div div.opc_menu_item button {
+ text-align: center; 
+ 
+}
+div#div#vmMainPageOPC div.formField {
+ width: 100%; 
+ 
+}
+div#vmMainPageOPC div.opc_inside {
+ float: left; 
+ clear: both; 
+ width: 100%; 
+ box-sizing: border-box; 
+}
+div#vmMainPageOPC  div.field_wrapper.password div, div#vmMainPageOPC  div.field_wrapper.password2 div,div#vmMainPageOPC  div#username_div, div#vmMainPageOPC  div#username_input {
+ width: 95%; 
+ float: left; 
+ clear: both; 
+ left: 0; 
+ position: static; 
+
+ }
+
+div#vmMainPageOPC  div.field_wrapper.password label, div#vmMainPageOPC  div.field_wrapper.password2 label,div#vmMainPageOPC  div#username_div label,
+div#vmMainPageOPC  div.field_wrapper.password input, div#vmMainPageOPC  div.field_wrapper.password2 input,div#vmMainPageOPC  div#username_input input,div#vmMainPageOPC    input#opc_password_field,div#vmMainPageOPC   input#opc_password2_field {
+ width: 100%; 
+ float: left; 
+ clear: both; 
+ left: 0; 
+ position: static; 
+
+}
+
+}

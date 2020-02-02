@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="vmshipment" method="upgrade">
+	<!--  The extension commercial name: make it different form others at JED http://extensions.joomla.org/-->
+	<name>RuposTel SendCloud</name>
+	<element>rupostel_sendcloud</element>
+	<!-- The following elements are optional and free of formatting constraints --> 
+	<!-- Original creation date. Recommended: YYYY-MM-DD -->
+	<creationDate>2013-06-02</creationDate>
+	<author>RuposTel.com</author>
+	<authorEmail>sendcloud@rupostel.com</authorEmail>
+	<authorUrl>http://www.rupostel.com/</authorUrl>
+	<copyright>(c) RuposTel.com</copyright>
+	<license>GPL</license>
+	<!--  The version string is recorded in the components table -->
+	<version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+	<!--  The date for the actual version release -->
+	<releaseDate>2014-07-02</releaseDate>
+	<!--  Type of release: Bug fix, Security Fix, Minor update, Major update -->
+	
+	
+	<!-- The description is optional and defaults to the name -->
+	<description>Sendcloud.nl for Virtuemart by RuposTel.com</description>
+
+	
+    <files>
+		
+		
+		
+		<filename >helper.php</filename>
+		<filename >sendcloud.cert</filename>
+		<filename >SendCloudApi.php</filename>
+		<filename >index.html</filename>
+		<filename plugin="rupostel_sendcloud">rupostel_sendcloud.php</filename>
+		
+		<folder >fields</folder>
+		<folder >labels</folder>
+		
+    </files> 
+	<vmconfig>
+	  <fields addpath="/administrator/components/com_virtuemart/fields" />
+	 <fields name="params" >
+	 <fieldset name="rupostel_sendcloud" addfieldpath="/plugins/vmshipment/rupostel_sendcloud/fields" >
+	       
+		
+		<field name="api_key" type="text" size="30" default="" label="API Key"
+               description="API KEY" />
+		
+		<field name="api_secret" type="text" size="30" default="" label="API Secret"
+               description="API KEY"/>
+		
+	    <field name="is_live" type="list" size="30" default="1" label="Is live or sandbox account"  description="">
+			 <option value="1">Live</option>
+			 <option value="0">Sandbox</option>
+	    </field>
+		
+		
+
+			   
+        <field type="spacer" default="VMSHIPMENT_WEIGHT_COUNTRIES_PLUGIN" level="level1"/>
+         <field name="shipment_logos" type="vmfiles" multiple="true" directory="/images/stories/virtuemart/shipment"
+                       hide_none="1" label="VMSHIPMENT_WEIGHT_COUNTRIES_LOGOS"
+                       size="40"
+                       description="VMSHIPMENT_WEIGHT_COUNTRIES_LOGOS_DESC"/>
+       
+        <field type="sendcloudshipping" name="sendcloudshipping" label="Choose Sendcloud Shipping method." description="Configure only one method per VM plugin." />
+        <field name="weight_start" type="text" size="10" default="0" label="Weight start"
+               description=""/>
+        <field name="weight_stop" type="text" size="10" default="20" label="Weight stop."
+               description=""/>
+        <field name="weight_unit" type="vmweightunit" size="10" default="KG"
+               label="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_UNIT"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_UNIT_DESC"/>
+        
+		
+		<field name="orderamount_start" type="text" size="10" default=""
+               label="Order amount start"
+               description=""/>
+        
+		<field name="orderamount_stop" type="text" size="10" default=""
+               label="Order amount stop"
+               description=""/>
+
+        	   
+        <field name="tax_id" type="vmtaxes" scope="com_virtuemart" label="VMSHIPMENT_WEIGHT_COUNTRIES_TAX"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_TAX_DESC"/>
+       
+		<field name="status_register" type="vmorderstate" scope="com_virtuemart" default="" multiple="multiple"
+                       label="Register Parcel automatically at these order statuses" description=""/>
+					   
+
+ <field name="reqshipping" type="list" size="30" default="0" label="Request tracking ID when registering"  description="If you enable automatic registration of the shipment per order status, choose if the labels and tracking code should be automaticalyl generated. This will make the parcel uneditable and you will not be able to change userdata once tracking is requested.">
+			 <option value="1">Yes</option>
+			 <option value="0">No</option> 
+	    </field>
+					   
+		
+		<field name="free_start_sendcloud" type="text" label="Free shipping above this order subtotal"
+               description="Set an amount for free shipping when used with this method"/>
+		
+			   
+	    <field name="single_price" type="text" label="Override price returned"
+               description="Set a default price for this shipping method."/> 
+			   
+		<field name="code_price" type="text" label="Cash on delivery, Add this amount to the shipping costs."
+               description="Add this sum to the shipping costs when a COD payemnt is detected."/> 
+		   
+			   
+		 <field name="cache" type="list" size="30" default="1" label="Use Cache"  description="">
+			 <option value="1">Yes</option>
+			 <option value="0">No</option> 
+	    </field>
+		
+		<field name="strategy" type="list" size="30" default="1" label="Shipping strategy"  description="Set what happends if the weight is larger than maximum supported weight.">
+			 <option value="1">Multiply the price</option>
+			 <option value="0">Do not display this method</option>
+	    </field>
+		
+		
+		<field type="payments" name="cod_payments" multiple="multiple" label="Choose your Cash on delivery payments." description="" />
+		
+		<field name="countries" type="vmcountries" multiple="true" scope="com_virtuemart" default=""
+                       label="VMSHIPMENT_WEIGHT_COUNTRIES_COUNTRIES" description="List of countries must be a subset of the countries available per the selected service"/>
+		
+		
+		 <field name="debug" type="radio" default="0" label="Debug (displayes error messages)">
+                    <option value="0">COM_VIRTUEMART_NO</option>
+                    <option value="1">COM_VIRTUEMART_YES</option>
+                </field>
+		</fieldset>
+	 
+	 </fields>
+	</vmconfig>
+	
+	
+        
+ 
+	<administration>
+		<!-- <languages>
+			<language tag="en-GB">en-GB.plg_vmshipment_zasilkovna.ini</language>
+        </languages> -->	
+	</administration>
+</extension>

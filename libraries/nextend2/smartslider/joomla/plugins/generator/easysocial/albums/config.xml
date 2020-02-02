@@ -1,0 +1,29 @@
+<root>
+    <params name="easysocialitems" label="Filter">
+        <param type="group" label="Source">
+            <param name="easysocialgroups" label="Groups" type="easysocialgroups" default="0" multiple="1"
+                   size="10"/>
+            <param name="easysocialevents" label="Events" type="easysocialevents" default="0" multiple="1"
+                   size="10"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="featured" label="Featured images" type="filter" default="0"/>
+            <param name="albumtitle" label="Album title" type="text" default="*"/>
+            <param name="avatarandcover" label="Include avatar and cover images" type="onoff" default="0"/>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="easysocialorder" type="mixed" label="Order" default="created|*|asc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="title">Title</option>
+                <option value="created">Creation time</option>
+                <option value="id">ID</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

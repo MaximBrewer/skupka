@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade" client="site">
+	<name>MOD_WIDGET</name>
+	<creationDate>MAY 2016</creationDate>
+	<author>Team WDMtech</author>
+	<authorEmail>support@wdmtech.com</authorEmail>
+	<authorUrl>http://www.wdmtech.com</authorUrl>
+	<copyright>Copyright (C) 2016 www.wdmtech.com. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0.0</version>
+	<description>MOD_WIDGET_DESCR</description>
+	<files>
+		<filename module="mod_widget">mod_widget.php</filename>
+		<filename>helper.php</filename>
+		<filename>mod_widget.xml</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="widget" required="true" type="sql" label="MOD_WIDGET_LABEL" query="SELECT id, name  FROM #__vd_widget where id!=19 ORDER BY name " 
+ key_field="id"  value_field="name" description="MOD_WIDGET_LABEL_DESC" />
+               
+				</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" default="" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+			<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+			  <option value="1">JGLOBAL_USE_GLOBAL</option>
+			  <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+			</field>
+			<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+			<field name="cachemode" type="hidden" default="itemid">
+			  <option value="itemid"/>
+			</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,148 @@
+@media (max-width: 700px) { 
+
+div#basket_coupon {
+ width: 100%; 
+ clear: both; 
+}
+
+#vmMainPageOPC .opc_basket_bottom #basket_discount {
+ width: 100%; 
+ float: left; 
+ clear: both; 
+}
+#vmMainPageOPC .shipping_section {
+ width: 100%; 
+}
+
+#vmMainPageOPC .shippingwrap.op_inside {
+	width: 100%; 
+	float: left; 
+	clear: left; 
+}
+#vmMainPageOPC  div.bottom_notice {
+ float: left; 
+ clear: both; 
+ width: 100%; 
+ margin: 0; 
+ margin-top: 10px; 
+}
+
+#vmMainPageOPC .checkout_button_wrap .checkout_button, #vmMainPageOPC div#loginbtnfield .login_button {
+ width: 100%; 
+ max-width: 100%; 
+}
+
+#vmMainPageOPC div#loginbtnfield .login_button {
+ display: block; 
+ 
+  
+ text-align: center; 
+ margin-left: auto; 
+ margin-right: auto; 
+}
+#vmMainPageOPC .opc_basket_bottom .shipping_section {
+ width: 80%; clear: both; float: left; margin: 0; padding: 0; 
+}
+#vmMainPageOPC div#basket_container #cart_header .op_col6 {
+	margin-left: -20px; 
+}
+#vmMainPageOPC .return_to_cart, #onepage_submit_section,#vmMainPageOPC #onepage_submit_section, #vmMainPageOPC .payment_info { width: 100%; float: left; clear: both; }
+#vmMainPageOPC .align_bottom { position: static; }
+#vmMainPageOPC #onepage_submit_section > input {
+display: block; 
+float: right; 
+width: 80%; 
+clear: both; 
+margin-left: auto; 
+margin-right: auto; 
+}
+#onepage_submit_section {
+
+}
+#vmMainPageOPC .right_section {
+ float: left; clear: both; 
+ width: 100%; 
+ margin: 0; padding: 0; 
+}
+#vmMainPageOPC .opc_payment_wrapper, #vmMainPageOPC  .shipping_name_wrap, #vmMainPageOPC div.bottom_totals {
+ float: left; 
+ clear: both; 
+ width: 100%; 
+ margin:0; padding: 0; 
+ position: static; 
+}
+#vmMainPageOPC div.bottom_totals { width: 100%; }
+#vmMainPageOPC div.left_section {
+ margin:0; padding: 0; width: 100%; 
+}
+#vmMainPageOPC span.shipping_name_span, #vmMainPageOPC span.shipping_name_position { 
+width: 50%; 
+}
+
+#vmMainPageOPC .op_col1 { display: none; }
+
+#vmMainPageOPC button.btn_for_mobiles { 
+display: block !important; 
+}
+#vmMainPageOPC div#basket_container a.deletebtn { display: none; }
+#vmMainPageOPC button.close { 
+font-size: 50px; 
+float: left; 
+color: white; 
+} 
+#vmMainPageOPC span.vmCartShipmentLogo, #vmMainPageOPC span.vmshipment { width: 100%; }
+#vmMainPageOPC span.vmCartShipmentLogo img { float: right; }
+#vmMainPageOPC button:hover, #vmMainPageOPC button:active { background: none; 
+background-color: transparent !important;}
+#vmMainPageOPC span {
+ float: left; 
+ width: auto; 
+}
+
+#vmMainPageOPC .my_relative, #vmMainPageOPC .payment_and_totals, #vmMainPageOPC .relative, #vmMainPageOPC .absolute {
+ position: static; 
+}
+
+#vmMainPageOPC .loginarea, #vmMainPageOPC span.lost_pwd {
+  width: 100% !important; 
+  max-width: 100% !important; 
+  float: left; 
+  clear: both;   
+}
+#vmMainPageOPC span.lost_pwd a {
+  text-align: center; 
+}
+
+#vmMainPageOPC div#loginbtnfield {
+ width: 100%; 
+ float: left; 
+ clear: both; 
+ margin: 0; padding: 0; 
+}
+#vmMainPageOPC #basket_coupon, #vmMainPageOPC .opc_basket_bottom .shipping_section {
+  display: inline-block; 
+  white-space: initial; 
+  min-height: 0; 
+}
+
+#vmMainPageOPC div#basket_container .op_col8 {
+  display: none; 
+}
+#vmMainPageOPC div#basket_container .op_col7 {
+ width: 30%; 
+
+}
+
+#vmMainPageOPC div#basket_container .op_col7 .opc_price_general {
+  text-align: right; 
+ float:right; 
+}
+#vmMainPageOPC .checkout_button_wrap.cwrap2 {
+  display: block; 
+}
+#vmMainPageOPC .checkout_button_wrap.cwrap1 {
+  display: none; 
+}
+
+
+}

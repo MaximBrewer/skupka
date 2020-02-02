@@ -1,0 +1,32 @@
+<root>
+  <params name="image-item" label="Image item settings" hidetitle="1">
+    <param name="image" type="image" label="Image" default="" fixed="1" style="width:236px;" alt="item_imagealt"/>
+    <param name="link" type="mixed" default="#|*|_self">
+      <param type="url" label="Link" style="width:236px;"/>
+      <param type="list" label="Target" translateable="1">
+        <option value="_self">Self</option>
+        <option value="_blank">Blank</option>
+      </param>
+      <param type="list" label="Rel">
+        <option value=""/>
+        <option value="nofollow">nofollow</option>
+        <option value="noreferrer">noreferrer</option>
+        <option value="author">author</option>
+        <option value="external">external</option>
+        <option value="help">help</option>
+      </param>
+    </param>
+    <param type="group">
+      <param name="alt" type="text" label="Alt" style="width:125px;" default=""/>
+      <param name="title" type="text" label="Title" default="" style="width:125px;"/></param>
+    <param type="group" class="n2-expert">
+      <param name="size" type="mixed" default="auto|*|auto">
+        <param type="text" style="width:60px;" label="Width"/>
+        <param type="text" style="width:60px;" label="Height"/></param>
+      <param type="onoff" name="image-optimize" label="Optimize" default="1"/></param>
+    <param name="style" type="style" previewmode="box" label="Style" class="n2-hidden">
+      <![CDATA[<div class="{styleClassName}" style="width:{nextend.activeLayer.width()}px;height:{nextend.activeLayer.height()}px;"><img style="width:100%;" src="{nextend.imageHelper.fixed($('#item_imageimage').val())}" /></div>]]>
+    </param>
+    <param name="cssclass" type="text" label="CSS Class" default="" style="width:174px;" class="n2-expert"/>
+  </params>
+</root>

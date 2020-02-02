@@ -1,0 +1,1 @@
+<?php die("Access Denied"); ?>#x#a:2:{s:6:"result";s:111:"<option   value="36">Категория 1</option><option   value="37"> - Подкатегория 1-1</option>";s:6:"output";s:0:"";}

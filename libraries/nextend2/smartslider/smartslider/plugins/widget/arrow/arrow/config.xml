@@ -1,0 +1,13 @@
+<root>
+  <params name="widgetsarrow" label="" hidetitle="1">
+    <param name="widgetarrow" ajaxurl="slider/renderform" type="widgetpluginmatrix" label="Arrow" group="sswidgetarrow" method="arrow" file="config.xml" default="imageEmpty"/>
+    <param type="group" label="Display" class="n2-expert">
+      <param name="widget-arrow-display-desktop" type="onoff" label="Desktop" default="1"/>
+      <param name="widget-arrow-display-tablet" type="onoff" label="Tablet" default="1"/>
+      <param name="widget-arrow-display-mobile" type="onoff" label="Mobile" default="1"/>
+      <param name="widget-arrow-exclude-slides" type="text" label="Hide on slides" default="" tip="List the slides separated by commas on which you want the controls to be hidden."/></param>
+    <param type="group" label="Shows on">
+      <param name="widget-arrow-display-hover" type="onoff" label="Hover" default="0"/></param>
+  </params>
+  <params name="widget-arrow-placeholder" label="Slider Type placeholder" id="nextend-widgetarrow-panel" type="placeholder"></params>
+</root>

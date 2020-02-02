@@ -1,0 +1,34 @@
+<root>
+    <params name="area-item" hidetitle="1">
+        <param name="image" type="image" label="Image" default="" fixed="1" style="width:236px;"/>
+        <param type="group">
+            <param name="fillmode" type="list" label="Fill mode" default="cover">
+                <option value="cover">Cover</option>
+                <option value="contain">Contain</option>
+            </param>
+            <param type="group" label="Background position">
+                <param name="positionx" type="number" default="50" style="width:22px;">
+                    <unit>%</unit>
+                </param>
+                <param name="positiony" type="number" default="50" style="width:22px;">
+                    <unit>%</unit>
+                </param>
+            </param>
+        </param>
+        <param name="link" type="mixed" default="#|*|_self">
+            <param type="url" label="Link" style="width:236px;"/>
+            <param type="list" label="Target" translateable="1">
+                <option value="_self">Self</option>
+                <option value="_blank">Blank</option>
+            </param>
+            <param type="list" label="Rel">
+                <option value=""></option>
+                <option value="nofollow">nofollow</option>
+                <option value="noreferrer">noreferrer</option>
+                <option value="author">author</option>
+                <option value="external">external</option>
+                <option value="help">help</option>
+            </param>
+        </param>
+    </params>
+</root>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="2.5" type="template" client="site" method="upgrade">
+	<name>opc_template_positions</name>
+	<version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+	<creationDate>1.1.2016</creationDate>
+	<author>Stan Scholtz</author>
+	<authorEmail>admin@rupostel.com</authorEmail>
+	<copyright>Copyright (C) 2005 - 2015 RuposTel.com</copyright>
+	<description>OPC Positions for your Modules inside OPC sections. Please do not use as a standalone Joomla template.</description>
+	<files>
+		
+		<folder>language</folder>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.opc_template_positions.ini</language>
+		<language tag="en-GB">en-GB/en-GB.opc_template_positions.sys.ini</language>
+	</languages>
+	
+	<positions>
+		<position>opc_under_shipping_section</position>
+		<position>opc_footer</position>
+		
+		    <position>opc_checkoutAdvertises_above</position> 
+			<position>opc_intro_article_above</position> 
+			<position>opc_captcha_above</position>
+			<position>opc_delivery_date_above</position> 
+			<position>opc_op_userfields_cart_above</position> 
+            <position>opc_op_basket_above</position>
+            <position>opc_op_coupon_above</position> 
+            <position>opc_html_in_between_above</position> 
+            <position>opc_shipping_method_html_above</position>
+            <position>opc_op_userfields_above</position>
+            <position>opc_op_shipto_above</position>
+            <position>opc_op_tos_above</position>
+             <position>opc_op_payment_above</position>
+             <position>opc_tos_con_above</position> 
+             <position>opc_google_checkout_button_above</position>
+             <position>opc_paypal_express_button_above</position>
+			 <position>opc_checkbox_products_above</position>
+			 <position>opc_shipping_estimator_above</position>
+			 
+			 
+			 
+			 <position>opc_checkoutAdvertises_under</position> 
+			<position>opc_intro_article_under</position> 
+			<position>opc_captcha_under</position>
+			<position>opc_delivery_date_under</position> 
+			<position>opc_op_userfields_cart_under</position> 
+            <position>opc_op_basket_under</position>
+            <position>opc_op_coupon_under</position> 
+            <position>opc_html_in_between_under</position> 
+            <position>opc_shipping_method_html_under</position>
+            <position>opc_op_userfields_under</position>
+            <position>opc_op_shipto_under</position>
+            <position>opc_op_tos_under</position>
+             <position>opc_op_payment_under</position>
+             <position>opc_tos_con_under</position> 
+             <position>opc_google_checkout_button_under</position>
+             <position>opc_paypal_express_button_under</position>
+			 <position>opc_checkbox_products_under</position>
+			 <position>opc_shipping_estimator_under</position>
+			 
+			 <position>opc_empty_cart_above</position>
+			 <position>opc_empty_cart_under</position>
+			 
+			 <position>opc_cart_logged_above</position>
+			 <position>opc_cart_logged_under</position>
+			 
+			 <position>opc_cart_unlogged_above</position>
+			 <position>opc_cart_unlogged_under</position>
+		
+			<position>opc_cart_min_not_reached_above</position>
+			 <position>opc_cart_min_not_reached_under</position>
+			 
+			 <position>opc_registration_override_page_above</position>
+			 <position>opc_registration_override_page_under</position>
+		
+		
+	</positions>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+			</fieldset>
+		</fields>
+	</config>
+</extension>

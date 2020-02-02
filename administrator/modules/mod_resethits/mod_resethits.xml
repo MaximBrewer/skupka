@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="administrator" method="upgrade">
+
+    <name>Reset Hits module</name>
+    <version>3.3.0</version>
+    <creationDate>19 December 2014</creationDate>
+    <author>Joomill</author>
+    <authorEmail>info@joomill.nl</authorEmail>
+    <authorUrl>www.joomill-extensions.com</authorUrl>
+	<license>http://www.gnu.org/licenseses/gpl-2.0.html GNU/GPL</license>
+    <description><![CDATA[
+		
+	<span class="readonly"><h1>Joomla Reset Hits module</h1>
+		<p class="alert alert-info">Reset your article page views and more in 1 click from the backend.</p>
+		<p class="alert alert-danger"><a href="index.php?option=com_modules&filter_client_id=1&filter_module=mod_resethits"><strong>Important!</strong> You have to manually enable this module (click here). Set the position to &quot;icon&quot;, enable this module and you're set!</a></p>
+		 
+ 		<p class="margintop">
+		<a href="http://joomill-extensions.com/joomla-extensions/reset-article-views-hits-counter/documentation" target="_blank" class="btn btn-success">Manual</a>
+		<a href="http://joomill-extensions.com/support" target="_blank" class="btn">Support</a> 
+		<a href="http://extensions.joomla.org/extensions/site-management/analytics/content-statistics/16922" target="_blank" class="btn btn-info">Extensions Directory</a> 
+		</p>
+
+		<h2>Thank you and enjoy,</h2>
+		<p><a href="http://www.joomill-extensions.com/" target="_blank"><img src="http://www.joomill-extensions.com/logo-ext-footer.jpg" width="200" height="50"/></a></p>
+
+		<p>Follow us for more information about Joomla and updates for our extensions: 
+		<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fjoomill&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;font=arial&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+		<a href="https://twitter.com/joomill" class="twitter-follow-button" data-show-count="true" data-dnt="true">Follow @joomill</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		</p>
+
+		<p class="license">Joomla Reset Hits module is released under the <a target="_blank" href="http://www.gnu.org/licenses/gpl-2.0.html">GNU/GPL v2 license.</a></p>
+	</span>
+
+
+<style type="text/css">
+		    span.readonly h1 { clear:both; font-family: Arial; font-size:26px; margin: 0 26px 10px; color:#333; font-weight: normal; border-bottom: 1px solid #eee; }
+		    span.readonly h2 { clear:both; font-family: Georgia, sans-serif; font-size:20px; margin: 30px 26px 10px; color:#333; font-weight: normal; }
+			span.readonly { padding: 10px; font-family: Arial; font-size:13px !important; font-weight: normal !important; text-align: justify; color: #4d4d4d; line-height: 24px; }
+			span.readonly p { margin: 0 26px 10px }
+			span.readonly p.margintop { margin-top: 30px }
+			span.readonly p.license { border-top: 1px solid #eee; font-size: 11px; margin: 30px 26px 0; padding: 6px 0; }
+			.alert-danger a { color: #843534 } .alert .alert-link { font-weight: 700 }
+}
+</style>
+		]]></description>
+	
+	<!-- Core files admin -->
+	<files>
+		<filename module="mod_resethits">mod_resethits.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+<updateservers>		
+<server type="extension" priority="1" name="Reset Hits Update"><![CDATA[http://www.joomill-extensions.com/index.php?option=com_ars&view=update&task=stream&format=xml&id=3]]></server>	
+</updateservers>
+
+</extension>

@@ -1,0 +1,15 @@
+
+/*--- Marker + Tab -----------------------------------------------------------*/
+.su-marker {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
+    -webkit-backface-visibility: hidden;
+}
+
+.su-marker-item {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

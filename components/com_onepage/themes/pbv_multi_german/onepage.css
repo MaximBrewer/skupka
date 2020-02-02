@@ -1,0 +1,989 @@
+/*
+*
+* @copyright Copyright (C) 2007 - 2010 RuposTel - All rights reserved.
+* @license http://www.gnu.org/copyleft/gpl.html GNU/GPL, see LICENSE.php
+* One Page checkout is free software released under GNU/GPL and uses code from VirtueMart
+* VirtueMart is free software. This version may have been modified pursuant
+* to the GNU General Public License, and as distributed it includes or
+* is derivative of works licensed under the GNU General Public License or
+* other free or open source software licenses.
+* 
+*/
+div#vmMainPageOPC {
+ width: 100%; 
+ margin: 0; 
+ padding: 0; 
+ float: left; 
+ clear: both; 
+}
+
+div#vmMainPageOPC *, div#vmMainPageOPC *:before, div#vmMainPageOPC *:after
+{
+ background-image: none; 
+ -webkit-box-sizing: content-box;
+ box-sizing: content-box;
+  
+ 
+}
+
+#vmMainPageOPC div#checkout-advertise-box {
+ clear: both; 
+}
+#vmMainPageOPC  #basket_container select.quantity_select  {
+  max-width: 70px; 
+}
+div#vmMainPageOPC  .titleForm {
+	width:35%;
+	vertical-align:middle;
+	float:left;
+	clear:both;
+	margin-left:2%;
+	font-weight: 600;
+}
+div#vmMainPageOPC  .valueForm{
+	float:left;
+	vertical-align:middle;
+	width:60%;
+	
+}
+span.shipping_error {
+ color: red; font-weight: bold; padding-top: 20px;
+}
+div#onepage_userfieds {
+	width: 100%; 
+	float: left;
+}
+td.subtotal_column {
+ text-align: right; 
+}
+#vmMainPageOPC input#register_account {
+ padding: 0;  
+ margin: 0; 
+ float: left; 
+}
+label.register_account {
+ float: none; 
+}
+div.opc_PricesalesPrice {
+ float: right; 
+}
+div.opc_PricesalesPrice span {
+ text-align: right;
+}
+
+
+
+
+div#onepage_info_above_button {
+	text-align: center; 
+	margin: auto;
+}
+div#onepage_total_inc_sh {
+ padding-top: 10px;
+}
+#vmMainPageOPC div#onepage_submit_section {
+	width: 350px; 
+	height: 40px;  
+	padding: 20px;
+	margin-left: auto; 
+	margin-right: auto; 
+	padding-left: 0; 
+	padding-right: 0; 
+}
+#vmMainPageOPC #payment_html,
+#vmMainPageOPC #ajaxshipping {
+	padding-left: 2%;
+}
+
+#vmMainPageOPC input#coupon_code {
+ min-height: 25px; 
+}
+
+#vmMainPageOPC input#confirmbtn.buttonopc {
+	width: 350px; 
+	height: 40px;  
+	padding: 20px;
+	margin-left: auto; 
+	margin-right: auto; 
+	padding-left: 0; 
+	padding-right: 0; 
+	
+}
+div#onepage_login_box {
+ padding: 20px; 
+ text-align: center; 
+ margin-right: auto; 
+ margin-left: auto; 
+ width: 100%; 
+}
+div#onepage_login {
+ text-align: left; 
+ padding-left: 35%;
+}
+textarea#onepage_tos {
+width: 100%;
+}
+#vmMainPageOPC .product-field-display {
+margin-bottom: 6px;
+}
+#vmMainPageOPC .product-field-display label{
+	float: left;
+	position: relative;
+	margin-bottom: 0px;
+	text-align: left;
+	left: 0;
+	top: 0;
+	width: 85%;
+	}
+#vmMainPageOPC .product-fields .product-field input[type=radio] {
+position: relative;
+left: 0px;
+float: left;
+clear:both;
+}
+span.bottom_totals_txt {
+width: 50%;
+text-align: right;
+float: left;
+}
+
+span.bottom_totals {
+/* width: 67%; */
+text-align: left;
+padding-left: 3%;
+float: left;
+}
+
+div#totalam {
+
+width: 100%;
+clear: both;
+float: left;
+margin: 0 auto;
+}
+
+br.op_clear {
+ clear: both;
+}
+
+div#tt_order_subtotal_div {
+ width: 100%;
+ float: left;
+ clear: both;
+}
+div#tt_order_payment_discount_before_div {
+ width: 100%;
+ display: none;
+ 
+}
+
+div#tt_order_discount_before_div {
+ width: 100%;
+ display: none;
+
+}
+
+div#tt_shipping_rate_div {
+ width: 100%;
+ 
+
+}
+div#tt_shipping_tax_div {
+ width: 100%;
+ display: none;
+
+}
+
+div#tt_tax_total_0_div {
+ display: none;
+width: 100%;
+}
+
+div#tt_tax_total_1_div {
+ display: none;
+width: 100%;
+}
+
+div#tt_tax_total_2_div {
+ display: none;
+width: 100%;
+}
+
+div#tt_tax_total_3_div {
+ display: none;
+width: 100%;
+}
+
+div#tt_tax_total_4_div {
+ width: 100%;
+ display: none;
+
+}
+
+div#tt_order_payment_discount_after_div {
+ width: 100%;
+ display: none;
+
+}
+
+div#tt_order_discount_after_div {
+ width: 100%;
+ display: none;
+
+}
+
+div#tt_total_div {
+ width: 100%;
+
+}
+
+select#shipping_inside_basket_select {
+ font-family: monospace;
+}
+
+select#payment_inside_basket {
+ font-family: monospace;
+}
+
+
+/* pbv basket from vm1 */
+#vmMainPageOPC .sectiontableheader {
+    background: none repeat scroll 0 0 #333333;
+    border: 1px solid #CCCCCC;
+    color: #FFFFFF;
+    padding: 5px;
+}
+#vmMainPageOPC .sectiontableheader a, .sectiontableheader a:hover, .sectiontableheader a:focus, .sectiontableheader a:active {
+    color: #FFFFFF;
+}
+#vmMainPageOPC .sectiontableentry, .sectiontableentry0, .sectiontableentry1, .sectiontableentry2 {
+    background: url("images/dot2.gif") repeat-x scroll center bottom transparent;
+   /* padding: 5px 5px 6px;*/
+}
+#vmMainPageOPC .sectiontableentry:hover, .sectiontableentry0:hover, .sectiontableentry1:hover, .sectiontableentry2:hover {
+    background-color: #FFFFF0;
+}
+#vmMainPageOPC .sectiontableentry2 {
+    background-color: #F6F6F6;
+}
+
+#vmMainPageOPC hr {
+    border-color: #CCCCCC;
+    border-style: solid none none;
+    border-width: 1px 0 0;
+    height: 1px;
+}
+
+#vmMainPageOPC td, #vmMainPageOPC tr {
+ border: 0 none;
+ padding: 3px;  
+}
+#vmMainPageOPC .vmsectiontableentry2 {
+    background: none repeat scroll 0 0 #F2F2F2;
+    border: 0 solid #CCCCCC;
+    color: #333333;
+    font-family: Arial,Verdana,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    height: 20px;
+    padding: 5px;
+    text-transform: none;
+}
+
+#vmMainPageOPC td {
+    font-size: 100%;
+    padding: 5px;
+}
+#vmMainPageOPC input.updatebtn, #vmMainPageOPC a.updatebtn, #vmMainPageOPC a.updatebtn:hover {
+background: none;
+background: transparent url('images/update_quantity_cart.png') no-repeat top left; 
+ display: inline-block; 
+ width: 20px; 
+ height: 20px; 
+ border: none; 
+ top: 5px;
+position: absolute;
+}
+#vmMainPageOPC a.deletebtn, #vmMainPageOPC a.deletebtn:hover {
+ background: none;
+ background: transparent url('images/remove_from_cart.png') no-repeat top left; 
+ display: inline-block; 
+ width: 20px; 
+ height: 20px; 
+ position: absolute;
+right: -22px;
+top: 5px;
+}
+
+
+#vmMainPageOPC  .tabcontent2 {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DDDDDD;
+    color: #000000;
+	clear: both;
+}
+
+#vmMainPageOPC  .tabcontent2 {
+    margin-top: -1px;
+    padding: 0 0 0 0; 
+	margin: 0 0 0 0; 
+	width: 100%;
+}
+#vmMainPageOPC #onepage_userfieds table tr td {
+ word-break: break-all; 
+ white-space: normal;
+width: 50%;
+}
+#vmMainPageOPC fieldset {
+   		/* fallback */
+  background: none repeat scroll 0 0 #F5F5F5; 
+  
+  background: linear-gradient(bottom, rgb(233,233,233) 10%, rgb(245,245,245) 83%);
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#e9e9e9) 10%, to(#f5f5f5) 83%);
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(bottom, #e9e9e9 10%, #f5f5f5 83%);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(bottom, #e9e9e9 10%, #f5f5f5 83%);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(bottom, #e9e9e9 10%, #f5f5f5 83%);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(bottom, #e9e9e9 10%, #f5f5f5 83%);
+
+    border: 1px solid #E7E7E7 !important;
+    color: #555555;
+    font-family: arial,verdana;
+    margin-bottom: 10px !important;
+	min-width: 100px; 
+}
+#vmMainPageOPC .coupon_input {
+ border: none;
+ border: 1px solid gray; 
+ height: 16px;
+ color: gray;
+ font-size: 9px;
+ min-width: 200px; 
+}
+
+#vmMainPageOPC div.coupon_input_wrapper {
+ float: left; 
+ clear: left;
+ width: auto; 
+ overflow: none; 
+}
+#vmMainPageOPC #couponcode_field_ajax {
+ width: 100%; 
+ margin: 0; 
+ position: relative;
+}
+#vmMainPageOPC div#onepage_main_div #opc_basket input[type="text"].coupon_input_ajax:hover, #vmMainPageOPC div#onepage_main_div #opc_basket input[type="text"].coupon_input_ajax:focus {
+border: 1px solid gray;
+background: none; 
+background-color: white; 
+}
+#vmMainPageOPC div#onepage_main_div #opc_basket input[type="text"].coupon_input_ajax {
+ border: none;
+ margin: 0; 
+ border: 1px solid transparent; 
+ 
+ background: none; 
+ background-color: transparent; 
+ height: 16px;
+ color: gray;
+ font-size: 9px;
+ min-width: 200px; 
+ max-width: 200px; 
+ float: left; 
+}
+
+#vmMainPageOPC div#onepage_main_div .buttonopc_ajax {
+	position: absolute; 
+	top: 0; 
+	padding-left: 0; 
+	padding-right: 0; 
+	padding: 2px 8px !important;
+	border: none; 
+	border-color: transparent;
+	max-width: 100%;
+	text-shadow: none !important;
+	/* fallback */
+	background: url(images/button_bg-input.png) repeat-x center left #F7F7F7 ;
+	background: linear-gradient(bottom, rgb(233,233,233) 10%, rgb(248,209,80) 83%);
+	
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#ee941b) 10%, to(#f8d150) 83%);
+
+	  /* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(bottom, #ee941b 10%, #f8d150 83%);
+
+	  /* Firefox 3.6+ */
+	background: -moz-linear-gradient(bottom, #ee941b 10%, #f8d150 83%);
+
+	  /* IE 10 */
+	background: -ms-linear-gradient(bottom, #ee941b 10%, #f8d150 83%);
+
+	  /* Opera 11.10+ */
+	background: -o-linear-gradient(bottom, #ee941b 10%, #f8d150 83%);
+	padding:5px 12px !important;
+	line-height: 10px;
+	height: 26px; 
+}
+#vmMainPageOPC div#onepage_main_div .buttonopc_ajax:hover {
+ /* fallback */
+	background: url(images/button_bg-hover-orange.png) repeat-x center left #F7F7F7 ;
+	background: linear-gradient(bottom, rgb(241,91,40) 10%, rgb(247,148,34) 83%);
+	  /* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#f15b28) 10%, to(#f79422) 83%);
+
+	  /* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(bottom, #f15b28 10%, #f79422 83%);
+
+	  /* Firefox 3.6+ */
+	background: -moz-linear-gradient(bottom, #f15b28 10%, #f79422 83%);
+
+	  /* IE 10 */
+	background: -ms-linear-gradient(bottom, #f15b28 10%, #f79422 83%);
+
+	  /* Opera 11.10+ */
+	background: -o-linear-gradient(bottom, #f15b28 10%, #f79422 83%);
+ color: #FFF !important;
+ border: none; 
+ border-color: transparent;
+ cursor: pointer;
+}
+
+
+
+#vmMainPageOPC .coupon_input:active, #vmMainPageOPC .coupon_input:focus {
+ border: none;
+ border: 1px solid gray; 
+ height: 16px;
+ color: black;
+ font-size: 9px;
+}
+
+#vmMainPageOPC .coupon_wrapper {
+  float: right; 
+  margin: 0; 
+  padding: 0; 
+  clear: both;
+}
+
+#vmMainPageOPC .detailsbutton_opc {
+  float: right; 
+  margin: 0; 
+  padding-top: 10px; 
+}
+
+
+
+#vmMainPageOPC div.continue_shopping2 {
+  margin: 0; 
+  padding: 0; 
+  margin-left: 0; 
+  margin-right: auto; 
+  width: 169px; 
+  height: 30px; 
+  padding-top: 15px;
+  background: transparent url(images/keepshoppping.png) no-repeat left 10px;  
+}
+#vmMainPageOPC  a.continue_link2:hover, #vmMainPageOPC  a.a.continue_link2:active 
+{
+ color: black; 
+ background: none; 
+}
+#vmMainPageOPC a.continue_link2, a.continue_link2:hover, a.a.continue_link2:active {
+ padding-left: 30px; 
+ padding-top: 7px;
+ vertical-align: middle;
+ color: grey; 
+ text-decoration: none;
+ text-transform: uppercase;
+ font-size: 12px;
+ font-weight: bold;
+ font-stretch: ultra-condensed;
+ background: none; 
+}
+
+#vmMainPageOPC .continue_left {
+ clear: left; 
+ width: 50%; 
+ float: left; 
+}
+#vmMainPageOPC .coupon_right {
+  width: 49%; 
+  float: left;
+  clear: right;   
+}
+#vmMainPageOPC .continue_and_coupon {
+  border: 0 none; 
+  margin: 0; 
+  padding: 0; 
+}
+
+#vmMainPageOPC iframe.tos_iframe {
+  width: 90%; 
+  margin-left: 5%; 
+  margin-right: 5%; 
+  padding: 0; 
+  height: 200px; 
+}
+
+
+#vmMainPageOPC div.btandst .st_right {
+ padding: 0; 
+ margin: 0; 
+ margin-left: 2%;
+ width: 49%; 
+ float: left;
+ 
+}
+#vmMainPageOPC div.btandst .bt_left {
+ margin: 0; 
+ padding: 0; 
+ float: left
+}
+#vmMainPageOPC .address_fielset {
+ /*min-height: 310px; */
+}
+#vmMainPageOPC div.btandst {
+  margin: 0; 
+  padding: 0; 
+  width: 100%; 
+}
+
+#vmMainPageOPC div#agreed_div {
+ width: 100% !important;
+ text-align: left;
+ margin-left: 5%;
+ margin-top: 10px; 
+}
+
+
+#vmMainPageOPC .op_radiowrapper {
+ width: 10%;
+ float: left; 
+ margin: 0; 
+ padding: 0; 
+ height: 100%; 
+ bottom: 45%; 
+ left: 0; 
+ clear: left; 
+ 
+ }
+
+#vmMainPageOPC .op_labelwrapper {
+ width: 85%; 
+ float: left; 
+ margin: 0; 
+ padding: 0;
+ clear: right;  
+}
+
+#vmMainPageOPC div#staddresses .sectiontableentry1 {
+ background: none; 
+  
+ 
+}
+
+#vmMainPageOPC div#staddresses .sectiontableentry2 {
+ 
+ background: none; 
+ margin-top: 15px;
+ 
+}
+
+.op_field_name {
+  width: 35%; 
+  padding-right: 5%;
+  
+  text-align: right; 
+  float: left; 
+  clear: right;
+}
+#vmMainPageOPC legend.sectiontableheader {
+ width: auto; 
+}
+
+
+/* Checkout page, cart and button CSS */
+div#onepage_main_div legend.sectiontableheader {
+	padding:5px !important;
+	margin:0;
+	margin-left: 4%; 
+	font-family: Helvetica, Verdana !important;
+	font-weight:bold !important;
+	letter-spacing:-.05em !important;
+	font-size:1.3em !important;
+	color: #777 !important;
+	background: #FAFAFA !important;
+	text-transform: uppercase !important;
+	border: 1px solid #E7E7E7 !important;
+	max-width: 90%;
+	}
+
+div#onepage_main_div legend.op_legend {
+	padding:5px !important;
+	margin:0 !important;
+	font-family: Helvetica, Verdana !important;
+	font-weight:bold !important;
+	letter-spacing:-.05em !important;
+	font-size:1.3em !important;
+	color: #777 !important;
+	background: #FAFAFA !important;
+	text-transform: uppercase !important;
+	border: 1px solid #E7E7E7 !important;
+	}
+
+
+#vmMainPageOPC div#opc_unlogged_wrapper .formLabel {
+	float:left !important;
+	min-width:220px !important;
+	text-align:left !important;
+	font-weight: bold !important;
+	margin: 2px !important;
+	white-space: nowrap !important;
+	clear: left !important;
+	vertical-align: middle !important;
+	margin-top: 8px !important;
+}
+
+#vmMainPageOPC div#opc_logged_wrapper .formLabel {
+	float:left !important;
+	text-align:left !important;
+	font-weight: bold !important;
+	margin: 2px;
+	white-space: nowrap !important;
+	clear: left !important;
+	vertical-align: middle !important;
+	margin-top: 8px !important;
+}
+
+#vmMainPageOPC fieldset {
+/*
+ padding-left: 1%; 
+ padding-right: 1%; 
+ margin-right: auto; 
+ margin-left: auto; 
+ width: 98%;
+ */
+}
+.op_field_value {
+ width: 49%; 
+ text-align: left; 
+ float: left; 
+ clear: right; 
+}
+
+div#ajaxshipping input[type="radio"], div#payment_html  input[type="radio"] {
+ float: left; 
+ clear: left; 
+}
+div#ajaxshipping label, div#payment_html label {
+ float: left; 
+ clear: right; 
+}
+div#ajaxshipping label span span, div#payment_html label {
+ float: left; 
+  
+}
+div#ajaxshipping label span.vmCartPaymentLogo,
+div#ajaxshipping label span span.vmCartPaymentLogo {
+ float: right;
+ position: relative;
+ right:10%;
+}
+div#ajaxshipping label span span.vmshipment_cost {
+	float:right;
+	position:relative;
+}
+div#ajaxshipping label span span.vmshipment_description {
+	color: gray;
+	font-size: 10px;
+	padding: 0 2px;
+}
+div#ajaxshipping label span span img {
+position: relative;
+
+}
+div#vmMainPageOPC .formField input[type="checkbox"], div#vmMainPageOPC .formField input[type="radio"] {
+ float: left; 
+ clear: right; 
+ margin: 0; 
+}
+div#vmMainPageOPC div#onepage_main_div div#GenderTest_input input[type="radio"]{
+ margin-top:5px;
+ margin-left:5px;
+
+}
+
+div#vmMainPageOPC div#customer_note_div {
+	padding: 7px;
+}
+div#vmMainPageOPC div#customer_note_input {
+	padding: 7px;
+}
+
+div#vmMainPageOPC div#onepage_main_div .formField label {
+ float: left; 
+ clear: right; 
+ margin: 0; 
+ padding: 0; 
+}
+
+div#vmMainPageOPC div#onepage_main_div .formField br {
+ float: left; 
+ clear: both; 
+}
+
+input#agreed_field {
+ float: left; 
+ clear: left; 
+}
+div#agreed_div label,div#agreed_div a  {
+ float: left; 
+ clear: right; 
+}
+
+
+#vmMainPageOPC div#onepage_main_div #opc_basket input[type="text"] {
+ background: none; 
+ background-color: transparent; 
+ max-width: 30px; 
+ top: 0px; 
+ float: right;
+}
+#vmMainPageOPC div#onepage_main_div #opc_basket input[type="text"]:focus, #vmMainPageOPC #opc_basket input[type="text"]:hover {
+ background-color: white; 
+}
+div#onepage_main_div div#onepage_info_above_button #opc_basket {
+ text-align: left; 
+}
+
+#vmMainPageOPC div.vmTabContent, #vmMainPageOPC div.tabcontent3, #vmMainPageOPC div#ship_to_section {
+
+}
+
+/* card payment table */
+#vmMainPageOPC .vmpayment_cardinfo {
+color: gray;
+font-size: 9px;
+display: block;
+padding-left: 5px;
+width: 320px;
+border-radius: none;
+border: none; 
+}
+#vmMainPageOPC .vmpayment_cardinfo table {
+ border: none !important;
+ display:block;
+ width:300px;
+}
+
+#vmMainPageOPC .vmpayment_cardinfo table tr{
+ display:block;
+ height:30px;
+ padding:0;
+ padding-bottom:5px;
+}
+
+div#onepage_main_div .vmpayment_cardinfo table td {
+padding: 0px !important;
+width: auto;
+min-width: 110px;
+max-width: 180px;
+height: 30px;
+font-size:11px;
+line-height: 0px;
+margin-bottom: 0 !important;
+}
+div#onepage_main_div .vmpayment_cardinfo table td label {
+	font-size: 11px;
+	padding-top: 5px;
+}
+#vmMainPageOPC div#onepage_main_div .vmpayment_cardinfo table  input[name="cc_cvv_5"]{
+	position:relative;
+	top:5px;
+	}
+
+#vmMainPageOPC div#onepage_main_div .vmpayment_cardinfo table  input[type="text"],
+#vmMainPageOPC div#onepage_main_div .vmpayment_cardinfo table td select {
+	height:25px;
+	padding:0;
+	width: auto;
+	max-width: 140px;
+} 
+#vmMainPageOPC div#onepage_main_div  table td select[name="cc_expire_month_5"]{
+	width:90px;
+	position:relative;
+	top:5px;
+}
+
+#vmMainPageOPC div#onepage_main_div table td select[name="cc_expire_year_5"]{
+	width:58px;
+	position:relative;
+	top:5px;
+}
+#cc_cardnumber_errormsg_5{
+	color:red;
+	position: relative;
+	top: -4px;
+	white-space: nowrap;
+}
+
+/**** end of card payment css  ***/
+br{
+clear:both;
+}
+
+#vmMainPageOPC div#onepage_main_div div.left_section {
+  width: 29%; 
+  margin: 0; 
+  margin-right: 1%; 
+  float: left; 
+  clear: left; 
+}
+#vmMainPageOPC div#onepage_main_div div.right_section  {
+ margin: 0; 
+ margin-left: 1%; 
+ width: 69%; 
+ float: left; 
+ clear: right; 
+}
+#vmMainPageOPC div.formLabel, #vmMainPageOPC div.formField  {
+ clear: both; 
+ float: left;
+ width: 100%; 
+}
+#vmMainPageOPC div#registertab {
+ width: 100%; 
+}
+
+#vmMainPageOPC div#opc_basket select {
+ width: 80%; 
+ padding: 0; 
+}
+#vmMainPageOPC div#onepage_main_div select, #vmMainPageOPC div#onepage_main_div .input {
+
+ max-width: 200px;
+}
+
+#vmMainPageOPC div#onepage_main_div input,#vmMainPageOPC div#onepage_main_div textarea,#vmMainPageOPC div#onepage_main_div .uneditable-input {
+ 
+ width: auto; 
+}
+#vmMainPageOPC div#onepage_main_div input[type="password"],
+#vmMainPageOPC div#onepage_main_div input[type="text"]{
+	width:90%;
+}
+#vmMainPageOPC #ajaxshipping input[type="radio"], #vmMainPageOPC #payment_html input[type="radio"] {
+ width: auto; 
+ float: left; 
+ clear: left; 
+ padding-left: 0; 
+ padding-right: 0; 
+ margin-right: 4%; 
+ margin-left: 0; 
+ 
+}
+
+#vmMainPageOPC #ajaxshipping label, #vmMainPageOPC #payment_html label {
+ width: 90%; 
+ float: left; 
+ clear: right; 
+padding-left: 0; 
+ padding-right: 0; 
+ margin-right: 0; 
+ margin-left: 0; 
+}
+ #vmMainPageOPC ul>li:before,#vmMainPageOPC  ul>li:before,#vmMainPageOPC  ul>li:before {
+  display: none; 
+ }
+/* mobiles and tablets */
+@media (max-width: 767px) {
+
+.sku_column, .unit_column {
+  display: none; 
+  visibility: hidden; 
+ }
+  #vmMainPageOPC div#onepage_main_div  .formField {
+    width: 100%; 
+	min-width: 90%; 
+	clear: both; 
+  }
+  #vmMainPageOPC div#onepage_main_div  .bt_left, div.no_shiptobt_left {
+   clear: both; 
+   width: 100%; 
+   margin: 0; 
+   padding: 0; 
+  }
+  #vmMainPageOPC div#onepage_main_div  .st_right, #vmMainPageOPC div.btandst .st_right {
+   clear: both; 
+   width: 100%; 
+   margin: 0; 
+   padding: 0; 
+   display: inline-block; 
+  }
+  #vmMainPageOPC div#onepage_main_div  .address_fielset {
+   min-height: 35px; 
+  }
+ #vmMainPageOPC div#onepage_main_div  div.left_section {
+  width: 100%; 
+  margin: 0; 
+  margin-right: 1%; 
+  float: left; 
+  clear: both; 
+}
+#vmMainPageOPC div#onepage_main_div  div.right_section  {
+ margin: 0; 
+ margin-left: 1%; 
+ width: 100%; 
+ float: left; 
+ clear: both; 
+}
+#vmMainPageOPC #customer_note_input textarea, #vmMainPageOPC #customer_note_input label, #vmMainPageOPC div#customer_note_input, #vmMainPageOPC  div#customer_note_div.formLabel {
+ margin: 0; 
+ padding: 0; 
+ float: left; 
+ clear: both; 
+ width: 100%; 
+}
+#vmMainPageOPC textarea#customer_note_field {
+	 max-width: 90%; 
+	}
+	#vmMainPageOPC span.updatequantlabel {
+	 display: none; 
+	}
+	#vmMainPageOPC input#confirmbtn.buttonopc {
+	  max-width: 70% !important; 
+	  float: left; 
+	  margin: 0 !important; 
+	  
+	}
+	#vmMainPageOPC .vmpayment_cardinfo {
+	width:280px;
+	padding:0;
+	border:none;
+	}
+	div#vmMainPageOPC div#opc_logged_wrapper .formLabel,
+	div#vmMainPageOPC div#opc_unlogged_wrapper .formLabel {
+	text-align:left  !important;
+}
+}
+
+
+#vmMainPageOPC #opc_error_msgs {
+		box-sizing: border-box; 
+		background:#fff1f0;color:#d85030;
+		margin-top: 15px; 
+		margin-bottom: 15px; 
+		padding: 10px; 
+		border: 1px solid rgba(216,80,48,.3);
+		border-radius: 4px; 
+		text-shadow: 0 1px 0 #fff; 
+		display: block; 
+	}

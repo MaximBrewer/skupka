@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension method="upgrade" version="2.5" type="plugin" group="vmcustom" >
+    <name>VMCUSTOM_COLORSELECT</name>
+    <creationDate>31.03.2017</creationDate>
+    <author>virtuemart.su</author>
+    <authorUrl>http://www.virtuemart.su</authorUrl>
+    <copyright>Copyright (C) 20012-2017 virtuemart.su. Все права защищены.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>1.1</version>
+    <description>VMCUSTOM_COLORSELECT_DESC</description>
+    <languages folder="language">
+        <language tag="ru-RU">ru-RU/ru-RU.plg_vmcustom_colorselect.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_vmcustom_colorselect.sys.ini</language>
+    </languages>
+
+    <files>
+        <filename plugin="colorselect">colorselect.php</filename>
+        <folder>colorselect</folder>
+        <folder>language</folder>
+    </files>
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="template">
+               <field name="path_select" type="text" label="VMCUSTOM_COLORSELECT_PATH_SELECT" description="VMCUSTOM_COLORSELECT_PATH_SELECT_DESC" />
+               <field name="path_img" type="text" label="VMCUSTOM_COLORSELECT_PATH_IMG" description="VMCUSTOM_COLORSELECT_PATH_IMG_DESC" />
+               <field name="class_img" default=".main-image" type="text" label="VMCUSTOM_COLORSELECT_CLASS_IMG" description="VMCUSTOM_COLORSELECT_CLASS_IMG_DESC" />
+               <field name="class_add_img" default=".additional-images" type="text" label="VMCUSTOM_COLORSELECT_CLASS_ADD_IMG" description="VMCUSTOM_COLORSELECT_CLASS_ADD_IMG_DESC" />
+                <field
+                name="trigger"
+                type="radio"
+                default="0"
+                label="VMCUSTOM_COLORSELECT_TRIGGER"
+                description="VMCUSTOM_COLORSELECT_TRIGGER_DESC">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+                </field>
+                <field
+                name="empty_option"
+                type="radio"
+                default="0"
+                label="VMCUSTOM_COLORSELECT_EMPTY_OPTION"
+                description="VMCUSTOM_COLORSELECT_EMPTY_OPTION_DESC">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+                </field>
+                <field
+                name="hidden_add_img"
+                type="radio"
+                default="0"
+                label="VMCUSTOM_COLORSELECT_HIDDEN_ADD_IMG"
+                description="VMCUSTOM_COLORSELECT_HIDDEN_ADD_IMG_DESC">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+                </field>
+               <field name="textarea" type="textarea" label="VMCUSTOM_COLORSELECT_TEXTAREA" description="VMCUSTOM_COLORSELECT_TEXTAREA_DESC" />
+            </fieldset>
+        </fields>
+    </vmconfig>
+    <params addpath="/administrator/components/com_virtuemart/elements">
+        <param type="vmjpluginwarning" />
+        <param name="path_select" type="text" label="VMCUSTOM_COLORSELECT_PATH_SELECT" description="VMCUSTOM_COLORSELECT_PATH_SELECT_DESC" />
+        <param name="path_img" type="text" label="VMCUSTOM_COLORSELECT_PATH_IMG" description="VMCUSTOM_COLORSELECT_PATH_IMG_DESC" />
+        <param name="class_img" default=".main-image" type="text" label="VMCUSTOM_COLORSELECT_CLASS_IMG" description="VMCUSTOM_COLORSELECT_CLASS_IMG_DESC" />
+        <param name="class_add_img" default=".additional-images" type="text" label="VMCUSTOM_COLORSELECT_CLASS_ADD_IMG" description="VMCUSTOM_COLORSELECT_CLASS_ADD_IMG_DESC" />
+        <param
+        name="trigger"
+        type="radio"
+        default="0"
+        label="VMCUSTOM_COLORSELECT_TRIGGER"
+        description="VMCUSTOM_COLORSELECT_TRIGGER_DESC">
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+        </param>
+        <param
+        name="empty_option"
+        type="radio"
+        default="0"
+        label="VMCUSTOM_COLORSELECT_EMPTY_OPTION"
+        description="VMCUSTOM_COLORSELECT_EMPTY_OPTION_DESC">
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+        </param>
+        <param
+        name="hidden_add_img"
+        type="radio"
+        default="0"
+        label="VMCUSTOM_COLORSELECT_HIDDEN_ADD_IMG"
+        description="VMCUSTOM_COLORSELECT_HIDDEN_ADD_IMG_DESC">
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+        </param>
+        <param name="textarea" type="textarea" label="VMCUSTOM_COLORSELECT_TEXTAREA" description="VMCUSTOM_COLORSELECT_TEXTAREA_DESC" />
+    </params>
+</extension>

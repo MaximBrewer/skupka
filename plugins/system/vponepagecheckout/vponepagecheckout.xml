@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>System - VP One Page Checkout</name>
+	<version>5.4</version>
+	<creationDate>September 2017</creationDate>
+	<author>Abhishek Das</author>
+	<authorEmail>info@virtueplanet.com</authorEmail>
+	<authorUrl>www.virtueplanet.com</authorUrl>
+	<copyright>Copyright (C) 2012-2017 Virtueplanet Services LLP. All rights reserved</copyright>
+	<license>GNU General Public License version 2 or later; http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<description>
+		<![CDATA[
+		<link href="../plugins/system/vponepagecheckout/assets/admin/css/j3/admin.css?ver=3" rel="stylesheet" type="text/css" media="all" id="vp-inline-stylesheet" />
+		<div class="vp-extension-description">
+			<div class="extension-image-container">
+				<img src="../plugins/system/vponepagecheckout/assets/images/plugin_thumbnail.png" alt="VP One Page Checkout" />
+			</div>
+			<h2 class="extension-title"><span data-text="VP One Page Checkout"></span><span class="extension-version"></span></h2>
+			<p class="desc-text">VP One Page Checkout is a responsive and ajax based one page checkout plugin for VirtueMart 3 and VirtueMart 2.0/2.6. This particular package of the plugin is only compatible to <strong>VirtueMart 3</strong>. VirtueMart 2.0 and VirtueMart 2.6 compatible package of the plugin is also available. This is a commercial extension released by VirtuePlanet.com</p>
+			<p class="desc-text"><span>Please remember to to enable the plugin from Plugin Manager.</span></p>
+			<p class="desc-text">You may refer to the <strong>User Guide</strong> of the plugin for detailed installation and configuration steps. For any technical support visit VirtuePlanet <a href="https://www.virtueplanet.com/forum/" target="_blank">Support Forum</a>.</p>
+			<p class="copy-text">Copyright &copy; 2012-2017 <a href="https://www.virtueplanet.com" target="_blank">VirtuePlanet</a> Services LLP. All rights reserved.</p>
+		</div>
+		]]>
+	</description>
+	
+	<files>
+		<filename plugin="vponepagecheckout">vponepagecheckout.php</filename>
+		<filename>index.html</filename>
+		<folder>cart</folder>
+		<folder>assets</folder>
+		<folder>fields</folder>
+	</files>
+	
+	<scriptfile>plg_system_vponepagecheckout.script.php</scriptfile>
+	
+	<languages folder="language">
+		<language tag="en-GB">languages/en-GB.plg_system_vponepagecheckout.ini</language>
+		<language tag="en-US">languages/en-US.plg_system_vponepagecheckout.ini</language>
+		<language tag="en-AU">languages/en-AU.plg_system_vponepagecheckout.ini</language>
+		<language tag="es-ES">languages/es-ES.plg_system_vponepagecheckout.ini</language>
+		<language tag="ca-ES">languages/ca-ES.plg_system_vponepagecheckout.ini</language>
+		<language tag="cs-CZ">languages/cs-CZ.plg_system_vponepagecheckout.ini</language>
+		<language tag="de-DE">languages/de-DE.plg_system_vponepagecheckout.ini</language>
+		<language tag="fr-FR">languages/fr-FR.plg_system_vponepagecheckout.ini</language>
+		<language tag="el-GR">languages/el-GR.plg_system_vponepagecheckout.ini</language>
+		<language tag="it-IT">languages/it-IT.plg_system_vponepagecheckout.ini</language>
+		<language tag="pt-BR">languages/pt-BR.plg_system_vponepagecheckout.ini</language>
+		<language tag="th-TH">languages/th-TH.plg_system_vponepagecheckout.ini</language>
+		<language tag="nl-NL">languages/nl-NL.plg_system_vponepagecheckout.ini</language>
+		<language tag="ru-RU">languages/ru-RU.plg_system_vponepagecheckout.ini</language>
+		<language tag="hu-HU">languages/hu-HU.plg_system_vponepagecheckout.ini</language>
+		<language tag="sk-SK">languages/sk-SK.plg_system_vponepagecheckout.ini</language>
+		<language tag="pl-PL">languages/pl-PL.plg_system_vponepagecheckout.ini</language>
+	</languages>
+
+	<updateservers>
+		<server type="extension" priority="1" name="VP One Page Checkout">http://cdn.virtueplanet.com/updates/opc.xml</server>
+	</updateservers>
+
+	<config>
+		<fields 
+			name="params"
+			addfieldpath="plugins/system/vponepagecheckout/fields">
+		
+			<fieldset 
+				name="basic">
+
+				<field
+					name="download_key"
+					type="vpdownloadkey"
+					default=""
+					label="Download Key"
+					jqueryurl="plugins/system/vponepagecheckout/assets/admin/js"
+					plugin="vponepagecheckout"
+					description="Your VirtuePlanet download key" />
+				
+				<field
+					name="spacer_1"
+					type="spacer"
+					label="General Layout Options" />
+				
+				<field
+					name="style"
+					type="list"
+					default="1"
+					label="Layout Style"
+					description="Select your layout style">
+					<option value="1">Style 1</option>
+					<option value="2">Style 2</option>
+					<option value="3">Style 3 (Single Screen)</option>
+					<option value="4">Style 4 (Single Screen)</option>
+				</field>
+
+				<field
+					name="handlerbund_compliant"
+					type="radio"
+					default="0"
+					label="Enable Händlerbund &lt;br/&gt;Compliant Layout"
+					description="If this is enabled then Cart Form fields are separated from the order confirm button and displayed under a new section in 2nd column."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="color"
+					type="list"
+					default="1"
+					label="Color Style" 
+					description="Select your color style">
+					<option value="1">Light</option>
+					<option value="2">Dark</option>
+				</field>
+				
+				<field
+					name="responsive"
+					type="radio"
+					default="1"
+					label="Responsive Layout"
+					description="Confirm if your Joomla Template is responsive."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="only_guest"
+					type="radio"
+					default="0"
+					label="Hide Registration and &lt;br/&gt;Login Area"
+					description="Hide Registration and Login area. Enable only Guest Checkout. 'Only registered users can checkout' option is VirtueMart Configuration must be disabled to use this feature."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="show_full_pricelist_firststage"
+					type="radio"
+					default="0"
+					class="btn-group btn-group-yesno"
+					label="Show Full Cart on &lt;br/&gt;First Screen"
+					description="Applicable only for Style 1 and Style 2 layout. If enabled, cart discount, cart tax, selected payment method, selected shipment method and cart total rows also will be displayed in the initial registration / login screen.">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="show_preloader"
+					type="radio"
+					default="1"
+					label="Show Page Preloader"
+					description="If yes, page preloader is displayed until all required scripts are loaded and system becomes ready for checkout."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="spacer_2"
+					type="spacer"
+					label="Registration Options" />
+
+				<field
+					name="registration_by_default"
+					type="radio"
+					default="0"
+					label="Registration Form&lt;br/&gt;Displayed by Default"
+					description="In the cart page guest checkout option is selected by default. If you enable this option then user registration option will be selected by default."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+					
+				<field
+					name="ajax_validation"
+					type="radio"
+					default="0"
+					label="Instant Username and &lt;br/&gt;Email Verification"
+					description="If yes, username availability and email address verification will be done as user key-in the fields during user registration."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="live_validation"
+					type="radio"
+					default="1"
+					label="Live Username, Email &lt;br/&gt;and Password Field&lt;br/&gt;Validation"
+					description="If no, live username, email and password strength validation will be disabled."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="auto_generate_username"
+					type="list"
+					default="0"
+					label="Auto Generate Username &lt;br/&gt;during Registration"
+					description="If Derive from Email, username is generated randomly from the Email address of the user. If Same as Email, the email address of the user is also used as the username.">
+					<option value="0">JNO</option>
+					<option value="1">Derive from Email</option>
+					<option value="2">Same as Email</option>
+				</field>
+
+				<field
+					name="auto_password"
+					type="radio"
+					default="0"
+					class="btn-group btn-group-yesno"
+					label="Auto Generate Password &lt;br/&gt;during Registration"
+					description="If yes, password is generated automatically during registration.">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field
+					name="hide_name_field"
+					type="radio"
+					default="0"
+					class="btn-group btn-group-yesno"
+					label="Hide Name Field &lt;br/&gt;in Registration Form"
+					description="If yes, name field is removed from registration form.">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="show_email_verify"
+					type="radio"
+					default="0"
+					class="btn-group btn-group-yesno"
+					label="Show Confirm Email &lt;br/&gt;Field"
+					description="If yes, confirm email field is displayed in registration form and in billing address form to guests."
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="vpau_registration_mail"
+					type="list"
+					default="1"
+					label="Registration Email"
+					description="If VP Advanced User, registration emails are sent using the email template system of VP Advanced User. If standard, emails are sent using standard VirtueMart system."
+					filter="integer">
+					<option value="0">Standard</option>
+					<option value="1">VP Advanced User</option>
+				</field>
+
+				<field
+					name="registration_message"
+					type="textarea"
+					rows="5"
+					cols="21"
+					default=""
+					label="Custom Registration &lt;br/&gt;Advantage Message"
+					description="Registration advantage message displayed to guests. Keep it empty to show the default message."
+					filter="safehtml"/>
+
+				<field
+					name="spacer_3"
+					type="spacer"
+					label="Login Options" />
+
+				<field
+					name="email_as_username"
+					type="list"
+					default="2"
+					label="Email as Username - Login"
+					description="If yes, only E-Mail address can be used login. If both, Username or E-Mail address can be used to login.">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+					<option value="2">Both</option>
+				</field>
+				
+				<field
+					name="show_social_login"
+					type="list"
+					default="1"
+					class="chzn-color-state"
+					label="Social Login Buttons"
+					description="If yes, social login buttons are displayed in login section. This option is only available in Joomla! 3.5+ when VP Advanced User component installed and configured."
+					filter="integer">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field
+					name="social_btn_size"
+					type="list"
+					default="standard"
+					label="Size of Social Buttons"
+					description="If standard, the first two login buttons are displayed with names. For others only icons are displayed in the buttons.">
+					<option value="standard">Standard</option>
+					<option value="small">Small</option>
+				</field>
+
+				<field
+					name="spacer_4"
+					type="spacer"
+					label="More Options" />
+
+				<field
+					name="oncheckout_show_steps"
+					type="radio"
+					default="1"
+					label="Show Checkout Steps"
+					description="Disable checkout steps during checkout"
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="hide_prices"
+					type="list"
+					default="0"
+					label="Hide All Prices"
+					description="If yes, all prices are hidden on cart page. If guest, all prices will be hidden from guest users. Please remember that price display of shipment method and payment methods are controlled by respective shipment and payment plugins. "
+					class="btn-group btn-group-yesno">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+					<option value="2">Guest</option>
+				</field>
+				
+				<field
+					name="hide_shipto"
+					type="radio"
+					default="0"
+					label="Hide Ship To Address Form"
+					description="If yes, shipping address form is not displayed on the cart page."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="hide_shipment"
+					type="radio"
+					default="0"
+					label="Hide Shipment Methods"
+					description="If yes, shipment methods are not displayed on the cart page. This option will only work if you have at least one shipment method available for all users and the same is select as 'Automatic Selected Shipment' in VirtueMart Configuration."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="hide_discount"
+					type="radio"
+					default="0"
+					label="Hide Discount"
+					description="Hide discount column in cart table"
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="hide_sku"
+					type="radio"
+					default="0"
+					label="Hide SKU"
+					description="Hide SKU column in cart table"
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="tax_column_name"
+					type="list"
+					default="standard"
+					label="Tax Column Name"
+					description="Name of the tax column in cart table. If Dynamic then then the name will be automatically derived from the name of the tax rule applied.">
+					<option value="standard">Standard</option>
+					<option value="dynamic">Dynamic</option>
+				</field>
+				
+				<field
+					name="show_taxes_separately"
+					type="radio"
+					default="0"
+					label="Show Taxes Separately"
+					description="Enable this option to show VAT Tax and other Bill Taxes separately below the price list table."
+					class="btn-group btn-group-yesno">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="field_grouping"
+					type="radio"
+					default="1"
+					label="Address Field Grouping"
+					description="If this is enabled then the address fields like name prefix, first name, last name, middle name, city, zip etc will be grouped together and displayed side by side."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="check_shipto_address"
+					type="radio"
+					default="1"
+					label="BT as ST by Default"
+					description="If this is enabled the checkbox for user bill to as ship to will be checked by default."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			
+				<field
+					name="module_position"
+					type="modpositions"
+					default="cart-promo"
+					label="Cart Module Position"
+					description="Select the module position that you want to display in the cart page."/>
+				
+				<field
+					name="checkout_advertisement"
+					type="radio"
+					default="1"
+					label="Show VirtueMart Checkout &lt;br/&gt;Advertisements"
+					description="If yes, checkout advertisements are displayed which are set by coupon plugins, payment plugins and shipment plugins."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+			</fieldset>
+			
+			<fieldset
+				name="eu_vat"
+				addfieldpath="plugins/system/vponepagecheckout/fields"
+				label="EU VAT">
+	
+				<field
+					name="eu_vat_system_check"
+					type="eusystemcheck"
+					label="EU VAT System Check" 
+					filter="unset" />
+			
+				<field
+					name="spacer_eu_vat"
+					type="spacer"
+					label="EU VAT Check" />
+			
+				<field 
+					name="eu_vat"
+					type="radio"
+					default="0"
+					label="Enable EU VAT Check"
+					description="If yes, VAT ID checking system is enabled."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field 
+					name="eu_vat_field"
+					type="vmuserfields"
+					default=""
+					field_types="BT,ST"
+					label="VAT - Shopper Field"
+					sf_types="text"
+					description="Select your VAT - Shopper Field from the list. The entered value in this field by the users will be validated as VAT ID.">
+					<option value="">-- Select --</option>
+				</field>
+				
+				<field 
+					name="eu_vat_show_data_admin"
+					type="radio"
+					default="1"
+					label="Show VAT Data in Order Admin"
+					description="If yes, EU VAT data is shown to administrators in order details."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field 
+					name="eu_vat_required"
+					type="radio"
+					default="0"
+					label="Buyer Needs Valid VAT ID"
+					description="If yes, orders will be accepted only from buyers with valid EU VAT Number."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="spacer_shopper_group"
+					type="spacer"
+					label="Change Shopper Group" />
+					
+				<field 
+					name="eu_vat_change_guest_group"
+					type="radio"
+					default="0"
+					label="Enable for Guests"
+					description="If yes, Guest shopper group change is enabled."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field 
+					name="eu_vat_change_registered_user_group"
+					type="radio"
+					default="0"
+					label="Enable for Registered Users"
+					description="If yes, Registered User shopper group change is enabled."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field 
+					name="vat_exempted_groups"
+					type="vmshoppergroups"
+					multiple="true"
+					ignore_defaults="true"
+					default=""
+					label="VAT Exempted Groups"
+					description="Select the groups which are to be assigned to VAT Exempted users." />
+				
+				<field 
+					name="vat_paying_groups"
+					type="vmshoppergroups"
+					multiple="true"
+					ignore_defaults="true"
+					default=""
+					label="VAT Paying Groups"
+					description="Select the groups which are to be assigned to VAT paying users. This should be different from 'VAT Exempted Groups'." />
+			
+				<field 
+					name="eu_vat_vendor_country"
+					type="vmcountries"
+					default="0"
+					vendorasdefault="true"
+					euonly="true"
+					label="Native Country"
+					description="Select the native country for your shop.">
+					<option value="0">-- Select --</option>
+				</field>
+				
+			</fieldset>
+			
+			<fieldset name="advanced" addfieldpath="plugins/system/vponepagecheckout/fields">
+			
+				<field 
+					name="load_jquery"
+					type="list"
+					default="2"
+					label="Load jQuery Library"
+					description="Load jQuery library. Keep it on Auto mode if you are not sure."
+					class="hide-on-j3">
+					<option value="2">Auto</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="load_jquery_plugins"
+					type="list"
+					default="2"
+					label="Load jQuery Plugins"
+					description="Load jQuery Hover Intent and jQuery Easing Plugins if it is not already loaded in your site. Keep it on Auto mode if you are not sure."
+					class="button-group">
+					<option value="2">Auto</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="tos_fancybox"
+					type="radio"
+					default="1"
+					label="Use Fancybox for TOS"
+					description="Use Fancybox to display Terms of Service instead of default Bootstrap Modal box."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="hide_system_msg"
+					type="radio"
+					default="1"
+					label="Hide System Messages"
+					description="Hide unnecessary system messages generated by plugin and shipment plugin. Eg. Please accept the terms of service to confirm, Missing field Name, Missing fields etc. They will be displayed by the plugin using Ajax when relevant."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="hide_custom_msg"
+					type="texttotag"
+					default=""
+					label="Custom Messages to Hide"
+					description="Enter the system messages (seperated by comma) which you want to hide on checkout page."
+					filter="string"/>
+					
+				<field
+					name="disable_ssl"
+					type="radio"
+					default="0"
+					label="Force Disable SSL on &lt;br/&gt;Non-Cart Pages"
+					description="Applicable only when SSL option is enabled in VirtueMart Configuration."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="default_country"
+					type="vmcountries"
+					label="Default Country"
+					default="0"
+					description="Select the country that will be selected automatically for a new user for Billing Address and Shipping Address. Select 'None' if you do not want to assign it automatically.">
+					<option value="-1">- None -</option>
+					<option value="0">- Same as Vendor Country -</option>
+				</field>
+				
+				<field
+					name="custom_registration_fields"
+					type="vmuserfields"
+					multiple="true"
+					default=""
+					skips="email, username, name, password, password2, agreed"
+					label="Custom Registration Fields"
+					description="Select which you want the user to fill-up during registration. Please note these fields data will get saved to the shopper information after the order is placed. Prior to that the data will get saved only to the cart session." />
+					
+				<field
+					name="custom_bt_update_fields"
+					type="vmuserfields"
+					multiple="true"
+					default=""
+					field_types="BT"
+					skips="username, name, password, password2, agreed, zip, city, virtuemart_country_id, virtuemart_state_id"
+					label="Custom BT Address Update &lt;br/&gt;Fields"
+					description="Select the bill to shopper fields for which you want to update the billing address in cart, when value changed." />
+					
+				<field
+					name="custom_st_update_fields"
+					type="vmuserfields"
+					multiple="true"
+					default=""
+					field_types="ST"
+					skips="username, name, password, password2, agreed, zip, city, virtuemart_country_id, virtuemart_state_id"
+					label="Custom ST Address Update &lt;br/&gt;Fields"
+					description="Select the ship to shopper fields for which you want update the shipping adddress in cart, when value is changed." />
+					
+				<field
+					name="enable_recaptcha"
+					type="radio"
+					default="0"
+					label="Show Captcha (If enabled)"
+					description="Show captcha in registration form if core Joomla! captcha plugin is enabled and it is also enabled in Joomla! Users Configuration."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="enable_placeholder"
+					type="radio"
+					default="0"
+					label="Show Placeholder"
+					description="If yes, field description/tip is displayed as place holder for input type fields."
+					class="btn-group btn-group-yesno"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="style_radio_checkbox"
+					type="radio"
+					default="0"
+					label="Format Radio &amp; Checkbox"
+					description="When enabled the plugin will automatcally format the radio and checkbox selectors in the address fields with Javascript."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="remove_unnecessary_links"
+					type="radio"
+					default="0"
+					label="Remove Extra Links"
+					description="When enabled the plugin will find and remove all unnecessary / extra hyperlinks from the checkout page."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="reload"
+					type="radio"
+					default="0"
+					label="Reload Full Page After &lt;br/&gt;Login &amp; Registration"
+					description="Reload the full page when a user successfully logged in or completes registration."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="reload_payment_on_shipment_selection"
+					type="radio"
+					default="0"
+					label="Reload Payment Methods &lt;br/&gt;after Shipment Selection"
+					description="Enable this if you need to reload the payment methods after shipment selection"
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="reload_all_on_apply_coupon"
+					type="radio"
+					default="0"
+					label="Reload Payment Methods &lt;br/&gt;and Shipment Methods after &lt;br/&gt;Coupon Code Submission"
+					description="Enable this if you need to reload the payment and shipments methods after a coupon code is submited"
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="extra_security"
+					type="radio"
+					default="0"
+					label="Enable Additional Security"
+					description="Enable additional Ajax security if supported by your site."
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="adminhelper"
+					type="vpadminhelper" />
+					
+				<field
+					name="pid"
+					type="hidden"
+					default="9" />
+
+			</fieldset>
+			
+		</fields>
+	</config>
+</extension>

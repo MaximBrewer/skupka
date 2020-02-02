@@ -1,0 +1,66 @@
+div.stepper .ui-controlgroup-horizontal .inc,
+div.stepper .ui-controlgroup-horizontal .dec,
+div.stepper .ui-controlgroup-vertical .inc,
+div.stepper .ui-controlgroup-vertical .dec { 
+   display: inline-block; 
+	max-width: 24px; 
+margin: 0;
+ }
+div.stepper .ui-controlgroup-horizontal input[type="text"] {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    border: 1px solid #CCC;
+    border-width: 1px 0;
+    margin: 0;
+    border-radius: 0 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 6px 4px;
+    text-align: center;
+    vertical-align: top;
+
+	}
+div.stepper .ui-controlgroup-horizontal .ui-btn {
+   border-right: 1px; 
+   border-right-style: solid; 
+   border-right-color: #BBB; 
+}	
+div.stepper .ui-controlgroup-horizontal .ui-btn-up-d {
+   border-right: 1px; 
+   border-right-style: solid; 
+   border-right-color: #BBB; 
+ }
+div.stepper .ui-controlgroup-vertical input[type="text"] {
+    display: block;
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    border: 0;
+    margin: 0 auto;
+    border-radius: 0 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 6px 0;
+    width:96%;
+    text-align: center;
+    vertical-align: top;
+	}
+div.stepper .step-input-wrap{
+	background-color: white;
+	border: 1px solid #CCC;
+	border-width: 1px 1px 0 1px;
+	}
+div.stepper .inc .ui-btn-inner,
+div.stepper .dec .ui-btn-inner {
+    padding: 6px;
+    border: 0;
+	}
+div.stepper .inc .ui-btn-text,
+div.stepper .dec .ui-btn-text {
+    font-size: 22px;
+    line-height: 30px;
+    height: 30px;
+	}
+	

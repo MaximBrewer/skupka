@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS `#__vd_config`, `#__vd_profiles`, `#__vd_schedules`, `#__vd_widget`, `#__vd_notifications`, `#__vd_logs`,`#__vd_display`,`#__vd_list_template`,`#__vd_detail_template`;

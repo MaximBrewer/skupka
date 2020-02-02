@@ -1,0 +1,8 @@
+/*start list by component */
+div.current ul.listBycomponent li {
+	width: 25%;
+	float: left;
+	display: table-cell;
+	height: 30px;
+	padding-top: 3px !important;
+}

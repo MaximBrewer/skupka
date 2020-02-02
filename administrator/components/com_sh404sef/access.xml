@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<access component="com_sh404sef">
+	<section name="component">
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+        <action name="sh404sef.view.configuration" title="Manage configuration" description="" />
+        <action name="sh404sef.view.urls" title="Manage URLs" description="" />
+        <action name="sh404sef.view.aliases" title="Manage aliases " description="" />
+        <action name="sh404sef.view.pageids" title="Manage shUrls " description="" />
+        <action name="sh404sef.view.metas" title="Manage metas " description="" />
+        <action name="sh404sef.view.analytics" title="View analytics" description="" />
+	</section>
+</access>

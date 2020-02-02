@@ -1,0 +1,45 @@
+<root>
+    <params name="jeventsevents" label="Filter">
+        <param type="group" label="Source">
+            <param name="sourcecategories" label="Categories" type="rseventsprocategories" default="0"
+                   multiple="1" size="10"/>
+            <param name="sourcegroups" label="Groups" type="rseventsprogroups" default="0"
+                   multiple="1" size="10"/>
+            <param name="sourcelocations" label="Locations" type="rseventsprolocations" default="0"
+                   multiple="1" size="10"/>
+            <param name="sourcetags" label="Tags" type="rseventsprotags" default="0"
+                   multiple="1" size="10"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="started" label="Started" type="filter" default="0"/>
+            <param name="ended" label="Ended" type="filter" default="-1"/>
+            <param name="featured" label="Featured" type="filter" default="0"/>
+            <param name="allday" label="All day event" type="filter" default="0"/>
+            <param name="recurring" label="Recurring event" type="filter" default="0"/>
+        </param>
+        <param type="group" label="Date and time" class="n2-expert">
+            <param name="rseventsprodate" default="Y-m-d" type="text" label="Date format"/>
+            <param name="rseventsprotime" default="H:i:s" type="text" label="Time format"/>
+            <param name="rseventstranslatedate" default="January->January||February->February||March->March" type="textarea" style2="width:300px;height: 100px;" label="Translate date and time"/>
+            <param name="rseventsoffset" label="Offset value" type="text" default=""
+                   tip="Timezone offset in hours. For example: +2 or -7. If you leave it empty, Joomla's System -> Global Configuration -> Server -> Server Time Zone setting will be used." />
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="rseventsproorder" type="mixed" label="Order" default="start|*|asc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="start">Start date</option>
+                <option value="end">End date</option>
+                <option value="created">Creation date</option>
+                <option value="name">Title</option>
+                <option value="hits">Hits</option>
+                <option value="id">ID</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

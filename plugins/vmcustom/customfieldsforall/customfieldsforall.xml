@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" group="vmcustom" method="upgrade">
+    <name>Custom Fields for All</name>
+    <creationDate>2015-03-17</creationDate>
+  	<author>breadkesigns</author>
+	<authorEmail>info@breakdesigns.net</authorEmail>
+	<authorUrl>http://www.breakdesigns.net</authorUrl>
+	<copyright>Copyright(c) 2014-2015 breakdesigns.net</copyright>
+	<license>GNU/GPL v.2</license>
+    <version>3.0.1</version>
+     <description><![CDATA[<h3>Custom Fields For All <i style="font-size:12px">(v.3.0.1 | 17 March 2015)</i></h3>
+    <span><img src="../plugins/vmcustom/customfieldsforall/assets/images/logo_90.png"/></span>
+    <p style="margin-top:5px; font-size:12px; font-weight:0;">A multi-purpose custom field for Virtuemart</p>
+    <p><a href="http://breakdesigns.net/extensions/customfields-for-all/manual#installation" target="_blank">Please check our Manual to see how to proceed further</a>
+    ]]></description>
+
+     <install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.sql</file>
+		</sql>
+	</install>
+
+    <uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+
+	<update> <!-- Runs on update; New in 1.6 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+    <files>
+        <filename plugin="customfieldsforall">customfieldsforall.php</filename>
+        <filename>index.html</filename>
+        <folder>assets</folder>
+        <folder>customfieldsforall</folder>
+        <folder>fields</folder>
+        <folder>helpers</folder>
+        <folder>sql</folder>
+        <folder>tables</folder>
+    </files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_vmcustom_customfieldsforall.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_vmcustom_customfieldsforall.sys.ini</language>
+        <language tag="el-GR">el-GR/el-GR.plg_vmcustom_customfieldsforall.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.plg_vmcustom_customfieldsforall.ini</language> 
+        <language tag="ru-RU">ru-RU/ru-RU.plg_vmcustom_customfieldsforall.ini</language>
+	</languages>
+	<config>
+	<fields name="params">
+		<fieldset name="basic" addfieldpath="/plugins/vmcustom/customfieldsforall/fields/j3">
+        <field name="data_type" type="datatype" label="PLG_CUSTOMSFORALL_DATA_TYPE_LABEL" description="PLG_CUSTOMSFORALL_DATA_TYPE_DESC" default="string"/>
+
+		<field name="display_type" default="button" type="displaytypes" label="PLG_CUSTOMSFORALL_DISPLAY_TYPE_LABEL" description="PLG_CUSTOMSFORALL_DISPLAY_TYPE_DESC"/> 
+
+		<field name="is_required" type="radio" label="PLG_CUSTOMSFORALL_IS_REQUIRED_LABEL" description="PLG_CUSTOMSFORALL_IS_REQUIRED_DESC" default="0">
+         	<option value="1">JYES</option>
+         	<option value="0">JNO</option>
+         </field>
+		
+         <field name="is_price_variant" type="radio" label="PLG_CUSTOMSFORALL_IS_PRICE_VARIANT_LABEL" description="PLG_CUSTOMSFORALL_IS_PRICE_VARIANT_DESC" default="0">
+         	<option value="1">JYES</option>
+         	<option value="0">JNO</option>
+         </field>
+
+         <field name="display_price" type="list" label="PLG_CUSTOMSFORALL_DISPLAY_PRICE_LABEL" description="PLG_CUSTOMSFORALL_DISPLAY_PRICE_DESC" default="tooltip">
+         	<option value="tooltip">PLG_CUSTOMSFORALL_TOOLTIP</option>
+         	<option value="label">PLG_CUSTOMSFORALL_LABEL_NAME</option>
+         	<option value="0">PLG_CUSTOMSFORALL_NO</option>
+         </field>
+
+         <field name="cf_val" type="customvalues" label="PLG_CUSTOMSFORALL_CUSTOMVALUE_LABEL" description="PLG_CUSTOMSFORALL_CUSTOMVALUE_DESC"/>
+		</fieldset>
+	</fields>
+	</config>
+    <params addpath="/plugins/vmcustom/customfieldsforall/fields/j2_5">
+         <param name="data_type" type="datatype" label="PLG_CUSTOMSFORALL_DATA_TYPE_LABEL" description="PLG_CUSTOMSFORALL_DATA_TYPE_DESC" default="string"/>
+
+         <param name="display_type" default="button" type="displaytypes" label="PLG_CUSTOMSFORALL_DISPLAY_TYPE_LABEL" description="PLG_CUSTOMSFORALL_DISPLAY_TYPE_DESC"/>
+
+         
+		
+		<param name="is_required" type="radio" label="PLG_CUSTOMSFORALL_IS_REQUIRED_LABEL" description="PLG_CUSTOMSFORALL_IS_REQUIRED_DESC" default="0">
+         	<option value="1">JYES</option>
+         	<option value="0">JNO</option>
+         </param>
+		
+         <param name="is_price_variant" type="radio" label="PLG_CUSTOMSFORALL_IS_PRICE_VARIANT_LABEL" description="PLG_CUSTOMSFORALL_IS_PRICE_VARIANT_DESC" default="0">
+         	<option value="1">JYES</option>
+         	<option value="0">JNO</option>
+         </param>
+
+         <param name="display_price" type="list" label="PLG_CUSTOMSFORALL_DISPLAY_PRICE_LABEL" description="PLG_CUSTOMSFORALL_DISPLAY_PRICE_DESC" default="tooltip">
+         	<option value="tooltip">PLG_CUSTOMSFORALL_TOOLTIP</option>
+         	<option value="label">PLG_CUSTOMSFORALL_LABEL_NAME</option>
+         	<option value="0">PLG_CUSTOMSFORALL_NO</option>
+         </param>
+
+         <param name="cf_val" type="customvalues" label="PLG_CUSTOMSFORALL_CUSTOMVALUE_LABEL" description="PLG_CUSTOMSFORALL_CUSTOMVALUE_DESC"/>
+	</params>
+</extension>

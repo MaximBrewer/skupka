@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_YANDEX_MAPS_ARENDATOR</name>
+	<author>Chupurnov Valeriy</author>
+	<creationDate>February 2016</creationDate>
+	<copyright>(C) 2016  All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>chupurnov@gmail.com</authorEmail>
+	<authorUrl>xdan.ru</authorUrl>
+	<version>3.0.6</version>
+	<description>PLG_SYSTEM_YANDEX_MAPS_ARENDATOR_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="yandex_maps_arendator">yandex_maps_arendator.php</filename>
+        <filename>index.html</filename>
+		<filename>.bowerrc</filename>
+		<filename>bower.json</filename>
+		<filename>connector.php</filename>
+		<folder>tmpl</folder>
+		<folder>profiles</folder>
+		<folder>fields</folder>
+		<folder>assets</folder>
+		<folder>sql</folder>
+	</files>
+	<languages>
+		<language tag="ru-RU">ru-RU.plg_system_yandex_maps_arendator.ini</language>
+		<language tag="ru-RU">ru-RU.plg_system_yandex_maps_arendator.sys.ini</language>
+	</languages>
+    <install>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_content/models/fields">
+
+			</fieldset>
+            <fieldset name="filter" label="PLG_SYSTEM_YANDEX_MAPS_ARENDATOR_FILTER">
+				<field
+					name="show_filter_datetimes"
+					type="radio"
+					label="PLG_SYSTEM_YANDEX_MAPS_ARENDATOR_DATETIMES_FILTER_LABEL"
+					description="PLG_SYSTEM_YANDEX_MAPS_ARENDATOR_DATETIMES_FILTER_DESCRIPTION"
+					default="1"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+                <field
+					name="show_filter_times"
+					type="radio"
+					label="PLG_SYSTEM_YANDEX_MAPS_ARENDATOR_TIMES_FILTER_LABEL"
+					default="1"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+                <field
+                    name="description_intro_length"
+                    label="PLG_SYSTEM_YANDEX_MAPS_ARENDATOR_LENGTH_DESCRIPTION_IN_BALLON_LABEL"
+                    description="PLG_SYSTEM_YANDEX_MAPS_ARENDATOR_LENGTH_DESCRIPTION_IN_BALLON_DESCRIPTION"
+                    type="number"
+                    default="200"
+                />
+                <field
+                    name="moderation"
+                    type="list"
+                    label="PLG_SYSTEM_YANDEX_MAPS_ARENDATOR_HOW_DO_MODERATION_LABEL"
+                    description="PLG_SYSTEM_YANDEX_MAPS_ARENDATOR_HOW_DO_MODERATION_DESCRIPTION"
+                    default="2"
+                    class="btn-group"
+                >
+                    <option value="2">PLG_SYSTEM_YANDEX_MAPS_ARENDATOR_POSTMODERATION</option>
+                    <option value="1">PLG_SYSTEM_YANDEX_MAPS_ARENDATOR_PREMODERATION</option>
+                    <option value="0">PLG_SYSTEM_YANDEX_MAPS_ARENDATOR_DONT_USE_MODERATION</option>
+                </field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

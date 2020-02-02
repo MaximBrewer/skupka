@@ -1,0 +1,1 @@
+var $hd = jQuery.noConflict();

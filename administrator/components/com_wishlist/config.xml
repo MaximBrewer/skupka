@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- see http://docs.joomla.org/Standard_parameter_types -->
+<config>
+		<fieldset name="activation" label="COM_FAVORITES_LICENSE" description="COM_FAVORITES_LICENSE_DESC">
+		 	<field type="text" name="lic_validation" size="25" label="COM_FAVORITES_LICENSE_LBL" description="COM_FAVORITES_LICENSE_CTRL_DESC" />
+		</fieldset>
+		<fieldset name="globalsettings" label="COM_FAVORITES_GLOBALS" description="COM_FAVORITES_GLOBALS_DESC">
+			<field name="tmpl_guest_enabled" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_FAVORITES_GUEST_CTRL_LBL" description="COM_FAVORITES_GUEST_CTRL_LBL_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			</field>
+			<field type="text" filter="integer" name="tmpl_favorites_maxnum" size="5" default="9999" label="COM_FAVORITES_MAXFAV_CTRL_LBL" description="COM_FAVORITES_MAXFAV_CTRL_LBL_DESC" />
+			<field name="tmpl_favlist_style" type="list" default="heart" label="COM_FAVORITES_STYLE_CTRL_LBL" description="COM_FAVORITES_STYLE_CTRL_LBL_DESC">
+					<option value="button">Standard</option>
+					<option value="heart">Heart Icon</option>
+					<option value="star">Star Icon</option>
+					<option value="smile-o">Smile Icon</option>
+					<option value="thumbs-up">ThumbsUp Icon</option>
+					<option value="check-circle">Check Icon</option>
+					<option value="plus-square">Plus Icon</option>
+					<option value="list-ol">OL List Icon</option>
+					<option value="list-ul">UL List Icon</option>
+					<option value="th-list">TH List Icon</option>
+					<option value="list-alt">Alt List Icon</option>
+					<option value="floppy-o">Floppy Icon</option>
+					<option value="folder-open">Folder Icon</option>
+			</field>
+			<field name="tmpl_favbtn_image" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_FAVBTN_IMAGE_CTRL_LBL" description="COM_FAVBTN_IMAGE_CTRL_LBL_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			</field>
+			<field name="tmpl_notorderable_enabled" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_FAVORITES_NOTORDERABLE_CTRL_LBL" description="COM_FAVORITES_NOTORDERABLE_CTRL_LBL_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			</field>
+			<field name="tmpl_qty_enabled" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_FAVORITES_QTY_CTRL_LBL" description="COM_FAVORITES_QTY_CTRL_LBL_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			</field>
+			<field name="tmpl_favdate_enabled" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_FAVORITES_FAVDATE_CTRL_LBL" description="COM_FAVORITES_FAVDATE_CTRL_LBL_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			</field>
+			<field name="tmpl_favstat_enabled" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_FAVORITES_FAVSTAT_CTRL_LBL" description="COM_FAVORITES_FAVSTAT_CTRL_LBL_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			</field>
+			<field name="tmpl_afaq_enabled" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_FAVORITES_AFAQ_CTRL_LBL" description="COM_FAVORITES_AFAQ_CTRL_LBL_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			</field>
+			<field type="text" filter="integer" name="tmpl_favimage_width" size="5" default="80" label="COM_FAVORITES_IMGWIDTH_CTRL_LBL" description="COM_FAVORITES_IMGWIDTH_CTRL_LBL_DESC" />
+		</fieldset>
+		<fieldset name="fav_layout_opt" label="COM_FAVORITES_FAV_LAYOUT_OPT" description="COM_FAVORITES_FAV_LAYOUT_DESC">
+		 	<field name="fav_tooltip_enabled" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_FAVORITES_TOOLTIP_CTRL_LBL" description="COM_FAVORITES_TOOLTIP_CTRL_LBL_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			</field>
+			<field name="fav_qty_enabled" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_FAVORITES_QTY_CTRL_LBL" description="COM_FAVORITES_QTY_CTRL_LBL_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			</field>
+			<field name="fav_txt_btn_enabled" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_FAVORITES_TXTBTN_CTRL_LBL" description="COM_FAVORITES_TXTBTN_CTRL_LBL_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			</field>
+		</fieldset>
+		<fieldset name="wish_layout_opt" label="COM_FAVORITES_WISH_LAYOUT_OPT" description="COM_FAVORITES_WISH_LAYOUT_DESC">
+		 	<field name="wish_tooltip_enabled" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_FAVORITES_TOOLTIP_CTRL_LBL" description="COM_FAVORITES_TOOLTIP_CTRL_LBL_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			</field>
+			<field name="wish_qty_enabled" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_FAVORITES_QTY_CTRL_LBL" description="COM_FAVORITES_QTY_CTRL_LBL_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			</field>
+			<field name="wish_txt_btn_enabled" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_FAVORITES_TXTBTN_CTRL_LBL" description="COM_FAVORITES_TXTBTN_CTRL_LBL_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			</field>
+		</fieldset>
+		<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC" >
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" validate="rules" filter="rules" component="com_wishlist" section="component" />
+	    </fieldset>
+</config>

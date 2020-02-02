@@ -1,0 +1,24 @@
+<root>
+  <params name="video-item" label="Video item settings" hidetitle="1">
+    <param name="video_mp4" type="video" label="MP4 video" default="" style="width:236px;"/>
+    <param name="poster" type="image" label="Poster html attribute" default="" fixed="1" style="width:236px;"/>
+    <param type="group">
+      <param name="volume" type="list" label="Volume" default="1" translateable="1">
+        <option value="0">Mute</option>
+        <option value="0.25">25%</option>
+        <option value="0.5">50%</option>
+        <option value="0.75">75%</option>
+        <option value="1">100%</option>
+      </param>
+      <param name="preload" type="list" label="Preload" default="auto" translateable="1">
+        <option value="auto">auto</option>
+        <option value="metadata">metadata</option>
+        <option value="none">none</option>
+      </param>
+      <param name="showcontrols" type="onoff" label="Controls" default="0"/>
+      <param name="autoplay" type="onoff" label="Autoplay" default="0"/>
+      <param name="center" type="onoff" label="Centered" default="0"/>
+      <param name="loop" type="onoff" label="Loop" default="0"/>
+      <param name="reset" type="onoff" label="Reset on slide change" default="0" class="n2-expert"/></param>
+  </params>
+</root>

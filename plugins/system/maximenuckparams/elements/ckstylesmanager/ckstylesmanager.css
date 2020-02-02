@@ -1,0 +1,100 @@
+/**
+ * @copyright	Copyright (C) 2012 Cedric KEIFLIN alias ced1870
+ * http://www.joomlack.fr
+ * @license		GNU/GPL
+ * */
+
+.ckpopup {
+    border: #666 1px solid;
+    box-shadow: #000 0px 0px 5px;
+    -moz-box-shadow: #000 0px 0px 5px;
+    background: #eee url('fondpopup.png') left top repeat-x;   
+    width: 80%;
+    padding: 10px;
+    left: 10%;
+    top: 100px;    
+    padding-bottom: 100px;
+}
+
+.ckpopup_save {
+    background-image: url('validate.png');
+}
+
+.ckpopup_save:hover {
+    background-image: url('validate_hover.png');
+}
+
+.ckpopup_cancel {
+    background-image: url('cancel.png');
+}
+
+.ckpopup_cancel:hover {
+    background-image: url('cancel_hover.png');
+}
+
+.ckpopup_button {
+    color: #aaa;
+    padding: 5px 20px 5px 5px;
+    background-color: #333;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-top: #666 1px solid;
+    border-left: #444 1px solid;
+    border-right: #444 1px solid;
+    border-bottom: #000 1px solid;
+    float: right;
+    margin: 3px 3px 15px 3px;
+    width: 50px;
+    cursor: pointer;
+    font-family: 'Segoe UI';
+}
+
+.ckpopup_button:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.ckpopup_title {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Segoe UI';
+}
+
+.ckstylesmanager_button {
+    padding: 5px;
+	color: #333;
+	text-decoration: none;
+	font-weight: normal;
+	text-align: center;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	cursor: pointer;
+	background: #f4f4f4 url('options24.png') 5px center no-repeat;
+	text-indent: 30px;
+	height: 35px;
+    width: 100%;
+    text-align: left;
+}
+
+.ckstylesmanager_button:hover {
+    background-color: #e1e1e1;
+    color: #000;
+}
+
+span.spacer {
+    clear: both;
+    display: block;
+}
+
+.ckpopup label {
+    display: inline-block;
+}
+
+.ckpopup_row {
+    margin: 2px;
+}
+
+

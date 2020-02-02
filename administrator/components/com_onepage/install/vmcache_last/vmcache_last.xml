@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>plg_system_vmcache_last</name>
+	<author>RuposTel.com</author>
+	<creationDate>February 2014</creationDate>
+	<copyright>Copyright (C) RuposTel.com</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@rupostel.com</authorEmail>
+	<authorUrl>www.rupostel.com</authorUrl>
+	<version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+	<description>Provides page caching for Virtuemart and Joomla. This is a helper plugin for vmcache which must be loaded as the last one!</description>
+	<files>
+		<filename plugin="vmcache_last">vmcache_last.php</filename>
+		<filename>index.html</filename>
+	</files>
+  
+	<config>
+	<fields name="params">
+	</fields>
+
+	</config>
+</extension>

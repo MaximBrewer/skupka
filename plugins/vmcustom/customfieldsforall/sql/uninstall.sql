@@ -1,0 +1,1 @@
+DROP TABLE `#__virtuemart_custom_plg_customsforall_values`, `#__virtuemart_product_custom_plg_customsforall`; 

@@ -1,0 +1,10 @@
+<root translate="smartslider">
+    <params name="joomla-module-item" label="Joomla module settings" hidetitle="1">
+        <param type="list" translateable="1" name="positiontype" label="Type" default="loadposition">
+            <option value="loadposition">Loadposition - Content plugin</option>
+            <option value="module">Module - Modules Anywhere</option>
+            <option value="modulepos">Modulepos - Modules Anywhere</option>
+        </param>
+        <param type="text" name="positionvalue" label="Parameter" default=""/>
+    </params>
+</root>

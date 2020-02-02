@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension version="2.5" type="plugin" group="vmcalculation" method="upgrade">
+    <name>VM3 - Calculation Tax per ZIP</name>
+    <creationDate>May 2013</creationDate>
+    <author>RuposTel.com</author>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <copyright>Copyright (C) 2013 RuposTel.com</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>Tax per ZIP calculation</description>
+    <languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_vmcalculation_tax_per_zip.ini</language>
+    </languages>
+    <files>
+        <filename plugin="tax_per_zip">tax_per_zip.php</filename>
+		<folder>language</folder>	
+		<filename>helper.php</filename>
+		<filename>helper.js</filename>
+    </files>
+	
+	 <config>
+        <fields name="params">
+            <fieldset name="basic">
+              
+				
+			
+				
+				
+				
+				
+				
+			<field name="debug" type="list"  label="VMCALCULATION_MOSS_CALC_DEBUG" description="VMCALCULATION_MOSS_CALC_DEGUGDESC" >
+				 			<option
+				value="0">JNo</option>
+			<option
+				value="1">JYes</option>
+
+				</field>
+				
+				 <field name="display_form" type="text" default=" (%NN.DD)" label="VMCALCULATION_TAX_PER_ZIP_DISPLAYTAXC" description="VMCALCULATION_TAX_PER_ZIP_DISPLAYDESC" />
+				
+				
+            </fieldset>
+        </fields>
+    </config>
+	
+	
+</extension>

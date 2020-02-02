@@ -1,0 +1,279 @@
+#coolrunner_map article,
+#coolrunner_map  aside,
+#coolrunner_map  details,
+#coolrunner_map  figcaption, 
+#coolrunner_map figure, 
+#coolrunner_map footer, 
+#coolrunner_map header, 
+#coolrunner_map hgroup, 
+#coolrunner_map nav, 
+#coolrunner_map section, 
+#coolrunner_map summary { display: block !important; }
+#coolrunner_map audio, 
+#coolrunner_map canvas, 
+#coolrunner_map video { display: inline-block !important; }
+#coolrunner_map audio:not([controls]) { display: none !important; height: 0px !important; }
+#coolrunner_map  [hidden] { display: none !important; }
+#coolrunner_map  html { font-family: sans-serif !important; }
+#coolrunner_map body { margin: 0px !important; }
+#coolrunner_map  a:focus { outline: dotted thin !important; }
+#coolrunner_map  a:active, a:hover { outline: 0px !important; }
+#coolrunner_map  h1 { font-size: 2em !important; }
+#coolrunner_map  abbr[title] { border-bottom-width: 1px !important; border-bottom-style: dotted !important; }
+#coolrunner_map b, 
+#coolrunner_map strong { font-weight: bold !important; }
+#coolrunner_map dfn { font-style: italic !important; }
+#coolrunner_map mark { color: rgb(0, 0, 0) !important; background: rgb(255, 255, 0) !important; }
+#coolrunner_map code, 
+#coolrunner_map kbd, 
+#coolrunner_map pre, 
+#coolrunner_map samp { font-family: monospace, serif !important; font-size: 1em !important; }
+#coolrunner_map pre { white-space: pre-wrap !important; word-wrap: break-word !important; }
+#coolrunner_map q { quotes: "“" "”" "‘" "’" !important; }
+#coolrunner_map small { font-size: 80% !important; }
+#coolrunner_map sub, 
+#coolrunner_map sup { font-size: 75% !important; line-height: 0 !important; position: relative !important; vertical-align: baseline !important; }
+#coolrunner_map sup { top: -0.5em !important; }
+#coolrunner_map sub { bottom: -0.25em !important; }
+#coolrunner_map img { border: 0px !important; }
+#coolrunner_map svg:not(:root) { overflow: hidden !important; }
+#coolrunner_map figure { margin: 0px !important; }
+#coolrunner_map fieldset { border: 1px solid rgb(192, 192, 192) !important; margin: 0px 2px !important; padding: 0.35em 0.625em 0.75em !important; }
+#coolrunner_map legend { border: 0px !important; padding: 0px !important; }
+#coolrunner_map button, 
+#coolrunner_map input, 
+#coolrunner_map select, 
+#coolrunner_map textarea { font-family: inherit !important; font-size: 100% !important; margin: 0px !important; }
+#coolrunner_map button, 
+#coolrunner_map input { line-height: normal !important; }
+#coolrunner_map button, 
+#coolrunner_map html input[type="button"], 
+#coolrunner_map input[type="reset"], 
+#coolrunner_map input[type="submit"] { -webkit-appearance: button !important; cursor: pointer !important; }
+#coolrunner_map button[disabled], 
+#coolrunner_map input[disabled] { cursor: default !important; }
+#coolrunner_map input[type="checkbox"], 
+#coolrunner_map input[type="radio"] { box-sizing: border-box !important; padding: 0px !important; }
+#coolrunner_map input[type="search"] { -webkit-appearance: textfield !important; box-sizing: content-box !important; }
+#coolrunner_map input[type="search"]::-webkit-search-cancel-button,
+#coolrunner_map  input[type="search"]::-webkit-search-decoration { -webkit-appearance: none !important; }
+#coolrunner_map textarea { overflow: auto !important; vertical-align: top !important; }
+#coolrunner_map table { border-collapse: collapse !important; border-spacing: 0px !important; }
+#coolrunner_map * { box-sizing: border-box !important; margin: 0px !important; padding: 0px !important; }
+#coolrunner_map html { -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; }
+#coolrunner_map body { color: rgb(0, 0, 0) !important; line-height: 1 !important; background: rgb(255, 255, 255) !important; }
+#coolrunner_map html, 
+#coolrunner_map body, 
+#coolrunner_map img, 
+#coolrunner_map fieldset, 
+#coolrunner_map abbr, 
+#coolrunner_map acronym { border: 0px !important; }
+#coolrunner_map h1, 
+#coolrunner_map h2, 
+#coolrunner_map h3, 
+#coolrunner_map h4, 
+#coolrunner_map h5, 
+#coolrunner_map h6 { font-size: 100% !important; font-weight: normal !important; }
+#coolrunner_map th, 
+#coolrunner_map code, 
+#coolrunner_map cite, 
+#coolrunner_map caption { font-weight: normal !important; font-style: normal !important; text-align: left !important; }
+#coolrunner_map address { font-style: normal !important; }
+#coolrunner_map fieldset { margin: 0px !important; padding: 0px !important; border: 0px !important; }
+#coolrunner_map img { display: block !important; }
+#coolrunner_map ol, 
+#coolrunner_map ul { list-style: none !important; }
+#coolrunner_map q::before, 
+#coolrunner_map q::after { content: "" !important; }
+#coolrunner_map input:focus, 
+#coolrunner_map input[type="search"]:focus { outline-offset: -2px !important; }
+#coolrunner_map input[type="search"] { -webkit-appearance: none !important; box-sizing: border-box !important; }
+#coolrunner_map a, 
+#coolrunner_map button { touch-action: manipulation !important; }
+#coolrunner_map body, 
+#coolrunner_map button, 
+#coolrunner_map input, 
+#coolrunner_map select, 
+#coolrunner_map table, 
+#coolrunner_map textarea { font-family: 'Helvetica Neue', Verdana, Arial, sans-serif !important; color: rgb(99, 99, 99) !important; font-size: 14px !important; line-height: 1.5 !important; }
+#coolrunner_map a { color: rgb(51, 153, 204) !important; text-decoration: none !important; }
+#coolrunner_map a:hover { color: rgb(46, 138, 184) !important; text-decoration: underline !important; }
+#coolrunner_map a:focus { outline-color: rgb(48, 145, 194) !important; color: rgb(20, 61, 82) !important; }
+#coolrunner_map ol, 
+#coolrunner_map ul { list-style: none !important; margin: 0px !important; padding: 0px !important; }
+#coolrunner_map .main-container,
+#coolrunner_map  .footer-container { position: relative !important; max-width: 1260px !important; margin: 0px auto !important; padding: 15px !important; }
+#coolrunner_map .main-container::after,
+#coolrunner_map  .footer-container::after { content: "" !important; display: table !important; clear: both !important; }
+#coolrunner_map .main::after,
+#coolrunner_map  .col-wrapper::after { content: "" !important; display: table !important; clear: both !important; }
+#coolrunner_map .col-left,
+#coolrunner_map  .col-right,
+#coolrunner_map  .col-main { padding: 0px 10px !important; }
+#coolrunner_map .col-main { float: left !important; width: 75% !important; }
+#coolrunner_map .col1-layout .col-main { float: none !important; width: auto !important; padding: 0px !important; }
+#coolrunner_map .col2-left-layout .col-main { float: right !important; padding-right: 0px !important; }
+#coolrunner_map .col2-right-layout .col-main { padding-left: 0px !important; }
+#coolrunner_map .col3-layout .col-wrapper .col-main { float: right !important; width: 73.6842% !important; }
+#coolrunner_map .std p { margin: 0px 0px 1.5em !important; }
+#coolrunner_map .std ol { list-style: decimal outside !important; margin-bottom: 1.5em !important; }
+#coolrunner_map .std ol li { margin-left: 2em !important; }
+#coolrunner_map .std ul { list-style: disc outside !important; margin-bottom: 1.5em !important; }
+#coolrunner_map .std ul li { margin-left: 2em !important; }
+#coolrunner_map .std .note { color: rgb(160, 160, 160) !important; font-size: 13px !important; }
+#coolrunner_map label { display: inline-block !important; font-size: 13px !important; font-family: Raleway, 'Helvetica Neue', Verdana, Arial, sans-serif !important; font-weight: 600 !important; -webkit-user-select: none !important; }
+#coolrunner_map select { font-size: 14px !important; }
+#coolrunner_map select + select { margin-left: 5px !important; }
+#coolrunner_map select[multiple] { width: 270px !important; border: 1px solid silver !important; font-size: 15px !important; padding: 5px !important; }
+#coolrunner_map textarea { box-sizing: border-box !important; width: 100% !important; max-width: 450px !important; padding: 5px !important; }
+#coolrunner_map input[type="email"], 
+#coolrunner_map input[type="search"], 
+#coolrunner_map input[type="number"], 
+#coolrunner_map input[type="password"], 
+#coolrunner_map input[type="tel"], 
+#coolrunner_map input[type="text"] { height: 30px !important; padding: 0px 8px !important; }
+#coolrunner_map input[type="email"],
+#coolrunner_map  input[type="search"],
+#coolrunner_map  input[type="number"],
+#coolrunner_map  input[type="password"],
+#coolrunner_map  input[type="tel"],
+#coolrunner_map  input[type="text"] { width: 365px !important; max-width: 100% !important; }
+#coolrunner_map *::-webkit-input-placeholder { color: rgb(160, 160, 160) !important; }
+#coolrunner_map html, 
+#coolrunner_map body { height: 100% !important; }
+#coolrunner_map .wrapper { min-width: 320px !important; min-height: 100% !important; margin: 0px auto !important; background: rgb(255, 255, 255) !important; }
+#coolrunner_map .wrapper::after { content: "" !important; display: table !important; clear: both !important; }
+#coolrunner_map .checkout-onepage-index .col-main { width: auto !important; float: none !important; }
+#coolrunner_map .checkout-onepage-success .col-main { padding: 0px !important; text-align: center !important; }
+#coolrunner_map .cms-page-view .std img, .cms-no-route .std img { max-width: 100% !important; }
+#coolrunner_map .cms-page-view .std p, .cms-no-route .std p { color: rgb(99, 99, 99) !important; font-family: Georgia, Times, 'Times New Roman', serif !important; font-size: 14px !important; font-style: italic !important; line-height: 24px !important; }
+#coolrunner_map .cms-page-view .std h1, .cms-no-route .std h1 { color: rgb(51, 153, 204) !important; }
+#coolrunner_map .cms-page-view .std h2, .cms-no-route .std h2 { color: rgb(51, 153, 204) !important; }
+#coolrunner_map .cms-page-view .std li, .cms-no-route .std li { color: rgb(99, 99, 99) !important; font-family: Georgia, Times, 'Times New Roman', serif !important; font-size: 14px !important; font-style: italic !important; line-height: 24px !important; }
+#coolrunner_map .cms-no-route .std img { width: 100% !important; }
+#coolrunner_map .cms-page-view .std .messages, .cms-home .std .messages, .#coolrunner_map cms-no-route .std .messages { margin-bottom: 10px !important; }
+#coolrunner_map .cms-page-view .std .messages ul, .cms-home .std .messages ul, .#coolrunner_map cms-no-route .std .messages ul { margin-bottom: 0px !important; }
+#coolrunner_map .cms-page-view .std .messages li, .cms-home .std .messages li, .#coolrunner_map cms-no-route .std .messages li { list-style: none !important; margin-left: 0px !important; font-style: normal !important; font-family: 'Helvetica Neue', Verdana, Arial, sans-serif !important; }
+#coolrunner_map .wrapper { min-height: 0px !important; }
+#coolrunner_map *,
+#coolrunner_map  .nav-primary a,
+#coolrunner_map  #search,
+#coolrunner_map  .products-grid .product-name,
+#coolrunner_map  .products-list .product-name,
+#coolrunner_map  .price-box,
+#coolrunner_map  .price-box .price,
+#coolrunner_map  .price,
+#coolrunner_map  h2,
+#coolrunner_map  .h2,
+#coolrunner_map  h1,
+#coolrunner_map  .h1, 
+#coolrunner_map h3,
+#coolrunner_map  .h3,
+#coolrunner_map  h4,
+#coolrunner_map  .h4,
+#coolrunner_map  h5,
+#coolrunner_map  .h5,
+#coolrunner_map  h6,
+#coolrunner_map  .h6,
+#coolrunner_map  .block-layered-nav .block-content > dl > dt,
+#coolrunner_map  label, .pager .amount,#coolrunner_map  .pages a,#coolrunner_map  .pages .current,#coolrunner_map  .button,#coolrunner_map  .cart-table .product-cart-actions .button,#coolrunner_map  #co-shipping-method-form .buttons-set .button,#coolrunner_map  .footer .button,#coolrunner_map  .cart-table thead th,#coolrunner_map  .cart-table tbody td,#coolrunner_map  body,#coolrunner_map  button,#coolrunner_map  input,#coolrunner_map  select,#coolrunner_map  table,#coolrunner_map  textarea,#coolrunner_map  .cart .cart-totals table tfoot strong span,#coolrunner_map  .cart .cart-totals table tfoot span.price,#coolrunner_map  .cart-table .price,#coolrunner_map  .cart-table .product-cart-price::before,#coolrunner_map  .data-table tbody td,#coolrunner_map  .data-table tfoot td,#coolrunner_map  body.customer-account .data-table td a,#coolrunner_map  .data-table th,#coolrunner_map  .dashboard .box-account p,#coolrunner_map  .dashboard .box-account address,#coolrunner_map  form .legend,#coolrunner_map  .cms-page-view .std p,#coolrunner_map  .cms-no-route .std p,#coolrunner_map  .cms-page-view .std li,#coolrunner_map  .cms-no-route .std li,#coolrunner_map  form .form-instructions { font-family: Arial,  sans-serif !important; }
+#coolrunner_map .cms-page-view .std li,#coolrunner_map  .cms-no-route .std li,#coolrunner_map  .dashboard .box-account p,#coolrunner_map  .dashboard .box-account address,#coolrunner_map  .cms-page-view .std p,#coolrunner_map  .cms-no-route .std p,#coolrunner_map  form .form-instructions { font-style: normal !important; }
+#coolrunner_map a,#coolrunner_map  a:focus,#coolrunner_map  button,#coolrunner_map  button:focus,#coolrunner_map  input,#coolrunner_map  input:focus { outline: none !important; }
+#coolrunner_map .col1-layout .col-main { padding: 20px 0px !important; }
+#coolrunner_map .std p { margin-bottom: 10px !important; }
+#coolrunner_map select[data-dkcacheid] { display: none !important; }
+#coolrunner_map input,#coolrunner_map  input:focus,#coolrunner_map  input:active,#coolrunner_map  select,#coolrunner_map  select:focus,#coolrunner_map  select:active { outline: 0px !important; box-shadow: none !important; }
+#coolrunner_map label { font-size: 18px !important; }
+#coolrunner_map input[type="text"],#coolrunner_map  input[type="email"],#coolrunner_map  input[type="password"],#coolrunner_map  input[type="tel"],#coolrunner_map  input[type="search"],#coolrunner_map  input[type="number"] { height: 46px !important; border: 2px solid rgb(236,  236,  236) !important; font-size: 18px !important; color: rgb(37,  37,  37) !important; margin: 0px !important; display: inline-block !important; padding: 8px 15px 10px !important; font-weight: normal !important; width: 100% !important; line-height: normal !important; }
+#coolrunner_map input[type="text"]:hover,#coolrunner_map  input[type="text"]:focus,#coolrunner_map  input[type="email"]:hover,#coolrunner_map  input[type="email"]:focus,#coolrunner_map  input[type="password"]:hover,#coolrunner_map  input[type="password"]:focus,#coolrunner_map  input[type="tel"]:hover,#coolrunner_map  input[type="tel"]:focus,#coolrunner_map  input[type="search"]:hover,#coolrunner_map  input[type="search"]:focus,#coolrunner_map  input[type="number"]:hover,#coolrunner_map  input[type="number"]:focus { border-color: rgb(226,226,  226) !important; border-width: 2px !important; }
+#coolrunner_map input[type="text"]:disabled,#coolrunner_map  input[type="email"]:disabled,#coolrunner_map  input[type="password"]:disabled,#coolrunner_map  input[type="tel"]:disabled,#coolrunner_map  input[type="search"]:disabled,#coolrunner_map  input[type="number"]:disabled,#coolrunner_map  input[readonly],#coolrunner_map  input[readonly="readonly"] { cursor: not-allowed !important; background-color: rgb(250,  250,  250) !important; }
+#coolrunner_map input { height: 30px !important; margin-right: 20px !important; }
+#coolrunner_map input[type="radio"] { margin-right: 10px !important; }
+#coolrunner_map input[type="number"]::-webkit-inner-spin-button,#coolrunner_map  input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none !important; }
+#coolrunner_map .btn { position: relative !important; padding: 10px 15px !important; border: 0px !important; border-radius: 5px !important; text-transform: uppercase !important; font-size: 16px !important; line-height: 19px !important; display: inline-block !important; }
+#coolrunner_map .btn-primary { color: rgb(255,  255,  255) !important; background-color: rgb(43,  151,  214) !important; }
+#coolrunner_map .btn-primary:hover { color: rgb(255,  255,  255) !important; background-color: rgb(52,  178,  252) !important; }
+#coolrunner_map .btn-primary:focus { color: rgb(255,  255,  255) !important; background-color: rgb(27,  153,  226) !important; }
+.btn:not(.btn-link):active,#coolrunner_map  button:active { transform: scale(0.98) !important; }
+#coolrunner_map body { font-family: Arial,  sans-serif !important; font-size: 16px !important; line-height: 24px !important; color: rgb(65,  65,  65) !important; }
+#coolrunner_map a,#coolrunner_map  a:hover { color: rgb(65,  65,  65) !important; text-decoration: none !important; }
+#coolrunner_map p a { color: rgb(43,  151,  214) !important; }
+#coolrunner_map p a:hover { color: rgb(27,  153,  226) !important; }
+#coolrunner_map p { margin-bottom: 10px !important; }
+#coolrunner_map strong { font-family:  Arial,  sans-serif !important; font-weight: normal !important; }
+#coolrunner_map label { text-transform: uppercase !important; font-size: 12px !important; font-family: Arial,  sans-serif !important; font-weight: normal !important; letter-spacing: 0.05em !important; margin-bottom: 3px !important; display: block !important; }
+#coolrunner_map label a,#coolrunner_map  label a:hover { color: rgb(43,  151,  214) !important; }
+#coolrunner_map .main-container,#coolrunner_map  .footer-container { width: 940px !important; padding: 0px !important; }
+#coolrunner_map img { max-width: 100% !important; }
+#coolrunner_map hr { border-width: 2px 0px 0px !important; border-top-style: solid !important; border-top-color: rgb(236,  236,  236) !important; }
+#coolrunner_map .cms-page-view .col-main,#coolrunner_map  .cms-no-route .col-main { padding: 40px 0px 50px !important; }
+#coolrunner_map .cms-page-view .std h1,#coolrunner_map  .cms-no-route .std h1 { color: rgb(65,  65,  65) !important; }
+#coolrunner_map #how-to .main-container { width: 940px !important; padding: 0px !important; }
+#coolrunner_map #coolrunner-cta-white .btn { margin-left: 20px !important; min-width: 160px !important; display: inline-block !important; }
+#coolrunner_map .cms-for-virksomheder .col-main { padding: 20px 0px 0px !important; }
+#coolrunner_map #create-shipment #package-delivery-type .radio .configurations .droppoint .select-droppoint .btn { position: relative !important; width: 100% !important; margin-top: 20px !important; padding: 8px 15px 10px !important; text-transform: none !important; }
+#coolrunner_map #login-account .btn { width: 100% !important; margin-top: 10px !important; text-transform: uppercase !important; font-size: 18px !important; }
+#coolrunner_map .checkout-onepage-success .page,#coolrunner_map  .checkouttester-index-success .page { background-color: rgb(246,  246,  246) !important; }
+#coolrunner_map .order-success .download-info .btn { padding: 10px 15px !important; font-size: 14px !important; text-align: center !important; }
+#coolrunner_map .order-success .download-info .btn .fa { margin-right: 8px !important; }
+#coolrunner_map .customer-account-login .page { background-color: rgb(246,  246,  246) !important; }
+#coolrunner_map .customer-account-logoutsuccess .page { background-color: rgb(246,  246,  246) !important; }
+#coolrunner_map .customer-account-forgotpassword .page { background-color: rgb(246,  246,  246) !important; }
+#coolrunner_map .customer-account-create .page { background-color: rgb(246,  246,  246) !important; }
+#coolrunner_map .customer-account-create .col-main .account-create { border: 2px solid rgb(236,  236,  236) !important; border-radius: 5px !important; padding: 35px 45px 45px !important; margin: 10px 0px 20px !important; background-color: rgb(255,  255,  255) !important; }
+#coolrunner_map .customer-account .page { background-color: rgb(246,  246,  246) !important; }
+#coolrunner_map .customer-account .page > .main-container { padding: 25px 0px 40px !important; }
+#coolrunner_map .customer-account .col-main .my-account { border: 2px solid rgb(236,  236,  236) !important; border-radius: 5px !important; padding: 15px 25px 20px !important; position: relative !important; background-color: rgb(255,  255,  255) !important; }
+#coolrunner_map .customer-account .main a { color: rgb(43,  151,  214) !important; }
+#coolrunner_map .customer-account-index .col-main .my-account .payment-method { padding: 15px 20px 18px !important; border-radius: 5px !important; overflow: auto !important; margin-bottom: 15px !important; margin-top: 20px !important; background-color: rgb(244,  244,  244) !important; }
+#coolrunner_map .customer-account-index .col-main .my-account .payment-method i { margin-right: 20px !important; border-radius: 5px !important; color: rgb(244,  244,  244) !important; padding: 8px 10px !important; background-color: rgb(65,  65,  65) !important; }
+#coolrunner_map .customer-account-index .col-main .my-account .payment-method a.remove-payment { float: right !important; margin-top: 5px !important; }
+#coolrunner_map .customer-account-index .col-main .my-account .payment-method.none { color: rgb(223,  40,  10) !important; margin-bottom: 10px !important; margin-top: 12px !important; line-height: 36px !important; padding-top: 10px !important; padding-bottom: 10px !important; padding-right: 10px !important; background-color: rgb(250,  235,  231) !important; }
+#coolrunner_map .customer-account-index .col-main .my-account .payment-method button.add-payment { float: right !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .form-list > li.fields { width: 50% !important; padding-right: 10px !important; float: left !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .form-list > li.name { width: 100% !important; padding-right: 0px !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .fieldset p.required { display: none !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .fields .customer-name > .field { width: 50% !important; float: left !important; margin-bottom: 0px !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .fields .customer-name > .name-firstname { padding-right: 10px !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .form-list > li.fields .customer-name > .name-lastname,#coolrunner_map  .customer-account-edit .col-main .my-account .form-list > li.fields.taxvat, #coolrunner_map  .customer-account-edit .col-main .my-account .form-list > li.fields.postcode, #coolrunner_map  .customer-account-edit .col-main .my-account .form-list > li.fields.country, #coolrunner_map  .customer-account-edit .col-main .my-account .form-list > li.fields.telephone { padding-left: 10px !important; padding-right: 0px !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .form-list > li.fields.control.password { margin: 10px 0px !important; padding: 0px !important; width: 100% !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .form-list > li.fields.password { margin-top: 10px !important; width: 100% !important; padding-right: 0px !important; margin-bottom: 0px !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .form-list > li.fields.new-password { padding-right: 0px !important; padding-left: 10px !important; margin-bottom: 0px !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .fields.country .dk-select, #coolrunner_map  .customer-account-edit .col-main .my-account .fields.country .dk-selected { width: 100% !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .form-list > li.fields.password .fieldset { margin-top: 10px !important; margin-bottom: 0px !important; border-top-width: 1px !important; border-top-style: solid !important; border-top-color: rgb(236,  236,  236) !important; padding-top: 20px !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .form-list > li.fields.password .fieldset label { color: rgb(65,  65,  65) !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .payment-method { padding: 15px 20px 18px !important; border-radius: 5px !important; overflow: auto !important; margin-bottom: 15px !important; margin-top: 20px !important; background-color: rgb(244,  244,  244) !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .payment-method i { margin-right: 18px !important; border-radius: 5px !important; color: rgb(244,  244,  244) !important; padding: 8px 10px !important; background-color: rgb(65,  65,  65) !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .payment-method a.remove-payment { float: right !important; margin-top: 5px !important; color: rgb(223,  40,  10) !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .payment-method.none { color: rgb(223,  40,10) !important; margin-bottom: 15px !important; margin-top: 5px !important; line-height: 36px !important; padding-top: 10px !important; padding-bottom: 10px !important; padding-right: 10px !important; background-color: rgb(250,  235,  231) !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .payment-method a.add-payment { float: right !important; color: rgb(255,  255,  255) !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .agreements { font-size: 14px !important; line-height: 18px !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .agreements input { float: left !important; margin-right: 10px !important; display: table-cell !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .agreements label { height: 30px !important; vertical-align: middle !important; font-size: 14px !important; display: table-cell !important; font-family: Arial,  sans-serif !important; letter-spacing: 0px !important; margin-bottom: 0px !important; text-transform: none !important; }
+#coolrunner_map .customer-account-edit .col-main .my-account .agreements label.error { float: left !important; }
+#coolrunner_map .narrow-droppoints { display: table !important; width: 100% !important; margin: 30px auto 10px !important; padding: 15px 25px !important; background-color: rgb(250,  250,  250) !important; }
+#coolrunner_map .narrow-droppoints #carrier-selection { display: table-cell !important; width: 50% !important; vertical-align: middle !important; }
+#coolrunner_map .narrow-droppoints .preword { margin-right: 10px !important; }
+#coolrunner_map .narrow-droppoints .droppoint-filters { height: 31px !important; }
+#coolrunner_map .narrow-droppoints .droppoint-filter { display: inline-block !important; }
+#coolrunner_map .narrow-droppoints .droppoint-filter + .droppoint-filter { margin-left: 10px !important; }
+#coolrunner_map .narrow-droppoints .droppoint-filter input { float: left !important; vertical-align: middle !important; height: 24px !important; margin-right: 8px !important; display: none !important; }
+#coolrunner_map .narrow-droppoints .droppoint-filter label { margin: 0px !important; vertical-align: middle !important; border-radius: 5px !important; position: relative !important; padding: 5px 13px 6px 35px !important; cursor: pointer !important; background-color: rgb(236,  236,  236) !important; }
+#coolrunner_map .narrow-droppoints .droppoint-filter input + label::before { content: "?" !important; font-family: FontAwesome !important; font-size: 16px !important; position: absolute !important; color: rgb(212,  212,  212) !important; left: 10px !important; top: 5px !important; }
+#coolrunner_map .narrow-droppoints .droppoint-filter input:checked + label::before { color: rgb(43,  151,  214) !important; }
+#coolrunner_map .narrow-droppoints .search-droppoints { display: table-cell !important; width: 50% !important; margin: 0px auto !important; vertical-align: middle !important; }
+#coolrunner_map .narrow-droppoints .search-droppoints #search-zipcode { width: 20% !important; float: left !important; margin-right: 2% !important; }
+#coolrunner_map .narrow-droppoints .search-droppoints #search-street { width: 58% !important; float: left !important; margin-right: 2% !important; }
+#coolrunner_map .narrow-droppoints .search-droppoints .btn-primary { width: 18% !important; float: left !important; height: 46px !important; }
+#coolrunner_map .droppoint-map-sidebar { display: table !important; width: 100% !important; }
+#coolrunner_map #all-droppoint-map { width: 100% !important; height: 100% !important; vertical-align: top !important; display: table-cell !important; background-color: rgb(250,  250,  250) !important; }
+/*
+#coolrunner_map #all-droppoint-map-canvas { width: 100% !important; height: 600px !important; }
+*/
+#coolrunner_map #all-droppoint-map .spinner { margin-left: 0px !important !important; margin-top: 90px !important !important; display: block !important !important; width: 95px !important !important; height: 95px !important !important; }
+#coolrunner_map #all-droppoint-map .droppoint-infowindow-content .name { display: block !important; }
+#coolrunner_map #all-droppoint-map .droppoint-infowindow-content .address { display: block !important; }
+#coolrunner_map #all-droppoint-map .droppoint-infowindow-content ul.opening-hours li div { display: inline-block !important; float: left !important; }
+#coolrunner_map #all-droppoint-map .droppoint-infowindow-content ul.opening-hours li div.droppoint-weekday { width: 65px !important; }
+#coolrunner_map #all-droppoint-map .droppoint-infowindow-content ul.opening-hours li span.from::after { content: " - " !important; }
+#coolrunner_map #all-droppoint-opening-hours-weekday-container { display: none !important; }

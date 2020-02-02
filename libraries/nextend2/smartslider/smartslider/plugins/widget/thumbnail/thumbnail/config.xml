@@ -1,0 +1,22 @@
+<root>
+  <params name="widgetsthumbnail" label="" hidetitle="1">
+    <param name="widgetthumbnail" type="widgetpluginmatrix" ajaxurl="slider/renderform" label="Thumbnail" group="sswidgetthumbnail" method="thumbnail" file="config.xml" default="disabled"/>
+    <param type="group" label="Display" class="n2-expert">
+      <param name="widget-thumbnail-display-desktop" type="onoff" label="Desktop" default="1"/>
+      <param name="widget-thumbnail-display-tablet" type="onoff" label="Tablet" default="1"/>
+      <param name="widget-thumbnail-display-mobile" type="onoff" label="Mobile" default="1"/>
+      <param name="widget-thumbnail-exclude-slides" type="text" label="Hide on slides" default="" tip="List the slides separated by commas on which you want the controls to be hidden."/></param>
+    <param type="group" label="Shows on">
+      <param name="widget-thumbnail-display-hover" type="onoff" label="Hover" default="0"/></param>
+    <param type="group" label="Thumbnail size">
+      <param type="onoff" label="Show image" name="widget-thumbnail-show-image" default="1" class="n2-expert"/>
+      <param name="widget-thumbnail-width" type="numberautocomplete" label="Width" default="100" style="width:30px" values="60,100,150,200">
+        <unit>px</unit>
+      </param>
+      <param name="widget-thumbnail-height" type="numberautocomplete" label="Height" default="60" style="width:30px" values="60,100,150,200">
+        <unit>px</unit>
+      </param>
+    </param>
+  </params>
+  <params name="widget-thumbnail-placeholder" label="" id="nextend-widgetthumbnail-panel" type="placeholder"></params>
+</root>

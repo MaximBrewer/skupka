@@ -1,0 +1,402 @@
+/*--------------------------------------------------------------------------------------------------------
+# VP One Page Checkout - Joomla! System Plugin for VirtueMart 3
+----------------------------------------------------------------------------------------------------------
+# Copyright: Copyright (C) 2012-2017 VirtuePlanet Services LLP. All Rights Reserved.
+# License:   GNU General Public License version 2 or later; http://www.gnu.org/licenses/gpl-2.0.html
+# Author:    Abhishek Das
+# Email:     info@virtueplanet.com
+# Websites:  https://www.virtueplanet.com
+----------------------------------------------------------------------------------------------------------
+$Revision: 3 $
+$LastChangedDate: 2017-09-20 20:00:08 +0530 (Wed, 20 Sep 2017) $
+$Id: admin.css 3 2017-09-20 14:30:08Z Abhshek Das $
+----------------------------------------------------------------------------------------------------------*/
+legend, h3 {
+	font-size: 14px;
+	font-weight: 400;
+}
+input.required {
+	padding: 2px 4px;
+}
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+.pane-sliders .panel {
+	margin-bottom: 6px;
+}
+div.panel fieldset {
+	padding: 15px;
+	margin: 0;
+}
+.pane-sliders h3.title {
+	padding: 4px 6px;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(243,243,243,1)), color-stop(51%,rgba(237,237,237,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* W3C */
+}
+.pane-sliders h3.title > a {
+	color: #000;
+	display: block;
+	padding: 2px 0;
+}
+.pane-sliders .pane-toggler-down span {
+	background: transparent url(../../images/admin-minus.png) 0 50% no-repeat;
+	padding: 3px 2px 3px 35px;
+}
+.pane-sliders .pane-toggler span {
+	background: transparent url(../../images/admin-plus.png) 0 50% no-repeat;
+	padding: 3px 2px 3px 35px;
+}
+fieldset.panelform ul li > label {
+	width: 180px;
+	max-width: 180px;
+	padding-right: 20px;
+	display: inline-block;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	text-align: right;
+}
+fieldset.panelform fieldset.radio label {
+	min-width: 40px;
+	width: 60px;
+	margin-top: 12px;
+}
+fieldset.panelform input[type="radio"]{
+	margin-top: 12px;
+}
+fieldset.panelform .spacer label {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 10px 0 0 0;
+	width: 100%;
+	max-width: 100%;
+	font-size: 120%;
+}
+fieldset.panelform ul li > fieldset, fieldset.panelform ul li > input, fieldset.panelform textarea {
+	margin-bottom: 20px;
+}
+fieldset.panelform .button2-left, fieldset.panelform .media-preview {
+	margin-top: 8px;
+}
+.spacer hr {
+	border: 0 none;
+	background: #00a8df;
+	height: 2px;
+}
+fieldset.panelform input[type="text"], fieldset.panelform textarea {
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-webkit-transition: border linear 0.2s,box-shadow linear 0.2s;
+	-moz-transition: border linear 0.2s,box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s,box-shadow linear 0.2s;
+	transition: border linear 0.2s,box-shadow linear 0.2s;
+}
+fieldset.panelform select, fieldset.panelform input[type="text"], fieldset.panelform textarea {
+	display: inline-block;
+	padding: 4px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #333333;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	width: auto;
+}
+fieldset.panelform input[type="text"]:focus, fieldset.panelform textarea:focus {
+	border-color: rgba(82, 168, 236, 0.8);
+	outline: 0;
+	outline: thin dotted \9;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+.desc-text {
+	font-weight: normal;
+	color: #656667;
+	font-family: Verdana;
+	text-align: justify;
+}
+.label {
+	display: inline-block;
+	padding: 2px 4px;
+	font-size: 10.998px;
+	font-weight: bold;
+	line-height: 14px;
+	color: #FFF;
+	vertical-align: baseline;
+	white-space: nowrap;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #999;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;	
+}
+.label-info, .badge-info {
+	background-color: #3A87AD;
+}
+.extension-title {
+	color: #333;
+	font-family: Verdana, serif;
+	margin-top: 0;
+	font-size: 25px;
+	line-height: 25px;
+	font-weight: normal;
+}
+.extension-title.module {
+	margin: 0 0 15px 0;
+	padding: 0;
+}
+.extension-version {
+	margin-left: 10px;
+	vertical-align: top;
+}
+.copy-text {
+	font-size: 0.9em;
+	font-style: italic;
+	font-weight: normal;
+	font-family: Verdana;
+	text-align: right;
+}
+.vp-extension-description {
+	padding-left: 200px;
+}
+.extension-image-container {	
+	float: left;
+	margin-top: 5px;
+	margin-left: -200px;
+	padding: 0;
+	background: #FFF;
+	border: 15px solid #FFF;
+	text-align: center;
+	-webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+}
+.extension-image-container > img {
+	float: none;
+	margin: 0 auto;
+}
+fieldset.panelform select {
+	min-width: 170px;
+	max-width: 170px;
+}
+ul.adminformlist li, .clearfix {
+	*zoom: 1;
+	display: block;
+}
+ul.adminformlist li:after, ul.adminformlist li:before, .clearfix:after, .clearfix:before {
+	display: table;
+	content: " ";
+}
+ul.adminformlist li:after, .clearfix:after {
+	clear: both;
+}
+ul.adminformlist li .muted.small {
+	margin-left: 200px;
+	margin-bottom: 10px;
+	color: #999;
+}
+input#jform_params_hide_custom_msg[type="text"] {
+	margin-bottom: 5px;
+}
+fieldset.panelform input[readonly],
+fieldset.panelform input[disabled],
+fieldset.panelform input[type="text"].readonly {
+	cursor: not-allowed;
+	background-color: #EEE;
+	opacity: 1;
+	font-weight: normal;
+}
+textarea#jform_params_registration_message {
+	height: 120px;
+}
+input[type="text"].warning {
+	color: #C09853;
+}
+input[type="text"].success {
+	color: #468847;
+}
+fieldset.panelform ul li > input[data-vpdk="validate"] {
+	margin-bottom: 0;
+}
+fieldset.panelform .vpdk-info-box {
+	padding-left: 200px;
+	padding-bottom: 20px;
+}
+.btn {
+	display: inline-block;
+	*display: inline;
+	padding: 4px 12px;
+	margin-bottom: 0;
+	*margin-left: .3em;
+	font-size: 12px;
+	line-height: 20px;
+	color: #333333;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: #f5f5f5;
+	*background-color: #e6e6e6;
+	background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+	background-repeat: repeat-x;
+	border: 1px solid #cccccc;
+	*border: 0;
+	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	border-bottom-color: #b3b3b3;
+	-webkit-border-radius: 4px;
+	 -moz-border-radius: 4px;
+	      border-radius: 4px;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	*zoom: 1;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	 -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+	color: #333333;
+	background-color: #e6e6e6;
+	*background-color: #d9d9d9;
+}
+.btn:active,
+.btn.active {
+	background-color: #cccccc \9;
+}
+.btn:first-child {
+	*margin-left: 0;
+}
+.btn:hover,
+.btn:focus {
+	color: #333333;
+	text-decoration: none;
+	background-position: 0 -15px;
+	-webkit-transition: background-position 0.1s linear;
+	 -moz-transition: background-position 0.1s linear;
+	   -o-transition: background-position 0.1s linear;
+	      transition: background-position 0.1s linear;
+}
+.btn:focus {
+	outline: thin dotted #333;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+.btn.active,
+.btn:active {
+	background-image: none;
+	outline: 0;
+	-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+	 -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+	      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.btn.disabled,
+.btn[disabled] {
+	cursor: default;
+	background-image: none;
+	opacity: 0.65;
+	filter: alpha(opacity=65);
+	-webkit-box-shadow: none;
+	 -moz-box-shadow: none;
+	      box-shadow: none;
+}
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-inverse.active {
+	color: rgba(255, 255, 255, 0.75);
+}
+.btn-primary {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #006dcc;
+	*background-color: #0044cc;
+	background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+	background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+	background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+	background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+	background-repeat: repeat-x;
+	border-color: #0044cc #0044cc #002a80;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+	color: #ffffff;
+	background-color: #0044cc;
+	*background-color: #003bb3;
+}
+.btn-primary:active,
+.btn-primary.active {
+	background-color: #003399 \9;
+}
+#system-message-container .vpdk-alert {
+	font-size: 14px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+button.vpdk-modal-close:hover,
+button.vpdk-modal-close:focus,
+button.vpdk-modal-close:active {
+	background: 0 none;
+	border: 0 none;
+	outline: 0 none;
+}
+#only-for-vpau {
+	position: relative;
+}
+#only-for-vpau > .control-group:first-child {
+	display: inline-block;
+}
+#only-for-vpau-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: transparent;
+	background: url(../../images/overlay.png);
+	background-repeat: repeat;
+	z-index: 10;
+}
+#only-for-vpau-overlay:after {
+	display: block;
+	text-align: center;
+	content: "Need Joomla! 3.5+ and VP Advanced User Component";
+	text-shadow: 2px 1px 4px #DDD;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1.2em;
+	margin-top: 30px;
+	color: #ff0000;
+	opacity: 1;
+	z-index: 11;
+}

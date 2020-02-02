@@ -1,0 +1,10 @@
+<root>
+    <params name="basic" label="Twitter generator">
+        <param name="consumer_key" type="text" label="Consumer key" default="" style="width:400px;"/>
+        <param name="consumer_secret" type="text" label="Consumer secret" default="" style="width:400px;"/>
+        <param name="user_token" type="twittertoken" label="Token" default=""/>
+        <param name="user_secret" type="text" label="" default="" class="n2-hidden"/>
+        <param name="callback" type="container" label="Callback url"/>
+        <param type="token"/>
+    </params>
+</root>

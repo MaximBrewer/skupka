@@ -1,0 +1,11 @@
+<root translate="1">
+    <params name="cache" label="Cache">
+        <param type="clearcache" name="clearcache" label="Clear_cache" />
+        <param type="onoff" name="gzip" label="Gzip_compression" default="0" description="Only_enable_it_when_the_mod_deflate_not_enabled_in_apache" />
+        <param type="text" name="cachetime" label="Cache_time" default="static" description="1_or_higher" style="width: 60px;">
+            <unit>sec</unit>
+        </param>
+        <param type="text" name="cachepath" label="Cache_relative_path" default="media/nextend/cache/" description="Relative_path_for_a_writeable_folder_Must_be_reacheable_by_browsers" />
+        <param type="onoff" name="debuglng" label="Debug_language" default="0" />
+    </params>
+</root>

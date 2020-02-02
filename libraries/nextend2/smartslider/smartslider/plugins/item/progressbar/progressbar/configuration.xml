@@ -1,0 +1,47 @@
+<root>
+    <params name="progressbar-item" hidetitle="1">
+
+        <param type="group">
+            <param name="value" label="Value" type="number" style="width: 40px;"/>
+            <param name="startvalue" label="Start from" type="number" style="width: 40px;"/>
+            <param name="total" label="Total" type="number" style="width: 40px;"/>
+        </param>
+        <param type="group">
+            <param name="color" type="color" label="Color" alpha="1"/>
+            <param name="color2" type="color" label="Active color" alpha="1"/>
+        </param>
+        <param type="group">
+            <param name="pre" label="Pre" type="text" style="width: 40px;"/>
+            <param name="post" label="Post" type="text" style="width: 40px;"/>
+        </param>
+
+        <param type="group">
+            <param name="label" label="Label" type="text" style="width: 150px;"/>
+            <param name="labelplacement" type="list" label="Placement">
+                <option value="before">Before</option>
+                <option value="over">Over</option>
+                <option value="after">After</option>
+            </param>
+        </param>
+        <param type="group">
+            <param name="animationduration" label="Animation duration" type="number" style="width: 60px;">
+                <unit value="ms">ms</unit>
+            </param>
+            <param name="animationdelay" label="Delay" type="number" style="width: 60px;">
+                <unit value="ms">ms</unit>
+            </param>
+        </param>
+
+        <param name="font" type="font" previewmode="simple" set="1000" label="Counter"
+               class="n2-hidden"><![CDATA[
+<div class="{fontClassName}">100%</div>
+]]>
+        </param>
+        <param name="fontlabel" type="font" previewmode="simple" set="1000" style="item_headingstyle"
+               label="Label" class="n2-hidden"><![CDATA[
+<div class="{fontClassName}">{$('#item_progressbarlabel').val();}</div>
+]]>
+        </param>
+
+    </params>
+</root>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<extension type="plugin" version="3.0" method="upgrade" group="system">
+    <name>System - Smooth Scroll</name>
+    <creationDate>07.12.2013</creationDate>  
+    <author>ELLE</author>
+    <authorEmail>elle@joomext.ru</authorEmail>
+    <authorUrl>joomext.ru</authorUrl>
+    <copyright>Copyright (c)2013 ELLE / JoomExt.ru </copyright>
+    <license>GPLv3 http://www.gnu.org/licenses/gpl.html or later </license>
+    <version>1.0</version>
+    <description>PLG_SMOOTH_SCROLL_DESC</description>
+    <scriptfile>script.php</scriptfile>
+    <files>
+        <filename plugin="smooth_scroll">smooth_scroll.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <media destination="smooth_scroll" folder="media">
+        <filename>index.html</filename>
+        <folder>js</folder>
+    </media>
+	<languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_smooth_scroll.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_system_smooth_scroll.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_smooth_scroll.sys.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_system_smooth_scroll.sys.ini</language>
+    </languages>
+</extension>

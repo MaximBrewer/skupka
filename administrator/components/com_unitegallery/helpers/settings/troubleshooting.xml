@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fields>
+
+		<fieldset name="advanced" label="Advanced" icon="eg-icon-cog-alt">
+	
+			<field name="show_advanced_tab" 
+				   type="boolean"
+				   default="false" 
+				   label="Show Advanced Tab" 
+				   description="Show advanced tab, at the top near settings/items/preview tabs where can be edited advanced scripts or styles to be add to the gallery">
+			</field>				
+			
+		</fieldset>
+		<fieldset name="troubleshooting" label="Troubleshooting" icon="eg-icon-cog-alt">
+				
+				<field name="include_jquery" 
+					   type="boolean"
+					   default="true" 
+					   label="Include jQuery Library" 
+					   description="Add include of jquery js. If you have jquery include in other module, and you don't want to double include, choose 'No'">
+				</field>				
+
+				<field name="js_to_body" 
+					type="boolean"
+					default="false" 
+					label="Put JS Includes To Body"
+					description="Put the gallery javascript includes to body. This may help in situations when multiple jquery.js libraries are loaded.">	
+				</field>
+
+				<field name="compress_output" 
+					type="boolean"
+					default="false" 
+					label="Compress Output"
+					description="Sometimes some output filters adds html tags at the html / javascript output. It breaks the gallery from appear. Try this option when you see weird code like output.">	
+				</field>
+
+				<field name="gallery_debug_errors" 
+					type="boolean"
+					default="false" 
+					label="Debug Javascript Errors"
+					description="show error message when there is some error on the gallery area">	
+				</field>
+
+		</fieldset>
+
+
+</fields>

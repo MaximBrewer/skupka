@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Offices">
+	</layout>
+	<state>
+		<name>Offices</name>
+	</state>
+<fields name="request">
+<fieldset name="request" label="Offices">
+</fieldset>
+</fields>
+</metadata>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="jform">
+		<fieldset name="general" label="COM_CSVI_IMPORT_GENERAL_IMAGES" class="span4">
+			<field name="file_location_image_files"
+				   type="csvitext"
+				   class="input-xlarge"
+				   placeholder="images/"/>
+
+			<field name="autogenerateext"
+				type="list"
+				size="1"
+				default="0"
+				advancedUser="1"
+				class="input-small advancedSelect">
+				<option value="jpg">JPG</option>
+				<option value="png">PNG</option>
+				<option value="gif">GIF</option>
+			</field>
+
+			<field name="change_case"
+				type="list"
+				size="1"
+				default="0"
+				advancedUser="1"
+				class="hidden-image advancedSelect">
+				<option value="none">COM_CSVI_DO_NOT_CHANGE_CASE</option>
+				<option value="lcase">COM_CSVI_SELECT_LCASE</option>
+				<option value="ucase">COM_CSVI_SELECT_UCASE</option>
+				<option value="ucfirst">COM_CSVI_SELECT_UCFIRST</option>
+				<option value="ucwords">COM_CSVI_SELECT_UCWORDS</option>
+			</field>
+
+			<field name="process_image"
+				   type="list"
+				   size="1"
+				   default="1"
+				   class="input-small process-image advancedSelect"
+				   onchange="Csvi.showFields(this.value, '.hidden-image #full_image #watermark_image #credentials_image');">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+		</fieldset>
+		<fieldset name="full_image" label="COM_CSVI_IMPORT_FULL_IMAGES" class="span4">
+			<field name="keep_original"
+				type="list"
+				size="1"
+				default="0"
+				advancedUser="1"
+				class="input-small hidden-image advancedSelect">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="convert_type"
+				type="list"
+				size="1"
+				default="0"
+				advancedUser="1"
+				class="input-medium hidden-image advancedSelect">
+				<option value="none">COM_CSVI_DO_NOT_CONVERT</option>
+				<option value="jpg">JPG</option>
+				<option value="png">PNG</option>
+				<option value="gif">GIF</option>
+			</field>
+
+			<field name="save_images_on_server"
+				type="list"
+				size="1"
+				default="0"
+				class="input-small hidden-image advancedSelect">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="redownload_external_image"
+				type="list"
+				size="1"
+				default="1"
+				class="input-small hidden-image advancedSelect">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="full_resize"
+				type="list"
+				size="1"
+				default="0"
+				advancedUser="1"
+				class="input-small hidden-image advancedSelect">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="full_width"
+				type="text"
+				default=""
+				advancedUser="1"
+				class="input-small hidden-image"/>
+
+			<field name="full_height"
+				type="text"
+				default=""
+				advancedUser="1"
+				class="input-small hidden-image"/>
+		</fieldset>
+		<fieldset name="clearit" class="clearfix"></fieldset>
+		<fieldset name="watermark_image" label="COM_CSVI_IMPORT_WATERMARK_IMAGES" class="span4">
+			<field name="full_watermark"
+				   type="list"
+				   size="1"
+				   default="0"
+				   class="input-small advancedSelect">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="full_watermark_right"
+				   type="text"
+				   size="3"
+				   default="0"
+				   class="input-small"/>
+
+			<field name="full_watermark_bottom"
+				   type="text"
+				   size="3"
+				   default="0"
+				   class="input-small" />
+
+			<field name="full_watermark_image"
+				   type="media"
+				   size="30"
+				   default=""
+				   class="input-small" />
+		</fieldset>
+		<fieldset name="credentials_image" label="COM_CSVI_IMPORT_CREDENTIALS_IMAGES" class="span4 advancedUser">
+			<field name="image_username"
+				   type="text"
+				   default=""
+				   advancedUser="1"
+				   class="input-xlarge hidden-image"/>
+
+			<field name="image_password"
+				   type="text"
+				   default=""
+				   advancedUser="1"
+				   class="input-large hidden-image"/>
+
+			<field name="image_method"
+				   type="list"
+				   class="advancedSelect input-small"
+				   advancedUser="1"
+				   default="post">
+				<option value="get">GET</option>
+				<option value="post">POST</option>
+			</field>
+
+			<field name="image_credential_type"
+				   type="list"
+				   class="advancedSelect input-medium"
+				   advancedUser="1"
+				   default="htaccess">
+				<option value="htaccess">.htaccess</option>
+				<option value="plain">COM_CSVI_CREDENTIAL_TYPE_PLAIN</option>
+			</field>
+
+			<field name="image_encodeurl"
+			       type="list"
+			       class="advancedSelect input-small"
+			       advancedUser="1"
+			       default="1">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="image_verify_ssl"
+			       type="list"
+			       class="advancedSelect input-small"
+			       advancedUser="1"
+			       default="1">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

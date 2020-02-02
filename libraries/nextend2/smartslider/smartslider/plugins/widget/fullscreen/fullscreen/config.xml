@@ -1,0 +1,13 @@
+<root>
+  <params name="widgetsfullscreen" label="" hidetitle="1">
+    <param name="widgetfullscreen" type="widgetpluginmatrix" ajaxurl="slider/renderform" label="fullscreen" group="sswidgetfullscreen" method="fullscreen" file="config.xml" default="disabled"/>
+    <param type="group" label="Display" class="n2-expert">
+      <param name="widget-fullscreen-display-desktop" type="onoff" label="Desktop" default="1"/>
+      <param name="widget-fullscreen-display-tablet" type="onoff" label="Tablet" default="1"/>
+      <param name="widget-fullscreen-display-mobile" type="onoff" label="Mobile" default="1"/>
+      <param name="widget-fullscreen-exclude-slides" type="text" label="Hide on slides" default="" tip="List the slides separated by commas on which you want the controls to be hidden."/></param>
+    <param type="group" label="Shows on">
+      <param name="widget-fullscreen-display-hover" type="onoff" label="Hover" default="0"/></param>
+  </params>
+  <params name="widget-fullscreen-placeholder" label="" id="nextend-widgetfullscreen-panel" type="placeholder"></params>
+</root>

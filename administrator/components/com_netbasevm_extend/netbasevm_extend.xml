@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.4" method="upgrade">
+	<name>netbasevm_extend</name>
+	<author>Cmsmart Team</author>
+	<creationDate>2014</creationDate>
+	<copyright>Copyright (C) 2012 Cmsmart Team. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>team@cmsmart.net</authorEmail>
+	<authorUrl>http://cmsmart.net</authorUrl>
+	<version>4.0.0</version>
+    <description>A powerful Virtuemart component to create Virtuemart orders, issues PDF invoices, changes invoice layouts...inside Virtuemart admin panel. Develop by CMSMART Extension Team. Joomla 3.4 and VM 3.0.6x
+	</description>
+	
+	<!-- Installer Hooks -->
+	<scriptfile>script.netbasevm_extend.php</scriptfile>
+	<unstallfile>script.netbasevm_extend.php</unstallfile> <!-- Deprecated in 1.6 -->
+	<scriptfile>script.netbasevm_extend.php</scriptfile>
+	
+	<!-- SQL Files -->
+	<!-- Note: The Joomla! 1.0 query method is not supported in 1.6 -->
+	<!-- Runs on install -->
+	
+	<install folder="mysql"> 
+		<sql>
+			<file driver="mysql" charset="utf8">install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall folder="mysql"> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8" folder="sql">uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	
+	<languages folder="languages/site">
+		<language tag="en-GB">en-GB.com_netbasevm_extend.ini</language>
+	</languages>
+		
+	
+	<!-- Front end file, media and language specification -->
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>netbasevm_extend.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+		<folder>views</folder>
+	</files>
+	
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu img="../components/com_virtuemart/assets/images/vmgeneral/menu_icon.png">COM_NETBASEVM_EXTEND</menu>
+		<submenu>
+			<menu link="option=com_netbasevm_extend&amp;controller=statistics" img="components/com_netbasevm_extend/assets/images/static_invoice.png">COM_NETBASEVM_EXTEND_STATISTICS_INVOICES</menu>		
+      		<menu link="option=com_netbasevm_extend&amp;controller=nborders" img="components/com_netbasevm_extend/assets/images/invoice_extend.png">COM_NETBASEVM_EXTEND_INVOICES_ORDERS</menu>
+      		<menu link="option=com_netbasevm_extend&amp;controller=nborders&amp;task=addNewNborders" img="components/com_netbasevm_extend/assets/images/new_invoice.png">COM_NETBASEVM_EXTEND_NEW_ORDERS</menu>
+			<menu link="option=com_netbasevm_extend&amp;controller=templateinvoice" img="components/com_netbasevm_extend/assets/images/template_invoice.png">COM_NETBASEVM_EXTEND_TEMPLATE_INVOICES</menu>
+    	</submenu>
+		<!-- Administrator file and language specification;
+			Note: administrator doesn't have media -->
+		<files folder="admin">
+			<filename>netbasevm_extend.php</filename>
+			<filename>netbasevm_extend_defaults.cfg-dist</filename>
+			<filename>index.html</filename>
+			<filename>script.netbasevm_extend.php</filename>
+			<filename>install.mysql.utf8.sql</filename>
+			<filename>uninstall.mysql.utf8.sql</filename>
+			<filename>check_install.txt</filename>
+			<filename>controller.php</filename>
+			<filename>cms_getDateTime.php</filename>
+			<filename>cms_getTotalOrders.php</filename>
+			<filename>cms_Orders.php</filename>
+			<folder>assets</folder>
+			<folder>cms_extend</folder>
+			<folder>controllers</folder>
+			<folder>elements</folder>
+			<folder>extensions</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>libraries</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+
+		<!-- Legacy 1.5 Language Support -->
+		<languages folder="languages/admin">
+			<language tag="en-GB">en-GB.com_netbasevm_extend.ini</language>
+			<language tag="en-GB">en-GB.com_netbasevm_extend.menu.ini</language>
+			<language tag="en-GB">en-GB.com_netbasevm_extend.sys.ini</language>
+		</languages>
+		
+	</administration>
+	
+</extension>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5"  client="administrator" method="upgrade" type="plugin" group="vdata">
+	<name>VDATA_CUSTOM</name>
+	<version>1.0.5</version>
+	<creationDate>25th June 2018</creationDate>
+	<author>Team WDMtech</author>
+	<authorEmail>support@wdmtech.com</authorEmail>
+	<authorUrl>http://www.wdmtech.com</authorUrl>
+	<copyright>Copyright (C) 2014 - 2018 wdmtech.com. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>VDATA_CUSTOM_DESCRIPTION</description>
+	<files>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<filename plugin="custom">custom.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<!-- UPDATESERVER DEFINITION -->
+	<updateservers>
+		<!-- Note: No spaces or linebreaks allowed between the server tags -->
+		<server type="extension" priority="1" name="VDATA_UPDATE_SITE">http://www.wdmtech.com/prod_updates/vdata-custom-upgrade.xml</server>
+	</updateservers>
+	
+</extension>

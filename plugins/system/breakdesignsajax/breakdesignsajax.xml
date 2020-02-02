@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+  <name>Breakdesigns AJAX</name>
+	<author>breadkesigns</author>
+	<authorEmail>info@breakdesigns.net</authorEmail>
+	<authorUrl>http://www.breakdesigns.net</authorUrl>
+    <creationDate>4 January 2013</creationDate>
+	<copyright>Copyright(c) 2008 - 2013 breakdesigns.net</copyright>
+	<license>GNU/GPL v.2</license>
+	<version>1.0</version>
+  <description>Used for enabling the AJAX loading of the results in Custom Filters</description>
+  <files>
+    <filename plugin="breakdesignsajax">breakdesignsajax.php</filename>
+    <filename>index.html</filename>   
+  </files>
+</extension>

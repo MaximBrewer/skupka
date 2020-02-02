@@ -1,0 +1,9 @@
+<root>
+    <params name="basic" label="Facebook generator">
+        <param name="appId" type="text" label="App ID" default="" style="width:120px;"/>
+        <param name="secret" type="text" label="Secret" default="" style="width:250px;"/>
+        <param name="accessToken" type="facebooktoken" label="Token" default=""/>
+        <param name="callback" type="container" label="Callback url"/>
+        <param type="token"/>
+    </params>
+</root>

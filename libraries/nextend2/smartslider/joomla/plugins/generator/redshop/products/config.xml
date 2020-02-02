@@ -1,0 +1,37 @@
+<root>
+    <params name="redshopproducts" label="Filter">
+        <param type="group" label="Source">
+            <param name="sourcecategories" label="Categories" type="redshopcategories" default="0"
+                   multiple="1" size="10"/>
+            <param name="sourcemanufacturers" label="Manufacturers" type="redshopmanufacturers" default="0"
+                   multiple="1" size="10"/>
+            <param name="sourcesuppliers" label="Suppliers" type="redshopsuppliers" default="0"
+                   multiple="1" size="10"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="sourcefeatured" label="Featured" type="filter" default="0"/>
+            <param name="sourceonsale" label="On sale" type="filter" default="0"/>
+            <param name="sourceexpired" label="Expired" type="filter" default="0"/>
+            <param name="sourceforsell" label="For sell" type="filter" default="0"/>
+            <param name="product_parent_id" label="Parent product ID" type="text" default="*"/>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="redshopproductsorder" type="mixed" label="Order" default="pr.publish_date|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="pr.product_name">Product name</option>
+                <option value="pr_cat.ordering">Ordering</option>
+                <option value="pr.publish_date">Creation time</option>
+                <option value="pr.update_date">Modification time</option>
+                <option value="pr.visited">Hits</option>
+                <option value="pr.product_price">Product price</option>
+                <option value="pr.discount_price">Discount price</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

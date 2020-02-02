@@ -1,0 +1,5 @@
+ Flow install 
+
+	1.check version Joomla
+	2.check version Virtuemart ( 2.0.6 and up )
+	3.check version PHP ( PHP5)

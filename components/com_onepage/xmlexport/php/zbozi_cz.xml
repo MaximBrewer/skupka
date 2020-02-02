@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>Zbozi.cz</name>
+    <creationDate>Oct 2013</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>Zbozi.cz Export</description>
+	<category_pairing_name>zbozi_cz</category_pairing_name>
+	<category_pairing_url>http://cdn.rupostel.com/extensions/zbozi_cz_category_id.csv</category_pairing_url>
+    <files>
+        <filename>zbozi_cz.php</filename>
+    </files>
+	<element>zbozi_cz</element>
+
+<params >
+<param
+        type="text"
+        name="bazaar"
+        id="bazaar"
+        label="Used Products categories separated by comma (Kategorie Bazaru)" 
+        description="Kategorie bazaru odelene ciarkou bez medzier"
+		default=""
+        >
+		 
+		 
+		</param>
+</params>
+    
+    
+    
+
+</extension>

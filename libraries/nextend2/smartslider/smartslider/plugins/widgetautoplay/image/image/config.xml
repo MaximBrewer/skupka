@@ -1,0 +1,21 @@
+<root>
+  <params name="image" label="Image settings" hidetitle="1">
+    <param type="group" label="Responsive" class="n2-expert">
+      <param name="widget-autoplay-responsive-desktop" type="number" label="Desktop" style="width:40px;"/>
+      <param name="widget-autoplay-responsive-tablet" type="number" label="Tablet" style="width:40px;"/>
+      <param name="widget-autoplay-responsive-mobile" type="number" label="Mobile" style="width:40px;"/></param>
+    <param type="image" name="widget-autoplay-play-image" label="Play image" class="n2-expert"/>
+    <param type="group" label="Play">
+      <param type="imagelistfromfolder" name="widget-autoplay-play" label="Shape" folder="play" required="1" post="break"/>
+      <param type="color" name="widget-autoplay-play-color" label="Color" alpha="1"/></param>
+    <param name="widget-autoplay-style" type="style" previewmode="button" set="1900" label="Style">
+      <![CDATA[ <div class="{styleClassName}" style="display: inline-block;"><img style="display: block;" src="{nextend.imageHelper.fixed($('#sliderwidget-autoplay-play-image').val() || N2Color.colorizeSVG($('[data-image="'+$('#sliderwidget-autoplay-play').val()+'"]').attr('src'), $('#sliderwidget-autoplay-play-color').val()));}" /></div> ]]>
+    </param>
+    <param type="widgetposition" name="widget-autoplay-position" label="Position"/>
+    <param type="mirror" name="widget-autoplay-mirror" label="Mirror" class="n2-expert"/>
+    <param type="image" name="widget-autoplay-pause-image" label="Pause image" class="n2-expert"/>
+    <param type="group" label="Pause" class="n2-expert">
+      <param type="imagelistfromfolder" name="widget-autoplay-pause" label="Shape" folder="pause" required="1" post="break"/>
+      <param type="color" name="widget-autoplay-pause-color" label="Color" alpha="1"/></param>
+  </params>
+</root>

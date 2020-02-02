@@ -1,0 +1,5 @@
+<root>
+    <params name="filter" label="Filter">
+        <param name="search-term" label="Search term" type="text" default=""/>
+    </params>
+</root>

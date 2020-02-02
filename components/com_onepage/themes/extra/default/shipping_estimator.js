@@ -1,0 +1,4 @@
+var sEstimator =  {
+getRates : function() {
+}
+}

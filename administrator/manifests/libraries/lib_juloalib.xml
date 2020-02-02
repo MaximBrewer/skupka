@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="library" version="2.5" method="upgrade">
+    <name>JuloaLib</name>
+	<libraryname>juloalib</libraryname>
+    <author>Thomas Papin</author>
+    <authorEmail>thomas.papin@juloa.com</authorEmail>
+    <authorUrl>http://www.juloa.com</authorUrl>
+    <copyright>(C) 2015 SARL JULOA.</copyright>
+    <license>GNU GPL v2 or later</license>
+    <version>1.0.2</version>
+    <creationDate>2014-02-18</creationDate>
+    <description>JuloaLib for Juloa Products</description>
+	
+	<files folder="juloalib">
+		<file>index.html</file>
+		<file>version.txt</file>
+		<file>Lib.php</file>
+	</files>
+	  <media destination="juloalib" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+		<folder>less</folder>
+		<folder>fonts</folder>
+    </media>
+</extension>

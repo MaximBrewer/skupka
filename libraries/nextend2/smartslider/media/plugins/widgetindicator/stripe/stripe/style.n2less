@@ -1,0 +1,9 @@
+(~'div#@{sliderid}') {
+  .nextend-indicator-stripe {
+    width: 100%;
+  }
+
+  .nextend-indicator-stripe .nextend-indicator-track {
+    width: 0;
+  }
+}

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>OPC Tracking - Google Tag Manager</name>
+    <creationDate>Oct 2013</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>Google Tag Manager Tracking, see https://developers.google.com/tag-manager/quickstart for details, this will trigger ecommerce,purchase event with your order and order items into the Google Tag Manager. If you handle inclusion of the script by yourself (or other non-OPC plugins), make sure that you do not load it below (otherwise you get double inclusion error) For Adwords remarketing see https://support.google.com/tagmanager/answer/3002580?hl=en#OneTagPerFunnel</description>
+    <files>
+        <filename>google_tag_manager.php</filename>
+    </files>
+
+<params>
+    
+    
+			<param
+        type="text"
+        name="google_gtm_id"
+        id="google_gtm_id"
+        label="Google GTM ID"
+        description="Enter your GTM Id which usually looks like GTM-XXXX per this spec: https://developers.google.com/tag-manager/quickstart"
+        size="80"
+		default="GTM-XXXX"
+		multilang="multilang"
+        maxLength="255" />
+	
+		<param
+        type="list"
+        name="incl_iframe"
+        id="incl_iframe"
+        label="Generate dataLayer for Google Tag Manager WITHOUT including the initialization scripts" 
+        description="It will create dataLayer object assuming that GTM is already included on your site."
+		default="0"
+        >
+		 <option value="0">Include iframe</option>
+		 <option value="1">Iframe already created</option>
+		</param>
+
+			
+		<param
+        type="list"
+        name="idformat"
+        id="idformat"
+        label="Transaction ID format" 
+        description="Select either order_id, order_number or a combination"
+		default="0"
+        >
+		 <option value="0">{order_id}</option>
+		 <option value="1">{order_id}_{order_number}</option>
+		 <option value="2">{order_number}</option>
+		</param>
+		
+		
+		<param
+        type="list"
+        name="adwords_remarketing"
+        id="adwords_remarketing"
+        label="Include Adwords Remarketing Data" 
+        description="This will include: https://support.google.com/tagmanager/answer/3002580?hl=en#OneTagPerFunnel "
+		default="0"
+        >
+		 <option value="0">No</option>
+		 <option value="1">Yes</option>
+		 
+		</param>
+		 
+		
+		<param
+        type="text"
+        name="tag_event"
+        id="tag_event"
+        label="Google Adwords Remarketing Event"
+        description="See for details: https://support.google.com/tagmanager/answer/3002580?hl=en#OneTagPerFunnel"
+        size="80"
+		default="fireRemarketingTag"
+        maxLength="255" />
+		
+		
+		
+		
+		
+					<param
+        type="text"
+        name="sku_prefix"
+        id="sku_prefix"
+        label="SKU Prefix per your language"
+        description="Enter your SKU prefix"
+        size="80"
+		default=""
+		multilang="multilang"
+        maxLength="255" />
+
+		
+       			<param
+        type="text"
+        name="sku_suffix"
+        id="sku_suffix"
+        label="SKU Suffix per your language"
+        description="Enter your SKU suffix"
+        size="80"
+		default=""
+		multilang="multilang"
+        maxLength="255" />
+    
+</params>	
+</extension>

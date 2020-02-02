@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="vm_ie_imaud" version="1.6" method="upgrade">
+    <name>Export YML, Virtuemart (iMaud)</name>
+    <author>Kaurava Legh</author>
+    <creationDate>Sep 2015</creationDate>
+    <copyright>© 2015 iMaud Studio. All rights reserved.</copyright>
+    <authorEmail>imaud@yandex.ua</authorEmail>
+    <authorUrl>kauravalegh.com</authorUrl>
+    <version>3.8</version>
+    <description>
+			<![CDATA[<div style="background:#f1f1f1; padding: 5px 10px 10px; border-radius: 5px;"><h3>VirtueMart экспорт YML (iMaud)</h3>
+			<p>Выполнить экспорт сейчас <a href="/plugins/vm_ie_imaud/exportyml/exportyml.php" target="_blank" style="display: inline-block; padding: 3px 10px; border-radius: 5px; background: #e1e1e1;">► ЭКСПОРТ</a></p>
+			<p>Экспорт выполняется только если состояние плагина "Включено" <em>(после установки не забудьте включить)</em>.<br />Изменения параметров вступают в силу после "Сохранить".</p>
+			<p>Ссылка на yml-файл по-умолчанию: <a href="/tmp/ymlexport.xml">домен/tmp/ymlexport.xml</a></p>
+			<p>Если файл экспорта будет генерироваться <em>динамически</em>, по запросу робота Яндекс.Маркет, в качестве ссылки на yml-файл необходимо передать такую ссылку: <a href="/plugins/vm_ie_imaud/exportyml/exportyml.php">домен/plugins/vm_ie_imaud/exportyml/exportyml.php</a></p>
+			<p>Прежде чем переводить плагин в динамический режим, проверьте формирование прайса в режиме сохранения в&nbsp;файл.</p>]]>
+		</description>
+    <files>
+			<filename plugin="exportyml">exportyml.php</filename>
+			<filename>functions.php</filename>
+			<filename>shops.dtd</filename>
+      <filename>index.html</filename>
+		</files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB.plg_vm_ie_imaud_exportyml.ini</language>
+        <language tag="ru-RU">ru-RU.plg_vm_ie_imaud_exportyml.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="stock_enabled" type="list" default="1" label="VM_YML_EXPORT_IMAUD_STOCK" description="VM_YML_EXPORT_IMAUD_STOCK_DESC">
+                    <option value="0">VM_YML_EXPORT_IMAUD_NOT_STOCK</option>
+                    <option value="1">VM_YML_EXPORT_IMAUD_IS_STOCK</option>
+                </field>
+                <field name="min_quantity" type="list" default="1" filter="integer" label="VM_YML_EXPORT_IMAUD_MIN_QUANTITY" description="VM_YML_EXPORT_IMAUD_MIN_QUANTITY_DESC">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="100">100</option>
+								</field>
+                <field name="out_stock" type="list" default="0" label="VM_YML_EXPORT_IMAUD_OUT_OF_STOCK" description="VM_YML_EXPORT_IMAUD_OUT_OF_STOCK_DESC">
+                    <option value="0">VM_YML_EXPORT_IMAUD_TO_ORDER</option>
+                    <option value="1">VM_YML_EXPORT_IMAUD_NOT_INCLUDE</option>
+                </field>
+                <field name="price" type="list" default="salesPrice" label="VM_YML_EXPORT_IMAUD_SELECT_PRICE" description="VM_YML_EXPORT_IMAUD_SELECT_PRICE_DESC">
+                    <option value="salesPrice">VM_YML_EXPORT_IMAUD_SALESPRICE</option>
+                    <option value="basePrice">VM_YML_EXPORT_IMAUD_BASEPRICE</option>
+										<option value="basePriceWithTax">VM_YML_EXPORT_IMAUD_BASEPRICEWITHTAX</option>
+                </field>
+                <field name="costprice" type="checkbox" class="inputbox" value="1" filter="boolean" label="VM_YML_EXPORT_IMAUD_COSTPRICE" description="VM_YML_EXPORT_IMAUD_COSTPRICE_DESC" />
+                <field name="prod_short_description" type="checkbox" class="inputbox" value="1" filter="boolean" label="VM_YML_EXPORT_IMAUD_SHORT_DESCRIPTION" description="VM_YML_EXPORT_IMAUD_SHORT_DESCRIPTION_DESC" />
+                <field name="prod_full_description" type="checkbox" class="inputbox" value="1" filter="boolean" label="VM_YML_EXPORT_IMAUD_FULL_DESCRIPTION" description="VM_YML_EXPORT_IMAUD_FULL_DESCRIPTION_DESC" />
+                <field name="cdata" type="checkbox" class="inputbox" value="1" filter="boolean" label="VM_YML_EXPORT_IMAUD_CDATA" description="VM_YML_EXPORT_IMAUD_CDATA_DESC" />
+                <field name="include_pictures" type="checkbox" class="inputbox" value="1" filter="boolean" label="VM_YML_EXPORT_IMAUD_PICTURES" description="VM_YML_EXPORT_IMAUD_PICTURES_DESC" />
+                <field name="sku" type="list" default="0" label="VM_YML_EXPORT_IMAUD_SKU_ON" description="VM_YML_EXPORT_IMAUD_SKU_ON_DESC">
+                    <option value="0">VM_YML_EXPORT_IMAUD_NONE</option>
+										<option value="sku">VM_YML_EXPORT_IMAUD_PRODUCT_SKU</option>
+                    <option value="gtin">VM_YML_EXPORT_IMAUD_PRODUCT_GTIN</option>
+										<option value="mpn">VM_YML_EXPORT_IMAUD_PRODUCT_MPN</option>
+								</field>
+								<field name="group_child" type="checkbox" class="inputbox" value="1" filter="boolean" label="VM_YML_EXPORT_IMAUD_GROUPCHILDS" description="VM_YML_EXPORT_IMAUD_GROUPCHILDS_DESC" />
+								<field name="custfields" type="checkbox" class="inputbox" value="1" filter="boolean" label="VM_YML_EXPORT_IMAUD_CUSTFIELDS" description="VM_YML_EXPORT_IMAUD_CUSTFIELDS_DESC" />
+                <field name="vendor_model" type="checkbox" class="inputbox" value="1" filter="boolean" label="VM_YML_EXPORT_IMAUD_VENDOR_MODEL" description="VM_YML_EXPORT_IMAUD_VENDOR_MODEL_DESC" />
+                <field name="clear_vendor" type="checkbox" class="inputbox" value="1" filter="boolean" label="VM_YML_EXPORT_IMAUD_CLEAR_VENDOR" description="VM_YML_EXPORT_IMAUD_CLEAR_VENDOR_DESC" />
+                <field name="notes_sw" type="checkbox" class="inputbox" value="1" filter="boolean" label="VM_YML_EXPORT_IMAUD_NOTES_SW" description="VM_YML_EXPORT_IMAUD_NOTES_SW_DESC" />
+                <field name="sales_notes" type="text" class="inputbox" default="" label="VM_YML_EXPORT_IMAUD_SALES_NOTES" description="VM_YML_EXPORT_IMAUD_SALES_NOTES_DESC" />
+                <field name="delivery" type="list" default="1" label="VM_YML_EXPORT_IMAUD_DELIVERY" description="VM_YML_EXPORT_IMAUD_DELIVERY_DESC">
+										<option value="0">VM_YML_EXPORT_IMAUD_DELIVERY_OFF</option>
+										<option value="1">VM_YML_EXPORT_IMAUD_DELIVERY_NO</option>
+										<option value="2">VM_YML_EXPORT_IMAUD_DELIVERY_INCLUDED</option>
+										<option value="3">VM_YML_EXPORT_IMAUD_DELIVERY_ADDITION</option>
+								</field>
+                <field name="delivery_cost" type="text" class="inputbox" default="0" label="VM_YML_EXPORT_IMAUD_DELIVERY_COST" description="VM_YML_EXPORT_IMAUD_DELIVERY_COST_DESC" />
+								<field name="delivery_free" type="text" class="inputbox" default="0" label="VM_YML_EXPORT_IMAUD_DELIVERY_FREE" description="VM_YML_EXPORT_IMAUD_DELIVERY_FREE_DESC" />
+                <field name="adult" type="checkbox" class="inputbox" value="1" filter="boolean" label="VM_YML_EXPORT_IMAUD_ADULT" description="VM_YML_EXPORT_IMAUD_ADULT_DESC" />
+                <field name="list_categoryes" type="text" class="inputbox" default="0" label="VM_YML_EXPORT_IMAUD_CATEGORY_ID_LIST" description="VM_YML_EXPORT_IMAUD_CATEGORY_ID_LIST_DESC" />
+								<field name="cat_list_control" type="radio" default="0" label="VM_YML_EXPORT_IMAUD_CATEGORY_LIST" description="VM_YML_EXPORT_IMAUD_CATEGORY_LIST_DESC">
+									<option value="0">VM_YML_EXPORT_IMAUD_EXCLUDE</option>
+									<option value="1">VM_YML_EXPORT_IMAUD_INCLUDE</option>
+                </field>
+
+                <field name="exclude_items" type="text" class="inputbox" default="0" label="VM_YML_EXPORT_IMAUD_ITEMS_EXCLUDE" description="VM_YML_EXPORT_IMAUD_ITEMS_EXCLUDE_DESC" />
+								<field name="cpa" type="list" default="0" label="VM_YML_EXPORT_IMAUD_CPA" description="VM_YML_EXPORT_IMAUD_CPA_DESC">
+									<option value="0">VM_YML_EXPORT_IMAUD_CPA_NA</option>
+									<option value="1">VM_YML_EXPORT_IMAUD_CPA_NO</option>
+									<option value="2">VM_YML_EXPORT_IMAUD_CPA_YES</option>
+                </field>
+                <field name="export_method" type="list" default="1" label="VM_YML_EXPORT_IMAUD_METHOD" description="VM_YML_EXPORT_IMAUD_METHOD_DESC">
+                    <option value="0">VM_YML_EXPORT_IMAUD_METHOD_REQUEST</option>
+                    <option value="1">VM_YML_EXPORT_IMAUD_METHOD_FILE</option>
+                </field>
+								<field name="set_time_limit" type="number" class="inputbox" default="2" filter="integer" label="VM_YML_EXPORT_IMAUD_TIMELIMIT" description="VM_YML_EXPORT_IMAUD_TIMELIMIT_DESC" />
+								<field name="urlnosef" type="checkbox" class="inputbox" value="1" filter="boolean" label="VM_YML_EXPORT_IMAUD_URLNOSEF" description="VM_YML_EXPORT_IMAUD_URLNOSEF_DESC" />
+								<field name="transcode" type="checkbox" class="inputbox" value="1" filter="boolean" label="VM_YML_EXPORT_IMAUD_TRANSCODE" description="VM_YML_EXPORT_IMAUD_TRANSCODE_DESC" />
+								<field name="export_filename" type="text" default="ymlexport.xml" label="VM_YML_EXPORT_IMAUD_FILENAME" description="VM_YML_EXPORT_IMAUD_FILENAME_DESC" />
+								<field name="export_path2save" type="text" default="/tmp" label="VM_YML_EXPORT_IMAUD_PATH2SAVE" description="VM_YML_EXPORT_IMAUD_PATH2SAVE_DESC" />
+								<field name="developer_name" type="text" default="" class="inputbox" label="VM_YML_EXPORT_IMAUD_DEVELOPER_NAME" description="VM_YML_EXPORT_IMAUD_DEVELOPER_NAME_DESC" />
+								<field name="developer_email" type="email" default="" class="inputbox" label="VM_YML_EXPORT_IMAUD_DEVELOPER_EMAIL" description="VM_YML_EXPORT_IMAUD_DEVELOPER_EMAIL_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

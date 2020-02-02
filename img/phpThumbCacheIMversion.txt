@@ -1,0 +1,4 @@
+6.7.2-7 2017-03-23 Q16
+Version: ImageMagick 6.7.2-7 2017-03-23 Q16 http://www.imagemagick.org
+Copyright: Copyright (C) 1999-2011 ImageMagick Studio LLC
+Features: OpenMP

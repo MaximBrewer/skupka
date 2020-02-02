@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" version="3.0.0">
+	<name>ARI Soft</name>
+	<libraryname>arisoft</libraryname>
+	<author>ARI Soft</author>
+	<creationDate>July 2016</creationDate>
+	<copyright>ARI Soft</copyright>
+	<license>GNU/GPL license (http://www.gnu.org/copyleft/gpl.html)</license>
+	<authorEmail>info@ari-soft.com</authorEmail>
+	<authorUrl>www.ari-soft.com</authorUrl>
+	<version>1.0.0</version>
+	<description>ARI Soft shared library.</description>
+	<media folder="media" destination="arisoft">
+		<filename>index.html</filename>
+	</media>
+	<files folder="lib">
+		<folder>Arisoft</folder>
+		<folder>fields</folder>
+		<filename>index.html</filename>
+		<filename>loader.php</filename>
+	</files>
+</extension>

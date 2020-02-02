@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="headers">
+		<field
+			name="field_headers"
+			type="textarea"
+			rows="10"
+			cols="80"
+			default=""
+			class="input-xxlarge"
+			hint="COM_CSVI_FIELD_HEADERS_DESC" />
+	</fieldset>
+</form>

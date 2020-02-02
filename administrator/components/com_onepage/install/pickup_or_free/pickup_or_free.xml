@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="plugin" group="vmshipment" method="upgrade">
+    <name>Pickup or Free</name>
+    <creationDate>26.September.2012</creationDate>
+    <author>RuposTel.com</author>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <copyright>RuposTel.com</copyright>
+    <license>GPLv2</license>
+    <version>10.346.1454</version>	
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+<element>pickup_or_free</element>
+    <description>This plugin enables you to have pickup or free delivery options as your shipping method.</description>
+    <files>
+		<filename plugin="pickup_or_free">pickup_or_free.php</filename>
+		<filename >helper_v2.js</filename>
+		<filename >pickup_or_free.css</filename>
+		<filename >index.html</filename>
+		<filename >helper.php</filename>
+		<filename >pf_display.php</filename>
+		<filename >pfs_display.php</filename>
+		<filename >wrapper.css</filename>
+		
+		<folder>fields</folder>
+		<folder>pickup_images</folder>
+		<folder>pickup_or_free</folder>
+    </files>
+	 <vmconfig>
+	   <fields name="params" addfieldpath="/plugins/vmshipment/pickup_or_free/fields">
+	    <fieldset name="template">
+   
+	
+	<field type="spacer" default="Pickup or free" level="level1" />
+	<field	name="shipment_logos" type="vmfiles" label="Logos (not used)" multiple="multiple" hidden="hidden" 
+             	description=""
+             	directory="/images/stories/virtuemart/shipment"
+             	default="default" hide_default="1" hide_none="1"
+             	stripext="0"   exclude="^_" />
+	</fieldset>
+	<fieldset name="restrictions">
+		<field type="vmtitle" default="Plugin Restrictions" description=""/>
+	
+		<field name="countries" type="vmcountries"  scope="com_virtuemart" default="" label="Countries" description=""/>
+		<field name="zip_start" type="text" size="10" default="" label="Zip Range Start" description="Zip Range Start"/>
+		<field name="zip_stop" type="text" size="10" default="" label="Zip Range Stop" description="Zip Range Stop"/>
+		<field name="zip_range1" type="textarea" rows="4" cols="20" style="width: 200px" default="" label="Zip Range 1 for free shipping separated by comma" description="List of zip codes separated by comma. Add extra zip codes to the range defined above."/>
+		<field name="nbproducts_start" type="text" size="10" default="1" label="Minimum number of products per zip range" description=""/>
+		<field name="zip_range_error_here" type="textarea" rows="4" cols="20"  label="Zip RANGE errorr under zip code field" description="" default="Op deze postcode bezorgen wij vanaf 10 broodjes."/>
+		<field name="zip_range" type="textarea" rows="4" cols="20" style="width: 200px" default="" label="Zip List for free shipping separated by comma" description="List of zip codes separated by comma. Add extra zip codes to the range defined above."/>
+		<field name="zip_except" type="textarea" rows="4" cols="20" style="width: 200px" default="" label="Except these zip codes (enter numeric values)" description="List of zip codes separated by comma."/>
+		<field name="nbproducts_start_ziplist" type="text" size="10" default="1" label="Minimum number of products per zip list separated by comma" description="VMSHIPMENT_WEIGHT_COUNTRIES_NBPRODUCTS_STOP_DESC"/>
+		<field name="zip_list_error_here" type="textarea" rows="4" cols="20"  label="Zip LIST errorr under zip code field" description="" default="Op deze postcode bezorgen wij vanaf 5 broodjes"/>
+		<field name="zip_general_error" type="textarea" rows="4" cols="20"  label="Zip code out of both ranges" description="" default="Op deze postcode bezorgen wij niet"/>
+		<field name="weight_start" type="text" size="10" default="0" label="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_START" description="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_START_DESC"/>
+		<field name="weight_stop" type="text" size="10" default="999999" label="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_STOP" description="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_STOP_DESC"/>
+		<field name="weight_unit" type="vmweightunit" size="10" default="" label="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_UNIT" description="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_UNIT_DESC"/>
+		<field name="orderamount_start" type="text" size="10" default="" label="VMSHIPMENT_WEIGHT_COUNTRIES_ORDERAMOUNT_START" description="VMSHIPMENT_WEIGHT_COUNTRIES_ORDERAMOUNT_START_DESC"/>
+		<field name="orderamount_stop" type="text" size="10" default="" label="VMSHIPMENT_WEIGHT_COUNTRIES_ORDERAMOUNT_STOP" description="VMSHIPMENT_WEIGHT_COUNTRIES_ORDERAMOUNT_STOP_DESC"/>
+		<field name="cost" type="text"   default="0" label="VMSHIPMENT_WEIGHT_COUNTRIES_COST" description="VMSHIPMENT_WEIGHT_COUNTRIES_COST_DESC" />
+		<field name="package_fee" type="text"   default="0" label="VMSHIPMENT_WEIGHT_COUNTRIES_PACKAGE_FEE" description="VMSHIPMENT_WEIGHT_COUNTRIES_PACKAGE_FEE_DESC" />
+		<field name="tax_id" type="vmtaxes" default="0" scope="com_virtuemart"  label="VMSHIPMENT_WEIGHT_COUNTRIES_TAX" description="VMSHIPMENT_WEIGHT_COUNTRIES_TAX_DESC" />
+		<field name="free_shipment" type="text"    default="0" label="VMSHIPMENT_WEIGHT_COUNTRIES_FREE_SHIPPING_AMOUNT" description="VMSHIPMENT_WEIGHT_COUNTRIES_FREE_SHIPPING_AMOUNT_DESC" />
+
+		</fieldset>
+		<fieldset name="mode">		
+				<field type="vmtitle" default="Mode" description=""/>
+    <field name="mode" type="list" default="0" label="Choose mode" description="Select mode to run the plugin">
+	    <option value="0">MODE_0: Delivery with routes, timeslots and vehicles (wholesale 1, use com_delivery to configure)</option>
+		<option value="2">MODE_2: Delivery with single vehicle per zip code (sandwitch shop, use this plugin to configure)</option>
+	</field>
+
+	<field name="default_selected" type="list" default="0" label="Select which section should be selected by default" description="Select if pickup in store or delivery should be selected by default">
+	    <option value="0">Pickup in store</option>
+		<option value="1">Delivery</option>
+	</field>
+	
+	<field name="reservations" type="list" default="0" label="Use reservation system (per capacity of the vehicle)" description="">
+	    <option value="0">Disabled</option>
+		<option value="1">Enabled</option>
+	</field>
+
+	<field name="debug" type="list" default="0" label="Debug Mode (for testing only)" description="This option will print data to javascript console">
+	    <option value="0">Disabled</option>
+		<option value="1">Enabled</option>
+	</field>
+
+	
+	</fieldset>
+	<fieldset name="pickup">
+	<field type="vmtitle" default="Pickup in Store Settings" description=""/>
+	
+	<field name="pickup_label" type="text" rows="4" cols="20" style="width: 200px"   default="Afhalen" label="Pickup in Store label" description="" />
+	<field name="pickup_text" type="textarea" rows="4" cols="20" style="width: 200px" label="Insert a text which will be shown in the order details page and emails. User {date} for selected date and {time} for selected time. This text will be used for Pickup type." default="Your order will be pickuped on {date} at {time}" />
+		<field name="free_text" type="textarea" rows="4" cols="20" default="&lt;strong&gt;Free Shipping Not Available&lt;/strong&gt;" label="Set html text when free shipping is not available" description="Set text when free shipping is not available" />	
+	
+	<field name="disable_pickup_time" type="list" default="0" label="Disable 'pickup in store' time dropdown" description="Disable time selection for pickup in store">
+	    <option value="0">Pickup Time will be Displayed</option>
+		<option value="1">Pickup Time will be Hidden</option>
+	</field>
+
+	<field name="disable_pickup_today" type="list" default="0" label="Disable today for pickup" description="Disable to choose today for pickup">
+	    <option value="0">Today is Available</option>
+		<option value="1">Today is not Available</option>
+	</field>
+
+	
+	
+	<field name="pickup_start_time" type="list" default="9:00" label="Pickup Start Time" description="Set time from which the pickup in store is available">
+	  <option value="0:00">0:00</option> <option value="1:00">1:00</option> <option value="2:00">2:00</option> <option value="3:00">3:00</option> <option value="4:00">4:00</option> <option value="5:00">5:00</option> <option value="6:00">6:00</option> <option value="7:00">7:00</option> <option value="8:00">8:00</option> <option value="9:00">9:00</option> <option value="10:00">10:00</option> <option value="11:00">11:00</option> <option value="12:00">12:00</option> <option value="13:00">13:00</option> <option value="14:00">14:00</option> <option value="15:00">15:00</option> <option value="16:00">16:00</option> <option value="17:00">17:00</option> <option value="18:00">18:00</option> <option value="19:00">19:00</option> <option value="20:00">20:00</option> <option value="21:00">21:00</option> <option value="22:00">22:00</option> <option value="23:00">23:00</option>
+	</field>
+	<field name="pickup_end_time" type="list" default="18:00" label="Pickup End Time" description="Set time to which the pickup in store is available">
+	  <option value="0:00">0:00</option> <option value="1:00">1:00</option> <option value="2:00">2:00</option> <option value="3:00">3:00</option> <option value="4:00">4:00</option> <option value="5:00">5:00</option> <option value="6:00">6:00</option> <option value="7:00">7:00</option> <option value="8:00">8:00</option> <option value="9:00">9:00</option> <option value="10:00">10:00</option> <option value="11:00">11:00</option> <option value="12:00">12:00</option> <option value="13:00">13:00</option> <option value="14:00">14:00</option> <option value="15:00">15:00</option> <option value="16:00">16:00</option> <option value="17:00">17:00</option> <option value="18:00">18:00</option> <option value="19:00">19:00</option> <option value="20:00">20:00</option> <option value="21:00">21:00</option> <option value="22:00">22:00</option> <option value="23:00">23:00</option>
+	</field>
+	
+	<field name="dayp_0" type="list" default="0" label="Disable Sunday Pickup" description="" >	  <option value="0">No</option>	  <option value="1">Yes</option>	</field>	
+		<field name="dayp_1" type="list" default="0" label="Disable Monday Pickup" description="" >	  <option value="0">No</option>	  <option value="1">Yes</option>	</field>	
+		<field name="dayp_2" type="list" default="0" label="Disable Tuesday Pickup" description="" >	  <option value="0">No</option>	  <option value="1">Yes</option>	</field>	
+		<field name="dayp_3" type="list" default="0" label="Disable Wednesday Pickup" description="" >	  <option value="0">No</option>	  <option value="1">Yes</option>	</field>	
+		<field name="dayp_4" type="list" default="0" label="Disable Thursday Pickup" description="" >	  <option value="0">No</option>	  <option value="1">Yes</option>	</field>	
+		<field name="dayp_5" type="list" default="0" label="Disable Friday Pickup" description="" >	  <option value="0">No</option>	  <option value="1">Yes</option>	</field>	
+		<field name="dayp_6" type="list" default="0" label="Disable Saturday Pickup" description="" >	  <option value="0">No</option>	  <option value="1">Yes</option>	
+		</field>	
+	<field name="pickup_custom_slots" type="list" default="0" label="Pickup custom slots insted of time slots" description="Custom slots for Pickup (opening hours)">
+	    <option value="0">Disabled</option>
+		<option value="1">Enabled (use com_delivery)</option>
+	</field>
+	<field name="pickup_slots" type="textarea" rows="4" cols="20" style="width: 200px"   default="AM;PM" label="Pickup slots separated by semicolon" description="Enter slots for pickup time options such as AM;PM or similar" />
+	
+	</fieldset>
+	<fieldset name="delivery">
+		<field type="vmtitle" default="Delivery Settings" description=""/>
+		<field name="free_label" type="text" rows="4" cols="20" style="width: 200px"   default="Bezorgen" label="Delivery label" description="" />	
+		<field name="delivery_text" type="textarea" rows="4" cols="20" style="width: 200px" label="Insert a text which will be shown in the order details page and emails. User {date} for selected date and {time} for selected time. This text will be used for Delivery type." default="Your order will be delivered on {date} at {time}" />	
+		<field name="error_delivery_text" type="textarea" rows="4" cols="20" style="width: 200px" label="Set an error text in case 2 customers try to order for the same delivery." default="Selected date and time is already reserverd" />	
+		
+		<field name="free_start_time" type="list" default="9:00" label="Free Delivery Start Time" description="Set time to which the pickup in store is available">
+	  <option value="0:00">0:00</option> <option value="1:00">1:00</option> <option value="2:00">2:00</option> <option value="3:00">3:00</option> <option value="4:00">4:00</option> <option value="5:00">5:00</option> <option value="6:00">6:00</option> <option value="7:00">7:00</option> <option value="8:00">8:00</option> <option value="9:00">9:00</option> <option value="10:00">10:00</option> <option value="11:00">11:00</option> <option value="12:00">12:00</option> <option value="13:00">13:00</option> <option value="14:00">14:00</option> <option value="15:00">15:00</option> <option value="16:00">16:00</option> <option value="17:00">17:00</option> <option value="18:00">18:00</option> <option value="19:00">19:00</option> <option value="20:00">20:00</option> <option value="21:00">21:00</option> <option value="22:00">22:00</option> <option value="23:00">23:00</option>
+	</field>
+	
+	<field name="free_end_time" type="list" default="18:00" label="Free Delivery End Time" description="Set time to which the pickup in store is available">
+	  <option value="0:00">0:00</option> <option value="1:00">1:00</option> <option value="2:00">2:00</option> <option value="3:00">3:00</option> <option value="4:00">4:00</option> <option value="5:00">5:00</option> <option value="6:00">6:00</option> <option value="7:00">7:00</option> <option value="8:00">8:00</option> <option value="9:00">9:00</option> <option value="10:00">10:00</option> <option value="11:00">11:00</option> <option value="12:00">12:00</option> <option value="13:00">13:00</option> <option value="14:00">14:00</option> <option value="15:00">15:00</option> <option value="16:00">16:00</option> <option value="17:00">17:00</option> <option value="18:00">18:00</option> <option value="19:00">19:00</option> <option value="20:00">20:00</option> <option value="21:00">21:00</option> <option value="22:00">22:00</option> <option value="23:00">23:00</option>
+	</field>
+	<field name="free_disable" type="text" size="10" default="15" label="Set number of minutes to block around an order (for delivery)" description="Set number of minutes for which to disable time if an order is already made for free delivery."/>
+	
+	<field name="disable_delivery_today" type="list" default="0" label="Disable delivery for current day" description="">
+	   <option value="0">Today is Available</option>
+		<option value="1">Today is not Available</option>
+	</field>
+	<field name="time_ahead" type="text" size="10" default="45" label="Time length of the delivery. (how long before the order must be done for delivery)" description=""/>
+	
+	<field name="day_0" type="list" default="0" label="Disable Sunday Delivery" description="" >	  <option value="0">No</option>	  <option value="1">Yes</option>	</field>	
+		<field name="day_1" type="list" default="0" label="Disable Monday Delivery" description="" >	  <option value="0">No</option>	  <option value="1">Yes</option>	</field>	
+		<field name="day_2" type="list" default="0" label="Disable Tuesday Delivery" description="" >	  <option value="0">No</option>	  <option value="1">Yes</option>	</field>	
+		<field name="day_3" type="list" default="0" label="Disable Wednesday Delivery" description="" >	  <option value="0">No</option>	  <option value="1">Yes</option>	</field>	
+		<field name="day_4" type="list" default="0" label="Disable Thursday Delivery" description="" >	  <option value="0">No</option>	  <option value="1">Yes</option>	</field>	
+		<field name="day_5" type="list" default="0" label="Disable Friday Delivery" description="" >	  <option value="0">No</option>	  <option value="1">Yes</option>	</field>	
+		<field name="day_6" type="list" default="0" label="Disable Saturday Delivery" description="" >	  <option value="0">No</option>	  <option value="1">Yes</option>	
+	</field>
+	
+	<field name="custom_slots" type="list" default="0" label="Delivery custom slots insted of time slots" description="Custom slots">
+	    <option value="0">Disabled</option>
+		<option value="1">Enabled (use com_delivery)</option>
+	</field>
+	
+	<field name="slots" type="textarea" rows="4" cols="20" style="width: 200px"   default="AM;PM" label="Delivery slots separated by semicolon" description="Enter slots for delivery time options such as AM;PM or similar" />
+	<field name="max_slot_weight" type="text" style="width: 200px"   default="400" label="Limit availability of the slot at the selected date by total sum of weight ordered per slot. " description="Amount is in selected UOM per above config" />
+	
+	<field name="route_label" type="text" rows="4" cols="20" style="width: 200px"   default="Route" label="Delivery label" description="" />	
+	<field name="routes" type="textarea" rows="4" cols="20" style="width: 200px"   default="" label="Routes separated by semicolon (not for MODE_2)" description="" />
+	<field name="vehicles" type="textarea" rows="4" cols="20" style="width: 200px"   default="vehicle1;vehicle2" label="Vehicles separated by semicolon" description="" />
+	
+	</fieldset>
+	
+	<fieldset name="general">
+	<field type="vmtitle" default="General Settings" description=""/>
+	
+  
+	
+	<field name="time_period" type="list" default="15" label="Time iteration" description="Set number of minutes">
+	    <option value="10">10 min</option>
+		<option value="15">15 min</option>
+		<option value="30">30 min</option>
+	    <option value="60">Hourly</option>
+	</field>
+	
+	<field name="no_options" type="text" style="width: 200px"   default="-Not Available-" label="Set text if the delivery is not available per selected route. " description="Set empty option text" />
+	
+   </fieldset>
+   
+   <fieldset name="coupons">
+   	<field type="vmtitle" default="Coupon Settings" description=""/>
+   <field name="coupon_free" type="text"    default="" label="Coupon to enable free delivery" description="The coupon code must be registered with Virtuemart as well" />
+	<field name="coupon_free_text" type="textarea" rows="4" cols="20" style="width: 200px"    default="Gefeliciteerd uw waardebonis geaccepeerd en u kunt nu gebruik maken van gratis bezorging" label="Coupon description" description="Coupon description" />
+	<field name="coupon_free5" type="text"    default="" label="Coupon to enable free delivery" description="The coupon code must be registered with Virtuemart as well" />
+	<field name="coupon_free5_text" type="textarea" rows="4" cols="20" style="width: 200px"   default="Gefeliciteerd uw waardebonis geaccepeerd en u kunt nu gebruik maken van gratis  bezorging vanaf 5 broodjes." label="Coupon description" description="Coupon description" />
+	<field name="coupon_free10" type="text"    default="" label="Coupon to enable free delivery" description="The coupon code must be registered with Virtuemart as well" />
+	<field name="coupon_free10_text" type="textarea" rows="4" cols="20" style="width: 200px"   default="Gefeliciteerd uw waardebonis geaccepeerd en u kunt nu gebruik maken van gratis bezorging vanaf 10 broodje" label="Coupon description" description="Coupon description" />
+	<field name="coupon_error_text" type="textarea" rows="4" cols="20" style="width: 200px"   default="Waardebon is niet geldig bij dit aantal producten" label="Set html text when free shipping is not available and coupon is used" description="" />		
+	
+   
+   </fieldset>
+   <fieldset name="advanced">
+    <field type="vmtitle" default="Zip Range Config per Routes" description=""/>
+    <field name="zip_delivery_ranges" type="zipranges" label="Zip Ranges" description="" multiple="multiple"/>		
+   </fieldset>
+   
+   
+   </fields>
+ </vmconfig>
+</extension>

@@ -1,0 +1,116 @@
+/**
+ *---------------------------------------------------------------------------------------
+ * @package      VP One Page Checkout - Joomla! System Plugin
+ * @subpackage   For VirtueMart 3+
+ *---------------------------------------------------------------------------------------
+ * @copyright    Copyright (C) 2012-2017 VirtuePlanet Services LLP. All rights reserved.
+ * @license      GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors      Abhishek Das
+ * @email        info@virtueplanet.com
+ * @link         https://www.virtueplanet.com
+ *---------------------------------------------------------------------------------------
+ * $Revision: 3 $
+ * $LastChangedDate: 2017-09-20 20:00:08 +0530 (Wed, 20 Sep 2017) $
+ * $Id: admin.css 3 2017-09-20 14:30:08Z Abhshek Das $
+ * --------------------------------------------------------------------------------------
+*/
+.desc-text {
+	font-weight: normal;
+	color: #656667;
+	margin-left: 0;
+}
+.extension-title {
+	color: #333;
+	margin-top: 5px;
+	line-height: 21px;
+	font-weight: normal;
+}
+.extension-title.module {
+	margin: 0 0 15px 0;
+	padding: 0;
+}
+.extension-title .extension-version {
+	margin-left: 10px;
+	vertical-align: top;
+}
+.copy-text {
+	font-size: 0.9em;
+	font-style: italic;
+	font-weight: normal;
+	text-align: right;
+}
+.vp-extension-description {
+	padding-left: 200px;
+	text-align: left;
+}
+.extension-image-container {	
+	float: left;
+	margin-top: 0;
+	margin-left: -200px;
+	padding: 0;
+	background: #FFF;
+	border: 15px solid #FFF;
+	text-align: center;
+	-webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+}
+.extension-image-container > img {
+	float: none;
+	margin: 0 auto;
+}
+table.adminform .extension-title [data-text]:after, #installer-install .extension-title [data-text]:after {
+	content: "VP One Page Checkout";
+	display: inline-block;
+	margin-top: 5px;
+	font-size: 22px;
+	margin-bottom: 5px;
+}
+table.adminform .desc-text > span, #installer-install .desc-text > span {
+	color: #B94A48;
+	font-style: italic;
+}
+#installer-install .vp-extension-description {
+	display: block;
+	margin-bottom: 30px;
+}
+#installer-install .vp-extension-description:after, #installer-install .vp-extension-description:before {
+	display: table;
+	content: "";
+}
+#installer-install .vp-extension-description:after {
+	clear: both;
+}
+span.spacer label {
+	font-weight: bold;
+	font-size: 1.3em;
+}
+#only-for-vpau {
+	position: relative;
+}
+#only-for-vpau > .control-group:first-child {
+	display: inline-block;
+}
+#only-for-vpau-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: transparent;
+	background: url(../../images/overlay.png);
+	background-repeat: repeat;
+	z-index: 10;
+}
+#only-for-vpau-overlay:after {
+	display: block;
+	text-align: center;
+	content: "Need VP Advanced User Component";
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1.2em;
+	margin-top: 30px;
+	color: #333;
+	opacity: 1;
+	z-index: 11;
+}

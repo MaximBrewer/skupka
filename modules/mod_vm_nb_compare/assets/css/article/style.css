@@ -1,0 +1,36 @@
+.tr_compare_action {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: auto; }
+  .tr_compare_action td {
+    padding: 10px !important; }
+
+.product_compare_item {
+  text-align: center; }
+  .product_compare_item form.product {
+    display: block;
+    float: left;
+    width: 60%; }
+  .product_compare_item .over_data input[type=submit] {
+    width: 100% !important;
+    float: none;
+    
+    margin-left: 0; }
+  .product_compare_item .over_data .quantity-box {
+    display: block; }
+    .product_compare_item .over_data .quantity-box .item_span {
+      display: inline-block;
+      background-color: #179eeb;
+      width: 27px;
+      height: 27px;
+      cursor: pointer;
+      color: #fff;
+      line-height: 27px; }
+  .product_compare_item .over_data .cust_field {
+    margin-top: 10px;
+    display: block; }
+  .product_compare_item .remove_compare_popup {
+    margin: auto;
+    float: right; }
+
+/*# sourceMappingURL=style.css.map */

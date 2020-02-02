@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade" client="site">
+	<name>BT Background SlideShow</name>
+	<author>BowThemes</author>
+	<creationDate>Apr 2012</creationDate>
+	<copyright>Copyright © 2012 Bow Themes</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>bowthemes.com</authorEmail>
+	<authorUrl>http://bowthemes.com</authorUrl>
+	<version>2.4.3</version>
+	<description>
+        <![CDATA[
+		<style>
+			.bt_description{
+				text-align: left;
+			}
+			.bt_description h3{
+				text-transform: uppercase;
+				margin: 20px 0px 10px 0px;
+			}
+			.bt_description img{
+				float:left;
+				margin:5px 10px 5px 0px;
+			}
+			.bt_description p,.bt_description li{
+				padding: 5px 5px 5px 30px;
+				list-style: none outside none;
+			}
+
+			.bt_description ul.list-style li{
+				background:url(../modules/mod_bt_backgroundslideshow/admin/images/tick.png) 0px 6px no-repeat;
+				padding-left:30px;
+				line-height:15px;
+			}
+		</style>
+		<div class="bt_description">
+			<h3>Module BT Background SlideShow Version 2.4.3</h3>
+			<a href="http://bowthemes.com" target="_blank"><img src="../modules/mod_bt_backgroundslideshow/admin/images/btslideshow.png"></a>
+			<p align="justify">
+                  BT Background SlideShow is a perfect slideshow module for Joomla.
+                  It allows you to easily display images with many flash type animations done in Javascript.
+                  You can upload, import images, preview, order images from parameter module and fully configure with a lot of options.
+                  BT Background SlideShow is compatible with Joomla 1.7, 2.5 and Joomla 3.0
+			</p>
+			<br clear="both" />
+			<h3>Extension features:</h3>
+			<ul class="list-style">
+                            <li>Import images from different sources to gallery (Flickr album, Picasa Album, Joomla Folder, Phoca Gallery Component, JoomGallery component)</li>
+                            <li>Ability to upload, preview and order by drag and drop images from parameter</li>
+                            <li>Link image to  article or K2 component's item
+                            <li>Auto crop images and thumbnails</li>
+                            <li>Unlimited Image Slideshow</li>
+                            <li>Smooth fullscreen background slideshow</li>
+                            <li>Youtube video background</li>
+                            <li>Easiness to insert images links, captions and descriptions</li>
+                            <li>Be compatible with Joomla 1.7, 2.5 and Joomla 3.0</li>
+                            <li>Cross Browser Support: IE7+, Firefox 2+, Safari 3+, Chrome 8+, Opera 9+</li>
+                            <li>Video tutorial and forum support provided
+			</ul>
+			<h3>Upgrade versions</h3>
+			<p>
+				Your current versions is BT Background SlideShow 2.4.3. <a target="_blank" href="http://bowthemes.com/showcase/joomla-extensions.html">Find our latest versions now</a>
+			</p>
+			<h3>About bow themes & copyright</h3>	
+			<p>
+				Bow Themes is Professional Joomla template provider. We are focused on creating unique, attractive and clean templates without loosing flexibility and simplicity of customization
+			</p>
+			Copyright (C) 2012 BowThemes	
+
+		</div>
+	]]>
+	</description>
+	<files>
+		<filename module="mod_bt_backgroundslideshow">mod_bt_backgroundslideshow.php</filename>
+		<folder>admin</folder>
+		<folder>assets</folder>
+		<folder>helpers</folder>
+		<folder>images</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.mod_bt_backgroundslideshow.ini</language>
+		<language tag="en-GB">en-GB.mod_bt_backgroundslideshow.sys.ini
+		</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="images_manager" label="MOD_BTBGSLIDESHOW_FIELDSET_GALLERY_MANAGER">
+				<field name="warning" type="warning" label="Warning" />
+				<field name="source" type="list" class="bt_control"
+					label="MOD_BTBGSLIDESHOW_FIELD_SOURCE_LABEL" description="MOD_BTBGSLIDESHOW_FIELD_SOURCE_DESC">
+					<option value="jfolder">Joomla Folder</option>
+					<option value="flickr">Flickr</option>
+					<option value="picasa">Picasa</option>
+					<option value="jgallery">Joom Gallery</option>
+					<option value="phocagallery">Phoca Gallery</option>
+					<option value="upload">Uploader</option>
+					<option value="ytlink">Youtube Playlist/Video Link</option>
+				</field>
+				<field class="btss-ac source_jfolder" name="jfolder_path" type="folder"
+					label="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_JFOLDER_LABEL"
+					description="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_JFOLDER_DESC" />
+
+				<!-- config for flickr -->
+				<field class="btss-ac source_flickr" type="text" name="flickr_userid"
+					size="36" label="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_FLICKR_USERID_LABEL"
+					description="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_FLICKR_USERID_DESC" />
+				<field class="btss-ac source_flickr" type="text" name="flickr_api"
+					size="36" label="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_FLICKR_APIKEY_LABEL"
+					description="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_FLICKR_APIKEY_DESC" />
+
+				<field class="btss-ac source_flickr" type="list" name="flickr_photosetid"
+					label="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_FLICKR_PHOTOSETID_LABEL"
+					description="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_FLICKR_PHOTOSETID_DESC">
+
+				</field>
+				<!-- end of config for flickr -->
+				<field class="btss-ac source_picasa" type="text" name="picasa_userid"
+					size="36" label="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_PICASA_USERID_LABEL"
+					description="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_PICASA_USERID_DESC" />
+				<field class="btss-ac source_picasa" type="list" name="picasa_albumid"
+					label="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_PICASA_ALBUMID_LABEL"
+					description="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_PICASA_ALBUMID_DESC">
+				</field>
+				<!-- end of config for picasa -->
+				<field class="btss-ac source_phocagallery" type="phocagallerycategory"
+					name="phoca_catid" label="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_PHOCA_CATID_LABEL"
+					description="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_PHOCA_CATID_DESC">
+
+				</field>
+				<field class="btss-ac source_jgallery" type="jgallerycategory" name="jgallery_catid"
+					label="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_JGALLERY_CATID_LABEL"
+					description="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_JGALLERY_CATID_DESC">
+					<option value="0">MOD_BTBGSLIDESHOW_JGALLERY_ALL_CATEGORIES
+					</option>
+				</field>
+				<field class="btss-ac source_ytlink" type="text" name="yt_link" label="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_YOUTUBE_LINK_LABEL" description="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_YOUTUBE_LINK_DESC"/>
+				<field class="btn-group source_jgallery source_phocagallery source_picasa source_flickr source_jfolder source_ytuser source_ytlink" name="remote_image" type="radio" default="0" label="MOD_BTSLIDESHOW_FIELD_REMOTE_IMAGE_LABEL" description="MOD_BTSLIDESHOW_FIELD_REMOTE_IMAGE_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="get_limit" type="text" default="20" class="source_jgallery source_phocagallery source_picasa source_flickr source_jfolder source_ytuser source_ytlink"
+					label="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_GET_LIMIT_LABEL"
+					description="MOD_BTBGSLIDESHOW_FIELD_ALBUMCONFIG_GET_LIMIT_DESC" />
+				<field type="fetchimage" name="btnFetchImage" label="Get Images" class="source_jgallery source_phocagallery source_picasa source_flickr source_jfolder source_ytuser source_ytlink"
+					description="MOD_BTBGSLIDESHOW_FIELD_FETCHIMAGE_DESC" />
+				<field type="uploadify" name="uploadify" class="source_upload"
+					label="MOD_BTBGSLIDESHOW_FIELD_UPLOADIFY_LABEL" description="MOD_BTBGSLIDESHOW_FIELD_UPLOADIFY_DESC" />
+				<field name="gallery" type="gallery" default=""
+					label="MOD_BTBGSLIDESHOW_FIELD_GALLERY_LABEL" description="MOD_BTBGSLIDESHOW_FIELD_GALLERY_DESC" />
+				<field name="deleteimages" type="deleteimages" label="Delete images" />				
+			</fieldset>
+			
+			<fieldset name="config" label="MOD_BACKGROUNDSHOW_CONFIGRUATION">
+				<field name="slideshowSize" type="list" class="bt_control" default="window"
+					label="MOD_BACKGROUNDSHOW_SLIDESHOWSIZE" description="MOD_BACKGROUNDSHOW_SLIDESHOWSIZE_DESC">
+					<option value="window">Window</option>
+					<option value="document">Document</option>
+					<option value="wrapper">Wrapper Element</option>
+					<option value="specific">Specific Size</option>
+				</field>
+				<field name="slideshowWidth" label="Set width" description="(in pixel)" class="slideshowSize_specific" type="text" default="" size="9" />
+				<field name="slideshowHeight" label="Set height" description="(in pixel)" class="slideshowSize_specific" type="text" default="" size="9" />
+				<field name="resizeImage" type="list" default="auto"
+					label="MOD_BACKGROUNDSHOW_SLIDESHOWRESIZE" description="MOD_BACKGROUNDSHOW_SLIDESHOWRESIZE_DESC">
+					<option value="none">Disabled</option>
+					<option value="auto">Auto</option>
+					<option value="fitwidth">Fit width</option>
+					<option value="fitheight">Fit height</option>
+					<option value="stretch">Stretch</option>
+				</field>
+				<field name="hAlign" type="list" default="c"
+					label="MOD_BACKGROUNDSHOW_HORIZONTALALIGN" description="MOD_BACKGROUNDSHOW_HORIZONTALALIGN_DESC">
+					<option value="l">Left</option>
+					<option value="c">Center</option>
+					<option value="r">Right</option>
+				</field>
+				<field name="vAlign" type="list" default="m"
+					label="MOD_BACKGROUNDSHOW_VERTICALALIGN" description="MOD_BACKGROUNDSHOW_VERTICALALIGN_DESC">
+					<option value="t">Top</option>
+					<option value="m">middle</option>
+					<option value="b">Bottom</option>
+				</field>
+				<field name="slideshowSpeed" type="text" default="8000" size="9"
+					label="MOD_BACKGROUNDSHOW_SLIDESHOWSPEED" description="MOD_BACKGROUNDSHOW_SLIDESHOWSPEED_DESC" />
+				<field name="effecttype" type="list" class="bt_control" default="fade" label="MOD_BACKGROUNDSHOW_SLIDESHOWEFFECT_LABEL" description="MOD_BACKGROUNDSHOW_SLIDESHOWEFFECT_DESC">
+					<option value="fade">Fade</option>
+					<option value="slider">Slide</option>
+				</field>
+				<field name="slidedirection" class="btss-ac effecttype_slider"  type="list" default="left" label="MOD_BACKGROUNDSHOW_SLIDESHOWDIRECTION_LABEL" description="MOD_BACKGROUNDSHOW_SLIDESHOWDIRECTION_DESC">
+					<option value="left">Left to right</option>
+					<option value="right">Right to left</option>
+					<option value="top">Top to bottom</option>
+					<option value="bottom">Bottom to top</option>						
+				</field>
+				<field name="effectTime" type="text" default="2000" size="9"
+					label="MOD_BACKGROUNDSHOW_EFFECTSPEED" description="MOD_BACKGROUNDSHOW_EFFECTSPEED_DESC" />
+				<field name="caption" type="list" default="0"
+					label="MOD_BACKGROUNDSHOW_CAPTION" description="MOD_BACKGROUNDSHOW_CAPTION_DESC">
+					<option value="0">Disabled</option>
+					<option value="1">Title</option>
+					<option value="2">Title-Link</option>
+					<option value="3">Desc</option>
+					<option value="4">Title and Desc</option>
+					<option value="5">Title-Link and Desc</option>
+				</field>
+				<field name="display_order" type="list"
+					label="MOD_BACKGROUNDSHOW_FIELD_DISPLAY_ORDER_LABEL" description="MOD_BACKGROUNDSHOW_FIELD_DISPLAY_ORDER_DESC">
+					<option value="ordering">MOD_BACKGROUNDSHOW_FIELD_DISPLAY_ORDER_ORDERING
+					</option>
+					<option value="title_asc">MOD_BACKGROUNDSHOW_FIELD_DISPLAY_ORDER_TITLE_ASC
+					</option>
+					<option value="title_desc">MOD_BACKGROUNDSHOW_FIELD_DISPLAY_ORDER_TITLE_DESC
+					</option>
+					<option value="random">MOD_BACKGROUNDSHOW_FIELD_DISPLAY_ORDER_RANDOM
+					</option>
+					<option value="first-random">MOD_BACKGROUNDSHOW_FIELD_DISPLAY_ORDER_FIRST_RANDOM
+					</option>
+				</field>
+				<field name="bgo-pattern" type="pattern"
+					default="" label="MOD_BACKGROUNDSHOW_BG_OVERLAY_PATTERN"
+					description="MOD_BACKGROUNDSHOW_BG_OVERLAY_PATTERN_DESC">
+				</field>
+				<field name="bgo-opacity" type="text" size="9" default="0.5"
+					label="MOD_BACKGROUNDSHOW_BG_OVERLAY_OPACITY" description="MOD_BACKGROUNDSHOW_BG_OVERLAY_OPACITY_DESC" />
+			</fieldset>
+			
+			<fieldset name="thumbnail" label="MOD_BACKGROUNDSHOW_NAVIGATION">
+				<field name="nav-type" type="list" default="nav-btn" class="bt_control"
+					label="MOD_BACKGROUNDSHOW_NAVIGATION_TYPE" description="MOD_BACKGROUNDSHOW_NAVIGATION_TYPE_DESC">
+					<option value="disabled">Disabled</option>
+					<option value="nav-btn">Button</option>
+					<option value="nav-thumb">Thumbnail</option>
+				</field>
+				<field name="nex-back-button" class="btn-group nav_type_nav-btn" type="radio"
+					default="1" label="MOD_BACKGROUNDSHOW_NEXT_BACK_BUTTON"
+					description="MOD_BACKGROUNDSHOW_NEXT_BACK_BUTTON_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="playpause-button" class="btn-group nav_type_nav-btn" type="radio"
+					default="1" label="MOD_BACKGROUNDSHOW_PLAY_PAUSE_BUTTON"
+					description="MOD_BACKGROUNDSHOW_PLAY_PAUSE_BUTTON_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="thumb_number" class="nav_type_nav-thumb" type="text" size="9" default="3" label="MOD_BACKGROUNDSHOW_THUMB_NUMBER" description="MOD_BACKGROUNDSHOW_THUMB_NUMBER_DESC" />
+				<field name="thumb_width" class="nav_type_nav-thumb" type="text" size="9" default="80" label="MOD_BACKGROUNDSHOW_THUMB_WIDTH" description="MOD_BACKGROUNDSHOW_THUMB_WIDTH_DESC" />
+				<field name="thumb_height" class="nav_type_nav-thumb" type="text" size="9" default="50" label="MOD_BACKGROUNDSHOW_THUMB_HEIGHT" description="MOD_BACKGROUNDSHOW_THUMB_HEIGHT_DESC" />
+				
+				<field name="nav-align" type="list" class="nav_type_nav-thumb nav_type_nav-btn" 
+					default="center" label="MOD_BACKGROUNDSHOW_ALIGIN_BUTTON"
+					description="MOD_BACKGROUNDSHOW_ALIGIN_BUTTON_DESC">
+					<option value="disabled">None</option>
+					<option value="left">MOD_BACKGROUNDSHOW_ALIGIN_LEFT</option>
+					<option value="right">MOD_BACKGROUNDSHOW_ALIGIN_RIGHT</option>
+					<option value="center">MOD_BACKGROUNDSHOW_ALIGIN_CENTER</option>
+					<option value="justify">MOD_BACKGROUNDSHOW_ALIGIN_JUSTIFY</option>
+				</field>
+				<field name="nav-position" type="list" class="nav_type_nav-thumb nav_type_nav-btn" 
+					default="fixed" label="MOD_BACKGROUNDSHOW_NAVPOSITION"
+					description="MOD_BACKGROUNDSHOW_NAVPOSITION_DESC">
+					<option value="absolute">Absolute</option>
+					<option value="fixed">Fixed</option>
+				</field>
+				<field name="progress-bar" class="btn-group" type="radio"
+					default="1" label="MOD_BACKGROUNDSHOW_PROGRESS_BAR" description="MOD_BACKGROUNDSHOW_PROGRESS_BAR_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="autoplay" class="btn-group" type="radio" default="1"
+					label="MOD_BACKGROUNDSHOW_FIELD_AUTOPLAY_LABEL" description="MOD_BACKGROUNDSHOW_FIELD_AUTOPLAY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="stopAuto" class="btn-group nav_type_nav-thumb" type="radio" default="1"
+					label="MOD_BACKGROUNDSHOW_FIELD_STOPAUTO" description="MOD_BACKGROUNDSHOW_FIELD_STOPAUTO_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+			</fieldset>
+			
+			<fieldset name="videoconfig" label="MOD_BACKGROUNDSHOW_EMBED_VIDEO_CONFIGRUATION">
+				<field name="shvideo" class="btn-group nav-btn"  type="radio" label="MOD_BTBGSLIDESHOW_FIELD_SHVIDEO_LABEL"
+				description="MOD_BTBGSLIDESHOW_FIELD_SHVIDEO_DESC" default="1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="controltype" type="list" class="bt_control" default ="0" label="MOD_BTBGSLIDESHOW_FIELD_CONTROLTYPE_LABEL" description="MOD_BTBGSLIDESHOW_FIELD_CONTROLTYPE_DESC">
+					<option value="0">Built-in</option>
+					<option value="1">Youtube</option>
+				</field>
+				<field name="keepcontrolvideo"  type="list" default="2" label="MOD_BTBGSLIDESHOW_FIELD_AUTOHIDEVIDEO_LABEL" description ="MOD_BTBGSLIDESHOW_FIELD_AUTOHIDEVIDEO_DESC">
+					<option value="0">Show</option>
+					<option value="2">Hide</option>
+					<option value="1">Auto-Hide</option>
+				</field>	
+				<field name="videoquanlity" type="list"  default ="highres" label="MOD_BTBGSLIDESHOW_FIELD_QUANLITY_LABEL" description ="MOD_BTBGSLIDESHOW_FIELD_VIDEOQUANLITY_DESC">
+					<option value="default">JDEFAULT</option>					
+					<option value="small"> MOD_BTBGSLIDESHOW_FIELD_240P </option>
+					<option value="medium"> MOD_BTBGSLIDESHOW_FIELD_360P </option>
+					<option value="large"> MOD_BTBGSLIDESHOW_FIELD_480P </option>
+					<option value="hd720"> MOD_BTBGSLIDESHOW_FIELD_720P </option>
+					<option value="hd1080"> MOD_BTBGSLIDESHOW_FIELD_1080P </option>
+				</field>
+				<field name="videoautoplay" type="radio" default="1" class="btn-group nav-btn"  label="MOD_BTBGSLIDESHOW_FIELD_AUTOPLAY_LABEL">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="videovolume" type="text" default="100" label="MOD_BTBGSLIDESHOW_FIELD_VOLUME_LABEL"/>
+			</fieldset>
+			
+			<fieldset name="advanced" label="MOD_BACKGROUNDSHOW_ADVANCED">
+				<field type="text" name="wrapper_element" label="MOD_BACKGROUNDSHOW_WRAPPER_ELEMENT"
+					default="body" description="MOD_BACKGROUNDSHOW_WRAPPER_ELEMENT_DESC" />
+					
+				<field name="title_font" type="list" default="" label="MOD_BACKGROUNDSHOW_FIELD_TITLE_FONT_LABEL" description = "">
+					<option value ="">None</option>
+                    <option value ="Arial">Arial</option>
+                    <option value ="Tahoma">Tahoma</option>
+                    <option value ="Verdana">Verdana</option>
+                    <option value ="sans-serif">Sans Serif</option>
+                </field>
+                <field name="title_color" class="bt_color" type="text" default="#ffffff" label="MOD_BACKGROUNDSHOW_FIELD_TITLE_COLOR_LABEL" description = ""/>
+                <field name="title_size" type="text" default="18" label="MOD_BACKGROUNDSHOW_FIELD_TITLE_FONT_SIZE_LABEL" description = ""/>
+                
+                <field name="desc_font" type="list" default="" label="MOD_BACKGROUNDSHOW_FIELD_DESCRIPTION_FONT_LABEL" description = "">
+					<option value ="">None</option>
+                    <option value ="Arial">Arial</option>
+                    <option value ="Tahoma">Tahoma</option>
+                    <option value ="Verdana">Verdana</option>
+					<option value ="sans-serif">Sans Serif</option>
+                </field>
+                <field name="desc_color" class="bt_color" type="text" default="#ffffff" label="MOD_BACKGROUNDSHOW_FIELD_DESCRIPTION_COLOR_LABEL" description = ""/>
+                <field name="desc_size" type="text" default="12" label="MOD_BACKGROUNDSHOW_FIELD_DESCRIPTION_FONT_SIZE_LABEL" description = ""/>	
+				<field name="nav_bg" class="bt_color" type="text" default="#222222" label="MOD_BACKGROUNDSHOW_FIELD_NAVBG_LABEL" description = ""/>	
+				<field name="progress_bg" class="bt_color" type="text" default="#A2080C" label="MOD_BACKGROUNDSHOW_FIELD_PROGRESSBG_LABEL" description = ""/>	
+					
+					
+				<field type="textarea" name="stylesheet" label="MOD_BACKGROUNDSHOW_STYLESHEET"
+					rows="5" cols="40" description="MOD_BACKGROUNDSHOW_STYLESHEET_DESC" />
+				<field name="crop_image" class="btn-group" type="radio"
+					default="0" label="MOD_BACKGROUNDSHOW_FIELD_CROP_IMAGE_LABEL"
+					description="MOD_BACKGROUNDSHOW_FIELD_CROP_IMAGE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="jpeg_compression" type="text" size="9" default="100"
+					label="MOD_BTBGSLIDESHOW_FIELD_JPEG_COMPRESSION_LABEL" description="MOD_BTBGSLIDESHOW_FIELD_JPEG_COMPRESSION_DESC" />
+				<field name="crop_width" type="text"
+					label="MOD_BACKGROUNDSHOW_FIELD_CROP_WIDTH_LABEL" description="MOD_BACKGROUNDSHOW_FIELD_CROP_WIDTH_DESC"
+					default="1600" />
+				<field name="crop_height" type="text"
+					label="MOD_BACKGROUNDSHOW_FIELD_CROP_HEIGHT_LABEL" description="MOD_BACKGROUNDSHOW_FIELD_CROP_HEIGHT_DESC"
+					default="1000" />
+				<field name="load_jquery" class="btn-group" type="radio"
+					default="1" label="MOD_BACKGROUNDSHOW_FIELD_LOAD_JQUERY_LABEL"
+					description="MOD_BACKGROUNDSHOW_FIELD_LOAD_JQUERY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field type="asset" name="asset"
+					addfieldpath="/modules/mod_bt_backgroundslideshow/admin/formfields"
+					path="modules/mod_bt_backgroundslideshow/admin/" />
+                                <field type="ajax" name="ajax"/>        
+			</fieldset>
+		</fields>
+
+	</config>
+
+</extension>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+    <name>plg_mavikthumbnails</name>
+    <author>Vitaliy Marenkov</author>
+    <creationDate>2014-03-15</creationDate>
+    <copyright>2009-2014 (c) Vitaliy Marenkov</copyright>
+    <authorEmail>admin@mavik.com.ua</authorEmail>
+    <authorUrl>www.mavik.com.ua</authorUrl>
+    <version>2.1.5.pro</version>
+    <license>GNU/GPLv3</license>
+    <description>PLG_MAVIKTHUMBNAILS_DESCRIPTION</description>
+    <files>
+        <filename plugin="mavikthumbnails">mavikthumbnails.php</filename>
+        <filename>mavikthumbnails.xml</filename>	
+        <filename>imgtag.php</filename>	
+        <folder>addons</folder>
+        <folder>decorators</folder>
+        <folder>fields</folder>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+    </files>
+    <media folder="media" destination="plg_content_mavikthumbnails">
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>images</folder>
+        <folder>gallery</folder>
+        <folder>highslide</folder>
+        <folder>slimbox</folder>
+        <folder>slimbox2</folder>
+        <folder>magnific</folder>
+    </media>    
+    <config>
+        <fields name="params"> 
+            <fieldset name="basic" addfieldpath="/plugins/content/mavikthumbnails/fields">
+                <field name="thumbnails_for" type="list" default="0"
+                       label="PLG_MAVIKTHUMBNAILS_FOR"
+                       description="PLG_MAVIKTHUMBNAILS_FOR_DESCRIPTION"
+                >
+                    <option value="0">PLG_MAVIKTHUMBNAILS_ALL_IMAGES</option>
+                    <option value="1">PLG_MAVIKTHUMBNAILS_ONLY_CLASS</option>
+                    <option value="2">PLG_MAVIKTHUMBNAILS_EXCEPT_CLASS</option>
+                    <option value="-1">PLG_MAVIKTHUMBNAILS_NOTHING</option>
+                </field>
+                <field name="class" type="text" default=""
+                       label="PLG_MAVIKTHUMBNAILS_CLASS"
+                       description="PLG_MAVIKTHUMBNAILS_CLASS_DESCRIPTION"
+                />   
+                <field name="popuptype" type="PopupList" default="slimbox2"
+                       label="PLG_MAVIKTHUMBNAILS_POPUPTYPE"
+                       description="PLG_MAVIKTHUMBNAILS_POPUPTYPE_DESCRIPTION"
+                />
+                <field name="in_link" type="list" default="without_decor"
+                    label="PLG_MAVIKTHUMBNAILS_IN_LINK"
+                    description="PLG_MAVIKTHUMBNAILS_IN_LINK_DESCRIPTION"
+                >
+                    <option value="">PLG_MAVIKTHUMBNAILS_IN_LINK_NORMALL</option>
+                    <option value="without_decor">PLG_MAVIKTHUMBNAILS_WITHOUT_DECOR</option>
+                    <option value="miss">PLG_MAVIKTHUMBNAILS_WITHOUT_MISS</option>
+                </field>
+            </fieldset>
+            <fieldset name="size" label="PLG_MAVIKTHUMBNAILS_SIZE">
+                <field name="resize_type" type="list" default="fill"
+                      label="PLG_MAVIKTHUMBNAILS_RESIZE_TYPE"
+                      description="PLG_MAVIKTHUMBNAILS_RESIZE_TYPE_DESCRIPTION"
+                >
+                    <option value="fit">PLG_MAVIKTHUMBNAILS_RESIZE_FIT</option>
+                    <option value="fill">PLG_MAVIKTHUMBNAILS_RESIZE_FILL</option>
+                    <option value="area">PLG_MAVIKTHUMBNAILS_RESIZE_KEEP_AREA</option>
+                    <option value="stretch">PLG_MAVIKTHUMBNAILS_RESIZE_STRETCH</option>
+                </field>
+                <field name="default_size" type="list" default="" 
+                      label="PLG_MAVIKTHUMBNAILS_DEFAULT_SIZE"
+                      description="PLG_MAVIKTHUMBNAILS_DEFAULT_SIZE_DESCRIPTION"
+                >
+                    <option value="">PLG_MAVIKTHUMBNAILS_DONT_USE</option>
+                    <option value="not_resized">PLG_MAVIKTHUMBNAILS_FOR_NOT_RESIZED</option>>
+                    <option value="all">PLG_MAVIKTHUMBNAILS_FOR_ALL</option>>
+                </field>
+                <field name="default_width" type="text" default=""
+                      label="PLG_MAVIKTHUMBNAILS_DEFAULT_WIDTH"
+                      description="PLG_MAVIKTHUMBNAILS_DEFAULT_WIDTH_DESCRIPTION"
+                />
+                <field name="default_height" type="text" default=""
+                      label="PLG_MAVIKTHUMBNAILS_DEFAULT_HEIGHT"
+                      description="PLG_MAVIKTHUMBNAILS_DEFAULT_HEIGHT_DESCRIPTION"
+                />               
+            </fieldset>
+            <fieldset name="gallery" label="PLG_MAVIKTHUMBNAILS_GALLERY" description="PLG_MAVIKTHUMBNAILS_GALLERY_DESC">
+                <field name="gallery" type="radio" default="1"
+                       class="btn-group btn-group-yesno"
+                       label="PLG_MAVIKTHUMBNAILS_GALLERY_ENAMBLE"
+                       description="PLG_MAVIKTHUMBNAILS_GALLERY_ENAMBLE_DESCRIPTION">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>                
+                <field name="gallery_resize_type" type="list" default="fill"
+                      label="PLG_MAVIKTHUMBNAILS_RESIZE_TYPE"
+                      description="PLG_MAVIKTHUMBNAILS_RESIZE_TYPE_DESCRIPTION"
+                >
+                    <option value="fit">PLG_MAVIKTHUMBNAILS_RESIZE_FIT</option>
+                    <option value="fill">PLG_MAVIKTHUMBNAILS_RESIZE_FILL</option>
+                    <option value="area">PLG_MAVIKTHUMBNAILS_RESIZE_KEEP_AREA</option>
+                    <option value="stretch">PLG_MAVIKTHUMBNAILS_RESIZE_STRETCH</option>
+                </field>                
+                <field name="gallery_width" type="text" default="200"
+                       label="PLG_MAVIKTHUMBNAILS_GALLERY_WIDTH"
+                       description="PLG_MAVIKTHUMBNAILS_GALLERY_WIDTH_DESCRIPTION"
+                />
+                <field name="gallery_height" type="text" default="200"
+                       label="PLG_MAVIKTHUMBNAILS_GALLERY_HEIGHT"
+                       description="PLG_MAVIKTHUMBNAILS_GALLERY_HEIGHT_DESCRIPTION"
+                />                
+            </fieldset>            
+            <fieldset name="article_images" label="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES" description="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_DESC">
+                <field name="article_images" type="radio" default="1"
+                       class="btn-group btn-group-yesno"
+                       label="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_ENAMBLE"
+                       description="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_ENAMBLE_DESCRIPTION">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="article_images_intro_place" type="radio" default="text"
+                       class="btn-group"
+                       label="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_INTRO_PLACE"
+                       description="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_INTRO_PLACE_DESCRIPTION">
+                    <option value="text">PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_TEXT</option>
+                    <option value="property">PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_PPOPERTY</option>
+                </field>
+                <field name="article_images_intro_width" type="text" default="200"
+                       label="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_INTRO_WIDTH"
+                       description="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_INTRO_WIDTH_DESCRIPTION"
+                />
+                <field name="article_images_intro_height" type="text" default="200"
+                       label="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_INTRO_HEIGHT"
+                       description="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_INTRO_HEIGHT_DESCRIPTION"
+                />
+                <field name="article_images_use_intro" type="radio" default="1"
+                       class="btn-group btn-group-yesno"
+                       label="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_USE_INTRO"
+                       description="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_USE_INTRO_DESCRIPTION">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>                
+                <field name="article_images_full_place" type="radio" default="text"
+                       class="btn-group"
+                       label="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_FULL_PLACE"
+                       description="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_FULL_PLACE_DESCRIPTION">
+                    <option value="text">PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_TEXT</option>
+                    <option value="property">PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_PPOPERTY</option>
+                </field>                
+                <field name="article_images_full_width" type="text" default="200"
+                       label="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_FULL_WIDTH"
+                       description="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_FULL_WIDTH_DESCRIPTION"
+                />
+                <field name="article_images_full_height" type="text" default="200"
+                       label="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_FULL_HEIGHT"
+                       description="PLG_MAVIKTHUMBNAILS_ARTICLE_IMAGES_FULL_HEIGHT_DESCRIPTION"
+                />                
+            </fieldset>
+            <fieldset name="hover" label="PLG_MAVIKTHUMBNAILS_HOVER" description="PLG_MAVIKTHUMBNAILS_HOVER_DESC">
+                <field name="hover" type="radio" default="0"
+                       class="btn-group btn-group-yesno"
+                       label="PLG_MAVIKTHUMBNAILS_HOVER_ENAMBLE"
+                       description="PLG_MAVIKTHUMBNAILS_HOVER_ENAMBLE_DESCRIPTION">
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>
+                <field name="hover_ratio" type="text" default="2"
+                       label="PLG_MAVIKTHUMBNAILS_HOVER_RATIO"
+                       description="PLG_MAVIKTHUMBNAILS_HOVER_RATIO_DESCRIPTION"
+                />                
+            </fieldset>
+            <fieldset name="retina" label="PLG_MAVIKTHUMBNAILS_RETINA" description="PLG_MAVIKTHUMBNAILS_RETINA_DESC">
+                <field name="retina" type="radio" default="1"
+                       class="btn-group btn-group-yesno"
+                       label="PLG_MAVIKTHUMBNAILS_RETINA_ENAMBLE"
+                       description="PLG_MAVIKTHUMBNAILS_RETINA_ENAMBLE_DESCRIPTION">
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>
+                <field name="retina_ratio" type="text" default="2,3"
+                       label="PLG_MAVIKTHUMBNAILS_RETINA_RATIO"
+                       description="PLG_MAVIKTHUMBNAILS_RETINA_RATIO_DESCRIPTION"
+                />                
+            </fieldset>
+            <fieldset name="system" label="PLG_MAVIKTHUMBNAILS_SYSTEMS">
+                <field name="quality" type="text" default="90"
+                       label="PLG_MAVIKTHUMBNAILS_QUALITY"
+                       description="PLG_MAVIKTHUMBNAILS_QUALITY_DESCRIPTION"
+                />
+                <field name="thumbputh" type="tex" default="images/thumbnails"
+                       label="PLG_MAVIKTHUMBNAILS_DIRECTORY"
+                       description="PLG_MAVIKTHUMBNAILS_DIRECTORY_DESCRIPTION"
+                />
+                <field name="remoteputh" type="text" default="images/remote"
+                       label="PLG_MAVIKTHUMBNAILS_DIRECTORY_REMOTE"
+                       description="PLG_MAVIKTHUMBNAILS_DIRECTORY_REMOTE_DESCRIPTION"
+                />
+                <field name="remote_copy" type="radio" default="0"
+                       class="btn-group btn-group-yesno"
+                       label="PLG_MAVIKTHUMBNAILS_REMOTE_COPY"
+                       description="PLG_MAVIKTHUMBNAILS_REMOTE_COPY_DESCRIPTION"
+                >
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>                                    
+                <field name="subdirectories" type="radio" default="1"
+                       class="btn-group btn-group-yesno"
+                       label="PLG_MAVIKTHUMBNAILS_SUBDIRECTORIES"
+                       description="PLG_MAVIKTHUMBNAILS_SUBDIRECTORIES_DESCRIPTION"
+                >
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>
+                <field name="link_scripts" type="radio" default="1"
+                       class="btn-group btn-group-yesno"
+                       label="PLG_MAVIKTHUMBNAILS_SCRIPTS"
+                       description="PLG_MAVIKTHUMBNAILS_SCRIPTS_DESCRIPTION"
+                >
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>
+                <field name="move_style" type="radio" default="1"
+                       class="btn-group btn-group-yesno"
+                       label="PLG_MAVIKTHUMBNAILS_MOVE_STYLE"
+                       description="PLG_MAVIKTHUMBNAILS_MOVE_STYLE_DESCRIPTION">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="use_link_style" type="radio" default="1"
+                       class="btn-group btn-group-yesno"
+                       label="PLG_MAVIKTHUMBNAILS_USE_LINK_STYLE">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>                
+                <field name="link_style" type="textarea" default="display: inline-block; zoom: 1; *display: inline;"
+                       label="PLG_MAVIKTHUMBNAILS_LINK_STYLE"
+                       description="PLG_MAVIKTHUMBNAILS_LINK_STYLE_DESC"
+                />
+            </fieldset>
+            <fieldset name="context" label="PLG_MAVIKTHUMBNAILS_CONTEXT" description="PLG_MAVIKTHUMBNAILS_CONTEXT_DESC">
+                <field name="context_settings" type="contextsettings" default=""
+                      label="PLG_MAVIKTHUMBNAILS_CONTEXT_SETTINGS"
+                      description="PLG_MAVIKTHUMBNAILS_CONTEXT_SETTINGS_DESCRIPTION"
+                />
+                <field name="context_processing" type="radio" default="1"
+                       class="btn-group btn-group-yesno"
+                       label="PLG_MAVIKTHUMBNAILS_CONTEXT_PROCESSING"
+                       description="PLG_MAVIKTHUMBNAILS_CONTEXT_PROCESSING_DESCRIPTION">
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field> 
+                <field name="og_image" type="radio" default="selected"
+                       class="btn-group"
+                       label="PLG_MAVIKTHUMBNAILS_OG_IMAGE"
+                       description="PLG_MAVIKTHUMBNAILS_OG_IMAGE_DESCRIPTION">
+                    <option value="selected">PLG_MAVIKTHUMBNAILS_OG_IMAGE_SELECTED</option>
+                    <option value="all">PLG_MAVIKTHUMBNAILS_OG_IMAGE_ALL</option>
+                    <option value="0">PLG_MAVIKTHUMBNAILS_OG_IMAGE_NO</option>
+                </field>
+                <field name="og_image_context" type="textarea" default="com_content.article"
+                      cols="60" rows="5"
+                      label="PLG_MAVIKTHUMBNAILS_OG_IMAGE_CONTEXT"
+                      description="PLG_MAVIKTHUMBNAILS_OG_IMAGE_CONTEXT_DESCRIPTION"
+                />
+                <field name="og_image_width_min" type="text" default="200"
+                      label="PLG_MAVIKTHUMBNAILS_OG_IMAGE_WIDTH_MIN"
+                      description="PLG_MAVIKTHUMBNAILS_OG_IMAGE_WIDTH_MIN_DESCRIPTION"
+                />
+                <field name="og_image_height_min" type="text" default="200"
+                      label="PLG_MAVIKTHUMBNAILS_OG_IMAGE_HEIGHT_MIN"
+                      description="PLG_MAVIKTHUMBNAILS_OG_IMAGE_HEIGHT_MIN_DESCRIPTION"
+                />
+                <field name="og_image_width_max" type="text" default="1200"
+                      label="PLG_MAVIKTHUMBNAILS_OG_IMAGE_WIDTH_MAX"
+                      description="PLG_MAVIKTHUMBNAILS_OG_IMAGE_WIDTH_MAX_DESCRIPTION"
+                />
+                <field name="og_image_height_max" type="text" default="1200"
+                      label="PLG_MAVIKTHUMBNAILS_OG_IMAGE_HEIGHT_MAX"
+                      description="PLG_MAVIKTHUMBNAILS_OG_IMAGE_HEIGHT_MAX_DESCRIPTION"
+                />
+                <field name="context_show" type="radio" default="0"
+                       class="btn-group btn-group-yesno"
+                       label="PLG_MAVIKTHUMBNAILS_CONTEXT_SHOW"
+                       description="PLG_MAVIKTHUMBNAILS_CONTEXT_SHOW_DESCRIPTION">
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>                
+            </fieldset>
+            
+        </fields>
+    </config>
+</extension>

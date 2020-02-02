@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+	<name>art-plus-1</name>
+	<creationDate></creationDate>
+	<author>Vakeks</author>
+	<authorEmail>vakeks@art-pl.ru</authorEmail>
+	<authorUrl>http://art-pl.ru</authorUrl>
+	<copyright></copyright>
+	<license></license>
+	<version>2.5.0</version>
+
+	<files>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<positions>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+		<position>position-15</position>
+		<position>position-16</position>
+		<position>position-17</position>
+		<position>position-18</position>
+		<position>position-19</position>
+		<position>position-20</position>
+		<position>position-21</position>
+		<position>position-22</position>
+		<position>position-23</position>
+		<position>position-24</position>
+		<position>position-25</position>
+		<position>position-26</position>
+		<position>position-27</position>
+		<position>position-28</position>
+		<position>position-29</position>
+		<position>position-30</position>
+		<position>position-31</position>
+		<position>position-32</position>
+		<position>position-33</position>
+		<position>position-34</position>
+		<position>position-35</position>
+		<position>position-36</position>
+		<position>position-37</position>
+		<position>position-38</position>
+		<position>position-korzina</position>
+		<position>slogin</position>
+	</positions>
+</extension>

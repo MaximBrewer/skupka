@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+    <name>vmzoomer</name>
+    <author>Vladimir Pronin</author>
+    <creationDate>29.08.2017</creationDate>
+    <copyright>(C) 2015 virtuemart.su Все права защищены.</copyright>
+    <license>GNU/GPLv3</license>
+    <authorEmail>admin@virtuemart.su</authorEmail>
+    <authorUrl>virtuemart.su</authorUrl>
+    <version>1.9</version>
+    <description>PLG_VM_SYSTEM_VMZOOMER_DESC</description>
+    <files>
+        <filename plugin="vmzoomer">vmzoomer.php</filename>
+        <filename>index.html</filename>
+        <folder>assets</folder>
+        <folder>language</folder>
+    </files>
+
+    <languages>
+        <language tag="ru-RU">language/ru-RU/ru-RU.plg_system_vmzoomer.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="image" label="PLG_VM_SYSTEM_VMZOOMER_IMAGE">
+                <field name="zoom" type="radio" default="1" label="PLG_VM_SYSTEM_VMZOOMER_ZOOM" description="PLG_VM_SYSTEM_VMZOOMER_ZOOM_DESC" class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="zoomEvent" type="radio" default="1" label="PLG_VM_SYSTEM_VMZOOMER_ZOOMEVENT" description="PLG_VM_SYSTEM_VMZOOMER_ZOOMEVENT_DESC" class="btn-group btn-group-yesno" showon="zoom:1">
+                    <option value="1">PLG_VM_SYSTEM_VMZOOMER_ZOOMEVENT1</option>
+                    <option value="2">PLG_VM_SYSTEM_VMZOOMER_ZOOMEVENT2</option>
+                    <option value="3">PLG_VM_SYSTEM_VMZOOMER_ZOOMEVENT3</option>
+                </field>
+                <field name="zoomTouch" type="radio" default="0" label="PLG_VM_SYSTEM_VMZOOMER_ZOOMTOUCH" description="PLG_VM_SYSTEM_VMZOOMER_ZOOMTOUCH_DESC" class="btn-group btn-group-yesno" showon="zoom:1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="zoomHeight" type="number" default="300" label="PLG_VM_SYSTEM_VMZOOMER_ZOOMHEIGHT" description="PLG_VM_SYSTEM_VMZOOMER_ZOOMHEIGHT_DESC" />
+                <field name="zoomNav" type="radio" default="1" label="PLG_VM_SYSTEM_VMZOOMER_ZOOMNAV" description="PLG_VM_SYSTEM_VMZOOMER_ZOOMNAV_DESC" class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="zoomAlt" type="radio" default="0" label="PLG_VM_SYSTEM_VMZOOMER_ZOOMALT" description="PLG_VM_SYSTEM_VMZOOMER_ZOOMALT_DESC" class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="zoomAjax" type="radio" default="0" label="PLG_VM_SYSTEM_VMZOOMER_ZOOMAJAX" description="PLG_VM_SYSTEM_VMZOOMER_ZOOMAJAX_DESC" class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+            <fieldset name="addImage" label="PLG_VM_SYSTEM_VMZOOMER_ADDIMAGE">
+                <field name="carousel" type="radio" default="1" label="PLG_VM_SYSTEM_VMZOOMER_CAROUSEL" description="PLG_VM_SYSTEM_VMZOOMER_CAROUSEL_DESC" class="btn-group btn-group-yesno">
+                    <option value="1">PLG_VM_SYSTEM_VMZOOMER_CAROUSEL1</option>
+                    <option value="2">PLG_VM_SYSTEM_VMZOOMER_CAROUSEL2</option>
+                    <option value="3">PLG_VM_SYSTEM_VMZOOMER_CAROUSEL3</option>
+                </field>
+                <field name="addHeight" type="number" default="100" label="PLG_VM_SYSTEM_VMZOOMER_ADDHEIGHT" description="PLG_VM_SYSTEM_VMZOOMER_ADDHEIGHT_DESC" />
+                <field name="change" type="radio" default="1" label="PLG_VM_SYSTEM_VMZOOMER_CHANGE" description="PLG_VM_SYSTEM_VMZOOMER_CHANGE_DESC" class="btn-group btn-group-yesno">
+                    <option value="1">PLG_VM_SYSTEM_VMZOOMER_CHANGE1</option>
+                    <option value="2">PLG_VM_SYSTEM_VMZOOMER_CHANGE2</option>
+                </field>
+                <field
+                  name="@spacer"
+                  type="spacer"
+                  default=""
+                  label="PLG_VM_SYSTEM_VMZOOMER_RESPONSIVE"
+                  description=""
+                />
+                <field name="large" type="number" default="4" label="PLG_VM_SYSTEM_VMZOOMER_RESPONSIVE_LARGE" description="PLG_VM_SYSTEM_VMZOOMER_RESPONSIVE_LARGE_DESC" />
+                <field name="medium" type="number" default="3" label="PLG_VM_SYSTEM_VMZOOMER_RESPONSIVE_MEDIUM" description="PLG_VM_SYSTEM_VMZOOMER_RESPONSIVE_MEDIUM_DESC" />
+                <field name="small" type="number" default="3" label="PLG_VM_SYSTEM_VMZOOMER_RESPONSIVE_SMALL" description="PLG_VM_SYSTEM_VMZOOMER_RESPONSIVE_SMALL_DESC" />
+                <field name="extrasmall" type="number" default="2" label="PLG_VM_SYSTEM_VMZOOMER_RESPONSIVE_EXTRASMALL" description="PLG_VM_SYSTEM_VMZOOMER_RESPONSIVE_EXTRASMALL_DESC" />
+            </fieldset>
+            <fieldset name="lightbox" label="PLG_VM_SYSTEM_VMZOOMER_LIGHTBOX">
+                <field name="lightboxTrumb" type="radio" default="1" label="PLG_VM_SYSTEM_VMZOOMER_LIGHTBOXTRUMB" description="PLG_VM_SYSTEM_VMZOOMER_LIGHTBOXTRUMB_DESC" class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="lightboxTrumbCarousel" type="radio" default="1" label="PLG_VM_SYSTEM_VMZOOMER_LIGHTBOXTRUMB_CAROUSEL" description="PLG_VM_SYSTEM_VMZOOMER_LIGHTBOXTRUMB_CAROUSEL_DESC" class="btn-group btn-group-yesno" showon="lightboxTrumb:1">
+                    <option value="1">PLG_VM_SYSTEM_VMZOOMER_LIGHTBOXTRUMB_CAROUSEL1</option>
+                    <option value="2">PLG_VM_SYSTEM_VMZOOMER_LIGHTBOXTRUMB_CAROUSEL2</option>
+                </field>
+                <field name="lightboxNav" type="radio" default="1" label="PLG_VM_SYSTEM_VMZOOMER_LIGHTBOX_NAV" description="PLG_VM_SYSTEM_VMZOOMER_LIGHTBOX_NAV_DESC" class="btn-group btn-group-yesno">
+                    <option value="1">PLG_VM_SYSTEM_VMZOOMER_LIGHTBOX_NAV1</option>
+                    <option value="2">PLG_VM_SYSTEM_VMZOOMER_LIGHTBOX_NAV2</option>
+                </field>
+                <field name="lightboxAlt" type="radio" default="0" label="PLG_VM_SYSTEM_VMZOOMER_LIGHTBOXALT" description="PLG_VM_SYSTEM_VMZOOMER_LIGHTBOXALT_DESC" class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="lightboxSmall" type="radio" default="1" label="PLG_VM_SYSTEM_VMZOOMER_LIGHTBOXSMALL" description="PLG_VM_SYSTEM_VMZOOMER_LIGHTBOXSMALL_DESC" class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="lightboxLoop" type="radio" default="1" label="PLG_VM_SYSTEM_VMZOOMER_LIGHTBOXLOOP" description="PLG_VM_SYSTEM_VMZOOMER_LIGHTBOXLOOP_DESC" class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+            
+            </fields>
+    </config>
+
+</extension>

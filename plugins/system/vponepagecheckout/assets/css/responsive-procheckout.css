@@ -1,0 +1,318 @@
+/**
+ *---------------------------------------------------------------------------------------
+ * @package      VP One Page Checkout - Joomla! System Plugin
+ * @subpackage   For VirtueMart 3+
+ *---------------------------------------------------------------------------------------
+ * @copyright    Copyright (C) 2012-2017 VirtuePlanet Services LLP. All rights reserved.
+ * @license      GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors      Abhishek Das
+ * @email        info@virtueplanet.com
+ * @link         https://www.virtueplanet.com
+ *---------------------------------------------------------------------------------------
+ * $Revision: 3 $
+ * $LastChangedDate: 2017-09-20 20:00:08 +0530 (Wed, 20 Sep 2017) $
+ * $Id: responsive-procheckout.css 3 2017-09-20 14:30:08Z Abhshek Das $
+ * --------------------------------------------------------------------------------------
+*/
+
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
+
+@media (max-width: 979px) and (min-width: 768px) {
+	.col-name {
+		width:30%
+	}
+
+	.proopc-finalpage .proopc-column3,.proopc-register,.proopc-login {
+		float:none;
+		width:100%;
+		margin:0;
+		padding:0
+	}
+
+	.proopc-register-login .proopc-inner,.proopc-register-login h3,#ProOPC .proopc-register-login h3,#ProOPC .proopc-login h3 {
+		margin:0
+	}
+
+	.proopc-login {
+		margin-top:20px
+	}
+
+	.proopc-column3 .proopc-bt-address,.proopc-column3 .proopc-st-address,.proopc-shipments,.proopc-payments,.proopc-coupon,.proopc-cartlist,.proopc-confirm-order,.proopc-column3 .proopc-coupon.no-top-margin,.proopc-column3 .proopc-confirm-order.no-top-margin {
+		margin-left:0;
+		margin-right:0;
+		margin-top:15px
+	}
+
+	.proopc-column3 .proopc-bt-address {
+		margin-top:0
+	}
+}
+
+@media (max-width: 767px) {
+	.proopc-table-striped {
+		border:0 none
+	}
+
+	table.cart-summary.proopc-table-striped .col-name {
+		width:auto
+	}
+
+	.proopc-finalpage .proopc-column3,.proopc-register,.proopc-login {
+		float:none;
+		width:100%;
+		margin:0;
+		padding:0
+	}
+
+	.proopc-register-login .proopc-inner,.proopc-register-login h3,#ProOPC .proopc-register-login h3,#ProOPC .proopc-login h3 {
+		margin:0
+	}
+
+	.proopc-login {
+		margin-top:20px
+	}
+
+	.proopc-column3 .proopc-bt-address,.proopc-column3 .proopc-st-address,.proopc-shipments,.proopc-payments,.proopc-coupon,.proopc-cartlist,.proopc-confirm-order,.proopc-column3 .proopc-coupon.no-top-margin,.proopc-column3 .proopc-confirm-order.no-top-margin {
+		margin-left:0;
+		margin-right:0;
+		margin-top:15px
+	}
+
+	.proopc-column3 .proopc-bt-address {
+		margin-top:0
+	}
+
+	#ProOPC .proopc-table-striped {
+		border:0 none
+	}
+
+	/* Force table to not be like tables anymore */
+	table.cart-summary.proopc-table-striped,table.cart-summary.proopc-table-striped thead,table.cart-summary.proopc-table-striped tbody,table.cart-summary.proopc-table-striped tr th,table.cart-summary.proopc-table-striped tr td,table.cart-summary.proopc-table-striped tbody tr,#ProOPC table.cart-summary.proopc-table-striped tr {
+		display:block
+	}
+
+	table.cart-summary.proopc-table-striped tbody tr {
+		margin-top:10px
+	}
+	
+	table.cart-summary.proopc-table-striped tbody tr.separate-rule-per-bill {
+		margin-top: 0;
+		border-top: 1px dotted #eee;
+		border-bottom: 0 none;
+	}
+	
+	table.cart-summary.proopc-table-striped tbody > tr.separate-rule-per-bill:last-child {
+		border-bottom: 1px solid #ddd;
+	}
+	
+	table.cart-summary.proopc-table-striped tr.separate-rule-per-bill td {
+		border-bottom: 0 none;
+	}
+	
+	table.cart-summary.proopc-table-striped tbody tr.separate-rule-per-bill.vattax-per-bill-1 {
+		border-top: 0 none;
+	}
+	
+	table.cart-summary.proopc-table-striped tr.separate-rule-per-bill td.sub-headings {
+		display: none !important;
+	}
+
+	table.cart-summary.proopc-table-striped tbody > tr:first-child,table.cart-summary.proopc-table-striped tbody > tr.blank-row {
+		margin-top:0
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	table.cart-summary.proopc-table-striped thead tr {
+		position:absolute;
+		top:-9999px;
+		left:-9999px
+	}
+
+	table.cart-summary.proopc-table-striped tr {
+		border:1px solid #ccc
+	}
+
+	.dark table.cart-summary.proopc-table-striped tr {
+		border:1px solid #111
+	}
+
+	table.cart-summary.proopc-table-striped .blank-row {
+		border:0 none;
+		background:0 none
+	}
+
+	table.cart-summary.proopc-table-striped .blank-row td {
+		border:0 none;
+		padding:0;
+		background:0 none
+	}
+
+	table.cart-summary.proopc-table-striped tr td,
+	table.cart-summary.proopc-table-striped tr.grand-total td {
+	/* Behave  like a "row" */
+		border:none;
+		border-bottom:1px dotted #eee;
+		position:relative;
+		padding-left:45%;
+		min-height:20px;
+		text-align:left;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box
+	}
+	
+	table.cart-summary.proopc-table-striped tr.separate-tax-heading td {
+		border: 0 none;
+	}
+
+	table.cart-summary.proopc-table-striped tr.grand-total td {
+		border-bottom-color:#DDD
+	}
+
+	table.cart-summary.proopc-table-striped tr.grand-total td {
+		font-size:14px
+	}
+
+	.dark table.cart-summary.proopc-table-striped tr td,.dark table.cart-summary.proopc-table-striped tr.grand-total td {
+		border-bottom:1px dotted #111
+	}
+
+	table.cart-summary.proopc-table-striped tr td:last-child,table.cart-summary.proopc-table-striped tr.grand-total td:last-child {
+		border-bottom:0 none
+	}
+
+	table.cart-summary.proopc-table-striped tr td.sub-headings,table.cart-summary.proopc-table-striped tr td.coupon-form-col,table.cart-summary.proopc-table-striped tr td.shipping-payment-heading {
+	/* Behave  like a "row" */
+		padding-left:8px;
+		text-transform:uppercase;
+		color:#333
+	}
+
+	.dark table.cart-summary.proopc-table-striped tr td.sub-headings,.dark table.cart-summary.proopc-table-striped tr td.coupon-form-col,.dark table.cart-summary.proopc-table-striped tr td.shipping-payment-heading {
+		color:#D5D3C8
+	}
+
+	table.cart-summary.proopc-table-striped tbody tr td:before {
+	/* Now like a table header */
+		position:absolute;
+	/* Top/left values mimic padding */
+		top:8px;
+		left:8px;
+		width:45%;
+		padding-right:10px;
+		white-space:nowrap
+	}
+
+	table.cart-summary.proopc-table-striped tbody tr.grand-total td:before {
+		top:15px
+	}
+
+	#ProOPC table.cart-summary.proopc-table-striped tbody tr.grand-total td,#ProOPC table.cart-summary.proopc-table-striped tbody tr.grand-total td span {
+		font-size:14px
+	}
+
+	table.cart-summary.proopc-table-striped tr td.sub-headings:before,table.cart-summary.proopc-table-striped tr td.coupon-form-col:before {
+		display:none
+	}
+
+	table.cart-summary.proopc-table-striped tr .col-name [class*="span"] {
+		display:block;
+		float:none
+	}
+
+	table.cart-summary tr.grand-total td,table.cart-summary tr.grand-total-p-currency td {
+		padding-top:8px;
+		padding-bottom:8px;
+		border-bottom:1px dotted #ddd
+	}
+
+	/* We need to hide empty price columns in mobile view */
+	table.cart-summary.proopc-table-striped tr td.col-tax.cell-empty,table.cart-summary.proopc-table-striped tr td.col-discount.cell-empty,table.cart-summary.proopc-table-striped tr td.col-total.cell-empty {
+		display:none
+	}
+
+	/* Hide the blank rows as we have added margin-top on each rows */
+	.cart-summary.proopc-table-striped tr.blank-row {
+		display:none
+	}
+
+	.continue-cont,.checkout-cont {
+		text-align:center
+	}
+
+	.continue-cont {
+		margin-bottom:15px
+	}
+
+	/* BootModal */
+	.bootmodal {
+		position:fixed;
+		top:20px;
+		right:20px;
+		left:20px;
+		width:auto;
+		margin:0
+	}
+
+	.bootmodal.fade {
+		top:-100px
+	}
+
+	.bootmodal.fade.in {
+		top:20px
+	}
+}
+
+@media (max-width: 480px) {
+	#ProOPC table.cart-summary.proopc-table-striped .cart-product-description.with-image {
+		padding-left:0
+	}
+
+	#ProOPC table.cart-summary.proopc-table-striped .cart-images {
+		float:none;
+		margin-left:0;
+		margin-top:0;
+		margin-bottom:10px
+	}
+
+	.bootmodal {
+		top:10px;
+		right:10px;
+		left:10px
+	}
+
+	.bootmodal-header .close {
+		padding:10px;
+		margin:-10px
+	}
+
+	#form-usersearch .proopc-clear-filter {
+		display:none
+	}
+
+	#ProOPC .proopc-form-inline .proopc-field-group select,#ProOPC .proopc-form-inline .proopc-field-group input[type="text"] {
+		margin-bottom:10px
+	}
+}
+
+@media (min-width: 767px) {
+	.proopc-table-striped .col-name {
+		text-align:left
+	}
+
+	.proopc-table-striped .col-sku,.proopc-table-striped .col-qty {
+		text-align:center
+	}
+
+	.proopc-table-striped .col-price,.proopc-table-striped .col-tax,.proopc-table-striped .col-discount,.proopc-table-striped .col-total {
+		text-align:right
+	}
+
+	.proopc-table-striped .sub-headings {
+		text-align:right
+	}
+}

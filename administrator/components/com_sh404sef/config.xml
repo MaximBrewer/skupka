@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- start of configuration html -->
+<config>
+	<fieldset name="component" label="COM_SH404SEF_TITLE_CONFIG">
+		<field menu="hide" type="spacer" label="COM_SH404SEF_COM_CONFIG_INFO_TEXT" class="text" />
+	</fieldset>    
+</config>
+
+

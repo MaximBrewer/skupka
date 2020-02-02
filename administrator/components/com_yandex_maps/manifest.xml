@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<extension type="component" version="3.0.0" method="upgrade">
+	<name>com_yandex_maps</name>
+	<author>Chupurnov Valeriy</author>
+	<version>4.0.34</version>
+	<description>COM_YANDEX_MAPS_DESC</description>
+	<media destination="com_yandex_maps" folder="media/com_yandex_maps">
+		<folder>thumbs</folder>
+		<folder>images</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+	</media>
+	<files folder="components/com_yandex_maps">
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>views</folder>
+		<filename>yandex_maps.php</filename>
+		<filename>index.html</filename>
+		<filename>controller.php</filename>
+		<filename>router.php</filename>
+	</files>
+	<languages folder="language/ru-RU">
+		<language tag="ru-RU">ru-RU.com_yandex_maps.ini</language>
+	</languages>
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<administration>
+		<files folder="administrator/components/com_yandex_maps">
+			<filename>yandex_maps.php</filename>
+			<filename>index.html</filename>
+			<filename>controller.php</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<folder>sql</folder>
+			<folder>controllers</folder>
+			<folder>views</folder>
+			<folder>models</folder>
+			<folder>helpers</folder>
+		</files>
+		<languages folder="administrator/language">
+			<language tag="ru-RU">ru-RU/ru-RU.com_yandex_maps.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_yandex_maps.sys.ini</language>
+		</languages>
+		<menu link="option=com_yandex_maps" img="../media/com_yandex_maps/images/com_yandex_maps-icon-16x16.png">COM_YANDEX_MAPS_MENU</menu>
+		<submenu>
+			<menu link="option=com_yandex_maps&amp;task=maps"  img="../media/com_yandex_maps/images/com_yandex_maps-maps-icon-16x16.png">COM_YANDEX_MAPS_MAPS</menu>
+			<menu link="option=com_yandex_maps&amp;task=categories"  img="../media/com_yandex_maps/images/com_yandex_maps-categories-icon-16x16.png">COM_YANDEX_MAPS_CATEGORIES</menu>
+			<menu link="option=com_yandex_maps&amp;task=objects" img="../media/com_yandex_maps/images/com_yandex_maps-objects-icon-16x16.png">COM_YANDEX_MAPS_OBJECTS</menu>
+			<menu link="option=com_yandex_maps&amp;task=import">COM_YANDEX_MAPS_IMPORT</menu>
+			<menu link="option=com_yandex_maps&amp;task=export">COM_YANDEX_MAPS_EXPORT</menu>
+			<menu link="option=com_config&amp;view=component&amp;component=com_yandex_maps">COM_YANDEX_MAPS_MANAGE</menu>
+			<menu link="option=com_modules&amp;filter_module=mod_yandex_maps">COM_YANDEX_MAPS_MODULES</menu>
+			<menu link="option=com_plugins&amp;view=plugins&amp;filter_folder=system&amp;filter_order=extension_id&amp;filter_order_Dir=desc&amp;filter_search=Яндекс">COM_YANDEX_MAPS_PLUGINS</menu>
+		</submenu>
+	</administration>
+	<updateservers>
+		<server type="extension" priority="1" name="Компонент Яндекс карты">https://xdan.ru/update/com_yandex_maps.xml</server>
+	</updateservers>
+</extension>

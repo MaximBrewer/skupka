@@ -1,0 +1,1 @@
+ALTER TABLE  `#__yandex_maps_organizations` ENGINE = INNODB;

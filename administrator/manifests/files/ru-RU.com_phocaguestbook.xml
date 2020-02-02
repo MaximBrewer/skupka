@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="file" method="upgrade" version="2.5.0">
+	<name>Russian Phoca Guestbook</name>
+	<version>2.0.5</version>
+	<creationDate>29.04.2012</creationDate>
+	<author>Andrey Lifanov</author>		
+	<authorUrl>http://www.rifmaplet.ru</authorUrl>
+	<copyright>Copyright (C) 2006-2012 - Andrey Lifanov. All rights reserved.</copyright>
+	<license>GNU/GPL version 2</license>
+	<description>Русский язык для (site) Phoca Guestbook 2.0.5</description>
+	<fileset>
+		<files target="language/ru-RU">
+			<filename>ru-RU.com_phocaguestbook.ini</filename>
+			<filename>ru-RU.com_phocaguestbook.sys.ini</filename>
+		</files>
+		<files target="administrator/language/ru-RU">
+			<filename>ru-RU.com_phocaguestbook.ini</filename>
+			<filename>ru-RU.com_phocaguestbook.sys.ini</filename>
+		</files>	
+	</fileset>
+</extension>

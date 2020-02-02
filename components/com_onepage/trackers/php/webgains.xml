@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>OPC Tracking - Webgains</name>
+    <creationDate>Oct 2013</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>Webgains Affiliate Tracking program</description>
+    <files>
+        <filename>webgains.php</filename>
+    </files>
+
+<params>
+    
+    
+			<param
+        type="text"
+        name="commision_type"
+        id="commision_type"
+        label="Commission type"
+        description="in account under Program Setup (commission types)"
+        size="80"
+		default="00000"
+        maxLength="255" />
+		
+			<param
+        type="text"
+        name="pin"
+        id="pin"
+        label="PIN number provided by webgains"
+        description="In account under Program Setup (program settings -> technical setup)"
+		default="0000"
+        size="80"
+        maxLength="255" />
+		
+			<param
+        type="text"
+        name="ProgramID"
+        id="ProgramID"
+        label="ProgramID, used to identify you to webgains systems"
+        description=""
+		default="0000"
+        size="80"
+        maxLength="255" />
+		
+			<param
+        type="text"
+        name="currency"
+        id="currency"
+        label="Currency code"
+        description="Only the following are valid: AUD,CAD,CHF,CZK,DKK,EUR,GBP,HKD,HUF,JPY,NOK,NZD,PLN,SEK,SGD,SKK,USD"
+        size="80"
+		default="EUR"
+        maxLength="255" />
+		
+			<param
+        type="list"
+        name="price_type"
+        id="price_type"
+        label="Which product price to send" 
+        description="Select a product price to send (check your #__virtuemart_order_items for details"
+		default="product_final_price"
+        >
+		 <option value="product_discountedPriceWithoutTax">product_discountedPriceWithoutTax</option>
+		 <option value="product_priceWithoutTax">product_priceWithoutTax</option>
+		 <option value="product_item_price">product_item_price</option>
+		 <option value="product_basePriceWithTax">product_basePriceWithTax</option>
+		 <option value="product_final_price">product_final_price</option>
+		 	
+			
+			
+			
+		</param>
+		
+		
+			
+		
+       
+    
+</params>	
+</extension>

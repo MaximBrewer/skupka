@@ -1,0 +1,36 @@
+<root>
+  <params name="animation" type="groupped" label="Animation">
+    <params name="simpleslidertypeanimation-top" label="" hidetitle="1">
+      <param type="group" label="Background animation">
+        <param type="backgroundanimation" name="background-animation" label="Animation(s)" default=""/>
+        <param type="list" name="background-animation-speed" label="Speed" default="default" translateable="1">
+          <option value="default">Default</option>
+          <option value="superSlow">Super slow</option>
+          <option value="slow">Slow</option>
+          <option value="normal">Normal</option>
+          <option value="fast">Fast</option>
+          <option value="superFast">Super fast</option>
+        </param>
+      </param>
+      <param type="group" label="Ken Burns effect">
+        <param type="postbackgroundanimation" name="kenburns-animation" label="Animation(s)" default="50|*|50|*|"/>
+        <param type="list" name="kenburns-animation-speed" label="Speed" default="default" translateable="1">
+          <option value="default">Default</option>
+          <option value="superSlow">Super slow</option>
+          <option value="slow">Slow</option>
+          <option value="normal">Normal</option>
+          <option value="fast">Fast</option>
+          <option value="superFast">Super fast</option>
+        </param>
+        <param type="list" name="kenburns-animation-strength" label="Strength" default="default" translateable="1">
+          <option value="default">Default</option>
+          <option value="superSoft">Super soft</option>
+          <option value="soft">Soft</option>
+          <option value="normal">Normal</option>
+          <option value="strong">Strong</option>
+          <option value="superStrong">Super strong</option>
+        </param>
+      </param>
+    </params>
+  </params>
+</root>

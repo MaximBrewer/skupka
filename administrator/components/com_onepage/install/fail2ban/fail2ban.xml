@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+    <name>System - Fail2Ban</name>
+    <author>mediahof</author>
+    <creationDate>Okt 2013</creationDate>
+    <copyright>(C) 2013 - 2014 mediahof. All rights reserved.</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <authorEmail>mail@mediahof.de</authorEmail>
+    <authorUrl>www.mediahof.de</authorUrl>
+    <version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>developed by mediahof - Multimedia, Communication and IT</description>
+    <files>
+        <filename plugin="fail2ban">fail2ban.php</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="message" type="text" required="true" default="user %s authentication failure" label="Log-Message" description="Change this only if you know what are you doing! %s = Username." />
+				<field name="use_syslog" type="list" required="true" default="1" label="Use syslog" description="Use syslog or default php error output" >
+				 			<option
+				value="0">JNo</option>
+			<option
+				value="1">JYes</option>
+
+				</field>
+				
+				<field name="only_admin" type="list" required="true" default="0" label="Check only administrator section" description="Will log only failed backend login attempts" >
+				 			<option
+				value="0">JNo</option>
+			<option
+				value="1">JYes</option>
+
+				</field>
+				
+            </fieldset>
+        </fields>
+    </config>
+	
+	<vmconfig>
+	<fields name="params" >
+	 <fieldset name="moss_calc" >
+	     <field name="partners" type="list" size="30" default="1" label="Pouzivat aj partnerske pobocky"  description="">
+			 <option value="1">Ano</option>
+			 <option value="0">Ne</option>
+	    </field>
+	 </fieldset>
+	 </fields>
+	</vmconfig>
+	
+    <updateservers>
+        <server type="collection" priority="1" name="mediahof">http://extensions.mediahof.de/extensions.xml</server>
+    </updateservers>
+</extension>

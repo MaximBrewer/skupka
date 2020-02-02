@@ -1,0 +1,1 @@
+DROP TABLE `#__virtuemart_product_custom_plg_uploadphoto`, `#__virtuemart_custom_plg_photosrc`;

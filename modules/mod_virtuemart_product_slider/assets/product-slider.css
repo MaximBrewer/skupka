@@ -1,0 +1,539 @@
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/*theme*/
+
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    /*background: #fff url('./ajax-loader.gif') center center no-repeat;*/
+}
+
+/* Arrows */
+.vmslider .slick-prev,
+.vmslider .slick-next
+{
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+.vmslider .slick-prev:hover,
+.vmslider .slick-prev:focus,
+.vmslider .slick-next:hover,
+.vmslider .slick-next:focus
+{
+
+    outline: none;
+
+}
+.vmslider .slick-prev:hover:before,
+.vmslider .slick-prev:focus:before,
+.vmslider .slick-next:hover:before,
+.vmslider .slick-next:focus:before
+{
+    opacity: 1;
+}
+.vmslider .slick-prev.slick-disabled:before,
+.vmslider .slick-next.slick-disabled:before
+{
+    opacity: .5;
+}
+
+.vmslider .slick-prev:before,
+.vmslider .slick-next:before
+{
+    font-size: 20px;
+    line-height: 1;
+    opacity: 1;
+}
+
+.vmslider .slick-prev
+{
+    left: -25px;
+}
+.vmslider [dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+
+.vmslider .slick-next
+{
+    right: -25px;
+}
+.vmslider [dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
+
+/* Dots */
+.vmslider .slick-dotted.slick-slider
+{
+    margin-bottom: 30px;
+}
+
+.vmslider .slick-dots
+{
+    position: absolute;
+    bottom: -25px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.vmslider .slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.vmslider .slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.vmslider .slick-dots li button:hover,
+.vmslider .slick-dots li button:focus
+{
+    outline: none;
+}
+.vmslider .slick-dots li button:hover:before,
+.vmslider .slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.vmslider .slick-dots li button:before
+{
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+    text-align: center;
+
+    opacity: .5;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.vmslider .slick-dots li.slick-active button:before
+{
+    opacity: 1;
+    color: black;
+}
+
+/*new style*/
+
+/*flexbox*/
+.vmslider .slick-slide{
+    height: auto;
+}
+.vmslider .slick-track{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+}
+.vmslider .slick-track > .vmslider-product-wrap{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+/*
+блок товара
+*/
+.vmslider-product{
+    padding: 15px;  
+    border: 1px solid #ecf0f1;
+    width: 100%;
+}
+.vmslider-product-wrap .vmslider-product.shadow {
+    width: 100%;
+    border-radius: 2px;
+    border: 0;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
+    transition: 200ms;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.vmslider-product-wrap .vmslider-product.shadow:hover {
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 2px 16px 0 rgba(0, 0, 0, 0.12);
+    transition: 200ms;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+/*изображение*/
+.vmslider-product{
+    transition: all 0.4s ease-out;
+}
+.vmslider-product .vmslider-image {
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+}
+.vmslider-product .vmslider-image .image1,
+.vmslider-product .vmslider-image .image2 {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.vmslider-product .vmslider-image img {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.vmslider-product .vmslider-image .image1{
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+.vmslider-product .vmslider-image .image2{
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+.vmslider-product:hover .vmslider-image .image1{
+   opacity:  0; 
+    transition: opacity 0.4s ease-out;
+}
+.vmslider-product:hover .vmslider-image .image2{
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+.vmslider-product:hover .vmslider-image.zoom-image .image1 {
+    -webkit-transform: scale(1.25, 1.25);
+    -ms-transform: scale(1.25, 1.25);
+    transform: scale(1.25, 1.25);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: transform 300ms linear;
+    -webkit-transition: transform 300ms linear;
+    opacity: 1;
+}
+
+.vmslider-product .vmslider-image .image1 {
+    transition: transform 300ms ease-out;
+}
+/*название*/
+.vmslider-product .vmslider-name{
+    margin-bottom: 10px;
+    text-align: left;
+}
+.vmslider-product .vmslider-name a{
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 300ms ease-out;
+}
+.vmslider-product .vmslider-name a:hover{
+    transition: color 300ms ease-out;
+}
+.vmslider-product .vmslider-name a:focus{
+    outline: 0;
+}
+/*цена товара*/
+.vmslider-product .vmslider-price{
+    margin-bottom: 15px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: hidden;
+}
+.vmslider-product .vmslider-price .product-price{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-bottom: 0;
+}
+.vmslider-product .vmslider-price .product-price span.PricesalesPrice{
+    font-weight: bold;
+    margin-right: 10px;
+}
+.vmslider-product .vmslider-price .product-price span.PricebasePriceWithTax{
+    color: #aaa;
+    text-decoration: line-through;
+    padding: 0;
+}
+.vmslider-product .vmslider-price .vm-price-desc{
+    margin: 0;
+}
+
+/*кнопка Купить*/
+.vmslider-product .vmslider-cart .quantity-box,
+.vmslider-product .vmslider-cart.sliderCart .quantity-controls {
+    display: none;
+}
+
+.vmslider-product .vmslider-cart.sliderCart div.addtocart-bar {
+    text-align: center;
+}
+
+.vmslider-product .vmslider-cart.sliderCart span.addtocart-button > input {
+    padding: 8px 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-shadow: 0;
+    display: inline-block;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    line-height: 1.43;
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    line-height: 1.42;
+}
+
+.vmslider-product .vmslider-cart.sliderCart span.addtocart-button > input:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
+        opacity: 0.95;
+}
+
+.vmslider-product .vmslider-cart.sliderCart span.addtocart-button > input {
+    background-color: ;
+    border: 0;
+    white-space: pre-wrap;
+}
+.vmslider-product .vmslider-cart.nofield .vm-customfields-wrap {
+    display: none;
+}
+/*точки навигации*/
+.vmslider .slick-dots{
+    position: relative;
+    margin-bottom: 0;
+    margin-top: 10px;
+    bottom: 0;
+}
+.vmslider .slick-dots li button{
+    width: 10px;
+    height: 10px;
+}
+.vmslider .slick-dots li button:before{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    content: '';
+}
+
+/*кнопки навигации*/
+.vmslider .slick-next,
+.vmslider .slick-prev{
+    width: 30px;
+    height: 30px;
+    opacity: 0.7;
+    transition: opacity 0.4s ease-out; 
+}
+.vmslider .slick-next:hover,
+.vmslider .slick-prev:hover{
+    opacity: 1;
+    transition: opacity 0.4s ease-out; 
+}
+.vmslider .slick-next{
+    background: url('/modules/mod_virtuemart_product_slider/assets/right-arrow.svg') center no-repeat;
+
+}
+.vmslider .slick-prev{
+    background: url('/modules/mod_virtuemart_product_slider/assets/left-arrow.svg') center no-repeat;
+}
+
+.vmslider.nav-top .slick-prev,
+.vmslider.nav-top .slick-next {
+    top: 0;
+}
+.vmslider.nav-top .slick-next {
+    right: 0;
+}
+.vmslider.nav-top .slick-prev {
+    right: 40px;
+    left: auto;
+}
+.vmslider.nav-top {
+    padding-top: 30px;
+}
+
+.vmslider.nav-dots .slick-next,
+.vmslider.nav-dots .slick-prev {
+    margin-top: -30px;
+}

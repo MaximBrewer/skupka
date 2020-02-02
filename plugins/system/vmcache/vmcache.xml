@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>plg_system_vmcache</name>
+	<author>RuposTel.com</author>
+	<creationDate>February 2014</creationDate>
+	<copyright>Copyright (C) RuposTel.com</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@rupostel.com</authorEmail>
+	<authorUrl>www.rupostel.com</authorUrl>
+	<version>2.5.0</version>
+	<description>Provides page caching for Virtuemart and Joomla. This plugin is triggered ONLY when there are no items in the cart, user is not logged in and there are no messages in the queue. Please report issues to info@rupostel.com. This plugin IS NOT compatible with all of the extensions available for Joomla and the site visitor may be shown cached results on pages where it should not be shown. This plugin is a modification of the core System - Cache plugin to fully support Virtuemart default functionality. Please watch your cache directory file size and clear the cache daily.</description>
+	<files>
+		<filename plugin="vmcache">vmcache.php</filename>
+		<filename>index.html</filename>
+	</files>
+    <languages>
+		<language tag="en-GB">en-GB.plg_system_vmcache.ini</language>
+		<language tag="en-GB">en-GB.plg_system_vmcache.sys.ini</language>
+	</languages>
+
+	<config>
+	<fields name="params">
+
+			<fieldset name="basic">
+		<field	name="browsercache" type="radio"
+			default="0"
+			description="PLG_CACHE_FIELD_BROWSERCACHE_DESC"
+			label="PLG_CACHE_FIELD_BROWSERCACHE_LABEL"
+		>
+			<option
+				value="0">JNo</option>
+			<option
+				value="1">JYes</option>
+		</field>
+		</fieldset>
+
+	</fields>
+	</config>
+</extension>

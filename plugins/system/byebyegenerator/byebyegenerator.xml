@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYS_BYEBYEGENERATOR</name>
+	<author>Michael Richey</author>
+	<creationDate>May 2010</creationDate>
+	<copyright>Copyright (C) 2008 Michael Richey. All rights reserved.</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>byebyegenerator@richeyweb.com</authorEmail>
+	<authorUrl>http://www.richeyweb.com</authorUrl>
+	<version>1.11</version>
+	<description>PLG_SYS_BYEBYEGENERATOR_XML_DESC</description>
+	<files>
+		<filename plugin="byebyegenerator">byebyegenerator.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_byebyegenerator.ini</language>
+		<language tag="en-GB">en-GB.plg_system_byebyegenerator.sys.ini</language>
+	</languages>
+	<config>
+	  <fields name="params">
+	    <fieldset name="basic">
+	      <field name="generator" type="radio" default="1" label="PLG_SYS_BYEBYEGENERATOR_GENERATOR" description="PLG_SYS_BYEBYEGENERATOR_GENERATOR_DESC">
+		  <option value="0">PLG_SYS_BYEBYEGENERATOR_CUSTOM</option>
+		  <option value="1">PLG_SYS_BYEBYEGENERATOR_REMOVE</option>
+		  <option value="2">PLG_SYS_BYEBYEGENERATOR_DO_NOTHING</option>
+	      </field>
+	      <field name="custom" type="text" default="PLG_SYS_BYEBYEGENERATOR_CUSTOM_DEFAULT" label="PLG_SYS_BYEBYEGENERATOR_CUSTOM" description="PLG_SYS_BYEBYEGENERATOR_CUSTOM_DESC" size="45" />
+	      <field name="robots" type="radio" default="1" label="PLG_SYS_BYEBYEGENERATOR_ROBOTS" description="PLG_SYS_BYEBYEGENERATOR_ROBOTS_DESC">
+		  <option value="0">PLG_SYS_BYEBYEGENERATOR_KEEP</option>
+		  <option value="1">PLG_SYS_BYEBYEGENERATOR_REMOVE</option>
+	      </field>
+	    </fieldset>
+	  </fields>
+	</config>
+</extension>

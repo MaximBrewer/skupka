@@ -1,0 +1,41 @@
+.nextend-mixed-group{
+    float:left;
+    margin: 5px 15px 5px 0;
+}
+
+.x-rtl .nextend-mixed-group{
+    float: right;
+    margin: 5px 0 5px 15px;
+}
+
+.nextend-horizontal-tab .nextend-mixed-group{
+    margin: 0 15px 0 0;
+}
+
+.nextend-mixed-element{
+    width: 100%;
+}
+
+.nextend-mixed-element,
+.nextend-mixed-label{
+    clear:both;
+    float:left;
+    font-size: 10px;
+}
+
+.x-rtl .nextend-mixed-element,
+.x-rtl .nextend-mixed-label{
+    float: right;
+}
+
+.nextend-mixed-label label{
+    float:none;
+    min-width: auto;
+    max-width: none;
+    display: inline;
+    margin: auto;
+    padding: auto;
+    color: #6c7581;
+    font-size: 10px;
+    margin-top: 5px;
+}

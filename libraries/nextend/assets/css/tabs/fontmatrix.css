@@ -1,0 +1,31 @@
+.nextend-duplicate.nextend-fontmatrix{
+    background: url('../../images/export.png') no-repeat center -60px;
+    float: right;
+    cursor: pointer;
+    margin-top: -24px;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+.nextend-trash.nextend-fontmatrix{
+    background: url('../../images/export.png') no-repeat center -90px;
+    float: right;
+    cursor: pointer;
+    margin-top: -24px;
+    margin-right: 26px;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+.nextend-duplicate.nextend-fontmatrix:HOVER,
+.nextend-trash.nextend-fontmatrix:HOVER{
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3) inset;
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<install version="2.3.0" type="plugin" plugin="hsexpander" editable="1" method="update">
+	<name>WF_HSEXPANDER_TITLE</name>
+	<version>2.3.1</version>
+	<creationDate>Jul 2013</creationDate>
+	<author>Ken Lowther</author>
+	<authorEmail>admin@joomlanook.com</authorEmail>
+	<authorUrl>http://www.joomlanook.com</authorUrl>
+	<copyright>Ken Lowther</copyright>
+	<license>GNU/GPL Version 2 - http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<description>WF_HSEXPANDER_DESC</description>
+	<icon>hsexpander</icon>
+	<layout>hsexpander</layout>
+	<files>
+		<filename>editor_plugin.js</filename>
+		<filename>hsexpander.php</filename>
+        <filename>index.html</filename>
+        <filename>classes/hsexpander.php</filename>
+        <filename>classes/index.html</filename>
+        <filename>css/hsexpander.css</filename>
+        <filename>css/index.html</filename>
+        <filename>img/hsexpander.png</filename>
+        <filename>img/index.html</filename>
+        <filename>js/hsexpander.js</filename>
+        <filename>js/index.html</filename>
+        <filename>langs/en_dlg.js</filename>
+        <filename>langs/en.js</filename>
+        <filename>langs/fr_dlg.js</filename>
+        <filename>langs/fr.js</filename>
+        <filename>langs/index.html</filename>
+        <filename>tmpl/caption.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/expander.php</filename>
+        <filename>tmpl/heading.php</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>tmpl/options.php</filename>
+        <filename>tmpl/overlay.php</filename>
+	</files>
+	<params group="defaults">
+		<param name="target" type="list" default="" label="WF_LABEL_TARGET" description="WF_HSEXPAND_PARAM_DEFAULT_TARGET_DESC">
+        	<option value="">WF_OPTION_NOT_SET</option>
+			<option value="_self">WF_OPTION_TARGET_SELF</option>
+			<option value="_blank">WF_OPTION_TARGET_BLANK</option>
+			<option value="_parent">WF_OPTION_TARGET_PARENT</option>
+			<option value="_top">WF_OPTION_TARGET_TOP</option>
+		</param>
+	</params>
+	<extensions>file,popups</extensions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.com_jce_hsexpander.ini</language>
+		<language tag="en-GB">en-GB/en-GB.com_jce_hsexpander.sys.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.com_jce_hsexpander.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.com_jce_hsexpander.sys.ini</language>
+	</languages>
+	<help>
+		<topic key="hsexpander.about" title="WF_HSEXPAND_HELP_ABOUT" />
+		<topic key="hsexpander.interface" title="WF_HSEXPAND_HELP_INTERFACE" />
+	</help>
+</install>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>Heureka.cz</name>
+    <creationDate>Oct 2013</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>Heureka.cz Export</description>
+	<category_pairing_name>heureka_cz</category_pairing_name>
+	<category_pairing_url>http://www.heureka.cz/direct/xml-export/shops/heureka-sekce.xml</category_pairing_url>
+    <files>
+        <filename>heureka_cz.php</filename>
+    </files>
+	<element>heureka_cz</element>
+
+<params >
+<param
+        type="text"
+        name="bazaar"
+        id="bazaar"
+        label="Used Products categories separated by comma (Kategorie Bazaru)" 
+        description="Kategorie bazaru odelene ciarkou bez medzier"
+		default=""
+        >
+		 
+		 
+		</param>
+</params>
+    
+    
+           
+<category_form>
+ 
+   <fieldset name="test" label="Heureka.cz Category" addpath="/components/com_onepage/xmlexport/fields/" addfieldpath="/components/com_onepage/xmlexport/fields/">
+    <field  name="paired_category" type="pairedcategory"
+        
+        id="paired_category"
+        label="Heureka.cz Kategorie" 
+        description="Spárujte Vaše kategórie s kategóriami v Heuréke pre lepšie zaradenie Vašich produktov"
+		></field>
+	</fieldset>
+ 
+</category_form> 
+
+</extension>

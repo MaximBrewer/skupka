@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Категория">
+		<message>ссылка на категорию</message>
+	</layout>
+	<state>
+		<fields name="request" addfieldpath="/administrator/components/com_yandex_maps/models/fields">
+            <fieldset name="request">
+                <field name="task" type="hidden" default="category"/>
+                <field required="true" label="Категория" name="id" type="categoryid"/>
+            </fieldset>
+        </fields>
+	</state>
+</metadata>

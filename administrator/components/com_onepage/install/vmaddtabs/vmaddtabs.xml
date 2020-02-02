@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5.0" type="plugin" group="system" method="upgrade" >
+    <name>plg_vmaddtabs</name>
+    <creationDate>November 09 2015</creationDate>
+    <author>RuposTel.com</author>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <copyright>Copyright (C) 2006-2016 RuposTel.com.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>System - Tab Expander (OPC)</description>
+ 
+    <files>
+        <filename plugin="vmaddtabs">vmaddtabs.php</filename>
+		  <filename >xmlcategory.php</filename>
+		  <filename >googlehelper.php</filename>
+		   <folder >assets</folder>
+		   <folder >language</folder>
+		   <folder >tabs</folder>
+    </files>
+ 
+</extension>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>OPC Tracking - Google JSON-LD</name>
+    <creationDate>July 2017</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2016 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>Google JSON-lD Data Generation for Product Pages. This plugin will generate a proper Google JSON-LD data into your product details page. It is recommended to pair your categories with Google Taxonomy for best results. Important: Enable to run at the product pages below. Set your ID format to be consitent with Google Merchant feeds, GTM or GA tracking.</description>
+    <files>
+        <filename>google_json.php</filename>
+    </files>
+
+<params>
+ 		
+<param name="desc_type" type="list" default="product_desc" label="Use long description or short" description="Decide if to use long product description or short product description within generated code">
+<option value="product_desc">Long description</option>
+<option value="product_s_desc">Short description</option>
+</param>		
+
+ 		
+<param name="show_rating" type="list" default="1" label="Show rating" description="Show product rating within JSON+LD data">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+</param>
+       
+    
+</params>	
+</extension>

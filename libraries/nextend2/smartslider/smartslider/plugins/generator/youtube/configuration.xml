@@ -1,0 +1,9 @@
+<root>
+    <params name="basic" label="YoutTube generator">
+        <param name="apiKey" type="text" label="Client ID" default="" style="width:600px;"/>
+        <param name="apiSecret" type="text" label="Client secret" default="" style="width:250px;"/>
+        <param name="accessToken" type="youtubetoken" label="Token" default=""/>
+        <param name="callback" type="container" label="Callback url"/>
+        <param type="token"/>
+    </params>
+</root>

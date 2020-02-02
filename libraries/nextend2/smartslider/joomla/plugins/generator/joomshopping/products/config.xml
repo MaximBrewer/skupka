@@ -1,0 +1,34 @@
+<root>
+    <params name="joomshoppingproducts" label="Filter">
+        <param type="group" label="Source">
+            <param name="sourcecategories" label="Categories" type="joomshoppingcategories"
+                   default="0" multiple="1" size="10"/>
+            <param name="sourcemanufacturers" label="Manufacturers"
+                   type="joomshoppingmanufacturers"
+                   default="0" multiple="1" size="10"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="sourceinstock" label="In stock" type="filter" default="0"/>
+            <param name="sourcelabel" label="Label" type="joomshoppinglabels" default="-1"/>
+            <param name="itemid" label="Target menuitem for Joomla made urls (item ID)" type="menuitems" default="0"/>
+            <param type="text" label="Language" name="language" default="" tip="Language code. For example: en-GB or de-DE"/>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="productsorder" type="mixed" label="Order" default="pr.product_date_added|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="pr.name">Product name</option>
+                <option value="category_name">Category title</option>
+                <option value="pr_cat.product_ordering">Ordering</option>
+                <option value="pr.hits">Hits</option>
+                <option value="pr.product_date_added">Creation time</option>
+                <option value="pr.date_modify">Modification time</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

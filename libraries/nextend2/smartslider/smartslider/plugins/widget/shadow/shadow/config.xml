@@ -1,0 +1,11 @@
+<root>
+  <params name="widgetsshadow" label="" hidetitle="1">
+    <param name="widgetshadow" type="widgetpluginmatrix" ajaxurl="slider/renderform" label="Shadow" group="sswidgetshadow" method="shadow" file="config.xml" default="disabled"/>
+    <param type="group" label="Display" class="n2-expert">
+      <param name="widget-shadow-display-desktop" type="onoff" label="Desktop" default="1"/>
+      <param name="widget-shadow-display-tablet" type="onoff" label="Tablet" default="1"/>
+      <param name="widget-shadow-display-mobile" type="onoff" label="Mobile" default="1"/>
+      <param name="widget-shadow-exclude-slides" type="text" label="Hide on slides" default="" tip="List the slides separated by commas on which you want the controls to be hidden."/></param>
+  </params>
+  <params name="widget-shadow-placeholder" label="" id="nextend-widgetshadow-panel" type="placeholder"></params>
+</root>

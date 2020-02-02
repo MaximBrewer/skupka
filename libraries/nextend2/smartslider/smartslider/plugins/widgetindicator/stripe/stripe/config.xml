@@ -1,0 +1,14 @@
+<root>
+  <params name="stripe" label="Stripe indicator settings" hidetitle="1">
+    <param name="widget-indicator-position" type="widgetposition" label="Position"/>
+    <param type="group" label="Size">
+      <param type="text" name="widget-indicator-width" label="Width" class="n2-expert"/>
+      <param type="number" name="widget-indicator-height" label="Height" style="width:30px;">
+        <unit>px</unit>
+      </param>
+      <param type="onoff" label="Overlay" name="widget-indicator-overlay"/></param>
+    <param type="group" label="Color">
+      <param type="color" name="widget-indicator-track" label="Track" alpha="1"/>
+      <param type="color" name="widget-indicator-bar" label="Bar" alpha="1"/></param>
+  </params>
+</root>

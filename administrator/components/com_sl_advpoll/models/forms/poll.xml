@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2013 Skyline Software (http://extstore.com). All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+ -->
+
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="text"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description="JGLOBAL_FIELD_ID_DESC"
+			class="readonly"
+			readonly="true"
+			default="0"
+			labelclass="control-label"
+		/>
+
+		<field
+			name="title"
+			type="text"
+			label="JGLOBAL_TITLE"
+			description="COM_SL_ADVPOLL_POLL_FIELD_TITLE_DESC"
+			class="inputbox"
+			required="true"
+			size="40"
+			labelclass="control-label"
+		/>
+
+		<field
+			name="alias"
+			type="text"
+			label="JFIELD_ALIAS_LABEL"
+			description="COM_SL_ADVPOLL_POLL_FIELD_ALIAS_DESC"
+			class="inputbox"
+			size="40"
+			labelclass="control-label"
+		/>
+
+		<field
+			name="catid"
+			type="category"
+			label="JCATEGORY"
+			description="COM_SL_ADVPOLL_POLL_FIELD_CATEGORY_DESC"
+			class="inputbox"
+			extension="com_sl_advpoll"
+			labelclass="control-label"
+		/>
+
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="COM_SL_ADVPOLL_POLL_FIELD_STATE_DESC"
+			class="inputbox"
+			size="1"
+			default="1"
+			labelclass="control-label"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+
+		<field
+			name="ordering"
+			type="pollordering"
+			label="JFIELD_ORDERING_LABEL"
+			description="JFIELD_ORDERING_DESC"
+			class="inputbox"
+			labelclass="control-label"
+		/>
+
+		<field
+			name="access"
+			type="accesslevel"
+			label="JFIELD_ACCESS_LABEL"
+			description="JFIELD_ACCESS_DESC"
+			class="inputbox"
+			size="1"
+			labelclass="control-label"
+		/>
+
+		<field
+			name="language"
+			type="contentlanguage"
+			label="JFIELD_LANGUAGE_LABEL"
+			description="COM_SL_ADVPOLL_POLL_FIELD_LANGUAGE_DESC"
+			class="inputbox"
+			labelclass="control-label"
+		>
+			<option value="*">JALL</option>
+		</field>
+
+		<field
+			name="schedule"
+			type="radio"
+			label="COM_SL_ADVPOLL_POLL_FIELD_SCHEDULE_LABEL"
+			description="COM_SL_ADVPOLL_POLL_FIELD_SCHEDULE_DESC"
+			class="btn-group"
+			size="1"
+			default="0"
+			labelclass="control-label"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="publish_up"
+			type="calendar"
+			label="COM_SL_ADVPOLL_POLL_FIELD_PUBLISH_UP_LABEL"
+			description="COM_SL_ADVPOLL_POLL_FIELD_PUBLISH_UP_DESC"
+			class="inputbox"
+			size="22"
+			format="%Y-%m-%d %H:%M:%S"
+			filter="user_utc"
+			labelclass="control-label"
+		/>
+
+		<field
+			name="publish_down"
+			type="calendar"
+			label="COM_SL_ADVPOLL_POLL_FIELD_PUBLISH_DOWN_LABEL"
+			description="COM_SL_ADVPOLL_POLL_FIELD_PUBLISH_DOWN_DESC"
+			class="inputbox"
+			size="22"
+			format="%Y-%m-%d %H:%M:%S"
+			filter="user_utc"
+			labelclass="control-label"
+		/>
+
+		<field
+			name="created"
+			type="calendar"
+			label="JGLOBAL_FIELD_CREATED_LABEL"
+			description="JGLOBAL_FIELD_CREATED_DESC"
+			class="inputbox"
+			size="22"
+			format="%Y-%m-%d %H:%M:%S"
+			filter="user_utc"
+			labelclass="control-label"
+		/>
+
+		<field
+			name="created_by"
+			type="user"
+			label="JGLOBAL_FIELD_CREATED_BY_LABEL"
+			description="JGLOBAL_FIELD_CREATED_BY_DESC"
+			labelclass="control-label"
+		/>
+
+		<field
+			name="created_by_alias"
+			type="text"
+			label="JGLOBAL_FIELD_CREATED_BY_ALIAS_LABEL"
+			description="JGLOBAL_FIELD_CREATED_BY_ALIAS_DESC"
+			class="inputbox"
+			size="20"
+			labelclass="control-label"
+		/>
+
+		<field
+			name="modified"
+			type="calendar"
+			label="JGLOBAL_FIELD_MODIFIED_LABEL"
+			description="COM_SL_ADVPOLL_POLL_FIELD_MODIFIED_DESC"
+			class="readonly"
+			readonly="true"
+			size="22"
+			format="%Y-%m-%d %H:%M:%S"
+			filter="user_utc"
+			labelclass="control-label"
+		/>
+
+		<field
+			name="modified_by"
+			type="user"
+			label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+			description="JGLOBAL_FIELD_MODIFIED_BY_DESC"
+			class="readonly"
+			readonly="true"
+			filter="unset"
+			labelclass="control-label"
+		/>
+
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<fields name="params">
+			<fieldset name="jbasic" label="COM_SL_ADVPOLL_FIELDSET_BASIC">
+				<field
+					name="result_display_type"
+					type="radio"
+					class="btn-group"
+					labelclass="control-label"
+					default=""
+					label="COM_SL_ADVPOLL_POLL_FIELD_RESULT_DISPLAY_TYPE_LABEL"
+					description="COM_SL_ADVPOLL_POLL_FIELD_RESULT_DISPLAY_TYPE_DESC"
+				>
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_SL_ADVPOLL_POLL_NORMAL</option>
+					<option value="1">COM_SL_ADVPOLL_POLL_POPUP</option>
+				</field>
+
+				<field name="maxChoices"
+					type="text"
+					class="inputbox validate-numeric"
+					default="1"
+					label="COM_SL_ADVPOLL_FIELD_MAXCHOICES_LABEL"
+					description="COM_SL_ADVPOLL_FIELD_MAXCHOICES_DESC"
+					labelclass="control-label"
+				/>
+
+				<field name="lag"
+					type="text"
+					class="inputbox validate-numeric"
+					default="86400"
+					label="COM_SL_ADVPOLL_FIELD_LAG_LABEL"
+					description="COM_SL_ADVPOLL_FIELD_LAG_DESC"
+					labelclass="control-label"
+				/>
+
+				<field
+					name="show_result"
+					type="list"
+					label="COM_SL_ADVPOLL_POLL_FIELD_SHOW_RESULT_LABEL"
+					description="COM_SL_ADVPOLL_POLL_FIELD_SHOW_RESULT_DESC"
+					class="inputbox"
+					default=""
+					labelclass="control-label"
+				>
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="graph_type"
+					type="list"
+					labelclass="control-label"
+					default=""
+					label="COM_SL_ADVPOLL_POLL_FIELD_GRAPH_TYPE_LABEL"
+					description="COM_SL_ADVPOLL_POLL_FIELD_GRAPH_TYPE_DESC"
+				>
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_SL_ADVPOLL_POLL_FIELD_GRAPH_TYPE_NORMAL_LINE</option>
+					<option value="1">COM_SL_ADVPOLL_POLL_FIELD_GRAPH_TYPE_FULL_LINE</option>
+					<option value="2">COM_SL_ADVPOLL_POLL_FIELD_GRAPH_TYPE_GOOGLE_PIE</option>
+					<option value="3">COM_SL_ADVPOLL_POLL_FIELD_GRAPH_TYPE_GOOGLE_BAR</option>
+				</field>
+
+				<field
+					name="show_votes"
+					type="list"
+					label="COM_SL_ADVPOLL_POLL_FIELD_SHOW_VOTES_LABEL"
+					description="COM_SL_ADVPOLL_POLL_FIELD_SHOW_VOTES_DESC"
+					class="inputbox"
+					default=""
+					labelclass="control-label"
+				>
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="other_answer"
+					type="radio"
+					label="COM_SL_ADVPOLL_POLL_FIELD_OTHER_ANSWER_LABEL"
+					description="COM_SL_ADVPOLL_POLL_FIELD_OTHER_ANSWER_DESC"
+					class="btn-group"
+					size="1"
+					default="0"
+					labelclass="control-label"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field
+					name="other_answer_label"
+					type="text"
+					label="COM_SL_ADVPOLL_POLL_FIELD_OTHER_ANSWER_LABEL_LABEL"
+					description="COM_SL_ADVPOLL_POLL_FIELD_OTHER_ANSWER_LABEL_DESC"
+					class="inputbox"
+					size="1"
+					default="Other"
+					labelclass="control-label"
+				/>
+
+				<field
+					name="display_other_answer"
+					type="radio"
+					label="COM_SL_ADVPOLL_POLL_FIELD_DISPLAY_OTHER_ANSWER_LABEL"
+					description="COM_SL_ADVPOLL_POLL_FIELD_DISPLAY_OTHER_ANSWER_DESC"
+					class="btn-group"
+					size="1"
+					default="1"
+					labelclass="input-box"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field
+					name="custom_style"
+					type="list"
+					class="inputbox"
+					labelclass="control-label"
+					default="0"
+					label="COM_SL_ADVPOLL_FIELD_CUSTOM_STYLE_LABEL"
+					description="COM_SL_ADVPOLL_FIELD_CUSTOM_STYLE_DESC"
+				>
+					<option value="0">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">JCUSTOM</option>
+				</field>
+
+				<field
+					name="header_footer_bg"
+					type="color"
+					class="inputbox"
+					labelclass="control-label"
+					default="#FFFFFF"
+					label="COM_SL_ADVPOLL_POLL_FIELD_HEADER_FOOTER_BG_LABEL"
+					description="COM_SL_ADVPOLL_POLL_FIELD_HEADER_FOOTER_BG_DESC"
+				/>
+
+				<field
+					name="header_footer_text"
+					type="color"
+					class="inputbox"
+					labelclass="control-label"
+					default="#111111"
+					label="COM_SL_ADVPOLL_POLL_FIELD_HEADER_FOOTER_TEXT_LABEL"
+					description="COM_SL_ADVPOLL_POLL_FIELD_HEADER_FOOTER_TEXT_DESC"
+				/>
+
+				<field
+					name="body_bg"
+					type="color"
+					class="inputbox"
+					labelclass="control-label"
+					default="#EEEEDD"
+					label="COM_SL_ADVPOLL_POLL_FIELD_BODY_BG_LABEL"
+					description="COM_SL_ADVPOLL_POLL_FIELD_BODY_BG_DESC"
+				/>
+
+				<field
+					name="body_text"
+					type="color"
+					class="inputbox"
+					labelclass="control-label"
+					default="#4D4D4D"
+					label="COM_SL_ADVPOLL_POLL_FIELD_BODY_TEXT_LABEL"
+					description="COM_SL_ADVPOLL_POLL_FIELD_BODY_TEXT_DESC"
+				/>
+
+				<field
+					name="custom_css"
+					type="textarea"
+					class="inputbox"
+					labelclass="control-label"
+					default=""
+					label="COM_SL_ADVPOLL_POLL_FIELD_CUSTOM_CSS_LABEL"
+					description="COM_SL_ADVPOLL_POLL_FIELD_CUSTOM_CSS_DESC"
+				/>
+
+			</fieldset>
+		</fields>
+	</fieldset>
+</form>

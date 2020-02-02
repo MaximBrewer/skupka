@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" group="vmpayment">
+    <name>Robokassa Payment</name>
+    <creationDate>DEC 2015</creationDate>
+    <author>joomla-i.ru</author>
+    <authorUrl>http://joomla-i.ru</authorUrl>
+    <copyright>joomla-i.ru.ru</copyright>
+    <license>Разрешена установка только на один сайт</license>
+    <scriptfile>script.php</scriptfile>
+    <version>3.0.0</version>
+    <description><![CDATA[<a href="http://robokassa.ru" target="_blank">Robokassa</a> — это сервис, позволяющий Продавцам (интернет-магазинам, поставщикам услуг) принимать платежи от клиентов с помощью банковских карт, в любой электронной валюте, с помощью сервисов мобильная коммерция (МТС и Мегафон), платежи через интернет-банк ведущих Банков РФ, платежи через банкоматы, через терминалы мгновенной оплаты, через систему денежных переводов Contact, а также с помощью приложения для iPhone.]]></description>
+    <languages>
+	<language tag="en-GB">en-GB.plg_vmpayment_robokassa.ini</language>
+	<language tag="ru-RU">ru-RU.plg_vmpayment_robokassa.ini</language>
+    </languages>
+    <files>
+	<filename plugin="robokassa">robokassa.php</filename>
+	<filename>index.html</filename>
+	<filename>robokassa.jpg</filename>
+	
+    </files>
+    <vmconfig>
+    <fields  name="params">
+    	<fieldset name="basic" addfieldpath="/administrator/components/com_virtuemart/fields">
+	<field	name="payment_logos" type="vmfiles" label="VMPAYMENT_ROBOKASSA_LOGOS"
+		description="VMPAYMENT_ROBOKASSA_LOGOS_DESC"
+		directory="/plugins/vmpayment/robokassa"
+		default="robokassa.jpg" hide_default="1" hide_none="1"
+		stripext="0"   exclude="php|html|vm2" />
+	
+		<field type="text" name="robokassa_login"  size="50" label="VMPAYMENT_ROBOKASSA_LOGIN"
+             default="" description="VMPAYMENT_ROBOKASSA_LOGIN_DESC" />
+
+    <field type="password" name="robokassa_password1"  size="50" label="VMPAYMENT_ROBOKASSA_PASSWORD1"
+             default="" description="VMPAYMENT_ROBOKASSA_PASSWORD1_DESC" />
+
+	<field type="password" name="robokassa_password2"  size="50" label="VMPAYMENT_ROBOKASSA_PASSWORD2"
+             default="" description="VMPAYMENT_ROBOKASSA_PASSWORD2_DESC" />
+
+	<field name="robokassa_demo" type="radio" default="1" label="VMPAYMENT_ROBOKASSA_DEMO" description="VMPAYMENT_ROBOKASSA_DEMO_DESC" >
+	    <option value="0">COM_VIRTUEMART_NO</option>
+	    <option value="1">COM_VIRTUEMART_YES</option>
+	</field>
+	<field name="robokassa_fee" type="radio" default="0" label="Комиссия берётся с" >
+		<option value="0">Покупателя</option>
+	    <option value="1">Продавца</option>
+	</field>
+	<field name="robokassa_payment_type" type="vmrobokassacurrency" default="0" label="VMPAYMENT_ROBOKASSA_PAYMENT_TYPE"/>
+	<!--<field name="robokassa_payment_type" type="list" default="0" label="VMPAYMENT_ROBOKASSA_PAYMENT_TYPE">
+		<option value="0">Выбор на сайте робокассы</option>
+		<option value="BANKOCEAN2R">Банковской картой</option>
+		<option value="OceanBankOceanR">Банковской картой через Platezh.ru</option>
+		<option value="Qiwi29OceanR">QIWI Кошелек</option>
+		<option value="WMRM">WMR</option>
+		<option value="WMZM">WMZ</option>
+		<option value="WMEM">WME</option>
+		<option value="WMUM">WMU</option>
+		<option value="WMBM">WMB</option>
+		<option value="WMGM">WMG</option>
+		<option value="W1R">RUR Единый Кошелек</option>
+		<option value="EasyPayB">EasyPay</option>
+		<option value="LiqPayZ">USD LiqPay</option>
+		<option value="YandexMerchantR">Яндекс.Деньги</option>
+		<option value="ElecsnetWallet17R">RUR Кошелек Элекснет</option>
+		<option value="MailRuOceanR">Деньги@Mail.Ru</option>
+		<option value="TeleMoneyR">RUR TeleMoney</option>
+		<option value="AlfaBankOceanR">Альфа-Клик</option>
+		<option value="PSKBR">Промсвязьбанк</option>
+		<option value="RussianStandardBankR">RUR Банк Русский Стандарт</option>
+		<option value="HandyBankMerchantOceanR">HandyBank</option>
+		<option value="BSSIntezaR">Банк Интеза</option>
+		<option value="BSSMezhtopenergobankR">Межтопэнергобанк</option>
+		<option value="BSSTatfondbankR">Татфондбанк</option>
+		<option value="VTB24R">ВТБ24</option>
+		<option value="OceanBankOceanR">Океан Банк</option>
+		<option value="HandyBankBB">Банк «Богородский»</option>
+		<option value="HandyBankBO">Банк «Образование»</option>
+		<option value="HandyBankFB">ФлексБанк</option>
+		<option value="HandyBankFU">АКБ «ФЬЮЧЕР»</option>
+		<option value="HandyBankKB">АКБ «Кранбанк»</option>
+		<option value="HandyBankKSB">Костромаселькомбанк</option>
+		<option value="HandyBankLOB">Липецкий областной банк</option>
+		<option value="HandyBankNSB">«НС Банк»</option>
+		<option value="HandyBankTB">Русский Трастовый Банк</option>
+		<option value="HandyBankVIB">Вестинтербанк</option>
+		<option value="BSSBankGorodR">Банк Город</option>
+		<option value="BSSAvtovazbankR">Банк АВБ</option>
+		<option value="RapidaOceanSvyaznoyR">Через Связной</option>
+		<option value="RapidaOceanEurosetR">Через Евросеть</option>
+		<option value="TerminalsKassira.NetOceanR">Кассира.нет</option>
+		<option value="TerminalsMElementR">Мобил Элемент</option>
+		<option value="TerminalsPinpayR">Pinpay</option>
+		<option value="TerminalsElecsnetOceanR">Элекснет</option>
+		<option value="MtsR">МТС</option>
+		<option value="MegafonR">Мегафон</option>
+		<option value="MobicomBeelineR">Билайн</option>
+		<option value="MobicomTele2R">Tele2</option>
+		<option value="RapidaOceanEurosetR">RUR Евросеть</option>
+		<option value="RapidaOceanSvyaznoyR">RUR Связной</option>
+		<option value="MPosR">RUR Мобильный POS Терминал</option>
+		<option value="BANKOCEAN2CHECKR">Мобильная ROBOKASSA</option>
+		<option value="KreddyR">RUR Кредди</option>
+		<option value="PaySafeCardE">EUR PaySafeCard</option>
+	</field>-->
+	<field name="status_success" type="vmorderstate" scope="com_virtuemart" default="C" label="VMPAYMENT_ROBOKASSA_STATUS_SUCCESS" description="VMPAYMENT_ROBOKASSA_STATUS_SUCCESS_DESC" />
+	<field name="status_ordered" type="vmorderstate" scope="com_virtuemart" default="P" label="VMPAYMENT_ROBOKASSA_STATUS_ORDERED" description="VMPAYMENT_ROBOKASSA_STATUS_ORDERD_DESC" />
+	<field name="status_for_payment" type="vmorderstate" scope="com_virtuemart" default="P" label="VMPAYMENT_ROBOKASSA_STATUS_FOR_PAYMENT" description="VMPAYMENT_ROBOKASSA_STATUS_FOR_PAYMENT_DESC" />
+	<field name="payment_message" type="textarea" label="VMPAYMENT_ROBOKASSA_PAYMENT_MESSAGE" description="VMPAYMENT_ROBOKASSA_PAYMENT_MESSAGE_DESC"/>
+	<field name="countries" type="vmcountries"  scope="com_virtuemart" default="" label="VMPAYMENT_ROBOKASSA_COUNTRIES" description="VMPAYMENT_ROBOKASSA_COUNTRIES_DESC"/>
+	<field name="shipping_methods" type="vmshippingmethods"  default="" label="VMPAYMENT_ROBOKASSA_SHIPPING_METHODS" description="VMPAYMENT_ROBOKASSA_SHIPPING_METHODS_DESC"/>
+        <field name="payment_currency" type="vmacceptedcurrency" default="" label="VMPAYMENT_ROBOKASSA_CURRENCY" description="VMPAYMENT_ROBOKASSA_CURRENCY_DESC" />
+
+	<field name="min_amount" type="text"  label="VMPAYMENT_ROBOKASSA_MIN_AMOUNT" description="VMPAYMENT_ROBOKASSA_MIN_AMOUNT_EXPLAIN" />
+	<field name="max_amount" type="text"  label="VMPAYMENT_ROBOKASSA_MAX_AMOUNT" description="VMPAYMENT_ROBOKASSA_MAX_AMOUNT_EXPLAIN" />
+	<field name="cost_per_transaction" type="text"  label="VMPAYMENT_ROBOKASSA_COST_PER_TRANSACTION" description="VMPAYMENT_ROBOKASSA_COST_PER_TRANSACTION_EXPLAIN" />
+	<field name="cost_percent_total" type="text"  label="VMPAYMENT_ROBOKASSA_COST_PERCENT_TOTAL" description="VMPAYMENT_ROBOKASSA_COST_PERCENT_TOTAL_EXPLAIN" />
+	<field name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="VMPAYMENT_ROBOKASSA_TAX" description="VMPAYMENT_ROBOKASSA_TAX_DESC" />
+	</fieldset>
+    </fields>
+</vmconfig>
+<params addpath="/administrator/components/com_virtuemart/elements">
+	<param type="vmjpluginwarning" />
+	<param	name="payment_logos" type="vmfiles" label="VMPAYMENT_ROBOKASSA_LOGOS"
+		description="VMPAYMENT_ROBOKASSA_LOGOS_DESC"
+		directory="/plugins/vmpayment/robokassa"
+		default="robokassa.jpg" hide_default="1" hide_none="1"
+		stripext="0"   exclude="php|html|vm2" />
+	<param type="text" name="license"  size="50" label="VMPAYMENT_ROBOKASSA_LICENSE"
+         default="" description="VMPAYMENT_ROBOKASSA_LICENSE_DESC" />
+		<param type="text" name="robokassa_login"  size="50" label="VMPAYMENT_ROBOKASSA_LOGIN"
+             default="" description="VMPAYMENT_ROBOKASSA_LOGIN_DESC" />
+
+    <param type="password" name="robokassa_password1"  size="50" label="VMPAYMENT_ROBOKASSA_PASSWORD1"
+             default="" description="VMPAYMENT_ROBOKASSA_PASSWORD1_DESC" />
+
+	<param type="password" name="robokassa_password2"  size="50" label="VMPAYMENT_ROBOKASSA_PASSWORD2"
+             default="" description="VMPAYMENT_ROBOKASSA_PASSWORD2_DESC" />
+
+	<param name="robokassa_demo" type="radio" default="1" label="VMPAYMENT_ROBOKASSA_DEMO" description="VMPAYMENT_ROBOKASSA_DEMO_DESC" >
+	    <option value="0">COM_VIRTUEMART_NO</option>
+	    <option value="1">COM_VIRTUEMART_YES</option>
+	</param>
+	<param name="robokassa_fee" type="radio" default="0" label="Комиссия берётся с" >
+		<option value="0">Покупателя</option>
+	    <option value="1">Продавца</option>
+	</param>
+	<param name="robokassa_payment_type" type="vmrobokassacurrency" default="0" label="VMPAYMENT_ROBOKASSA_PAYMENT_TYPE"/>
+		<!--<option value="0">Выбор на сайте робокассы</option>
+		<option value="BANKOCEAN2R">Банковской картой</option>
+		<option value="OceanBankOceanR">Банковской картой через Platezh.ru</option>
+		<option value="Qiwi29OceanR">QIWI Кошелек</option>
+		<option value="WMRM">WMR</option>
+		<option value="WMZM">WMZ</option>
+		<option value="WMEM">WME</option>
+		<option value="WMUM">WMU</option>
+		<option value="WMBM">WMB</option>
+		<option value="WMGM">WMG</option>
+		<option value="W1R">RUR Единый Кошелек</option>
+		<option value="EasyPayB">EasyPay</option>
+		<option value="LiqPayZ">USD LiqPay</option>
+		<option value="YandexMerchantR">Яндекс.Деньги</option>
+		<option value="ElecsnetWallet17R">RUR Кошелек Элекснет</option>
+		<option value="MailRuOceanR">Деньги@Mail.Ru</option>
+		<option value="TeleMoneyR">RUR TeleMoney</option>
+		<option value="AlfaBankOceanR">Альфа-Клик</option>
+		<option value="PSKBR">Промсвязьбанк</option>
+		<option value="RussianStandardBankR">RUR Банк Русский Стандарт</option>
+		<option value="HandyBankMerchantOceanR">HandyBank</option>
+		<option value="BSSIntezaR">Банк Интеза</option>
+		<option value="BSSMezhtopenergobankR">Межтопэнергобанк</option>
+		<option value="BSSTatfondbankR">Татфондбанк</option>
+		<option value="VTB24R">ВТБ24</option>
+		<option value="OceanBankOceanR">Океан Банк</option>
+		<option value="HandyBankBB">Банк «Богородский»</option>
+		<option value="HandyBankBO">Банк «Образование»</option>
+		<option value="HandyBankFB">ФлексБанк</option>
+		<option value="HandyBankFU">АКБ «ФЬЮЧЕР»</option>
+		<option value="HandyBankKB">АКБ «Кранбанк»</option>
+		<option value="HandyBankKSB">Костромаселькомбанк</option>
+		<option value="HandyBankLOB">Липецкий областной банк</option>
+		<option value="HandyBankNSB">«НС Банк»</option>
+		<option value="HandyBankTB">Русский Трастовый Банк</option>
+		<option value="HandyBankVIB">Вестинтербанк</option>
+		<option value="BSSBankGorodR">Банк Город</option>
+		<option value="BSSAvtovazbankR">Банк АВБ</option>
+		<option value="RapidaOceanSvyaznoyR">Через Связной</option>
+		<option value="RapidaOceanEurosetR">Через Евросеть</option>
+		<option value="TerminalsKassira.NetOceanR">Кассира.нет</option>
+		<option value="TerminalsMElementR">Мобил Элемент</option>
+		<option value="TerminalsPinpayR">Pinpay</option>
+		<option value="TerminalsElecsnetOceanR">Элекснет</option>
+		<option value="MtsR">МТС</option>
+		<option value="MegafonR">Мегафон</option>
+		<option value="MobicomBeelineR">Билайн</option>
+		<option value="MobicomTele2R">Tele2</option>
+		<option value="RapidaOceanEurosetR">RUR Евросеть</option>
+		<option value="RapidaOceanSvyaznoyR">RUR Связной</option>
+		<option value="MPosR">RUR Мобильный POS Терминал</option>
+		<option value="BANKOCEAN2CHECKR">Мобильная ROBOKASSA</option>
+		<option value="KreddyR">RUR Кредди</option>
+		<option value="PaySafeCardE">EUR PaySafeCard</option>
+	</param>-->
+	<param name="status_success" type="vmorderstate" scope="com_virtuemart" default="C" label="VMPAYMENT_ROBOKASSA_STATUS_SUCCESS" description="VMPAYMENT_ROBOKASSA_STATUS_SUCCESS_DESC" />
+	<param name="status_ordered" type="vmorderstate" scope="com_virtuemart" default="P" label="VMPAYMENT_ROBOKASSA_STATUS_ORDERED" description="VMPAYMENT_ROBOKASSA_STATUS_ORDERD_DESC" />
+	<param name="status_for_payment" type="vmorderstate" scope="com_virtuemart" default="P" label="VMPAYMENT_ROBOKASSA_STATUS_FOR_PAYMENT" description="VMPAYMENT_ROBOKASSA_STATUS_FOR_PAYMENT_DESC" />
+	<param name="payment_message" type="textarea" label="VMPAYMENT_ROBOKASSA_PAYMENT_MESSAGE" description="VMPAYMENT_ROBOKASSA_PAYMENT_MESSAGE_DESC"/>
+	<param name="countries" type="vmcountries"  scope="com_virtuemart" default="" label="VMPAYMENT_ROBOKASSA_COUNTRIES" description="VMPAYMENT_ROBOKASSA_COUNTRIES_DESC"/>
+	<param name="shipping_methods" type="vmshippingmethods"  default="" label="VMPAYMENT_ROBOKASSA_SHIPPING_METHODS" description="VMPAYMENT_ROBOKASSA_SHIPPING_METHODS_DESC"/>
+        <param name="payment_currency" type="vmacceptedcurrency" default="" label="VMPAYMENT_ROBOKASSA_CURRENCY" description="VMPAYMENT_ROBOKASSA_CURRENCY_DESC" />
+
+	<param name="min_amount" type="text"  label="VMPAYMENT_ROBOKASSA_MIN_AMOUNT" description="VMPAYMENT_ROBOKASSA_MIN_AMOUNT_EXPLAIN" />
+	<param name="max_amount" type="text"  label="VMPAYMENT_ROBOKASSA_MAX_AMOUNT" description="VMPAYMENT_ROBOKASSA_MAX_AMOUNT_EXPLAIN" />
+	<param name="cost_per_transaction" type="text"  label="VMPAYMENT_ROBOKASSA_COST_PER_TRANSACTION" description="VMPAYMENT_ROBOKASSA_COST_PER_TRANSACTION_EXPLAIN" />
+	<param name="cost_percent_total" type="text"  label="VMPAYMENT_ROBOKASSA_COST_PERCENT_TOTAL" description="VMPAYMENT_ROBOKASSA_COST_PERCENT_TOTAL_EXPLAIN" />
+	<param name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="VMPAYMENT_ROBOKASSA_TAX" description="VMPAYMENT_ROBOKASSA_TAX_DESC" />
+    </params>
+
+
+
+</extension>

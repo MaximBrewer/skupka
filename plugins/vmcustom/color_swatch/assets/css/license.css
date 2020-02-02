@@ -1,0 +1,336 @@
+/*------------------------------------------------------------------------
+* Color Swatch Plugin for Virtuemart
+* author    CMSMart Team
+* copyright Copyright (C) 2012 Cmsmart Team. All Rights Reserved.
+* @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+* Websites: http://cmsmart.net
+* Email: team@cmsmart.net
+* Technical Support:  Forum - http://cmsmart.net/forum
+* version 2.0.0
+-------------------------------------------------------------------------*/
+
+#attrib-license_key .control-group{
+    margin: 0 0 5px 0;
+}
+.pane-sliders ul.adminformlist li
+{
+    border:none;
+}
+.pane-sliders ul.adminformlist li a img{
+	width: 130px;
+	height:20px;
+	float: right;
+	margin-top: -65px;
+	opacity:0.4;
+}
+.panel .pane-slider.content.pane-down fieldset.panelform{
+	padding: 20px 20px 50px 20px;
+	margin-left: 0;	
+	margin-bottom: 0;
+}
+.control-group div.license_title{
+	font-size: 18px;
+	color: #000000;
+	text-transform:uppercase;
+	margin-left:0;
+	margin-bottom: 25px;
+}
+.control-group  label#jform_params_version-lbl,
+.control-group  label#jform_params_text_license-lbl,
+fieldset.panelform ul li label#jform_params_license_key-lbl,
+fieldset.panelform ul li label#jform_params_domain-lbl{
+	min-width: 90px;
+}
+#attrib-license_key .control-group .controls input#jform_params_version,
+#attrib-license_key .control-group .controls input#jform_params_text_license{
+	border: 0;
+	-webkit-box-shadow: 0 0 0;
+	-moz-box-shadow:    0 0 0;
+	box-shadow:         0 0 0;
+	background: transparent;
+	font-size: 12px;
+	color: #555555;
+	font-weight: normal;
+	min-width: 340px;
+	padding-left: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+.panel fieldset.panelform > ul > li > label, .panel fieldset.panelform > ul > li > div > ul > li > label{
+	font-size:11px;
+	color: #777777;
+	font-weight: normal;
+}
+div.panel > h3
+{
+    background-color: #ececec;
+    color: #9c9c9c;
+    height:37px;
+    line-height: 36px;
+    border-radius: 3px 3px 0 0;
+    text-transform: none;
+    background: url('admin/license-line.png') no-repeat right !important;
+    
+}
+.pane-sliders .panel h3
+{
+    background:#f0f0f0;
+    color: #3b6e92;
+}
+div.panel > h3 a
+{
+    color: #3b6e92;
+}
+
+div.panel h3.pane-toggler-down
+{
+    border-bottom: none !important;
+    color: #9c9c9c;
+    width:100%;
+}
+
+div.panel h3.pane-toggler-down:before
+{
+    content: "\e6f1";
+    float: right;
+    padding: 10px 0 0 0;
+    font-size: 20px;
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    
+    -webkit-font-smoothing: antialiased;
+}
+div.panel h3:before
+{
+    margin-right: 12px;
+}
+div.panel .pane-toggler:before
+{
+    content: "\e6f0";
+    float: right;
+    padding: 10px 0 0 0;
+    font-size: 20px;
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.icon-arrow-down5:before
+{
+    content: "\e6f0";
+    float: right;
+    padding: 10px 0 0 0;
+    font-size: 20px;
+}
+.pane-sliders .title
+{
+    padding: 0px;
+}
+.pane-toggler-down span
+{
+    background: none;
+    color:#3b6e92 ;
+}
+.pane-sliders .content
+{
+    width:100%;
+}
+.pane-toggler span
+{
+    background: none;
+}
+#license-messages
+{
+    height: 56px;
+    display: block;
+    font-size: 12px;
+    height:15px;
+    margin: 0;   
+}
+#license-messages span.license-mstrue,#license-messages span.license-msfalse
+{
+    padding-bottom: 14px;
+}
+#license-messages span
+{
+    float:left;
+}
+
+input#jform_params_license_key,input#jform_params_domain{
+	color: #888888;
+	border: 1px solid #bfbfbf;
+	box-shadow:0 0 0 0;
+	font-size: 12px;
+	min-width: 200px;
+	height: 20px;
+	background: #ffffff;
+}
+#license-messages .license-msdes
+{
+    margin: 0;
+    
+    font-size: 11px;
+}
+.icon-checkmark-circle.fs32
+{
+    display: none;
+}
+.license-mstrue
+{
+    color: #17b287;
+}
+.license-msfalse
+{
+    color: #db1f1f;
+}
+#license_key_active
+{
+    width:95px;
+    height:32px;
+    text-align: center;
+    border-radius: 100px;
+    -moz-border-radius:100px;
+    -webkit-border-radius:100px;
+    background: #3c94cb;
+    border: none;
+    color: #fff;
+    float: left;
+    margin: 0 0 40px 0;
+    
+}
+#license_key_active:hover
+{
+    background: #fff;
+    color: #555555;
+    border: 1px solid #d2d2d2;
+}
+#main
+{
+	color:blue;
+	font-weight:bold;
+	font-size:14px;
+}
+.placeholder
+{
+    color: #666666;
+    margin:0 0 20px 0;
+    font-style: italic;
+}
+.placeholder a{
+	color: #218bca;
+}
+.license-new-box
+{
+    overflow: auto;
+    margin-bottom: 10px;
+}
+.license-box-title
+{
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+.license-box-title a 
+{
+    color: #222222;
+    font-weight: normal;
+}
+.license-box-image
+{
+    overflow: hidden;
+    float:left;
+    margin-right:7px;
+    
+}
+.license-box-image img
+{
+    width:70px!important;
+    height:70px!important;
+    border: 1px solid #d6d6d6!important;
+    opacity:1!important;
+    margin-top: 0!important;
+}
+#attrib-license_key .license_new .license-title-container{
+	background: url(admin/bg-license-new-title.png) repeat-x 0 5px;
+	padding-bottom: 15px;
+}
+#attrib-license_key .license_new .license-title-container span{
+	font-size: 13px;
+	color: #1d79b3;
+	font-weight:bold;
+	background: #ffffff;	
+	padding: 5px;
+}
+.license-new-title
+{
+    font-size: 20px;
+    color: #1d79b3;
+    text-align: center;
+    margin-left: 30px;
+    width: 253px;
+    position: relative;
+    background: #fff;
+    padding: 58px 0px 20px 0px;
+    z-index: 999;
+    padding: 5px 10px;
+}
+.license-new-description
+{
+    text-align: justify;
+    color: #777777;
+}
+.license-hr
+{
+    position: absolute;
+    width:100%;
+    margin: -60px 0 0 0;
+    z-index: 1;
+    height:18px;
+    background: #efefef;
+    display: none;
+}
+.license-readmore
+{
+    float:right;
+    color: #3c94cb;
+}
+.license-readmore:hover
+{
+    text-decoration:underline;
+    cursor: pointer;
+}
+.switcher-on, .switcher-off
+{
+    width:62px;
+}
+.switcher-off {
+    background-position: -88px 0;
+}
+#ajax-loader
+{
+    background: url('admin/ajax-loader.gif');
+    width:16px;
+    height:16px;
+    float:left;
+    margin: 8px;
+    display: none;
+}
+.pane-sliders .panel .license-disable
+{
+    color: #888888;
+    background: #ececec;
+}
+.pane-sliders .panel .license-disable a
+{
+    color: #888888;
+}

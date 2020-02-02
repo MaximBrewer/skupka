@@ -1,0 +1,149 @@
+div.cur_wrapper {
+ display: block; 
+ float: left; 
+ clear: none; 
+ width: 20px; 
+ height: 1.8em; 
+ margin-right: 10px;  
+}
+
+.clear_all {
+ float: left; 
+ clear: both; 
+ width: 100%; 
+}
+
+.cur_wrap {
+ float: left; 
+ clear: both; 
+ width: 100%; 
+}
+
+.cur_product_wrapper {
+ float: left; 
+ clear: both; 
+ width: 100%; 
+}
+
+button.cur_submit {
+ outline: none; 
+ background: none; 
+ color: white; 
+ border: 1px solid white; 
+ width: 25px; 
+ height: 35px; 
+ cursor: pointer;
+font-size: 1.5em;  
+}
+
+div.currency_selected  button.cur_submit {
+ color: #7CB1F1;
+}
+.cur_product_p {
+ float: left; 
+ clear: both; 
+ width: 100%; 
+}
+
+.cur_p {
+ font-size: 2em; 
+ margin-top: 10px; 
+ margin-bottom: 10px; 
+ float: left; 
+ width: 100%; 
+ clear: both; 
+ text-align: center; 
+ 
+}
+
+.vmproduct2 input[type="submit"].addtocart-button {
+ background: none; 
+ background-color: #9CFF00;
+ border: none; 
+ min-height: 34px; 
+ padding: 3px; 
+ padding-top: 5px; 
+ padding-bottom: 5px; 
+ font-weight: normal; 
+ box-sizing: border-box; 
+ margin: 0; 
+ color: #394D5A; 
+ font-family: VerlagLight, Arial, Helvetica, Verdana, serif;
+    font-weight: normal !important;
+ font-size: 1em; 
+ text-align: center;
+ cursor: pointer; 
+ max-width: auto; 
+ 
+}
+
+
+
+.vmproduct2 input[type="number"].quantity-input, .vmproduct2 input[type="number"].quantity-input:hover  {
+ min-width: 50px; 
+ min-height: 34px; 
+ padding-left: 0px !important; 
+ padding-right: 0 !important; 
+ padding-top: 0px !important; 
+ padding-bottom: 0px !important; 
+ font-weight: normal !important; 
+ box-sizing: border-box; 
+ margin: 0 !important; 
+ background: none; 
+ background-color: white; 
+ border-radius: 0; 
+  -moz-appearance: textfield;
+   
+}
+
+/* Remove controls from Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  
+  margin: 0; /* Removes leftover margin */
+}
+
+
+
+/* Remove controls from Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Re-applies the controls on :hover and :focus */
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+  
+}
+
+.vmproduct2 select.vm-chzn-select  {
+ min-height: 34px; 
+ box-sizing: border-box; 
+ min-width: 70px; 
+}
+.vmproduct2 span.quantity-box { margin-right: 5px; }
+.vmproduct2 .addtocart-button, .vmproduct2 .quantity-box {
+ float: left; 
+}
+
+.vmproduct2 .addtocart-bar { 
+  margin-top: 20px; 
+  float: left; 
+}
+
+#cart-product h3 {
+ font-size: 1.5em; 
+ font-weight: normal !important; 
+ margin-bottom: 5px; 
+}
+
+.cur_avai {
+ float: left; 
+ clear: both; 
+ margin-top: 10px; 
+}
+.cur_avai .product-fields-title  {
+ display: none; 
+}
+

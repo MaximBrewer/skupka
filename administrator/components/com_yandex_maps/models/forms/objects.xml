@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="publish_up" type="calendar"
+			label="COM_CONTENT_FIELD_PUBLISH_UP_LABEL" description="COM_CONTENT_FIELD_PUBLISH_UP_DESC"
+			format="%Y-%m-%d %H:%M:%S" size="22"
+			filter="user_utc" />
+
+		<field name="publish_down" type="calendar"
+			label="COM_CONTENT_FIELD_PUBLISH_DOWN_LABEL" description="COM_CONTENT_FIELD_PUBLISH_DOWN_DESC"
+			format="%Y-%m-%d %H:%M:%S" size="22"
+			filter="user_utc" />
+	</fieldset>
+	<fields name="params">
+		<field name="" label="&lt;h3&gt;Интеграция с Материалами Joomla&lt;/h3&gt;&lt;hr&gt;" type="spacer"  class="text" />
+		<fieldset
+			name="options"
+			label="Настройки"
+			description=""
+			addfieldpath="/administrator/components/com_content/models/fields/modal"
+		>
+			<field name="article_id" label="Материал" type="modal_article"/>
+		</fieldset>
+	</fields>
+	<fields name="metadata" label="JGLOBAL_FIELDSET_METADATA_OPTIONS">
+		<fieldset label="JGLOBAL_FIELDSET_METADATA_OPTIONS" name="metadata">
+			<field name="metakey" type="textarea"
+			label="JFIELD_META_KEYWORDS_LABEL" description="JFIELD_META_KEYWORDS_DESC"
+			rows="3" cols="30" />
+
+			<field name="metadesc" type="textarea"
+				label="JFIELD_META_DESCRIPTION_LABEL" description="JFIELD_META_DESCRIPTION_DESC"
+				rows="3" cols="30" />
+			<field name="image" type="media" label="Изображение"/>
+			<field name="email" type="email" label="email"/>
+			<field name="website" type="url" label="website"/>
+			<field name="phone" type="phone" label="Телефон"/>
+		</fieldset>
+	</fields>
+</form>

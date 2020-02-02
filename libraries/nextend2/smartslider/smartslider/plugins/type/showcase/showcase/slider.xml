@@ -1,0 +1,248 @@
+<root>
+  <params name="showcase" label="Showcase slider type">
+    <param type="group" label="Slider background image">
+      <param type="image" name="background" default="" label="Image"/>
+      <param type="onoff" name="background-fixed" default="0" label="Fixed"/>
+      <param type="textautocomplete" name="background-size" default="cover" label="Size" class="n2-expert" values="cover,contain,auto"/></param>
+    <param type="group" label="Slide size">
+      <param name="slide-width" type="numberautocomplete" style="width: 30px;" label="Width" default="600" values="400,600,800,1000">
+        <unit>px</unit>
+      </param>
+      <param name="slide-height" type="numberautocomplete" style="width: 30px;" label="Height" default="400" values="300,400,600,800,1000">
+        <unit>px</unit>
+      </param>
+    </param>
+    <param type="group" label="Border" class="n2-expert">
+      <param name="border-width" type="text" style="width: 30px;" label="Width" default="0">
+        <unit>px</unit>
+      </param>
+      <param name="border-color" type="color" alpha="1" label="Color" default="3E3E3Eff"/>
+      <param name="border-radius" type="text" style="width: 30px;" label="Border radius" default="0">
+        <unit>px</unit>
+      </param>
+    </param>
+    <param type="group" label="Slider CSS" class="n2-expert">
+      <param type="skin" name="slider-preset" label="Preset" post="break">
+        <shadow label="Light shadow">
+          <slider-css>box-shadow: 1px 0 5px RGBA(0, 0, 0, 0.2), -1px 0 5px RGBA(0, 0, 0, 0.2); </slider-css>
+        </shadow>
+        <shadow2 label="Dark shadow">
+          <slider-css>box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.6);</slider-css>
+        </shadow2>
+        <photo label="Photo">
+          <slider-css>box-shadow: 1px 0 5px RGBA(0, 0, 0, 0.2), -1px 0 5px RGBA(0, 0, 0, 0.2); </slider-css>
+          <border-width>8</border-width>
+          <border-color>FFFFFFFF</border-color>
+        </photo>
+        <roundedphoto label="Photo rounded">
+          <slider-css>box-shadow: 1px 0 5px RGBA(0, 0, 0, 0.2), -1px 0 5px RGBA(0, 0, 0, 0.2); </slider-css>
+          <border-width>5</border-width>
+          <border-color>FFFFFFFF</border-color>
+          <border-radius>12</border-radius>
+        </roundedphoto>
+      </param>
+      <param type="textarea" name="slider-css" default="" label="CSS" style2="width: 500px;resize: vertical;"/></param>
+    <param type="group" label="Slide CSS" class="n2-expert">
+      <param type="skin" name="slide-preset" label="Preset" post="break">
+        <shadow label="Light shadow">
+          <slide-css>
+            <![CDATA[box-shadow: 1px 0 5px RGBA(0, 0, 0, 0.2), -1px 0 5px RGBA(0, 0, 0, 0.2);]]>
+          </slide-css>
+        </shadow>
+        <borderradius label="Border radius">
+          <slide-css>
+            <![CDATA[-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px; box-shadow: 1px 0 5px RGBA(0, 0, 0, 0.2), -1px 0 5px RGBA(0, 0, 0, 0.2); ]]>
+          </slide-css>
+        </borderradius>
+      </param>
+      <param type="textarea" name="slide-css" default="" label="Slide CSS" style2="width: 500px;resize: vertical;"/></param>
+  </params>
+  <params name="showcasedefaultslidertypeanimation" label="Animation settings">
+    <param name="animation-preset" type="skin" label="Preset" fixed="1">
+      <none label="Default">
+        <slide-distance>60</slide-distance>
+        <perspective>1000</perspective>
+        <opacity>0|*|100|*|100|*|100</opacity>
+        <scale>0|*|100|*|100|*|100</scale>
+        <translate-x>0|*|0|*|0|*|0</translate-x>
+        <translate-y>0|*|0|*|0|*|0</translate-y>
+        <translate-z>0|*|0|*|0|*|0</translate-z>
+        <rotate-x>0|*|0|*|0|*|0</rotate-x>
+        <rotate-y>0|*|0|*|0|*|0</rotate-y>
+        <rotate-z>0|*|0|*|0|*|0</rotate-z>
+      </none>
+      <horizontal label="Horizontal showcase">
+        <animation-direction>horizontal</animation-direction>
+        <slide-distance>60</slide-distance>
+        <perspective>1000</perspective>
+        <opacity>0|*|100|*|100|*|100</opacity>
+        <scale>0|*|100|*|100|*|100</scale>
+        <translate-x>0|*|0|*|0|*|0</translate-x>
+        <translate-y>0|*|0|*|0|*|0</translate-y>
+        <translate-z>0|*|0|*|0|*|0</translate-z>
+        <rotate-x>0|*|0|*|0|*|0</rotate-x>
+        <rotate-y>0|*|0|*|0|*|0</rotate-y>
+        <rotate-z>0|*|0|*|0|*|0</rotate-z>
+      </horizontal>
+      <vertical label="Vertical showcase">
+        <animation-direction>vertical</animation-direction>
+        <slide-distance>30</slide-distance>
+        <perspective>1000</perspective>
+        <opacity>0|*|100|*|100|*|100</opacity>
+        <scale>0|*|100|*|100|*|100</scale>
+        <translate-x>0|*|0|*|0|*|0</translate-x>
+        <translate-y>0|*|0|*|0|*|0</translate-y>
+        <translate-z>0|*|0|*|0|*|0</translate-z>
+        <rotate-x>0|*|0|*|0|*|0</rotate-x>
+        <rotate-y>0|*|0|*|0|*|0</rotate-y>
+        <rotate-z>0|*|0|*|0|*|0</rotate-z>
+      </vertical>
+      <horizontalcoverflow label="Horizontal Cover Flow">
+        <animation-direction>horizontal</animation-direction>
+        <slide-distance>10</slide-distance>
+        <perspective>2000</perspective>
+        <opacity>0|*|100|*|100|*|100</opacity>
+        <scale>1|*|70|*|100|*|70</scale>
+        <translate-x>0|*|0|*|0|*|0</translate-x>
+        <translate-y>0|*|0|*|0|*|0</translate-y>
+        <translate-z>0|*|0|*|0|*|0</translate-z>
+        <rotate-x>0|*|0|*|0|*|0</rotate-x>
+        <rotate-y>1|*|45|*|0|*|-45</rotate-y>
+        <rotate-z>0|*|0|*|0|*|0</rotate-z>
+      </horizontalcoverflow>
+      <verticalcoverflow label="Vertical Cover Flow">
+        <animation-direction>vertical</animation-direction>
+        <slide-distance>10</slide-distance>
+        <perspective>2000</perspective>
+        <opacity>0|*|100|*|100|*|100</opacity>
+        <scale>1|*|70|*|100|*|70</scale>
+        <translate-x>0|*|0|*|0|*|0</translate-x>
+        <translate-y>0|*|0|*|0|*|0</translate-y>
+        <translate-z>0|*|0|*|0|*|0</translate-z>
+        <rotate-x>1|*|-45|*|0|*|45</rotate-x>
+        <rotate-y>0|*|0|*|0|*|0</rotate-y>
+        <rotate-z>0|*|0|*|0|*|0</rotate-z>
+      </verticalcoverflow>
+    </param>
+    <param type="group" label="Properties">
+      <param name="animation-duration" type="numberautocomplete" label="Duration" style="width:35px;" default="800" values="1000,1500,2000" min="200">
+        <unit>ms</unit>
+      </param>
+      <param name="animation-delay" type="number" label="Delay" style="width:35px;" default="0" class="n2-expert" min="0">
+        <unit>ms</unit>
+      </param>
+      <param name="animation-easing" type="jqueryeasing" label="Easing" default="easeOutQuad" class="n2-expert"/></param>
+    <param type="group" label="Carousel" tip="If you turn off this option, you can&apos;t switch to the first slide from the last one.">
+      <param name="carousel" type="onoff" label="Enabled" default="1"/>
+      <param name="carousel-slides" type="numberautocomplete" label="Visible slides" style="width:35px;" default="3" values="1,3,5,7" tip="Write how many slides are visible in the preview.">
+        <unit>slides</unit>
+      </param>
+    </param>
+    <param type="radio" name="animation-direction" label="Direction" default="horizontal" translateable="1">
+      <option value="horizontal">Horizontal</option>
+      <option value="vertical">Vertical</option>
+    </param>
+    <param type="numberautocomplete" name="slide-distance" label="Slide distance" style="width:35px;" default="60" values="0,60,150">
+      <unit>px</unit>
+    </param>
+    <param type="numberautocomplete" name="perspective" label="Perspective" style="width:35px;" default="1000" min="0" class="n2-expert" values="0,1000">
+      <unit>px</unit>
+    </param>
+    <param type="mixed" name="opacity" label="Opacity" default="0|*|100|*|100|*|100" class="n2-expert">
+      <param type="onoff" label="Animated"/>
+      <param type="numberautocomplete" label="Before" style="width:30px;" min="0" max="100" values="0,70,100">
+        <unit>%</unit>
+      </param>
+      <param type="numberautocomplete" label="Active" style="width:30px;" min="0" max="100" values="0,70,100">
+        <unit>%</unit>
+      </param>
+      <param type="numberautocomplete" label="After" style="width:30px;" min="0" max="100" values="0,70,100">
+        <unit>%</unit>
+      </param>
+    </param>
+    <param type="mixed" name="scale" label="Scale" default="0|*|100|*|100|*|100" class="n2-expert">
+      <param type="onoff" label="Animated"/>
+      <param type="numberautocomplete" label="Before" style="width:30px;" min="0" values="0,50,80,90,100">
+        <unit>%</unit>
+      </param>
+      <param type="numberautocomplete" label="Active" style="width:30px;" min="0" values="0,50,80,90,100">
+        <unit>%</unit>
+      </param>
+      <param type="numberautocomplete" label="After" style="width:30px;" min="0" values="0,50,80,90,100">
+        <unit>%</unit>
+      </param>
+    </param>
+    <param type="mixed" name="translate-x" label="X" default="0|*|0|*|0|*|0" class="n2-expert">
+      <param type="onoff" label="Animated"/>
+      <param type="numberautocomplete" label="Before" style="width:30px;" values="-100,0,100">
+        <unit>px</unit>
+      </param>
+      <param type="numberautocomplete" label="Active" style="width:30px;" values="-100,0,100">
+        <unit>px</unit>
+      </param>
+      <param type="numberautocomplete" label="After" style="width:30px;" values="-100,0,100">
+        <unit>px</unit>
+      </param>
+    </param>
+    <param type="mixed" name="translate-y" label="Y" default="0|*|0|*|0|*|0" class="n2-expert">
+      <param type="onoff" label="Animated"/>
+      <param type="numberautocomplete" label="Before" style="width:30px;" values="-100,0,100">
+        <unit>px</unit>
+      </param>
+      <param type="numberautocomplete" label="Active" style="width:30px;" values="-100,0,100">
+        <unit>px</unit>
+      </param>
+      <param type="numberautocomplete" label="After" style="width:30px;" values="-100,0,100">
+        <unit>px</unit>
+      </param>
+    </param>
+    <param type="mixed" name="translate-z" label="Z" default="0|*|0|*|0|*|0" class="n2-expert">
+      <param type="onoff" label="Animated"/>
+      <param type="numberautocomplete" label="Before" style="width:30px;" values="-100,0,100">
+        <unit>px</unit>
+      </param>
+      <param type="numberautocomplete" label="Active" style="width:30px;" values="-100,0,100">
+        <unit>px</unit>
+      </param>
+      <param type="numberautocomplete" label="After" style="width:30px;" values="-100,0,100">
+        <unit>px</unit>
+      </param>
+    </param>
+    <param type="mixed" name="rotate-x" label="Rotate X" default="0|*|0|*|0|*|0" class="n2-expert">
+      <param type="onoff" label="Animated"/>
+      <param type="numberautocomplete" label="Before" style="width:30px;" values="-60,-30,0,60,30">
+        <unit>deg</unit>
+      </param>
+      <param type="numberautocomplete" label="Active" style="width:30px;" values="-60,-30,0,60,30">
+        <unit>deg</unit>
+      </param>
+      <param type="numberautocomplete" label="After" style="width:30px;" values="-60,-30,0,60,30">
+        <unit>deg</unit>
+      </param>
+    </param>
+    <param type="mixed" name="rotate-y" label="Rotate Y" default="0|*|0|*|0|*|0" class="n2-expert">
+      <param type="onoff" label="Animated"/>
+      <param type="numberautocomplete" label="Before" style="width:30px;" values="-60,-30,0,60,30">
+        <unit>deg</unit>
+      </param>
+      <param type="numberautocomplete" label="Active" style="width:30px;" values="-60,-30,0,60,30">
+        <unit>deg</unit>
+      </param>
+      <param type="numberautocomplete" label="After" style="width:30px;" values="-60,-30,0,60,30">
+        <unit>deg</unit>
+      </param>
+    </param>
+    <param type="mixed" name="rotate-z" label="Rotate Z" default="0|*|0|*|0|*|0" class="n2-expert">
+      <param type="onoff" label="Animated"/>
+      <param type="numberautocomplete" label="Before" style="width:30px;" values="-60,-30,0,60,30">
+        <unit>deg</unit>
+      </param>
+      <param type="numberautocomplete" label="Active" style="width:30px;" values="-60,-30,0,60,30">
+        <unit>deg</unit>
+      </param>
+      <param type="numberautocomplete" label="After" style="width:30px;" values="-60,-30,0,60,30">
+        <unit>deg</unit>
+      </param>
+    </param>
+  </params>
+</root>

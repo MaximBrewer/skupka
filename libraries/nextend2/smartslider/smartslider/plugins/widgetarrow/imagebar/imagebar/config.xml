@@ -1,0 +1,14 @@
+<root>
+  <params name="image" label="Image settings" hidetitle="1">
+    <param type="number" name="widget-arrow-width" label="Width" style="width:40px;">
+      <unit>px</unit>
+    </param>
+    <param type="group" label="Previous">
+      <param type="imagelistfromfolder" name="widget-arrow-previous" label="Shape" folder="previous" required="1" post="break"/>
+      <param type="color" name="widget-arrow-previous-color" label="Color" alpha="1"/></param>
+    <param type="mirror" name="widget-arrow-mirror" label="Mirror" class="n2-expert"/>
+    <param type="group" label="Next" class="n2-expert">
+      <param type="imagelistfromfolder" name="widget-arrow-next" label="Shape" folder="next" required="1" post="break"/>
+      <param type="color" name="widget-arrow-next-color" label="Color" alpha="1"/></param>
+  </params>
+</root>

@@ -1,0 +1,11 @@
+<root>
+    <params name="filter" label="Filter">
+        <param type="text" name="page" label="Page" default="Nextendweb"/>
+        <param type="radio" name="endpoint" label="Type" default="posts">
+            <option value="posts">Posts</option>
+            <option value="feed">Feed</option>
+            <!-- statuses field is deprecated for versions v2.4 and higher
+            <option value="statuses">Statuses</option> -->
+        </param>
+    </params>
+</root>

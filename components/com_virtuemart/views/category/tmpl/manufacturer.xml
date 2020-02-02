@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_VIRTUEMART_CATEGORY_VIEW_MANUFACTURER_TITLE">
+		<message><![CDATA[COM_VIRTUEMART_CATEGORY_VIEW_MANUFACTURER_DESC]]></message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request"
+			addfieldpath="/administrator/components/com_virtuemart/fields">
+      		<field name="virtuemart_manufacturer_id" type="manufacturer"
+      			default="0"
+        		label="COM_VIRTUEMART_MANUFACTURER_FIELD_SELECT_TITLE"
+				extension="com_virtuemart"
+        		required="true"
+        		description="COM_VIRTUEMART_MANUFACTURER_FIELD_SELECT_TITLE_DESC" />
+      		<field name="showcategories" type="radio" default="0"
+	    		label="COM_VIRTUEMART_CATEGORY_FIELD_SELECT_SHOWCATEGORIES"
+        		extension="com_virtuemart"
+        		description="COM_VIRTUEMART_CATEGORY_FIELD_SELECT_SHOWCATEGORIES_DESC" >
+        		<option value="1">JYES</option>
+        		<option value="0">JNO</option>
+      		</field>
+      		<field name="showdescription" type="radio" default="1"
+	    		label="COM_VIRTUEMART_CATEGORY_FIELD_SELECT_SHOWDESCRIPTION"
+        		extension="com_virtuemart"
+        		description="COM_VIRTUEMART_CATEGORY_FIELD_SELECT_SHOWDESCRIPTION_DESC" >
+        		<option value="1">JYES</option>
+        		<option value="0">JNO</option>
+      		</field>
+      		<field name="showproducts" type="radio" default="1"
+	    		label="COM_VIRTUEMART_CATEGORY_FIELD_SELECT_SHOWPROD"
+        		extension="com_virtuemart"
+        		description="COM_VIRTUEMART_CATEGORY_FIELD_SELECT_SHOWPROD_DESC" >
+        		<option value="1">JYES</option>
+        		<option value="0">JNO</option>
+      		</field>
+		</fieldset>
+	</fields>
+</metadata>
+

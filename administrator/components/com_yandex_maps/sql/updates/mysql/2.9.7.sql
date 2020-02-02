@@ -1,0 +1,1 @@
+ALTER TABLE  `#__yandex_maps_organizations` ADD  `organization_self_schedule_text` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT  'График работы в произвольном формате' AFTER `organization_shedule_days`;

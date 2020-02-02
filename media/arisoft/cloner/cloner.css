@@ -1,0 +1,13 @@
+.ari-cloner-container TABLE.ari-table-flex {
+	width: auto;
+}
+
+.ari-cloner-container.ari-flex-width {
+	width: auto;
+	display: inline-block;
+}
+
+.ari-cloner-templates-holder .ari-cloner-template:first-child .ari-cloner-moveup-item,
+.ari-cloner-templates-holder .ari-cloner-template:last-child .ari-cloner-movedown-item {
+	display: none;
+}

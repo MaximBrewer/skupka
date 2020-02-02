@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>OPC Tracking - Zanox.com</name>
+    <creationDate>Oct 2013</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>Zanox.com Tracking</description>
+    <files>
+        <filename>zanox.php</filename>
+    </files>
+
+<params>
+    
+    
+			<param
+        type="text"
+        name="zanox_url"
+        id="zanox_url"
+        label="Zanox.com URL"
+        description="Enter your zanox.com URL"
+        size="80"
+		default="http://ad.zanox.com/pps/?13848C172420102"
+        maxLength="255" />
+		
+		<param
+        type="text"
+        name="partner_id"
+        id="partner_id"
+        label="Zanox.com partner_id"
+        description="Enter your zanox.com partner_id"
+        size="80"
+		default="0"
+        maxLength="255" />
+			
+		
+			<param
+        type="text"
+        name="mode"
+        id="mode"
+        label="Mode"
+        description="Select mode"
+		default="1"
+        size="80"
+        maxLength="255" />
+		
+			<param
+        type="text"
+        name="parner_id"
+        id="parner_id"
+        label="Partner ID"
+        description="Enter your ID"
+		default=""
+        size="80"
+        maxLength="255" />
+		
+			
+		
+       
+    
+</params>	
+</extension>

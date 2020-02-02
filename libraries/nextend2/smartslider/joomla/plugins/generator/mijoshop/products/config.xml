@@ -1,0 +1,32 @@
+<root>
+    <params name="mijoshopproducts" label="Filter">
+        <param type="group" label="Source">
+            <param name="mijoshopsourcecategories" label="Categories" type="mijoshopcategories" default="0"
+                   multiple="1" size="10"/>
+            <param name="mijoshopsourcemanufacturers" label="Manufacturers" type="mijoshopmanufacturers" default="0"
+                   multiple="1" size="10"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="mijoshopsourcespecial" label="Special" type="filter" default="0"/>
+            <param name="mijoshopsourceinstock" label="In stock" type="filter" default="0"/>
+            <param name="mijoshopsourcelanguage" label="Language filter" type="mijoshoplanguages" default=""/>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="mijoshoporder" type="mixed" label="Order" default="p.date_added|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="pc.name">Product name</option>
+                <option value="p.sort_order">Ordering</option>
+                <option value="p.viewed">Viewed</option>
+                <option value="p.price">Price</option>
+                <option value="p.date_added">Creation time</option>
+                <option value="p.date_modified">Modification time</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

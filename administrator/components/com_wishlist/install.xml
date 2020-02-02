@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/2.5/component-install.dtd">
+<extension type="component" version="3.0" method="upgrade">
+<name>COM_WISHLIST</name>
+<creationDate>October 2014</creationDate>
+<author>2KWeb Solutions</author>
+<authorEmail>support@vmwishlist.com</authorEmail>
+<authorUrl>http://www.vmwishlist.com</authorUrl>
+<copyright>(C) 2KWeb 2013 - All rights reserved.</copyright>
+<license>GNU/GPL v3</license>
+<!--  The version string is recorded in the components table -->
+<version>4.2</version>
+<!-- The description is optional and defaults to the name -->
+ <description>
+    <![CDATA[<p><font color="#FF0000" style="font-size:16px"><b>THANK YOU FOR INSTALLING THE VIRTUEMART FAVORITE &amp; WISHLIST COMPONENT!</b></font></p>
+    <p>
+    <br /><b>REMEMBER TO:</b>
+	<ul>
+    <li>Install the Virtuemart Wishlist Products Module (mod_virtuemart_wishlist_products.zip)</li>
+    <li>Install the Virtuemart Share Wishlist Module (mod_virtuemart_wishlist_sharelist.zip)</li>
+	<li>Install the Virtuemart Wishlist Stats Module (mod_virtuemart_wishlist_stats.zip)</li>
+	<li><b>NOTE:</b> IF you want to enable Wishlist for Guests be sure to <b>INSTALL & ENABLE</b> the Wishlist Plugin plg_user_wishlist.zip</li>
+	<li>Click on Component->Favorites &amp; Wishlist: click on "Options" icon (top-right corner) and enter the <b>Licence Key</b>.<br />If you have not received it, please <a href="http://core.2kweb.eu/customers" target="_blank"><b>Click Here</b></a> and Login to the <b>Customer Area</b> to check you order status or to open a support ticket</li>
+	<li>Read the Step 5 inside the "README_INSTALLATION.html" file to customize your Joomla/Virtuemart Template</li> 
+    </ul>
+	</p>
+	<br /> 
+	<a href="http://www.facebook.com/VMWishlist" target="_blank" style="cursor:help;">Follow us on <b>Facebook</b></a>   
+	<br />  
+    <a href="http://forum.virtuemart.net/index.php?topic=53768" target="_blank" style="cursor:help;">Follow us on Virtuemart Forum</a> 
+    <br />
+    <br />Online Support Desk:
+    <a href="http://core.2kweb.eu/customers" target="_blank" style="cursor:help;">2KWeb Support</a>
+    <br /><br /><b>Do not forget to leave your feedback on:</b>
+    <br /><a href="http://extensions.joomla.org/extensions/extension-specific/virtuemart-extensions/8149/details" target="_blank" style="cursor:help;">Joomla Extension Directory</a>
+    <br /><a href="http://extensions.virtuemart.net/index.php?option=com_sobi2&sobi2Task=sobi2Details&catid=0&sobi2Id=128&Itemid=2" target="_blank" style="cursor:help;">Virtuemart Extension Directory</a>
+  </p>]]>
+  </description>
+<!-- Site Main File Copy Section -->
+<files folder="site">
+<filename>index.html</filename>
+<filename>wishlist.php</filename>
+<filename>controller.php</filename>
+<filename>template.css</filename>
+<filename>views/index.html</filename>
+<filename>models/index.html</filename>
+<filename>views/sharelist/index.html</filename>
+<filename>views/sharelist/view.html.php</filename>
+<filename>views/sharelist/metadata.xml</filename>
+<filename>views/sharelist/tmpl/default.xml</filename>
+<filename>views/sharelist/tmpl/default.php</filename>
+<filename>views/sharelist/tmpl/index.html</filename>
+<filename>models/sharelist.php</filename>
+<filename>views/favoritessh/index.html</filename>
+<filename>views/favoritessh/view.html.php</filename>
+<filename>views/favoritessh/metadata.xml</filename>
+<filename>views/favoritessh/tmpl/default.xml</filename>
+<filename>views/favoritessh/tmpl/default.php</filename>
+<filename>views/favoritessh/tmpl/index.html</filename>
+<filename>models/favoritessh.php</filename>
+<filename>views/favoriteslist/index.html</filename>
+<filename>views/favoriteslist/view.html.php</filename>
+<filename>views/favoriteslist/metadata.xml</filename>
+<filename>views/favoriteslist/tmpl/default.xml</filename>
+<filename>views/favoriteslist/tmpl/default.php</filename>
+<filename>views/favoriteslist/tmpl/index.html</filename>
+<filename>models/favoriteslist.php</filename>
+<filename>views/favoritesshlist/index.html</filename>
+<filename>views/favoritesshlist/view.html.php</filename>
+<filename>views/favoritesshlist/metadata.xml</filename>
+<filename>views/favoritesshlist/tmpl/default.xml</filename>
+<filename>views/favoritesshlist/tmpl/default.php</filename>
+<filename>views/favoritesshlist/tmpl/index.html</filename>
+<filename>template/addtofavorites_form.tpl.php</filename>
+<filename>models/favoritesshlist.php</filename>
+<filename>images/addfav_button.png</filename>
+<filename>images/delfav_button.png</filename>
+<filename>images/favorites.png</filename>
+<filename>images/wishlist.png</filename>
+<filename>images/heart_add_to_fav_button.png</filename>
+<filename>images/star_add_to_fav_button.png</filename>
+<filename>images/sprite.png</filename>
+</files>
+<!-- Install Database Section -->
+<install>
+<sql>
+<file charset="utf8" driver="mysql">sql/install.mysql.utf8.sql</file>
+</sql>
+</install>
+<!-- Uninstall Database Section -->
+<uninstall>
+<sql>
+<file charset="utf8" driver="mysql">sql/uninstall.sql</file>
+</sql>
+</uninstall>
+<update>
+	<schemas>
+			<schemapath type="mysql">sql/updates</schemapath>
+	</schemas>
+</update>
+<!-- Site Language File Copy Section -->
+<languages folder="site">
+<language tag="en-GB">languages/en-GB.com_wishlist.ini</language>
+</languages>
+<administration>
+<!-- Administration Menu Section -->
+<menu img="../administrator/components/com_wishlist/images/favorites.png">COM_FAVORITES_WISHLIST</menu>
+<!-- Administration Main File Copy Section -->
+<files folder="admin">
+<filename>index.html</filename>
+<filename>wishlist.php</filename>
+<filename>controller.php</filename>
+<filename>config.xml</filename>
+<filename>access.xml</filename>
+<filename>controllers/index.html</filename>
+<filename>models/index.html</filename>
+<filename>tables/index.html</filename>
+<filename>views/index.html</filename>
+<filename>views/josusers/index.html</filename>
+<filename>views/josusers/view.html.php</filename>
+<filename>views/josusers/tmpl/default.php</filename>
+<filename>views/josusers/tmpl/index.html</filename>
+<filename>models/josusers.php</filename>
+<filename>controllers/josusers.php</filename>
+<filename>tables/josusers.php</filename>
+<filename>views/favorites/index.html</filename>
+<filename>views/favorites/view.html.php</filename>
+<filename>views/favorites/tmpl/default.php</filename>
+<filename>views/favorites/tmpl/index.html</filename>
+<filename>models/favorites.php</filename>
+<filename>controllers/favorites.php</filename>
+<filename>tables/favorites.php</filename>
+<filename>views/favoriteslog/index.html</filename>
+<filename>views/favoriteslog/view.html.php</filename>
+<filename>views/favoriteslog/tmpl/default.php</filename>
+<filename>views/favoriteslog/tmpl/index.html</filename>
+<filename>models/favoriteslog.php</filename>
+<filename>controllers/favoriteslog.php</filename>
+<filename>tables/favoriteslog.php</filename>
+<filename>views/favoritessh/index.html</filename>
+<filename>views/favoritessh/view.html.php</filename>
+<filename>views/favoritessh/tmpl/default.php</filename>
+<filename>views/favoritessh/tmpl/index.html</filename>
+<filename>models/favoritessh.php</filename>
+<filename>controllers/favoritessh.php</filename>
+<filename>tables/favoritessh.php</filename>
+<filename>views/product/index.html</filename>
+<filename>views/product/view.html.php</filename>
+<filename>views/product/tmpl/default.php</filename>
+<filename>views/product/tmpl/index.html</filename>
+<filename>models/product.php</filename>
+<filename>controllers/product.php</filename>
+<filename>tables/product.php</filename>
+<filename>views/josuserslist/index.html</filename>
+<filename>views/josuserslist/view.html.php</filename>
+<filename>views/josuserslist/tmpl/default.php</filename>
+<filename>views/josuserslist/tmpl/index.html</filename>
+<filename>models/josuserslist.php</filename>
+<filename>controllers/josuserslist.php</filename>
+<filename>views/favoriteslist/index.html</filename>
+<filename>views/favoriteslist/view.html.php</filename>
+<filename>views/favoriteslist/tmpl/default.php</filename>
+<filename>views/favoriteslist/tmpl/index.html</filename>
+<filename>models/favoriteslist.php</filename>
+<filename>controllers/favoriteslist.php</filename>
+<filename>views/favoritesloglist/index.html</filename>
+<filename>views/favoritesloglist/view.html.php</filename>
+<filename>views/favoritesloglist/tmpl/default.php</filename>
+<filename>views/favoritesloglist/tmpl/index.html</filename>
+<filename>models/favoritesloglist.php</filename>
+<filename>controllers/favoritesloglist.php</filename>
+<filename>views/favoritesshlist/index.html</filename>
+<filename>views/favoritesshlist/view.html.php</filename>
+<filename>views/favoritesshlist/tmpl/default.php</filename>
+<filename>views/favoritesshlist/tmpl/index.html</filename>
+<filename>models/favoritesshlist.php</filename>
+<filename>controllers/favoritesshlist.php</filename>
+<filename>views/productlist/index.html</filename>
+<filename>views/productlist/view.html.php</filename>
+<filename>views/productlist/tmpl/default.php</filename>
+<filename>views/productlist/tmpl/index.html</filename>
+<filename>models/productlist.php</filename>
+<filename>controllers/productlist.php</filename>
+<filename>template.css</filename>
+<filename>images/index.html</filename>	
+<filename>images/wishlist_icon.png</filename>
+<filename>images/favorites.png</filename>
+<filename>images/addfav_button.png</filename>
+<filename>images/delfav_button.png</filename>
+<filename>sql/install.mysql.utf8.sql</filename>
+<filename>sql/uninstall.sql</filename>
+<filename>sql/updates/4.0.0.sql</filename>
+<filename>sql/updates/4.0.1.sql</filename>
+<filename>sql/updates/4.0.2.sql</filename>
+<filename>sql/updates/4.0.3.sql</filename>
+<filename>sql/updates/4.1.0.sql</filename>
+<filename>sql/updates/4.1.1.sql</filename>
+</files>
+<!-- Administration Language File Copy Section -->
+<languages folder="admin">
+<language tag="en-GB">languages/en-GB.com_wishlist.ini</language>
+<language tag="en-GB">languages/en-GB.com_wishlist.sys.ini</language>
+</languages>
+<!-- Administration Main Media File Copy Section -->
+<media folder="admin" destination="com_wishlist/images">
+<filename>images/favorites.png</filename>
+</media>
+</administration>
+</extension>

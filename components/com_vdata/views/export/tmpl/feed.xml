@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_VDATA_SCHEDULES_VIEW_FEED_TITLE" option="COM_VDATA_schedules_view_feed_option">
+		<message>
+			<![CDATA[COM_VDATA_SCHEDULES_VIEW_FEED_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request">
+			<field 
+				name="type"
+				type="sql"
+				query="SELECT uid, title FROM #__vd_schedules where iotype=2 and state=1"
+				label="COM_VDATA_FEED"
+				description="COM_VDATA_FEED_DESC"
+				key_field="uid"
+				value_field="title"
+				required="true"
+			/>
+			<field name="task" type="hidden" default="get_feeds" />
+		</fieldset>
+	</fields>
+
+	<fields name="params">
+
+		<!-- Basic options. -->
+		<!-- <fieldset name="basic"
+			label="COM_VDATA_ATTRIBS_FEED_SELECT_LABEL">
+
+		
+		</fieldset> -->
+	</fields>
+</metadata>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+  <params>
+    <param name="themeskin" type="offlajnskin" default="steelblue" size="5" label="Theme skin" description="">
+      <steelblue>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>ffffff|*|3|*|4b91b5|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Open Sans","color":"ffffff","size":"22||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Open Sans","subset":"Latin","size":"20||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-4b91b5-4b91b5</btngrad>
+        <hovergrad>1-65a8ca-65a8ca</hovergrad>
+        <buttoncomb>4|*|4b91b5</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|40||px|*|d8d8d8|*|0|*|</txtcomb>
+        <checkboxcolor>d8d8d8</checkboxcolor>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Open Sans","size":"20||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"1186bb","underline":"0"}}</textfont>
+        <smalltext>14||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </steelblue>
+
+      <royalblue>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>ffffff|*|3|*|4b6bb5|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Open Sans","color":"ffffff","size":"22||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Open Sans","subset":"Latin","size":"20||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-4b6bb5-4b6bb5</btngrad>
+        <hovergrad>1-6583c9-6583c9</hovergrad>
+        <buttoncomb>4|*|4b6bb5</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|40||px|*|d8d8d8|*|0|*|</txtcomb>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Open Sans","size":"20||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"4b6bb5","underline":"0"}}</textfont>
+        <checkboxcolor>d8d8d8</checkboxcolor>
+        <smalltext>14||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </royalblue>
+
+      <red>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>ffffff|*|3|*|de5243|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Open Sans","color":"ffffff","size":"22||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Open Sans","subset":"Latin","size":"20||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-de5243-de5243</btngrad>
+        <hovergrad>1-eb6556-eb6556</hovergrad>
+        <buttoncomb>4|*|de5243</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|40||px|*|d8d8d8|*|0|*|</txtcomb>
+        <checkboxcolor>d8d8d8</checkboxcolor>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Open Sans","size":"20||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"d34232","underline":"0"}}</textfont>
+        <smalltext>14||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </red>
+
+      <darkorange>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>ffffff|*|3|*|de7a22|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Open Sans","color":"ffffff","size":"22||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Open Sans","subset":"Latin","size":"20||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-de7a22-de7a22</btngrad>
+        <hovergrad>1-e28c40-e28c40</hovergrad>
+        <buttoncomb>4|*|de7a22</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|40||px|*|d8d8d8|*|0|*|</txtcomb>
+        <checkboxcolor>d8d8d8</checkboxcolor>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Open Sans","size":"20||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"de7a22","underline":"0"}}</textfont>
+        <smalltext>14||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </darkorange>
+
+      <olive>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>ffffff|*|3|*|8eb65b|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Open Sans","color":"ffffff","size":"22||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Open Sans","subset":"Latin","size":"20||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-8eb65b-8eb65b</btngrad>
+        <hovergrad>1-97c55d-97c55d</hovergrad>
+        <buttoncomb>4|*|8eb65b</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|40||px|*|d8d8d8|*|0|*|</txtcomb>
+        <checkboxcolor>d8d8d8</checkboxcolor>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Open Sans","size":"20||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"6d9736","underline":"0"}}</textfont>
+        <smalltext>14||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </olive>
+
+      <dimgray>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>ffffff|*|3|*|646464|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Open Sans","color":"ffffff","size":"22||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Open Sans","subset":"Latin","size":"20||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-646464-646464</btngrad>
+        <hovergrad>1-8c8b8b-8c8b8b</hovergrad>
+        <buttoncomb>4|*|646464</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|40||px|*|d8d8d8|*|0|*|</txtcomb>
+        <checkboxcolor>d8d8d8</checkboxcolor>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Open Sans","size":"20||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"646464","underline":"0"}}</textfont>
+        <smalltext>14||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </dimgray>
+      
+      <mediumpurple>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>ffffff|*|3|*|9c51f1|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Open Sans","color":"ffffff","size":"22||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Open Sans","subset":"Latin","size":"20||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-9c51f1-9c51f1</btngrad>
+        <hovergrad>1-ab68f7-ab68f7</hovergrad>
+        <buttoncomb>4|*|9c51f1</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|40||px|*|d8d8d8|*|0|*|</txtcomb>
+        <checkboxcolor>d8d8d8</checkboxcolor>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Open Sans","size":"20||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"7a32cc","underline":"0"}}</textfont>
+        <smalltext>14||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </mediumpurple>
+
+      <lightseegreen>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>ffffff|*|3|*|1fbba6|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Open Sans","color":"ffffff","size":"22||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Open Sans","subset":"Latin","size":"20||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-1fbba6-1fbba6</btngrad>
+        <hovergrad>1-4dd7c4-4dd7c4</hovergrad>
+        <buttoncomb>4|*|1fbba6</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|40||px|*|d8d8d8|*|0|*|</txtcomb>
+        <checkboxcolor>d8d8d8</checkboxcolor>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Open Sans","size":"20||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"15a08d","underline":"0"}}</textfont>
+        <smalltext>14||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </lightseegreen>
+
+      <steelblue_dark>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>434d54|*|3|*|4b91b5|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","color":"ffffff","size":"25||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Yanone Kaffeesatz","subset":"Latin","size":"25||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-4b91b5-4b91b5</btngrad>
+        <hovergrad>1-65a8ca-65a8ca</hovergrad>
+        <buttoncomb>4|*|4b91b5</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|47||px|*|434d54|*|0|*|</txtcomb>
+        <checkboxcolor>989898</checkboxcolor>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","size":"25||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"7fafbd","underline":"0"}}</textfont>
+        <smalltext>18||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </steelblue_dark>
+
+      <orchid_dark>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>4e4354|*|3|*|b54b87|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","color":"ffffff","size":"25||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Yanone Kaffeesatz","subset":"Latin","size":"25||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-b54b87-b54b87</btngrad>
+        <hovergrad>1-bd6295-bd6295</hovergrad>
+        <buttoncomb>4|*|b54b87</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|47||px|*|4e4354|*|0|*|</txtcomb>
+        <checkboxcolor>989898</checkboxcolor>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","size":"25||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"e4bad2","underline":"0"}}</textfont>
+        <smalltext>18||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </orchid_dark>
+
+      <amethyst_dark>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>504354|*|3|*|8e4bb5|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","color":"ffffff","size":"25||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Yanone Kaffeesatz","subset":"Latin","size":"25||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-8e4bb5-8e4bb5</btngrad>
+        <hovergrad>1-a66dc7-a66dc7</hovergrad>
+        <buttoncomb>4|*|8e4bb5</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|47||px|*|504354|*|0|*|</txtcomb>
+        <checkboxcolor>989898</checkboxcolor>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","size":"25||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"dabae4","underline":"0"}}</textfont>
+        <smalltext>18||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </amethyst_dark>
+
+      <mediumaquamarine_dark>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>434754|*|3|*|4bb5a5|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","color":"ffffff","size":"25||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Yanone Kaffeesatz","subset":"Latin","size":"25||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-4bb5a5-4bb5a5</btngrad>
+        <hovergrad>1-71c1b5-71c1b5</hovergrad>
+        <buttoncomb>4|*|4bb5a5</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|47||px|*|434754|*|0|*|</txtcomb>
+        <checkboxcolor>989898</checkboxcolor>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","size":"25||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"bae4d4","underline":"0"}}</textfont>
+        <smalltext>18||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </mediumaquamarine_dark>
+
+      <limegreen_dark>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>434754|*|3|*|4bb54d|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","color":"ffffff","size":"25||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Yanone Kaffeesatz","subset":"Latin","size":"25||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-4bb54d-4bb54d</btngrad>
+        <hovergrad>1-6bbd6d-6bbd6d</hovergrad>
+        <buttoncomb>4|*|4bb54d</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|47||px|*|434754|*|0|*|</txtcomb>
+        <checkboxcolor>989898</checkboxcolor>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","size":"25||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"bae4d4","underline":"0"}}</textfont>
+        <smalltext>18||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </limegreen_dark>
+
+      <lightgreen_dark>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>494354|*|3|*|7fb54b|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","color":"ffffff","size":"25||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Yanone Kaffeesatz","subset":"Latin","size":"25||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-7fb54b-7fb54b</btngrad>
+        <hovergrad>1-94bb6f-94bb6f</hovergrad>
+        <buttoncomb>4|*|7fb54b</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|47||px|*|494354|*|0|*|</txtcomb>
+        <checkboxcolor>989898</checkboxcolor>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","size":"25||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"d9e4ba","underline":"0"}}</textfont>
+        <smalltext>18||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </lightgreen_dark>
+
+      <peru_dark>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>544643|*|3|*|b5844b|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","color":"ffffff","size":"25||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Yanone Kaffeesatz","subset":"Latin","size":"25||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-b5844b-b5844b</btngrad>
+        <hovergrad>1-bd986d-bd986d</hovergrad>
+        <buttoncomb>4|*|b5844b</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|47||px|*|544643|*|0|*|</txtcomb>
+        <checkboxcolor>989898</checkboxcolor>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","size":"25||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"e4ceba","underline":"0"}}</textfont>
+        <smalltext>18||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </peru_dark>
+
+      <indianred_dark>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>4a4354|*|3|*|b54b4b|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","color":"ffffff","size":"25||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Yanone Kaffeesatz","subset":"Latin","size":"25||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-b54b4b-b54b4b</btngrad>
+        <hovergrad>1-bb6767-bb6767</hovergrad>
+        <buttoncomb>4|*|b54b4b</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|47||px|*|4a4354|*|0|*|</txtcomb>
+        <checkboxcolor>989898</checkboxcolor>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","size":"25||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"e4baba","underline":"0"}}</textfont>
+        <smalltext>18||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </indianred_dark>
+
+      <black_dark>
+        <blackoutcomb>40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png</blackoutcomb>
+        <popupcomb>434a54|*|3|*|1e1e1e|*|7|*|1</popupcomb>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","color":"ffffff","size":"25||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Yanone Kaffeesatz","subset":"Latin","size":"25||px","color":"ffffff","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <btngrad>1-1e1e1e-1e1e1e</btngrad>
+        <hovergrad>1-2e2e2e-2e2e2e</hovergrad>
+        <buttoncomb>4|*|1e1e1e</buttoncomb>
+        <txtcomb>ffffff|*|ffffff|*|47||px|*|434a54|*|0|*|</txtcomb>
+        <checkboxcolor>989898</checkboxcolor>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","size":"25||px","color":"a1a1a1","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"color":"1685d7","underline":"0"},"Hover":{"color":"d9d9d9","underline":"0"}}</textfont>
+        <smalltext>18||px</smalltext>
+        <errorcolor>ffffff</errorcolor>
+        <errorgrad>1-de5243-de5243</errorgrad>
+        <hintcolor>5e5e5e</hintcolor>
+        <hintgrad>1-FFFFFF-F5F5F5</hintgrad>
+      </black_dark>
+
+    </param>
+    <param name="fontskin" type="offlajnskin" default="carme" size="5" label="Font skin" description="">
+      <opensans>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Open Sans","size":"22||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Open Sans","subset":"Latin","size":"20||px","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Open Sans","size":"20||px","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"underline":"0"},"Hover":{"underline":"0"}}</textfont>
+        <smalltext>14||px</smalltext>
+      </opensans>
+      <yanonekaffeesatz>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","size":"25||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Yanone Kaffeesatz","subset":"Latin","size":"25||px","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"300"}}</btnfont>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Yanone Kaffeesatz","size":"25||px","afont":"Helvetica||1","underline":"0","textdecor":"300"},"Link":{"underline":"0"},"Hover":{"underline":"0"}}</textfont>
+        <smalltext>18||px</smalltext>
+      </yanonekaffeesatz>
+      <annieuseyourtelescope>
+        <titlefont>{"Text":{"lineheight":"30px","type":"Latin","subset":"Latin","family":"Annie Use Your Telescope","size":"21||px","align":"left","afont":"Helvetica||1","bold":"0","textdecor":"400"}}</titlefont>
+        <btnfont>{"Text":{"lineheight":"normal","type":"Latin","family":"Annie Use Your Telescope","subset":"Latin","size":"20||px","tshadow":"1||px|*|1||px|*|0|*|00000000|*|0|*|","afont":"Helvetica||1","bold":"0","textdecor":"400"}}</btnfont>
+        <textfont>{"Text":{"lineheight":"normal","type":"Latin","subset":"Latin","family":"Annie Use Your Telescope","size":"20||px","afont":"Helvetica||1","underline":"0","textdecor":"400"},"Link":{"underline":"0"},"Hover":{"underline":"0"}}</textfont>
+        <smalltext>15||px</smalltext>
+      </annieuseyourtelescope>
+    </param>
+    
+    <param type="offlajncombine" name="blackoutcomb" default="40|*|/modules/mod_improved_ajax_login/themes/flat/images/samples/ptrn1.png" label="BLACKOUT">
+      <param type="offlajntext" validation="int" size="2" label="OPACITY" description="">
+        <unit>%</unit>
+      </param>
+      <param type="offlajnimagemanager" label="PATTERN" folder="/modules/mod_improved_ajax_login/themes/flat/images/samples/"/>
+    </param>
+    <param type="offlajncombine" name="popupcomb" default="ffffff|*|3|*|4b91b5|*|7|*|1" label="LOGIN_WINDOW">
+      <param alpha="0" type="offlajncolor" size="7" label="BACKGROUND" />
+      <param type="offlajnhidden" />
+      <param type="offlajnclear"/>
+      <param alpha="0" type="offlajncolor" size="7" label="BORDER_COLOR" />
+      <param type="offlajnhidden" />
+      <param type="offlajnclear"/>
+      <param type="offlajnlist" label="ANIMATION_TYPE">
+        <option value="0">RANDOM</option>
+        <option value="1">FADE_IN_AND_SCALE_UP</option>
+        <option value="2">SLIDE_FROM_THE_RIGHT</option>
+        <option value="4">NEWSPAPER</option>
+        <option value="5">FALL</option>
+        <option value="6">SIDE_FALL</option>
+        <option value="8">3D_FLIP_HORIZONTAL</option>
+        <option value="9">3D_FLIP_VERTICAL</option>
+        <option value="11">SUPER_SCALED</option>
+        <option value="13">3D slit</option>
+        <option value="14">3D_ROTATE_FROM_BOTTOM</option>
+        <option value="15">3D_ROTATE_FROM_LEFT</option>
+        <option value="17">SUPER_SLIDE_IN_FROM_BOTTOM</option>
+        <option value="18">SUPER_SLIDE_IN_FROM_RIGHT</option>
+        <option value="19">BLUR</option>
+        <option value="20">GREYSCALE</option>
+      </param>
+    </param>
+    <param name="titlefont" type="offlajnfont" tabs="Text" alpha="1" default="{&quot;Text&quot;:{&quot;lineheight&quot;:&quot;30px&quot;,&quot;type&quot;:&quot;Latin&quot;,&quot;subset&quot;:&quot;Latin&quot;,&quot;family&quot;:&quot;Open Sans&quot;,&quot;color&quot;:&quot;ffffff&quot;,&quot;size&quot;:&quot;22||px&quot;,&quot;align&quot;:&quot;left&quot;,&quot;afont&quot;:&quot;Helvetica||1&quot;,&quot;bold&quot;:&quot;0&quot;,&quot;textdecor&quot;:&quot;300&quot;}}" label="LOGIN_HEADER_FONT" />
+    <param name="btnfont" type="offlajnfont" tabs="Text" alpha="1" default="{&quot;Text&quot;:{&quot;lineheight&quot;:&quot;normal&quot;,&quot;type&quot;:&quot;Latin&quot;,&quot;family&quot;:&quot;Open Sans&quot;,&quot;subset&quot;:&quot;Latin&quot;,&quot;size&quot;:&quot;20||px&quot;,&quot;color&quot;:&quot;ffffff&quot;,&quot;tshadow&quot;:&quot;1||px|*|1||px|*|0|*|00000000|*|0|*|&quot;,&quot;afont&quot;:&quot;Helvetica||1&quot;,&quot;bold&quot;:&quot;0&quot;,&quot;textdecor&quot;:&quot;300&quot;}}" label="BUTTON_FONT" />
+    <param name="btngrad" type="offlajngradient" onoff="0" default="1-4b91b5-4b91b5" size="15" label="BUTTON_BACKGROUND" description="" />
+    <param name="hovergrad" type="offlajngradient" onoff="0" default="1-65a8ca-65a8ca" size="15" label="HOVER_BUTTON_BACKGROUND" description="" />
+    <param type="offlajncombine" name="buttoncomb" default="4|*|4b91b5" label="BUTTON_STYLE">
+      <param validation="int" type="offlajntext" size="1" label="PADDING">
+        <unit>px</unit>
+      </param>
+      <param alpha="0" type="offlajncolor" size="7" label="BORDER_COLOR"/>
+    </param>
+    <param type="offlajncombine" name="txtcomb" default="ffffff|*|ffffff|*|40||px|*|d8d8d8|*|0|*|" label="TEXTFIELD">
+      <param alpha="0" type="offlajncolor" size="7" label="BACKGROUND" />
+      <param alpha="0" type="offlajncolor" size="7" label="BACKGROUND_ACTIVE"/>
+      <param validation="int" type="offlajntext" size="2" label="CUBE_SIZE" default="27">
+        <unit>px</unit>
+      </param>
+      <param type="offlajnclear"/>
+      <param alpha="0" type="offlajncolor" size="7" label="BORDER" default="d8d8d8" />
+      <param type="offlajnradio" default="0" label="SHOW_BORDER_AS" description="">
+        <option value="0">Box</option>
+        <option value="1">Underline</option>
+      </param>
+    </param>
+    <param name="checkboxcolor" alpha="0" type="offlajncolor" default="d8d8d8" size="7" label="CHECKBOX_BORDER_COLOR" description="" />
+    <param name="textfont" tabs="Text|Hover" type="offlajnfont" alpha="1" default="{&quot;Text&quot;:{&quot;lineheight&quot;:&quot;normal&quot;,&quot;type&quot;:&quot;Latin&quot;,&quot;subset&quot;:&quot;Latin&quot;,&quot;family&quot;:&quot;Open Sans&quot;,&quot;size&quot;:&quot;20||px&quot;,&quot;color&quot;:&quot;a1a1a1&quot;,&quot;afont&quot;:&quot;Helvetica||1&quot;,&quot;underline&quot;:&quot;0&quot;,&quot;textdecor&quot;:&quot;300&quot;},&quot;Link&quot;:{&quot;color&quot;:&quot;1685d7&quot;,&quot;underline&quot;:&quot;0&quot;},&quot;Hover&quot;:{&quot;color&quot;:&quot;1186bb&quot;,&quot;underline&quot;:&quot;0&quot;}}" label="TEXT_FONT" description="TEXT_FONT_DESC" />
+    <param name="smalltext" validation="int" type="offlajntext" default="14" size="2" label="SMALL_TEXT_SIZE" description="SMALL_TEXT_SIZE_DESC">
+      <unit>px</unit>
+    </param>
+    <param name="errorcolor" alpha="0" type="offlajncolor" default="ffffff" size="7" label="ERROR_MESSAGE_COLOR" description="" />
+    <param name="errorgrad" type="offlajngradient" onoff="0" default="1-de5243-de5243" label="ERROR_MSG_BACKGROUND" description="" />
+    <param name="hintcolor" alpha="0" type="offlajncolor" default="5E5E5E" size="7" label="HINT_MESSAGE_COLOR" description="" />
+    <param name="hintgrad" type="offlajngradient" onoff="0" default="1-FFFFFF-F5F5F5" label="HINT_MSG_BACKGROUND" description="" />
+  </params>
+
+</theme>

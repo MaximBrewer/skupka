@@ -1,0 +1,13 @@
+<root>
+  <params name="widgetshtml" label="" hidetitle="1">
+    <param name="widgethtml" type="widgetpluginmatrix" ajaxurl="slider/renderform" label="HTML" group="sswidgethtml" method="html" file="config.xml" default="disabled"/>
+    <param type="group" label="Display" class="n2-expert">
+      <param name="widget-html-display-desktop" type="onoff" label="Desktop" default="1"/>
+      <param name="widget-html-display-tablet" type="onoff" label="Tablet" default="1"/>
+      <param name="widget-html-display-mobile" type="onoff" label="Mobile" default="1"/>
+      <param name="widget-html-exclude-slides" type="text" label="Hide on slides" default="" tip="List the slides separated by commas on which you want the controls to be hidden."/></param>
+    <param type="group" label="Shows on">
+      <param name="widget-html-display-hover" type="onoff" label="Hover" default="0"/></param>
+  </params>
+  <params name="widget-html-placeholder" label="" id="nextend-widgethtml-panel" type="placeholder"></params>
+</root>

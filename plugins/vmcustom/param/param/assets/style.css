@@ -1,0 +1,13 @@
+#plugin-Container h2 { margin:0; }
+#plugin-Container .control-group { margin-top:0; }
+.control-label.width25 { width: 25%; }
+.control-input.width74 { margin: 0; }
+#plugin-Container select { width:200px; }
+#dv_box { margin:0; width:auto !important; }
+#dv_box li { padding:0; height:35px; list-style: none outside none;}
+#dv_box li input { margin:3px; float:left !important; }
+li.ui-state-highlight { background:#fff0a5; height:25px; }
+
+a.dv_sort { background:url(ui-icons.png) no-repeat 3px -78px; display:block; float:left; width:21px; height:21px; margin:2px; cursor:move; }
+a.dv_delete { background:url(ui-icons.png) no-repeat -78px -126px; display:block; float:left; width:21px; height:21px; margin:2px; }
+a.dv_delete:hover { background-position:-94px -126px; }

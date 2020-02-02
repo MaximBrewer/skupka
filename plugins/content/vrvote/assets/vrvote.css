@@ -1,0 +1,179 @@
+.vrvote-body {
+
+	display:inline-block;
+
+	line-height:22px;
+
+	vertical-align:middle;
+
+	margin-left: 3px;
+
+}
+
+ul.vrvote-ul {
+
+	height:24px !important;
+
+	width:120px;
+
+	padding:0!important;
+
+	margin:0!important;
+
+}
+
+ul.vrvote-ul li {
+
+	background-position:0!important;
+
+	padding:0!important;
+
+	margin:0!important;
+
+}
+
+ul.vrvote-ul, ul.vrvote-ul li a:hover, ul.vrvote-ul li.current-rating {
+
+	background-image:url('/plugins/content/vrvote/images/stars.png')!important;
+
+	background-color:transparent!important;
+
+	background-repeat:repeat-x!important;
+
+	background-position:left -1000px;
+
+}
+
+ul.vrvote-ul {
+
+	background-position:left top;
+
+	ist-style-image:none;
+
+	list-style-position:outside;
+
+	list-style-type:none;
+
+	margin:0pt;
+
+	overflow:hidden;
+
+	padding:0pt;
+
+	position:relative;
+
+}
+
+ul.vrvote-ul li {
+
+	background-image:none;
+
+	display:inline;
+
+	padding:0pt;
+
+}
+
+ul.vrvote-ul li a, ul.vrvote-ul li.current-rating {
+
+	border:medium none;
+
+	cursor:pointer;
+
+	left:0pt;
+
+	outline-color:-moz-use-text-color;
+
+	outline-style:none;
+
+	outline-width:medium;
+
+	overflow:hidden;
+
+	position:absolute;
+
+	text-indent:-1000em;
+
+	top:0pt;
+
+}
+
+ul.vrvote-ul li a, ul.vrvote-ul li.current-rating {
+
+	height:23px;
+
+	line-height:22px;
+
+}
+
+ul.vrvote-ul li a:hover {
+
+	background-position:left bottom!important;
+
+}
+
+ul.vrvote-ul li a:focus {
+
+	background:none;
+
+}
+
+li a.vr-one-star {
+
+	width:20%;
+
+	padding:0;
+
+	margin:0;
+
+	z-index:6;
+
+}
+
+li a.vr-two-stars {
+
+	width:40%;
+
+	padding:0;
+
+	margin:0;
+
+	z-index:5;
+
+}
+
+li a.vr-three-stars {
+
+	width:60%;
+
+	padding:0;
+
+	margin:0;
+
+	z-index:4;
+
+}
+
+li a.vr-four-stars {
+
+	width:80%;
+
+	padding:0;
+
+	margin:0;
+
+	z-index:3;
+
+}
+
+li a.vr-five-stars {
+
+	width:100%;
+
+	padding:0;
+
+	margin:0;
+
+	z-index:2;
+
+}

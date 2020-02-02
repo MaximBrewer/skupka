@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>System - Benchmark</name>
+	<element>benchmark</element>
+	<author>RuposTel s.r.o.</author>
+	<creationDate>Mar 2016</creationDate>
+	<copyright>Copyright (C) RuposTel.com</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>admin@rupostel.com</authorEmail>
+	<authorUrl>www.rupostel.com</authorUrl>
+	<version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+	<description>
+	<![CDATA[
+	Provides benchmark support for Joomla 3.x<br />
+	This plugin loads from /defines.php. No core files get ovewritten.<br /> 
+
+	Usage: <br />
+	1. Visit benchmark plugin backend, enable it and click Apply <br />
+	2. It installs defines.php (see messages)<br />
+	3. Press F12 in Firefox or Chrome and view Javascript console at your front end<br />
+	This extension is provided by <a href="http://www.rupostel.com/">RuposTel.com</a> Please use our forum for support enqueries. Implemented on J3.4.8
+	]]>
+	</description>
+	
+	<files>
+		<filename plugin="benchmark">benchmark.php</filename>
+		<folder>benchmark</folder>
+	</files>
+	
+	<config addfieldpath="/plugins/system/benchmark/benchmark/element">
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="disp" type="disp" default=""
+					label="defines.php installed:"
+					description=""
+					value_field="title" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

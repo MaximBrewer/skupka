@@ -1,0 +1,37 @@
+<root>
+    <params name="jreviewsratings" label="Filter">
+        <param type="group" label="Source">
+            <param name="sourcecategories" label="Categories" type="jreviewscategories" default="0" multiple="1"
+                   size="10"/>
+            <param name="sourcearticles" label="Articles" type="jreviewsarticles" default="0" multiple="1"
+                   size="10"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="sourcestars" type="list" label="Min. star rating" default="1">
+                <option value="">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </param>
+            <param name="sourcehelpful" label="Min. thumbs up number" type="text" default="0"/>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="jreviewsorder" type="mixed" label="Order" default="jc.created|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="jc.created">Comment creation time</option>
+                <option value="jc.modified">Comment modification time</option>
+                <option value="jc.rating">Rating</option>
+                <option value="jc.vote_helpful">Thumbs up</option>
+                <option value="jc.vote_total">Total number of votes</option>
+                <option value="c.hits">Article hits</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

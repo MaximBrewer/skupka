@@ -1,0 +1,9 @@
+<root>
+    <params name="basic" label="Dribbble generator">
+        <param name="apiKey" type="text" label="Client ID" default="" style="width:450px;"/>
+        <param name="apiSecret" type="text" label="Client secret" default="" style="width:450px;"/>
+        <param name="accessToken" type="dribbbletoken" label="Token" default="" style="width:450px;"/>
+        <param name="callback" type="container" label="Callback url"/>
+        <param type="token"/>
+    </params>
+</root>

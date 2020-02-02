@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="ckmaximenuwizard">
+		<fieldset name="ckmaximenuwizard_menujoomlaoptions" addfieldpath="/modules/mod_maximenuck/elements">
+			<field
+				name="menutype"
+				type="ckmenu"
+				label="MOD_MAXIMENUCK_FIELD_MENUTYPE_LABEL"
+				description="MOD_MAXIMENUCK_FIELD_MENUTYPE_DESC"
+				icon="text_list_numbers.png" 
+				class="ckmaximenuwizard_inputbox" />
+			<field
+				name="base"
+				type="ckmenuitem"
+				label="MOD_MAXIMENUCK_FIELD_ACTIVE_LABEL"
+				description="MOD_MAXIMENUCK_FIELD_ACTIVE_DESC"
+				icon="house.png"
+				class="ckmaximenuwizard_inputbox"
+				>
+				<option value="">JCURRENT</option>
+			</field>
+			<field
+				name="startLevel"
+				type="cklist"
+				default="1"
+				label="MOD_MAXIMENUCK_FIELD_STARTLEVEL_LABEL"
+				description="MOD_MAXIMENUCK_FIELD_STARTLEVEL_DESC"
+				icon="chart_organisation_add.png"
+				class="ckmaximenuwizard_inputbox"
+			>
+				<option value="1">J1</option>
+				<option value="2">J2</option>
+				<option value="3">J3</option>
+				<option value="4">J4</option>
+				<option value="5">J5</option>
+				<option value="6">J6</option>
+				<option value="7">J7</option>
+				<option value="8">J8</option>
+				<option value="9">J9</option>
+				<option value="10">J10</option>
+			</field>
+			<field
+				name="endLevel"
+				type="cklist"
+				default="0"
+				label="MOD_MAXIMENUCK_FIELD_ENDLEVEL_LABEL"
+				description="MOD_MAXIMENUCK_FIELD_ENDLEVEL_DESC"
+				icon="chart_organisation_delete.png"
+				class="ckmaximenuwizard_inputbox"
+			>
+				<option value="0">JALL</option>
+				<option value="1">J1</option>
+				<option value="2">J2</option>
+				<option value="3">J3</option>
+				<option value="4">J4</option>
+				<option value="5">J5</option>
+				<option value="6">J6</option>
+				<option value="7">J7</option>
+				<option value="8">J8</option>
+				<option value="9">J9</option>
+				<option value="10">J10</option>
+			</field>
+			<field
+				name="dependantitems"
+				type="cklist"
+				class="ckmaximenuwizard_inputbox"
+				default="1"
+				label="MOD_MAXIMENUCK_DEPENDANT_LABEL"
+				description="MOD_MAXIMENUCK_DEPENDANT_DESC"
+				icon="chart_organisation.png" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		</fieldset>
+		<fieldset name="ckmaximenuwizard_menuk2options">
+			<field
+				name="thirdpartyckspacerk22"
+				type="ckspacer"
+				label="MOD_MAXIMENUCK_SPACER_K2_PATCH"
+				style="link"
+				icon="information.png"
+				testpatch="k2" />
+			<field
+				name="usek2images"
+				type="cklist"
+				default="0"
+				label="MOD_MAXIMENUCK_USEK2IMAGES_LABEL"
+				description="MOD_MAXIMENUCK_USEK2IMAGES_DESC"
+				icon="images.png"
+				class="ckmaximenuwizard_inputbox">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="usek2suffix"
+				type="cklist"
+				default="0"
+				label="MOD_MAXIMENUCK_USEK2SUFFIX_LABEL"
+				description="MOD_MAXIMENUCK_USEK2SUFFIX_DESC"
+				class="ckmaximenuwizard_inputbox">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="k2imagesuffix"
+				type="cktext"
+				default="_mini"
+				label="MOD_MAXIMENUCK_K2IMAGESUFFIX_LABEL"
+				description="MOD_MAXIMENUCK_K2IMAGESUFFIX_DESC"
+				icon="image.png"
+				class="ckmaximenuwizard_inputbox"
+				/>
+			<field
+				name="k2categoryroot"
+				type="ckk2category"
+				label="MOD_MAXIMENUCK_K2CATEGORYROOT_LABEL"
+				default="0"
+				description="MOD_MAXIMENUCK_K2CATEGORYROOT_DESC"
+				class="ckmaximenuwizard_inputbox"
+			/>
+
+			<field
+				name="k2categorydepth"
+				type="cklist"
+				label="MOD_MAXIMENUCK_K2CATEGORYDEPTH_LABEL"
+				default="0"
+				description="MOD_MAXIMENUCK_K2CATEGORYDEPTH_DESC"
+				class="ckmaximenuwizard_inputbox"
+			>
+				<option value="0">JALL</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+			</field>
+
+			<field
+				name="k2showall"
+				type="cklist"
+				label="MOD_MAXIMENUCK_K2SHOWALL_LABEL"
+				default="1"
+				description="MOD_MAXIMENUCK_K2SHOWALL_DESC"
+				class="ckmaximenuwizard_inputbox"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		</fieldset>
+		<fieldset name="ckmaximenuwizard_menuhikashopoptions">
+			<field
+				name="thirdpartyckspacerhikashop2"
+				type="ckspacer"
+				label="MOD_MAXIMENUCK_SPACER_HIKASHOP_PATCH"
+				style="link"
+				icon="information.png"
+				testpatch="hikashop" 
+				/>
+			<field
+				name="hikashopitemid"
+				type="cksql"
+				default="0"
+				label="MOD_MAXIMENUCK_HIKASHOPITEMID_LABEL"
+				description="MOD_MAXIMENUCK_HIKASHOPITEMID_LABEL"
+				query="SELECT id AS value, title AS hikashopitemid FROM #__menu WHERE link='index.php?option=com_hikashop&amp;view=category&amp;layout=listing' AND published=1 ORDER BY title ASC"
+				icon="application_form_magnify.png"
+				class="ckmaximenuwizard_inputbox" />
+			<field
+				name="hikashopcategoryroot"
+				type="ckhikashopcategory"
+				label="MOD_MAXIMENUCK_HIKASHOPCATEGORYROOT_LABEL"
+				default="0"
+				description="MOD_MAXIMENUCK_HIKASHOPCATEGORYROOT_DESC"
+				class="ckmaximenuwizard_inputbox"
+			/>
+			<field
+				name="usehikashopimages"
+				type="cklist"
+				default="0"
+				label="MOD_MAXIMENUCK_USEHIKASHOPIMAGES_LABEL"
+				description="MOD_MAXIMENUCK_USEHIKASHOPIMAGES_DESC"
+				class="ckmaximenuwizard_inputbox"
+				icon="images.png">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="usehikashopsuffix"
+				type="cklist"
+				default="0"
+				label="MOD_MAXIMENUCK_USEHIKASHOPSUFFIX_LABEL"
+				class="ckmaximenuwizard_inputbox"
+				description="MOD_MAXIMENUCK_USEHIKASHOPSUFFIX_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="hikashopimagesuffix"
+				type="cktext"
+				default="_mini"
+				label="MOD_MAXIMENUCK_HIKASHOPIMAGESUFFIX_LABEL"
+				description="MOD_MAXIMENUCK_HIKASHOPIMAGESUFFIX_DESC"
+				class="ckmaximenuwizard_inputbox"
+				icon="image.png" />
+			<field
+				name="hikashopcategorydepth"
+				type="cklist"
+				label="MOD_MAXIMENUCK_HIKASHOPCATEGORYDEPTH_LABEL"
+				default="0"
+				description="MOD_MAXIMENUCK_HIKASHOPCATEGORYDEPTH_DESC"
+				class="ckmaximenuwizard_inputbox"
+			>
+				<option value="0">JALL</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+			</field>
+
+			<field
+				name="hikashopshowall"
+				type="cklist"
+				label="MOD_MAXIMENUCK_HIKASHOPSHOWALL_LABEL"
+				default="1"
+				description="MOD_MAXIMENUCK_HIKASHOPSHOWALL_DESC"
+				class="ckmaximenuwizard_inputbox"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		</fieldset>
+		<fieldset name="ckmaximenuwizard_menujoomshoppingoptions">
+			<field
+				name="thirdpartyckspacerjoomshopping1"
+				type="ckspacer"
+				label="MOD_MAXIMENUCK_SPACER_JOOMSHOPPING"
+				style="title" />
+
+			<field
+				name="thirdpartyckspacerjoomshopping2"
+				type="ckspacer"
+				label="MOD_MAXIMENUCK_SPACER_JOOMSHOPPING_PATCH"
+				style="link"
+				icon="information.png"
+				testpatch="joomshopping" />
+			<field
+				name="joomshoppingitemid"
+				type="cktext"
+				label="MOD_MAXIMENUCK_JOOMSHOPPINGITEMID_LABEL"
+				default="0"
+				description="MOD_MAXIMENUCK_JOOMSHOPPINGITEMID_DESC"
+				class="ckmaximenuwizard_inputbox"
+			/>
+			<field
+				name="usejoomshoppingimages"
+				type="cklist"
+				default="0"
+				label="MOD_MAXIMENUCK_USEJOOMSHOPPINGIMAGES_LABEL"
+				description="MOD_MAXIMENUCK_USEJOOMSHOPPINGIMAGES_DESC"
+				class="ckmaximenuwizard_inputbox"
+				icon="images.png">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="usejoomshoppingsuffix"
+				type="cklist"
+				default="0"
+				label="MOD_MAXIMENUCK_USEJOOMSHOPPINGSUFFIX_LABEL"
+				description="MOD_MAXIMENUCK_USEJOOMSHOPPINGSUFFIX_DESC"
+				class="ckmaximenuwizard_inputbox">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="joomshoppingimagesuffix"
+				type="cktext"
+				default="_mini"
+				label="MOD_MAXIMENUCK_JOOMSHOPPINGIMAGESUFFIX_LABEL"
+				description="MOD_MAXIMENUCK_JOOMSHOPPINGIMAGESUFFIX_DESC"
+				class="ckmaximenuwizard_inputbox"
+				icon="image.png" />
+			<field
+				name="joomshoppingcategoryroot"
+				type="ckjoomshoppingcategory"
+				label="MOD_MAXIMENUCK_JOOMSHOPPINGCATEGORYROOT_LABEL"
+				default="0"
+				description="MOD_MAXIMENUCK_JOOMSHOPPINGCATEGORYROOT_DESC"
+				class="ckmaximenuwizard_inputbox"
+			/>
+			<field
+				name="joomshoppingcategorydepth"
+				type="cklist"
+				label="MOD_MAXIMENUCK_JOOMSHOPPINGCATEGORYDEPTH_LABEL"
+				default="0"
+				description="MOD_MAXIMENUCK_JOOMSHOPPINGCATEGORYDEPTH_DESC"
+				class="ckmaximenuwizard_inputbox"
+			>
+				<option value="0">JALL</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+			</field>
+		</fieldset>
+		<fieldset name="ckmaximenuwizard_effectoptions">
+			<field
+				name="stopdropdownlevel"
+				type="cklist"
+				label="MOD_MAXIMENUCK_STOPDROPDOWNLEVEL_LABEL"
+				description="MOD_MAXIMENUCK_STOPDROPDOWNLEVEL_DESC"
+				default="0"
+				class="ckmaximenuwizard_inputbox"
+				icon="text_list_numbers.png" >
+				<option value="0">JNO</option>
+				<option value="2">MOD_MAXIMENUCK_LEVEL2</option>
+				<option value="3">MOD_MAXIMENUCK_LEVEL3</option>
+				<option value="4">MOD_MAXIMENUCK_LEVEL4</option>
+				<option value="5">MOD_MAXIMENUCK_LEVEL5</option>
+			</field>
+			<field
+				name="behavior"
+				type="cklist"
+				default="mouseover"
+				label="MOD_MAXIMENUCK_STYLE_LABEL"
+				description="MOD_MAXIMENUCK_STYLE_DESC"
+				icon="mouse.png"
+				class="ckmaximenuwizard_inputbox"
+			>
+				<option value="mouseover">MOD_MAXIMENUCK_MOOMENU</option>
+				<option value="click">MOD_MAXIMENUCK_CLICK</option>
+				<option value="clickclose">MOD_MAXIMENUCK_CLOSECLICK</option>
+			</field>
+
+			<field
+				name="opentype"
+				type="cklist"
+				default="open"
+				label="MOD_MAXIMENUCK_OPENTYPE_LABEL"
+				description="MOD_MAXIMENUCK_OPENTYPE_DESC"
+				icon="door_open.png"
+				class="ckmaximenuwizard_inputbox"
+			>
+				<option value="noeffect">MOD_MAXIMENUCK_NOEFFECT</option>
+				<option value="open">MOD_MAXIMENUCK_OPEN</option>
+				<option value="slide">MOD_MAXIMENUCK_SLIDE</option>
+				<option value="show">MOD_MAXIMENUCK_SHOW</option>
+				<option value="fade">MOD_MAXIMENUCK_FADE</option>
+				<option value="scale">MOD_MAXIMENUCK_SCALE</option>
+				<option value="puff">MOD_MAXIMENUCK_PUFF</option>
+				<option value="drop">MOD_MAXIMENUCK_DROP</option>
+			</field>
+
+			<field
+				name="fxduration"
+				type="cktext"
+				default="500"
+				label="MOD_MAXIMENUCK_MOODUREE_LABEL"
+				description="MOD_MAXIMENUCK_MOODUREE_DESC"
+				icon="hourglass.png"
+				class="ckmaximenuwizard_inputbox"
+				suffix="ms" />
+
+			<field
+				name="fxtransition"
+				type="cklist"
+				default="linear"
+				label="MOD_MAXIMENUCK_TRANSITION_LABEL"
+				description="MOD_MAXIMENUCK_TRANSITION_DESC"
+				class="ckmaximenuwizard_inputbox"
+				icon="chart_curve.png">
+				<option value="linear">Linear</option>
+				<option value="jswing">jswing</option>
+				<option value="easeInQuad">easeInQuad</option>
+				<option value="easeOutQuad">easeOutQuad</option>
+				<option value="easeInOutQuad">easeInOutQuad</option>
+				<option value="easeInCubic">easeInCubic</option>
+				<option value="easeOutCubic">easeOutCubic</option>
+				<option value="easeInOutCubic">easeInOutCubic</option>
+				<option value="easeInQuart">easeInQuart</option>
+				<option value="easeOutQuart">easeOutQuart</option>
+				<option value="easeInOutQuart">easeInOutQuart</option>
+				<option value="easeInSine">easeInSine</option>
+				<option value="easeOutSine">easeOutSine</option>
+				<option value="easeInOutSine">easeInOutSine</option>
+				<option value="easeInExpo">easeInExpo</option>
+				<option value="easeOutExpo">easeOutExpo</option>
+				<option value="easeInOutExpo">easeInOutExpo</option>
+				<option value="easeInQuint">easeInQuint</option>
+				<option value="easeOutQuint">easeOutQuint</option>
+				<option value="easeInOutQuint">easeInOutQuint</option>
+				<option value="easeInCirc">easeInCirc</option>
+				<option value="easeOutCirc">easeOutCirc</option>
+				<option value="easeInOutCirc">easeInOutCirc</option>
+				<option value="easeInElastic">easeInElastic</option>
+				<option value="easeOutElastic">easeOutElastic</option>
+				<option value="easeInOutElastic">easeInOutElastic</option>
+				<option value="easeInBack">easeInBack</option>
+				<option value="easeOutBack">easeOutBack</option>
+				<option value="easeInOutBack">easeInOutBack</option>
+				<option value="easeInBounce">easeInBounce</option>
+				<option value="easeOutBounce">easeOutBounce</option>
+				<option value="easeInOutBounce">easeInOutBounce</option>
+			</field>
+
+			<field
+				name="dureein"
+				type="cktext"
+				default="0"
+				label="MOD_MAXIMENUCK_DUREEIN_LABEL"
+				description="MOD_MAXIMENUCK_DUREEIN_DESC"
+				icon="hourglass.png"
+				class="ckmaximenuwizard_inputbox"
+				suffix="ms" />
+			<field
+				name="dureeout"
+				type="cktext"
+				default="500"
+				label="MOD_MAXIMENUCK_DUREEOUT_LABEL"
+				description="MOD_MAXIMENUCK_DUREEOUT_DESC"
+				icon="hourglass.png"
+				class="ckmaximenuwizard_inputbox"
+				suffix="ms" />
+		</fieldset>
+		<fieldset name="ckmaximenuwizard_stylesoptions">
+			<field
+				name="theme"
+				type="ckfolderlist"
+				directory="modules/mod_maximenuck/themes"
+				hide_default="true"
+				default="css3megamenu"
+				label="MOD_MAXIMENUCK_THEME_LABEL"
+				description="MOD_MAXIMENUCK_THEME_DESC"
+				class="ckmaximenuwizard_inputbox"
+				icon="palette.png" />
+			<field
+				name="orientation"
+				type="cklist"
+				default="horizontal"
+				label="MOD_MAXIMENUCK_ORIENTATION_LABEL"
+				description="MOD_MAXIMENUCK_ORIENTATION_DESC"
+				icon="shape_rotate_clockwise.png"
+				class="ckmaximenuwizard_inputbox"
+			>
+				<option value="horizontal">Horizontal</option>
+				<option value="vertical">Vertical</option>
+			</field>
+			<field
+				name="templatelayer"
+				type="ckfilelist"
+				directory="modules/mod_maximenuck/templatelayers"
+				hide_default="true"
+				icon="css.png"
+				filter="\.css"
+				stripext="false"
+				label="MOD_MAXIMENUCK_TEMPLATELAYER_LABEL"
+				description="MOD_MAXIMENUCK_TEMPLATELAYER_DESC"
+				default="-1"
+				class="ckmaximenuwizard_inputbox"
+			/>
+		</fieldset>
+		<fieldset name="ckmaximenuwizard_mobileoptions">
+			<field
+				name="maximenumobile_enable"
+				type="cklist"
+				default="0"
+				label="MOD_MAXIMENUCK_MOBILEENABLE_LABEL"
+				description="MOD_MAXIMENUCK_MOBILEENABLE_DESC"
+				class="ckmaximenuwizard_inputbox"
+				icon="ipod.png"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="maximenumobile_container"
+				type="cklist"
+				default="menucontainer"
+				label="MOD_MAXIMENUCK_CONTAINER_LABEL"
+				description="MOD_MAXIMENUCK_CONTAINER_DESC"
+				icon="application_side_list.png"
+				class="ckmaximenuwizard_inputbox"
+			>
+				<option value="body">MOD_MAXIMENUCK_BODY</option>
+				<option value="menucontainer">MOD_MAXIMENUCK_MENUCONTAINER</option>
+			</field>
+			<field
+				name="maximenumobile_display"
+				type="cklist"
+				default="flat"
+				label="MOD_MAXIMENUCK_DISPLAYTYPE_LABEL"
+				description="MOD_MAXIMENUCK_DISPLAYTYPE_DESC"
+				icon="application_view_list.png"
+				class="ckmaximenuwizard_inputbox"
+			>
+				<option value="flat">MOD_MAXIMENUCK_FLAT</option>
+				<option value="accordion">MOD_MAXIMENUCK_ACCORDION</option>
+			</field>
+			<field
+				name="maximenumobile_useimage"
+				type="cklist"
+				default="0"
+				label="MOD_MAXIMENUCK_MOBILEUSEIMAGE_LABEL"
+				description="MOD_MAXIMENUCK_MOBILEUSEIMAGE_DESC"
+				class="ckmaximenuwizard_inputbox"
+				icon="application_view_gallery.png"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="maximenumobile_usemodule"
+				type="cklist"
+				default="0"
+				label="MOD_MAXIMENUCK_MOBILEUSEMODULE_LABEL"
+				description="MOD_MAXIMENUCK_MOBILEUSEMODULE_DESC"
+				class="ckmaximenuwizard_inputbox"
+				icon="application_form.png"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="maximenumobile_showdesc"
+				type="cklist"
+				default="0"
+				label="MOD_MAXIMENUCK_SHOWDESC_LABEL"
+				description="MOD_MAXIMENUCK_SHOWDESC_DESC"
+				class="ckmaximenuwizard_inputbox"
+				icon="application_view_list.png"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="maximenumobile_showlogo"
+				type="cklist"
+				default="1"
+				label="MOD_MAXIMENUCK_SHOWLOGO_LABEL"
+				description="MOD_MAXIMENUCK_SHOWLOGO_DESC"
+				icon="image.png"
+				class="ckmaximenuwizard_inputbox"
+			>
+				<option value="0">JNO</option>
+				<option value="1">MOD_MAXIMENUCK_SHOWLOGO_MOBILE</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

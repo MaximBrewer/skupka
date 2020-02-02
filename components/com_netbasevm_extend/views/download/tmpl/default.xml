@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_DIGITOLLDOWNLOADS_DOWNLOAD_VIEW_DEFAULT_TITLE">
+		<message><![CDATA[COM_DIGITOLLDOWNLOADS_DOWNLOAD_VIEW_DEFAULT_DESC]]></message>
+	</layout>
+	<state>
+		<name>COM_DIGITOLLDOWNLOADS_DOWNLOAD_VIEW_DEFAULT_TITLE</name>
+		<description><![CDATA[COM_DIGITOLLDOWNLOADS_DOWNLOAD_VIEW_DEFAULT_DESC]]></description>
+	</state>
+</metadata>
+

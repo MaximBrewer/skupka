@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Карта">
+		<message>ссылка на карту</message>
+	</layout>
+	<state>
+		<fields name="request" addfieldpath="/administrator/components/com_yandex_maps/models/fields">
+            <fieldset name="request">
+                <field name="task" type="hidden" default="map"/>
+                <field required="true" name="id" type="maps"/>
+            </fieldset>
+        </fields>
+	</state>
+</metadata>

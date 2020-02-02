@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+    <name>BOXPLUS</name>
+    <author>Levente Hunyadi</author>
+    <creationDate>Feb 24, 2018</creationDate>
+    <copyright>© 2011-2018 Levente Hunyadi. All rights reserved.</copyright>
+    <license>GNU/GPL</license>
+    <authorUrl>http://hunyadi.info.hu/projects/boxplus</authorUrl>
+    <version>1.0.3.1</version>
+    <downloadUrl>https://bitbucket.org/hunyadi/boxplus/downloads</downloadUrl>
+    <description>BOXPLUS_DESCRIPTION</description>
+    <files>
+        <filename plugin="boxplus">boxplus.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <media folder="media" destination="plg_boxplus">
+        <filename>index.html</filename>
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_content_boxplus.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_content_boxplus.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="theme" type="list" default="" label="BOXPLUS_THEME" description="BOXPLUS_THEME_DESCRIPTION">
+                    <option value="">BOXPLUS_THEME_DEFAULT</option>
+                    <option value="light">BOXPLUS_THEME_LIGHT</option>
+                    <option value="dark">BOXPLUS_THEME_DARK</option>
+                </field>
+                <field name="rounded" type="radio" default="0" label="BOXPLUS_CSS_ROUNDED" description="BOXPLUS_CSS_ROUNDED_DESCRIPTION">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="border_style" type="list" default="" label="BOXPLUS_CSS_BORDER_STYLE" description="BOXPLUS_CSS_BORDER_STYLE_DESCRIPTION">
+                    <option value="">BOXPLUS_CSS_BORDER_DEFAULT</option>
+                    <option value="none">BOXPLUS_CSS_BORDER_NONE</option>
+                    <option value="dotted">BOXPLUS_CSS_BORDER_DOTTED</option>
+                    <option value="dashed">BOXPLUS_CSS_BORDER_DASHED</option>
+                    <option value="solid">BOXPLUS_CSS_BORDER_SOLID</option>
+                    <option value="double">BOXPLUS_CSS_BORDER_DOUBLE</option>
+                    <option value="groove">BOXPLUS_CSS_BORDER_GROOVE</option>
+                    <option value="ridge">BOXPLUS_CSS_BORDER_RIDGE</option>
+                    <option value="inset">BOXPLUS_CSS_BORDER_INSET</option>
+                    <option value="outset">BOXPLUS_CSS_BORDER_OUTSET</option>
+                </field>
+                <field name="border_width" type="text" default="" label="BOXPLUS_CSS_BORDER_WIDTH" description="BOXPLUS_CSS_BORDER_WIDTH_DESCRIPTION" />
+                <field name="border_color" type="color" default="" label="BOXPLUS_CSS_BORDER_COLOR" description="BOXPLUS_CSS_BORDER_COLOR_DESCRIPTION" />
+                <field name="padding" type="text" default="" label="BOXPLUS_CSS_PADDING" description="BOXPLUS_CSS_PADDING_DESCRIPTION" />
+                <field name="slideshow" type="text" default="0" label="BOXPLUS_SLIDESHOW" description="BOXPLUS_SLIDESHOW_DESCRIPTION" />
+                <field name="autostart" type="radio" default="0" label="BOXPLUS_AUTOSTART" description="BOXPLUS_AUTOSTART_DESCRIPTION">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="loop" type="radio" default="0" label="BOXPLUS_LOOP" description="BOXPLUS_LOOP_DESCRIPTION">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="navigation" type="list" default="bottom" label="BOXPLUS_NAVIGATION" description="BOXPLUS_NAVIGATION_DESCRIPTION">
+                    <option value="none">JHIDE</option>
+                    <option value="above">BOXPLUS_ABOVE</option>
+                    <option value="top">BOXPLUS_TOP</option>
+                    <option value="bottom">BOXPLUS_BOTTOM</option>
+                    <option value="below">BOXPLUS_BELOW</option>
+                </field>
+                <field name="controls" type="list" default="below" label="BOXPLUS_CONTROLS" description="BOXPLUS_CONTROLS_DESCRIPTION">
+                    <option value="none">JHIDE</option>
+                    <option value="above">BOXPLUS_ABOVE</option>
+                    <option value="top">BOXPLUS_TOP</option>
+                    <option value="bottom">BOXPLUS_BOTTOM</option>
+                    <option value="below">BOXPLUS_BELOW</option>
+                </field>
+                <field name="captions" type="list" default="below" label="BOXPLUS_CAPTIONS" description="BOXPLUS_CAPTIONS_DESCRIPTION">
+                    <option value="none">JHIDE</option>
+                    <option value="above">BOXPLUS_ABOVE</option>
+                    <option value="below">BOXPLUS_BELOW</option>
+                </field>
+                <field name="width" type="text" default="800" label="BOXPLUS_WIDTH" description="BOXPLUS_WIDTH_DESCRIPTION" />
+                <field name="height" type="text" default="600" label="BOXPLUS_HEIGHT" description="BOXPLUS_HEIGHT_DESCRIPTION" />
+                <field name="duration" type="text" default="250" label="BOXPLUS_DURATION" description="BOXPLUS_DURATION_DESCRIPTION" />
+                <field name="transition" type="list" default="linear" label="BOXPLUS_TRANSITION" description="BOXPLUS_TRANSITION_DESCRIPTION">
+                    <option value="linear">BOXPLUS_TRANSITION_LINEAR</option>
+                    <option value="quad">BOXPLUS_TRANSITION_QUAD</option>
+                    <option value="cubic">BOXPLUS_TRANSITION_CUBIC</option>
+                    <option value="quart">BOXPLUS_TRANSITION_QUART</option>
+                    <option value="quint">BOXPLUS_TRANSITION_QUINT</option>
+                    <option value="expo">BOXPLUS_TRANSITION_EXPO</option>
+                    <option value="circ">BOXPLUS_TRANSITION_CIRC</option>
+                    <option value="sine">BOXPLUS_TRANSITION_SINE</option>
+                    <option value="back">BOXPLUS_TRANSITION_BACK</option>
+                    <option value="bounce">BOXPLUS_TRANSITION_BOUNCE</option>
+                    <option value="elastic">BOXPLUS_TRANSITION_ELASTIC</option>
+                </field>
+                <field name="protection" type="radio" default="0" label="BOXPLUS_PROTECTION" description="BOXPLUS_PROTECTION_DESCRIPTION">
+                    <option value="1">JENABLED</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="strict" type="radio" default="0" label="BOXPLUS_STRICT" description="BOXPLUS_STRICT_DESCRIPTION">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="activationtag" type="text" default="boxplus" label="BOXPLUS_ACTIVATIONTAG" description="BOXPLUS_ACTIVATIONTAG_DESCRIPTION" />
+                <field name="debug" type="radio" default="0" label="BOXPLUS_DEBUG" description="BOXPLUS_DEBUG_DESCRIPTION">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+        <server type="extension" name="boxplus updates">http://hunyadi.info.hu/projects/boxplus/extension.xml</server>
+    </updateservers>
+</extension>

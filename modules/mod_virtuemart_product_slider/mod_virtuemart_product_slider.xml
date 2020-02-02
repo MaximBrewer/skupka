@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade">
+  <name>mod_virtuemart_product_slider</name>
+  <creationDate>16.12.2016</creationDate>
+  <author>virtuemart.su</author>
+  <authorUrl>http://virtuemart.su</authorUrl>
+  <copyright>Copyright (C) 2012-2016 virtuemart.su</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>1.8</version>
+  <description>MOD_VIRTUEMART_PRODUCT_SLIDER_DESC</description>
+  <files>
+    <filename module="mod_virtuemart_product_slider">mod_virtuemart_product_slider.php</filename>
+    <filename>index.html</filename>
+    <filename>helper.php</filename>
+    <filename>tmpl/default.php</filename>
+    <filename>tmpl/index.html</filename>
+    <folder>language</folder>
+    <folder>assets</folder>
+  </files>
+  <config>
+    <fields name="params" addfieldpath="/administrator/components/com_virtuemart/fields">
+      <fieldset name="basic">
+        <field
+          name="product_group"
+          type="list"
+          default="featured"
+          label="MOD_VIRTUEMART_PRODUCT_SLIDER_DISPLAY"
+          description="MOD_VIRTUEMART_PRODUCT_SLIDER_DISPLAY_DESC"
+          >
+          <option value="featured">MOD_VIRTUEMART_PRODUCT_SLIDER_FEATURED_PRODUCTS</option>
+          <option value="discontinued">MOD_VIRTUEMART_PRODUCT_SLIDER_DISCONTINUED_PRODUCTS</option>
+          <option value="latest">MOD_VIRTUEMART_PRODUCT_SLIDER_LATEST_PRODUCTS</option>
+          <option value="random">MOD_VIRTUEMART_PRODUCT_SLIDER_RANDOM_PRODUCTS</option>
+          <option value="topten">MOD_VIRTUEMART_PRODUCT_SLIDER_BEST_SALES</option>
+          <option value="recent">MOD_VIRTUEMART_PRODUCT_SLIDER_RECENT_PRODUCTS</option>
+        </field>
+        <field
+          name="max_items"
+          type="text"
+          default="2"
+          label="MOD_VIRTUEMART_PRODUCT_SLIDER_MAX_ITEMS"
+          description="MOD_VIRTUEMART_PRODUCT_SLIDER_MAX_ITEMS_DESC"
+        />
+        <field
+          name="show_price"
+          type="list"
+          default="1"
+          label="MOD_VIRTUEMART_PRODUCT_SLIDER_SHOW_PRICE"
+          description="MOD_VIRTUEMART_PRODUCT_SLIDER_SHOW_PRICE_DESC"
+          >
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field
+          name="show_addtocart"
+          type="list"
+          default="1"
+          label="MOD_VIRTUEMART_PRODUCT_SLIDER_SHOW_ADDTOCART"
+          description="MOD_VIRTUEMART_PRODUCT_SLIDER_SHOW_ADDTOCART_DESC"
+          >
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field
+          name="@spacer"
+          type="spacer"
+          default=""
+          label=""
+          description=""
+        />
+        <field
+          name="headerText"
+          type="text"
+          default=""
+          label="MOD_VIRTUEMART_PRODUCT_SLIDER_HEADER_TEXT"
+          description="MOD_VIRTUEMART_PRODUCT_SLIDER_HEADER_TEXT_DESC"
+        />
+        <field
+          name="footerText"
+          type="text"
+          default=""
+          label="MOD_VIRTUEMART_PRODUCT_SLIDER_FOOTER_TEXT"
+          description="MOD_VIRTUEMART_PRODUCT_SLIDER_FOOTER_TEXT_DESC"
+        />
+        <field
+          name="filter_category"
+          type="list"
+          default="0"
+          label="MOD_VIRTUEMART_PRODUCT_SLIDER_FILTER_CATEGORY"
+          description="MOD_VIRTUEMART_PRODUCT_SLIDER_FILTER_CATEGORY_DESC"
+          >
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field
+          name="virtuemart_category_id"
+          type="vmcategories"
+          value_field="category_name"
+          label="MOD_VIRTUEMART_PRODUCT_SLIDER_CATEGORY_ID"
+          description="MOD_VIRTUEMART_PRODUCT_SLIDER_CATEGORY_ID_DESC"
+        />
+        <field
+          name="vmcache"
+          type="list"
+          default="1"
+          label="MOD_VIRTUEMART_PRODUCT_SLIDER_CACHING_LABEL"
+          description="MOD_VIRTUEMART_PRODUCT_SLIDER_CACHING_DESC"
+          >
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field
+          name="vmcachetime"
+          type="text"
+          default="300"
+          label="MOD_VIRTUEMART_PRODUCT_SLIDER_CACHING_TIME_LABEL"
+          description="MOD_VIRTUEMART_PRODUCT_SLIDER_CACHING_TIME_LABEL_DESC"
+        />
+      </fieldset>
+      
+      <fieldset name="slider" label="MOD_VIRTUEMART_PRODUCT_SLIDER_SETTING">		
+        <field name="nav_dots" type="radio" default="1" label="MOD_VIRTUEMART_PRODUCT_SLIDER_DOTS" description="MOD_VIRTUEMART_PRODUCT_SLIDER_DOTS_DESC" class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+       
+        <field name="nav_nav" type="list" default="0" label="MOD_VIRTUEMART_PRODUCT_SLIDER_BUTTON" description="MOD_VIRTUEMART_PRODUCT_SLIDER_BUTTON_DESC">
+            <option value="0">MOD_VIRTUEMART_PRODUCT_SLIDER_BUTTON_1</option>
+            <option value="1">MOD_VIRTUEMART_PRODUCT_SLIDER_BUTTON_2</option>
+            <option value="2">MOD_VIRTUEMART_PRODUCT_SLIDER_BUTTON_3</option>
+        </field>
+
+        <field name="loop" type="radio" default="1" label="MOD_VIRTUEMART_PRODUCT_SLIDER_LOOP" description="MOD_VIRTUEMART_PRODUCT_SLIDER_LOOP_DESC" class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="autoplay" type="radio" default="0" label="MOD_VIRTUEMART_PRODUCT_SLIDER_AUTOPLAY" description="MOD_VIRTUEMART_PRODUCT_SLIDER_AUTOPLAY_DESC" class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field name="autoplayTimeout" type="text" default="3000" label="MOD_VIRTUEMART_PRODUCT_SLIDER_AUTOPLAY_SPEED" description="MOD_VIRTUEMART_PRODUCT_SLIDER_AUTOPLAY_SPEED_DESC" />
+
+        <field name="customfield" type="radio" default="0" label="MOD_VIRTUEMART_PRODUCT_SLIDER_FIELD" description="MOD_VIRTUEMART_PRODUCT_SLIDER_FIELD_DESC" class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>   
+        </field>
+        <field name="twoImage" type="list" default="0" label="MOD_VIRTUEMART_PRODUCT_SLIDER_IMAGE" description="MOD_VIRTUEMART_PRODUCT_SLIDER_IMAGE_DESC">
+            <option value="0">MOD_VIRTUEMART_PRODUCT_SLIDER_IMAGE_1</option>
+            <option value="1">JNO</option>
+            <option value="2">MOD_VIRTUEMART_PRODUCT_SLIDER_IMAGE_2</option>
+        </field>
+    </fieldset>
+     
+     <fieldset name="style" label="MOD_VIRTUEMART_PRODUCT_SLIDER_STYLE">
+              <field name="productMargin" type="text" default="20" label="MOD_VIRTUEMART_PRODUCT_SLIDER_MARGIN" description="MOD_VIRTUEMART_PRODUCT_SLIDER_MARGIN_DESC" />          
+               <field name="colorSlider" type="color" default="#3498DB" label="MOD_VIRTUEMART_PRODUCT_SLIDER_COLOR" description="MOD_VIRTUEMART_PRODUCT_SLIDER_COLOR_DESC" /> 
+               <field
+					name="shadow"
+					type="radio"
+					default="0"
+					class="btn-group btn-group-yesno"
+					label="MOD_VIRTUEMART_PRODUCT_SLIDER_SHADOW"
+				>
+					<option value="1">Shadow</option>
+					<option value="0">Border</option>
+				</field>
+				<field name="heightIMG" type="number" default="150" label="MOD_VIRTUEMART_PRODUCT_SLIDER_IMAGE_HEIGHT" description="MOD_VIRTUEMART_PRODUCT_SLIDER_IMAGE_HEIGHT_DESC" />
+				<field
+					name="cartStyle"
+					type="radio"
+					default="1"
+					class="btn-group btn-group-yesno"
+					label="MOD_VIRTUEMART_PRODUCT_SLIDER_CART"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>				
+			</fieldset>
+      
+      <fieldset name="responsive" label="MOD_VIRTUEMART_PRODUCT_SLIDER_RESPONSIVE">
+        <field name="large" type="text" default="5" label="MOD_VIRTUEMART_PRODUCT_SLIDER_RESPONSIVE_LARGE" description="MOD_VIRTUEMART_PRODUCT_SLIDER_RESPONSIVE_LARGE_DESC" />
+        <field name="medium" type="text" default="4" label="MOD_VIRTUEMART_PRODUCT_SLIDER_RESPONSIVE_MEDIUM" description="MOD_VIRTUEMART_PRODUCT_SLIDER_RESPONSIVE_MEDIUM_DESC" />
+        <field name="small" type="text" default="3" label="MOD_VIRTUEMART_PRODUCT_SLIDER_RESPONSIVE_SMALL" description="MOD_VIRTUEMART_PRODUCT_SLIDER_RESPONSIVE_SMALL_DESC" />
+        <field name="extrasmall" type="text" default="1" label="MOD_VIRTUEMART_PRODUCT_SLIDER_RESPONSIVE_EXTRASMALL" description="MOD_VIRTUEMART_PRODUCT_SLIDER_RESPONSIVE_EXTRASMALL_DESC" />
+     </fieldset>
+      <fieldset name="advanced">
+        <field
+          name="cache"
+          type="list"
+          default="1"
+          label="COM_MODULES_FIELD_CACHING_LABEL"
+          description="COM_MODULES_FIELD_CACHING_DESC"
+          >
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field
+          name="moduleclass_sfx"
+          type="text"
+          default=""
+          label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+          description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+        />
+        <field
+          name="class_sfx"
+          type="text"
+          default=""
+          label="Menu Class Suffix"
+          description="A suffix to be applied to the css class of the menu items"
+        />
+      </fieldset>
+    </fields>
+  </config>
+</extension>

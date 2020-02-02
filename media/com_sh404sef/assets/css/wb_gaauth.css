@@ -1,0 +1,44 @@
+/**
+ * @ant_title_ant@
+ *
+ * @author      @ant_author_ant@
+ * @copyright   @ant_copyright_ant@
+ * @package     @ant_package_ant@
+ * @license     @ant_license_ant@
+ * @version     @ant_version_ant@
+ * @date		@ant_current_date_ant@
+ */
+
+.wbga_authbutton, .wbga_clearauthbutton {
+    margin-top: 0.5em;
+}
+
+.form-horizontal input.wbga_authinput {
+    width: auto;
+    margin-top: 0.5em;
+    display: block;
+}
+
+.wbga_authinputhint {
+    margin-top: 0.5em;
+}
+
+.wbga_auth_good {
+    display: block;
+    font-weight: bold;
+    color: #226622;
+}
+
+.wbga_warning {
+    font-weight: bold;
+    color: #bd362f;
+}
+
+.wbga_close,
+.form-horizontal input.wbga_authinput.wbga_close {
+    display: none;
+}
+
+.wbga_open {
+    display: block;
+}

@@ -1,0 +1,15 @@
+<root>
+  <params name="splittextglobal" label="Common split text properties" class="n2-expert">
+    <param name="transformorigin" label="Transform origin" type="mixed" default="50|*|50|*|0" translateable="0">
+      <param type="numberautocomplete" sublabel="X" style="width: 40px;" values="0,50,100">
+        <unit value="%">%</unit>
+      </param>
+      <param type="numberautocomplete" sublabel="Y" style="width: 40px;" values="0,50,100">
+        <unit value="%">%</unit>
+      </param>
+      <param type="numberautocomplete" sublabel="Z" style="width: 40px;" values="0">
+        <unit value="px">px</unit>
+      </param>
+    </param>
+  </params>
+</root>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>OPC Tracking - Clicky.com</name>
+    <creationDate>Jan 2014</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>Clicky.com Analytics Tracking</description>
+    <files>
+        <filename>clicky_com.php</filename>
+    </files>
+
+<params>
+    
+    
+			<param
+        type="text"
+        name="site_id"
+        id="site_id"
+        label="Clicky Site ID"
+        description="Enter your site ID"
+        size="80"
+		default="663..."
+        maxLength="255" />
+		
+		<param
+        type="text"
+        name="goal_id"
+        id="goal_id"
+        label="Goal ID"
+        description="Enter your goal ID"
+        size="80"
+		default="2516"
+        maxLength="255" />
+		
+		<param
+        type="text"
+        name="goal_name"
+        id="goal_name"
+        label="Goal name"
+        description="Enter your goal name"
+        size="80"
+		default="Bestellung an orders@example.com weitergeleitet!"
+        maxLength="2550" />
+		
+			<param
+        type="text"
+        name="custom_goal_id"
+        id="custom_goal_id"
+        label="Custom Goal ID that tracks revenue" 
+        description="Enter your custom goal ID that will track revenue as well"
+        size="80"
+		default="2516"
+        maxLength="255" />
+		
+		<param
+        type="list"
+        name="allow_visitor_data"
+        id="allow_visitor_data"
+        label="Allow to send visitor data" 
+        description="Will send username and email to clicky.com together with the goals"
+		default="0"
+        >
+		 <option value="0">No</option>
+		 <option value="1">Yes</option>
+		</param>
+		
+       
+    
+</params>	
+</extension>

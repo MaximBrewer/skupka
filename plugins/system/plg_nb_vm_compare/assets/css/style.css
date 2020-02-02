@@ -1,0 +1,97 @@
+span.btn-compare{
+
+    cursor: pointer;
+
+    color: #3D7AAC!important;
+
+    font-size: 13px!important;
+
+    text-decoration: none;
+
+    position: absolute;
+
+    top: 6px;
+
+    right: 5px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 30px;
+
+    background: #fff;
+
+    height: 30px;
+
+    width: 30px;
+
+    line-height: 30px;
+
+    text-align: center;
+
+}
+
+span.btn-compare:hover,span.btn-compare:active,span.btn-compare:focus{color:#fff!important; background:#3D7AAC}
+
+.nb_sort_compare{height:0!important ;}
+
+.error-compare,.success-compare{
+
+    padding:0px 10px;
+
+    margin:10px 0px;
+
+    text-align:center;
+
+}
+
+.cboxClose{
+
+    display:block;
+
+    margin:0px 0px 0px 90px;
+
+    border: 1px solid #eee;
+
+    width:45px;
+
+    padding:3px 15px;
+
+    cursor:pointer;
+
+    background: #3d7aac;
+
+    color: #fff
+
+
+
+}
+
+.in-comparison{
+    color: #fff!important;
+    background: #3d7aac!important;
+}
+
+/*.fly:before{display: block;content:"";display:inline-block;z-index:2000;width: 10px;height: 10px;border:solid 2px transparent;border-top-color: #3D7AAC;border-left-color: #5A94C3;border-radius: 10px;-webkit-animation:pace-spinner 400ms linear infinite;-moz-animation:pace-spinner 400ms linear infinite;-ms-animation:pace-spinner 400ms linear infinite;-o-animation:pace-spinner 400ms linear infinite;animation:pace-spinner 400ms linear infinite;top: 0;position: relative;}*/
+
+
+
+@-webkit-keyframes pace-spinner{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+
+100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}}
+
+@-moz-keyframes pace-spinner{0%{-moz-transform:rotate(0deg);transform:rotate(0deg);}
+
+100%{-moz-transform:rotate(360deg);transform:rotate(360deg);}}
+
+@-o-keyframes pace-spinner{0%{-o-transform:rotate(0deg);transform:rotate(0deg);}
+
+100%{-o-transform:rotate(360deg);transform:rotate(360deg);}}
+
+@-ms-keyframes pace-spinner{0%{-ms-transform:rotate(0deg);transform:rotate(0deg);}
+
+100%{-ms-transform:rotate(360deg);transform:rotate(360deg);}}
+
+@keyframes pace-spinner{0%{transform:rotate(0deg);transform:rotate(0deg);}
+
+100%{transform:rotate(360deg);transform:rotate(360deg);}}
+

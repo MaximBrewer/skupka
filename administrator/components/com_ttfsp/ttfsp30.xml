@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>ttfsp</name>
+	<creationDate>10 2011</creationDate>
+	<author>None</author>
+	<copyright>(C) 2017 All rights reserved.</copyright>
+	<license>Gnu Gpl</license>
+	<authorEmail>mail@56546.ru</authorEmail>
+	<authorUrl>www.joomlok.com</authorUrl>
+	<version>1.4.3</version>
+	<description>Component Time-Table FS+</description>
+	<files folder="site">
+      <folder>images</folder>
+      <folder>css</folder>
+      <folder>tpl</folder>
+     <folder>includes</folder>
+     <folder>jcomments</folder>	 	 
+     <folder>views</folder>	  
+			<filename>ttfsp.php</filename>
+			<filename>legacy.php</filename>			
+			<filename>ttfsp.html.php</filename>
+			<filename>index.html</filename>
+			<filename>ttfsp.js</filename>
+	</files>
+ 	<administration>
+		<menu img="components/com_ttfsp/imgs/clock.png">TTFSP</menu>
+		<files folder="admin">
+		     <folder>imgs</folder>
+		     <folder>css</folder>
+			<filename>index.html</filename>
+			<filename>ttfsp.php</filename>
+			<filename>uninstall.ttfsp.php</filename>
+			<filename>admin.ttfsp.php</filename>
+			<filename>admin.ttfsp.html.php</filename>
+			<filename>toolbar.ttfsp.php</filename>
+			<filename>toolbar.ttfsp.html.php</filename>
+			<filename>ttfsp.class.php</filename>
+			<filename>language/russian.php</filename>
+			<filename>language/ru-RU.php</filename>
+			<filename>language/en-GB.php</filename>		
+			<filename>language/english.php</filename>	
+			<filename>config.xml</filename>	
+			<filename>access.xml</filename>	
+			<filename>addtm.php</filename>
+			<filename>showtm.php</filename>						
+		</files>
+		<languages folder="admin">
+			<language tag="ru-RU">ru-RU.com_ttfsp.sys.ini</language>
+		</languages>		
+	</administration>
+  <scriptfile>scriptfile.php</scriptfile>
+</extension>

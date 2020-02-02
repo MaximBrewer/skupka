@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+	 <extension type="package" version="3.4" method="upgrade">
+		<name>Яндекс Карты MEDIUM</name>
+		<author>Chupurnov Valeriy</author>
+		<creationDate>Mart 2015</creationDate>
+		<packagename>yandex_maps</packagename>
+		<version>4.0.34</version>
+		<url>https://xdan.ru/komponent-yandeks-karty-dlya-joomla.html</url>
+		<packager>Chupurnov Valeriy</packager>
+		<packagerurl>https://xdan.ru</packagerurl>
+		<description>Пакет установки компонента, модуля и плагина яндекс карты</description>
+		<scriptfile>script.php</scriptfile>
+		<files>
+			
+		<file type="plugin" id="plg_content_yandexmapscontentid" group="content">plg_content_yandexmapscontentid.v.1.0.7.zip</file>
+		<file type="plugin" id="plg_user_yandexmaps" group="user">plg_user_yandexmaps.v.1.0.9.zip</file>
+		<file type="plugin" id="plg_system_yandex_maps" group="system">plg_system_yandex_maps.v.1.2.1.zip</file>
+		<file type="plugin" id="plg_yandexmapssource_content" group="yandexmapssource">plg_yandexmapssource_content.v.1.1.2.zip</file>
+		<file type="plugin" id="plg_yandexmapssource_user" group="yandexmapssource">plg_yandexmapssource_user.v.1.1.2.zip</file>
+			<file type="module" id="yandex_maps" client="site">mod_yandex_maps.medium.v.2.2.5.zip</file>
+			<file type="component" id="com_yandex_maps">com_yandex_maps.medium.v.4.0.34.zip</file>
+		</files>
+		
+		<updateservers>
+			<server type="extension" priority="1" name="Компонент Яндекс карты">https://xdan.ru/update/yandex-maps-medium.xml</server>
+		</updateservers> 
+	 </extension>

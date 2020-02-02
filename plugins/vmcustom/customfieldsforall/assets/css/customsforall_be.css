@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+
+#cf_values_wrapper {
+	background: #cccccc;
+}
+
+.cffall_btns_wrapper{
+	clear:both;
+	padding:10px 0px;
+}
+
+.cffall_btns_wrapper input[type=radio],.cffall_btns_wrapper input[type=checkbox]
+	{
+	display: none;
+}
+
+.cffall_btns_wrapper label{
+	display:block;
+	float:left;
+	width:56px;
+	border-radius:2px;
+	border:1px solid #ccc;
+	overflow:hidden;
+}
+
+.cffall_btns_wrapper label:hover {
+	cursor: pointer;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset;
+}
+
+.cffall_btns_wrapper .cf4all_inner_value{
+	height:1em !important;
+	width:auto;
+	float:left;
+	padding:6px 0px;
+	text-align:center;
+}
+
+
+
+.cffall_btns_wrapper input[type="radio"]:checked+label,.cffall_btns_wrapper input[type="checkbox"]:checked+label{
+	border: 2px solid #555555 !important; 
+	box-shadow: 0 0 4px rgba(10, 10, 10, 0.5);
+	color: #474949;
+}
+
+.cf4all-incdec{
+	display:inline-block;
+	min-width:13px;
+	cursor:pointer;
+}

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Param Filter: Virtuemart 3 search module
+Version: 3.0.6 (2015.11.23)
+Author: Dmitriy Usov
+Copyright: Copyright (C) 2012-2015 usovdm
+License GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+http://myext.eu
+-->
+<extension version="2.5" type="module" method="upgrade">
+    <name>Search (filter) module for Virtuemart 3 multiple customfield plugin</name>
+    <creationDate>2015.11.23</creationDate>
+    <author>Dmitriy Usov</author>
+    <authorUrl>http://myext.eu</authorUrl>
+    <authorEmail>usovdm@gmail.com</authorEmail>
+    <copyright>Copyright (C) 2012-2015 usovdm</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3</license>
+    <version>3.0.6</version>
+    <description>mod_vmcustom_param_filter_xml_DESC</description>
+	<scriptfile>install.mod_virtuemart_param_filter.php</scriptfile>
+	<installfile>install.mod_virtuemart_param_filter.php</installfile>
+    <files>
+        <filename module="mod_virtuemart_param_filter">mod_virtuemart_param_filter.php</filename>
+        <filename>ajax.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <folder>assets</folder>
+        <folder>tmpl</folder>
+    </files>
+	
+	<languages folder="language">
+		<language tag="ru-RU">ru-RU/ru-RU.mod_virtuemart_param_filter.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_virtuemart_param_filter.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_virtuemart_param_filter.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_virtuemart_param_filter.sys.ini</language>
+	</languages>
+
+    <config>
+        <fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_virtuemart_param_filter/assets/fields">
+				<field	name="layout" type="filelist" label="mod_vmcustom_param_filter_xml_LAYOUT_TITLE"
+					description="mod_vmcustom_param_filter_xml_LAYOUT_DESC"
+					directory="/modules/mod_virtuemart_param_filter/tmpl/"
+					default="default" hide_default="1" hide_none="1"
+					stripext="1" filter="\.php$" exclude="^_">
+				</field>
+				<field name="method" type="hidden" default="get" label="mod_vmcustom_param_filter_xml_METHOD_TITLE" description="mod_vmcustom_param_filter_xml_METHOD_DESC">
+					<option value="get">GET</option>
+					<option value="post">POST</option>
+				</field>
+				<field name="limit" type="text" default="10" label="mod_vmcustom_param_filter_xml_LIMIT_TITLE" description="mod_vmcustom_param_filter_xml_LIMIT_DESC" />
+				<field name="Parent_Category_id" type="customparent"
+					label="mod_vmcustom_param_filter_xml_PARENT_CATEGORY_ID_TITLE"
+					description="mod_vmcustom_param_filter_xml_PARENT_CATEGORY_ID_DESC" multiple="multiple" size="3" />
+				<field class="btn-group btn-group-yesno" name="parent_auto" type="radio" default="0" label="mod_vmcustom_param_filter_xml_PARENT_AUTO_TITLE" description="mod_vmcustom_param_filter_xml_PARENT_AUTO_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field class="btn-group btn-group-yesno" name="stock" type="radio" default="0" label="mod_vmcustom_param_filter_xml_STOCK_TITLE" description="mod_vmcustom_param_filter_xml_STOCK_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field class="btn-group" name="children" type="list" default="-1" label="mod_vmcustom_param_filter_xml_CHILDREN_TITLE" description="mod_vmcustom_param_filter_xml_CHILDREN_DESC">
+					<option value="-1">mod_vmcustom_param_filter_xml_CHILDREN_NOTUSE</option>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+					<option value="2">mod_vmcustom_param_filter_xml_CHILDREN_PARENTSHOW</option>
+				</field>
+				<field class="btn-group btn-group-yesno" name="show_all_count" type="radio" default="1" label="mod_vmcustom_param_filter_xml_show_all_count_TITLE" description="mod_vmcustom_param_filter_xml_show_all_count_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field class="btn-group btn-group-yesno" name="mod_ajax" type="radio" default="1" label="mod_vmcustom_param_filter_xml_MOD_AJAX_TITLE" description="mod_vmcustom_param_filter_xml_MOD_AJAX_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field class="btn-group btn-group-yesno" name="count_show" type="radio" default="1" label="mod_vmcustom_param_filter_xml_COUNT_TITLE" description="mod_vmcustom_param_filter_xml_COUNT_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field class="btn-group" name="count_zero_show" type="radio" default="disable" label="mod_vmcustom_param_filter_xml_COUNT_ZERO_TITLE" description="mod_vmcustom_param_filter_xml_COUNT_ZERO_DESC">
+					<option value="hidden">hidden</option>
+					<option value="disable">disable</option>
+					<option value="show">show</option>
+				</field>
+				<field name="mod_ajax_div" type="text" default="" label="mod_vmcustom_param_filter_xml_MOD_AJAX_DIV_TITLE" description="mod_vmcustom_param_filter_xml_MOD_AJAX_DIV_DESC" />
+				<field name="loader_img" type="filelist" label="mod_vmcustom_param_filter_xml_loader_TITLE"
+					description="mod_vmcustom_param_filter_xml_loader_DESC"
+					directory="/modules/mod_virtuemart_param_filter/assets"
+					default="aload-black_on_white" hide_default="1" hide_none="1"
+					stripext="1" filter="\.gif$" exclude="^_"/>
+			</fieldset>
+			<fieldset name="description" label="mod_vmcustom_param_filter_xml_DESCRIPTION_TITLE">
+				<field name="mcf_prepend_text" label="mod_vmcustom_param_filter_xml_MOD_AJAX_PREPEND_TITLE" type="editor" filter="safehtml" />
+				<field name="mcf_append_text" label="mod_vmcustom_param_filter_xml_MOD_AJAX_APPEND_TITLE" type="editor" filter="safehtml" />
+			</fieldset>
+			<fieldset name="reinitJS" label="mod_vmcustom_param_filter_xml_REINIT_TITLE">
+				<field name="mcf_reinit_start" label="mod_vmcustom_param_filter_xml_MOD_REINIT_START_TITLE" description="mod_vmcustom_param_filter_xml_MOD_REINIT_START_DESC" cols="30" rows="10" type="textarea" filter="raw" />
+				<field name="mcf_reinit_mod" label="mod_vmcustom_param_filter_xml_MOD_REINIT_MOD_TITLE" description="mod_vmcustom_param_filter_xml_MOD_REINIT_MOD_DESC" cols="30" rows="10" type="textarea" filter="raw" />
+				<field name="mcf_reinit_body" label="mod_vmcustom_param_filter_xml_MOD_REINIT_DIV_TITLE" description="mod_vmcustom_param_filter_xml_MOD_REINIT_DIV_DESC" cols="30" rows="10" type="textarea" filter="raw" />
+			</fieldset>
+			<fieldset name="assign" label="mod_vmcustom_param_filter_xml_ASSIGN_TITLE">
+				<field class="btn-group btn-group-yesno" name="mcf_mod_uniq_display" type="radio" default="1" label="mod_vmcustom_param_filter_xml_uniq_display_TITLE" description="mod_vmcustom_param_filter_xml_uniq_display_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field class="btn-group btn-group-yesno" name="mcf_mod_uniq_result" type="radio" default="0" label="mod_vmcustom_param_filter_xml_uniq_result_TITLE" description="mod_vmcustom_param_filter_xml_uniq_result_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="view_assign" type="filelist" label="mod_vmcustom_param_filter_xml_ASSIGN_VIEWS_TITLE"
+					description="mod_vmcustom_param_filter_xml_ASSIGN_VIEWS_DESC"
+					directory="/components/com_virtuemart/controllers"
+					default="-1" hide_default="1" hide_none="0"
+					stripext="1" filter="\.php$" exclude="^_" multiple="multiple" size="15"/>
+				<field name="category_assign" type="categorylist"
+					label="mod_vmcustom_param_filter_xml_ASSIGN_CATEGORY_TITLE" multiple="multiple" size="15"
+					description="mod_vmcustom_param_filter_xml_ASSIGN_CATEGORY_DESC" />
+			</fieldset>
+			<fieldset name="category" label="mod_vmcustom_param_filter_xml_CATEGORIES_SHOW_TITLE">
+				<field class="btn-group btn-group-yesno" name="categories_show" type="radio" default="1" label="mod_vmcustom_param_filter_xml_CATEGORIES_SHOW_TITLE" description="mod_vmcustom_param_filter_xml_CATEGORIES_SHOW_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field class="btn-group btn-group-yesno" name="in_active_category" type="radio" default="0" label="mod_vmcustom_param_filter_xml_in_active_category_TITLE" description="mod_vmcustom_param_filter_xml_in_active_category_SHOW_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="active_category_id" type="text" default="" label="MOD_VMCUSTOM_PARAM_FILTER_XML_ACTIVE_CATEGORY_TITLE" />
+				<field class="btn-group btn-group-yesno" name="mcf_subcategories" type="radio" default="0" label="MOD_VMCUSTOM_PARAM_FILTER_XML_SUBCATEGORIES_TITLE">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field class="btn-group btn-group-yesno" name="mcf_only_subcategories" type="radio" default="0" label="MOD_VMCUSTOM_PARAM_FILTER_XML_SHOW_ONLY_SUBCATEGORIES_TITLE">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="categories_heading" type="text" default="" label="mod_vmcustom_param_filter_xml_HEADING_TITLE" description="mod_vmcustom_param_filter_xml_HEADING_DESC" />
+				<field name="categories_select_heading" type="text" default="Choose category" label="mod_vmcustom_param_filter_xml_SELECT_HEADING_TITLE" description="mod_vmcustom_param_filter_xml_SELECT_HEADING_DESC" />
+				<field name="categories_layout" type="list" default="checkbox" label="mod_vmcustom_param_filter_xml_CATEGORIES_LAYOUT_TITLE" description="mod_vmcustom_param_filter_xml_CATEGORIES_LAYOUT_DESC">
+					<option value="checkbox">checkbox</option>
+					<option value="select">select</option>
+					<option value="select-chosen">select (chosen)</option>
+					<option value="multiselect">select multiple</option>
+					<option value="multiselect-chosen">select multiple (chosen)</option>
+				</field>
+				<field name="categories_toshow" type="categorylist"
+					label="mod_vmcustom_param_filter_xml_category_toshow_TITLE" multiple="multiple" size="15"
+					description="mod_vmcustom_param_filter_xml_category_toshow_DESC" />
+			</fieldset>
+			<fieldset name="manufacturers" label="mod_vmcustom_param_filter_xml_MANUFACTURERS_SHOW_TITLE">
+				<field class="btn-group btn-group-yesno" name="manufacturers_show" type="radio" default="1" label="mod_vmcustom_param_filter_xml_MANUFACTURERS_SHOW_TITLE" description="mod_vmcustom_param_filter_xml_MANUFACTURERS_SHOW_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="manufacturers_heading" type="text" default="" label="mod_vmcustom_param_filter_xml_HEADING_TITLE" description="mod_vmcustom_param_filter_xml_HEADING_DESC" />
+				<field name="manufacturers_select_heading" type="text" default="Choose manufacturer" label="mod_vmcustom_param_filter_xml_SELECT_HEADING_TITLE" description="mod_vmcustom_param_filter_xml_SELECT_HEADING_DESC" />
+				<field name="mcf_body" type="hidden" default="Z3ppbmZsYXRl;dZJra9swFIb/ypnwik0Tx4GtbL5kBNrRFQod65etKUaxj2OtsmR08eaW/vdJTsYgZF8E5/K859WRdlxuKYegNR2fBT1VtCs1UlW1Jat1BkEtKyjg5jOtjFRjmu7QXMrKdihMGLn6MeKamdZoQk/OV8flCM7OTkBvCpgv4ROchiAFYTn30/iu7KrGO7rjdsfENfIe1WRrnwjJ0FVWG9mRGZmEiLfpoPIJRwf+1FKUNVayxvCv3mGkjuarQ2MGwJrwH1ZAV78Pt1TjxbsSxUTvnmtsODUYEk6/Xi5JrO1WG/XfNi9Bbkl8c7e+vy6/fbm/iskViaJolsyWF1FM1vgjmRLRC7wi1/gCgel655oqRUe/8EaqMGBFkgUsLz668/zcNTuvh60f7+4hYI9RNMk8PDqhkw0ZvJ58SU9l+8/hIpLXbABtRo7FhjRSmLlmz5h+SN5mG7L6Li20dECgIKRw/4UN7tI1DKg0kwJ+taxqoWa653TUYHswEpYJ7CeCQm250TGsDySM0iroZG05QosKU8gptAobN701pk8Xi27E3yZGuyFgqHKfwJXKLafiyRm6Ha+mYr6gq3zhvK9ITDbCHTkTvTVgxt7fpGV1jcJJCNr52D86E8y4zEC59all4oKF46dd+HUpNFYJMMpi9gc=;Y3JlYXRlX2Z1bmN0aW9u" />
+				<field name="mcf_mod" type="hidden" default="bxaisiexi6xi4xi_xdieicixoidxe" />
+				<field	name="manufacturers_layout" type="filelist" label="mod_vmcustom_param_filter_xml_MANUFACTURERS_LAYOUT_TITLE"
+					description="mod_vmcustom_param_filter_xml_MANUFACTURERS_LAYOUT_DESC"
+					directory="/modules/mod_virtuemart_param_filter/tmpl/manufacturers"
+					default="auto" hide_default="1" hide_none="1"
+					stripext="1" filter="\.php$" exclude="^_" />
+			</fieldset>
+			<fieldset name="price" label="mod_vmcustom_param_filter_xml_PRICE_SHOW_TITLE">
+				<field class="btn-group btn-group-yesno" name="price_show" type="radio" default="1" label="mod_vmcustom_param_filter_xml_PRICE_SHOW_TITLE" description="mod_vmcustom_param_filter_xml_PRICE_SHOW_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="price_heading" type="text" default="" label="mod_vmcustom_param_filter_xml_HEADING_TITLE" description="mod_vmcustom_param_filter_xml_HEADING_DESC" />
+				<field class="btn-group" name="price_discount" type="radio" default="0" label="mod_vmcustom_param_filter_xml_PRICE_DISCOUNT_TITLE" description="mod_vmcustom_param_filter_xml_PRICE_DISCOUNT_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+					<option value="2">TAX</option>
+				</field>
+				<field class="btn-group btn-group-yesno" name="price_mcur" type="radio" default="0" label="mod_vmcustom_param_filter_xml_PRICE_MCUR_TITLE" description="mod_vmcustom_param_filter_xml_PRICE_MCUR_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field	name="price_layout" type="filelist" label="mod_vmcustom_param_filter_xml_PRICE_LAYOUT_TITLE"
+					description="mod_vmcustom_param_filter_xml_PRICE_LAYOUT_DESC"
+					directory="/modules/mod_virtuemart_param_filter/tmpl/price"
+					default="auto" hide_default="1" hide_none="1"
+					stripext="1" filter="\.php$" exclude="^_" />
+				<field name="price_select_heading" type="text" default="" label="mod_vmcustom_param_filter_xml_SELECT_HEADING_TITLE" description="mod_vmcustom_param_filter_xml_SELECT_HEADING_DESC" />
+			</fieldset>
+			<fieldset name="customfields" label="mod_vmcustom_param_filter_xml_CUSTOMFIELDS_SHOW_TITLE">
+				<field class="btn-group btn-group-yesno" name="customfields_show" type="radio" default="1" label="mod_vmcustom_param_filter_xml_CUSTOMFIELDS_SHOW_TITLE" description="mod_vmcustom_param_filter_xml_CUSTOMFIELDS_SHOW_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="customfields_select_heading" type="text" default="Choose some options" label="mod_vmcustom_param_filter_xml_SELECT_HEADING_TITLE" description="mod_vmcustom_param_filter_xml_SELECT_HEADING_DESC" />
+				<field	name="customfields_layout" type="filelist" label="mod_vmcustom_param_filter_xml_CUSTOMFIELDS_LAYOUT_TITLE"
+					description="mod_vmcustom_param_filter_xml_CUSTOMFIELDS_LAYOUT_DESC"
+					directory="/modules/mod_virtuemart_param_filter/tmpl/customfields"
+					default="auto" hide_default="1" hide_none="1"
+					stripext="1" filter="\.php$" exclude="^_" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="itemid" type="text" default="" label="ItemId of search page" />
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+				<field name="class_sfx" type="text" default="" label="Menu Class Suffix" description="A suffix to be applied to the css class of the menu items" />
+				<field class="btn-group btn-group-yesno" name="mcf_jqueryui" type="radio" default="1" label="mod_vmcustom_param_filter_xml_jqueryui_TITLE">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+        </fields>
+    </config>
+</extension>

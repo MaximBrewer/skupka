@@ -1,0 +1,243 @@
+<root translate="accordionmenu">
+    <params name="basic" label="AM_Basic_parameters">
+        <param name="type" translateable="1"  type="menutype" label="AM_Type" default="joomla" file="type.xml" description="AM_Choose_the_source_compon__" />
+        <param name="theme" translateable="1" type="menutheme" label="AM_Theme" default="clean" file="theme.xml" description="AM_Change_the_look__" />
+        <param name="moduleshowtitle" type="onoff" default="0" label="AM_Title_theme" description="AM_If_enabled_the_menu__" />
+        <param name="parentlink" type="onoff" default="0" label="AM_Parent_items_as_link" description="AM_If_enabled_the_items__" />
+        <param name="accordionmode" type="radio" default="1" label="AM_Accordion_mode" description="AM_bNormalb_If_one_item_opens__">
+            <option value="1">AM_Normal</option>
+            <option value="2">AM_Improved</option>
+            <option value="0">AM_Multiple_opening</option>
+        </param>
+        <param name="mode" type="radio" label="AM_Activator_event" default="onclick" description="AM_bClickb_Openclose_by_mouse__">
+            <option value="onclick">AM_Click</option>
+            <option value="onmouseenter">AM_Mouse_enter</option>
+            <option value="both">Click + Mouse enter</option>
+            <option value="mouseenterandleave">Mouse enter + leave</option>
+        </param>
+    </params>
+    <params name="ajaxmode" label="AJAX Mode">
+        <param name="ajax" type="mixed" default="0|*|1000" label="AJAX Mode" description="">
+            <param type="onoff" label="Enabled" />
+            <param type="text" label="Cache lifetime">
+              <unit>min</unit>
+            </param>
+        </param>
+        
+        <param name="ajax_cacheby" multiple="1" type="list" size="5" default="acl" label="Cache by" description="The selected option will be used to generate different cache for your visitors. Choose the most apropiate for your case!">
+            <option value="acl">Access level (ACL)</option>
+            <option value="language">Language</option>
+            <option value="userid">User id</option>
+        </param>
+        
+        <param name="ajax_moduleid" type="text" default="" label="Module id for common cache" description="When set, the different modules can use a common cache. Use only when menu structure is the same!" />
+    </params>
+    <params name="advanced" label="AM_Advanced_parameters">
+        <param name="active" type="radio" default="1" label="AM_Active" description="AM_The_current_page_is_active__">
+            <option value="0">AM_Disabled</option>
+            <option value="1">AM_Item</option>
+            <option value="2">AM_Branch</option>
+        </param>
+        <param name="opened" type="radio" default="2" label="AM_Opened" description="AM_The_active_page_can_be__">
+            <option value="0">AM_Disabled</option>
+            <option value="-1">AM_All</option>
+            <option value="1">AM_Active_item</option>
+            <option value="2">AM_Active_branch</option>
+            <option value="3">AM_State_saving_with_cookies</option>
+        </param>
+        <param name="openedlevels" translateable="1" multiple="1" type="list" size="5" default="" label="AM_Always_opened" description="AM_If_you_mark_a_level_always__">
+            <option value="1">AM_1_level</option>
+            <option value="2">AM_2_level</option>
+            <option value="3">AM_3_level</option>
+            <option value="4">AM_4_level</option>
+            <option value="5">AM_5_level</option>
+            <option value="6">AM_6_level</option>
+            <option value="7">AM_7_level</option>
+            <option value="8">AM_8_level</option>
+            <option value="9">AM_9_level</option>
+            <option value="10">AM_10_level</option>
+        </param>
+        <param name="slice" type="mixed" label="AM_Menu_slice" default="0|*|0|*|0" description="AM_You_can_show_a_specific_part_of_the__">
+            <param type="text" label="AM_Start_level" style="width:50px;" />
+            <param type="text" label="AM_End_level" style="width:50px;" />
+            <param type="onoff" label="AM_Improved_start_level_handling" />
+        </param>
+        <param name="tooltip" type="mixed" label="AM_Tooltip" default="0|*|Click to open!|*|Click to close!" description="AM_When_mouse_over_an_openable_or__">
+            <param type="onoff" label="Enabled" />
+            <param type="text" label="AM_Open" />
+            <param type="text" label="AM_Close" />
+        </param>
+    </params>
+    <params name="animation" label="AM_Animation_parameters">
+        <param name="animationskins" type="mixed" default="" label="AM_Animation_type" description="AM_Choose_one_of_our_predefined_animation__">
+            <param type="skin" label="AM_Animation_type" translateable="1">
+                <off label="AM_Off__reset">
+                    <transform>0</transform>
+                    <transformperspective>0</transformperspective>
+                    <transformorigin>center|*|center|*|0</transformorigin>
+                    <transformtranslate>0|*|0|*|0</transformtranslate>
+                    <transformscale>1.0|*|1.0|*|1.0</transformscale>
+                    <transformrotate>0|*|0|*|0</transformrotate>
+                </off>                
+                <accordion label="AM_Accordion_default">
+                    <animation>600|*|dojo.fx.easing.cubicInOut|*|dojo.fx.easing.cubicInOut</animation>
+                    <snaptobottom>0</snaptobottom>
+                    <css3animation>1</css3animation>
+                    <transform>0</transform>
+                    <transformperspective>800</transformperspective>
+                    <transformorigin>0|*|0|*|0</transformorigin>
+                    <transformtranslate>0|*|0|*|0</transformtranslate>
+                    <transformscale>1.0|*|1.0|*|1.0</transformscale>
+                    <transformrotate>0|*|0|*|0</transformrotate>
+                </accordion>                
+                <accordionopacity label="AM_Accordion_with_opacity">
+                    <animation>600|*|dojo.fx.easing.cubicInOut|*|dojo.fx.easing.cubicInOut</animation>
+                    <snaptobottom>0</snaptobottom>
+                    <css3animation>1</css3animation>
+                    <transform>1</transform>
+                    <opacity>0</opacity>
+                    <transformperspective>800</transformperspective>
+                    <transformorigin>0|*|0|*|0</transformorigin>
+                    <transformtranslate>0|*|0|*|0</transformtranslate>
+                    <transformscale>1.0|*|1.0|*|1.0</transformscale>
+                    <transformrotate>0|*|0|*|0</transformrotate>
+                </accordionopacity>
+                <fliptop label="AM_Flip_top">
+                    <animation>600|*|dojo.fx.easing.cubicInOut|*|dojo.fx.easing.cubicInOut</animation>
+                    <snaptobottom>0</snaptobottom>
+                    <css3animation>1</css3animation>
+                    <transform>1</transform>
+                    <opacity>0</opacity>
+                    <transformperspective>800</transformperspective>
+                    <transformorigin>center|*|bottom|*|0</transformorigin>
+                    <transformtranslate>0|*|0|*|0</transformtranslate>
+                    <transformscale>1.0|*|1.0|*|1.0</transformscale>
+                    <transformrotate>90|*|0|*|0</transformrotate>
+                </fliptop>
+                <flipleft label="AM_Flip_left">
+                    <snaptobottom>1</snaptobottom>
+                    <css3animation>1</css3animation>
+                    <transform>1</transform>                    
+                    <opacity>0.5</opacity>
+                    <transformperspective>800</transformperspective>
+                    <transformorigin>left|*|top|*|0</transformorigin>
+                    <transformtranslate>0|*|0|*|0</transformtranslate>
+                    <transformscale>1.0|*|1.0|*|1.0</transformscale>
+                    <transformrotate>0|*|90|*|0</transformrotate>
+                </flipleft>
+                <scaleup label="AM_Scale_up">
+                    <snaptobottom>0</snaptobottom>
+                    <css3animation>1</css3animation>
+                    <transform>1</transform>
+                    <opacity>0.5</opacity>
+                    <transformperspective>800</transformperspective>
+                    <transformorigin>center|*|top|*|0</transformorigin>
+                    <transformtranslate>0|*|0|*|0</transformtranslate>
+                    <transformscale>0|*|0|*|0</transformscale>
+                    <transformrotate>-90|*|0|*|0</transformrotate>
+                </scaleup>                
+                <translateleft label="AM_Translate_left">
+                    <snaptobottom>0</snaptobottom>
+                    <css3animation>1</css3animation>
+                    <transform>1</transform>
+                    <opacity>0</opacity>
+                    <transformperspective>800</transformperspective>
+                    <transformorigin>0|*|0|*|0</transformorigin>
+                    <transformtranslate>-300|*|0|*|0</transformtranslate>
+                    <transformscale>1|*|1|*|1</transformscale>
+                    <transformrotate>0|*|0|*|0</transformrotate>
+                </translateleft>
+                <transleteright label="AM_Translate_right">
+                    <snaptobottom>0</snaptobottom>
+                    <css3animation>1</css3animation>
+                    <transform>1</transform>
+                    <opacity>0</opacity>
+                    <transformperspective>800</transformperspective>
+                    <transformorigin>0|*|0|*|0</transformorigin>
+                    <transformtranslate>300|*|0|*|0</transformtranslate>
+                    <transformscale>1|*|1|*|1</transformscale>
+                    <transformrotate>0|*|0|*|0</transformrotate>
+                </transleteright>
+                <transleteZ label="AM_Translate_Z_and_rotate">
+                    <snaptobottom>0</snaptobottom>
+                    <css3animation>1</css3animation>
+                    <transform>1</transform>
+                    <opacity>0</opacity>
+                    <transformperspective>800</transformperspective>
+                    <transformorigin>0|*|0|*|0</transformorigin>
+                    <transformtranslate>0|*|0|*|-300</transformtranslate>
+                    <transformscale>1|*|1|*|1</transformscale>
+                    <transformrotate>30|*|0|*|0</transformrotate>
+                </transleteZ>
+                <flipdown label="AM_Flip_down">
+                    <snaptobottom>0</snaptobottom>
+                    <css3animation>1</css3animation>
+                    <transform>1</transform>
+                    <opacity>0</opacity>
+                    <transformperspective>800</transformperspective>
+                    <transformorigin>0|*|0|*|0</transformorigin>
+                    <transformtranslate>0|*|0|*|-300</transformtranslate>
+                    <transformscale>1|*|1|*|0</transformscale>
+                    <transformrotate>0|*|0|*|-90</transformrotate>
+                </flipdown>
+            </param>
+        </param>
+        <param name="animation" type="mixed" label="AM_Animation" description="AM_Set_the_duration_of_the_anima__" default="500|*|dojo.fx.easing.cubicInOut|*|dojo.fx.easing.cubicInOut">
+            <param type="text" style="width: 50px;" label="AM_Duration">
+                <unit value="ms">ms</unit>
+            </param>
+            <param type="easing" label="AM_Open_easing" />
+            <param type="easing" label="AM_Close_easing" />
+        </param>
+        <param name="snaptobottom" type="onoff" default="0" label="AM_Snap_submenus_to_bottom" description="AM_Attaches_the_sublev__" />
+        <param name="css3animation" type="onoff" default="0" label="AM_CSS3_animations" description="AM_This_enables_the_CSS3_transition__" />
+        <param name="transform" type="onoff" default="0" label="AM_Transform" description="AM_With_this_parameter_you_turn_on_and_off_the_CSS_transform__" />
+        <param name="opacity" type="text" default="1.0" style="width:40px;" label="AM_Opacity" description="AM_You_can_set_a_value_between__" />
+        <param name="transformperspective" type="text" style="width:40px;" label="AM_Perspective" default="0" description="AM_The_perspective_property_defines__">
+            <unit>px</unit>
+        </param>
+        <param name="transformorigin" type="mixed" label="AM_Origin" default="center|*|center|*|0" description="AM_The_transformorigin_property_allows__">
+            <param type="text" label="AM_X" style="width:70px;" />
+            <param type="text" label="AM_Y" style="width:70px;" />
+            <param type="text" label="AM_Z" style="width:70px;" />
+        </param>
+        <param name="transformtranslate" type="mixed" label="AM_Translate" default="0|*|0|*|0" description="AM_Moves_an_element_sideways__">
+            <param type="text" label="AM_X" style="width:40px;">
+                <unit>px</unit>
+            </param>
+            <param type="text" label="AM_Y" style="width:40px;">
+                <unit>px</unit>
+            </param>
+            <param type="text" label="AM_Z" style="width:40px;">
+                <unit>px</unit>
+            </param>
+        </param>
+        <param name="transformscale" type="mixed" label="AM_Scale" default="1.0|*|1.0|*|1.0" description="AM_The_scale_increases_or__">
+            <param type="text" label="AM_X" style="width:40px;"/>
+            <param type="text" label="AM_Y" style="width:40px;"/>
+            <param type="text" label="AM_Z" style="width:40px;"/>
+        </param>
+        <param name="transformrotate" type="mixed" label="AM_Rotate" default="0|*|0|*|0" description="AM_Rotates_clockwise_from_current_position">
+            <param type="text" label="AM_X" style="width:40px;">
+                <unit>deg</unit>
+            </param>
+            <param type="text" label="AM_Y" style="width:40px;">
+                <unit>deg</unit>
+            </param>
+            <param type="text" label="AM_Z" style="width:40px;">
+                <unit>deg</unit>
+            </param>
+        </param>
+    </params>
+    <params name="other" label="AM_Other_parameters">
+        <param name="class_sfx" type="text" default="" label="AM_Menu_class_suffix" description="AM_Add_a_CSS_class_to_the_menu" />
+        <param name="html5" type="onoff" default="0" label="AM_HTML5_mode" description="AM_Use_NAV_HTML5_tag_to_show_the__" />
+        <param name="noscript" type="onoff" default="1" label="AM_Show_expanded_when_Javascript_disabled" description="AM_Set_this_OFF_to_prevent_flickering" />
+        <param name="menucache" type="mixed" label="Caching" default="0|*|300000">
+            <param type="onoff" label="Caching"/>
+            <param type="text" label="Lifetime">
+              <unit>min</unit>
+            </param>
+        </param>
+    </params>
+</root>

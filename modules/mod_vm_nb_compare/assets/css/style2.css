@@ -1,0 +1,27 @@
+.nb_compare{padding:10px 0px 16px;border-bottom:1px solid #999;border-top:1px solid #999;}
+.nb_list_compare{margin:0;padding:0;}
+.nb_list_compare h3{color:#666;font-size:20px;}
+.nb_list_compare .nb_product_compare{padding:5px 0px;border-bottom:1px dashed #cdcdcd;position:relative;}
+.nb_list_compare .nb_product_compare img{border:1px solid #e5e5e3;margin-right:5px;}
+.nb_list_compare .nb_product_compare .nb_name{font:14px 'PT Sans ';color:#666;vertical-align:top;margin-top:5px;display:inline-block;}
+.nb_list_compare .nb_product_compare .nb_remove_product{position:absolute;cursor:pointer;right:10px;top:10px;}
+.nb_list_compare .nb_product_compare .nb_remove_product:hover{color:red}
+.nb_list_compare .nb_action{margin:10px 0px 0px 0px;}
+.nb_action .nb_start_compare,.nb_action .nb_compare_clear_all{display:inline-block;padding:5px 15px;border:1px solid #dadada;background:#3d7aac;color:#fff;font-size:14px;cursor:pointer;margin-right:5px;}
+.nb_action .nb_start_compare i,.nb_action .nb_compare_clear_all i{margin-right:10px;}
+.nb_action .nb_start_compare:hover,.nb_action .nb_compare_clear_all:hover{background:#777;}
+.nb_list .nb_no-item{text-align:center;padding:47px 0px 53px 0px;border-bottom:1px dashed #777;}
+.nb_list_compare .nb_product_compare .nb_name a{text-decoration:none;color:#444;}
+.nb_list_compare .nb_product_compare .nb_name a:hover{background:none;}
+.remove_loading{display:inline-block;z-index:2000;width: 10px;height: 10px;border:solid 2px transparent;border-top-color: #777;border-left-color: #555;border-radius: 10px;-webkit-animation:pace-spinner 400ms linear infinite;-moz-animation:pace-spinner 400ms linear infinite;-ms-animation:pace-spinner 400ms linear infinite;-o-animation:pace-spinner 400ms linear infinite;animation:pace-spinner 400ms linear infinite;}
+.remove_all_loading>i{display:inline-block;z-index:2000;width: 10px;height: 10px;border:solid 2px transparent;border-top-color: #fff;border-left-color: #fafafa;border-radius: 10px;-webkit-animation:pace-spinner 400ms linear infinite;-moz-animation:pace-spinner 400ms linear infinite;-ms-animation:pace-spinner 400ms linear infinite;-o-animation:pace-spinner 400ms linear infinite;animation:pace-spinner 400ms linear infinite;}
+@-webkit-keyframes pace-spinner{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}}
+@-moz-keyframes pace-spinner{0%{-moz-transform:rotate(0deg);transform:rotate(0deg);}
+100%{-moz-transform:rotate(360deg);transform:rotate(360deg);}}
+@-o-keyframes pace-spinner{0%{-o-transform:rotate(0deg);transform:rotate(0deg);}
+100%{-o-transform:rotate(360deg);transform:rotate(360deg);}}
+@-ms-keyframes pace-spinner{0%{-ms-transform:rotate(0deg);transform:rotate(0deg);}
+100%{-ms-transform:rotate(360deg);transform:rotate(360deg);}}
+@keyframes pace-spinner{0%{transform:rotate(0deg);transform:rotate(0deg);}
+100%{transform:rotate(360deg);transform:rotate(360deg);}}

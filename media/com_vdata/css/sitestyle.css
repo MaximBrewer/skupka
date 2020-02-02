@@ -1,0 +1,446 @@
+/* CSS Document */
+
+
+.icon-32-import	{
+	background-image:url(../images/icon-32-import.png);
+}
+
+span.label	{
+	float:left;
+	margin: 5px 5px 5px 0;
+}
+.icon-import:before {
+	content:"w";
+}
+
+div.loading {
+    background:#000000;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9995;
+}
+div.loading .loading-icon {
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    z-index: 9996;
+}
+div.loading .loading-icon div {
+    background: url(../images/loading.gif) no-repeat scroll center center;
+    height: 24px;
+    width: 24px;
+}
+.icon-48-vdata {
+	background-image:url(../images/icon-48-vdata.png);
+}
+.pane-sliders .content {
+	padding:10px !important;
+}
+.icon-48-profiles {
+	background-image:url(../images/icon-48-profiles.png) !important;
+}
+
+.icon-48-import {
+	background-image:url(../images/icon-48-import.png) !important;
+}
+
+li.col_block>ul, li.fields_block>ul	{
+	clear:both;
+}
+
+li.col_block>ul>li, li.fields_block>ul>li	{
+	float:left;
+	width:40%;
+	margin-right:15px;
+	padding:5px 0px;
+}
+
+legend.article_options	{
+	clear:both;
+}
+
+.userdialog	{
+	position:absolute;
+	z-index:2;
+	border:#dedede solid 5px;
+	border-shadow:5px;
+}
+dd.tabs ul {
+	padding:0 0 0 15px;
+}
+.span10 .width-60 {
+    float: left;
+    margin: 0 5% 0 0;
+    width: 55%;
+}
+.span10 .width-40 {
+	float:right;
+	width:40%;
+}
+ul.adminformlist, ul.adminformlist li {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.span10 .width-60 label, .span10 .width-40 label {
+    max-width: 250px;
+    min-width: 145px;
+    padding: 0 5px 0 0;
+	margin:5px 0;
+	float:left;
+}
+.span10 .width-40 h3#publishing-details {
+	margin-top:0;
+}
+.span10 .width-40 h3 {
+    border-bottom: 1px solid #E5E5E5;
+    color: #333333;
+    font-size: 19.5px;
+    font-weight: normal;
+    line-height: 36px;
+    margin-bottom: 18px;
+    padding-bottom: 0;
+}
+.span10 .width-40 li {
+	clear:both;
+}
+.span10 .width-40 li a.label {
+	margin:5px 0;
+}
+
+.icon {
+     display: inline-block;
+     margin-bottom: 15px;
+     margin-right: 15px;
+     text-align: center;
+}
+
+.icon1 {
+     float: left;
+     margin-bottom: 15px;
+     margin-right: 15px;
+     margin-top: 0px;
+     text-align: center;
+}
+
+.icon1 a {
+     background-color: white;
+     background-position: -30px center;
+     border-radius: 25px;
+     border: 4px solid #CCCCCC;
+     color: #565656;
+     display: block;
+     float: left;
+     height: 100px;
+     text-decoration: none;
+     transition-duration: 0.8s;
+     transition-property: background-position, -moz-border-radius-bottomleft, -moz-box-shadow;
+     vertical-align: middle;
+     width: 120px;
+}
+
+.icon a {
+     background-color: white;
+     background-position: -30px center;
+     border-radius: 25px;
+     border: 4px solid #CCCCCC;
+     color: #565656;
+     display: block;
+     float: left;
+     height: 100px;
+     text-decoration: none;
+     transition-duration: 0.8s;
+     transition-property: background-position, -moz-border-radius-bottomleft, -moz-box-shadow;
+     vertical-align: middle;
+     width: 120px;
+}
+
+.icon a img {
+     padding-top: 10px;
+}
+.icon a span {
+    clear: both;
+    float: left;
+    padding: 5px 0 0;
+    width: 100%;
+}
+
+.icon1 a img {
+     padding-top: 0px;
+}
+
+#map img {
+     max-width: none;
+}
+
+.vm_type .vminput {
+     width: 250px;
+}
+
+.vm_type .btn {
+     cursor: pointer;
+}
+
+.vm_type .svminput, .vm_type #marker_image {
+     width: 200px;
+}
+
+dl.tabs dt.cpanel-panel-vmap h3 {
+     font-size: 18px;
+}
+
+.cpanel-right div.current {
+     font-size: 12px;
+}
+
+#element-box .m .copyright {
+     border-radius: 10px;
+     border: 1px solid #CCCCCC;
+     clear: both;
+     float: left;
+     margin: 15px 0px 0px;
+     padding: 5px 0px;
+     width: 100%;
+}
+
+#content .span10 .cpanel-left {
+     float: left;
+     width: 57.1823%;
+}
+
+#content .span10 .cpanel-left .cpanel .icon-wrapper {
+     float: left;
+     padding: 2.5%;
+     width: 95%;
+	 height:auto;
+}
+
+#content .span10 .cpanel-right {
+     background-color: #F5F5F5;
+     border-radius: 4px;
+     border: 1px solid #E3E3E3;
+     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05) inset;
+     float: right;
+     margin-bottom: 20px;
+     margin-left: 15px;
+     width: 40.0552%;
+}
+
+#content .span10 .cpanel-right dl.tabs {
+     margin: 0px;
+}
+
+#content .span10 .cpanel-right dl.tabs h3 {
+     font-size: 20px;
+     margin: 15px 0px 10px;
+     padding: 0px 2.5%;
+}
+
+#content .span10 .cpanel-right .current {
+     margin: 0px 0px 15px;
+     padding: 0px 2.5%;
+}
+
+#content .span10 .cpanel-right .current dd.tabs {
+     margin: 0px;
+}
+
+#content .span10 .copyright {
+     clear: both;
+     text-align: right;
+}
+
+#content .span10 .admintable .btn {
+     margin: 0px 0px 9px;
+}
+
+.col_block ul {
+     margin: 0px;
+}
+
+.col_block ul li {
+     clear: both;
+     list-style: none outside none;
+}
+
+.col_block ul li select {
+     float: left;
+     margin: 0px 5px 9px 0px;
+}
+
+.gm-style img {
+     max-width: inherit;
+}
+#content .span10 .cpanel-right ul {
+	margin:0 0 0 15px;
+}
+#content .span10 .cpanel-right ul li {
+    list-style: square outside none;
+    padding: 0 0 10px;
+}
+.cpanel div.icon a, #cpanel div.icon a {
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    color: #565656;
+    display: block;
+    float: left;
+    height: 110px;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 126px;
+}
+.cpanel div.icon a:hover, #cpanel div.icon a:hover, .cpanel div.icon a:focus, #cpanel div.icon a:focus, .cpanel div.icon a:active, #cpanel div.icon a:active {
+    border-bottom-left-radius: 50% 20px !important;
+    box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
+}
+.dragable { width: 100px; height: 100px; padding: 0.5em; float: left; }
+  .dragable img { cursor: move;
+  }
+  .profile-section  ul li.common_profile{
+   box-shadow: 0 0 0 1px #ddd;
+    display: inline-block;
+    height: 70px;
+	cursor: move;
+    margin: 2%;
+    padding: 1%;
+    text-align: center;
+	position: relative;
+	vertical-align: top;
+    width: 26%;
+}
+  .profile-section  ul li.common_profile_plugin{
+   box-shadow: 0 0 0 1px #ddd;
+    display: inline-block;
+    height: 100px;
+	cursor: move;
+    margin: 2%;
+    padding: 1%;
+    text-align: center;
+	position: relative;
+	vertical-align: top;
+    width: 26%;
+}
+ .profile-section  ul li.chart_profile{
+    cursor: move;
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+	position: relative;
+    width: 96%;
+	list-style: none;
+}
+.profile-section  ul li.common_profile_main{
+    box-shadow: 0 0 0 1px #ddd;
+    cursor: move;
+    display: inline-block;
+    float: left;
+    margin: 1%;
+	height: 300px;
+    padding: 1%;
+    position: relative;
+    text-align: center;
+    width: 96%;
+}
+ .profile-section .dashboard_profile_name {
+	display: inline-block;
+    padding: 5px 0 0;
+    width: 100%;
+ } 
+ .delete-widget{
+    cursor: pointer;
+    opacity: 0.2;
+    position: absolute;
+    right: 0;
+    top: 1px;
+	}	
+.delete-widget:hover{
+   opacity: 1;
+}
+.edit-widget:hover{
+   opacity: 1;
+}	
+.edit-widget{
+    cursor: pointer;
+    opacity: 0.2;
+    position: absolute;
+    right: 16px;
+    top: 1px;
+	}
+.vdata_overlay {
+background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}	
+.vdata_overlay img {
+    left: 50%; 
+    margin: -24px 0 0 -24px;
+    position: absolute;
+    top: 50%;
+	width:48px;
+}
+ .profile-section  ul{
+	 margin:0;
+ }
+ li.profile_widget {
+	 height:300px;
+	 overflow:auto;
+ }
+ .widget_chart, .common_profile {
+	 cursor: auto !important;
+ }
+.edit-widget{background:url(../images/edit.png);width: 24px;display: inline-block;height: 24px;background-size:24px auto;}
+.delete-widget{background:url(../images/delete.png);width: 24px;display: inline-block;height: 24px;background-size:24px auto;} 
+.visa{background:url(../images/userpreferences.png);width: 48px;}
+.mastercard{background:url(../images/content.png);width: 48px;}
+.cc-selector-2 input:active +.drinkcard-cc{opacity: 1;}
+.cc-selector-2 input:checked +.drinkcard-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+.drinkcard-cc{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+	background-position: center center;
+    display:inline-block;
+    height: 48px;
+	width: 100%;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(1);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(1);
+            filter: brightness(1.8) grayscale(1) opacity(1);
+			position:relative;
+}
+.drinkcard-cc:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(1);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(1);
+            filter: brightness(1.2) grayscale(.5) opacity(1);
+			
+}
+label.label-message {
+	margin-top:30px;
+}
+span.box_layout_style input{
+	margin: 0 4px 0 0;
+    vertical-align: sub;
+}
+span.box_layout_style {
+padding: 0px; margin: 0px 10px 0px 0px;	
+}
+.widget_apply_section {width: 50%; float: left; position: relative;}
+.label-message {float: left; clear: both; width: 100%; text-align: center;}

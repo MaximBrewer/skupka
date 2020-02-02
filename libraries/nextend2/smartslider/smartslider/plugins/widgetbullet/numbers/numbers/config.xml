@@ -1,0 +1,30 @@
+<root>
+  <params name="bulletnumbers" label="numbers bullet settings" hidetitle="1">
+    <param name="widget-bullet-position" type="widgetposition" label="Position"/>
+    <param name="widget-bullet-action" type="radio" label="Action" class="n2-expert">
+      <option value="click">Click</option>
+      <option value="mouseenter">Hover</option>
+    </param>
+    <param name="widget-bullet-style" type="style" previewmode="dot" font="sliderwidget-bullet-font" style2="sliderwidget-bullet-bar" label="Dot style" set="1900">
+      <![CDATA[ <div class="{styleClassName2}" style="display:inline-block;"><div class="{styleClassName} {fontClassName}" style="display: inline-block; vertical-align:top;">1</div><div class="{styleClassName} {fontClassName} n2-active" style="display: inline-block; vertical-align:top;">2</div><div class="{styleClassName} {fontClassName}" style="display: inline-block; vertical-align:top;">3</div><div class="{styleClassName} {fontClassName}" style="display: inline-block; vertical-align:top;">4</div></div> ]]>
+    </param>
+    <param name="widget-bullet-font" type="font" previewmode="dot" style="sliderwidget-bullet-style" style2="sliderwidget-bullet-bar" label="Font" set="1100">
+      <![CDATA[ <div class="{styleClassName2}" style="display:inline-block;"><div class="{styleClassName} {fontClassName}" style="display: inline-block; vertical-align:top;">1</div><div class="{styleClassName} {fontClassName} n2-active" style="display: inline-block; vertical-align:top;">2</div><div class="{styleClassName} {fontClassName}" style="display: inline-block; vertical-align:top;">3</div><div class="{styleClassName} {fontClassName}" style="display: inline-block; vertical-align:top;">4</div></div> ]]>
+    </param>
+    <param name="widget-bullet-bar" type="style" previewmode="simple" label="Bar style" font="sliderwidget-bullet-font" style2="sliderwidget-bullet-style" set="1900">
+      <![CDATA[ <div class="{styleClassName}" style="display:inline-block;"><div class="{styleClassName2} {fontClassName}" style="display: inline-block; vertical-align:top;">1</div><div class="{styleClassName2} {fontClassName} n2-active" style="display: inline-block; vertical-align:top;">2</div><div class="{styleClassName2} {fontClassName}" style="display: inline-block; vertical-align:top;">3</div><div class="{styleClassName2} {fontClassName}" style="display: inline-block; vertical-align:top;">4</div></div> ]]>
+    </param>
+    <param name="widget-bullet-bar-full-size" type="onoff" label="Bar full size" class="n2-expert"/>
+    <param name="widget-bullet-align" type="radio" label="Align" class="n2-expert">
+      <option value="left">Left</option>
+      <option value="center">Center</option>
+      <option value="right">Right</option>
+    </param>
+    <param name="widget-bullet-orientation" type="radio" label="Orientation" class="n2-expert">
+      <option value="auto">Auto</option>
+      <option value="horizontal">Horizontal</option>
+      <option value="vertical">Vertical</option>
+    </param>
+    <param type="onoff" label="Overlay" name="widget-bullet-overlay" class="n2-expert"/>
+  </params>
+</root>

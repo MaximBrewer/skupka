@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>Beslist.nl</name>
+    <creationDate>Aug 2015</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>Beslist XML Export</description>
+	<category_pairing_name>beslist</category_pairing_name>
+	<category_pairing_url>http://www.beslist.nl/atools/category_overview.php</category_pairing_url>
+    <files>
+        <filename>beslist.php</filename>
+    </files>
+	<element>beslist</element>
+	<multilang>
+	 <language>be</language>
+	</multilang>
+
+<params >
+  <param
+        type="list"
+        name="use_be"
+        id="use_be"
+        label="Use Export for both BE and NL" 
+        description="Will export _be and _nl suffixes for delivery"
+		default="0"
+        >
+		 <option value="0">No</option>
+		 <option value="1">Yes</option>
+		 
+		</param>
+	<param
+        type="text"
+        name="shipping_nl"
+        id="shipping_nl"
+        label="Shipping fee for NL" 
+        description="Set shipping fee for NL"
+		default="0"
+        >
+		 
+		 
+		</param>
+		
+	<param
+        type="text"
+        name="shippingfree_nl"
+        id="shippingfree_nl"
+        label="Free shipping in NL starts from" 
+        description="Set free shipping for NL threashold"
+		default="0"
+        >
+		 
+		 
+		</param>
+	<param
+        type="text"
+        name="shipping_be"
+        id="shipping_be"
+        label="Shipping fee for BE" 
+        description="Set shipping fee for BE"
+		default="0"
+        >
+		 
+		 
+		</param>
+	<param
+        type="text"
+        name="shippingfree_be"
+        id="shippingfree_be"
+        label="Free Shipping for BE starts from " 
+        description=""
+		default="0"
+        >
+		 
+		 
+		</param>
+	
+</params>
+    <category_form> 
+     <fieldset name="test" label="Beslist Category" addpath="/components/com_onepage/xmlexport/fields/" addfieldpath="/components/com_onepage/xmlexport/fields/">
+    <field  name="paired_category" type="pairedcategory"
+        
+        id="paired_category"
+        label="Beslist Category List" 
+        description="Pair your categories with Beslist category taxonomy"
+		></field>
+	</fieldset>
+    </category_form> 
+
+</extension>

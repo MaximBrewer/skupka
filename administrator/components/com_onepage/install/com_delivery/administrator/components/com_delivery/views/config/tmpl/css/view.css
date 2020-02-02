@@ -1,0 +1,23 @@
+th.today, td.today {
+ background-color: #ccc !important; 
+ 
+}
+
+tr.rswitch_0 {
+ 
+ background-color: #ddd; 
+}
+tr.rswitch_1 {
+ background-color: #f4f4f4; 
+}
+
+.vm-chzn-select, .cws {
+  border-color: red; 
+}
+
+div.links {
+ min-height: 30px; 
+}
+div.links a {
+ font-size: 1.2em; 
+}

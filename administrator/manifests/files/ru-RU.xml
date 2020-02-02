@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="1.6" method="upgrade" client="site">
+    <name><![CDATA[adsmanager-ru-RU]]></name>
+    <author><![CDATA[Juloa.com]]></author>
+    <authorurl>http://www.Juloa.com</authorurl>
+	<copyright>Copyright (C)2015 Juloa.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>0.0.20152405064409</version>
+    <creationDate>24 May 2015</creationDate>
+    <description><![CDATA[Russian (Russia) translation file for adsmanager]]></description>
+	<fileset>
+		<files folder="backend" target="administrator/language/ru-RU">
+			<filename>ru-RU.plg_adsmanagercontent_jomsocial.ini</filename>
+			<filename>ru-RU.mod_adsmanager_quickicons.ini</filename>
+			<filename>ru-RU.plg_community_adsmanager.ini</filename>
+			<filename>ru-RU.com_adsmanager.ini</filename>
+			<filename>ru-RU.com_adsmanager.menu.ini</filename>
+			<filename>ru-RU.mod_adsmanager_quickicons.sys.ini</filename>
+			<filename>ru-RU.plg_community_adsmanager.sys.ini</filename>
+			<filename>ru-RU.com_adsmanager.sys.ini</filename>
+			<filename>ru-RU.plg_adsmanagercontent_recaptcha.ini</filename>
+			<filename>ru-RU.plg_adsmanagercontent_recaptcha.sys.ini</filename>
+		</files>
+		<files folder="frontend" target="language/ru-RU">
+			<filename>ru-RU.mod_adsmanager_ads.ini</filename>
+			<filename>ru-RU.mod_adsmanager_search.ini</filename>
+			<filename>ru-RU.com_adsmanager.ini</filename>
+			<filename>ru-RU.mod_adsmanager_adsmap.ini</filename>
+			<filename>ru-RU.mod_adsmanager_advancedsearch.ini</filename>
+			<filename>ru-RU.mod_adsmanager_menu.ini</filename>
+			<filename>ru-RU.mod_paidsystem_feat.ini</filename>
+			<filename>ru-RU.mod_adsmanager_table.sys.ini</filename>
+			<filename>ru-RU.mod_adsmanager_menu.sys.ini</filename>
+			<filename>ru-RU.mod_adsmanager_table.ini</filename>
+			<filename>ru-RU.mod_adsmanager_adsmap.sys.ini</filename>
+			<filename>ru-RU.mod_adsmanager_global_filter.ini</filename>
+			<filename>ru-RU.mod_adsmanager_ads.sys.ini</filename>
+			<filename>ru-RU.mod_paidsystem_feat.sys.ini</filename>
+			<filename>ru-RU.mod_adsmanager_search.sys.ini</filename>
+			<filename>ru-RU.mod_adsmanager_global_filter.sys.ini</filename>
+			<filename>ru-RU.mod_adsmanager_advancedsearch.sys.ini</filename>
+		</files>
+	</fileset>
+</extension>

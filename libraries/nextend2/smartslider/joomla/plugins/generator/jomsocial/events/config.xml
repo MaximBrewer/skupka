@@ -1,0 +1,44 @@
+<root>
+    <params name="jomsocial" label="Filter">
+        <param type="group" label="Source">
+            <param name="jomsocialcategories" label="Categories" type="jomsocialcategories" default="0" multiple="1"
+                   size="10"/>
+            <param name="jomsocialgroups" label="Groups" type="jomsocialgroups" default="0" multiple="1"
+                   size="10"/>
+            <param name="jomsocialprofiles" label="Profiles" type="jomsocialprofiles" default="0" multiple="1"
+                   size="10"/>
+        </param>
+        <param type="group" label="Date" class="n2-expert">
+            <param name="started" label="Started" type="filter" default="0"/>
+            <param name="ended" label="Ended" type="filter" default="-1"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="invitation" label="Invitation only event" type="filter" default="0"/>
+            <param name="hidden" label="Hidden on list of events" type="filter" default="0"/>
+            <param name="location" label="Location" type="text" default="*"/>
+            <param name="userid" label="User IDs" type="text" default="*"/>
+        </param>
+        <param type="group" label="Featured" class="n2-expert">
+            <param name="featuredevents" label="Featured events" type="filter" default="0"/>
+            <param name="featuredusers" label="Created by featured users" type="filter" default="0"/>
+            <param name="featuredgroups" label="Created by featured groups" type="filter" default="0"/>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="jomsocialorder" type="mixed" label="Order" default="startdate|*|asc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="title">Title</option>
+                <option value="created">Creation time</option>
+                <option value="startdate">Start time</option>
+                <option value="enddate">End time</option>
+                <option value="hits">Hits</option>
+                <option value="id">ID</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

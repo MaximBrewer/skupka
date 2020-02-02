@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="library" version="3.4" method="upgrade">
+    <name>JULib</name>
+    <libraryname>julib</libraryname>
+    <creationDate>05.10.2018</creationDate>
+    <author>Denys Nosov</author>
+    <authorEmail>denys@joomla-ua.org</authorEmail>
+    <authorUrl>https://joomla-ua.org</authorUrl>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <copyright>(C) 2006-2018 Joomla! Ukraine. All rights reserved.</copyright>
+    <version>2.9.0</version>
+    <packager>Joomla! Ukraine</packager>
+    <packagerurl>https://joomla-ua.org</packagerurl>
+    <files folder="julib">
+        <folder>phpthumb</folder>
+        <file>image.php</file>
+        <file>noimage.png</file>
+        <file>blank.png</file>
+        <file>index.html</file>
+    </files>
+    <updateservers>
+        <server type="extension" priority="1" name="julib">https://joomla-ua.org/update/lib/julib.xml</server>
+    </updateservers>
+</extension>

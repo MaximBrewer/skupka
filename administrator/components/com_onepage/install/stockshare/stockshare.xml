@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+
+	<name>plg_system_stockshare</name>
+
+	<author>RuposTel s.r.o.</author>
+
+	<creationDate>Feb 2017</creationDate>
+
+	<copyright>RuposTel s.r.o.</copyright>
+
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+
+	<authorEmail>admin@rupostel.com</authorEmail>
+
+	<authorUrl>www.rupostel.com</authorUrl>
+
+	<version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+
+	<description><![CDATA[RuposTel Stock Sharing plugin. Use sheet format as at this public CSV https://docs.google.com/spreadsheets/d/e/2PACX-1vQGAKvvGhzSear5a6VV8uyX49PyF8vdRVBwnxvKqby0pC6O-YA7AwCjH0a3w-pS77rk9pu66cYPvmHQ/pub?output=csv After any change in Google Spreadsheet click File -> Publish to Web -> Sheet1 -> Comma separated values -> Publish and copy the link to this configuration ]]></description>
+
+	<files>
+		<filename plugin="stockshare">stockshare.php</filename>
+		<filename>index.html</filename>
+		<folder>fields</folder>
+		<folder>sql</folder>
+		
+
+	</files>
+	<config>
+	<fields name="params" addfieldpath="/plugins/system/stockshare/fields">
+
+			
+		
+
+		<fieldset name="basic" label="Filter" >
+		<field 
+           name="google_csv_url"
+           type="text"
+           label="Enter a CSV google spreadsheet URL"
+           description="Input filter variables separated by comma which you do not want to log. Default: password,password2,opc_password,cc_number,cc_num"
+		   default="https://docs.google.com/spreadsheets/d/e/2PACX-1vQGAKvvGhzSear5a6VV8uyX49PyF8vdRVBwnxvKqby0pC6O-YA7AwCjH0a3w-pS77rk9pu66cYPvmHQ/pub?output=csv"
+		   />
+		  <field name="loadgoogle" type="ajaxfield" label="Load Google CSV (MPN groups) into products" description="This will load the above CSV into your product table MPN field" data-label="Load MPNs without stock data" data-cmd="loadmpns" />
+		  
+		  <field name="loadgooglestock" type="ajaxfield" label="Load MPNs and Stock" description="This will load the above CSV into your product table MPN field and product_in_stock field" data-label="Load MPNs with stock data from CSV" data-cmd="loadstock" />
+		  
+		   <field name="downloadmpnsstock" type="ajaxfield" label="Download all MPNs and Stock data" description="This will create XLS file that you can edit in Excel and copy into google spreadsheet" data-label="Download data in XLS" data-cmd="downloadstock" data-isdownload="true"/>
+		   
+		   
+		   <field name="installtrig" type="ajaxfield" label="Install SQL Triggerer" description="Will create table and triggerer" data-label="Run SQL" data-cmd="createtrig" data-status="true" />
+		  
+		</fieldset>
+
+
+		
+	</fields>
+	</config>
+		
+</extension>
+

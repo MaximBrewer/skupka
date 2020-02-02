@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="jform">
+		<fieldset name="general">
+			<field name="menutype"
+				   type="csvimenumenutype"
+				   class="advancedSelect"
+				   default="all">
+				<option value="all">COM_CSVI_JFORM_MENUTYPE_ALL</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

@@ -1,0 +1,22 @@
+﻿<extension version="3.0.0" type="plugin" group="content" method="upgrade">
+<name>Яндекс карты</name>
+<creationDate>28 мая 2013 г.</creationDate>
+<author>Александр Ермаков</author>
+<authorEmail>eap1985@rambler.ru</authorEmail>
+<authorUrl>http://slyweb.ru/</authorUrl>
+<copyright>(c) Александр Ермаков http://slyweb.ru/</copyright>
+<license>GNU/GPL 2.0</license>
+<description>Яндекс карты. Для вставки в любом месте статьи можно использовать тэг {mapyandex_id=ваш id}. Для вставки калькулятора стоимости доставки используется тег {mapyandex_calculator_id=ваш id}</description>
+<version>2.7</version>
+		<languages folder="language">
+			<language tag="ru-RU">ru-RU.plg_mapyandex.ini</language>
+			<language tag="en-GB">en-GB.plg_mapyandex.ini</language>
+			<language tag="en-GB">ua-UA.plg_mapyandex.ini</language>
+		</languages>
+        <files>
+                <filename plugin="mapyandex">mapyandex.php</filename>
+		</files>
+
+
+	
+</extension>

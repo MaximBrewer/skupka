@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+    <fieldset
+		name="configs"
+		label="Основные настройки"
+		description="Основные настройки"
+		>
+
+
+        <field name="chunk_on" type="radio" default="1" label="Пошаговое считывание прайса" description="">
+		  <option value="0">Выкл</option>
+		  <option value="1">Вкл</option>
+		</field>
+		<field name="chunk_size" type="text" default="1000" label="Шаг считывания при импорте" description="CHUNK_SIZE_DESC" />
+		<field name="export_query_size" type="text" default="1000" label="Шаг считывания при экспорте" description="EXPORT_QUERY_SIZE_DESC" />
+		<field name="reimport_num" type="text" default="10" label="Авто-реимпорт" description="REIMPORT_DESC" />
+		<field name="reimport_time" type="text" default="10" label="Кол-во сек до реимпорта" description="REIMPORT_TIME_DESC" />
+
+        <field name="custom_clear" type="text" default="-" label="Символ очистки доп. полей" description="CLEAR_SYMBOL_DESC" />
+       <field name="exclude" type="text" default="" label="Категории-исключение при поиске по ключевым словам" description="CAT_EXCLUDES_DESC" />
+
+        <field name="desc_nl2br" type="radio" default="0" label="Обработка описания" description="DESC_NL2BR_DESC">
+		  <option value="0">Выкл</option>
+		  <option value="1">Вкл</option>
+		</field>
+
+	</fieldset>
+
+    <fieldset
+		name="extra"
+		label="Расширенные возможности"
+		description="Расширенные возможности (для опытных пользователей)"
+		>
+        <field name="custom_fields" type="radio" default="0" label="Произвольные доп. поля" description="CUSTOM_FIELDS_DESC">
+		  <option value="0">Выкл</option>
+		  <option value="1">Вкл</option>
+		</field>
+        <field name="user_fields" type="radio" default="0" label="Пользовательские поля" description="USER_FIELDS_DESC">
+		  <option value="0">Выкл</option>
+		  <option value="1">Вкл</option>
+		</field>
+        <field name="create_custom_fields" type="radio" default="0" label="Доп. поля на основе заголовков" description="CREATE_CUSTOM_FIELDS_DESC">
+		  <option value="0">Выкл</option>
+		  <option value="1">Вкл</option>
+		</field>
+
+
+        <field name="price_label" type="radio" default="0" label="Метка прайса" description="PRICE_LABEL_DESC">
+		  <option value="0">Выкл</option>
+		  <option value="1">Вкл</option>
+		</field>
+
+        <field name="not_updated_report" type="radio" default="0" label="Вывод списка товаров&#44; которые не были обновлены" description="">
+		  <option value="0">Выкл</option>
+		  <option value="1">Вкл</option>
+		</field>
+
+    </fieldset>
+    <fieldset
+		name="debug"
+		label="Отладка"
+		description="Отладка"
+		>
+        <field name="debug" type="radio" default="0" label="Отладка" description="DEBUG_DESC">
+		  <option value="0">Выкл</option>
+		  <option value="1">Вкл</option>
+		</field>
+
+        <field name="db_debug" type="radio" default="0" label="Отладка запросов к БД" description="DISPLAY_ERRORS_DESC">
+		  <option value="0">Выкл</option>
+		  <option value="1">Вкл</option>
+		</field>
+        <field name="sql_protect" type="radio" default="0" label="Защита от SQL-инъенкций" description="">
+		  <option value="0">Выкл</option>
+		  <option value="1">Вкл</option>
+		</field>
+        <field name="limit_messages" type="radio" default="1" label="Сообщения о лимитах сервера?" description="">
+		  <option value="0">Скрыть</option>
+		  <option value="1">Отображать</option>
+		</field>
+        <field name="max_execution_time" type="text" default="300" label="Время исполнения скрипта" description="MAX_EXECUTION_TIME_DESC" />
+        <field name="post_max_size" type="text" default="20" label="Макс. размер загружаемого файла" description="POST_MAX_SIZE_DESC" />
+    </fieldset>
+    <fieldset
+		name="images_config"
+		label="Настройки изображений"
+		description="Различные настройки для импорта изображений"
+		>
+        <field name="images_rename" type="radio" default="0" label="Переименование скачиваемых изображений" description="Включение функции приведет к тому&#44; что изображения&#44;скачиваемые по прямой ссылке в прайсе&#44; будут переименованы. За основу нового имени файла изображения берется Артикул товара.">
+		  <option value="0">Выкл</option>
+		  <option value="1">Вкл</option>
+		</field>
+        <field name="images_timeout" type="text" default="5" label="Таймаут при скачивании изображений&#44; сек" description="" />
+        <field name="images_products_default" type="text" default="" size="50" label="Изображение по-умолчанию для товаров" description="Вы можете указать название файла изображения&#44; которое будет присваиваться всем товарам&#44; которым в прайсе не указано никакое изображение. Вы можете указать только название файла или полную ссылку на него" />
+        <field name="images_categories_default" type="text" default="" size="50" label="Изображение по-умолчанию для категорий" description="Вы можете указать название файла изображения&#44; которое будет присваиваться всем категориям&#44; которым в прайсе не указано никакое изображение. Вы можете указать только название файла или полную ссылку на него" />
+    </fieldset>
+    <fieldset
+		name="csv"
+		label="Настройки CSV"
+		description="Настройки разделителей CSV-файлов"
+		>
+		<field name="csv_field_delimiter" type="text" default=";" label="Разделитель колонок" description="Укажите разделитель полей. По умолчанию - точка с запятой" />
+
+
+		<field name="csv_row_delimiter" type="text" default="" label="Спец. символ в начале и конце строки" description="CSV_ROW_DELIMITER_DESC" />
+        <field name="csv_convert" type="radio" default="1" label="Кодировка csv-файла" description="Если названия становятся нечитаемыми - поменяйте кодировку">
+		  <option value="0">UTF-8 (ANSI as UTF-8)</option>
+		  <option value="1">WINDOWS-1251 (ANSI)</option>
+		</field>
+	</fieldset>
+    <fieldset
+		name="caching"
+		label="Кэширование"
+		description="Настройки кэширования"
+		>
+        <field name="sku_cache" type="radio" default="0" label="Кэш Артикулов" description="SCU_CACHE_DESC">
+		  <option value="0">Выкл</option>
+		  <option value="1">Вкл</option>
+		</field>
+        <field name="name_cache" type="radio" default="0" label="Кэш Наименований" description="NAME_CACHE_DESC">
+		  <option value="0">Выкл</option>
+		  <option value="1">Вкл</option>
+		</field>
+        <field name="productid_cache" type="radio" default="0" label="Кэш ID товаров" description="PRODUCTID_CACH_DESC">
+		  <option value="0">Выкл</option>
+		  <option value="1">Вкл</option>
+		</field>
+        <field name="gtin_cache" type="radio" default="0" label="Кэш GTIN" description="">
+		  <option value="0">Выкл</option>
+		  <option value="1">Вкл</option>
+		</field>
+        <field name="mpn_cache" type="radio" default="0" label="Кэш MPN" description="">
+		  <option value="0">Выкл</option>
+		  <option value="1">Вкл</option>
+		</field>
+	</fieldset>
+	<fieldset
+		name="notify"
+		label="Уведомления"
+		description="Настройки эффектов появления и исчезновения уведомлений"
+		>
+		<field name="notify_show" type="list" default="fold" label="Эффект появления" description="NOTIFY_SHOW_DESC">
+		  <option value="none">None</option>
+		  <option value="bounce">bounce</option>
+		  <option value="clip">clip</option>
+		  <option value="drop">drop</option>
+		  <option value="explode">explode</option>
+		  <option value="fold">fold</option>
+		  <option value="scale">scale</option>
+		  <option value="slide">slide</option>
+		</field>
+
+		<field name="notify_hide" type="list" default="explode" label="Эффект исчезновения" description="HIDE_DESC">
+		  <option value="none">None</option>
+		  <option value="bounce">bounce</option>
+		  <option value="clip">clip</option>
+		  <option value="drop">drop</option>
+		  <option value="explode">explode</option>
+		  <option value="fold">fold</option>
+		  <option value="scale">scale</option>
+		  <option value="slide">slide</option>
+		</field>
+
+	</fieldset>
+    <fieldset
+		name="cron"
+		label="Импорт по расписанию"
+		description="CRON_DESC"
+		>
+        <field addfieldpath="administrator/components/com_excel2vm/config" name="directory_path" type="pathes" size="150" default="" link="administrator/components/com_excel2vm/xls" constant="JPATH_ROOT" label="Путь к папке" description="CRON_DIRRECTORY_DESC" />
+        <field name="remote_file" type="text" default="" label="Ссылка на удаленный файл" description="Ссылка на файл должна начинаться с http:// или https://. Файл будет скачан в вышеуказанную папку&#44; а затем импортирован" />
+        <field addfieldpath="administrator/components/com_excel2vm/config" name="cron_profile" type="profilelist" default="" size="1"
+			label="Профиль"
+			description="CRON_PROFILE_DESC">
+		</field>
+
+        <field addfieldpath="administrator/components/com_excel2vm/config" name="cron_link" type="links" default="administrator/components/com_excel2vm/models/cron.php"
+			label="Ссылка на скрипт для Cron"
+			description="CRON_LINK_DESC">
+		</field>
+
+        <field addfieldpath="administrator/components/com_excel2vm/config" name="cron_log_link" type="links" default="administrator/components/com_excel2vm/models/cron_log.txt"
+			label="Журнал автоматического импорта"
+			description="CRON_LOG_DESC">
+		</field>
+
+	</fieldset>
+
+    <fieldset
+		name="cron_export"
+		label="Экспорт по расписанию"
+		description=""
+		>
+        <field addfieldpath="administrator/components/com_excel2vm/config" name="export_directory_path" type="pathes" size="150" default="" link="administrator/components/com_excel2vm/export/" constant="JPATH_ROOT" label="Путь к папке" description="Укажите абсолютный путь к папке&#44; в которую необходимо делать экспорт" />
+
+        <field name="filename" type="text" default="" label="Название файла" description="Если Вам необходимо&#44; чтобы экспортируемый файл всегда имел одинаковое название - укажите его в этом поле без расширения." />
+        <field addfieldpath="administrator/components/com_excel2vm/config" name="cron_export_profile" type="profilelist" default="" size="1"
+			label="Профиль"
+			description="Выберите профиль настроек&#44; который будет использоваться для экспорта по расписанию">
+		</field>
+
+        <field name="csv" type="list" default="2" label="Тип файла" description="Не желательно использовать тип xls&#44; т.к. для его создания используется больше опратичной памяти&#44; чем для xlsx и csv">
+		  <option value="1">xls</option>
+		  <option value="2">xlsx</option>
+		  <option value="0">csv</option>
+		</field>
+
+        <field addfieldpath="administrator/components/com_excel2vm/config" name="category" type="categorieslist" default=""
+			label="Категория"
+			description="">
+		</field>
+
+        <field name="order" type="list" default="category_child_id" label="Сортировка категорий" description="">
+		  <option value="category_child_id">По ID</option>
+		  <option value="category_name">По алфавиту</option>
+		  <option value="vc.ordering">По порядку сортировки</option>
+		</field>
+
+        <field name="product_status" type="list" default="-1" label="Статус товаров" description="">
+		  <option value="-1">Все</option>
+		  <option value="0">Неопубликованные</option>
+		  <option value="1">Опубликованные</option>
+		</field>
+
+        <field name="children_export" type="list" default="0" label="Дочерние товары" description="">
+		  <option value="0">Не экспортировать</option>
+		  <option value="1">Экспортировать</option>
+		</field>
+
+        <field name="image_path" type="list" default="0" label="Формат экспорта изображений" description="">
+		  <option value="0">Только имя файла</option>
+		  <option value="1">Относительный путь</option>
+		  <option value="2">Абсолютный путь</option>
+		</field>
+
+        <field addfieldpath="administrator/components/com_excel2vm/config" name="cron_export_link" type="links" default="administrator/components/com_excel2vm/models/export_cron.php"
+			label="Ссылка на скрипт для Cron"
+			description="Эту ссылку необходимо указать при создании задания планировщика Cron (в панели управления хостингом). Также используйте данную ссылку, чтобы вручную запустить автоматический экспорт - это позволит Вам убедиться в правильности настроек.">
+		</field>
+
+        <field addfieldpath="administrator/components/com_excel2vm/config" name="cron_export_log_link" type="links" default="administrator/components/com_excel2vm/models/cron_export_log.txt"
+			label="Журнал автоматического экспорта"
+			description="По этой ссылке находится журнал записей о результате автоматического экспорта. Если Вы правильно настроили задание планировщика Cron (в панели управления хостингом)&#44; то в журнале будут появляться со временем новые записи. Если этого не происходит - обратитесь в тех. поддержку хостинга с просьбой помощи в настройке задания для планировщика Cron">
+		</field>
+
+	</fieldset>
+
+    <fieldset
+		name="yml"
+		label="YML"
+		description="Настройки YML"
+		>
+        <field addfieldpath="administrator/components/com_excel2vm/config" name="cron_yml_import" type="profilelist" default="" size="1"
+			label="Профиль Импорта YML по расписанияю"
+			description="">
+		</field>
+
+        <field addfieldpath="administrator/components/com_excel2vm/config" name="cron_yml_export" type="profilelist" default="" size="1"
+			label="Профиль экспорта YML по расписанияю"
+			description="">
+		</field>
+        <field name="show_old_price" type="list" default="0" label="Экспортировать цену без скидки?" description="Данная цена будет выводиться в теге oldprice">
+		  <option value="0">Нет</option>
+		  <option value="1">Да</option>
+		</field>
+        <field name="price_round" type="text" default="2" label="Число знаков после запятой в цене" description="" />
+        <field name="delivery" type="radio" default="1" label="Возможность доставки товара" description="">
+		  <option value="0">Нет</option>
+		  <option value="1">Да</option>
+		</field>
+        <field name="pickup" type="radio" default="1" label="Возможность самовывоза" description="">
+		  <option value="0">Нет</option>
+		  <option value="1">Да</option>
+		  <option value="-1">Не указывать</option>
+		</field>
+        <field name="store" type="radio" default="1" label="Наличие точки продаж" description="">
+		  <option value="0">Нет</option>
+		  <option value="1">Да</option>
+          <option value="-1">Не указывать</option>
+		</field>
+        <field name="manufacturer_warranty" type="radio" default="1" label="Гарантия от производителя" description="">
+		  <option value="0">Нет</option>
+		  <option value="1">Да</option>
+		</field>
+        <field name="stock" type="radio" default="0" label="Количество товара" description="Данного тэга нет в стандарте YML!">
+		  <option value="0">Нет</option>
+		  <option value="1">Да</option>
+		</field>
+		<field name="yml_description" type="list" default="0" label="Обработка HTML-тэгов в описании" description="">
+		  <option value="0">Замена на HTML-сущности</option>
+		  <option value="1">Удалить все тэги</option>
+		  <option value="2">Обернуть в тэг CDATA</option>
+		</field>
+        <field name="cut_description" type="radio" default="1" label="Обрезать описание до 250 символов?" description="В соответствии со стандартом YML оставляются только первые 250 символов полного описания товара">
+		  <option value="0">Нет</option>
+		  <option value="1">Да</option>
+		</field>
+        <field name="yml_available" type="list" default="0" label="Доступность товаров" description="">
+		  <option value="0">Зависит от количества на складе</option>
+		  <option value="1">Принудительно доступны все</option>
+		</field>
+        <field name="local_delivery_cost" type="text" default="0" label="Общая стоимость доставки для всех товаров" description="" />
+        <field name="sales_notes" type="textarea" cols="30" rows="2" default="" label="Тэг sales_notes" description="Текст из этого поля будет добавлен в качестве тэга всем товарам. Максимум - 50 символов" />
+        <field name="delivery_options" type="textarea" cols="30" rows="3" label="Стоимость и сроки курьерской доставки" description="DELIVERY_OPTIONS_DESCRIPTION" />
+        <field name="alternative_domain" type="text" default="" label="Домен" description="Если необходимо&#44; чтобы в YML-файле был указан другой домен - укажите его в этом поле" />
+	</fieldset>
+
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			filter="rules"
+			validate="rules"
+			component="com_excel2vm"
+			section="component" />
+	</fieldset>
+</config>

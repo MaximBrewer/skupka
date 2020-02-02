@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="metadata">
+		<fieldset
+			name="jmetadata"
+			addfieldpath="administrator/components/com_yandex_maps/models/fields"
+		>
+			<field name="address" label="PLG_CONTENT_YANDEXMAPSCONTENTID_ADDRESS" description="PLG_CONTENT_YANDEXMAPSCONTENTID_ADDRESS_DESCRIPTION" type="address"/>
+			<field name="yandex_maps_object" label="PLG_CONTENT_YANDEXMAPSCONTENTID_OBJECT_ID" description="PLG_CONTENT_YANDEXMAPSCONTENTID_OBJECT_ID_DESCRIPTION" type="objects"/>
+			<field name="yandex_maps_icon" label="PLG_CONTENT_YANDEXMAPSCONTENTID_ICON" description="PLG_CONTENT_YANDEXMAPSCONTENTID_ICON_DESCRIPTION" type="media"/>
+		</fieldset>
+	</fields>
+</form>

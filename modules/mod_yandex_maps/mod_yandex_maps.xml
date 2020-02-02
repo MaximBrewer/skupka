@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" method="upgrade" client="site">
+	<name>Яндекс карты</name>
+	<creationDate>Mart 2015</creationDate>
+	<author>Chupurnov Valeriy</author>
+	<authorEmail>chupurnov@gmail.com</authorEmail>
+	<authorUrl>http://xdsoft.net</authorUrl>
+	<copyright>(c) xdsoft.net</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>2.2.5</version>
+	<description>Выводит элементы компанента Яндекс Карты в любом месте сайта</description>
+	<copyright>Copyright (c) 2015 xdsoft. All rights reserved.</copyright>
+	<files>
+		<filename module="mod_yandex_maps">mod_yandex_maps.php</filename>
+		<filename>mod_yandex_maps.xml</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/administrator/components/com_yandex_maps/models/fields">
+			<fieldset name="basic">
+				<field required="true" name="mapid" label="Карта" type="maps"/>
+				<field required="true" path="/modules/mod_yandex_maps/tmpl" name="template" label="Шаблон" type="files"/>
+				<field
+					name="show_map"
+					type="radio"
+					label="Показывать карту&lt;br&gt;на странице карты"
+					description="Показывать карту&lt;br&gt;на странице карты"
+					default="1"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="move_to_current_object"
+					type="radio"
+					label="Если модуль показан&lt;br&gt;на странице объекта&lt;br&gt;передвинуть карту на этот объект"
+					description="Если модуль показан&lt;br&gt;на странице объекта&lt;br&gt;передвинуть карту на этот объект. Речь идет об объектах из других компонентах. Которые на карте благодаря соответствующим плагинам"
+					default="1"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="show_object_list"
+					type="radio"
+					label="Показывать список&lt;br&gt;объектов карты"
+					description="Показывать список&lt;br&gt;объектов карты"
+					default="1"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="show_search_on_map"
+					type="radio"
+					label="Показывать строку поиска"
+					description="Показывать строку поиска"
+					default="1"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="show_select_category"
+					type="radio"
+					label="Показывать поле&lt;br&gt;выбора категории"
+					description="Показывать поле&lt;br&gt;выбора категории"
+					default="1"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="ratio_map_to_list"
+					type="integer"
+					label="Соотношение ширины&lt;br&gt;колонки со списком&lt;br&gt;объектов к колонке&lt;br&gt;с картой (1/12)"
+					description="Соотношение ширины&lt;br&gt;колонки со списком&lt;br&gt;объектов к колонке&lt;br&gt;с картой"
+					default="4"
+					first="1"
+					last="11"
+					step="1"
+				/>
+			</fieldset>
+			<fieldset
+				name="objects"
+				label="Объекты"
+				description=""
+			>
+				<field
+					name="howmoveto"
+					type="list"
+					label="Как переходить на объект"
+					description="Как переходить на объект"
+					default="0"
+				>
+					<option value="0">Использовать координаты из geometry объекта и автоматически рассчитать zoom</option>
+					<option value="1">Использовать данные из полей широта,долгота,масштаб</option>
+					<option value="2">Переходить на страницу объекта</option>
+				</field>
+				<field
+					name="show_more_in_balloon"
+					type="radio"
+					label="Показывать ссылку &lt;br&gt;&amp;laquo;Подробнее&amp;raquo; во&lt;br&gt;высплывающем &lt;br&gt;окне объекта"
+					description="Показывать ссылку &amp;laquo;Подробнее&amp;raquo; во&lt;br&gt;высплывающем окне объекта"
+					default="1"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="show_category"
+					type="radio"
+					label="Показывать категории"
+					description="Показывать категории"
+					default="1"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="show_pagination"
+					type="list"
+					label="Разбивать на страницы&lt;br&gt; и пагинацию в списке &lt;br&gt;объектов"
+					description="Показывать пагинацию&lt;br&gt;в списке объектов"
+					default="1"
+					class="btn-group"
+				>
+					<option value="0">JNO</option>
+					<option value="1">Ниже списка</option>
+					<option value="2">Выше списка</option>
+				</field>
+				<field
+					name="max_count_object"
+					type="number"
+					label="Максимальное колиечство,&lt;br&gt; загруженных в страницу&lt;br&gt; сразу"
+					description="Максимальное колиечство, загруженных в страницу сразу"
+					default="100"
+				/>
+				<field
+					name="count_on_page"
+					type="integer"
+					label="Колиечство элементов&lt;br&gt;в списке"
+					description="Колиечство элементов&lt;br&gt;в списке"
+					default="5"
+					first="5"
+					last="100"
+					step="5"
+				/>
+				<field
+					name="show_search_input"
+					type="list"
+					label="Показывать строку поиска&lt;br&gt;объектов, в списке объектов"
+					description="Показывать строку поиска&lt;br&gt;объектов, в списке объектов"
+					default="1"
+					class="btn-group"
+				>
+					<option value="0">JNO</option>
+					<option value="1">Ниже списка</option>
+					<option value="2">Выше списка</option>
+				</field>
+				<field
+					name="show_no_results"
+					type="radio"
+					label="Показывать строку - не&lt;br&gt;найдено результатов&lt;br&gt;если нет доступных &lt;br&gt;элементов"
+					description="Показывать строку - не&lt;br&gt;найдено результатов&lt;br&gt;если нет доступных элементов"
+					default="1"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset
+				name="categories"
+				label="Категории"
+				description=""
+			>
+				<field
+					name="howmoveto_on_category_change"
+					type="list"
+					label="Что делать при &lt;br&gt;смене категории"
+					description="Что делать при &lt;br&gt;смене категории"
+					default="2"
+				>
+					<option value="0">Переходить на страницу категории</option>
+					<option value="1">Просчитать область для всех объектов категории</option>
+					<option value="2">Использовать данные из полей широта,долгота,масштаб</option>
+					<option value="3">Скрывать/показывать объекты категории(изначально показаны)</option>
+					<option value="4">Скрывать/показывать объекты категории(изначально скрыты)</option>
+				</field>
+				<field
+					name="update_object_list_on_category_change"
+					type="radio"
+					label="Обновлять список&lt;br&gt; объектов при &lt;br&gt;смене категории"
+					description="Обновлять список объектов при смене категории"
+					default="1"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="Модуль Яндекс карты">https://xdan.ru/update/mod_yandex_maps.xml</server>
+	</updateservers>
+</extension>

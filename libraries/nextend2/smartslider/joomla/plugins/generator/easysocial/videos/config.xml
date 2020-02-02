@@ -1,0 +1,25 @@
+<root>
+    <params name="easysocialitems" label="Filter">
+        <param type="group" label="Source">
+            <param name="easysocialcategories" label="Categories" type="easysocialcategories" default="0" multiple="1"
+                   size="10"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="featured" label="Featured" type="filter" default="0"/>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="easysocialorder" type="mixed" label="Order" default="created|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="title">Title</option>
+                <option value="created">Creation time</option>
+                <option value="id">ID</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fields name="params">
+		<fieldset name="LICENSE_TITLE" label="LICENSE_TITLE"
+			addfieldpath="/administrator/components/com_vmeeplus/fields">
+			<field type="header" default="TEST_PARAMS_TITLE" />
+			<field name="test_emails" type="text" size="45"
+				labelclass="input-vmeeplus-config"
+				default="CHANGE_THIS_TO YOUR EMAIL ADDRESS" label="TEST_EMAILS_LIST_LABEL"
+				description="TEST_EMAILS_LIST_DESC" />
+			<field name="test_order_id" type="multiselectparam"
+				labelclass="input-vmeeplus-config"
+				sql="SELECT order_number as id, CONCAT(order_number,' (', order_status, ')') as name FROM #__virtuemart_orders ORDER BY created_on DESC LIMIT 200" key_field="id"
+				value_field="name"  label="TEST_ORDER_ID_LABEL"
+				description="TEST_ORDER_ID_DESC" />
+			<field name="test_user_id" type="multiselectparam"
+			labelclass="input-vmeeplus-config"
+				sql="SELECT id, username FROM #__users WHERE block=0" key_field="id"
+				value_field="username" label="TEST_USER_NAME_LABEL" description="TEST_USER_NAME_DESC">
+			</field>
+			<field name="test_product_id" type="vmproductlist" 
+			labelclass="input-vmeeplus-config"
+				label="TEST_PRODUCT_LABEL" description="TEST_PRODUCT_DESC">
+			</field>
+		</fieldset>
+		<fieldset name="FLOW_PARAMETERS_TITLE" label="FLOW_PARAMETERS_TITLE">
+			<field name="send_admin_mail_from_user" type="radio"  default="1" label="SEND_ADMIN_EMAIL_FROM_UESR_LABEL" description="SEND_ADMIN_EMAIL_FROM_UESR_DESC" labelclass="input-vmeeplus-config">
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+			</field>
+			<field name="is_disable_all_emails" type="radio" default="0"
+			labelclass="input-vmeeplus-config"
+				label="DISABLE_ALL_EMAILS" description="DISABLE_ALL_EMAILS_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_disable_order_confirmation" type="radio"
+			labelclass="input-vmeeplus-config"
+				default="1" label="DISABLE_ORDER_CONFIRMATION" description="DISABLE_ORDER_CONFIRMATION_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_disable_admin_order_confirmation" type="radio"
+			labelclass="input-vmeeplus-config"
+				default="1" label="DISABLE_ADMIN_ORDER_CONFIRMATION" description="DISABLE_ADMIN_ORDER_CONFIRMATION_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_disable_order_status" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="DISABLE_ORDER_CHANGE_STATUS" description="DISABLE_ORDER_CHANGE_STATUS_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_disable_admin_order_status" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="DISABLE_ADMIN_ORDER_CHANGE_STATUS" description="DISABLE_ADMIN_ORDER_CHANGE_STATUS_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_disable_registration" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="DISABLE_REGISTRATION" description="DISABLE_REGISTRATION_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_disable_admin_registration" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="DISABLE_ADMIN_REGISTRATION" description="DISABLE_ADMIN_REGISTRATION_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_disable_waiting_list" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="DISABLE_WAITING_LIST" description="DISABLE_WAITING_LIST_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_disable_admin_waiting_list" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="DISABLE_ADMIN_WAITING_LIST" description="DISABLE_ADMIN_WAITING_LIST_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<!-- <field name="is_disable_user_details_update" type="radio"
+				default="1" label="DISABLE_USER_DETAILS_UPDATE" description="DISABLE_USER_DETAILS_UPDATE_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>  -->
+		</fieldset>
+		<fieldset name="GENERAL_PARAMETERS_TITLE" label="GENERAL_PARAMETERS_TITLE"
+			addfieldpath="/administrator/components/com_vmeeplus/fields">
+			<field name="finalStatuses" id="finalStatuses" type="multiselectparam"
+			labelclass="input-vmeeplus-config"
+				sql="SELECT DISTINCT order_status_code AS id, order_status_name AS name  FROM #__virtuemart_orderstates WHERE virtuemart_vendor_id = 1  ORDER BY ordering ASC"
+				key_field="id" value_field="name" default="C" multiple="true"
+				label="Final_order_statuses"
+				description="SELECT_ORDERS_FINAL_STATUSES_USE_CTRL_CLICK_TO_SELECT_MORE_THAN_ONE_STATUS">
+			</field>
+			<field name="pendingStatuses" type="multiselectparam"
+			labelclass="input-vmeeplus-config"
+				sql="SELECT DISTINCT order_status_code AS id, order_status_name AS name  FROM #__virtuemart_orderstates WHERE virtuemart_vendor_id = 1  ORDER BY ordering ASC"
+				key_field="id" value_field="name" default="P" multiple="true"
+				label="PENDING_ORDER_STATUSES"
+				description="SELECT_PENDING_ORDER_STATUSES">
+			</field>
+			<field name="jgroups" type="multiSelectParam" 
+			labelclass="input-vmeeplus-config"
+				sql="SELECT DISTINCT title as name, id FROM #__usergroups" 
+				key_field="id" value_field="name" default="8" multiple="true" 
+				label="JOOMLA_ADMIN_GROUPS" 
+				description="SELECT_JOOMLA_ADMIN_GROUPS">
+			</field>
+			<!-- <field name="vmgroups" type="multiSelectParam" 
+				sql="SELECT DISTINCT group_name as name FROM #__virtuemart_permgroups" 
+				key_field="name" value_field="name" default="admin" multiple="true" 
+				label="VIRTUEMART_ADMIN_GROUPS" 
+				description="SELECT_VM_ADMIN_GROUPS">
+			</field> -->
+			<field name="store_address_logo_style" type="radio" default="2"
+			labelclass="input-vmeeplus-config"
+				label="SEND_STORE_ADDRESS_LABEL" description="SEND_STORE_ADDRESS_DESC">
+				<option value="0">Address only</option>
+				<option value="1">Logo only</option>
+				<option value="2">Both address and logo</option>
+			</field>
+			<field name="date_format" type="text" size="45" default="F j, Y"
+			labelclass="input-vmeeplus-config"
+				label="DATE_FORMAT_LABEL" description="DATE_FORMAT_DESC" />
+			<field name="date_format_locale" type="text" size="45" default="%b %d, %Y"
+			labelclass="input-vmeeplus-config"
+				label="DATE_FORMAT_LOCALE_LABEL" description="DATE_FORMAT_LOCALE_DESC" />
+			<field name="isDebug" type="radio" default="0" label="DEBUG_LABEL"
+			labelclass="input-vmeeplus-config"
+				description="DEBUG_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+		</fieldset>
+		<fieldset name="TAGS_BEHEVIOR_TITLE" label="TAGS_BEHEVIOR_TITLE">
+			<field type="header" default="PARAMS_FOR_ITEMS_INFO_TAG" labelclass="input-vmeeplus-config"/>
+			
+			<field name="main_table_style" type="text" size="45" default="" label="MAIN_TABLE_STYLE_LABEL" description="MAIN_TABLE_STYLE_DESC" labelclass="input-vmeeplus-config"/>
+			<field name="table_th_style" type="text" size="45" default="" label="MAIN_TABLE_TH_STYLE_LABEL" description="MAIN_TABLE_TH_STYLE_DESC" labelclass="input-vmeeplus-config"/>
+		
+			<field name="is_show_product_thumb" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SEND_PRODUCT_THUMB_LABEL" description="SEND_PRODUCT_THUMB_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="product_thumb_width" type="text" size="45"
+			labelclass="input-vmeeplus-config"
+				default="100" label="PRODUCT_THUMB_WIDTH_LABEL" description="PRODUCT_THUMB_WIDTH_DESC" />
+			<field name="is_show_product_quantity" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_PRODUCT_QUANTITY_LABEL" description="SHOW_PRODUCT_QUANTITY_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_product_name" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_PRODUCT_NAME_LABEL" description="SHOW_PRODUCT_NAME_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_product_sku" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_PRODUCT_SKU_LABEL" description="SHOW_PRODUCT_SKU_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_product_price" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_PRODUCT_PRICE_LABEL" description="SHOW_PRODUCT_PRICE_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			
+			<field name="is_show_product_tax" type="radio"  default="1" label="SHOW_PRODUCT_TAX_LABEL" description="SHOW_PRODUCT_TAX_DESC" labelclass="input-vmeeplus-config">
+		        <option value="1">Yes</option>
+		        <option value="0">No</option>
+		    </field>
+		    <field name="is_show_product_discount" type="radio"  default="1" label="SHOW_PRODUCT_DISCOUNT_LABEL" description="SHOW_PRODUCT_DISCOUNT_DESC" labelclass="input-vmeeplus-config">
+		        <option value="1">Yes</option>
+		        <option value="0">No</option>
+		    </field>
+		    <field name="is_show_product_total" type="radio"  default="1" label="SHOW_PRODUCT_TOTAL_LABEL" description="SHOW_PRODUCT_TOTAL_DESC" labelclass="input-vmeeplus-config">
+		        <option value="1">Yes</option>
+		        <option value="0">No</option>
+		    </field>
+	    
+			<field name="is_show_subtotal" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_SUBTOTAL_LABEL" description="SHOW_SUBTOTAL_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_shipping" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_SHIPPING_LABEL" description="SHOW_SHIPPING_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			
+			<field name="is_show_payment_fee" type="radio"  default="1" label="SHOW_PAYMENT_FEE_LABEL" description="SHOW_PAYMENT_FEE_DESC" labelclass="input-vmeeplus-config">
+		        <option value="1">Yes</option>
+		        <option value="0">No</option>
+		    </field>
+			
+			<field name="is_show_tax" type="radio" default="1" label="SHOW_TAX_LABEL"
+			labelclass="input-vmeeplus-config"
+				description="SHOW_TAX_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_order_discount" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_ORDER_DISCOUNT_LABEL" description="SHOW_ORDER_DISCOUNT_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>'main_table_style'=> $this->getParamByName("main_table_style".$suffix, ""),
+				't
+			<field name="is_show_coupon_discount" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_COUPON_DISCOUNT_LABEL" description="SHOW_COUPON_DISCOUNT_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_totals" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_ITEMS_TOTAL_LABEL" description="SHOW_ITEMS_TOTAL_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			
+			<field type="spacer" />
+			<field type="header" default="PARAMS_FOR_ADMIN_ITEMS_INFO_TAG" />
+			
+			<field name="main_table_style_admin" type="text" size="45" default="" label="ADMIN_MAIN_TABLE_STYLE_LABEL" description="MAIN_TABLE_STYLE_DESC" labelclass="input-vmeeplus-config"/>
+			<field name="table_th_style_admin" type="text" size="45" default="" label="ADMIN_MAIN_TABLE_TH_STYLE_LABEL" description="MAIN_TABLE_TH_STYLE_DESC" labelclass="input-vmeeplus-config"/>
+		
+			<field name="is_show_product_thumb_admin" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SEND_PRODUCT_THUMB_LABEL" description="SEND_PRODUCT_THUMB_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="product_thumb_width_admin" type="text" size="45"
+			labelclass="input-vmeeplus-config"
+				default="100" label="PRODUCT_THUMB_WIDTH_LABEL" description="PRODUCT_THUMB_WIDTH_DESC" />
+			<field name="is_show_product_quantity_admin" type="radio"
+			labelclass="input-vmeeplus-config"
+				default="1" label="SHOW_PRODUCT_QUANTITY_LABEL" description="SHOW_PRODUCT_QUANTITY_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_product_name_admin" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_PRODUCT_NAME_LABEL" description="SHOW_PRODUCT_NAME_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_product_sku_admin" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_PRODUCT_SKU_LABEL" description="SHOW_PRODUCT_SKU_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_product_price_admin" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_PRODUCT_PRICE_LABEL" description="SHOW_PRODUCT_PRICE_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_product_tax_admin" type="radio"  default="1" label="SHOW_PRODUCT_TAX_LABEL" description="SHOW_PRODUCT_TAX_DESC" labelclass="input-vmeeplus-config">
+		        <option value="1">Yes</option>
+		        <option value="0">No</option>
+		    </field>
+		    <field name="is_show_product_discount_admin" type="radio"  default="1" label="SHOW_PRODUCT_DISCOUNT_LABEL" description="SHOW_PRODUCT_DISCOUNT_DESC" labelclass="input-vmeeplus-config">
+		        <option value="1">Yes</option>
+		        <option value="0">No</option>
+		    </field>
+		    <field name="is_show_product_total_admin" type="radio"  default="1" label="SHOW_PRODUCT_TOTAL_LABEL" description="SHOW_PRODUCT_TOTAL_DESC" labelclass="input-vmeeplus-config">
+		        <option value="1">Yes</option>
+		        <option value="0">No</option>
+		    </field>
+			<field name="is_show_subtotal_admin" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_SUBTOTAL_LABEL" description="SHOW_SUBTOTAL_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_shipping_admin" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_SHIPPING_LABEL" description="SHOW_SHIPPING_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_payment_fee_admin" type="radio"  default="1" label="SHOW_PAYMENT_FEE_LABEL" description="SHOW_PAYMENT_FEE_DESC" labelclass="input-vmeeplus-config">
+		        <option value="1">Yes</option>
+		        <option value="0">No</option>
+		    </field>
+			<field name="is_show_tax_admin" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_TAX_LABEL" description="SHOW_TAX_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_order_discount_admin" type="radio"
+			labelclass="input-vmeeplus-config"
+				default="1" label="SHOW_ORDER_DISCOUNT_LABEL" description="SHOW_ORDER_DISCOUNT_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_coupon_discount_admin" type="radio"
+			labelclass="input-vmeeplus-config"
+				default="1" label="SHOW_COUPON_DISCOUNT_LABEL" description="SHOW_COUPON_DISCOUNT_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_totals_admin" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_ITEMS_TOTAL_LABEL" description="SHOW_ITEMS_TOTAL_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field type="spacer" />
+			<field type="header" default="PARAMS_FOR_DROPSHIP_ITEMS_INFO_TAG" />
+			<field name="is_show_product_thumb_dropship" type="radio"
+			labelclass="input-vmeeplus-config"
+				default="1" label="SEND_PRODUCT_THUMB_LABEL" description="SEND_PRODUCT_THUMB_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="product_thumb_width_dropship" type="text" size="45"
+			labelclass="input-vmeeplus-config"
+				default="100" label="PRODUCT_THUMB_WIDTH_LABEL" description="PRODUCT_THUMB_WIDTH_DESC" />
+			<field name="is_show_product_quantity_dropship" type="radio"
+			labelclass="input-vmeeplus-config"
+				default="1" label="SHOW_PRODUCT_QUANTITY_LABEL" description="SHOW_PRODUCT_QUANTITY_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_product_name_dropship" type="radio"
+			labelclass="input-vmeeplus-config"
+				default="1" label="SHOW_PRODUCT_NAME_LABEL" description="SHOW_PRODUCT_NAME_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_product_sku_dropship" type="radio"
+			labelclass="input-vmeeplus-config"
+				default="1" label="SHOW_PRODUCT_SKU_LABEL" description="SHOW_PRODUCT_SKU_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_product_price_dropship" type="radio"
+			labelclass="input-vmeeplus-config"
+				default="1" label="SHOW_PRODUCT_PRICE_LABEL" description="SHOW_PRODUCT_PRICE_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_product_tax_dropship" type="radio"  default="1" label="SHOW_PRODUCT_TAX_LABEL" description="SHOW_PRODUCT_TAX_DESC" labelclass="input-vmeeplus-config">
+		        <option value="1">Yes</option>
+		        <option value="0">No</option>
+		    </field>
+		    <field name="is_show_product_discount_dropship" type="radio"  default="1" label="SHOW_PRODUCT_DISCOUNT_LABEL" description="SHOW_PRODUCT_DISCOUNT_DESC" labelclass="input-vmeeplus-config">
+		        <option value="1">Yes</option>
+		        <option value="0">No</option>
+		    </field>
+		    <field name="is_show_product_total_dropship" type="radio"  default="1" label="SHOW_PRODUCT_TOTAL_LABEL" description="SHOW_PRODUCT_TOTAL_DESC" labelclass="input-vmeeplus-config">
+		        <option value="1">Yes</option>
+		        <option value="0">No</option>
+		    </field>
+			
+			<field name="is_show_subtotal_dropship" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_SUBTOTAL_LABEL" description="SHOW_SUBTOTAL_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="is_show_totals_dropship" type="radio" default="1"
+			labelclass="input-vmeeplus-config"
+				label="SHOW_ITEMS_TOTAL_LABEL" description="SHOW_ITEMS_TOTAL_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+		</fieldset>
+	</fields>
+</config>

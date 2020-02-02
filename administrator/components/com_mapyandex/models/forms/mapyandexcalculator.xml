@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<form>
+    <fieldset name="map_calculator_settings" >
+        <field name="map_price" type="text" default="15" label="COM_MAPYANDEX_TARIF" required="true" />
+        <field name="map_min_price" type="text" default="100" label="COM_MAPYANDEX_PRICE" required="true" />
+		<field name="map_calculator_delimetr" type="list" label="COM_MAPYANDEX_CALCULATOR_DELIMETR" description="COM_MAPYANDEX_CALCULATOR_DELIMETR_DESCRIPTION" class="inputbox" size="1" default="1">
+			<option value="1">км</option>
+			<option	value="2">метры</option>
+
+		</field>
+		<field name="map_calculator_currency" type="list" label="COM_MAPYANDEX_CALCULATOR_CURRENCY" description="COM_MAPYANDEX_CALCULATOR_CURRENCY_DESCRIPTION" class="inputbox" size="1" default="1">
+			<option value="1">рубли</option>
+			<option	value="2">евро</option>
+			<option	value="3">доллары</option>
+			<option	value="4">гривны</option>
+		</field>
+	</fieldset>
+	
+	
+
+
+	<field name="autozoom" type="list" label="COM_MAPYANDEX_AUTOZOOM" description="COM_MAPYANDEX_AUTOZOOM_DESCR" class="inputbox" size="1" default="1">
+		<option value="1">COM_MAPYANDEX_YES</option>
+		<option value="0">COM_MAPYANDEX_NO</option>
+	</field>
+
+
+</form>

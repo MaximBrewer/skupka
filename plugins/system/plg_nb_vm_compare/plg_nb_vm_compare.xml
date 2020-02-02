@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<extension method="upgrade" version="2.5" type="plugin" group="system" >
+
+    <name>System Compare Product for Virtuemart</name>
+    <creationDate>Jul 2014</creationDate>
+    <author>CmsMart Team</author>
+    <authorUrl>http://cmsmart.net</authorUrl>
+	<authorEmail>team@cmsmart.net</authorEmail> 
+    <copyright>Copyright (C) 2012 CmsMart Team. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>1.0.0</version>
+    <description>
+	This plugin is used to analysis and compare among products togerther, and allow customers to have the best choice when purchasing.
+	</description>
+
+    <files>
+
+        <filename plugin="plg_nb_vm_compare">plg_nb_vm_compare.php</filename>
+
+        <folder>assets</folder>
+
+        <folder>views</folder>
+
+        <folder>language</folder>
+
+        <file>index.html</file>
+
+        <file>process.php</file>
+
+        <file>bootstrap.php</file>
+
+    </files>
+    <config>
+        <fields name="params" addfieldpath="plugins/system/plg_nb_vm_compare/elements">
+            <fieldset name="basic">
+                <field name="element_block" type="text" default=".spacer" label="Element Block" description="Fill Element Block."/>
+                <field name="img_class" type="text" default=".main-image" label="Element images" description="Fill Element images."/>
+                
+                <field name="link" type="text" default="a.product-details" label="Class link" description="Fill Class link."/>           
+                <!--
+                <field name="class_detail" type="text" default=".addtocart-area" label="Element detail" description="Fill Element detail."/>
+                -->
+                <field name="max_item" type="text" default="2" label="Max item compare" description="Fill max item comppare"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
+

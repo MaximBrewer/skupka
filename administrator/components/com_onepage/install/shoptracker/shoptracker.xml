@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" version="1.5" type="plugin" group="system">
+        <name>System - ShopTracker (OPC)</name>
+        <author>RuposTel s.r.o.</author>
+        <creationDate>November 2010</creationDate>
+        <copyright>Copyright (C) 2008 RuposTel. All rights reserved.</copyright>
+        <license>GNU General Public License</license>
+        <authorEmail>info@rupostel.sk</authorEmail>
+        <authorUrl>http://www.rupostel.com/</authorUrl>
+        <version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+        <description><![CDATA[ This plugin will track any referals for your orders and add customer navigation to order details. Please <a href="/administrator/index.php?option=com_plugins">navigate to Plugins</a> and enable it first. This plugin works only with One Page Checkout from RuposTel.com]]></description>
+        <files>
+                <filename plugin="shoptracker">shoptracker.php</filename>
+        </files>
+</extension>

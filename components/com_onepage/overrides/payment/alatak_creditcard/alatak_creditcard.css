@@ -1,0 +1,116 @@
+#ccoffline_form ul  {
+    list-style: none !important;
+}
+#ccoffline_form li {
+    margin: 8px 0 !important;
+}
+#ccoffline_form .vertical {
+    overflow: hidden !important;
+}
+#ccoffline_form .vertical input {
+    width: 68px;
+}
+#ccoffline_form .vertical li {
+    float: left;
+    width: 40% !important;
+
+}
+#ccoffline_form li.vertical {
+ width: 100%; 
+ float: left; 
+}
+#ccoffline_form li.vertical ul li > li {
+ clear: right; 
+}
+#ccoffline_form li.vertical ul {
+    padding: 0 !important;
+    margin:0 !important; 
+}
+#ccoffline_form li.vertical ul li label {
+ text-align: left; 
+}
+#ccoffline_form li ul li {
+margin: 0 !important; 
+}
+#ccoffline_form .vertical li:last-child input {
+    float: right;
+	
+
+}
+
+#ccoffline_form ul li {
+ clear: none !important; 
+}
+#ccoffline_form  .vertical li:last-child   {
+    text-align: right;
+}
+#ccoffline_form  .vertical li .or {
+    color: #AAA;
+    float: left;
+    font-size: 12px;
+    margin-left: -8px;
+    margin-top: 32px;
+}
+#ccoffline_form label {
+    color: #555!important;
+    display: block!important;
+    font-size: 14px!important;
+    font-weight: 400!important;
+}
+#ccoffline_form .card_number {
+    background-image: url(../../../../../plugins/vmpayment/alatak_creditcard/alatak_creditcard/assets/images/no-creditcard.png), url(../../../../../plugins/vmpayment/alatak_creditcard/alatak_creditcard/assets/images/valid-invalid.png) !important;
+    background-position: 0 0, 250px 0 !important;
+    background-repeat: no-repeat !important;
+    background-size: 50px 30px,35px  !important;
+    padding-left: 54px !important;
+    width: 225px !important;
+}
+
+#ccoffline_form  input {
+    background-color: #FFF;
+    border: 1px solid #E5E5E5;
+    color: #333;
+    display: block;
+    font-size: 18px;
+    height: 30px;
+    padding: 0 5px;
+    width: 275px;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+	max-width: 100% !important; 
+}
+
+#ccoffline_form  .card_number.visa {
+    background-image: url(../../../../../plugins/vmpayment/alatak_creditcard/alatak_creditcard/assets/images/visa.png),url(../../../../../plugins/vmpayment/alatak_creditcard/alatak_creditcard/assets/images/valid-invalid.png) !important;
+    background-position:  0 0,  250px 0;
+}
+#ccoffline_form .card_number.visa_electron {
+    background-image: url(../../../../../plugins/vmpayment/alatak_creditcard/alatak_creditcard/assets/images/visa-electron.png),url(../../../../../plugins/vmpayment/alatak_creditcard/alatak_creditcard/assets/images/valid-invalid.png) !important;
+    background-position:  0 0,  250px 0;
+}
+#ccoffline_form .card_number.mastercard {
+    background-image: url(../../../../../plugins/vmpayment/alatak_creditcard/alatak_creditcard/assets/images/mastercard.png), url(../../../../../plugins/vmpayment/alatak_creditcard/alatak_creditcard/assets/images/valid-invalid.png) !important;
+    background-position:  0 0,  250px 0;
+}
+#ccoffline_form .card_number.maestro {
+    background-image: url(../../../../../plugins/vmpayment/alatak_creditcard/alatak_creditcard/assets/images/maestro.png),url(../../../../../plugins/vmpayment/alatak_creditcard/alatak_creditcard/assets/images/valid-invalid.png) !important;
+    background-position:  0 0,  250px 0;
+}
+
+#ccoffline_form  .card_number.discover {
+    background-image: url(../../../../../plugins/vmpayment/alatak_creditcard/alatak_creditcard/assets/images/discover.png),url(../../../../../plugins/vmpayment/alatak_creditcard/alatak_creditcard/assets/images/valid-invalid.png) !important;
+    background-position:  0 0,  250px 0;
+}
+#ccoffline_form  .card_number.amex {
+    background-image: url(../../../../../plugins/vmpayment/alatak_creditcard/alatak_creditcard/assets/images/amex.png),url(../../../../../plugins/vmpayment/alatak_creditcard/alatak_creditcard/assets/images/valid-invalid.png) !important;
+    background-position:  0 0,  250px 0;
+}
+#ccoffline_form  .card_number.jcb {
+    background-image: url(../../../../../plugins/vmpayment/alatak_creditcard/alatak_creditcard/assets/images/jcb.png),url(../../../../../plugins/vmpayment/alatak_creditcard/alatak_creditcard/assets/images/valid-invalid.png) !important;
+    background-position:  0 0,  250px 0;
+}
+/* Valid cards */
+#ccoffline_form  .card_number.valid {
+    background-position: 0 0, 250px -80px  !important;
+}
+

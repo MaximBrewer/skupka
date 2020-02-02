@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.9" type="plugin" group="actionlog" method="upgrade">
+	<name>plg_actionlog_advancedmodules</name>
+	<description>PLG_ACTIONLOG_ADVANCEDMODULES_DESC</description>
+	<version>7.9.3</version>
+	<creationDate>December 2018</creationDate>
+	<author>Regular Labs (Peter van Westen)</author>
+	<authorEmail>info@regularlabs.com</authorEmail>
+	<authorUrl>https://www.regularlabs.com</authorUrl>
+	<copyright>Copyright © 2018 Regular Labs - All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<scriptfile>script.install.php</scriptfile>
+
+	<updateservers>
+		<server type="extension" priority="1" name="Regular Labs - Advanced Module Manager">
+			https://download.regularlabs.com/updates.xml?e=advancedmodulemanager&amp;type=.xml
+		</server>
+	</updateservers>
+
+	<files>
+		<filename plugin="advancedmodules">advancedmodules.php</filename>
+		<filename>script.install.helper.php</filename>
+		<folder>language</folder>
+	</files>
+
+	<config>
+		<fields name="params" addfieldpath="/libraries/regularlabs/fields">
+			<fieldset name="basic">
+				<field name="@loadlanguage_regularlabs" type="rl_loadlanguage" extension="plg_system_regularlabs" />
+				<field name="@loadlanguage" type="rl_loadlanguage" extension="plg_actionlog_advancedmodules" />
+				<field name="@license" type="rl_license" extension="ADVANCED_MODULE_MANAGER" />
+				<field name="@version" type="rl_version" extension="ADVANCED_MODULE_MANAGER" />
+				<field name="@dependency" type="rl_dependency"
+					   label="RR_THE_COMPONENT"
+					   file="/administrator/components/com_advancedmodules/advancedmodules.php" />
+				<field name="@header" type="rl_header"
+					   label="ADVANCED_MODULE_MANAGER"
+					   description="ADVANCED_MODULE_MANAGER_DESC"
+					   url="https://www.regularlabs.com/advancedmodulemanager" />
+
+				<field name="@notice_settings" type="note" class="alert alert-info"
+					   description="AMM_SETTINGS,&lt;a href=&quot;index.php?option=com_advancedmodules&quot; target=&quot;_blank&quot;&gt;,&lt;/a&gt;" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

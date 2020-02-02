@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>OPC Tracking - TradeTracker, AppNexus and Veinteractive</name>
+    <creationDate>Jan 2014</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>Support of Tradetracker.com, AppNexux.com and Veinteractive.com tracking</description>
+    <files>
+        <filename>clicky_com.php</filename>
+    </files>
+
+<params>
+    
+    
+			<param
+        type="text"
+        name="tt_campaignID"
+        id="tt_campaignID"
+        label="Tradetracker.com tt_campaignID for de-DE language"
+        description="Enter your campaign ID (leave empty for not configured)"
+        size="80"
+		default=""
+        maxLength="255" />
+		
+		
+		<param
+        type="text"
+        name="tt_productID"
+        id="tt_productID"
+        label="Tradetracker.com tt_productID for de-DE language"
+        description="Enter your tt_productID (leave empty for not configured)"
+        size="80"
+		default=""
+        maxLength="255" />
+		
+		
+		<param
+        type="text"
+        name="tt_trackingGroupID"
+        id="tt_trackingGroupID"
+        label="Tradetracker.com tt_trackingGroupID for de-DE language"
+        description="Enter your tt_trackingGroupID (empty is default)"
+        size="80"
+		default=""
+        maxLength="255" />
+		
+		
+		<param
+        type="text"
+        name="AppNexusID"
+        id="AppNexusID"
+        label="AppNexusID for de-DE remarketing"
+        description="Enter your ID from https://secure.adnxs.com/px?id=12345&amp;t=1"
+        size="80"
+		default=""
+        maxLength="255" />
+		
+		
+			<param
+        type="text"
+        name="tt_campaignIDNL"
+        id="tt_campaignIDNL"
+        label="Tradetracker.com tt_campaignID for nl-NL language"
+        description="Enter your campaign ID (leave empty for not configured)"
+        size="80"
+		default=""
+        maxLength="255" />
+		
+		
+		<param
+        type="text"
+        name="tt_productIDNL"
+        id="tt_productIDNL"
+        label="Tradetracker.com tt_productID for nl-NL language"
+        description="Enter your tt_productID (leave empty for not configured)"
+        size="80"
+		default=""
+        maxLength="255" />
+		
+		
+		<param
+        type="text"
+        name="tt_trackingGroupIDNL"
+        id="tt_trackingGroupIDNL"
+        label="Tradetracker.com tt_trackingGroupID for nl-NL language"
+        description="Enter your tt_trackingGroupID (empty is default)"
+        size="80"
+		default=""
+        maxLength="255" />
+		
+		
+		<param
+        type="text"
+        name="AppNexusIDNL"
+        id="AppNexusIDNL"
+        label="AppNexusID for nl-NL remarketing"
+        description="Enter your ID from https://secure.adnxs.com/px?id=12345&amp;t=1"
+        size="80"
+		default=""
+        maxLength="255" />
+		
+		
+		<param
+        type="text"
+        name="journy_code"
+        id="journy_code"
+        label="Veinteractive.com journy_code for nl-NL language tracking"
+        description="Enter your journy_code (empty is default)"
+        size="80"
+		default=""
+        maxLength="255" />
+		
+		
+		<param
+        type="list"
+        name="allow_visitor_data"
+        id="allow_visitor_data"
+        label="Tradetracker.com Allow to send customer's email (both nl and de)" 
+        description="Will send email to tradetracker.com"
+		default="0"
+        >
+		 <option value="0">No</option>
+		 <option value="1">Yes</option>
+		</param>
+       
+    
+</params>	
+</extension>

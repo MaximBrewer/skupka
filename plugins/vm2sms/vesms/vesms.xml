@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="vm2sms" method="upgrade">
+	<name>plg_vm2sms_vesms</name>
+	<author>VampiRUS</author>
+	<creationDate>November 2012</creationDate>
+	<copyright>vampirus.ru</copyright>
+	<license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+	<authorEmail>vamp1rus@yandex.ru</authorEmail>
+	<authorUrl>vampirus.ru</authorUrl>
+	<version>0.0.1</version>
+	<description>PLG_VM2SMS_VESMS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="vesms">vesms.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="ru-RU">ru-RU/ru-RU.plg_vm2sms_vesms.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_vm2sms_vesms.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_vm2sms_vesms.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_vm2sms_vesms.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+				<field name="user" type="text"
+					default=""
+					description="PLG_VM2SMS_VESMS_FIELD_USER_DESC"
+					label="PLG_VM2SMS_VESMS_FIELD_USER_LABEL"
+					/>
+
+				<field name="apikey" type="text"
+					default=""
+					description="PLG_VM2SMS_VESMS_FIELD_APIKEY_DESC"
+					label="PLG_VM2SMS_VESMS_FIELD_APIKEY_LABEL"
+					/>
+
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,9 @@
+<root>
+    <params name="basic" label="Flickr generator">
+        <param name="api_key" type="text" label="Api key" default="" style="width:250px;"/>
+        <param name="api_secret" type="text" label="Api secret" default="" style="width:250px;"/>                
+        <param name="token" type="flickrtoken" label="Token" default="" style="width:250px;"/>
+        <param name="callback" type="container" label="Callback url"/>
+        <param type="token"/>
+    </params>
+</root>

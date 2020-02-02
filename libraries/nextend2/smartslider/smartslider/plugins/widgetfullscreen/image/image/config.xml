@@ -1,0 +1,21 @@
+<root>
+  <params name="image" label="Image settings" hidetitle="1">
+    <param type="group" label="Responsive" class="n2-expert">
+      <param name="widget-fullscreen-responsive-desktop" type="number" label="Desktop" style="width:40px;"/>
+      <param name="widget-fullscreen-responsive-tablet" type="number" label="Tablet" style="width:40px;"/>
+      <param name="widget-fullscreen-responsive-mobile" type="number" label="Mobile" style="width:40px;"/></param>
+    <param type="image" name="widget-fullscreen-tonormal-image" label="To normal image" class="n2-expert"/>
+    <param type="group" label="To normal">
+      <param type="imagelistfromfolder" name="widget-fullscreen-tonormal" label="Shape" folder="tonormal" required="1" post="break"/>
+      <param type="color" name="widget-fullscreen-tonormal-color" label="Color" alpha="1"/></param>
+    <param name="widget-fullscreen-style" type="style" previewmode="button" set="1900" label="Style">
+      <![CDATA[ <div class="{styleClassName}" style="display: inline-block;"><img style="display: block;" src="{nextend.imageHelper.fixed($('#sliderwidget-fullscreen-tonormal-image').val() || $('[data-image="'+$('#sliderwidget-fullscreen-tonormal').val()+'"]').attr('src'));}" /></div> ]]>
+    </param>
+    <param type="widgetposition" name="widget-fullscreen-position" label="Position"/>
+    <param type="mirror" name="widget-fullscreen-mirror" label="Mirror" class="n2-expert"/>
+    <param type="image" name="widget-fullscreen-tofull-image" label="To full screen image" class="n2-expert"/>
+    <param type="group" label="To full screen">
+      <param type="imagelistfromfolder" name="widget-fullscreen-tofull" label="Shape" folder="tofull" required="1" post="break"/>
+      <param type="color" name="widget-fullscreen-tofull-color" label="Color" alpha="1"/></param>
+  </params>
+</root>

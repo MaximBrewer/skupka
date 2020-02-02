@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" group="vmpayment" method="upgrade">
+    <name>VMPAYMENT_VM2SMS</name>
+    <creationDate>Feb 2017</creationDate>
+    <author>Joomla-i.org</author>
+    <authorUrl>http://joomla-i.org</authorUrl>
+    <copyright>Copyright (C) 2017</copyright>
+    <license>GNU GPL</license>
+    <version>0.0.3</version>
+    <description>VMPAYMENT_VM2SMS_XML_DESCRIPTION</description>
+    <languages>
+		<language tag="ru-RU">language/ru-RU/ru-RU.plg_vmpayment_vm2sms.sys.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_vmpayment_vm2sms.sys.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.plg_vmpayment_vm2sms.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_vmpayment_vm2sms.ini</language>
+    </languages>
+    <files>
+	<filename plugin="vm2sms">vm2sms.php</filename>
+    </files>
+    <params addpath="/administrator/components/com_virtuemart/elements">
+    </params>
+    <config/>
+
+
+
+</extension>

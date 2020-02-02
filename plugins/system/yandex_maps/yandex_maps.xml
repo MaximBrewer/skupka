@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2017 content. All rights reserved.
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+-->
+<extension type="plugin" version="3.0" group="system" method="upgrade">
+	<name>plg_system_yandex_maps</name>
+	<author>Chupurnov Valeriy</author>
+	<creationDate>November 2015</creationDate>
+	<copyright>Copyright (c) 2015 System. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>chupurnov@gmail.com</authorEmail>
+	<authorUrl>https://xdan.ru</authorUrl>
+	<version>1.2.1</version>
+	<description>Позволяет выводить модуль Яндекс Карты в любом месте сайта</description>
+	<files>
+		<filename plugin="yandex_maps">yandex_maps.php</filename>
+		<filename>index.html</filename>
+		<filename>filter.php</filename>
+		<filename>ru-RU.plg_system_yandex_maps.sys.ini</filename>
+		<filename>ru-RU.plg_system_yandex_maps.ini</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="work_for_ajax"
+					type="radio"
+					label="Обрабатывать AJAX&lt;br&gt;запросы"
+					description="Обрабатывать AJAX&lt;br&gt;запросы"
+					default="0"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+            <fieldset name="filter" label="PLG_SYSTEM_YANDEX_MAPS_FILTER">
+				<field
+					name="show_filter_categories"
+					type="radio"
+					label="PLG_SYSTEM_YANDEX_MAPS_SHOW_FILTER_CATEGORIES_LABEL"
+					description="PLG_SYSTEM_YANDEX_MAPS_SHOW_FILTER_CATEGORIES_DESCRIPTION"
+					default="1"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+                <field
+					name="filter_categories_view"
+					type="list"
+					label="PLG_SYSTEM_YANDEX_MAPS_FILTER_CATEGORIES_VIEW_LABEL"
+					description="PLG_SYSTEM_YANDEX_MAPS_FILTER_CATEGORIES_VIEW_DESCRIPTION"
+					default="1"
+				>
+					<option value="1">PLG_SYSTEM_YANDEX_MAPS_FILTER_CATEGORIES_CHECKBOXES</option>
+					<option value="0">PLG_SYSTEM_YANDEX_MAPS_FILTER_CATEGORIES_SELECT</option>
+				</field>
+                <field
+					name="show_toggle_all"
+					type="radio"
+					label="PLG_SYSTEM_YANDEX_MAPS_SHOW_TOGGLE_ALL_LABEL"
+					description="PLG_SYSTEM_YANDEX_MAPS_SHOW_TOGGLE_ALL_DESCRIPTION"
+					default="0"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<languages>
+		<language tag="ru-RU">ru-RU.plg_system_yandex_maps.sys.ini</language>
+		<language tag="ru-RU">ru-RU.plg_system_yandex_maps.ini</language>
+	</languages>
+	<updateservers>
+		<server type="extension" priority="1" name="Плагин yandex_maps">https://xdan.ru/update/plg_yandex_maps.xml</server>
+	</updateservers>
+</extension>

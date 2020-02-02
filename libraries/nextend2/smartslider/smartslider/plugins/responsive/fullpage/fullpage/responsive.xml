@@ -1,0 +1,25 @@
+<root>
+    <params name="smartslider-responsive-full-page" label="Responsive - Full page">
+
+        <param type="group" label="Slide width">
+            <param name="responsiveSlideWidthMax" type="numberautocomplete" label="Max" default="3000"
+                   style="width:40px" values="3000,980">
+                <unit>px</unit>
+            </param>
+        </param>
+        <param type="group" label="Focus" tip="The browser scrolls to the slider.">
+            <param name="responsiveFocusUser" type="onoff" label="User interaction" default="0"/>
+            <param name="responsiveFocusAutoplay" type="onoff" label="Autoplay" default="0"/>
+        </param>
+        <param type="onoff" name="responsiveForceFull" label="Force full width" default="1"
+               tip="The slider tries to fill the full width of the browser."/>
+		<param type="text" name="responsiveForceFullHorizontalSelector" label="Adjust slider width to parent selector"
+               default="" tip="When the jQuery selector of one of the slider's parent elements is specified, the slider tries to have the width and fill up that element instead of the window."/>
+        <param type="onoff" name="responsiveConstrainRatio" label="Constrain ratio" default="1"
+               tip="The size of the slide proportionately changes together with its layers."/>
+        <param type="textautocomplete" name="responsiveHeightOffset" label="Vertical offset selectors"
+               default="#wpadminbar"
+               style="width:400px;" values="#wpadminbar"
+               tip="It reduces the heigth of the slide by the height of the particular elements."/>
+    </params>
+</root>

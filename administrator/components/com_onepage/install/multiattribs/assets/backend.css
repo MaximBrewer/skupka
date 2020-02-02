@@ -1,0 +1,24 @@
+ 
+div.mt_input_div {
+ float: left; 
+ clear: none; 
+}
+
+input.mt_input { 
+ max-width: 120px; 
+}
+
+td.hide_me {
+ visibility: hidden; 
+ width: 1px; 
+ display: none; 
+}
+
+td.hide_me + td {
+  min-width: 1000px; 
+  display: block; 
+}
+
+input[value="multiattribs"] + span {
+ display: none; 
+}

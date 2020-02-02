@@ -1,0 +1,730 @@
+
+version 1.7.46
+
+-bug fix: fixed fullscreen on android devide
+
+version 1.7.45
+
+-bug fix: fixed fullscreen button on webkit with touch events
+
+version 1.7.44 b1
+
+-bug fix: fixed dialog video css small bug
+
+version 1.7.44
+
+-feature: done change gallery theme button
+-bug fix: fixed general settings update issue
+
+version 1.7.43
+
+-bug fix: fixed tiles type resize after 10 seconds
+-bug fix: fixed add category bug
+
+version 1.7.42
+
+-feature: added load more functionality for tiles - columns theme
+
+version 1.7.41
+
+-bug fix: fixed some php7 compatability
+-bug fix: fixed issue for small screen galleries
+
+version 1.7.40
+
+-bug fix: fixed some ratio related js issue
+
+version 1.7.39 b2
+
+bug fix: fixed some js errors in the admin
+
+version 1.7.39
+
+-bug fix: fixed easing functions jquery 3.0 compatability
+
+version 1.7.38 b1
+
+-bug fix: fixed some bug relating to adding gallery
+
+version 1.7.38
+
+-feature: added admin items sorting options
+-bug fix: fixed some js error in case of iframes in the page
+
+version 1.7.37
+
+-bug fix: fixed the thumb image as big image bug
+
+version 1.7.36
+
+-protection: made some protection against video visibility:hidden
+-protection: added some protection against js scripts that add additional items inside the gallery
+-change: add a check if the gallery resized once in 2 seconds
+
+version 1.7.35
+
+-bug fix: fixed some errors related to jquery 3.0
+
+version 1.7.34
+
+-bug fix: the lightbox was switched to wide even on normal screens
+-bug fix: fixed php7 compatability
+
+version 1.7.33
+
+-bug fix: fixed no thumb image bug
+
+version 1.7.32
+
+-bug fix: fixed left arrow inside arrows not in place bug
+
+version 1.7.31
+
+-bug fix: on keyboard event only first gallery affected
+
+version 1.7.30
+
+-feature: added general settings
+-feature: moved permission chooser to general settings
+-feature: added gallery output type in general settings
+
+
+version 1.7.29
+
+-bug fix: fixed slash in paths issues
+
+version 1.7.28 b1:
+
+-bug fix: add slashes before admin image output
+
+version 1.7.28:
+
+-feature: updated tiles grid type, added options for better responsiveness
+-protection: added protection for margin and padding in the slider
+
+version 1.7.26
+
+-feature: added mobile resolution chooser for big and lightbox image
+
+version 1.7.25 b1
+
+-bug fix: fixed limitation for tiles based galleries with category tags
+-bug fix: added default value for imageid when adding items 
+
+version 1.7.25
+
+-bug fix: fixed lightbox compact bottom text issue
+-protection: added protection to html5 video player for css size change
+
+version 1.7.24 b1
+
+-feature: added option - allow lightbox slide swipe
+
+version 1.7.24
+
+-bug fix: escaped "'" character in image url's
+
+
+version 1.7.23
+
+-feature: added theme_next_video_onend function in video gallery theme
+
+-bug fix: fixed the api events issue on tab change
+
+version 1.7.22
+
+-bug fix: fixed bug related to video sizes in lightbox
+-bug fix: fixed bug when right button was disabled on non fixed thumbs
+
+version 1.7.21
+
+-bug fix: fixed one row only bug in tiles grid
+
+version 1.7.20
+
+-bug fix: fixed youtube player destroy function, was a bug there
+
+version 1.7.19
+
+-feature: updated option: Always Show Video Play Icon, added "mobile only" to it
+-change: make only mp4 field a must in video dialog
+
+version 1.7.18
+
+-bug fix: fixed text panel appear bug from 17.7.17
+
+version 1.7.17
+
+-bug fix: fixed jquery 1.8 issue with fading.
+-bug fix: fixed icon always on issue
+
+version 1.7.16
+
+-bug fix: fixed image border issue.
+
+version 1.7.15
+
+-bug fix: fixed tiles grid small issue with rtl
+
+version 1.7.14 b2
+
+-bug fix: added validation in admin for inside plugin check
+
+version 1.7.14 b1
+
+-change: changed html5 video example links
+-bug fix: fixed video dialog styles
+-bug fix: fixed html5 video preview in items
+-bug fix: fixed edit title if not selected
+
+version 1.7.14
+
+feature: added option to close the lightbox on empty space click yes/no 
+-bug fix: fixed nested type arrange on first load for mobile mode
+
+
+version 1.7.13
+
+-bug fix: fixed small js bug, about html variable
+-bug fix: added better protection against unwanted css transitions
+
+version 1.7.12
+
+-change: added line height to video title
+
+version 1.7.11
+
+-bug fix: improved lightbox wide video player
+
+version 1.7.10
+
+-change: added grid align for tile grid when the gallery not centered
+
+version 1.7.9
+
+-bug fix: fixed some preloader error with tabs
+-bug fix: fixed tilegrid resize issues
+
+version 1.7.8
+
+-change: changed items output for better google indexing
+
+
+version 1.7.7 b1
+
+-feature: added export/import cat items functionality (on category right click)
+
+version 1.7.7
+
+-bug fix: fixed direction arrows slide direction
+-bug fix: fixed titles with html tags
+-feature: added text panel description to lightbox wide
+
+version 1.7.6
+
+-feature: added tile text panel description
+-protection: added protection against width:100% css
+
+version 1.7.5
+
+-feature: added tile text panel top/bottom/middle positions (text outside image)
+-bug fix: fixed ie11 fullscreen mode
+
+version 1.7.4
+
+-bug fix: fixed left / right buttons on input objects
+
+
+version 1.7.3 b1
+
+-bug fix: fixed small bug in db error check
+
+version 1.7.3
+
+-feature: added category tab select type
+
+version 1.7.2
+
+-protection: added protection agains lasy load
+
+version 1.7.1 b1
+
+-feature: added "open lightbox at start" to tiles grid type as well
+
+version 1.7.1
+
+-feature: added "open lightbox at start" option for tiles theme
+
+version 1.7
+
+-feature: Added Tiles - Nested gallery type
+
+version 1.6.8 b2
+
+-bug fix: fixed compress output
+
+version 1.6.8 b1
+
+-bug fix: fixed bug on update video item
+
+version 1.6.8
+
+-addition: added protection against undefined big images url's for the slider.
+-change: changed mediaelement to new version
+-bug fix: added z-index:0 to the gallery to avoid menu over the gallery
+-bug fix: fixed html5 video add
+
+version 1.6.7 b1
+
+-change: added better protection for shortcode not processed situations.
+
+version 1.6.7
+
+-change: added some protections against jquery absense
+-bug fix: fixed the gallery for multisite systems
+
+version 1.6.6 b1
+
+-bug fix: moved scripts include to the footer - make themes without init jquery work.
+
+version 1.6.6
+
+-bug fix: fixed min jquery version checking. 
+
+version 1.6.5
+
+-feature: added tile text panel additional css field
+-feature: added minimal version jquery validation
+-addition: added unitegallery_force shortcode to force gallery add on page
+-change: changed additional css to text panel to css from json
+
+-bug fix: fixed tiles text panel appear
+-bug fix: fixed description didn't saved on video items
+
+version 1.6.4
+
+-feature: keep order option in tiles columns
+-bug fix: text panel was blined on tiles resize
+-bug fix: fixed position on the page
+
+version 1.6.3
+
+-bug fix: fixed text panel always on on tiles typess
+
+version 1.6.2
+
+-bug fix: text panel was not hided on some of the cases
+-change: improved show/hide controls display
+
+version 1.6.1
+
+bug fix: fixed a small bug with tiles image effect
+
+version 1.6
+
+-feature: changed tiles view - make variable number of columns
+-feature: added dynamic size thumbs.
+-change: improvement transition movement of tiles and justified types
+
+version 1.5.9 b1
+
+-merged with php version, minor changes
+
+version 1.5.9
+
+-bug fix: video was not stop on fade transition
+
+version 1.5.8 b2
+
+-bug fix: fixed shortcode include on some special widgets and editors
+
+-change: take new image title from attachment title if available
+-change: removed link open in option from item edit window because it was not needed.
+
+version 1.5.8 b1
+
+-bug fix: fixed issue that gallery shortcode was working only on posts/pages content.
+
+version 1.5.8
+
+-bug fix: the video player stayed on compact mode on slide change
+-change: added more "protection" agains another type of theme content filters.
+-change: make the gallery "updatable" from codecanyon main file
+
+
+version 1.5.7
+
+-change: set lightbox transition "fade" as default transition
+-bug fix: fixed position: left,right for tiles columns view. 
+
+version 1.5.6
+
+-feature: added option:  "Always Show Video Play Icon" in tile design section 
+-fixed float right functionality on tiles type galleries (made rtl direction).
+
+version 1.5.5 b1
+
+- added export / import all content function for theme in php operations class.
+
+version 1.5.5
+
+-feature: done "export/import gallery" feature
+-change: when updating from lite version, the plugin directory is now renamed to "unitegallery"
+-bug fix: fixed size bugs in justified type
+
+version 1.5.4 b2
+
+-bug fix: in video gallery second skin was not load
+
+version 1.5.4 b1
+
+-feature: added "lightbox zoom max ratio" functionality
+-bug fix: fixed <p> and <br> tags in gallery output
+
+version 1.5.4
+
+-bug fix: fixed category ordering in items view
+-bug fix: fixed video gallery with tabs
+
+version 1.5.3 b2
+
+-feature: added option - lightbox slider transition 
+-feature: added option - big image resolution (for tiles and themes)
+
+version 1.5.3 b1
+
+-feature: added "advanced tab" with custom styles / scripts
+
+version 1.5.3
+
+-feature: added "destroy function to API"
+-bug fix: fixed destroy function
+
+version 1.5.2 b1
+
+-feature: added thumb resolution for the themes
+
+version 1.5.2
+
+-feature: added thumb size: thumbnail (150x150)
+-bug fix: added remove html function to lightbox
+-bug fix: fixed some ie8 related issues
+-bug fix: disabled scrolling on lightbox with mousewheel: none
+
+version 1.5.1
+
+-bog fix: fixed theme default options (like autoplay=true) that was brocken in the last update
+
+version 1.5
+
+-feature: added "category tabs" support
+-bug fix: fixed some important security issues
+
+version 1.4.6
+
+-bug fix: fixed js error on carousel without navigation
+
+version 1.4.5
+
+- change: added support for "title" attribute as item description
+
+version 1.4.4 b3
+
+-bug fix: fixed dissapearing items with unicode text in admin
+
+version 1.4.4 b2
+
+-feature: done php output function
+
+version 1.4.4 b1
+
+-bug fix: fixed widget output
+
+version 1.4.4
+
+-feature: enable slider area links
+-feature: added "compress output" option in the troubleshooting section
+
+-bug fix: on playing mode slides was advanced even when images was not loaded
+-bug fix: fixed mousewheel advance item on lightbox
+
+
+version 1.4.3
+
+-bug fix: gallery on hidden tab was dissapeared on fullscreen
+
+version 1.4.2
+
+-feature: added option - shuffle items at start
+-bug fix: bullets miss position after back from full screen
+
+version 1.4.1 b1
+
+- fixed youtube backend select
+
+version 1.4.1
+
+-bug fix: fixed some bug in justified tiles view in mobile width
+-bug fix: fixed issue with video size at tabs
+
+version 1.4
+
+-bug fix: add preloader to video player
+-change: video in lightbox compact mode opens in frame instead of on full screen
+
+version 1.3.9
+
+-feature: added admin/editor permissions change options in globals
+-feature: added option: slider_background_opacity
+-feature: added option: gallery_mousewheel_role
+-feature: added scale mode: fitdown
+-feature: added vertical page scroll on drag 
+
+-change: when go to full screen mode, disable the pause on mouseover mode
+-bug fix: carousel tile was dissapeared when size change less then tile width
+
+
+version 1.3.8
+
+-bug fix: fixed carousel related bug that text panel was over the icons
+-bug fix: in items view enable links radio button didn't worked
+
+version 1.3.7
+
+-bug fix: fixed carousel text panel didn't appeared on cloned items
+
+version 1.3.6
+
+-bug fix: fixed bug when closing the lightbox
+
+version 1.3.5
+
+-bug fix: the lightbox was closing on video slider touch
+
+version 1.3.4
+
+-bug fix: grid panel background color setting - wheel didn't set the input field.
+-feature: added mobile hide options to slider buttons and zoom panel
+
+version 1.3.3
+
+-feature: added top position navigation option in carousel view
+
+version 1.3.2 b3
+
+-change: changed jquery-ui include to enqueue-script
+-change: changed all the scripts in the templates to wordpress way
+
+version 1.3.2 b2
+
+-change: changed to fancybox1 (was fancybox2)
+-change: removed all external jquery from the plugin, changed the jquery include to built in wordpress jquery include
+-change: removed all hard coded wordpress related variables, all the values now taken from wordpress functions.
+
+version 1.3.2 b1
+
+-feature: added "update plugin" button
+
+version 1.3.2
+
+-bug fix: fixed the flickering when close compact lightbox with view playing.
+-bug fix: fixed bug with text panel not always on on themes.
+
+
+version 1.3.1
+
+-feature: added option to disable close video button
+-bug fix: text panel was not show on carousel cloned items
+-bug fix: fixed issue with one item only on carousel
+
+version 1.3
+
+-feature: added "compact" lightbox type
+-bug fix: fixed youtube thumbnail output
+
+version 1.2.16 b2
+
+-bug fix: fixed the appearance of radio button in chrome browser
+
+version 1.2.16 b1
+
+-bug fix: show the captions that has been hidden from previous update
+
+version 1.2.16
+
+-bug fix: fixed the responsivness of regular themes.
+
+version 1.2.15
+
+-bug fix: fixed hide preloader on tiles theme
+-bug fix: fixed empty image was trying to load
+
+version 1.2.14 b1
+
+-bug fix: fixed text overflowing in video gallery
+-change: changed php output method, removed ob_start()
+
+version 1.2.14
+
+-feature: added close lightbox on escaape key
+
+version 1.2.13
+
+-feature: Make option to set the strip panel color as transparent
+
+-bug fix: make all the themes work within tabs
+-bug fix: fixed grid and compact themes default settings
+
+version 1.2.12
+
+-bug fix: make the gallery to work within tabs
+
+version 1.2.11 b1
+
+-bug fix: fixed items view compatability to some themes.
+
+version 1.2.11
+
+-bug fix: added clickable function for carousel and tiles grid mode for mobile and tablet
+
+version 1.2.10
+
+-bug fix: adopted tiles clickable functions for mobile and tablet
+
+version 1.2.9
+
+-bug fix: fixed lightbox text align
+
+version 1.2.8 b3
+
+-bug fix: fixed gallery background color
+
+version 1.2.8 b2
+
+-bug fix: fixed disable progress indicator option
+
+version 1.2.8 b1
+
+-bug fix: fixed a bug with thumb sizes on video items
+
+version 1.2.8
+
+-feature: added tile text panel source (title, description) option
+
+version 1.2.7
+
+- feature: added option to disable lightbox
+
+version 1.2.6
+
+- bug fix: fixed some bug with lightbox text cut off
+
+version 1.2.4 b1
+
+- added thumbs resolution options
+
+version 1.2.4
+
+- bug fix: fixed destorted images on some of the themes like avada
+
+version 1.2.3
+
+-feature: added lightbox additional options including lightbox slider options
+-bug fix: fixed admin color chooser position
+
+version 1.2.2 b1
+
+-feature: add wordpress gallery shortcode output like [gallery unitegallery="gallery1" ids="1,2,3"] 
+-feature: added tile image size options
+
+-change: add usage text in galleries view
+
+-bug fix: fixed widget output
+
+version 1.2.2
+
+-bug fix: fixed lightbox text padding on mobiles
+
+version 1.2.1
+
+-bug fix: fixed touch capabilities of the tiles
+
+version 1.2 b1
+
+- bug fix: fixed lightbox text panel with multiple lines bug
+
+version 1.2
+
+- addition: added tile columns gallery!
+- addition: added tile justified gallery!
+- addition: added tile grid gallery!
+- addition: added carousel gallery!
+
+version 1.1.4 b1
+
+-bug fix: fixed some js file include in grid theme
+
+version 1.1.4
+
+-feature: added API to output
+-feature: improved troubleshoting options
+-feature: added error message to gallery output
+
+version 1.1.3 - 5/12/14
+
+-addition: added video gallery!
+-change: the alias is validated now
+
+version 1.1.2 - 29/11/14
+
+- bug fix: when controls not alwqays on, don't show progress bar
+- bug fix: fixed fullscreen on ie11
+
+
+version 1.1.1 - 20/11/14
+
+-feature: added plugin for ease inserting the gallery into the content
+-feature: added basic permission for the component
+
+-change: edit category in items view now show gallery id
+
+version 1.1
+
+-feature: added video support. youtube / vimeo / html5 video, wistia videos are supported now.
+-feature: enable link adding link to description end from now
+
+-bug fix: fixed html entitles in description output
+-bug fix: fixed various visual bugs
+
+version 1.0.6
+
+-bug fix: fixed module category select
+
+version 1.0.5
+
+-bug fix: fixed two galleries in one page bug
+-bug fix: fixed js error on joomla 2.5 in admin pages
+-bug fix: fixed responsive functionality
+
+version 1.0.4
+
+-bug fix: disabled mootools on admin pages to avoid compatability bugs
+
+version 1.0.3
+
+-feature: added category select in the module
+-bug fix: fixed avia control strip navigation
+-bug fix: fixed items selection in chrome
+-change: upgraded jquery to 1.11.1, added jquery map file.
+-change: removed unused admin elements, reduced plugin size
+
+version 1.0.2
+
+-bug fix: removed error_reporting(0) from the lfinder
+
+version 1.0.1
+
+-change: added index.html to all the folder
+-change: changed php headers
+
+version 1.0

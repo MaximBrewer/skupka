@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5.0" type="plugin" group="system" method="upgrade" >
+    <name>PLG_SYSTEM_USERTABS</name>
+    <creationDate>June 2016</creationDate> 
+    <author>RuposTel.com</author>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <copyright>Copyright (C) 2004-2014 RuposTel.com.</copyright>
+    <license>Commercial</license>
+    <version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>System - User Tabs (OPC), this plugin allows you to create associations between your users.</description>
+    <languages folder="language/en-GB/">
+     <language tag="en-GB" >en-GB.plg_system_usertabs.ini</language>
+<language tag="en-GB" >en-GB.plg_system_usertabs.sys.ini</language>
+		
+    </languages>
+    <files>
+        <filename plugin="usertabs">usertabs.php</filename>
+		  
+		   <folder >assets</folder>
+		   <folder >language</folder>
+		   <folder >tmpl</folder>
+    </files>
+	
+	 <config>
+        <fields name="params">
+            <fieldset name="basic">
+				<field name="framework" type="list"  default="" label="PLG_SYSTEM_USERTABS_FRAMEWORK" description="PLG_SYSTEM_USERTABS_FRAMEWORK" >
+				 <option value="">default</option>
+				 <option value="uikit">UI Kit</option>
+				 <option value="bootstrap">Bootstrap</option>
+				</field>
+				
+				<field name="loadframework" type="list"  default="1" label="PLG_SYSTEM_USERTABS_LOADFRAMEWORK" description="PLG_SYSTEM_USERTABS_LOADFRAMEWORK_DESC" >
+				 			<option
+				value="0">JNo</option>
+			<option
+				value="1">JYes</option>
+
+				</field>
+				
+				
+				<field name="defaultclass" type="text"  default="" label="PLG_SYSTEM_USERTABS_DEFAULTCLASS" description="PLG_SYSTEM_USERTABS_DEFAULTCLASS_DESC" ></field>
+				
+				
+				<field name="rederingtype" type="list"  default="" label="PLG_SYSTEM_USERTABS_RENDERINGTYPE" description="" >
+				 <option value="">PLG_SYSTEM_USERTABS_RENDERINGTYPE1</option>
+				 <option value="2">PLG_SYSTEM_USERTABS_RENDERINGTYPE2</option>
+				 <option value="3">PLG_SYSTEM_USERTABS_RENDERINGTYPE3</option>
+				 <option value="4">PLG_SYSTEM_USERTABS_RENDERINGTYPE4</option>
+				 
+				</field>
+				
+				 			
+				
+				
+ </fieldset>
+        </fields>
+    </config>
+	
+</extension>

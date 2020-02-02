@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="vm2sms" method="upgrade">
+	<name>plg_vm2sms_mainsms</name>
+	<author>Joomla-i.org</author>
+	<creationDate>Feb 2017</creationDate>
+	<copyright>joomla-i.org</copyright>
+	<license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+	<authorEmail>Support@joomla-i.org</authorEmail>
+	<authorUrl>joomla-i.org</authorUrl>
+	<version>0.0.2</version>
+	<description>PLG_VM2SMS_MAINSMS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="mainsms">mainsms.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="ru-RU">ru-RU/ru-RU.plg_vm2sms_mainsms.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_vm2sms_mainsms.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_vm2sms_mainsms.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_vm2sms_mainsms.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+				<field name="project" type="text"
+					default=""
+					description="PLG_VM2SMS_MAINSMS_FIELD_PROJECT_DESC"
+					label="PLG_VM2SMS_MAINSMS_FIELD_PROJECT_LABEL"
+					/>
+
+				<field name="apikey" type="text"
+					default=""
+					description="PLG_VM2SMS_MAINSMS_FIELD_APIKEY_DESC"
+					label="PLG_VM2SMS_MAINSMS_FIELD_APIKEY_LABEL"
+					/>
+
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

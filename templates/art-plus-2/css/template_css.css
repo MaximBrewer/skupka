@@ -1,0 +1,7 @@
+html * {max-height:1000000px; -webkit-text-size-adjust: 100%;}
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFFFFF;
+	font-family: PTSans-Regular;
+}

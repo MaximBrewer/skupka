@@ -1,0 +1,295 @@
+/**
+ * sh404SEF - SEO extension for Joomla!
+ *
+ * @author      Yannick Gaultier
+ * @copyright   (c) Yannick Gaultier - Weeblr llc - 2016
+ * @package     sh404SEF
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version     4.7.3.3292
+ * @date		2016-03-15
+ */
+.icon-48-sh404sef {
+    background-image: url(../images/icon-48-sh404sef-logo.png);
+}
+
+.icon-48-save {
+    background-image: url(../images/icon-48-save.png);
+}
+
+div.largertext {
+    display: inline;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.shlargerkey {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+div.sh404sef-toolbar-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0B55C4;
+    line-height: 48px;
+    padding-left: 135px;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+}
+
+#toolbar-sh-progress-button-cpprogress {
+    float: right;
+    width: 32px;
+}
+
+.sh-ajax-loading {
+    background-image: url(../images/sh-ajax-loader-wide.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 160px;
+}
+
+#sh404sef-analytics-wrapper {
+    min-width: 300px;
+}
+
+.analytics-report-image img {
+    display: block;
+    margin: 0 auto;
+}
+
+div.hasAnalyticsTip {
+    display: inline;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: auto;
+}
+
+.sh404sef-analytics h2 {
+    text-align: center;
+}
+
+/*div.current input, div.current textarea, div.current select*/
+div.sh404sef-analytics select#accountId, div.sh404sef-analytics input#accountId, div.sh404sef-analytics textarea#accountId {
+    float: none;
+}
+
+div.hero-unit {
+    text-align: left;
+}
+
+div.tooltip-inner {
+    max-width: 300px;
+    text-align: justify;
+}
+
+div.tooltip-inner h4 {
+    text-align: center;
+}
+
+div.shl-center {
+    text-align: center;
+}
+
+.table td.shl-center, td.shl-center {
+    text-align: center;
+}
+
+div.shl-right {
+    text-align: right;
+}
+
+div.shl-left {
+    text-align: left;
+}
+
+div.analytics-report-image {
+    margin-bottom: 1.5em;
+}
+
+.wbl-theme-default div#shl-sidebar-container {
+    background: #f5f5f5;
+    padding: 1em;
+}
+
+.wbl-theme-default #wbl-sh404sef-control-panel-right {
+    background: #f5f5f5;
+    padding: 1em;
+    padding-bottom: 0;
+}
+
+.wbl-sh404sef-cp-msg-center {
+    margin-bottom: 0.5em;
+}
+
+.wbl-sh404sef-cp-stats {
+    margin-bottom: 1.5em;
+    background: #F5F5F5;
+}
+
+.wbl-sh404sef-cp-more-button {
+    position: relative;
+    font-size: 2em;
+    font-weight: bold;
+    width: 100%;
+    height: 1.5em;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    color: #000000;
+}
+
+.wbl-sh404sef-cp-more-button:focus {
+    outline: none;
+}
+
+.wbl-sh404sef-cp-more-stats + .wbl-sh404sef-cp-more-button:after {
+    content: "\2304";
+}
+
+.wbl-sh404sef-cp-more-stats.in + .wbl-sh404sef-cp-more-button:after {
+    content: "\2303";
+}
+
+/* Chrome hack: requires to set font-size in pseudo-element rather than element */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .wbl-sh404sef-cp-more-button:after {
+        font-size: 1.5em;
+    }
+}
+
+.wbl-sh404sef-cp-more-stats {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.wbl-sh404sef-cp-stats-row {
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    display: table;
+    box-sizing: border-box;
+}
+
+.wbl-sh404sef-cp-counter {
+    margin: 0 !important;
+    width: 25%;
+    display: table-cell;
+    background: #FFFFFF;
+    border: 1em solid #F5F5F5;
+}
+
+@media only screen and (max-width: 479px) {
+    .wbl-sh404sef-cp-counter {
+        width: 60%;
+        display: inline-block;
+    }
+}
+
+.wbl-sh404sef-cp-counter-inner {
+    padding: 1.5em 2em;
+}
+
+.wbl-sh404sef-cp-counter a,
+.wbl-sh404sef-cp-counter:focus a,
+.wbl-sh404sef-cp-counter:hover a,
+.wbl-sh404sef-cp-counter:visited a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wbl-sh404sef-cp-counter:hover {
+    background: #6E97CC;
+}
+
+.wbl-sh404sef-cp-counter.wbl-flag-info {
+    background: #6E97CC;
+}
+
+.wbl-sh404sef-cp-counter:hover.wbl-flag-info {
+    background: #FFAC2F;
+}
+
+.wbl-sh404sef-cp-counter.wbl-flag-warning {
+    background: #FFAC2F;
+    position: relative;
+}
+
+.wbl-sh404sef-cp-counter:hover.wbl-flag-warning {
+    background: #6E97CC;
+}
+
+.wbl-sh404sef-cp-counter.wbl-flag-warning .wbl-sh404sef-cp-counter-inner:before {
+    content: '\35';
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    font-family: "IcoMoon";
+    font-style: normal;
+}
+
+span.wbl-sh404sef-cp-counter-number,
+span.wbl-sh404sef-cp-counter-title {
+    display: block;
+    text-align: center;
+}
+
+span.wbl-sh404sef-cp-counter-title {
+    font-size: 1em;
+    color: #BBBBBB;
+    margin-top: 0.5em;
+}
+
+.wbl-sh404sef-cp-counter.wbl-flag-info span.wbl-sh404sef-cp-counter-title {
+    color: #DDDDDD;
+}
+
+.wbl-sh404sef-cp-counter.wbl-flag-warning span.wbl-sh404sef-cp-counter-title {
+    color: #FFFFFF;
+}
+
+span.wbl-sh404sef-cp-counter-number {
+    font-size: 1.75em;
+    font-weight: bold;
+    color: #282828;
+}
+
+@media (max-width: 1279px) {
+    .form-horizontal #qcontrol-editcell .controls {
+        margin-left: 0;
+    }
+}
+
+.wbl-sh404sef-update-notes {
+    background: #fff;
+    border: none;
+    border-radius: 0.25em;
+}
+
+table.table.wbl-sh404sef-installed-version {
+    margin-bottom: 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.table.wbl-sh404sef-installed-version td {
+    border: none;
+}
+
+.table.wbl-sh404sef-installed-version tbody > tr > td {
+    vertical-align: middle;
+}
+
+.table td.wbl-sh404sef-update-notes {
+    border: none;
+}
+
+.sh404sef-updates form {
+    margin-bottom: 0;
+    display: inline-block;
+}

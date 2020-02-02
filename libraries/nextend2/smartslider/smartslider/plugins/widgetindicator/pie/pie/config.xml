@@ -1,0 +1,22 @@
+<root>
+    <params name="pie" label="Pie indicator settings" hidetitle="1">
+        <param name="widget-indicator-position" type="widgetposition" label="Position" />
+        <param type="group" label="Size" >
+            <param type="number" name="widget-indicator-size" label="Size" style="width:30px;">
+                <unit>px</unit>
+            </param>
+
+            <param type="number" name="widget-indicator-thickness" label="Line thickness" style="width:30px;">
+                <unit>%</unit>
+            </param>
+        </param>
+        <param type="group" label="Color" >
+            <param type="color" name="widget-indicator-track" label="Track" alpha="1"/>
+            <param type="color" name="widget-indicator-bar" label="Bar" alpha="1"/>
+        </param>
+        <param type="radio" name="widget-indicator-skin" label="Skin" >
+            <option value="default">Default</option>
+            <option value="tron">Tron</option>
+        </param>
+    </params>
+</root>

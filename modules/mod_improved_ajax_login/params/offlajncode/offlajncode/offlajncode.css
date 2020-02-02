@@ -1,0 +1,44 @@
+.offlajncodecontainer {
+  float: left;
+  margin-right: 4px;
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+  padding: 0 2px;
+  box-shadow:inset 1px 1px 2px #ccc;
+  background: -moz-linear-gradient(top, #fff 0%, #e9e9e9 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#e9e9e9)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #fff 0%,#e9e9e9 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #fff 0%,#e9e9e9 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #fff 0%,#e9e9e9 100%); /* IE10+ */
+  background: linear-gradient(top, #fff 0%,#e9e9e9 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#e9e9e9',GradientType=0 ); /* IE6-9 */
+}
+
+.offlajncodecontainer .offlajncode {
+  width: auto;
+  line-height: 16px;
+  color: #575656;
+  font-size: 12px;
+  font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+  border: 0;
+  background: none;
+  padding: 4px;
+  float: left;
+  margin: 0;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+}
+
+.offlajncodesample {
+  display: inline-block;
+  margin: 0 4px 4px 0;
+  padding: 8px;
+  background: #fef3cb;
+  vertical-align: top;
+  font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+}
+
+.offlajncodesample .comment {
+  color: #98937f;
+}

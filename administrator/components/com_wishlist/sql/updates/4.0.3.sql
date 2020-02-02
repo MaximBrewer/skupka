@@ -1,0 +1,3 @@
+-- 
+-- SQL Upgrade for `#__virtuemart_favorites` tables
+--

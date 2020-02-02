@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="maximenu_mobileparams" label="MOD_MAXIMENUCK_MOBILEPARAMS_FIELDSET_LABEL">
+			<field
+				name="maximenumobile_enable"
+				type="ckradio"
+				default="0"
+				label="MOD_MAXIMENUCK_MOBILEENABLE_LABEL"
+				description="MOD_MAXIMENUCK_MOBILEENABLE_DESC"
+				class="btn-group"
+				icon="ipod.png"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="maximenumobile_container"
+				type="cklist"
+				default="menucontainer"
+				label="MOD_MAXIMENUCK_CONTAINER_LABEL"
+				description="MOD_MAXIMENUCK_CONTAINER_DESC"
+				icon="application_side_list.png"
+			>
+				<option value="body">MOD_MAXIMENUCK_BODY</option>
+				<option value="menucontainer">MOD_MAXIMENUCK_MENUCONTAINER</option>
+				<option value="topfixed">MOD_MAXIMENUCK_TOPFIXED</option>
+			</field>
+			<field 
+				type="ckspacer"
+				name="maximenumobile_displayinfo"
+				label="MOD_MAXIMENUCK_DISPLAYTYPE_INFO_LABEL"
+			/>
+			<field
+				name="maximenumobile_display"
+				type="cklist"
+				default="flat"
+				label="MOD_MAXIMENUCK_DISPLAYTYPE_LABEL"
+				description="MOD_MAXIMENUCK_DISPLAYTYPE_DESC"
+				icon="application_view_list.png"
+			>
+				<option value="flat">MOD_MAXIMENUCK_FLAT</option>
+				<option value="accordion">MOD_MAXIMENUCK_ACCORDION</option>
+				<option value="fade">MOD_MAXIMENUCK_FADELEVELS</option>
+				<option value="push">MOD_MAXIMENUCK_PUSHLEVELS</option>
+			</field>
+			<field
+				name="maximenumobile_displayeffect"
+				type="cklist"
+				default="0"
+				label="MOD_MAXIMENUCK_DISPLAYEFFECT_LABEL"
+				description="MOD_MAXIMENUCK_DISPLAYEFFECT_DESC"
+				icon="chart_curve.png"
+			>
+				<option value="normal">MOD_MAXIMENUCK_NORMAL</option>
+				<option value="slideleft">MOD_MAXIMENUCK_SLIDELEFT</option>
+				<option value="slideright">MOD_MAXIMENUCK_SLIDERIGHT</option>
+				<option value="slideleftover">MOD_MAXIMENUCK_SLIDELEFT_OVER</option>
+				<option value="sliderightover">MOD_MAXIMENUCK_SLIDERIGHT_OVER</option>
+				<option value="topfixed">MOD_MAXIMENUCK_TOPFIXED</option>
+				<option value="open">MOD_MAXIMENUCK_OPEN_SLIDE</option>
+			</field>
+			<field
+				name="maximenumobile_openedonactiveitem"
+				type="ckradio"
+				default="0"
+				label="MOD_MAXIMENUCK_OPENED_ON_ACTIVE_ITEM_LABEL"
+				description="MOD_MAXIMENUCK_OPENED_ON_ACTIVE_ITEM_DESC"
+				class="btn-group"
+				icon="chart_organisation_add.png"
+				showon="maximenumobile_display:accordion"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="maximenumobile_menuwidth"
+				type="cktext"
+				default="300"
+				label="MOD_MAXIMENUCK_MOBILEMENUWIDTH_LABEL"
+				description="MOD_MAXIMENUCK_MOBILEMENUWIDTH_DESC"
+				icon="width.png"
+				showon="maximenumobile_displayeffect:slideleft,slideright,slideleftover,sliderightover"
+			/>
+			<field
+				name="maximenumobile_useimage"
+				type="ckradio"
+				default="0"
+				label="MOD_MAXIMENUCK_MOBILEUSEIMAGE_LABEL"
+				description="MOD_MAXIMENUCK_MOBILEUSEIMAGE_DESC"
+				class="btn-group"
+				icon="application_view_gallery.png"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="maximenumobile_usemodule"
+				type="ckradio"
+				default="0"
+				label="MOD_MAXIMENUCK_MOBILEUSEMODULE_LABEL"
+				description="MOD_MAXIMENUCK_MOBILEUSEMODULE_DESC"
+				class="btn-group"
+				icon="application_form.png"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="maximenumobile_showdesc"
+				type="ckradio"
+				default="0"
+				label="MOD_MAXIMENUCK_SHOWDESC_LABEL"
+				description="MOD_MAXIMENUCK_SHOWDESC_DESC"
+				class="btn-group"
+				icon="application_view_list.png"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="maximenumobile_showlogo"
+				type="cklist"
+				default="1"
+				label="MOD_MAXIMENUCK_SHOWLOGO_LABEL"
+				description="MOD_MAXIMENUCK_SHOWLOGO_DESC"
+				icon="image.png"
+			>
+				<option value="0">JNO</option>
+				<option value="1">MOD_MAXIMENUCK_SHOWLOGO_MOBILE</option>
+				<option value="2">MOD_MAXIMENUCK_SHOWLOGO_MENUBAR</option>
+				<option value="3">MOD_MAXIMENUCK_SHOWLOGO_TOPBAR</option>
+			</field>
+			<field
+				name="maximenumobile_showmobilemenutext"
+				type="cklist"
+				default="normal"
+				label="MOD_MAXIMENUCK_SHOWMOBILEMENUTEXT_LABEL"
+				description="MOD_MAXIMENUCK_SHOWMOBILEMENUTEXT_DESC"
+				icon="font.png"
+			>
+				<option value="default">MOD_MAXIMENUCK_DEFAULTTEXT</option>
+				<option value="custom">MOD_MAXIMENUCK_CUSTOMTEXT</option>
+				<option value="none">MOD_MAXIMENUCK_NONE</option>
+			</field>
+			<field
+				name="maximenumobile_mobilemenutext"
+				type="cktext"
+				default=""
+				label="MOD_MAXIMENUCK_MOBILEMENUTEXT_LABEL"
+				description="MOD_MAXIMENUCK_MOBILEMENUTEXT_DESC"
+				icon="text_signature.png" />
+		</fieldset>
+	</fields>
+</form>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="2.0" type="language" core="0" method="upgrade">
+    <name>Russian</name>
+    <tag>ru-RU</tag>
+    <version>2.4.6</version>
+    <creationDate>2015-05-13</creationDate>
+    <author>Oleg Snakenest, Sergey MusStudent Tolkachyov, Oleg M.</author>
+    <authorEmail>info@joomlacontenteditor.net</authorEmail>
+    <authorUrl>https://www.transifex.com/projects/p/jce/language/ru_RU/</authorUrl>
+    <copyright>©  (C) 2006-2013  Russian Community of JCE. Все права защищены</copyright>
+    <license>GNU/GPL Version 2 - http://www.gnu.org/licenses/gpl-2.0.html</license>
+    <description>Русский языковой пакет для JCE 2.x</description>
+    <site folder="language/ru-RU">
+		<file>ru-RU.com_jce_caption.ini</file>
+		<file>ru-RU.com_jce_emotions.ini</file>
+		<file>ru-RU.com_jce_filemanager.ini</file>
+		<file>ru-RU.com_jce_iframe.ini</file>
+		<file>ru-RU.com_jce_imgmanager_ext.ini</file>
+		<file>ru-RU.com_jce.ini</file>
+		<file>ru-RU.com_jce_mediamanager.ini</file>
+		<file>ru-RU.com_jce_microdata.ini</file>
+		<file>ru-RU.com_jce_templatemanager.ini</file>
+    </site>
+    <administration folder="administrator/language/ru-RU">
+		<file>ru-RU.com_jce.ini</file>
+		<file>ru-RU.com_jce.menu.ini</file>
+		<file>ru-RU.com_jce.sys.ini</file>
+		<file>ru-RU.plg_editors_jce.ini</file>
+		<file>ru-RU.plg_editors_jce.sys.ini</file>
+		<file>ru-RU.plg_quickicon_jcefilebrowser.ini</file>
+		<file>ru-RU.plg_quickicon_jcefilebrowser.sys.ini</file>
+		<file>ru-RU.plg_system_jcemediabox.ini</file>
+		<file>ru-RU.plg_system_jcemediabox.sys.ini</file>
+    </administration>
+</install>

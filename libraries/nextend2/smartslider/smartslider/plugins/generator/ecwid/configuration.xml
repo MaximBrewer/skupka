@@ -1,0 +1,6 @@
+<root>
+    <params name="basic" label="Ecwid generator">
+        <param name="storeID" type="text" label="Store ID" default="" style="width:150px;"/>        
+        <param type="token" />
+    </params>
+</root>

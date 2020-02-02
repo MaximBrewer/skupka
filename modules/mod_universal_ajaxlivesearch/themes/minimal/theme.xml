@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+  <params>
+    <param name="themeskin" type="skin" default="" size="5" label="Theme skin" description="">
+      <default>
+        <searchboxfont>*Latin|*Arial, Helvetica|*PT Sans|*13px|*1|*0|*727272|*1|*1px|*1px|*0px|*ffffff|*none|*none|*27px|*left</searchboxfont>
+        <categoryopenercolor>727272</categoryopenercolor>
+        <ajaxloaderimage>fadinglines.gif</ajaxloaderimage>
+        <closeimage>x4.png</closeimage>
+        <closeimagecolor>727272</closeimagecolor>
+        <searchbuttonimage>magnifier_strong_mid.png</searchbuttonimage>
+        <borderboxcolor>bfbfbf</borderboxcolor>
+        <highlightboxcolor>d2d2d2</highlightboxcolor>
+        <catchooserfont>*Latin|*Arial, Helvetica|*Viga|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</catchooserfont>
+
+        <controlbggradient>1-FFFFFF-F7F7F7</controlbggradient>
+        <controlpanelradius>5</controlpanelradius>
+        <controlpanelpadding>10</controlpanelpadding>
+        <controlinnerbg>DDDDDD</controlinnerbg>
+        <controlpinnerradius>3</controlpinnerradius>
+        <controlbuttonbg>F5F5F5</controlbuttonbg>
+        <controlbuttonhoverbg>FFFFFF</controlbuttonhoverbg>
+        <controlbuttonpushedbg>1-e3e3e3-cfcfcf</controlbuttonpushedbg>
+        <controlpbuttonradius>4</controlpbuttonradius>
+        <controlpanelfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*5a5959|*0|*0px|*0px|*0px|*ffffffff|*none|*none|*26px|*inherit</controlpanelfont>
+        <controlbpushedfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*5a5959|*0|*0px|*0px|*0px|*ffffffff|*none|*none|*26px|*inherit</controlbpushedfont>
+        <controlbpusheddropshadow>0 1px 2px rgba(255,255,255, 0.95)</controlbpusheddropshadow>
+        <controlbpushedinnershadow>0 1px 2px rgba(0, 0, 0, 0.5)</controlbpushedinnershadow>
+
+        <resultsperpage>4</resultsperpage>
+        <cardbggradient>1-FFFFFF-F7F7F7</cardbggradient>
+        <resultspadding>10</resultspadding>
+        <imagew>180</imagew>
+        <imageh>130</imageh>
+        <noimage>noimage.png</noimage>
+        <resultsimageshadow>10</resultsimageshadow>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Quicksand|*18px|*0|*0|*2f2f2f|*1|*1px|*1px|*1px|*ffffffff|*none|*none|*22px|*inherit</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*6b6b6b|*1|*1px|*1px|*1px|*ffffffff|*none|*none|*16px|*inherit</resultintrotextfont>
+        <resultintrominheight>80</resultintrominheight>
+      </default>
+
+      <rose>
+        <controlinnerbg>D76464</controlinnerbg>
+        <controlbuttonbg>e5d3d3</controlbuttonbg>
+        <controlpanelfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*643333|*1|*0px|*1px|*1px|*ffffffdd|*none|*none|*26px|*inherit</controlpanelfont>
+        <controlbuttonpushedbg>1-e98a8a-D76464</controlbuttonpushedbg>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Quicksand|*18px|*0|*0|*b27676|*1|*1px|*1px|*1px|*ffffffff|*none|*none|*22px|*inherit</resulttitlefont>
+        <controlbpushedfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*ffffff|*1|*1px|*1px|*0px|*00000038|*none|*none|*26px|*inherit</controlbpushedfont>
+        <controlbpusheddropshadow>0 0 2px rgba(255, 255, 255, 0.6)</controlbpusheddropshadow>
+        <controlbpushedinnershadow>0 0 2px 1px rgba(0, 0, 0, 0.5)</controlbpushedinnershadow>
+      </rose>
+
+      <orange>
+        <controlinnerbg>d7a864</controlinnerbg>
+        <controlbuttonbg>e5ded3</controlbuttonbg>
+        <controlpanelfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*645033|*1|*0px|*1px|*1px|*ffffffdd|*none|*none|*26px|*inherit</controlpanelfont>
+        <controlbuttonpushedbg>1-e8bb79-d7a864</controlbuttonpushedbg>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Quicksand|*18px|*0|*0|*b8925b|*1|*1px|*1px|*1px|*ffffffff|*none|*none|*22px|*inherit</resulttitlefont>
+        <controlbpushedfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*ffffff|*1|*1px|*1px|*0px|*00000038|*none|*none|*26px|*inherit</controlbpushedfont>
+        <controlbpusheddropshadow>0 0 2px rgba(255, 255, 255, 0.6)</controlbpusheddropshadow>
+        <controlbpushedinnershadow>0 0 2px 1px rgba(0, 0, 0, 0.5)</controlbpushedinnershadow>
+      </orange>
+
+      <yellow>
+        <controlinnerbg>d6d764</controlinnerbg>
+        <controlbuttonbg>e5e5d3</controlbuttonbg>
+        <controlpanelfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*646433|*1|*0px|*1px|*1px|*ffffffdd|*none|*none|*26px|*inherit</controlpanelfont>
+        <controlbuttonpushedbg>1-e6e779-d6d764</controlbuttonpushedbg>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Quicksand|*18px|*0|*0|*b6b75b|*1|*1px|*1px|*1px|*ffffffff|*none|*none|*22px|*inherit</resulttitlefont>
+        <controlbpushedfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*ffffff|*1|*1px|*1px|*0px|*00000038|*none|*none|*26px|*inherit</controlbpushedfont>
+        <controlbpusheddropshadow>0 0 2px rgba(255, 255, 255, 0.6)</controlbpusheddropshadow>
+        <controlbpushedinnershadow>0 0 2px 1px rgba(0, 0, 0, 0.5)</controlbpushedinnershadow>
+      </yellow>
+
+      <green>
+        <controlinnerbg>9ccd65</controlinnerbg>
+        <controlbuttonbg>dde5d3</controlbuttonbg>
+        <controlpanelfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*4d6434|*1|*0px|*1px|*1px|*ffffffdd|*none|*none|*26px|*inherit</controlpanelfont>
+        <controlbuttonpushedbg>1-b6d77b-9ccd65</controlbuttonpushedbg>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Quicksand|*18px|*0|*0|*8bb65b|*1|*1px|*1px|*1px|*ffffffff|*none|*none|*22px|*inherit</resulttitlefont>
+        <controlbpushedfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*ffffff|*1|*1px|*1px|*0px|*00000038|*none|*none|*26px|*inherit</controlbpushedfont>
+        <controlbpusheddropshadow>0 0 2px rgba(255, 255, 255, 0.6)</controlbpusheddropshadow>
+        <controlbpushedinnershadow>0 0 2px 1px rgba(0, 0, 0, 0.5)</controlbpushedinnershadow>
+      </green>
+
+      <blue>
+        <controlinnerbg>65aecd</controlinnerbg>
+        <controlbuttonbg>d3e0e5</controlbuttonbg>
+        <controlpanelfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*345664|*1|*0px|*1px|*1px|*ffffffdd|*none|*none|*26px|*inherit</controlpanelfont>
+        <controlbuttonpushedbg>1-88c5df-65aecd</controlbuttonpushedbg>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Quicksand|*18px|*0|*0|*5390aa|*1|*1px|*1px|*1px|*ffffffff|*none|*none|*22px|*inherit</resulttitlefont>
+        <controlbpushedfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*ffffff|*1|*1px|*1px|*0px|*00000038|*none|*none|*26px|*inherit</controlbpushedfont>
+        <controlbpusheddropshadow>0 0 2px rgba(255, 255, 255, 0.6)</controlbpusheddropshadow>
+        <controlbpushedinnershadow>0 0 2px 1px rgba(0, 0, 0, 0.5)</controlbpushedinnershadow>
+      </blue>
+
+      <darkblue>
+        <controlinnerbg>697bbc</controlinnerbg>
+        <controlbuttonbg>d3d7e5</controlbuttonbg>
+        <controlpanelfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*343e64|*1|*0px|*1px|*1px|*ffffffdd|*none|*none|*26px|*inherit</controlpanelfont>
+        <controlbuttonpushedbg>1-92a0d1-697bbc</controlbuttonpushedbg>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Quicksand|*18px|*0|*0|*5163a4|*1|*1px|*1px|*1px|*ffffffff|*none|*none|*22px|*inherit</resulttitlefont>
+        <controlbpushedfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*ffffff|*1|*1px|*1px|*0px|*00000038|*none|*none|*26px|*inherit</controlbpushedfont>
+        <controlbpusheddropshadow>0 0 2px rgba(255, 255, 255, 0.45)</controlbpusheddropshadow>
+        <controlbpushedinnershadow>0 0 2px 1px rgba(0, 0, 0, 0.5)</controlbpushedinnershadow>
+      </darkblue>
+
+      <purple>
+        <controlinnerbg>9669ad</controlinnerbg>
+        <controlbuttonbg>e0d4e6</controlbuttonbg>
+        <controlpanelfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*553465|*1|*0px|*1px|*1px|*ffffffdd|*none|*none|*26px|*inherit</controlpanelfont>
+        <controlbuttonpushedbg>1-b992c3-9669ad</controlbuttonpushedbg>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Quicksand|*18px|*0|*0|*8551a0|*1|*1px|*1px|*1px|*ffffffff|*none|*none|*22px|*inherit</resulttitlefont>
+        <controlbpushedfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*ffffff|*1|*1px|*1px|*0px|*00000038|*none|*none|*26px|*inherit</controlbpushedfont>
+        <controlbpusheddropshadow>0 0 2px rgba(255, 255, 255, 0.45)</controlbpusheddropshadow>
+        <controlbpushedinnershadow>0 0 2px 1px rgba(0, 0, 0, 0.5)</controlbpushedinnershadow>
+      </purple>
+
+      <magenta>
+        <controlinnerbg>ad6987</controlinnerbg>
+        <controlbuttonbg>e5d3db</controlbuttonbg>
+        <controlpanelfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*643449|*1|*0px|*1px|*1px|*ffffffdd|*none|*none|*26px|*inherit</controlpanelfont>
+        <controlbuttonpushedbg>1-c291a7-ad6987</controlbuttonpushedbg>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Quicksand|*18px|*0|*0|*9f5173|*1|*1px|*1px|*1px|*ffffffff|*none|*none|*22px|*inherit</resulttitlefont>
+        <controlbpushedfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*ffffff|*1|*1px|*1px|*0px|*00000038|*none|*none|*26px|*inherit</controlbpushedfont>
+        <controlbpusheddropshadow>0 0 2px rgba(255, 255, 255, 0.45)</controlbpusheddropshadow>
+        <controlbpushedinnershadow>0 0 2px 1px rgba(0, 0, 0, 0.5)</controlbpushedinnershadow>
+      </magenta>
+
+      <darkgray>
+        <controlinnerbg>666666</controlinnerbg>
+        <controlbuttonbg>e9e9e9</controlbuttonbg>
+        <controlpanelfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*2f2f2f|*1|*0px|*1px|*1px|*ffffffdd|*none|*none|*26px|*inherit</controlpanelfont>
+        <controlbuttonpushedbg>1-818181-666666</controlbuttonpushedbg>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Quicksand|*18px|*0|*0|*2f2f2f|*1|*1px|*1px|*1px|*ffffffff|*none|*none|*22px|*inherit</resulttitlefont>
+        <controlbpushedfont>*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*ffffff|*1|*1px|*1px|*0px|*00000038|*none|*none|*26px|*inherit</controlbpushedfont>
+        <controlbpusheddropshadow>0 0 2px rgba(255, 255, 255, 0.45)</controlbpusheddropshadow>
+        <controlbpushedinnershadow>0 0 2px 1px rgba(0, 0, 0, 0.5)</controlbpushedinnershadow>
+      </darkgray>
+
+
+    </param>
+
+    <param name="fontskin" type="skin" default="" size="5" label="Font style" description="">
+      <arial>
+        <searchboxfont>*Latin|*Arial|*Aria|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</searchboxfont>
+        <plugintitlefont>*Latin|*Arial|*Aria|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</plugintitlefont>
+        <seemorefont>*Latin|*Arial|*Aria|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</seemorefont>
+        <seemorefonthover>*Latin|*Arial|*Aria|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</seemorefonthover>
+        <resulttitlefont>*Latin|*Arial|*Aria|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*Aria|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resultintrotextfont>
+      </arial>
+      <arimo>
+        <searchboxfont>*Latin|*Arial|*Arimo|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</searchboxfont>
+        <plugintitlefont>*Latin|*Arial|*Arimo|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</plugintitlefont>
+        <seemorefont>*Latin|*Arial|*Arimo|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</seemorefont>
+        <seemorefonthover>*Latin|*Arial|*Arimo|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</seemorefonthover>
+        <resulttitlefont>*Latin|*Arial|*Arimo|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*Arimo|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resultintrotextfont>
+      </arimo>
+      <cabin>
+        <searchboxfont>*Latin|*Arial|*Cabin|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</searchboxfont>
+        <plugintitlefont>*Latin|*Arial|*Cabin|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</plugintitlefont>
+        <seemorefont>*Latin|*Arial|*Cabin|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</seemorefont>
+        <seemorefonthover>*Latin|*Arial|*Cabin|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</seemorefonthover>
+        <resulttitlefont>*Latin|*Arial|*Cabin|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*Cabin|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resultintrotextfont>
+      </cabin>
+      <magra>
+        <searchboxfont>*Latin|*Arial|*Magra|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</searchboxfont>
+        <plugintitlefont>*Latin|*Arial|*Magra|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</plugintitlefont>
+        <seemorefont>*Latin|*Arial|*Magra|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</seemorefont>
+        <seemorefonthover>*Latin|*Arial|*Magra|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</seemorefonthover>
+        <resulttitlefont>*Latin|*Arial|*Magra|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*Magra|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resultintrotextfont>
+      </magra>
+      <opensans>
+        <searchboxfont>*Latin|*Arial|*Open Sans|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</searchboxfont>
+        <plugintitlefont>*Latin|*Arial|*Open Sans|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</plugintitlefont>
+        <seemorefont>*Latin|*Arial|*Open Sans|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</seemorefont>
+        <seemorefonthover>*Latin|*Arial|*Open Sans|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</seemorefonthover>
+        <resulttitlefont>*Latin|*Arial|*Open Sans|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*Open Sans|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resultintrotextfont>
+      </opensans>
+      <ptsans>
+        <searchboxfont>*Latin|*Arial|*PT Sans|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</searchboxfont>
+        <plugintitlefont>*Latin|*Arial|*PT Sans|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</plugintitlefont>
+        <seemorefont>*Latin|*Arial|*PT Sans|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</seemorefont>
+        <seemorefonthover>*Latin|*Arial|*PT Sans|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</seemorefonthover>
+        <resulttitlefont>*Latin|*Arial|*PT Sans|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*PT Sans|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resultintrotextfont>
+      </ptsans>
+    </param>
+
+	<param name="@spacer" type="spacer" default="Search box settings" label="" description="" />
+    <param name="searchboxfont" type="font" default="*Latin|*Arial, Helvetica|*PT Sans|*13px|*1|*0|*727272|*1|*1px|*1px|*0px|*ffffff|*none|*none|*27px|*left" label="Search box font" description="" />
+    <param name="categoryopenercolor" type="color" default="000000" size="7" label="Category chooser opener color" description="" />
+    <param name="ajaxloaderimage" type="imageradio" default="fadinglines.gif" label="Searchbox animation for loading" description="" directory="/images/loaders" exclude="" stripext="" />
+    <param name="closeimage" type="imageradio" default="close_rounded.png" label="Searchbox image for close button" description="" directory="/images/close" exclude="" stripext="" />
+    <param name="closeimagecolor" type="color" default="000000" size="7" label="Searchbox close image color" description="" />
+    <param name="searchbuttonimage" type="imageradio" default="magnifier_strong_mid.png" label="Image for search button" description="" directory="/images/search_button" exclude="" stripext="" />
+    <param name="borderboxcolor" type="color" default="bfbfbf" size="15" label="The color of textbox border" description="" />
+    <param name="highlightboxcolor" type="color" default="F2F2F2" size="15" label="The color of textbox border when it is active" description="" />
+    <param name="catchooserfont" type="font" default="*Latin|*Arial, Helvetica|*Viga|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left" label="Category chooser font" description="" />
+
+    <param name="@spacer" type="spacer" default="Control panel settings" label="" description="" />
+    <param name="controlbggradient" type="gradient" default="1-FFFFFF-F7F7F7" size="15" label="Control panel background gradient color" description="" />
+    <param name="controlpanelradius" type="text" default="5" size="15" label="Control panel border radius (px)" description="" />
+    <param name="controlpanelpadding" type="text" default="10" size="15" label="Control panel frame width (padding) (px)" description="" />
+    <param name="controlinnerbg" type="color" default="DDDDDD" size="15" label="Control panel inner background" description="" />
+    <param name="controlpinnerradius" type="text" default="3" size="15" label="Control panel inner border radius (px)" description="" />
+    <param name="controlbuttonbg" type="color" default="F5F5F5" size="15" label="Control panel button background" description="" />
+    <param name="controlbuttonhoverbg" type="color" default="FFFFFF" size="15" label="Control panel button hover background" description="" />
+    <param name="controlbuttonpushedbg" type="gradient" default="1-e3e3e3-cfcfcf" size="15" label="Control panel button pushed background" description="" />
+    <param name="controlpbuttonradius" type="text" default="4" size="15" label="Control panel button border radius (px)" description="" />
+    <param name="controlpanelfont" type="font" default="*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*5a5959|*0|*0px|*0px|*0px|*ffffffff|*none|*none|*26px|*inherit" label="Control Panel font" description="" />
+    <param name="controlbpushedfont" type="font" default="*Latin|*Arial, Helvetica|*Lato|*13px|*0|*0|*ffffff|*0|*1px|*1px|*0px|*ffffff38|*none|*none|*26px|*inherit" label="Control Panel pushed button font" description="" />
+    <param name="controlbpusheddropshadow" type="text" default="0 1px 2px rgba(255,255,255, 0.95)" label="Control Panel pushed button drop shadow" description="" />
+    <param name="controlbpushedinnershadow" type="text" default="0 1px 2px rgba(0, 0, 0, 0.5)" label="Control Panel pushed button inner shadow" description="" />
+
+		<param name="@spacer" type="spacer" default="Result cards settings" label="" description="" />
+    <param name="resultsperpage" type="text" default="4" size="15" label="Result elements per page" description="" />
+    <param name="cardbggradient" type="gradient" default="1-FFFFFF-F7F7F7" size="15" label="Result background gradient color" description="" />
+    <param name="resultspadding" type="text" default="10" size="15" label="Result element frame width (padding) (px)" description="" />
+    <param name="imagew" type="text" default="180" label="Result image width (px)" description="Result image width (default 60px)"/>
+    <param name="imageh" type="text" default="130" label="Result image height (px)" description="Result image height (default 60px)"/>
+    <param name="imagetype" type="list" default="0" label="Result image resize type" description="">
+      <option value="1">Contain</option>
+      <option value="0">Cover</option>
+    </param>
+    <param name="noimage" type="imageradio" default="noimage.png" label="Default no image" description="You can copy more image to the directory modules/mod_universal_ajaxlivesearch/images/" directory="../../images" exclude="" stripext="" />
+    <param name="resultsimageshadow" type="text" default="10" size="5" label="Result image shadow size (px)" description="" />
+
+    <param name="flip" type="radio" default="0" label="Flip card after onclick" description="Flip card after onclick">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+
+    <param name="resulttitlefont" type="font" default="*Latin|*Arial, Helvetica|*Quicksand|*18px|*0|*0|*2f2f2f|*1|*1px|*1px|*1px|*ffffffff|*none|*none|*22px|*inherit" label="Result title font" description="" />
+    <param name="resultintrotextfont" type="font" default="*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*6b6b6b|*1|*1px|*1px|*1px|*ffffffff|*none|*none|*16px|*inherit" label="Result introtext font" description="" />
+    <param name="intro" type="radio" default="1" label="Show intro-text" description="Show intro-text to the results.">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="introlength" type="text" default="150" label="Intro-text length" description="The length of intro-text in characters."/>
+    <param name="resultintrominheight" type="text" default="80" size="15" label="Result intro text min height (px)" description="" />
+    <param name="showprice" type="radio" default="1" label="Show price if available" description="Show price if available">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="pricedisttop" type="text" default="17" label="Price distance top (px)" description="The price distance from top in pixels."/>
+    <param name="pricedistright" type="text" default="-5" label="Price distance right (px)" description="The price distance from right in pixels."/>
+    <param name="pricefont" type="font" default="*Latin|*Arial, Helvetica|*Open Sans|*14px|*0|*0|*ffffff|*0|*0px|*1px|*2px|*00000099|*none|*none|*26px|*inherit" label="Price font" description="" />
+    <param name="pricebg" type="color" default="e43131" size="15" label="Price tag background" description="" />
+    
+  </params>
+</theme>

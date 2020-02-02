@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>plg_content_sl_advpoll</name>
+	<author>Pham Minh Tuan</author>
+	<creationDate>August 2012</creationDate>
+	<copyright>Copyright (c) 2013 Skyline. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail> (admin@extstore.com)</authorEmail>
+	<authorUrl>http://extstore.com</authorUrl>
+	<version>2.7.0</version>
+	<description>
+	<![CDATA[
+		Displays poll in content.<br /><br />Developed by Skyline Software (<a target="_blank" href="http://extstore.com">http://extstore.com</a>).
+	]]>
+	</description>
+	<files>
+		<filename plugin="sl_advpoll">sl_advpoll.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_sl_advpoll.ini</language>
+		<language tag="en-GB">en-GB.plg_content_sl_advpoll.sys.ini</language>
+	</languages>
+</extension>

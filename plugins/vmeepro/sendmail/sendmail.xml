@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6.0" type="plugin" group="vmeepro" method="upgrade">
+	<name>Send mail for VM Emails Pro</name>
+	<author>InteraMind</author>
+	<creationDate>Mar 2012</creationDate>
+	<copyright>(C) 2011 InteraMind Advanced Analytics, http://www.interamind.com</copyright>
+	<license>Commercial</license>
+	<authorEmail>tzvika@interamind.com</authorEmail>
+	<authorUrl>http://www.interamind.com</authorUrl>
+	<version>1.1.0</version>
+	<description>trigger vmee pro rules</description>
+	<files>
+		<filename plugin="sendmail">sendmail.php</filename>
+	</files>
+</extension>

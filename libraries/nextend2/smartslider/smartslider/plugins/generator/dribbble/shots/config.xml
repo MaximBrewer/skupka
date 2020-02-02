@@ -1,0 +1,5 @@
+<root>
+    <params name="filter" label="Filter">
+        <param name="dribbble-user" type="text" label="User name" default="me"/>
+    </params>
+</root>

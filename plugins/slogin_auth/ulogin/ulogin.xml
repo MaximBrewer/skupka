@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" method="upgrade" group="slogin_auth">
+	<name>Social Login Ulogin auth</name>
+	<author>Arkadiy, Joomline</author>
+	<creationDate>28.01.2019</creationDate>
+	<copyright>(C) 2012-2019. All rights reserved.</copyright>
+	<license>GNU/GPL v.3 or later.</license>
+	<authorEmail></authorEmail>
+	<authorUrl>http://joomline.ru</authorUrl>
+	<version>1.2.0</version>
+	<description>Ulogin auth. Instructions for setting up the plugin: http://joomline.ru/stati/53-komponenty/306-sozdanie-prilozhenij-dlja-socialnoj-avtoriziacii.html</description>
+	<files>
+		<folder>assets</folder>
+		<folder>element</folder>
+		<filename plugin="ulogin">ulogin.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>OPC Tracking - iDevDirect.com</name>
+    <creationDate>Oct 2013</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>iDevDirect.com L.L.C. Affiliate script. Please log in to your admin section and enabled Generic Tracking Pixel</description>
+    <files>
+        <filename>iDevAffiliate.php</filename>
+    </files>
+
+<params>
+    
+    
+			<param
+        type="text"
+        name="profile_id"
+        id="profile_id"
+        label="Your profile ID "
+        description="your profile ID  "
+        size="80"
+		default="0000"
+        maxLength="255" />
+		
+		
+		
+			<param
+        type="text"
+        name="url"
+        id="url"
+        label="Url of the affiliate image pixel"
+        description="set something like //www.site.com/idevaffiliate/sale.php  "
+        size="80"
+		default="//www.site.com/idevaffiliate/sale.php"
+        maxLength="255" />
+		
+		
+		
+			
+		
+       
+    
+</params>	
+</extension>

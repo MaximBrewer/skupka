@@ -1,0 +1,11 @@
+<root>
+    <params name="rssfeed" label="Filter">
+        <param type="group" label="Source">
+            <param name="rssurl" label="RSS url" type="text"/>
+        </param>
+        <param name="" value="" type="group" label="Configuration">
+            <param name="dateformat" label="Date format" type="text" default="Y-m-d"/>
+            <param name="sourcetranslatedate" default="January->January||February->February||March->March" type="textarea" style2="width:300px;height: 100px;" label="Translate date and time"/>
+        </param>
+    </params>
+</root>

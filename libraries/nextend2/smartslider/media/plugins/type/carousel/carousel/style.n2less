@@ -1,0 +1,112 @@
+@import '@{clear}';
+
+(~'div@{id}') {
+  width: @width;
+  height: @height;
+  float: left;
+
+  .x-rtl & {
+    float: right;
+  }
+
+  .n2-ss-slider-1 {
+    position: relative;
+    height: @inner1height;
+    overflow: hidden;
+    border-style: solid;
+    border-width: @border;
+    border-color: @borderhex;
+    border-color: @borderrgba;
+
+    border-radius: @borderRadius;
+    background-clip: padding-box;
+
+    background-repeat: repeat;
+    background-position: 50% 50%;
+    background-size: @backgroundSize;
+    background-attachment: @backgroundAttachment;
+    background-color: @backgroundhex;
+    background-color: @backgroundrgba;
+  }
+
+  .n2-ss-slider-2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .n2-ss-slider-pane {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .n2-ss-slider-pane-single {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .n2-ss-slider-pane-single:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .n2-ss-slider-pipeline {
+    height: 100%;
+    width: 10000%;
+    float: left;
+    position: relative !important;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .x-msie & .n2-ss-slider-pipeline {
+    perspective: @perspective;
+    backface-visibility: visible;
+    transform-origin: 50% 50% 0px;
+  }
+
+  .n2-ss-slide-group {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .n2-ss-slide {
+    position: relative;
+    width: @canvaswidth;
+    height: @canvasheight;
+    float: left;
+    display: block;
+
+    border-radius: @slideBorderRadius;
+    background-clip: padding-box;
+
+    background-color: @slideBackgroundhex;
+    background-color: @slideBackgroundrgba;
+    z-index: 1;
+  }
+
+  .n2-ss-layers-container {
+    position: relative;
+    width: @canvaswidth;
+    height: @canvasheight;
+  }
+
+  .n2-ss-slide-active {
+    z-index: 3;
+    display: block;
+  }
+
+  .n2-ss-layer {
+    -webkit-backface-visibility: hidden;
+  }
+
+}

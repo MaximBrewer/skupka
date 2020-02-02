@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>plg_system_openinghours</name>
+	<author>Joomla! Project</author>
+	<creationDate>February 2007</creationDate>
+	<copyright>Copyright (C) 2005 - 2015 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+	<description>Opening hours</description>
+	<files>
+		<filename plugin="openinghours">openinghours.php</filename>
+	</files>
+	<config>
+	<fields name="params">
+		<fieldset name="basic">
+				<field
+					name="o1"
+					type="text"
+					default="8:00"
+					label="Pondelok Otvorene od:"
+					description="" />
+
+				<field
+					name="z1"
+					type="text"
+					default="16:00"
+					label="Pondelok zatvorene od:"
+					description="" />
+
+				<field
+					name="do1"
+					type="text"
+					default="8:00"
+					label="Pondelok Donaska od:"
+					description="" />
+					
+				<field
+					name="dz1"
+					type="text"
+					default="16:00"
+					label="Pondelok Donaska do:"
+					description="" />
+
+					
+				<field
+					name="o2"
+					type="text"
+					default="8:00"
+					label="Utorok Otvorene od:"
+					description="" />
+
+				<field
+					name="z2"
+					type="text"
+					default="16:00"
+					label="Utorok zatvorene od:"
+					description="" />
+
+				<field
+					name="do2"
+					type="text"
+					default="8:00"
+					label="Utorok Donaska od:"
+					description="" />
+					
+				<field
+					name="dz2"
+					type="text"
+					default="16:00"
+					label="Utorok Donaska do:"
+					description="" />
+				
+				
+				
+				<field
+					name="o3"
+					type="text"
+					default="8:00"
+					label="Streda Otvorene od:"
+					description="" />
+
+				<field
+					name="z3"
+					type="text"
+					default="16:00"
+					label="Streda zatvorene od:"
+					description="" />
+
+				<field
+					name="do3"
+					type="text"
+					default="8:00"
+					label="Streda Donaska od:"
+					description="" />
+					
+				<field
+					name="dz3"
+					type="text"
+					default="16:00"
+					label="Streda Donaska do:"
+					description="" />
+				
+				
+				
+				<field
+					name="o4"
+					type="text"
+					default="8:00"
+					label="Stvrtok Otvorene od:"
+					description="" />
+
+				<field
+					name="z4"
+					type="text"
+					default="16:00"
+					label="Stvrtok zatvorene od:"
+					description="" />
+
+				<field
+					name="do4"
+					type="text"
+					default="8:00"
+					label="Stvrtok Donaska od:"
+					description="" />
+					
+				<field
+					name="dz4"
+					type="text"
+					default="16:00"
+					label="Stvrtok Donaska do:"
+					description="" />
+					
+					
+					
+				<field
+					name="o5"
+					type="text"
+					default="8:00"
+					label="Piatok Otvorene od:"
+					description="" />
+
+				<field
+					name="z5"
+					type="text"
+					default="16:00"
+					label="Piatok zatvorene od:"
+					description="" />
+
+				<field
+					name="do5"
+					type="text"
+					default="8:00"
+					label="Piatok Donaska od:"
+					description="" />
+					
+				<field
+					name="dz5"
+					type="text"
+					default="16:00"
+					label="Piatok Donaska do:"
+					description="" />
+				
+				
+				
+				<field
+					name="o6"
+					type="text"
+					default="8:00"
+					label="Sobota Otvorene od:"
+					description="" />
+
+				<field
+					name="z6"
+					type="text"
+					default="16:00"
+					label="Sobota zatvorene od:"
+					description="" />
+
+				<field
+					name="do6"
+					type="text"
+					default="8:00"
+					label="Sobota Donaska od:"
+					description="" />
+					
+				<field
+					name="dz6"
+					type="text"
+					default="16:00"
+					label="Sobota Donaska do:"
+					description="" />
+				
+				
+				
+				
+				
+				<field
+					name="o0"
+					type="text"
+					default="8:00"
+					label="Nedela Otvorene od:"
+					description="" />
+
+				<field
+					name="z0"
+					type="text"
+					default="16:00"
+					label="Nedela zatvorene od:"
+					description="" />
+
+				<field
+					name="do0"
+					type="text"
+					default="8:00"
+					label="Nedela Donaska od:"
+					description="" />
+					
+				<field
+					name="dz0"
+					type="text"
+					default="16:00"
+					label="Nedela Donaska do:"
+					description="" />
+				
+				
+				
+				<field
+					name="text_otvorene"
+					type="text"
+					default="Otvorené"
+					label="Text pre Otvrené:"
+					description="" />
+			
+			
+			
+				<field
+					name="text_zatvorene"
+					type="text"
+					default="Zatvorené"
+					label="Text pre Zatvorené:"
+					description="" />
+		</fieldset>
+	</fields>
+	</config>
+</extension>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="quickicon" method="upgrade">
+  <name>plg_quickicon_joomgallery</name>
+  <creationDate>20.02.2013</creationDate>
+  <author>JoomGallery::Project Team</author>
+  <authorEmail>team@joomgallery.net</authorEmail>  
+  <authorUrl>www.joomgallery.net</authorUrl>
+  <copyright>Copyright (C) 2012 - 2013 JoomGallery::Project Team</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>3.0 BETA</version>
+  <description>PLG_QUICKICON_JOOMGALLERY_DESC</description>
+  <files>
+    <filename plugin="joomgallery">joomgallery.php</filename>
+    <filename>index.html</filename>
+  </files>
+  <languages>
+    <language tag="en-GB">language/en-GB/en-GB.plg_quickicon_joomgallery.ini</language>
+    <language tag="en-GB">language/en-GB/en-GB.plg_quickicon_joomgallery.sys.ini</language>
+    <language tag="de-DE">language/de-DE/de-DE.plg_quickicon_joomgallery.ini</language>
+    <language tag="de-DE">language/de-DE/de-DE.plg_quickicon_joomgallery.sys.ini</language>
+  </languages>
+  <scriptfile>script.php</scriptfile>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field 
+          name="cfg_context"
+          type="text"
+          default="mod_quickicon"
+          label="PLG_QUICKICON_JOOMGALLERY_GROUP_LBL"
+          description="PLG_QUICKICON_JOOMGALLERY_GROUP_DESC"
+        />
+      </fieldset>
+    </fields>
+  </config>
+</extension>

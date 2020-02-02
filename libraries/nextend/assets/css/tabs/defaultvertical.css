@@ -1,0 +1,23 @@
+.nextend-form .nextend-tab table.nextend-tab-defaultvertical tr.nextend-label{
+    border-bottom: 0;
+    height: auto;
+}
+
+.nextend-form .nextend-tab table.nextend-tab-defaultvertical tr.nextend-label td{
+    padding: 9px 10px 0px;
+}
+
+.nextend-form .nextend-tab table.nextend-tab-defaultvertical tr.nextend-element{
+    border-top: 0;
+    height: auto;
+}
+
+.nextend-form .nextend-tab table.nextend-tab-defaultvertical tr.nextend-element td{
+    padding: 0 10px 10px;
+}
+
+.nextend-tab-defaultvertical .nextend-label label{
+    color: #7e97b1;
+    font-size: 12px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}

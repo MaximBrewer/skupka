@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5">
+    <name>Compare Products for Virtuemart</name>
+    <creationDate>2014</creationDate>
+    <author>Cmsmart Team</author>
+    <authorUrl>http://cmsmart.net</authorUrl>
+    <copyright>Copyright (C) 2012 Cmsmart Team. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>3.0.0</version>
+    <description>Compare Products for Virtuemart</description>
+    <files>
+        <filename module="mod_vm_nb_compare">mod_vm_nb_compare.php</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+        <folder>language</folder>
+    </files>
+    <config>
+        <fields name="params">
+        <!--Basic-->
+            <fieldset name="basic">
+                
+                 <field name="link" type="text"  label="Ссылка на материал" description="Ссылка на материал"></field>
+                
+
+                <field name="compare_temp" type="list" default="right" label="Выбор шаблона вывода." description="Выбор шаблона вывода.">
+                       <option value="right">Для сравнения</option>
+                        <option value="left">Результат</option>
+                </field>
+
+                <field name="compare_position" type="list" default="right" label="Position" description="Choice position for module.">
+                    <option value="none">None</option>
+					<option value="right">Center Right</option>
+            		<option value="left">Center Left</option>
+				</field>
+
+                <!--Add to cart-->
+             	<field name="addtocart" type="list" default="1" label="Add to cart" description="Show/Hide Add to cart">
+					<option value="1">JSHOW</option>
+            		<option value="0">JHIDE</option>
+				</field>
+                <!--Rating-->
+             	<field name="rating" type="list" default="1" label="Rating" description="Show/Hide rating">
+
+					<option value="1">JSHOW</option>
+            		<option value="0">JHIDE</option>
+				</field>
+                <!--Price-->
+             	<field name="price" type="list" default="1" label="Price" description="Show/Hide Price">
+					<option value="1">JSHOW</option>
+            		<option value="0">JHIDE</option>
+				</field>
+                <!--Description-->
+             	<field name="description" type="list" default="1" label="Description" description="Show/Hide Description">
+					<option value="1">JSHOW</option>
+            		<option value="0">JHIDE</option>
+				</field>
+                <!--Category-->
+             	<field name="category" type="list" default="1" label="Category" description="Show/Hide Category">
+					<option value="1">JSHOW</option>
+            		<option value="0">JHIDE</option>
+				</field>
+                <!--Manufacturer-->
+             	<field name="manufacturer" type="list" default="1" label="Manufacturer" description="Show/Hide Manufacturer">
+					<option value="1">JSHOW</option>
+            		<option value="0">JHIDE</option>
+				</field>
+                <!--Availability-->
+             	<field name="availability" type="list" default="1" label="Availability" description="Show/Hide Availability">
+					<option value="1">JSHOW</option>
+            		<option value="0">JHIDE</option>
+				</field>
+                <!--Product sku-->
+             	<field name="product_sku" type="list" default="1" label="Product sku" description="Show/Hide Product sku">
+					<option value="1">JSHOW</option>
+            		<option value="0">JHIDE</option>
+				</field>
+                <!--Weight-->
+             	<field name="weight" type="list" default="1" label="Weight" description="Show/Hide Weight">
+					<option value="1">JSHOW</option>
+            		<option value="0">JHIDE</option>
+				</field>
+                <!--Length-->
+             	<field name="length" type="list" default="1" label="Length" description="Show/Hide Length">
+					<option value="1">JSHOW</option>
+            		<option value="0">JHIDE</option>
+				</field>
+                <!--Customfield-->
+             	<!--
+                 <field name="custom" type="text" default="" label="Customfield title" description="Customfield title"/>
+                -->
+                <!--
+                <field name="custom" type="list" default="1" label="Customfield" description="Show/Hide Custom">
+					<option value="1">JYES</option>
+            		<option value="0">JNO</option>
+				</field>
+                -->
+                <!--jQuery-->
+             	<field name="jquery" type="list" default="1" label="Load jQuery" description="Load jQuery">
+					<option value="1">JYES</option>
+            		<option value="0">JNO</option>
+				</field>
+                <!--Css-->
+             	<field name="css" type="list" default="1" label="Load Css" description="Load Css">
+					<option value="1">JYES</option>
+            		<option value="0">JNO</option>
+				</field>
+          </fieldset>
+          <!--Content-->
+        </fields>
+    </config>
+</extension>

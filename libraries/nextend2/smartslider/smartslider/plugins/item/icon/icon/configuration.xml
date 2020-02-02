@@ -1,0 +1,29 @@
+<root>
+  <params name="icon-item" label="Icon item settings" hidetitle="1">
+    <param type="group">
+      <param name="icon" type="iconmanager" label="Icon" default=""/>
+      <param name="color" type="color" label="Color" default="00000080" alpha="1"/>
+      <param name="color-hover" type="color" label="Hover color" default="00000000" alpha="1"/></param>
+    <param name="style" type="style" previewmode="box" label="Style" class="n2-hidden">
+      <![CDATA[<div class="{styleClassName}" style="width:{nextend.activeLayer.find('.n2-ss-item').width()}px;height:{nextend.activeLayer.find('.n2-ss-item').height()}px;">{nextend.activeLayer.find('img').clone().wrap('<p>').parent().html()}</div>]]>
+    </param>
+    <param name="link" type="mixed" default="#|*|_self">
+      <param type="url" label="Link" style="width:236px;"/>
+      <param type="list" label="Target" translateable="1">
+        <option value="_self">Self</option>
+        <option value="_blank">Blank</option>
+      </param>
+      <param type="list" label="Rel">
+        <option value=""/>
+        <option value="nofollow">nofollow</option>
+        <option value="noreferrer">noreferrer</option>
+        <option value="author">author</option>
+        <option value="external">external</option>
+        <option value="help">help</option>
+      </param>
+    </param>
+    <param name="size" type="mixed" default="100%|*|auto" class="n2-expert">
+      <param type="text" label="Width" style="width:60px;"/>
+      <param type="text" label="Height" style="width:60px;"/></param>
+  </params>
+</root>

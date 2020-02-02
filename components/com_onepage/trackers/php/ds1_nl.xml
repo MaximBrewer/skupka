@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>OPC Tracking - DS1.nl</name>
+    <creationDate>Oct 2013</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>DS1.nl tracking</description>
+    <files>
+        <filename>ds_1.php</filename>
+    </files>
+
+<params>
+    
+    
+			<param
+        type="text"
+        name="iProgramId"
+        id="iProgramId"
+        label="iProgramId"
+        description="Enter your iProgramId"
+        size="80"
+		default=""
+        maxLength="255" />
+		
+			
+		
+		
+			
+		
+       
+    
+</params>	
+</extension>

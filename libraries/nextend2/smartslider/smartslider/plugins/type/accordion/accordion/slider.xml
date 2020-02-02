@@ -1,0 +1,80 @@
+<root>
+  <params name="accordion-type" label="Accordion Type settings">
+    <param type="skin" name="slider-preset" label="Preset" fixed="1">
+      <dark label="Dark">
+        <tab-normal-color>3E3E3E</tab-normal-color>
+        <outer-border>6</outer-border>
+        <outer-border-color>3E3E3Eff</outer-border-color>
+        <inner-border>6</inner-border>
+        <inner-border-color>222222ff</inner-border-color>
+        <title-font>
+          <![CDATA[eyJuYW1lIjoiU3RhdGljIiwiZGF0YSI6W3siZXh0cmEiOiJ0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOyIsImNvbG9yIjoiZmZmZmZmZmYiLCJzaXplIjoiMTR8fHB4IiwidHNoYWRvdyI6IjB8KnwwfCp8MHwqfDAwMDAwMGZmIiwiYWZvbnQiOiJNb250c2VycmF0IiwibGluZWhlaWdodCI6IjEuMyIsImJvbGQiOjAsIml0YWxpYyI6MCwidW5kZXJsaW5lIjowLCJhbGlnbiI6ImxlZnQiLCJsZXR0ZXJzcGFjaW5nIjoibm9ybWFsIiwid29yZHNwYWNpbmciOiJub3JtYWwiLCJ0ZXh0dHJhbnNmb3JtIjoibm9uZSJ9LHsiZXh0cmEiOiIifV19]]>
+        </title-font>
+        <slider-outer-css/>
+        <slider-inner-css>box-shadow: 0 1px 3px 1px RGBA(0, 0, 0, .3) inset;</slider-inner-css>
+        <slider-title-css>box-shadow: 0 0 0 1px RGBA(255, 255, 255, .05) inset, 0 0 2px 1px RGBA(0, 0, 0, .3); </slider-title-css>
+      </dark>
+      <light label="Light">
+        <tab-normal-color>e9e8e0</tab-normal-color>
+        <outer-border>6</outer-border>
+        <outer-border-color>e9e8e0</outer-border-color>
+        <inner-border>6</inner-border>
+        <inner-border-color>d2d0c8ff</inner-border-color>
+        <title-font>
+          <![CDATA[eyJuYW1lIjoiU3RhdGljIiwiZGF0YSI6W3siZXh0cmEiOiJ0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOyIsImNvbG9yIjoiNGQ0ZDRkZmYiLCJzaXplIjoiMTR8fHB4IiwidHNoYWRvdyI6IjB8KnwwfCp8MHwqfDAwMDAwMGZmIiwiYWZvbnQiOiJNb250c2VycmF0IiwibGluZWhlaWdodCI6IjEuMyIsImJvbGQiOjAsIml0YWxpYyI6MCwidW5kZXJsaW5lIjowLCJhbGlnbiI6ImxlZnQiLCJsZXR0ZXJzcGFjaW5nIjoibm9ybWFsIiwid29yZHNwYWNpbmciOiJub3JtYWwiLCJ0ZXh0dHJhbnNmb3JtIjoibm9uZSJ9LHsiZXh0cmEiOiIiLCJjb2xvciI6ImZmZmZmZmZmIn1dfQ==]]>
+        </title-font>
+        <slider-outer-css>box-shadow: 0 0 0 1px #cccccc inset;</slider-outer-css>
+        <slider-inner-css>box-shadow: 0 1px 3px 1px RGBA(0, 0, 0, .2) inset;</slider-inner-css>
+        <slider-title-css>box-shadow: 0 0 2px 1px RGBA(0, 0, 0, .2);</slider-title-css>
+      </light>
+    </param>
+    <param type="radio" name="orientation" default="horizontal" label="Orientation">
+      <option value="horizontal">Horizontal</option>
+      <option value="vertical">Vertical</option>
+    </param>
+    <param type="onoff" name="carousel" label="Carousel" default="1" class="n2-expert" tip="If you turn off this option, you can&apos;t switch to the first slide from the last one."/>
+    <param type="group" label="Border" class="n2-expert">
+      <param name="outer-border" type="numberautocomplete" style="width: 20px;" label="Outer width" default="6" values="0,6">
+        <unit>px</unit>
+      </param>
+      <param name="outer-border-color" type="color" alpha="1" label="Outer color" default="3E3E3Eff"/>
+      <param name="inner-border" type="numberautocomplete" style="width: 20px;" label="Inner width" default="6" values="0,6">
+        <unit>px</unit>
+      </param>
+      <param name="inner-border-color" type="color" alpha="1" label="Inner color" default="222222ff"/>
+      <param type="numberautocomplete" name="border-radius" default="6" label="Border radius" style="width: 15px;" values="0,6">
+        <unit>px</unit>
+      </param>
+    </param>
+    <param type="group" label="Tab background">
+      <param name="tab-normal-color" type="color" alpha="0" label="Normal" default="3E3E3E"/>
+      <param name="tab-active-color" type="color" alpha="0" label="Active" default="87B801"/></param>
+    <param type="group" label="Slide" class="n2-expert">
+      <param type="numberautocomplete" style="width: 20px;" name="slide-margin" default="2" label="Margin" values="0,2">
+        <unit>px</unit>
+      </param>
+    </param>
+    <param type="group" label="Title">
+      <param type="numberautocomplete" style="width: 20px;" name="title-size" default="30" label="Size" values="30">
+        <unit>px</unit>
+      </param>
+      <param type="numberautocomplete" style="width: 20px;" name="title-margin" default="10" label="Margin" class="n2-expert" values="10">
+        <unit>px</unit>
+      </param>
+      <param type="numberautocomplete" name="title-border-radius" default="2" label="Border radius" style="width: 15px;" class="n2-expert" values="0,2">
+        <unit>px</unit>
+      </param>
+      <param name="title-font" type="font" previewmode="accordionslidetitle" default="eyJuYW1lIjoiU3RhdGljIiwiZGF0YSI6W3siZXh0cmEiOiJ0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOyIsImNvbG9yIjoiZmZmZmZmZmYiLCJzaXplIjoiMTR8fHB4IiwidHNoYWRvdyI6IjB8KnwwfCp8MHwqfDAwMDAwMGZmIiwiYWZvbnQiOiJNb250c2VycmF0IiwibGluZWhlaWdodCI6IjEuMyIsImJvbGQiOjAsIml0YWxpYyI6MCwidW5kZXJsaW5lIjowLCJhbGlnbiI6ImxlZnQiLCJsZXR0ZXJzcGFjaW5nIjoibm9ybWFsIiwid29yZHNwYWNpbmciOiJub3JtYWwiLCJ0ZXh0dHJhbnNmb3JtIjoibm9uZSJ9LHsiZXh0cmEiOiIifV19" label="Font"/></param>
+    <param type="group" label="CSS" class="n2-expert">
+      <param type="textarea" name="slider-outer-css" label="Outer" style2="width: 500px;resize: vertical;" default=""/>
+      <param type="textarea" name="slider-inner-css" label="Inner" style2="width: 500px;resize: vertical;" default="box-shadow: 0 1px 3px 1px RGBA(0, 0, 0, .3) inset;"/>
+      <param type="textarea" name="slider-title-css" label="Title" style2="width: 500px;resize: vertical;" default="box-shadow: 0 0 0 1px RGBA(255, 255, 255, .05) inset, 0 0 2px 1px RGBA(0, 0, 0, .3);"/></param>
+  </params>
+  <params name="animation-settings" label="Animation settings">
+    <param type="group" label="Animation">
+      <param type="numberautocomplete" name="animation-duration" default="1000" style="width: 30px;" label="Duration" values="800,1000,1500,2000">
+        <unit>ms</unit>
+      </param>
+      <param type="jqueryeasing" name="animation-easing" default="easeOutQuad" label="Easing" class="n2-expert"/></param>
+  </params>
+</root>

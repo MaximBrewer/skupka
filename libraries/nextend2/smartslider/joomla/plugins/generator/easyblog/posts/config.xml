@@ -1,0 +1,35 @@
+<root>
+    <params name="easyblogitems" label="Filter">
+        <param type="group" label="Source">
+            <param name="easyblogcategories" label="Categories" type="easyblogcategories" default="0" multiple="1"
+                   size="10"/>
+            <param name="easyblogtags" label="Tags" type="easyblogtags" default="0" multiple="1"
+                   size="10"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="easybloguserid" label="User id" type="text" default=""/>
+            <param name="easyblogfrontpage" label="Frontpage" type="filter" default="0"/>
+            <param name="easyblogfeatured" label="Featured" type="filter" default="0"/>
+            <param name="easyblogexclude" label="Exclude id" type="text" default=""/>
+        </param>
+    </params>
+
+    <params name="order" label="Order by">
+        <param name="easyblogorder" type="mixed" label="Order" default="con.created|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="con.title">Title</option>
+                <option value="cattitle">Category title</option>
+                <option value="blogger">Username</option>
+                <option value="con.ordering">Ordering</option>
+                <option value="con.created">Creation time</option>
+                <option value="con.modified">Modification time</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+
+</root>

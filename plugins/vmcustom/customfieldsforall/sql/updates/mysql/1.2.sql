@@ -1,0 +1,1 @@
+ALTER TABLE `#__virtuemart_custom_plg_customsforall_values` ADD `customsforall_value_label` varchar(255) NOT NULL COMMENT 'Used to add also labels (Primarily to colors)';

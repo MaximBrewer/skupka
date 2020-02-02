@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.5" type="plugin" group="system" method="upgrade">
+  <name>Offlajn Joomla 3.0 compatibility</name>
+  <author>Jeno Kovacs</author>
+  <creationDate>Oct 2012</creationDate>
+  <copyright>Copyright (C) 2012 Offlajn.com. All rights reserved.</copyright>
+  <license>GNU General Public License</license>
+  <authorEmail>jeno.kovacs@offlajn.com</authorEmail>
+  <authorUrl>http://offlajn.com</authorUrl>
+  <version>1.0</version>
+  <description></description>
+  <files>
+      <filename plugin="offlajnjoomla3compat">offlajnjoomla3compat.php</filename>
+      <filename>offlajnjoomla3compat.xml</filename>
+      <folder>compat</folder>
+  </files>
+  <params>
+  </params>
+</extension>

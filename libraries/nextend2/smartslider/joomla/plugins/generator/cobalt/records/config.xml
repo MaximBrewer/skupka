@@ -1,0 +1,32 @@
+<root>
+    <params name="cobaltrecords" label="Filter">
+        <param type="group" label="Source">
+            <param name="cobaltrecordssourcetype" label="Type" type="cobalttypes" default=""/>
+            <param name="cobaltrecordssourcecategory" label="Categories" type="cobaltcategories" default="0"
+                   multiple="1" size="10"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="cobaltrecordssourcelanguage" label="Language filter" type="text" default="*"/>
+            <param name="cobaltrecordssourceuserid" label="User id" type="text" default=""/>
+            <param name="cobaltrecordssourcefeatured" label="Featured" type="filter" default="0"/>
+            <param name="cobaltrecordssourcepublished" label="Published" type="filter" default="1"/>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="cobaltrecordsorder" type="mixed" label="Order" default="rec.ctime|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="rec.title">Title</option>
+                <option value="rec.featured">Featured</option>
+                <option value="rec.ordering">Ordering</option>
+                <option value="rec.hits">Hits</option>
+                <option value="rec.ctime">Creation time</option>
+                <option value="rec.mtime">Modification time</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

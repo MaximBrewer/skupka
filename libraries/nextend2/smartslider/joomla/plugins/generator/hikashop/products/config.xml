@@ -1,0 +1,40 @@
+<root>
+    <params name="hikashopproducts" label="Filter">
+        <param type="group" label="Source">
+            <param name="hikashopcategories" label="Categories" type="hikashopcategories" default="0"
+                   multiple="1" size="10"/>
+            <param name="hikashopbrands" label="Brands" type="hikashopbrands"
+                   default="0"
+                   multiple="1" size="10"/>
+            <param name="hikashoptags" label="Tags" type="hikashoptags"
+                   default="0"
+                   multiple="1" size="10"/>
+            <param name="hikashopwarehouses" label="Warehouses" type="hikashopwarehouses"
+                   default="0"
+                   multiple="1" size="10"/>
+        </param>
+        <param type="group" label="Extra options">
+            <param name="hikashopitemid" label="Target menuitem for urls (item ID)" type="menuitems" default="0"/>
+            <param name="hikashopimages" label="Ask down all images" type="onoff" default="0" tip="Ask down all images for the filtered products."/>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="hikashopproductsorder" type="mixed" label="Order" default="p.product_created|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="p.product_id">ID</option>
+                <option value="p.product_name">Title</option>
+                <option value="p.product_hit">Hits</option>
+                <option value="p.product_created">Creation time</option>
+                <option value="p.product_modified">Modification time</option>
+                <option value="p.product_sales">Sales</option>
+                <option value="p.product_average_score">Average score</option>
+                <option value="p.product_total_vote">Total vote</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

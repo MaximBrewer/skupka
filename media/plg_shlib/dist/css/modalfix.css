@@ -1,0 +1,21 @@
+/**
+ * Shlib - programming library
+ *
+ * @author      Yannick Gaultier
+ * @copyright   (c) Yannick Gaultier 2015
+ * @package     shlib
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version     0.3.1.487
+ * @date		2016-03-15
+ */
+/*! Copyright Weeblr llc 2015 - Licence: http://www.gnu.org/copyleft/gpl.html GNU/GPL */
+/*
+Hack to prevent scrollbar appearing in popup. Seems to happen because
+of height: 100% on body tag of url loaded in popup.
+*/
+/*
+body {
+	height: 90% !important;
+	padding: 0 !important;
+}
+*/

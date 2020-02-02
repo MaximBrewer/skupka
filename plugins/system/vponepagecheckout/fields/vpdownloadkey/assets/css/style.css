@@ -1,0 +1,347 @@
+/*--------------------------------------------------------------------------------------------------------
+# VP One Page Checkout - Joomla! System Plugin for VirtueMart 3
+----------------------------------------------------------------------------------------------------------
+# Copyright:     Copyright (C) 2012-2017 VirtuePlanet Services LLP. All Rights Reserved.
+# License:       GNU General Public License version 2 or later; http://www.gnu.org/licenses/gpl-2.0.html
+# Author:        Abhishek Das
+# Email:         info@virtueplanet.com
+# Websites:      https://www.virtueplanet.com
+----------------------------------------------------------------------------------------------------------
+$Revision: 3 $
+$LastChangedDate: 2017-09-20 20:00:08 +0530 (Wed, 20 Sep 2017) $
+$Id: style.css 3 2017-09-20 14:30:08Z Abhshek Das $
+----------------------------------------------------------------------------------------------------------*/
+.vpdk-modal-bg,
+.vpdk-modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #000;
+	opacity: 0;
+	z-index: 1050;
+}
+.vpdk-modal-inner-bg {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0.6);
+	background-image: url('../images/loading.gif');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	opacity: 0;
+	z-index: 1056;
+}
+.vpdk-modal {
+	background: 0 none;
+	z-index: 1055;
+}
+.vpdk-fade {
+	display: block;
+	opacity: 0;
+	-webkit-transition: opacity .15s linear;
+	-o-transition: opacity .15s linear;
+	transition: opacity .15s linear;
+}
+.vpdk-fade.vpdk-in {
+	opacity: 1;
+}
+.vpdk-modal-bg.vpdk-in {
+	opacity: 0.6;
+}
+.vpdk-modal-dialog {
+	position: relative;
+	margin: 30px auto;
+	width: 380px;
+}
+.vpdk-modal.vpdk-fade .vpdk-modal-dialog {
+	-webkit-transition: -webkit-transform .3s ease-out;
+	-o-transition: -o-transform .3s ease-out;
+	transition: transform .3s ease-out;
+	-webkit-transform: translate3d(0,-25%,0);
+	-o-transform: translate3d(0,-25%,0);
+	transform: translate3d(0,-25%,0);
+}
+.vpdk-modal.vpdk-in .vpdk-modal-dialog {
+	-webkit-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.vpdk-modal-inner {
+	position: relative;
+	background-color: #fff;
+	border: 1px solid #999;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 2px;
+	-webkit-box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+	box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	outline: 0;
+}
+.vpdk-modal-inner > form {
+	margin: 0;
+	padding: 0;
+}
+button.vpdk-modal-close {
+	float: right;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1;
+	color: #000;
+	text-shadow: 0 1px 0 #fff;
+	padding: 0;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	-webkit-appearance: none;
+	opacity: .2;
+	filter: alpha(opacity=20);
+}
+.vpdk-modal-close:hover,
+.vpdk-modal-close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+	opacity: .5;
+	outline: none;
+	filter: alpha(opacity=50);
+}
+.vpdk-modal-header {
+	padding: 15px 25px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.vpdk-modal-header > h4 {
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 1.8;
+	margin: 0;
+	padding: 0;
+}
+.vpdk-modal-body {
+	padding: 25px;
+	font-size: 14px;
+}
+.vpdk-modal-footer {
+	padding: 20px 25px;
+	border-top: 1px solid #e5e5e5;
+	text-align: center;
+}
+.vpdk-modal-footer > ul {
+	padding-left: 0;
+	list-style: none;
+	margin: 0;
+	margin-left: -5px;
+}
+.vpdk-modal-footer > ul > li {
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.vpdk-form-group {
+	margin-bottom: 15px;
+}
+.vpdk-form-group label {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 5px;
+	font-weight: normal;
+}
+.vpdk-form-control,
+input[type="text"].vpdk-form-control {
+	display: block;
+	width: 100%;
+	height: 36px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.vpdk-form-control:focus,
+input[type="text"].vpdk-form-control:focus {
+	border-color: #66afe9;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,0.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,0.6);
+}
+.vpdk-btn {
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: 400;
+	text-align: center;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.8;
+	border-radius: 2px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	transition: all 100ms linear;
+	-webkit-transition: all 100ms linear;
+	-moz-transition: all 100ms linear;
+	-o-transition: all 100ms linear;
+}
+.vpdk-btn:focus,
+.vpdk-btn:active {
+	outline: none;
+}
+.vpdk-btn-lg {
+	padding-top: 13px;
+	padding-bottom: 12px;
+	padding-left: 45px;
+	padding-right: 45px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: .09em;
+	line-height: 1.8;
+}
+.vpdk-btn-default {
+	color: #555;
+	background-color: #fff;
+	border-color: #ccc;
+}
+.vpdk-btn-default:active,
+.vpdk-btn-default:focus,
+.vpdk-btn-default:hover {
+	color: #555;
+	background-color: #e6e6e6;
+	border-color: #adadad;
+}
+.vpdk-btn-primary {
+	color: #FFF;
+	background-color: #3071a9;
+	border-color: #3071a9;
+}
+.vpdk-btn-primary:active,
+.vpdk-btn-primary:focus,
+.vpdk-btn-primary:hover {
+	color: #FFF;
+	background-color: #1f496e;
+	border-color: #1f496e;
+}
+.vpdk-modal-buttons {
+	padding-top: 15px;
+}
+.vpdk-modal-buttons > button {
+	display: inline-block;
+}
+.vpdk-modal-buttons > button:first-child {
+	margin: 0 6px 0 0;
+}
+.vpdk-modal-buttons > button:last-child {
+	margin: 0 0 0 6px;
+}
+.vpdk-alert {
+	padding: 10px 15px;
+	margin-bottom: 25px;
+	border: 1px solid transparent;
+	border-radius: 2px;
+}
+.vpdk-alert-success {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+.vpdk-alert-error {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+.vpdk-alert-warning {
+	color: #8a6d3b;
+	background-color: #fcf8e3;
+	border-color: #faebcc;
+}
+.vpdk-alert-info {
+	color: #31708f;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
+.vpdk-edit-text {
+	display: none;
+}
+.vpdk-show-edit > .vpdk-edit-text {
+	display: inline;
+}
+.vpdk-show-edit > .vpdk-add-text {
+	display: none;
+}
+.vpdk-show {
+	display: block !important;
+}
+.vpdk-hide {
+	display: none !important;
+}
+.vpdk-info-box {
+	padding: 10px 0;
+}
+.vpdk-info-valid {
+	color: #3c763d;
+}
+.vpdk-info-default {
+	color: #a94442;
+}
+.vpdk-info-noaccess {
+	color: #8a6d3b;
+}
+.vpdk-info-box p {
+	margin-bottom: 5px;
+}
+.vpdk-info-box small {
+	font-size: 0.85em;
+	font-style: italic;
+	color: #777;
+}
+.vpdk-reval-button,
+.vpdk-enable-plugin {
+	position: relative;
+}
+.vpdk-reval-button > .vpk-btn-overlay,
+.vpdk-enable-plugin > .vpk-btn-overlay  {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0px;
+	height: 0px;
+	background-color: #FFF;
+	background-image: url('../images/loading.gif');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	opacity: 0;
+	z-index: 1049;
+	-webkit-transition: opacity -webkit-transform .1s ease-out;
+	-o-transition: opacity -o-transform .1s ease-out;
+	transition: opacity transform .1s ease-out;
+}
+.vpdk-reval-button[disabled] > .vpk-btn-overlay,
+.vpdk-enable-plugin[disabled] > .vpk-btn-overlay {
+	opacity: 0.8;
+	width: 100%;
+	height: 100%;
+}

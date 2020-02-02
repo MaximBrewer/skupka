@@ -1,0 +1,247 @@
+/* css for the mobile menu */
+.mobilemaximenuck {
+	/*background: #797979 url(bg.png) center top no-repeat;*/
+	background-color: #144366;
+	background-image: -webkit-gradient(radial,center center,0,center center,460,from(#30587D),to(#144366));
+	background-image: -webkit-radial-gradient(circle,#30587D,#144366);
+	background-image: -moz-radial-gradient(circle,#30587D,#144366);
+	background-image: -o-radial-gradient(circle,#30587D,#144366);
+	background-image: radial-gradient(circle,#30587D,#144366);
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+	text-shadow: 1px -1px 2px #000;
+	font-size: 12px;
+	list-style: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: Verdana;
+	left: 0;
+	top: 0;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+.mobilemaximenuck .mobilemaximenucktopbar {
+    height: 45px;
+	background: rgba(255,255,255,0.5);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 35px rgba(0, 0, 0, 0.3);
+}
+
+.mobilemaximenuck .mobilemaximenucktitle {
+    font-size: 20px;
+    padding: 10px 0 0 20px;
+    display: block;
+    float: left;
+	text-shadow: none;
+}
+
+.mobilemaximenuck .mobilemaximenuckclose {
+    display: block;
+    float:right;
+    margin: 5px 10px;
+    background: url(close.png) center center no-repeat;
+    width: 31px;
+    height: 31px;
+    cursor: pointer;
+}
+
+.mobilemaximenuckitem {
+	display: inline-block;
+	margin: 15px;
+	width: 96px;
+	vertical-align: top;
+}
+
+.mobilemaximenuck div.maximenuck {
+    cursor: pointer;
+    /*min-height: 35px;
+    line-height: 35px;*/
+    padding-left: 0px;
+    padding: 8px;
+	position: relative;
+	border: 1px solid transparent;
+}
+
+.mobilemaximenuck div.maximenuck + .mobilemaximenucksubmenu {
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	/*width: 100%;
+	height: 100%;
+	top: 45px;*/
+}
+
+.mobilemaximenuck div.maximenuck.open + .mobilemaximenucksubmenu {
+	display: block;
+}
+
+.mobilemaximenuck div.maximenuck:hover,
+.mobilemaximenuck div.maximenuck:focus {
+	background: rgba(0, 0, 0, 0.2);
+	border: 1px solid #c2c2c2;
+	border-radius: 8px;
+	box-shadow: rgba(0, 0, 0, 0.8) 0 0 8px inset;
+}
+
+.mobilemaximenuck div.maximenuck > a {
+    color: #fff !important;
+    font-family: Verdana;
+    display: block;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+.mobilemaximenuck div span.descck {
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.mobiletextck {
+	display: block;
+	text-align: center;
+}
+
+.mobilemaximenuck div.current {
+    background: none;
+    border: none;
+}
+
+.mobilemaximenuck div.current > a:after {
+    content: " ";
+    display: block;
+    float: right;
+    height: 35px;
+    width: 32px;
+    margin-right: 10px;
+    background: url(arrow_right.png) center center no-repeat;
+}
+/*
+.mobilemaximenuck div.level1.maximenuck > a {
+    background: #10223E;
+    border-radius: 5px;
+    margin:2px 10px;
+    padding-left: 45px;
+}
+
+.mobilemaximenuck div.level2.maximenuck > a {
+    background: #0080C0;
+    border-radius: 5px;
+    margin:2px 10px 2px 20px;
+    padding-left: 45px;
+}
+
+.mobilemaximenuck div.level3.maximenuck > a {
+    background: url(arrow_left.png) 45px center no-repeat;
+    padding-left: 65px;
+}
+
+.mobilemaximenuck div.level4.maximenuck > a {
+    padding-left: 85px;
+}
+
+.mobilemaximenuck div.level5.maximenuck > a {
+    padding-left: 95px;
+}*/
+
+.mobilebarmaximenuck {
+    display: none;
+    position: absolute;
+    z-index: 100; 
+    top: 0;
+    left: 0;
+    background: #152D52;
+    width: 100%;
+    height: 45px;
+	background-color: #144366;
+	background-image: -webkit-gradient(radial,center center,0,center center,460,from(#30587D),to(#144366));
+	background-image: -webkit-radial-gradient(circle,#30587D,#144366);
+	background-image: -moz-radial-gradient(circle,#30587D,#144366);
+	background-image: -o-radial-gradient(circle,#30587D,#144366);
+	background-image: radial-gradient(circle,#30587D,#144366);
+	background-repeat: no-repeat;
+}
+
+.mobilebuttonmaximenuck {
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 100; 
+	bottom: 0;
+	width: 40px;
+	/*background: url(icon_launch.png) left center no-repeat;*/
+	/*float: right;*/
+	margin: 5px;
+	cursor: pointer;
+	background-color: #144366;
+}
+
+.mobilebuttonmaximenuck:after {
+	content : "≡";
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	top: 0;
+	left: 0;
+	color: #fff;
+	font-family: serif;
+	font-size: 40px;
+	line-height: 30px;
+	text-align: center;
+	border-left: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
+}
+
+.mobilebarmenutitleck {
+    padding-left: 20px;
+    line-height: 35px;
+    color: #eee;
+    font-size: 16px;
+}
+
+/* for accordeon */
+.mobilemaximenucktogglericon {
+	background: rgba(0,0,0,0.4) url('plus.png') center center no-repeat;
+    position: absolute;
+	right: 0;
+	top: 0;
+    height: 45px;
+    margin-right: 0px;
+    width: 45px;
+}
+
+.mobilemaximenuck div.maximenuck:hover .mobilemaximenucktogglericon {
+	border-radius: 0 8px 0 0;
+}
+
+.open .mobilemaximenucktogglericon {
+	background-image: url('minus.png')
+}
+
+.mobilemaximenuck .mobilemaximenucktitle.mobilemaximenuckbackbutton {
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.3);
+	display: block;
+	height: 25px;
+	line-height: 25px;
+	margin: 5px 35px;
+	padding: 5px 20px;
+	position: relative;
+	cursor: pointer;
+}
+
+.mobilemaximenuckbackbutton:before {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 17.5px 20px 17.5px 0;
+	border-color: transparent rgba(255, 255, 255, 0.3) transparent transparent;
+	content: "";
+	display: block;
+	position: absolute;
+	left: -20px;
+	top: 0;
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_MAPYANDEX_SELECT_MAP_ITEMS_CALCULATOR">
+		<message>
+			<![CDATA[COM_MAPYANDEX_SELECT_MAP_ITEMS_CALCULATOR_DESC]]>
+		</message>
+	</layout>
+	
+	<name>COM_MAPYANDEX_CATEGORY_LIST_LAYOUT</name>
+
+		<description>COM_MAPYANDEX_SELECT_MAP_ITEMS_CALCULATOR_DESC</description>
+	<fields name="request" addfieldpath="/administrator/components/com_mapyandex/models/fields">
+		<fieldset name="request">
+			<field name="id" type="calculator" section="com_mapyandex" label="COM_MAPYANDEX_SELECT_MAP_CALCULATOR" description="COM_MAPYANDEX_SELECT_MAP_CALCULATOR" />
+		</fieldset>
+	</fields>
+
+
+
+</metadata>

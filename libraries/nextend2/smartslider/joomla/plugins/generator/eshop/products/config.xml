@@ -1,0 +1,42 @@
+<root>
+    <params name="eshopproducts" label="Filter">
+        <param type="group" label="Source">
+            <param name="eshopsourcecategories" label="Categories" type="eshopcategories" default="0"
+                   multiple="1" size="10"/>
+            <param name="eshopsourcemanufacturers" label="Manufacturers" type="eshopmanufacturers" default="0"
+                   multiple="1" size="10"/>
+            <param name="eshopsourcetags" label="Tags" type="eshoptags" default="0"
+                   multiple="1" size="10"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="eshopsourcefeatured" label="Featured" type="filter" default="0"/>
+            <param name="eshopsourcediscount" label="On discount" type="filter" default="0"/>
+            <param name="eshopsourceinstock" label="In stock" type="filter" default="0"/>
+            <param name="eshopsourcesubcategory" label="Include subcategories" type="onoff" default="0"/>
+        </param>
+        <param type="group" label="Language" class="n2-expert">
+            <param name="eshopsourcecurrencycode" label="Currency code" type="eshopcurrency" default="0"/>
+            <param name="eshopsourceproductlanguage" label="Product language" type="eshopproductlang" default="0"/>
+            <param name="eshopsourcecategorylanguage" label="Category language" type="eshopcategorylang" default="0"/>
+            <param name="eshopsourcemanufacturerlanguage" label="Manufacturer language" type="eshopmanufacturerlang" default="0"/>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="eshoporder" type="mixed" label="Order" default="p.created_date|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="p.product_price">Product price</option>
+                <option value="p.ordering">Ordering</option>
+                <option value="p.hits">Hits</option>
+                <option value="p.created_date">Creation time</option>
+                <option value="p.modified_date">Modification time</option>
+                <option value="pd.product_name">Product name</option>
+                <option value="p.id">Product ID</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

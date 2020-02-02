@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3" type="plugin" group="content">
+	<name>plg_content_includeitem</name>
+	<author>None</author>
+	<creationDate>7.4.2015</creationDate>
+	<copyright>Copyright (C) 2017. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>sup@noneme.org</authorEmail>
+	<authorUrl>joomlok.com</authorUrl>
+	<version>1.4</version>
+	<description>Includeitem - Joomla Content Plugin for VirtueMart 2</description>
+	<files>
+		<filename plugin="includeitem">includeitem.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>includeitem</folder>
+		<folder>css</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="cssfile" type="filelist" default="" label="Select css file" description="select css file to be loaded for plugin" directory="plugins/content/includeitem/css" filter="" exclude="" stripext="" />
+				<field name="atricle_tag" type="text" default="article"
+					label="Article tag name"
+					/>
+				<field
+					name="article_title"
+					type="radio"
+					default="1"
+					label="Show article title"
+					description="">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="article_link_title"
+					type="radio"
+					default="0"
+					label="Show article title as link"
+					description="">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field name="article_facebox" type="checkbox" label="Show facebox link only" description="" value="1" default="0" />
+				<field
+					name="article_heading"
+					type="list"
+					default="h4"
+					label="Type H1-6 of article title"
+					description="">
+					<option
+						value="h1">JH1</option>
+					<option
+						value="h2">JH2</option>
+					<option
+						value="h3">JH3</option>
+					<option
+						value="h4">JH4</option>
+					<option
+						value="h5">JH5</option>
+				</field>
+				<field
+					name="article_introtext"
+					type="radio"
+					default="1"
+					label="Show article introtext"
+					description="">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="article_fulltext"
+					type="radio"
+					default="0"
+					label="Show article fulltext"
+					description="">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="article_readmore"
+					type="radio"
+					default="0"
+					label="Show article readmore..."
+					description="">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field name="vm_product_tag" type="text" default="product"
+					label="Product tag name"
+					/>
+				<field name="vm_category_tag" type="text" default="category"
+					label="Category tag name"
+					/>
+				<field name="vm_max_items" type="text" default="2"
+					label="Number of displayed products"
+					description="This defines the number of products which will be displayed in the plugin." />
+				<field name="vm_products_per_row" type="text" default=""
+					label="VirtueMart - products per row"
+					description="" />
+				<field name="vm_display_style" type="list" default="list"
+					label="VirtueMart products display style"
+					description="">
+					<option value="list">list: ul > li</option>
+					<option value="div">div</option>
+				</field>
+				<field name="vm_show_price" type="list" default="1"
+					label="VirtueMart products show prices"
+					description="">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="vm_show_addtocart" type="list" default="1"
+					label="VirtueMart products show addtocart"
+					description="">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="vm_headerText" type="textarea" cols="40" rows="3" default=""
+					label="VirtueMart products header text"
+					description="" />
+
+				<field name="vm_footerText" type="textarea" cols="40" rows="3" default=""
+					label="VirtueMart products footer text"
+					description="" />
+
+				<field name="vm_customfields_by_id" type="text"  default=""
+					label="Настраиваемые поля не как атрибут корзины с выводом по названию позиции."
+					description="" />
+
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="pluginclass_sfx" type="text" default=""
+					label="Plugin Class Suffix"
+					description="A suffix to be applied to the css class of the plugin (table.plugintable), this allows individual plugin styling" />
+				<field name="class_sfx" type="text" default=""
+					label="Menu Class Suffix"
+					description="A suffix to be applied to the css class of the menu items" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

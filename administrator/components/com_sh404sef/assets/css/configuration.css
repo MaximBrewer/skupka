@@ -1,0 +1,198 @@
+.big {
+	height: 25px;
+	font-size: 14px;
+	line-height: 25px;
+	pading-left: 10px;
+	padding-right: 10px;
+}
+
+.hasTip img {
+	vertical-align: baseline;
+	margin-top: 0px;
+	margin-right: 10px;
+}
+
+div.current label,div.current span.faux-label {
+	clear: none !important;
+	float: left !important;
+	min-width: 200px !important;
+	margin-top: 0px !important;
+}
+
+div.current fieldset.radio label {
+	min-width: 45px !important;
+	margin-top: 0px !important;
+}
+
+div.current span.hasTip {
+	clear: left;
+	float: left;
+}
+
+div.current li {
+	padding: 3px;
+}
+
+div.current li:nth-child(odd) {
+	background-color: #FFF;
+}
+
+div.current li:nth-child(even) {
+	background-color: #EFEFEF;
+}
+/*div.current li:hover { 
+	background-color:#FAFAFA; 
+}*/
+div.current li span.spacer {
+	float: left;
+	clear: both;
+	width: 100%;
+	border-bottom: 1px dotted lightGrey;
+	padding-bottom: 4px;
+	margin-bottom: 4px;
+	font-size: 14px;
+}
+/*start list by component */
+div.current ul.listBycomponent li {
+	width: 22%;
+	float: left;
+	display: table-cell;
+	height: 30px;
+	padding-top: 3px !important;
+}
+
+div.current ul.listBycomponent li.listsroweven {
+	background-color: #EFEFEF;
+}
+
+div.current ul.listBycomponent li.listsrowodd {
+	background-color: #FFF;
+}
+
+div.current ul.listBycomponent li.listsrowodd:hover {
+	background-color: #FFF;
+}
+
+div.current ul.listBycomponent li.listsroweven:hover {
+	background-color: #efefef;
+}
+
+div.current ul.listBycomponent li.listsrow0 {
+	height: 15px;
+	text-align: center;
+}
+
+div.current li.listBycomponent span.spacer {
+	display: none;
+}
+
+div.current ul.listBycomponent li.listsrow0 span.hasTip {
+	float: none;
+}
+
+div.current ul.listBycomponent li input,div.current ul.listBycomponent li select
+	{
+	width: 95%;
+	float: left;
+	display: table-cell;
+}
+
+div.current ul.listBycomponent li label {
+	min-height: 12px;
+	width: 95%;
+	font-weight: bold;
+	color: #006699;
+}
+
+/* start list error document */
+div.current ul li.errorpage {
+	width: 30%;
+	float: left;
+	background: none;
+}
+
+div.current ul li.errorpage ul li {
+	list-style-type: disc;
+	background: none;
+}
+
+div.current ul li.errorpage0 {
+	float: left;
+	min-width: 820px;
+}
+
+div.current ul li.errorpage1 {
+	
+}
+
+ul.config-option-list,ul.config-option-list li {
+	padding: 7px 2px 7px 2px !important;
+}
+
+div.current input,div.current textarea,div.current select {
+	margin: 0px !important;
+}
+
+div.current fieldset.radio {
+	padding: 0px !important;
+}
+
+div.current fieldset.radio input {
+	margin-top: 2px !important;
+}
+
+span.sh404sef-textinput {
+	font-size: 1.091em;
+	font-weight: bold;
+}
+
+span.sh404sef-additionaltext {
+	font-size: 1.091em;
+	font-weight: bold;
+	margin-left: 1em;
+}
+
+#permissions-sliders ul#rules li {
+	padding: 0px !important;
+}
+
+.form-horizontal .shlegend-label .control-label {
+	width: 100%;
+}
+.form-horizontal .shlegend-label .control-label legend {
+    margin-bottom: 0.3em;
+}
+.form-horizontal .shrules .controls {
+    margin-left:0;
+}
+
+div.shinfo-icon-wrapper {
+	width: 14px;
+	height: 25px;
+	line-height: 18px;
+	display: inline-block;
+	position: relative;
+	top:0;
+}
+
+div.tooltip-inner {
+    max-width: 300px;
+    text-align: justify;
+}
+
+div.tooltip-inner h4 {
+    text-align: center;
+}
+
+div.tip-wrap {
+    max-width: 300px;
+}
+
+.tip-title {
+	font-weight: bold;
+	font-size: 1.1em;
+	margin-bottom: 0.5em;
+}
+.tip-text {
+	text-align: justify;
+}

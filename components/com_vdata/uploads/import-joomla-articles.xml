@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+ <ITEMS>
+  <ITEM>
+   <id>6</id>
+   <title>Главная</title>
+   <alias>glavnaya</alias>
+   <introtext></introtext>
+   <fulltext></fulltext>
+   <state>1</state>
+   <aj180_categories_extension>com_content</aj180_categories_extension>
+   <aj180_categories_title>Без категории</aj180_categories_title>
+   <created>0000-00-00 00:00:00</created>
+   <aj180_users_email>vakeks@art-pl.ru</aj180_users_email>
+   <created_by_alias></created_by_alias>
+   <publish_up>2018-03-15 09:00:58</publish_up>
+   <publish_down>0000-00-00 00:00:00</publish_down>
+   <images>{&quot;image_intro&quot;:&quot;&quot;,&quot;float_intro&quot;:&quot;&quot;,&quot;image_intro_alt&quot;:&quot;&quot;,&quot;image_intro_caption&quot;:&quot;&quot;,&quot;image_fulltext&quot;:&quot;&quot;,&quot;float_fulltext&quot;:&quot;&quot;,&quot;image_fulltext_alt&quot;:&quot;&quot;,&quot;image_fulltext_caption&quot;:&quot;&quot;}</images>
+   <urls>{&quot;urla&quot;:false,&quot;urlatext&quot;:&quot;&quot;,&quot;targeta&quot;:&quot;&quot;,&quot;urlb&quot;:false,&quot;urlbtext&quot;:&quot;&quot;,&quot;targetb&quot;:&quot;&quot;,&quot;urlc&quot;:false,&quot;urlctext&quot;:&quot;&quot;,&quot;targetc&quot;:&quot;&quot;}</urls>
+   <attribs>{&quot;article_layout&quot;:&quot;&quot;,&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_tags&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;info_block_position&quot;:&quot;&quot;,&quot;info_block_show_title&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_associations&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;urls_position&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_page_title&quot;:&quot;&quot;,&quot;show_publishing_options&quot;:&quot;&quot;,&quot;show_article_options&quot;:&quot;&quot;,&quot;show_urls_images_backend&quot;:&quot;&quot;,&quot;show_urls_images_frontend&quot;:&quot;&quot;}</attribs>
+   <version>21</version>
+   <ordering>5</ordering>
+   <metakey></metakey>
+   <metadesc></metadesc>
+   <access>1</access>
+   <hits>465</hits>
+   <metadata>{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</metadata>
+   <featured>0</featured>
+   <language>*</language>
+   <xreference></xreference>
+  </ITEM>
+  <ITEM>
+   <id>11</id>
+   <title>Ошибка 404 - страница не найдена</title>
+   <alias>oshibka-404-stranitsa-ne-najdena</alias>
+   <introtext>&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;p&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;&lt;strong&gt;Ошибка 404 - страница не найдена&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p&gt;&lt;strong&gt;Вы не можете посетить текущую страницу по причине:&lt;/strong&gt;&lt;/p&gt;&#13;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;ol&gt;&#13;
+&lt;li&gt;просроченная закладка/избранное&lt;/li&gt;&#13;
+&lt;li&gt;поисковый механизм, у которого просрочен список для этого сайта&lt;/li&gt;&#13;
+&lt;li&gt;пропущен адрес&lt;/li&gt;&#13;
+&lt;li&gt;у вас нет права доступа на эту страницу&lt;/li&gt;&#13;
+&lt;li&gt;запрашиваемый ресурс не найден&lt;/li&gt;&#13;
+&lt;li&gt;в процессе обработки вашего запроса произошла ошибка&lt;/li&gt;&#13;
+&lt;/ol&gt;&#13;
+&lt;p&gt;&lt;a href=&quot;/&quot;&gt;Перейти на главную&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</introtext>
+   <fulltext></fulltext>
+   <state>1</state>
+   <aj180_categories_extension>com_content</aj180_categories_extension>
+   <aj180_categories_title>Без категории</aj180_categories_title>
+   <created>2015-05-17 14:12:41</created>
+   <aj180_users_email>vakeks@art-pl.ru</aj180_users_email>
+   <created_by_alias></created_by_alias>
+   <publish_up>2015-05-17 14:12:41</publish_up>
+   <publish_down>0000-00-00 00:00:00</publish_down>
+   <images>{&quot;image_intro&quot;:&quot;&quot;,&quot;float_intro&quot;:&quot;&quot;,&quot;image_intro_alt&quot;:&quot;&quot;,&quot;image_intro_caption&quot;:&quot;&quot;,&quot;image_fulltext&quot;:&quot;&quot;,&quot;float_fulltext&quot;:&quot;&quot;,&quot;image_fulltext_alt&quot;:&quot;&quot;,&quot;image_fulltext_caption&quot;:&quot;&quot;}</images>
+   <urls>{&quot;urla&quot;:false,&quot;urlatext&quot;:&quot;&quot;,&quot;targeta&quot;:&quot;&quot;,&quot;urlb&quot;:false,&quot;urlbtext&quot;:&quot;&quot;,&quot;targetb&quot;:&quot;&quot;,&quot;urlc&quot;:false,&quot;urlctext&quot;:&quot;&quot;,&quot;targetc&quot;:&quot;&quot;}</urls>
+   <attribs>{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_tags&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;info_block_position&quot;:&quot;&quot;,&quot;info_block_show_title&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;urls_position&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;,&quot;show_publishing_options&quot;:&quot;&quot;,&quot;show_article_options&quot;:&quot;&quot;,&quot;show_urls_images_backend&quot;:&quot;&quot;,&quot;show_urls_images_frontend&quot;:&quot;&quot;}</attribs>
+   <version>0</version>
+   <ordering>4</ordering>
+   <metakey></metakey>
+   <metadesc></metadesc>
+   <access>1</access>
+   <hits>19</hits>
+   <metadata>{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;,&quot;browser_title&quot;:&quot;&quot;}</metadata>
+   <featured>0</featured>
+   <language>*</language>
+   <xreference></xreference>
+  </ITEM>
+  <ITEM>
+   <id>20</id>
+   <title>Спасибо за ваше сообщение!</title>
+   <alias>spasibo-za-vashe-soobshchenie</alias>
+   <introtext>&lt;p style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;Спасибо за ваше сообщение!&lt;/strong&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/p&gt;</introtext>
+   <fulltext></fulltext>
+   <state>-2</state>
+   <aj180_categories_extension>com_content</aj180_categories_extension>
+   <aj180_categories_title>Без категории</aj180_categories_title>
+   <created>2016-02-20 09:51:21</created>
+   <aj180_users_email>vakeks@art-pl.ru</aj180_users_email>
+   <created_by_alias></created_by_alias>
+   <publish_up>2016-02-20 09:51:21</publish_up>
+   <publish_down>0000-00-00 00:00:00</publish_down>
+   <images>{&quot;image_intro&quot;:&quot;&quot;,&quot;float_intro&quot;:&quot;&quot;,&quot;image_intro_alt&quot;:&quot;&quot;,&quot;image_intro_caption&quot;:&quot;&quot;,&quot;image_fulltext&quot;:&quot;&quot;,&quot;float_fulltext&quot;:&quot;&quot;,&quot;image_fulltext_alt&quot;:&quot;&quot;,&quot;image_fulltext_caption&quot;:&quot;&quot;}</images>
+   <urls>{&quot;urla&quot;:false,&quot;urlatext&quot;:&quot;&quot;,&quot;targeta&quot;:&quot;&quot;,&quot;urlb&quot;:false,&quot;urlbtext&quot;:&quot;&quot;,&quot;targetb&quot;:&quot;&quot;,&quot;urlc&quot;:false,&quot;urlctext&quot;:&quot;&quot;,&quot;targetc&quot;:&quot;&quot;}</urls>
+   <attribs>{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_tags&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;info_block_position&quot;:&quot;&quot;,&quot;info_block_show_title&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;urls_position&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;,&quot;show_publishing_options&quot;:&quot;&quot;,&quot;show_article_options&quot;:&quot;&quot;,&quot;show_urls_images_backend&quot;:&quot;&quot;,&quot;show_urls_images_frontend&quot;:&quot;&quot;}</attribs>
+   <version>0</version>
+   <ordering>2</ordering>
+   <metakey></metakey>
+   <metadesc></metadesc>
+   <access>1</access>
+   <hits>0</hits>
+   <metadata>{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;,&quot;browser_title&quot;:&quot;&quot;}</metadata>
+   <featured>0</featured>
+   <language>*</language>
+   <xreference></xreference>
+  </ITEM>
+  <ITEM>
+   <id>21</id>
+   <title>Всплывающая форма</title>
+   <alias>vsplyvayushchaya-forma</alias>
+   <introtext>&lt;p&gt;{rsform 4}&amp;nbsp;&lt;/p&gt;&#13;
+</introtext>
+   <fulltext></fulltext>
+   <state>-2</state>
+   <aj180_categories_extension>com_content</aj180_categories_extension>
+   <aj180_categories_title>Без категории</aj180_categories_title>
+   <created>2016-02-20 10:24:28</created>
+   <aj180_users_email>vakeks@art-pl.ru</aj180_users_email>
+   <created_by_alias></created_by_alias>
+   <publish_up>2016-02-20 10:24:28</publish_up>
+   <publish_down>0000-00-00 00:00:00</publish_down>
+   <images>{&quot;image_intro&quot;:&quot;&quot;,&quot;float_intro&quot;:&quot;&quot;,&quot;image_intro_alt&quot;:&quot;&quot;,&quot;image_intro_caption&quot;:&quot;&quot;,&quot;image_fulltext&quot;:&quot;&quot;,&quot;float_fulltext&quot;:&quot;&quot;,&quot;image_fulltext_alt&quot;:&quot;&quot;,&quot;image_fulltext_caption&quot;:&quot;&quot;}</images>
+   <urls>{&quot;urla&quot;:false,&quot;urlatext&quot;:&quot;&quot;,&quot;targeta&quot;:&quot;&quot;,&quot;urlb&quot;:false,&quot;urlbtext&quot;:&quot;&quot;,&quot;targetb&quot;:&quot;&quot;,&quot;urlc&quot;:false,&quot;urlctext&quot;:&quot;&quot;,&quot;targetc&quot;:&quot;&quot;}</urls>
+   <attribs>{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_tags&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;info_block_position&quot;:&quot;&quot;,&quot;info_block_show_title&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;urls_position&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;,&quot;show_publishing_options&quot;:&quot;&quot;,&quot;show_article_options&quot;:&quot;&quot;,&quot;show_urls_images_backend&quot;:&quot;&quot;,&quot;show_urls_images_frontend&quot;:&quot;&quot;}</attribs>
+   <version>0</version>
+   <ordering>1</ordering>
+   <metakey></metakey>
+   <metadesc></metadesc>
+   <access>1</access>
+   <hits>0</hits>
+   <metadata>{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;,&quot;browser_title&quot;:&quot;&quot;}</metadata>
+   <featured>0</featured>
+   <language>*</language>
+   <xreference></xreference>
+  </ITEM>
+  <ITEM>
+   <id>22</id>
+   <title>Заказ товара</title>
+   <alias>zakaz-tovara</alias>
+   <introtext>&lt;p&gt;{rsform 12}&lt;/p&gt;</introtext>
+   <fulltext></fulltext>
+   <state>-2</state>
+   <aj180_categories_extension>com_content</aj180_categories_extension>
+   <aj180_categories_title>Без категории</aj180_categories_title>
+   <created>2017-01-22 21:58:49</created>
+   <aj180_users_email>vakeks@art-pl.ru</aj180_users_email>
+   <created_by_alias></created_by_alias>
+   <publish_up>2017-01-22 21:58:49</publish_up>
+   <publish_down>0000-00-00 00:00:00</publish_down>
+   <images>{&quot;image_intro&quot;:&quot;&quot;,&quot;float_intro&quot;:&quot;&quot;,&quot;image_intro_alt&quot;:&quot;&quot;,&quot;image_intro_caption&quot;:&quot;&quot;,&quot;image_fulltext&quot;:&quot;&quot;,&quot;float_fulltext&quot;:&quot;&quot;,&quot;image_fulltext_alt&quot;:&quot;&quot;,&quot;image_fulltext_caption&quot;:&quot;&quot;}</images>
+   <urls>{&quot;urla&quot;:false,&quot;urlatext&quot;:&quot;&quot;,&quot;targeta&quot;:&quot;&quot;,&quot;urlb&quot;:false,&quot;urlbtext&quot;:&quot;&quot;,&quot;targetb&quot;:&quot;&quot;,&quot;urlc&quot;:false,&quot;urlctext&quot;:&quot;&quot;,&quot;targetc&quot;:&quot;&quot;}</urls>
+   <attribs>{&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_tags&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;info_block_position&quot;:&quot;&quot;,&quot;info_block_show_title&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;urls_position&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_layout&quot;:&quot;&quot;,&quot;show_publishing_options&quot;:&quot;&quot;,&quot;show_article_options&quot;:&quot;&quot;,&quot;show_urls_images_backend&quot;:&quot;&quot;,&quot;show_urls_images_frontend&quot;:&quot;&quot;}</attribs>
+   <version>0</version>
+   <ordering>0</ordering>
+   <metakey></metakey>
+   <metadesc></metadesc>
+   <access>1</access>
+   <hits>0</hits>
+   <metadata>{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;,&quot;browser_title&quot;:&quot;&quot;}</metadata>
+   <featured>0</featured>
+   <language>*</language>
+   <xreference></xreference>
+  </ITEM>
+  <ITEM>
+   <id>24</id>
+   <title>Контакты</title>
+   <alias>kontakty</alias>
+   <introtext>&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;div class=&quot;forma_karta_v_kon&quot;&gt;&#13;
+&lt;div class=&quot;forma_v_kontaktax&quot;&gt;{rsform 17}&lt;/div&gt;&#13;
+&lt;div class=&quot;karta_v_kontaktax&quot;&gt;{map 5}&lt;/div&gt;&#13;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&lt;/div&gt;</introtext>
+   <fulltext></fulltext>
+   <state>1</state>
+   <aj180_categories_extension>com_content</aj180_categories_extension>
+   <aj180_categories_title>Без категории</aj180_categories_title>
+   <created>2017-06-22 09:53:03</created>
+   <aj180_users_email>vakeks@art-pl.ru</aj180_users_email>
+   <created_by_alias></created_by_alias>
+   <publish_up>2017-06-22 09:53:03</publish_up>
+   <publish_down>0000-00-00 00:00:00</publish_down>
+   <images>{&quot;image_intro&quot;:&quot;&quot;,&quot;float_intro&quot;:&quot;&quot;,&quot;image_intro_alt&quot;:&quot;&quot;,&quot;image_intro_caption&quot;:&quot;&quot;,&quot;image_fulltext&quot;:&quot;&quot;,&quot;float_fulltext&quot;:&quot;&quot;,&quot;image_fulltext_alt&quot;:&quot;&quot;,&quot;image_fulltext_caption&quot;:&quot;&quot;}</images>
+   <urls>{&quot;urla&quot;:false,&quot;urlatext&quot;:&quot;&quot;,&quot;targeta&quot;:&quot;&quot;,&quot;urlb&quot;:false,&quot;urlbtext&quot;:&quot;&quot;,&quot;targetb&quot;:&quot;&quot;,&quot;urlc&quot;:false,&quot;urlctext&quot;:&quot;&quot;,&quot;targetc&quot;:&quot;&quot;}</urls>
+   <attribs>{&quot;article_layout&quot;:&quot;&quot;,&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_tags&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;info_block_position&quot;:&quot;&quot;,&quot;info_block_show_title&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_associations&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;urls_position&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_page_title&quot;:&quot;&quot;,&quot;show_publishing_options&quot;:&quot;&quot;,&quot;show_article_options&quot;:&quot;&quot;,&quot;show_urls_images_backend&quot;:&quot;&quot;,&quot;show_urls_images_frontend&quot;:&quot;&quot;}</attribs>
+   <version>0</version>
+   <ordering>3</ordering>
+   <metakey></metakey>
+   <metadesc></metadesc>
+   <access>1</access>
+   <hits>116</hits>
+   <metadata>{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</metadata>
+   <featured>0</featured>
+   <language>*</language>
+   <xreference></xreference>
+  </ITEM>
+  <ITEM>
+   <id>25</id>
+   <title>Согласие на обработку персональных данных</title>
+   <alias>soglasie-na-obrabotku-personalnykh-dannykh</alias>
+   <introtext>&lt;div class=&quot;soglasie_na_obrabotky_dannih&quot;&gt;&#13;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;strong&gt;Политика обработки персональных данных пользователей&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;Настоящая Политика обработки персональной информации (далее – Политика) действует в отношении всей информации, которую &lt;span style=&quot;color: #ff0000;&quot;&gt;ООО «НАЗВАНИЕ ВАШЕЙ ФИРМЫ»&lt;/span&gt;, &lt;span style=&quot;color: #ff0000;&quot;&gt;ИНН 0000000000&lt;/span&gt; (далее - Администрация сайта), может получить о пользователе во время использования им сайтом &lt;span style=&quot;color: #ff0000;&quot;&gt;adres.ru&lt;/span&gt;&amp;nbsp; (далее по тексту – «Сайт»), сервисами, службами, программами и продуктами Сайта (далее по тексту – «Сервисы»). Согласие пользователя на предоставление персональной информации, данное им в соответствии с настоящей Политикой в рамках использования одного из Сервисов, распространяется на все Сервисы Сайта.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;Использование Сервисов Сайта означает безоговорочное согласие пользователя с настоящей Политикой и указанными в ней условиями обработки его персональной информации; в случае несогласия с этими условиями пользователь должен воздержаться от использования Сервисов Сайта.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;1. Персональная информация пользователей, которую получает и обрабатывает Администрация Сайта.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;1.1. В рамках настоящей Политики под «персональной информацией пользователя» понимаются:&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;1.1.1. Персональная информация, которую пользователь предоставляет о себе самостоятельно при передачи любых данных о себе в процессе использования Сервисов Сайта, включая, но не ограничиваясь следующими персональными данными пользователя:&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;- фамилия, имя, отчество;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;- контактная информация (адрес электронной почты, номер контактного телефона);&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;- адрес&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;1.1.2. Данные, которые автоматически передаются Сервисам Сайта в процессе их использования с помощью установленного на устройстве пользователя программного обеспечения, в том числе IPадрес, информация из cookie, информация о браузере пользователя (или иной программе, с помощью которой осуществляется доступ к Сервисам), время доступа, адрес запрашиваемой страницы.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;1.1.3. Иная информация о пользователе, сбор и/или предоставление которой необходимо для использования Сервисов.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;1.2. Настоящая Политика применима только к Сервисам Сайта. Администрация Сайта не контролирует и не несет ответственность за сайты третьих лиц, на которые пользователь может перейти по ссылкам, доступным на Сайте. На таких сайтах у пользователя может собираться или запрашиваться иная персональная информация, а также могут совершаться иные действия.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;1.3. Администрация Сайта не проверяет достоверность персональной информации,&amp;nbsp;предоставляемой пользователями, и не осуществляет контроль за их дееспособностью. Однако Администрация Сайта исходит из того, что пользователь предоставляет достоверную и достаточную персональную информацию по вопросам, предлагаемым в форме регистрации, и поддерживает эту информацию в актуальном состоянии.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;Цели сбора и обработки персональной информации пользователей.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;2.1. Администрация Сайта собирает и хранит только те персональные данные, которые необходимы для оказания услуг пользователю.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;2.2. Персональная информация пользователя может использоваться в следующих целях:&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;2.2.1. Идентификация стороны в рамках использования Сервисов Сайта;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;2.2.2. Предоставление пользователю персонализированных Сервисов;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;2.2.3. Информирование пользователя по интересующему его вопросу;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;2.2.4. Связь с пользователем в случае необходимости, в том числе направление уведомлений, запросов и информации, связанных с использованием Сервисов, оказанием услуг, а также обработка запросов и заявок от пользователя;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;2.2.5. Улучшение качества Сервисов, удобства их использования, разработка новых Сервисов и услуг;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;2.2.6. Проведение статистических и иных исследований, на основе обезличенных данных.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;2.2.7. Предоставление информации об иных предложениях сайта и его партнеров.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;3. Условия обработки персональной информации пользователя и её передачи третьим лицам.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;3.1. Администрация Сайта хранит персональную информацию пользователей в соответствии с внутренним регламентом конкретных сервисов.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;3.2. В отношении персональной информации пользователя сохраняется ее конфиденциальность, кроме случаев добровольного предоставления пользователем информации о себе для общего доступа всем пользователям Сайта.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;3.3. Администрация Сайта вправе передать персональную информацию пользователя третьим лицам в следующих случаях:&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;3.3.1. Пользователь явно выразил свое согласие на такие действия;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;3.3.2. Передача необходима в рамках использования пользователем определенного Сервиса либо для оказания услуги пользователю. При использовании отдельных Сервисов, пользователь соглашается с тем, что определённая часть его персональной информации становится общедоступной.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;3.3.3. Передача предусмотрена российским или иным госорганам, в рамках установленной законодательством процедуры;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;3.3.4. Такая передача происходит в рамках продажи или иной передачи прав на сайт (полностью или в части), при этом к приобретателю переходят все обязательства по соблюдению условий настоящей Политики применительно к полученной им персональной информации;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;3.4. При обработке персональных данных пользователей Администрация Сайта руководствуется Федеральным законом &quot;О персональных данных&quot; от 27.07.2006 N 152-ФЗ в действующей на момент применения редакции.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;3.5. Обработка вышеуказанных персональных данных будет осуществляться путем смешанной обработки персональных данных (сбор, систематизация, накопление, хранение, уточнение (обновление, изменение), использование, обезличивание, блокирование, уничтожение персональных данных).&amp;nbsp; Обработка персональных данных может осуществляться как с использованием средств автоматизации, так и без их использования (на бумажных носителях).&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;4. Изменение пользователем персональной информации.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;4.1. Пользователь может в любой момент изменить (обновить, дополнить) предоставленную им персональную информацию или её часть.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;4.2. Пользователь также может отозвать предоставленную им персональную информацию, обратившись с такой просьбой к Администрации Сайта посредством письменного обращения.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;5. Меры, применяемые для защиты персональной информации пользователей.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;5.1. Администрация Сайта принимает все необходимые меры для защиты любых персональных данных, предоставляемых пользователями.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;5.2. Доступ к персональным данным имеют только уполномоченные сотрудники Администрации Сайта, уполномоченные сотрудники сторонних компаний (т. е. поставщиков услуг) или деловых партнеров.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;5.3. Все сотрудники Администрации Сайта, имеющие доступ к персональным данным, должны придерживаться политики по обеспечению конфиденциальности и защиты персональных данных. В целях обеспечения конфиденциальности информации и защиты персональных данных Администрация Сайта поддерживает принимает все меры, необходимые для предотвращения&amp;nbsp;несанкционированного доступа.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;5.4. Обеспечение безопасности персональных данных достигается также следующими мерами:&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;- разработкой и утверждением локальных нормативных актов, регламентирующих порядок обработки персональных данных;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;- реализацией технических мер, снижающих вероятность реализаций угроз безопасности персональных данных;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;- проведением периодических проверок состояния защищенности информационных систем.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;6. Изменение Политики конфиденциальности. Применимое законодательство.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;6.1. Администрация Сайта имеет право вносить изменения в настоящую Политику конфиденциальности. Новая редакция Политики вступает в силу с момента ее публикации на Сайте, если иное не предусмотрено новой редакцией Политики.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;6.2. К настоящей Политике и отношениям между пользователем и Администрацией Сайта, возникающим в связи с применением Политики обработке персональных данных, подлежит применению действующее законодательство Российской Федерации.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;7. Обратная связь. Вопросы и предложения&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;Все предложения или вопросы по поводу настоящей Политики следует сообщать Администрации Сайта в письменном виде.&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;</introtext>
+   <fulltext></fulltext>
+   <state>1</state>
+   <aj180_categories_extension>com_content</aj180_categories_extension>
+   <aj180_categories_title>Без категории</aj180_categories_title>
+   <created>2017-07-18 14:22:35</created>
+   <aj180_users_email>vakeks@art-pl.ru</aj180_users_email>
+   <created_by_alias></created_by_alias>
+   <publish_up>2017-07-18 14:22:35</publish_up>
+   <publish_down>0000-00-00 00:00:00</publish_down>
+   <images>{&quot;image_intro&quot;:&quot;&quot;,&quot;float_intro&quot;:&quot;&quot;,&quot;image_intro_alt&quot;:&quot;&quot;,&quot;image_intro_caption&quot;:&quot;&quot;,&quot;image_fulltext&quot;:&quot;&quot;,&quot;float_fulltext&quot;:&quot;&quot;,&quot;image_fulltext_alt&quot;:&quot;&quot;,&quot;image_fulltext_caption&quot;:&quot;&quot;}</images>
+   <urls>{&quot;urla&quot;:false,&quot;urlatext&quot;:&quot;&quot;,&quot;targeta&quot;:&quot;&quot;,&quot;urlb&quot;:false,&quot;urlbtext&quot;:&quot;&quot;,&quot;targetb&quot;:&quot;&quot;,&quot;urlc&quot;:false,&quot;urlctext&quot;:&quot;&quot;,&quot;targetc&quot;:&quot;&quot;}</urls>
+   <attribs>{&quot;article_layout&quot;:&quot;&quot;,&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_tags&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;info_block_position&quot;:&quot;&quot;,&quot;info_block_show_title&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_associations&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;urls_position&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_page_title&quot;:&quot;&quot;,&quot;show_publishing_options&quot;:&quot;&quot;,&quot;show_article_options&quot;:&quot;&quot;,&quot;show_urls_images_backend&quot;:&quot;&quot;,&quot;show_urls_images_frontend&quot;:&quot;&quot;}</attribs>
+   <version>0</version>
+   <ordering>2</ordering>
+   <metakey></metakey>
+   <metadesc></metadesc>
+   <access>1</access>
+   <hits>6</hits>
+   <metadata>{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;}</metadata>
+   <featured>0</featured>
+   <language>*</language>
+   <xreference></xreference>
+  </ITEM>
+  <ITEM>
+   <id>26</id>
+   <title>Сравнение</title>
+   <alias>sravnenie</alias>
+   <introtext>&lt;p&gt;{module Virtuemart compare product в иматериал}&lt;/p&gt;&#13;
+&lt;p&gt;{popup url=&quot;#hidden_link&quot;}11{/popup}&lt;/p&gt;</introtext>
+   <fulltext></fulltext>
+   <state>-2</state>
+   <aj180_categories_extension>com_content</aj180_categories_extension>
+   <aj180_categories_title>Без категории</aj180_categories_title>
+   <created>2017-09-21 17:02:45</created>
+   <aj180_users_email>vakeks@art-pl.ru</aj180_users_email>
+   <created_by_alias></created_by_alias>
+   <publish_up>2017-09-21 17:02:45</publish_up>
+   <publish_down>0000-00-00 00:00:00</publish_down>
+   <images>{&quot;image_intro&quot;:&quot;&quot;,&quot;float_intro&quot;:&quot;&quot;,&quot;image_intro_alt&quot;:&quot;&quot;,&quot;image_intro_caption&quot;:&quot;&quot;,&quot;image_fulltext&quot;:&quot;&quot;,&quot;float_fulltext&quot;:&quot;&quot;,&quot;image_fulltext_alt&quot;:&quot;&quot;,&quot;image_fulltext_caption&quot;:&quot;&quot;}</images>
+   <urls>{&quot;urla&quot;:false,&quot;urlatext&quot;:&quot;&quot;,&quot;targeta&quot;:&quot;&quot;,&quot;urlb&quot;:false,&quot;urlbtext&quot;:&quot;&quot;,&quot;targetb&quot;:&quot;&quot;,&quot;urlc&quot;:false,&quot;urlctext&quot;:&quot;&quot;,&quot;targetc&quot;:&quot;&quot;}</urls>
+   <attribs>{&quot;article_layout&quot;:&quot;&quot;,&quot;show_title&quot;:&quot;&quot;,&quot;link_titles&quot;:&quot;&quot;,&quot;show_tags&quot;:&quot;&quot;,&quot;show_intro&quot;:&quot;&quot;,&quot;info_block_position&quot;:&quot;&quot;,&quot;info_block_show_title&quot;:&quot;&quot;,&quot;show_category&quot;:&quot;&quot;,&quot;link_category&quot;:&quot;&quot;,&quot;show_parent_category&quot;:&quot;&quot;,&quot;link_parent_category&quot;:&quot;&quot;,&quot;show_associations&quot;:&quot;&quot;,&quot;show_author&quot;:&quot;&quot;,&quot;link_author&quot;:&quot;&quot;,&quot;show_create_date&quot;:&quot;&quot;,&quot;show_modify_date&quot;:&quot;&quot;,&quot;show_publish_date&quot;:&quot;&quot;,&quot;show_item_navigation&quot;:&quot;&quot;,&quot;show_icons&quot;:&quot;&quot;,&quot;show_print_icon&quot;:&quot;&quot;,&quot;show_email_icon&quot;:&quot;&quot;,&quot;show_vote&quot;:&quot;&quot;,&quot;show_hits&quot;:&quot;&quot;,&quot;show_noauth&quot;:&quot;&quot;,&quot;urls_position&quot;:&quot;&quot;,&quot;alternative_readmore&quot;:&quot;&quot;,&quot;article_page_title&quot;:&quot;&quot;,&quot;show_publishing_options&quot;:&quot;&quot;,&quot;show_article_options&quot;:&quot;&quot;,&quot;show_urls_images_backend&quot;:&quot;&quot;,&quot;show_urls_images_frontend&quot;:&quot;&quot;}</attribs>
+   <version>0</version>
+   <ordering>1</ordering>
+   <metakey></metakey>
+   <metadesc></metadesc>
+   <access>1</access>
+   <hits>1</hits>
+   <metadata>{&quot;robots&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;rights&quot;:&quot;&quot;,&quot;xreference&quot;:&quot;&quot;,&quot;browser_title&quot;:&quot;&quot;}</metadata>
+   <featured>0</featured>
+   <language>*</language>
+   <xreference></xreference>
+  </ITEM>
+</ITEMS></ROOT>

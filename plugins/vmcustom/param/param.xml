@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Param: Virtuemart 3 customfield plugin
+Version: 3.0.6 (2015.11.23)
+Author: Dmitriy Usov
+Copyright: Copyright (C) 2012-2015 usovdm
+License GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+http://myext.eu
+-->
+<extension version="2.5" type="plugin" group="vmcustom" method="upgrade">
+    <name>Virtuemart 3 multiple customfield plugin</name>
+    <creationDate>2015.11.23</creationDate>
+    <author>Dmitriy Usov</author>
+    <authorUrl>http://myext.ru</authorUrl>
+    <authorEmail>usovdm@gmail.com</authorEmail>
+    <copyright>Copyright (C) 2012-2015 usovdm</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3</license>
+    <version>3.0.6</version>
+    <description>PLG_VMCUSTOM_PARAM_XML_DESC</description>
+    <files>
+        <filename plugin="param">param.php</filename>
+		<filename>index.html</filename>
+		<folder>param</folder>
+    </files>
+	<languages folder="language">
+		<language tag="ru-RU">ru-RU/ru-RU.plg_vmcustom_param.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_vmcustom_param.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_vmcustom_param.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_vmcustom_param.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_virtuemart_param_filter/assets/fields">
+			<fieldset name="basic">
+				<field
+				name="mcf_key"
+				type="activation"
+				default=""
+				label="Activation Key"
+				description="Create your Activation Key for each site on http://myext.eu"
+				size="50" />
+			</fieldset>
+		</fields>
+	</config>
+
+    <vmconfig>
+		<fields name="params" addfieldpath="/modules/mod_virtuemart_param_filter/assets/fields">
+			<fieldset name="template">
+				<!-- Name -->
+				<field name="n" type="text" size="64"  default="" label="PLG_VMCUSTOM_PARAM_XML_N_TITLE" description="PLG_VMCUSTOM_PARAM_XML_N_DESC" />
+				<!-- Searchable -->
+				<field name="s" type="radio" default="1" label="PLG_VMCUSTOM_PARAM_XML_S_TITLE" description="PLG_VMCUSTOM_PARAM_XML_S_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<!-- Method -->
+				<field name="m" type="radio" default="OR" label="PLG_VMCUSTOM_PARAM_XML_M_TITLE" description="PLG_VMCUSTOM_PARAM_XML_M_DESC">
+					<option value="OR">OR</option>
+					<option value="AND">AND</option>
+				</field>
+				<!-- Field type -->
+				<field name="ft" type="radio" default="text" label="PLG_VMCUSTOM_PARAM_XML_FT_TITLE" description="PLG_VMCUSTOM_PARAM_XML_FT_DESC">
+					<option value="text">PLG_VMCUSTOM_PARAM_XML_FT_1</option>
+					<option value="int">PLG_VMCUSTOM_PARAM_XML_FT_2</option>
+				</field>
+				<!-- Type -->
+				<field	name="t" type="filelist" label="PLG_VMCUSTOM_PARAM_XML_T_TITLE"
+						description="PLG_VMCUSTOM_PARAM_XML_T_DESC"
+						directory="/modules/mod_virtuemart_param_filter/tmpl/customfields"
+						default="checkbox" hide_default="1" hide_none="1"
+						stripext="1" filter="\.php$" exclude="^auto" />
+				<!-- assign fields -->
+				<field name="af" type="customparamlist" label="PLG_VMCUSTOM_PARAM_XML_AF_TITLE" description="PLG_VMCUSTOM_PARAM_XML_AF_DESC" />
+				<field name="ld" type="text"  size="64" default="" label="PLG_VMCUSTOM_PARAM_XML_LD_TITLE" description="PLG_VMCUSTOM_PARAM_XML_LD_DESC" />
+				<field name="av" type="text"  size="64" default="" label="PLG_VMCUSTOM_PARAM_XML_AV_TITLE" description="PLG_VMCUSTOM_PARAM_XML_AV_DESC" />
+				<!-- show zero -->
+				<field name="z" type="radio" default="default" label="PLG_VMCUSTOM_PARAM_XML_Z_TITLE" description="PLG_VMCUSTOM_PARAM_XML_Z_DESC">
+					<option value="default">default</option>
+					<option value="hidden">hidden</option>
+					<option value="disable">disable</option>
+					<option value="show">show</option>
+				</field>
+				<!-- Default values -->
+				<field name="vd" type="paramvalues" label="PLG_VMCUSTOM_PARAM_XML_VD_TITLE" description="PLG_VMCUSTOM_PARAM_XML_VD_DESC" />
+		
+            </fieldset>
+        </fields>
+	</vmconfig>
+
+    <params addpath="/modules/mod_virtuemart_param_filter/assets/fields">
+        <param type="vmjpluginwarning" />
+		<!-- Name -->
+        <param name="n" type="text" size="64"  default="" label="PLG_VMCUSTOM_PARAM_XML_N_TITLE" description="PLG_VMCUSTOM_PARAM_XML_N_DESC" />
+		<!-- Searchable -->
+        <param name="s" type="radio" default="1" label="PLG_VMCUSTOM_PARAM_XML_S_TITLE" description="PLG_VMCUSTOM_PARAM_XML_S_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<!-- Method -->
+        <param name="m" type="radio" default="OR" label="PLG_VMCUSTOM_PARAM_XML_M_TITLE" description="PLG_VMCUSTOM_PARAM_XML_M_DESC">
+			<option value="OR">OR</option>
+			<option value="AND">AND</option>
+		</param>
+		<!-- Field type -->
+		<param name="ft" type="radio" default="text" label="PLG_VMCUSTOM_PARAM_XML_FT_TITLE" description="PLG_VMCUSTOM_PARAM_XML_FT_DESC">
+			<option value="text">PLG_VMCUSTOM_PARAM_XML_FT_1</option>
+			<option value="int">PLG_VMCUSTOM_PARAM_XML_FT_2</option>
+		</param>
+		<!-- Type -->
+		<param	name="t" type="filelist" label="PLG_VMCUSTOM_PARAM_XML_T_TITLE"
+             	description="PLG_VMCUSTOM_PARAM_XML_T_DESC"
+             	directory="/modules/mod_virtuemart_param_filter/tmpl/customfields"
+             	default="checkbox" hide_default="1" hide_none="1"
+             	stripext="1" filter="\.php$" exclude="^auto" />
+		<!-- assign fields -->
+		<param name="af" type="customparamlist" label="PLG_VMCUSTOM_PARAM_XML_AF_TITLE" description="PLG_VMCUSTOM_PARAM_XML_AF_DESC" />
+        <param name="ld" type="text"  size="64" default="" label="PLG_VMCUSTOM_PARAM_XML_LD_TITLE" description="PLG_VMCUSTOM_PARAM_XML_LD_DESC" />
+        <param name="av" type="text"  size="64" default="" label="PLG_VMCUSTOM_PARAM_XML_AV_TITLE" description="PLG_VMCUSTOM_PARAM_XML_AV_DESC" />
+        <!-- show zero -->
+        <param name="z" type="radio" default="default" label="PLG_VMCUSTOM_PARAM_XML_Z_TITLE" description="PLG_VMCUSTOM_PARAM_XML_Z_DESC">
+			<option value="default">default</option>
+			<option value="hidden">hidden</option>
+			<option value="disable">disable</option>
+			<option value="show">show</option>
+		</param>
+		<!-- Default values -->
+        <param name="vd" type="paramvalues" label="PLG_VMCUSTOM_PARAM_XML_VD_TITLE" description="PLG_VMCUSTOM_PARAM_XML_VD_DESC" />
+    
+	</params>
+</extension>

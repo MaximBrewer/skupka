@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>COM_ACCORDEONCK</name>
+	<author>Cédric KEIFLIN</author>
+	<creationDate>Octobre 2016</creationDate>
+	<copyright>(C) 2016 Joomlack - Cédric KEIFLIN. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+	<authorEmail>ced1870@gmail.com</authorEmail>
+	<authorUrl>www.joomlack.fr</authorUrl>
+	<version>2.0.0</version>
+	<description>COM_ACCORDEONCK_XML_DESCRIPTION</description>
+	<scriptfile>install.accordeonck.php</scriptfile>
+	<administration>
+		<menu>COM_ACCORDEONCK</menu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>accordeonck.php</filename>
+			<filename>favicon.ico</filename>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>export</folder>
+			<folder>extensions</folder>
+			<folder>fonts</folder>
+			<folder>helpers</folder>
+			<folder>images</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>presets</folder>
+			<folder>views</folder>
+		</files>
+		<languages>
+			<language tag="en-GB">language/en-GB/en-GB.com_accordeonck.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_accordeonck.sys.ini</language>
+			<language tag="fr-FR">language/fr-FR/fr-FR.com_accordeonck.ini</language>
+			<language tag="fr-FR">language/fr-FR/fr-FR.com_accordeonck.sys.ini</language>
+		</languages>
+	</administration>
+	<updateservers>
+		<server type="extension" priority="1" name="Accordeon Menu CK Params Update">http://update.joomlack.fr/com_accordeonck_update.xml</server>
+	</updateservers>
+</extension>

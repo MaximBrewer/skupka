@@ -1,0 +1,32 @@
+<root>
+  <params name="image" label="Image settings" hidetitle="1">
+    <param type="group" label="Responsive" class="n2-expert">
+      <param name="widget-arrow-responsive-desktop" type="number" label="Desktop" style="width:40px;"/>
+      <param name="widget-arrow-responsive-tablet" type="number" label="Tablet" style="width:40px;"/>
+      <param name="widget-arrow-responsive-mobile" type="number" label="Mobile" style="width:40px;"/></param>
+    <param type="image" name="widget-arrow-previous-image" label="Previous image" class="n2-expert"/>
+    <param type="group" label="Previous">
+      <param type="imagelistfromfolder" name="widget-arrow-previous" label="Shape" folder="previous" post="break"/>
+      <param type="color" name="widget-arrow-previous-color" label="Color" alpha="1"/>
+      <param type="onoff" name="widget-arrow-previous-hover" label="Hover"/>
+      <param type="color" name="widget-arrow-previous-hover-color" label="Hover color" alpha="1"/></param>
+    <param name="widget-arrow-style" type="style" previewmode="button" set="1900" label="Style">
+      <![CDATA[ <div><div class="{styleClassName}" style="display: inline-block;"><img style="display: block;" src="{nextend.imageHelper.fixed($('#sliderwidget-arrow-previous-image').val() || N2Color.colorizeSVG($('[data-image="'+$('#sliderwidget-arrow-previous').val()+'"]').attr('src'), $('#sliderwidget-arrow-previous-color').val()));}" /></div></div> ]]>
+    </param>
+    <param type="widgetposition" name="widget-arrow-previous-position" label="Previous position"/>
+    <param type="widgetposition" name="widget-arrow-next-position" label="Next position"/>
+    <param type="radio" name="widget-arrow-animation" label="Animation" class="n2-expert">
+      <option value="none">None</option>
+      <option value="fade">Fade</option>
+      <option value="horizontal">Horizontal</option>
+      <option value="vertical">Vertical</option>
+    </param>
+    <param type="mirror" name="widget-arrow-mirror" label="Mirror" class="n2-expert"/>
+    <param type="image" name="widget-arrow-next-image" label="Next image" class="n2-expert"/>
+    <param type="group" label="Next" class="n2-expert">
+      <param type="imagelistfromfolder" name="widget-arrow-next" label="Shape" folder="next" post="break"/>
+      <param type="color" name="widget-arrow-next-color" label="Color" alpha="1"/>
+      <param type="onoff" name="widget-arrow-next-hover" label="Hover"/>
+      <param type="color" name="widget-arrow-next-hover-color" label="Hover color" alpha="1"/></param>
+  </params>
+</root>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="jform">
+		<fieldset name="user">
+			<field name="group_separator"
+			       type="text"
+			       class="input-mini"
+			       label="COM_CSVI_GROUP_SEPARATOR_LABEL"
+			       description="COM_CSVI_GROUP_SEPARATOR_DESC"
+			       default="/" />
+		</fieldset>
+	</fields>
+</form>

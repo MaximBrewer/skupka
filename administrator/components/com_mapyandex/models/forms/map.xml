@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/administrator/components/com_mapyandex/models/rules"
+>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="text_map_yandex"
+			type="editor"
+			label="COM_HELLOWORLD_HELLOWORLD_GREETING_LABEL"
+			description="COM_HELLOWORLD_HELLOWORLD_GREETING_DESC"
+			size="100"
+			class="inputbox"
+
+			default=""
+		/>
+			<field name="color_map_yandex" type="color" default="#eee"
+				label="COM_GYMAP_YMCOLORBORDER"
+				description="COM_GYMAP_YMCOLORBORDER" />
+		</fieldset>
+		
+	<fieldset name="map_settings" label="COM_MAPYANDEX_BALOON" >
+	<field name="map_baloon_or_placemark" type="list" label="COM_MAPYANDEX_CHOISE" description="COM_MAPYANDEX_CHOISE_DESCRIPTION" class="inputbox" size="1" default="1">
+		<option value="1">COM_MAPYANDEX_BALOON</option>
+		<option value="0">COM_MAPYANDEX_METKA</option>
+	</field>
+	<field name="map_centering" type="list" label="COM_MAPYANDEX_MAP_CENTERING" description="COM_MAPYANDEX_MAP_CENTERING_DESCR" class="inputbox" size="1" default="1">
+		<option value="1">COM_MAPYANDEX_MAP_CENTERING_ROUTE</option>
+		<option value="0">COM_MAPYANDEX_CENTERING_METKA</option>
+	</field>
+	<field name="autozoom" type="list" label="COM_MAPYANDEX_AUTOZOOM" description="COM_MAPYANDEX_AUTOZOOM_DESCR" class="inputbox" size="1" default="1">
+		<option value="1">COM_MAPYANDEX_YES</option>
+		<option value="0">COM_MAPYANDEX_NO</option>
+	</field>
+	</fieldset>
+
+
+	<fieldset name="map_settings_baloon" label="COM_MAPYANDEX_BALOON_SETTINGS" >
+	
+	<field name="map_baloon_autopan" type="list" label="COM_MAPYANDEX_BALOON_AUTOPAN" description="COM_MAPYANDEX_BALOON_DESCRIPTION_AUTOPAN" class="inputbox" size="1" default="1">
+		<option value="1">COM_MAPYANDEX_YES</option>
+		<option value="0">COM_MAPYANDEX_NO</option>
+	</field>
+
+	<field name="map_baloon_autopanduration" type="text" label="COM_MAPYANDEX_BALOON_AUTOPANDURATION" description="COM_MAPYANDEX_BALOON_DESCRIPTION_AUTOPANDURATION" class="inputbox" size="10" default="500">
+	</field>
+
+	<field name="map_baloon_minheight" type="text" label="COM_MAPYANDEX_BALOON_MINHEIGHT" description="COM_MAPYANDEX_BALOON_MINHEIGHT_DESCRIPTION" class="inputbox" size="10" default="100">
+	</field>
+
+	<field name="map_baloon_minwidth" type="text" label="COM_MAPYANDEX_BALOON_MINWIDTH" description="COM_MAPYANDEX_BALOON_MINWIDTH_DESCRIPTION" class="inputbox" size="10" default="100">
+	</field>
+		
+	</fieldset>
+
+
+	<fieldset name="map_settings_user" label="COM_MAPYANDEX_USER" >
+	
+	<field name="map_settings_user_all" type="list" label="COM_MAPYANDEX_USER_ALL_MARKER" description="COM_MAPYANDEX_USER_ALL_MARKER_DESCRIPTION" class="inputbox" size="1" default="0">
+		<option value="1">COM_MAPYANDEX_USER_ALL</option>
+		<option value="2">COM_MAPYANDEX_USER_REGISTER</option>
+		<option value="0">COM_MAPYANDEX_USER_NOBODY</option>
+	</field>
+
+		
+	</fieldset>
+</form>

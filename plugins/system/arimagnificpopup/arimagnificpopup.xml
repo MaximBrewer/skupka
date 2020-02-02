@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0.0" type="plugin" group="system" method="upgrade" client="site">
+	<name>System - ARI Magnific Popup</name>
+	<author>ARI Soft</author>
+	<creationDate>September 2016</creationDate>
+	<copyright>ARI Soft</copyright>
+	<license>GNU/GPL license (http://www.gnu.org/copyleft/gpl.html)</license>
+	<authorEmail>info@ari-soft.com</authorEmail>
+	<authorUrl>www.ari-soft.com</authorUrl>
+	<version>1.0.1</version>
+	<description>ARI_MAGNIFIC_POPUP_PLUGIN</description>
+	<files>
+		<filename plugin="arimagnificpopup">arimagnificpopup.php</filename>
+		<filename>arimagnificpopup.xml</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_arimagnificpopup.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_arimagnificpopup.sys.ini</language>
+	</languages>
+	<config>
+
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="libraries/arisoft/fields">
+                <field type="arimagnificpopuphelper" name="@helper" addfieldpath="libraries/arimagnificpopup/fields" />
+
+                <field type="section" name="@convertLinksSectionBegin" open="" label="PLG_ARIMAGNIFICPOPUP_LABEL_TRANSFORMLINKS" />
+
+                <field type="section" name="@convertLinksByClassSectionBegin" open="" label="PLG_ARIMAGNIFICPOPUP_LABEL_BYCSSCLASS" />
+                <field type="radio" class="btn-group" name="convertLinks_byclass_enabled" default="0" label="PLG_ARIMAGNIFICPOPUP_LABEL_ENABLED" description="PLG_ARIMAGNIFICPOPUP_DESCR_ENABLEDCONVERTLINKSBYCLASS">
+                    <option value="0">PLG_ARIMAGNIFICPOPUP_LABEL_NO</option>
+                    <option value="1">PLG_ARIMAGNIFICPOPUP_LABEL_YES</option>
+                </field>
+                <field name="convertLinks_byclass_classes" type="cloner" default="" key_field="classes" label="PLG_ARIMAGNIFICPOPUP_LABEL_CSSCLASS" description="PLG_ARIMAGNIFICPOPUP_DESCR_CSSCLASS">
+                    <layout>
+                        <![CDATA[
+					<div id="{$id}" class="ari-cloner-container ari-flex-width" data-cloner-control-key="classes" data-cloner-opt-items="1" data-cloner-opt-minItems="1">
+					    <div class="text-right">
+						    <a href="#" class="btn ari-cloner-add-item" title="@@PLG_ARIMAGNIFICPOPUP_LABEL_ADDITEM@@"><i class="icon-plus"></i> @@PLG_ARIMAGNIFICPOPUP_LABEL_ADDITEM@@</a>
+						    <a href="#" class="btn ari-cloner-resetall-item" title="@@PLG_ARIMAGNIFICPOPUP_LABEL_RESET@@"><i class="icon-remove"></i> @@PLG_ARIMAGNIFICPOPUP_LABEL_RESET@@</a>
+                        </div>
+						<table class="table ari-table-flex ari-cloner-templates-holder" style="width: auto;">
+							<thead>
+								<tr>
+									<th>@@PLG_ARIMAGNIFICPOPUP_LABEL_CSSCLASSNAME@@</th>
+									<th>&nbsp;</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="ari-cloner-template">
+									<td><input type="text" class="input-xlarge" data-cloner-control-key="class" /></td>
+									<td>
+										<div>
+										    <a href="#" class="btn btn-mini ari-cloner-remove-item" title="@@PLG_ARIMAGNIFICPOPUP_LABEL_REMOVE@@"><i class="icon-remove"></i></a>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					]]>
+                    </layout>
+                </field>
+                <field type="section" name="@convertLinksByClassSectionEnd" close="1" />
+
+                <field type="section" name="@convertLinksTargetBlankSectionBegin" open="" label="PLG_ARIMAGNIFICPOPUP_LABEL_WITHTARGETBLANK" class="warning-pro" />
+                    <field type="literal" name="" label="PLG_ARIMAGNIFICPOPUP_LABEL_ENABLED" default="PLG_ARIMAGNIFICPOPUP_LABEL_WARNINGPROVERSION" description="PLG_ARIMAGNIFICPOPUP_DESCR_ENABLEDCONVERTLINKSTARGETBLANK" />
+                <field type="section" name="@convertLinksExternalLinksSectionEnd" close="1" />
+
+                <field type="section" name="@convertLinksMatchesSectionBegin" open="" label="PLG_ARIMAGNIFICPOPUP_LABEL_MATCHLINKS" class="warning-pro" />
+                    <field type="literal" name="" label="PLG_ARIMAGNIFICPOPUP_LABEL_ENABLED" default="PLG_ARIMAGNIFICPOPUP_LABEL_WARNINGPROVERSION" description="PLG_ARIMAGNIFICPOPUP_DESCR_ENABLEDCONVERTLINKSMATCH" />
+                <field type="section" name="@convertLinksMatchesSectionEnd" close="1" />
+
+                <field type="section" name="@convertLinksSectionEnd" close="1" />
+
+                <field type="section" name="@convertImagesSectionBegin" open="" label="PLG_ARIMAGNIFICPOPUP_LABEL_TRANSFORMIMAGES" class="warning-pro" />
+                    <field type="literal" name="" label="PLG_ARIMAGNIFICPOPUP_LABEL_ENABLED" default="PLG_ARIMAGNIFICPOPUP_LABEL_WARNINGPROVERSION" description="PLG_ARIMAGNIFICPOPUP_DESCR_ENABLEDCONVERTIMAGES" />
+                <field type="section" name="@convertImagesSectionEnd" close="1" />
+
+			</fieldset>
+
+            <fieldset name="popup" label="PLG_ARIMAGNIFICPOPUP_LABEL_POPUPSETTINGS" addfieldpath="libraries/arisoft/fields">
+                <field type="radio" class="btn-group" name="opt_alignTop" default="0" label="PLG_ARIMAGNIFICPOPUP_LABEL_ALIGN" description="PLG_ARIMAGNIFICPOPUP_DESCR_POPUPALIGN">
+                    <option value="0">PLG_ARIMAGNIFICPOPUP_LABEL_CENTER</option>
+                    <option value="1">PLG_ARIMAGNIFICPOPUP_LABEL_TOP</option>
+                </field>
+                <field type="radio" class="btn-group" name="opt_enableEscapeKey" default="1" label="PLG_ARIMAGNIFICPOPUP_LABEL_ENABLEESCAPEKEY" description="PLG_ARIMAGNIFICPOPUP_DESCR_ENABLEESCAPEKEY">
+                    <option value="0">PLG_ARIMAGNIFICPOPUP_LABEL_NO</option>
+                    <option value="1">PLG_ARIMAGNIFICPOPUP_LABEL_YES</option>
+                </field>
+                <field type="radio" class="btn-group" name="opt_closeOnBgClick" default="1" label="PLG_ARIMAGNIFICPOPUP_LABEL_CLOSEONBGCLICK" description="PLG_ARIMAGNIFICPOPUP_DESCR_CLOSEONBGCLICK">
+                    <option value="0">PLG_ARIMAGNIFICPOPUP_LABEL_NO</option>
+                    <option value="1">PLG_ARIMAGNIFICPOPUP_LABEL_YES</option>
+                </field>
+                <field type="radio" class="btn-group" name="opt_showCloseBtn" default="1" label="PLG_ARIMAGNIFICPOPUP_LABEL_SHOWCLOSEBTN" description="PLG_ARIMAGNIFICPOPUP_DESCR_SHOWCLOSEBTN">
+                    <option value="0">PLG_ARIMAGNIFICPOPUP_LABEL_NO</option>
+                    <option value="1">PLG_ARIMAGNIFICPOPUP_LABEL_YES</option>
+                </field>
+                <field type="list" name="opt_fx_fxOpen" default="" label="PLG_ARIMAGNIFICPOPUP_LABEL_OPENFX" description="PLG_ARIMAGNIFICPOPUP_DESCR_OPENFX">
+                    <option value="">PLG_ARIMAGNIFICPOPUP_LABEL_NONE</option>
+                    <option value="3d-unfold">PLG_ARIMAGNIFICPOPUP_LABEL_FX3DUNFOLD</option>
+                    <option value="move-from-top">PLG_ARIMAGNIFICPOPUP_LABEL_FXMOVEFROMTOP</option>
+                    <option value="move-horizontal">PLG_ARIMAGNIFICPOPUP_LABEL_FXMOVEHORIZONTAL</option>
+                    <option value="newspaper">PLG_ARIMAGNIFICPOPUP_LABEL_FXNEWSPAPER</option>
+                    <option value="zoom-in">PLG_ARIMAGNIFICPOPUP_LABEL_FXZOOMIN</option>
+                    <option value="zoom-out">PLG_ARIMAGNIFICPOPUP_LABEL_FXZOOMOUT</option>
+                </field>
+                <field type="list" name="opt_fx_fxClose" default="" label="PLG_ARIMAGNIFICPOPUP_LABEL_CLOSEFX" description="PLG_ARIMAGNIFICPOPUP_DESCR_CLOSEFX">
+                    <option value="">PLG_ARIMAGNIFICPOPUP_LABEL_NONE</option>
+                    <option value="3d-unfold">PLG_ARIMAGNIFICPOPUP_LABEL_FX3DUNFOLD</option>
+                    <option value="move-from-top">PLG_ARIMAGNIFICPOPUP_LABEL_FXMOVEFROMTOP</option>
+                    <option value="move-horizontal">PLG_ARIMAGNIFICPOPUP_LABEL_FXMOVEHORIZONTAL</option>
+                    <option value="newspaper">PLG_ARIMAGNIFICPOPUP_LABEL_FXNEWSPAPER</option>
+                    <option value="zoom-in">PLG_ARIMAGNIFICPOPUP_LABEL_FXZOOMIN</option>
+                    <option value="zoom-out">PLG_ARIMAGNIFICPOPUP_LABEL_FXZOOMOUT</option>
+                </field>
+
+                <field type="section" name="@slideshowSectionBegin" open="" label="PLG_ARIMAGNIFICPOPUP_LABEL_SLIDESHOW" class="warning-pro" />
+                    <field type="literal" name="" label="PLG_ARIMAGNIFICPOPUP_LABEL_ENABLED" default="PLG_ARIMAGNIFICPOPUP_LABEL_WARNINGPROVERSION" description="" />
+                <field type="section" name="@slideshowSectionEnd" close="1" />
+
+                <field type="section" name="@mobileSettingsSectionBegin" open="" label="PLG_ARIMAGNIFICPOPUP_LABEL_MOBILESETTINGS" class="warning-pro" />
+                    <field type="literal" name="" label="PLG_ARIMAGNIFICPOPUP_LABEL_ENABLED" default="PLG_ARIMAGNIFICPOPUP_LABEL_WARNINGPROVERSION" description="PLG_ARIMAGNIFICPOPUP_DESCR_DISABLEONMOBILE" />
+                <field type="section" name="@mobileSettingsSectionEnd" close="1"  />
+
+                <field type="section" name="@retinaImageSectionBegin" open="" label="PLG_ARIMAGNIFICPOPUP_LABEL_RETINAIMAGES" class="warning-pro" />
+                    <field type="literal" name="" label="PLG_ARIMAGNIFICPOPUP_LABEL_ENABLED" default="PLG_ARIMAGNIFICPOPUP_LABEL_WARNINGPROVERSION" description="PLG_ARIMAGNIFICPOPUP_DESCR_RETINAENABLED" />
+                <field type="section" name="@retinaImageSectionEnd" close="1"  />
+            </fieldset>
+
+            <fieldset name="layout" label="PLG_ARIMAGNIFICPOPUP_LABEL_LAYOUTSETTINGS" addfieldpath="libraries/arisoft/fields">
+                <field type="section" name="@layoutGallerySectionBegin" open="" label="PLG_ARIMAGNIFICPOPUP_LABEL_GALLERY" />
+                <field type="text" name="mediagallery_mainClass" class="input-xlarge" default="" label="PLG_ARIMAGNIFICPOPUP_LABEL_CSSCLASS" description="PLG_ARIMAGNIFICPOPUP_DESCR_GALLERYCSSCLASS" />
+
+                <field type="section" name="@layoutImagesSectionBegin" open="" label="PLG_ARIMAGNIFICPOPUP_LABEL_IMAGES" />
+                    <field type="radio" class="btn-group" name="mediagallery_lazyLoad" default="1" label="PLG_ARIMAGNIFICPOPUP_LABEL_LAZYLOAD" description="PLG_ARIMAGNIFICPOPUP_DESCR_LAZYLOAD">
+                        <option value="0">PLG_ARIMAGNIFICPOPUP_LABEL_NO</option>
+                        <option value="1">PLG_ARIMAGNIFICPOPUP_LABEL_YES</option>
+                    </field>
+                <field type="section" name="@layoutImagesSectionEnd" close="1"  />
+
+                <field type="section" name="@layoutPagingSectionBegin" open="" label="PLG_ARIMAGNIFICPOPUP_LABEL_PAGING" class="warning-pro" />
+                    <field type="literal" name="" label="PLG_ARIMAGNIFICPOPUP_LABEL_ENABLED" default="PLG_ARIMAGNIFICPOPUP_LABEL_WARNINGPROVERSION" description="PLG_ARIMAGNIFICPOPUP_DESCR_PAGINGENABLED" />
+                <field type="section" name="@layoutPagingSectionEnd" close="1"  />
+
+                <field type="section" name="@layoutGallerySectionEnd" close="1" />
+            </fieldset>
+
+            <fieldset name="types" label="PLG_ARIMAGNIFICPOPUP_LABEL_TYPESSETTINGS" addfieldpath="libraries/arisoft/fields">
+                <field type="section" name="@gallerySectionBegin" open="" label="PLG_ARIMAGNIFICPOPUP_LABEL_IMAGEGALLERY" />
+                    <field type="section" name="@galleryDataSectionBegin" open="" label="PLG_ARIMAGNIFICPOPUP_LABEL_DATAPARAMETERS" />
+                <field type="text" name="gallery_search_fileFilter" filter="raw" class="input-xlarge" default="(?&lt;!@2x)\.(jpg|gif|jpeg|png|bmp|JPG|GIF|JPEG|BMP)$" label="PLG_ARIMAGNIFICPOPUP_LABEL_IMAGEFILEFILTER" description="PLG_ARIMAGNIFICPOPUP_DESCR_IMAGEFILEFILTER" />
+                <field type="radio" class="btn-group" name="gallery_search_subdir" default="1" label="PLG_ARIMAGNIFICPOPUP_LABEL_SCANSUBFOLDERS" description="PLG_ARIMAGNIFICPOPUP_DESCR_SCANSUBFOLDERS">
+                    <option value="0">PLG_ARIMAGNIFICPOPUP_LABEL_NO</option>
+                    <option value="1">PLG_ARIMAGNIFICPOPUP_LABEL_YES</option>
+                </field>
+                <field type="list" name="gallery_search_sortBy" default="" label="PLG_ARIMAGNIFICPOPUP_LABEL_SORTBY" description="PLG_ARIMAGNIFICPOPUP_DESCR_GALLERYSORTBY">
+                    <option value="">PLG_ARIMAGNIFICPOPUP_LABEL_NONE</option>
+                    <option value="filename">PLG_ARIMAGNIFICPOPUP_LABEL_FILENAME</option>
+                    <option value="modified">PLG_ARIMAGNIFICPOPUP_LABEL_MODIFIED</option>
+                    <option value="csv">PLG_ARIMAGNIFICPOPUP_LABEL_SORTCSV</option>
+                    <option value="random">PLG_ARIMAGNIFICPOPUP_LABEL_RANDOM</option>
+                </field>
+                <field type="radio" class="btn-group" name="gallery_search_sortDirection" default="desc" label="PLG_ARIMAGNIFICPOPUP_LABEL_SORTDIR" description="PLG_ARIMAGNIFICPOPUP_DESCR_GALLERYSORTDIR">
+                    <option value="asc">PLG_ARIMAGNIFICPOPUP_LABEL_ASCENDING</option>
+                    <option value="desc">PLG_ARIMAGNIFICPOPUP_LABEL_DESCENDING</option>
+                </field>
+                <field type="text" name="gallery_search_metaFile" class="input-xlarge" default="gallery.csv" label="PLG_ARIMAGNIFICPOPUP_LABEL_DESCRIPTIONFILE" description="PLG_ARIMAGNIFICPOPUP_DESCR_DESCRIPTIONFILE" />
+                    <field type="section" name="@galleryDataSectionEnd" close="1" />
+
+                    <field type="section" name="@galleryThumbSectionBegin" open="" label="PLG_ARIMAGNIFICPOPUP_LABEL_THUMBNAILPARAMETERS" />
+                <field type="radio" class="btn-group" name="gallery_search_thumb_thumb_generateThumbs" default="1" label="PLG_ARIMAGNIFICPOPUP_LABEL_GENERATETHUMB" description="PLG_ARIMAGNIFICPOPUP_DESCR_GENERATETHUMB">
+                    <option value="0">PLG_ARIMAGNIFICPOPUP_LABEL_NO</option>
+                    <option value="1">PLG_ARIMAGNIFICPOPUP_LABEL_YES</option>
+                </field>
+                <field type="text" name="gallery_search_thumb_thumb_thumbWidth" class="input-mini" default="150" label="PLG_ARIMAGNIFICPOPUP_LABEL_WIDTH" description="PLG_ARIMAGNIFICPOPUP_DESCR_WIDTH" />
+                <field type="text" name="gallery_search_thumb_thumb_thumbHeight" class="input-mini" default="" label="PLG_ARIMAGNIFICPOPUP_LABEL_HEIGHT" description="PLG_ARIMAGNIFICPOPUP_DESCR_HEIGHT" />
+                    <field type="section" name="@galleryThumbSectionEnd" close="1" />
+
+                <field type="section" name="@gallerySectionEnd" close="1"  />
+
+                <field type="section" name="@youtubeSectionBegin" open="" label="PLG_ARIMAGNIFICPOPUP_LABEL_YOUTUBE" />
+                <field type="radio" class="btn-group" name="ext_youtube_params_autoplay" default="1" label="PLG_ARIMAGNIFICPOPUP_LABEL_AUTOPLAY" description="PLG_ARIMAGNIFICPOPUP_DESCR_AUTOPLAYVIDEO">
+                    <option value="0">PLG_ARIMAGNIFICPOPUP_LABEL_NO</option>
+                    <option value="1">PLG_ARIMAGNIFICPOPUP_LABEL_YES</option>
+                </field>
+                <field type="radio" class="btn-group" name="ext_youtube_params_rel" default="1" label="PLG_ARIMAGNIFICPOPUP_LABEL_RELATEDVIDEOS" description="PLG_ARIMAGNIFICPOPUP_DESCR_RELATEDVIDEOS">
+                    <option value="0">PLG_ARIMAGNIFICPOPUP_LABEL_NO</option>
+                    <option value="1">PLG_ARIMAGNIFICPOPUP_LABEL_YES</option>
+                </field>
+                <field type="section" name="@youtubeSectionEnd" close="1"  />
+            </fieldset>
+
+            <fieldset name="advanced">
+				<field type="text" name="plugintag" default="popup" label="PLG_ARIMAGNIFICPOPUP_LABEL_PLUGINTAG" description="PLG_ARIMAGNIFICPOPUP_DESCR_PLUGINTAG" />
+
+                <field type="text" name="linktag" default="text" label="Название тега data"  description="Название тега data" />
+
+                <field type="radio" class="btn-group" name="hidePro" default="0" label="PLG_ARIMAGNIFICPOPUP_LABEL_HIDEPRO" description="PLG_ARIMAGNIFICPOPUP_DESCR_HIDEPRO">
+                    <option value="0">PLG_ARIMAGNIFICPOPUP_LABEL_NO</option>
+                    <option value="1">PLG_ARIMAGNIFICPOPUP_LABEL_YES</option>
+                </field>
+                <field type="radio" class="btn-group" name="loadJQuery" default="1" label="PLG_ARIMAGNIFICPOPUP_LABEL_JQLOAD" description="PLG_ARIMAGNIFICPOPUP_DESCR_JQLOAD">
+                    <option value="0">PLG_ARIMAGNIFICPOPUP_LABEL_NO</option>
+                    <option value="1">PLG_ARIMAGNIFICPOPUP_LABEL_YES</option>
+                </field>
+                <field type="radio" class="btn-group" name="jQueryNoConflict" default="1" label="PLG_ARIMAGNIFICPOPUP_LABEL_NOCONFLICT" description="PLG_ARIMAGNIFICPOPUP_DESCR_NOCONFLICT">
+                    <option value="0">PLG_ARIMAGNIFICPOPUP_LABEL_NO</option>
+                    <option value="1">PLG_ARIMAGNIFICPOPUP_LABEL_YES</option>
+                </field>
+                <field type="textarea" class="input-xlarge" rows="10" name="customstyles" default="" label="PLG_ARIMAGNIFICPOPUP_LABEL_CUSTOMSTYLES" description="PLG_ARIMAGNIFICPOPUP_DESCR_CUSTOMSTYLES" />
+
+                <field type="section" name="@filenameToTitleSectionBegin" open="" label="PLG_ARIMAGNIFICPOPUP_LABEL_FILENAMETOTITLE" />
+                <field type="radio" class="btn-group" name="nametotitle_enabled" default="1" label="PLG_ARIMAGNIFICPOPUP_LABEL_ENABLED" description="PLG_ARIMAGNIFICPOPUP_DESCR_FILENAMETOTITLEENABLED">
+                    <option value="0">PLG_ARIMAGNIFICPOPUP_LABEL_NO</option>
+                    <option value="1">PLG_ARIMAGNIFICPOPUP_LABEL_YES</option>
+                </field>
+                <field type="list" name="nametotitle_transform" class="ctrl-textTransform" default="" label="PLG_ARIMAGNIFICPOPUP_LABEL_TRANSFORMTEXT" description="PLG_ARIMAGNIFICPOPUP_DESCR_TRANSFORMTEXT">
+                    <option value="">PLG_ARIMAGNIFICPOPUP_LABEL_NONE</option>
+                    <option value="lower_case">PLG_ARIMAGNIFICPOPUP_LABEL_LOWERCASE</option>
+                    <option value="upper_case">PLG_ARIMAGNIFICPOPUP_LABEL_UPPERCASE</option>
+                    <option value="upper_first">PLG_ARIMAGNIFICPOPUP_LABEL_CFIRSTCHART</option>
+                    <option value="upper_words">PLG_ARIMAGNIFICPOPUP_LABEL_CWORDS</option>
+                    <option value="_advanced">PLG_ARIMAGNIFICPOPUP_LABEL_ADVANCED</option>
+                </field>
+                <field type="text" class="input-xlarge ctrl-textTransformAdvanced" name="nametotitle_transformtemplate" default="{$baseFileName}" label="PLG_ARIMAGNIFICPOPUP_LABEL_TRANSFORMTEMPLATE" description="PLG_ARIMAGNIFICPOPUP_DESCR_TRANSFORMTEMPLATE" />
+
+                <field type="section" name="@filenameToTitleSectionEnd" close="1"  />
+            </fieldset>
+		</fields>
+	</config>
+</extension>

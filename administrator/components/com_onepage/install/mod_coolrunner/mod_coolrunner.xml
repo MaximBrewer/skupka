@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.5.0" method="upgrade">
+	<name>mod_coolrunner</name>
+	<author>www.rupostel.com</author>
+	<creationDate>20110107</creationDate>
+	<copyright>(C) rupostel.com</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@rupostel.com</authorEmail>
+	<authorUrl>http://www.rupostel.com</authorUrl>
+	<version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+	<description><![CDATA[
+CoolRunner Module to choose your adress from the Map. 
+	]]>
+	</description>
+	<files>
+		<filename module="mod_coolrunner">mod_coolrunner.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>media</folder>
+		<folder>tmpl</folder>
+	</files>
+	
+	<config>
+	<fields name="params">
+		
+
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+				>
+					
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+				
+				
+				</fieldset>
+				<fieldset name="SHIPCONF">
+				<field
+					name="shipping_methods_post"
+					type="text"
+					default=""
+					label="MOD_COOLRUNNER_IDS_POST"
+					description="MOD_COOLRUNNER_IDS_DESC" >
+				</field>
+				<field
+					name="shipping_methods_dao"
+					type="text"
+					default=""
+					label="MOD_COOLRUNNER_IDS_DAO"
+					description="MOD_COOLRUNNER_IDS_DESC" >
+				</field>
+				
+				<field
+					name="shipping_methods_gls"
+					type="text"
+					default=""
+					label="MOD_COOLRUNNER_IDS_GLS"
+					description="MOD_COOLRUNNER_IDS_DESC" >
+				</field>
+				
+				<field
+					name="mapkey"
+					type="text"
+					label="MOD_COOLRUNNER_GOOGLEMAP_KEY"
+					description="MOD_COOLRUNNER_GOOGLEMAP_KEY" 
+					default="">
+				
+				</field>
+				
+				
+					<field
+					name="clientid"
+					type="text"
+					label="MOD_COOLRUNNER_GOOGLEMAP_CLIENTID"
+					description="MOD_COOLRUNNER_GOOGLEMAP_CLIENTID" 
+					default="">
+				
+				</field>
+			
+			</fieldset>
+	</fields>
+	
+	
+	</config> 
+	
+	
+</extension>

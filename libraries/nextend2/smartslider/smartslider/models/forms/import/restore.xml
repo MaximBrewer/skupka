@@ -1,0 +1,12 @@
+<root>
+  <params name="restore-by-upload" label="Restore slider by upload - delete the slider with the same ID">
+    <param name="import-file" type="upload" label="Import file"/>
+    <param name="image-mode" type="radio" label="Image mode" default="clone" class="n2-expert">
+      <option value="clone">Clone</option>
+      <option value="update">Old site url</option>
+      <option value="original">Original</option>
+    </param>
+    <param name="linked-visuals" type="onoff" label="Use linked visuals" default="1" class="n2-expert"/>
+    <param type="token"/>
+  </params>
+</root>

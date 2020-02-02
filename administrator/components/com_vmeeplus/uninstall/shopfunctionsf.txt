@@ -1,0 +1,4 @@
+$user= self::sendVmMail($view, $recipient,$noVendorMail);
+			if (isset($view->doVendor) && !$noVendorMail) {
+				self::sendVmMail($view, $view->vendorEmail, true);
+			}

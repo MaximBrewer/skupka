@@ -1,0 +1,25 @@
+<root translate="accordionmenu">
+  <params label="Joomla_menu_properties">
+    
+    <param name="joomlamenu" type="joomlamenuwithitems" default="mainmenu|*|0" label="Menu" description="If_you_select_only_one_root_menu_item__" >
+        <param type="joomlamenu" label="Menu" />
+        <param type="joomlamenuitems" label="Menu_root" multiple="1" size="10" />
+    </param>
+    <param name="rootasitem" type="onoff" default="0" label="Singe_root_as_menuitem" description="If_enabled_and_one_selected_in_the_previous__"/>
+    <param name="displaynum" type="onoff" default="0" label="Display_number_of_subitems" description="Display_the_item_count_for_a_parent_item" />
+    <param name="displaynumarticles" type="onoff" default="0" label="Display number of articles" />
+    <param name="loadposition" type="onoff" default="0" label="Load_module_feature" description="Create_an_separator_type_menu_item_and__"/>
+    <param name="menuicons" type="mixed" label="Menu_icons" default="0|*|0|*|0" description="If_enabled_the_menu_will_add_the_specified_image_from_the_menu_item">
+        <param type="onoff" label="Show" />
+        <param type="radio" label="Alignment" >
+            <option value="0">Left</option>
+            <option value="1">Right</option>
+        </param>
+        <param type="onoff" label="Only_icon" />
+    </param>
+    <param name="hidebycssclass" type="mixed" label="Filter_by_Link_CSS_Style" default="0|*|invisible" description="If_enabled_the_menu_will_check_every_menuitems__">
+        <param type="onoff" label="Filter" />
+        <param type="text" label="Filter_by" />
+    </param>
+  </params>
+</root>

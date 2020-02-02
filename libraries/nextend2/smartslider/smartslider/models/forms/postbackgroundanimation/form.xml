@@ -1,0 +1,12 @@
+<root>
+  <params name="ken-burns-form" label="Properties" class="n2-expert">
+    <param name="transformorigin" label="Focus point" type="mixed" default="50|*|50">
+      <param type="numberautocomplete" label="X" style="width: 22px;" values="0,50,100">
+        <unit value="%">%</unit>
+      </param>
+      <param type="numberautocomplete" label="Y" style="width: 22px;" values="0,50,100">
+        <unit value="%">%</unit>
+      </param>
+    </param>
+  </params>
+</root>

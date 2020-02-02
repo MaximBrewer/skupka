@@ -1,0 +1,8 @@
+<root>
+    <params name="filter" label="Filter">
+        <param label="Album" type="group">
+            <param name="facebook-id" type="text" label="User or page" default="me"/>
+            <param name="facebook-album-id" label="Album" type="facebookalbums" default=""/>
+        </param>
+    </params>
+</root>

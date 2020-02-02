@@ -1,0 +1,107 @@
+/* 
+    Document   : btslideshow
+    Created on : Sep 13, 2011, 10:47:13 AM
+    Author     : Thomas
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#btss-dialog {
+}
+
+#btss-gallery-container {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+}
+#btss-gallery-container li {
+	float: left;
+	border: 1px #ddd solid;
+	width: 114px;
+	height: 105px;
+	padding: 3px;
+	margin: 5px;
+	background: #fff;
+	overflow: hidden;
+	cursor: move;
+}
+#btss-gallery-container li img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 114px;
+	height: 85px;
+	margin-bottom: 5px;
+}
+
+#btss-gallery-container a.edit {
+	display: block;
+	float: left;
+	padding: 0 5px;
+}
+#btss-gallery-container a.remove {
+	display: block;
+	float: right;
+	padding: 0 5px;
+}
+
+.bt-message {
+	margin: 2px 0;
+	width: auto;
+	padding: 5px;
+	border: solid 1px #DEDEDE;
+	background: #FFFFCC;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+.btss-upload-spinner {
+    display:inline-block;
+    background: url("../images/loading.gif");
+    width:15px; height:15px;
+    vertical-align:text-bottom;
+}
+.bg-pattern{
+	overflow:hidden;
+	width:96%;
+	float:left;
+	background-color:#EFF0F4!important;
+	padding:5px;
+	margin-bottom:5px;
+}
+.bg-pattern-item{
+	background:#fff;
+	float:left;
+	height:40px;
+	width:40px;
+	margin:5px;
+	cursor:pointer;
+	text-align:center;
+	line-height:40px;
+	font-weight:bold;
+	color:grey;
+}
+.bg-pattern .active{
+	margin:3px;
+	border:2px solid orange;
+}

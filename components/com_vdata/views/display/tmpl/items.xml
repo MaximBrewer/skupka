@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_VDATA_DISPLAY_VIEW_ITEMS_TITLE" option="COM_VDATA_DISPLAY_VIEW_ITEM_OP">
+		<message>
+			<![CDATA[COM_VDATA_DISPLAY_VIEW_ITEMS_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request">
+			<field 
+				name="displayid"
+				type="sql"
+				query="SELECT id,title FROM #__vd_display where state=1"
+				label="COM_VDATA_DISPLAY"
+				description="COM_VDATA_DISPLAY_DESC"
+				key_field="id"
+				value_field="title"
+				required="true"
+			/>
+			
+		</fieldset>
+	</fields>
+
+	<fields name="params">
+
+		<!-- Basic options. -->
+		<!-- <fieldset name="basic"
+			label="COM_VDATA_ATTRIBS_FEED_SELECT_LABEL">
+
+		
+		</fieldset> -->
+	</fields>
+</metadata>

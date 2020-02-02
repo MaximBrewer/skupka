@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view
+		title="Admin Add Shopper">
+		<message><![CDATA[Admin section to add a new shopper]]></message>
+	</view>
+</metadata>

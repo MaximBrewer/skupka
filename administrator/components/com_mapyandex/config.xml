@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fields addfieldpath="/administrator/components/com_mapyandex/models/fields">
+		
+		<fieldset name="display" label="COM_MAPYANDEX_CONFIG_HEAD_DISPLAY_LABEL">
+		<field name="key" type="text" default="" label="COM_MAPYANDEX_KEY" description="COM_MAPYANDEX_KEY"/>
+	
+		<field name="draggable_placemark" type="list" default="1" label="COM_MAPYANDEX_DRAGGABLE_PLACEMARK" description="COM_MAPYANDEX_DRAGGABLE_PLACEMARK_DESC">
+			<option value="0">COM_MAPYANDEX_NO</option>
+			<option value="1">COM_MAPYANDEX_YES</option>
+		</field>
+
+		<field name="new_placemark" type="list" default="1" label="COM_MAPYANDEX_ICONS_PLACEMARK" description="COM_MAPYANDEX_ICONS_PLACEMARK">
+			<option value="0">COM_MAPYANDEX_NO</option>
+			<option value="1">COM_MAPYANDEX_YES</option>
+		</field>
+		
+				<field name="userpathtoimg" type="text" default="/images/mapyandex/yandexmarkerimg/" label="COM_MAPYANDEX_USER_TO_IMG" description="COM_MAPYANDEX_USER_TO_IMG_DESCRIPTION">
+		</field>
+		
+	
+		
+		
+		<field name="mapyandexhead8" type="mapyandexhead" default="COM_MAPYANDEX_ICONS_INFO_ATTETION" label="" description=""/>
+		<field name="use_jquery" type="list" default="1" label="COM_MAPYANDEX_JQUERY" description="COM_MAPYANDEX_ICONS_INFO_ATTETION">
+			<option value="0">COM_MAPYANDEX_NO</option>
+			<option value="1">COM_MAPYANDEX_YES</option>
+		</field>
+		
+
+
+		
+	</fieldset>
+	
+	</fields>
+</config>

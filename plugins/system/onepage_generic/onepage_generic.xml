@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="system" method="upgrade">
+        <name>One Page Checkout for Virtuemart</name>
+        <author>Claes Norin</author>
+        <creationDate>Mar 2016</creationDate>
+        <copyright> Copyright (c) 2012, 2015 All Right Reserved, http://www.joomlaprofessionals.com.</copyright>
+        <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+        <authorEmail>info@joomlaprofessionals.com</authorEmail>
+        <authorUrl>http://www.joomlaprofessionals.com/</authorUrl>
+        <version>2.2.26</version>
+		<description><![CDATA[ 
+	 <table class="table"><tr><td><a href="http://vmonepage.com"><img src="http://vmkco.com/images/logo_vmonepage.png"></a></td><td><h3>Onepage Generic successfully installed.</h3><hr>For more information and to download the latest FREE version of this One Page Checkout please visit <a target="_blank" href="http://vmonepage.com">http://vmonepage.com</a> </h4></td></tr></table>
+	  <table class="table"><tr><td><a href="http://vmkco.com"><img src="http://vmkco.com/images/klarna_logo_mini.png"></a></td><td style="vertical-align: middle;">Looking for Klarna Checkout module? Please visit <a target="_blank" href="http://www.vmkco.com">www.vmkco.com</a> for Free Klarna Checkout Enhanced plugin</td></tr>
+	  <tr><td>
+	  <a  target="_blank" href="http://www.joomlaprofessionals.com"><img src="http://vmuikit.com/images/vm3_logo.png" /></a>
+	  </td><td>VMonepage is built by <a  title="Joomla Pros / Professionals"  target="_blank" href="http://www.joomlaprofessionals.com">www.joomlaprofessionals.com</a></h4></td></tr>
+	  </table>
+		]]></description>
+        <files>
+				<folder>languages</folder>
+				<folder>cart</folder>
+				<folder>fonts</folder>
+				<filename>index.html</filename>
+				<filename>License_GPL2.txt</filename>
+                <filename plugin="onepage_generic">onepage_generic.php</filename>
+                <filename plugin="onepage_generic">onepage_generic.css</filename>
+				<filename plugin="onepage_generic">onepage_generic.js</filename>
+				<filename plugin="onepage_generic">onepage.js</filename>
+				<filename plugin="onepage_generic">vmprices.js</filename>
+        </files>
+        <languages folder="languages">
+        	<language tag="en-GB">en-GB.plg_system_onepage_generic.ini</language>
+			<language tag="sv-SE">sv-SE.plg_system_onepage_generic.ini</language>
+			<language tag="nl-NL">nl-NL.plg_system_onepage_generic.ini</language>
+			<language tag="nb-NO">nb-NO.plg_system_onepage_generic.ini</language>
+			<language tag="it-IT">it-IT.plg_system_onepage_generic.ini</language>
+			<language tag="pl-PL">pl-PL.plg_system_onepage_generic.ini</language>
+			<language tag="pt-BR">pt-BR.plg_system_onepage_generic.ini</language>
+			<language tag="tr-TR">tr-TR.plg_system_onepage_generic.ini</language>
+			<language tag="ru-RU">ru-RU.plg_system_onepage_generic.ini</language>
+			<language tag="ro-RO">ro-RO.plg_system_onepage_generic.ini</language>
+			<language tag="es-ES">es-ES.plg_system_onepage_generic.ini</language>
+        </languages>
+	    <updateservers>
+  	      <server type="extension" name="VMOnepage Update Site"><![CDATA[http://vmonepage.com/releases/vmonepage_update.xml]]></server>
+        </updateservers>
+        <config>
+	        <fields name="params">
+	                <fieldset name="basic">
+						
+	                	
+	                
+						<field 	name="show_extraterms"	type="radio" class="btn-group btn-group-yesno"	label="Show Legislative Decree 196/03"
+			description="" default="0">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+						</field>	 
+						<field 	name="popup_address"	type="radio" class="btn-group btn-group-yesno"	label="Which address show in Popup" description="" default="1">
+							<option value="1">Shipto</option>
+							<option value="2">Billto</option>
+						</field>
+						<field 	name="hide_oneshipment"	type="radio" class="btn-group btn-group-yesno"	label="Hide Shipment Block(If one Shipment)"	description="" default="0">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+						</field>	
+						<field 	name="hide_onepayment"	type="radio" class="btn-group btn-group-yesno"	label="Hide Payment Block(If one Payment)"
+			description="" default="0">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+						</field>	
+						
+						<field 	name="list_allpayment"	type="radio" class="btn-group btn-group-yesno"	label="List all payments"
+			description="" default="0">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+						</field>	
+						<field 	name="list_allshipment"	type="radio" class="btn-group btn-group-yesno"	label="List all shipments"
+			description="" default="0">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+						</field>	
+						
+						
+						<field 	name="show_onlyguest" type="radio" class="btn-group btn-group-yesno" label="Show Guest" 	description="" default="0">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+						</field>
+						
+						<field name="buttoncolour" type="color" label="Button Color" />
+						
+						<field 	name="button_primary" type="text" label="Button Primary class"  description="Primary Button html class to use(leave blank to use default)" default="" />
+						<field 	name="button_danger" type="text" label="Button Danger Class"  description="Danger Button html class to use(leave blank to use default)" default="" />
+						<field 	name="form_danger" type="text" label="Form Danger Class"  description="Danger Form html class to use(leave blank to use default)" default="" />
+						
+						<field 	name="activetab" type="radio" class="btn-group btn-group-yesno" label="Active Tab" 	description="" default="0">							<option value="1">REGISTER</option>
+							<option value="2">GUEST</option>
+							<option value="3">LOGIN</option>
+							<option value="4">NONE</option>
+						</field>
+						<field 	name="hide_countryfield"	type="radio" class="btn-group btn-group-yesno"	label="Hide Country(You Must Select Default Country in Backend)"	description="" default="0">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+						</field>
+						<field 	name="hide_statefield"	type="radio" class="btn-group btn-group-yesno"	label="Hide State(You Must Select Default State in Backend)"	description="" default="0">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+						</field>
+						<field 	name="check_terms"	type="radio" class="btn-group btn-group-yesno"	label="Checked Terms and condirions"	description="" default="0">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+						</field>	
+							<field 	name="show_forgot"	type="radio" class="btn-group btn-group-yesno"	label="Show forgot Username and Password"	description="" default="1">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+						</field>	
+						<field 	name="layout_width"	type="list" class="btn-group btn-group-yesno"	label="Layout Width(Left / Right)"	description="" default="0">
+							<option value="1">3-5 / 2-5</option>
+							<option value="2">2-3 / 1-3</option>
+							<option value="3">1-2 / 1-2</option>
+							<option value="4">Full Width</option>
+						</field>	
+						
+						
+						
+						<field 	name="country_reload"	type="radio" class="btn-group btn-group-yesno"	label="Reload Page while change Country"	description="" default="0">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+						</field>	
+						<field 	name="ajax_zip"	type="radio" class="btn-group btn-group-yesno"	label="Enable Ajax for Zip code" description="" default="0">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+						</field>
+						<field 	name="use_recaptcha"	type="radio" class="btn-group btn-group-yesno"	label="Use Google Recaptcha(Must filed Recaptcha Key)" description="" default="0">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+						</field>
+						<field 	name="recaptchakey" type="text" class="btn-group btn-group-yesno" label="Recaptcha Key"  description="" default="" />	
+						<field 	name="secretkey" type="text" class="btn-group btn-group-yesno" label="Recaptcha Secret Key"  description="" default="" />	
+						<field 	name="built_by"	type="radio" class="btn-group btn-group-yesno"	label="Display built by footer" description="Do you want to display a backlink to http://vmonepage.com and http://www.joomlaprofessionals.com/ to support the project?" default="1">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+						</field>
+
+
+	                </fieldset>
+
+						
+
+	        </fields>
+        </config>
+</extension>

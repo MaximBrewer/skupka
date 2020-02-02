@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0.0" type="plugin" group="editors-xtd" method="upgrade">
+	<name>Button - ARI Magnific Popup</name>
+	<author>ARI Soft</author>
+	<creationDate>April 2016</creationDate>
+	<copyright>ARI Soft</copyright>
+	<license>GNU/GPL license (http://www.gnu.org/copyleft/gpl.html)</license>
+	<authorEmail>info@ari-soft.com</authorEmail>
+	<authorUrl>www.ari-soft.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_EDITOR_XTD_ARIMAGNIFICPOPUP</description>
+	<files>
+		<filename plugin="arimagnificpopup">arimagnificpopup.php</filename>
+		<filename>arimagnificpopup.xml</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_arimagnificpopup.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_arimagnificpopup.sys.ini</language>
+	</languages>
+	<media folder="media" destination="arimagnificpopup/editor">
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>tpl</folder>
+		<filename>index.html</filename>
+	</media>
+</extension>

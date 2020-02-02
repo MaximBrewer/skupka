@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="params" addfieldpath="/administrator/components/com_yandex_maps/models/fields/">
+			<field
+					name="use_object_view_from_category"
+					type="radio"
+					label="Использовать вид для всех меток категории"
+					description="Все иконки категории будут отображены в данном виде. Даже если у них задан катоммный вид."
+					default="0"
+					class="btn-group"
+			>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+					name="preset"
+					type="listicons"
+					icon="yes"
+					label="Стиль метки&lt;br&gt;по умолчанию"
+					default="islands#icon"
+			/>
+			<field
+					name="iconColor"
+					type="color"
+					label="Цвет метки&lt;br&gt;по умолчанию"
+			/>
+			<field
+					name="iconImageHref"
+					type="media"
+					label="Собственная иконка&lt;br&gt;по умолчанию"
+			/>
+			<field
+					name="iconImageHref_CHANGE"
+					type="script"
+			/>
+			<field
+					name="iconImageSize"
+					type="xy"
+					label="COM_YANDEX_MAPS_OBJECT_ICONIMAGESIZE"
+			/>
+			<field
+					name="iconImageOffset"
+					type="xy"
+					label="COM_YANDEX_MAPS_OBJECT_ICONIMAGEOFFSET"
+			/>
+		</fieldset>
+	</fields>
+	<fields name="metadata" label="JGLOBAL_FIELDSET_METADATA_OPTIONS">
+		<fieldset label="JGLOBAL_FIELDSET_METADATA_OPTIONS" name="metadata">
+			<field name="metakey" type="textarea"
+			label="JFIELD_META_KEYWORDS_LABEL" description="JFIELD_META_KEYWORDS_DESC"
+			rows="3" cols="30" />
+
+			<field name="metadesc" type="textarea"
+				label="JFIELD_META_DESCRIPTION_LABEL" description="JFIELD_META_DESCRIPTION_DESC"
+				rows="3" cols="30" />
+		</fieldset>
+	</fields>
+</form>

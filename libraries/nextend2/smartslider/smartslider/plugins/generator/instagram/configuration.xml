@@ -1,0 +1,9 @@
+<root>
+    <params name="basic" label="Instagram generator">
+        <param name="client_id" type="text" label="Client ID" default=""/>
+        <param name="client_secret" type="text" label="Client secret" default=""/>
+        <param name="access_token" type="instagramtoken" label="Token" default=""/>
+        <param name="callback" type="container" label="Callback url"/>
+        <param type="token"/>
+    </params>
+</root>

@@ -1,0 +1,40 @@
+<root>
+  <params name="slider-type-block-animation" label="Animation settings">
+    <param type="group" label="Ken Burns effect">
+      <param type="postbackgroundanimation" name="kenburns-animation" label="Ken Burns effect" default="50|*|50|*|"/>
+      <param type="list" name="kenburns-animation-speed" label="Speed" default="default" translateable="1">
+        <option value="default">Default</option>
+        <option value="superSlow">Super slow</option>
+        <option value="slow">Slow</option>
+        <option value="normal">Normal</option>
+        <option value="fast">Fast</option>
+        <option value="superFast">Super fast</option>
+      </param>
+      <param type="list" name="kenburns-animation-strength" label="Strength" default="default" translateable="1">
+        <option value="default">Default</option>
+        <option value="superSoft">Super soft</option>
+        <option value="soft">Soft</option>
+        <option value="normal">Normal</option>
+        <option value="strong">Strong</option>
+        <option value="superStrong">Super strong</option>
+      </param>
+    </param>
+  </params>
+  <params name="slider-type-block" label="Block type settings" class="n2-expert">
+    <param type="group" label="Slider background image">
+      <param type="image" name="background" default="" label="Image"/>
+      <param type="onoff" name="background-fixed" default="0" label="Fixed"/>
+      <param type="textautocomplete" name="background-size" default="cover" label="Size" class="n2-expert" values="cover,contain,auto"/></param>
+    <param type="group" label="Slider background video" class="n2-expert">
+      <param name="backgroundVideoMp4" type="video" label="MP4 video" default=""/>
+      <param name="backgroundVideoMuted" type="onoff" label="Muted" default="1"/>
+      <param name="backgroundVideoLoop" type="onoff" label="Loop" default="1"/>
+      <param name="backgroundVideoMode" type="list" label="Fill mode" default="fill" translateable="1">
+        <option value="fill">Fill</option>
+        <option value="fit">Fit</option>
+        <option value="center">Center</option>
+      </param>
+    </param>
+    <param type="textarea" name="slider-css" default="" label="CSS" style2="width: 500px;resize: vertical;"/>
+  </params>
+</root>

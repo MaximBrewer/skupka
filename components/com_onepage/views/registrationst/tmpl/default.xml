@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_ONEPAGE_ST_REGISTRATION">
+            <message><![CDATA[COM_ONEPAGE_ST_REGISTRATION]]></message>
+	</layout>
+	<state>
+		<name>COM_ONEPAGE_ST_REGISTRATION</name>
+		<description><![CDATA[COM_ONEPAGE_ST_REGISTRATION]]></description>
+	</state>
+</metadata>

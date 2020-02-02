@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>mod_cf_search</name>
+	<creationDate>2016-10-3</creationDate>
+	<author>breadkesigns</author>
+	<authorEmail>info@breakdesigns.net</authorEmail>
+	<authorUrl>http://www.breakdesigns.net</authorUrl>
+	<copyright>Copyright(c) 2015 breakdesigns.net</copyright>
+	<license>GNU/GPL v.2</license>
+	<version>2.4.1</version>
+	<description><![CDATA[<h3>Custom Filters <i style="font-size:12px">(v.2.4.1 <span style="font-size:9px">3 October 2016</span>)</i></h3>
+    <span><img src="../modules/mod_cf_filtering/assets/cf_logo.png"/></span>
+    <p style="margin-top:5px; font-size:12px; font-weight:0;">If you use Custom Filters, please post a rating and a review at the 
+    <a target="_blank" href="http://extensions.joomla.org/extensions/extension-specific/virtuemart-extensions/virtuemart-products-search/19684">Joomla! Extensions Directory.</a></p>
+    ]]></description>
+	<files>
+		<filename module="mod_cf_search">mod_cf_search.php</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+		<filename>mod_cf_search.xml</filename>
+	</files>
+	<languages>
+	</languages>
+
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_MOST_READ" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			<field name="module_size" type="list" 	label="MOD_CF_SEARCH_MODULE_SIZE_LABEL" description="MOD_CF_SEARCH_MODULE_SIZE_DESC" default="">
+				<option value="small">MOD_CF_SEARCH_SMALL</option>
+				<option value="">MOD_CF_SEARCH_DEFAULT</option>
+			<option value="large">MOD_CF_SEARCH_LARGE</option>				
+			</field>
+			
+			<field name="results_loading_mode" type="list" default="http"
+					label="MOD_CF_SEARCH_RESULTS_LOADING_MODE_LABEL" description="MOD_CF_SEARCH_RESULTS_LOADING_MODE_DESC">
+				<option value="http">MOD_CF_SEARCH_HTTP</option>
+				<option value="ajax">MOD_CF_SEARCH_AJAX</option>
+			</field>
+
+			<field name="use_results_ajax_spinner" label="MOD_CF_SEARCH_USE_RESULTS_AJAX_SPINNER_LABEL"
+					description="MOD_CF_SEARCH_USE_RESULTS_AJAX_SPINNER_DESC" type="media"
+					preview="false" directory="stories/customfilters/loaders" />
+			</fieldset>
+
+            <fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field name="moduleclass_sfx" type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+
+		</fields>
+
+	</config>
+</extension>

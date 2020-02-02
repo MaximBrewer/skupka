@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension method="upgrade" version="2.5" type="plugin" group="vmcustom" >
+    <name>VM - Custom - Catproduct</name>
+    <creationDate>March 24 2014</creationDate>
+    <author>SM planet - smplanet.net</author>
+    <authorUrl>http://smplanet.net</authorUrl>
+    <copyright>Copyright (C) 2012-2014 SM. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>3.0.8</version>
+    <description>Show child products as catalog with only one add to card for whole products</description>
+	<languages>
+        <language tag="en-GB">en-GB.plg_vmcustom_catproduct.ini</language>
+		<language tag="en-GB">en-GB.plg_vmcustom_catproduct.sys.ini</language>
+    </languages>
+    <files>
+        <filename plugin="catproduct">catproduct.php</filename>
+		<filename>index.html</filename>
+        <folder>catproduct</folder>
+    </files>
+<config>		
+    <fields name="params">
+	<fieldset name="template">
+		<field type="spacer" default="Default layout settings" />
+		<field name="use_default2" type="radio" default="0" label="CATPRODUCT_USEDEFAULT" description="CATPRODUCT_USEDEFAULT_DESC" >
+			<option value="0">Нет</option>
+			<option value="1">Да</option>		
+		</field>
+		<field name="hide_original_addtocart" type="list" default="0" label="CATPRODUCT_HIDE_ADDTOCART" description="CATPRODUCT_HIDE_ADDTOCART" >
+			<option value="css">Hide with css (may hide button also on page without catproduct)</option>
+			<option value="js">Hide with JavaScript (may not work on some templates)</option>
+			<option value="no">Don't hide original addtocart button</option>			
+		</field>
+		<field name="sorting_field" type="list" default="default" label="CATPRODUCT_CHOOSE_SORTING" description="CATPRODUCT_CHOOSE_SORTING" >
+			<option value="default">Default</option>
+			<option value="sortid">Product ID</option>
+			<option value="sortname">Product SKU</option>
+			<option value="sortname">Product Name</option>
+			<option value="sortweight">Product Weight</option>
+			<option value="sortlength">Product Length</option>
+			<option value="sortwidth">Product Width</option>
+			<option value="sortheight">Product Height</option>
+			<option value="sortprice">Product Price</option>
+		</field>
+		<field name="original_addtocart_css" default=".productdetails-view .addtocart-area" type="text"  label="CATPRODUCT_ORIGINAL_ADDTOCART_CSS" description="CATPRODUCT_ORIGINAL_ADDTOCART_CSS" />
+		<field name="orig_add_area" type="text" default=".productdetails-view .addtocart-area" label="CATPRODUCT_ORIGINALADDTOCARTAREACLASS" description="CATPRODUCT_ORIGINALADDTOCARTAREACLASS" />
+		<field name="layout_field" type="filelist" default="default.php" label="CATPRODUCT_CHOOSE_LAYOUT" directory="plugins/vmcustom/catproduct/catproduct/tmpl" hide_none="true" hide_default="true" filter ="php" />
+		<field name="layout_field_children" type="filelist" default="default.php" label="CATPRODUCT_CHOOSE_LAYOUT_CHILDREN" directory="plugins/vmcustom/catproduct/catproduct/tmpl/group_layouts" hide_none="true" hide_default="true" filter ="php" />
+		<field name="layout_field_parent" type="filelist" default="default.php" label="CATPRODUCT_CHOOSE_LAYOUT_PARENT" directory="plugins/vmcustom/catproduct/catproduct/tmpl/group_layouts" hide_none="true" hide_default="true" filter ="php" />
+		<field name="def_qty_children" default="0" type="text"  label="CATPRODUCT_DEFAULT_QTY_CHILDREN" description="CATPRODUCT_DEFAULT_QTY_CHILDREN" />
+		<field name="def_qty_parent" default="0" type="text"  label="CATPRODUCT_DEFAULT_QTY_PARENT" description="CATPRODUCT_DEFAULT_QTY_PARENT" />
+		<field type="spacer" default="Functions settings" />
+		<field name="enable_cs" type="radio" default="0" label="CATPRODUCT_USE_CUSTOM_STRING" description="CATPRODUCT_USE_CUSTOM_STRING_DESC" >
+			<option value="0">Нет</option><option value="1">Да</option>		
+		</field>
+		<field type="spacer" default="Default fields settings" />
+		<field name="use_default" type="radio" default="0" label="CATPRODUCT_USEDEFAULT" description="CATPRODUCT_USEDEFAULT_DESC" >
+			<option value="0">Нет</option><option value="1">Да</option>		
+		</field>
+		<field name="show_image" type="radio" default="0" label="CATPRODUCT_SHOWIMAGE" description="CATPRODUCT_SHOWIMAGE" >
+			<option value="0">Нет</option><option value="1">Да</option>		
+		</field>
+        <field name="show_id" type="radio" default="0" label="CATPRODUCT_SHOWID" description="CATPRODUCT_SHOWID" >
+			<option value="0">Нет</option><option value="1">Да</option>		
+		</field>
+        <field name="show_sku" type="radio"  default="0" label="CATPRODUCT_SHOWSKU" description="CATPRODUCT_SHOWSKU" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+        <field name="show_name" type="radio"  default="0" label="CATPRODUCT_SHOWNAME" description="CATPRODUCT_SHOWNAME" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_s_desc" type="radio"  default="0" label="CATPRODUCT_SHOWSDESC" description="CATPRODUCT_SHOWSDESC" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_weight" type="radio"  default="0" label="CATPRODUCT_WEIGHT" description="CATPRODUCT_WEIGHT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_sizes" type="radio"  default="0" label="CATPRODUCT_SIZES" description="CATPRODUCT_SIZES" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_stock" type="radio"  default="0" label="CATPRODUCT_STOCK" description="CATPRODUCT_STOCK" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_min_qty" type="radio"  default="0" label="CATPRODUCT_SHOW_MIN_QTY" description="CATPRODUCT_SHOW_MIN_QTY" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_max_qty" type="radio"  default="0" label="CATPRODUCT_SHOW_MAX_QTY" description="CATPRODUCT_SHOW_MAX_QTY" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_step_qty" type="radio"  default="0" label="CATPRODUCT_SHOW_STEP_QTY" description="CATPRODUCT_SHOW_STEP_QTY" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_basePrice" type="radio"  default="0" label="CATPRODUCT_BASEPRICE" description="CATPRODUCT_BASEPRICE" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_basePriceWithTax" type="radio"  default="0" label="CATPRODUCT_BASEPRICEWITHTAX" description="CATPRODUCT_BASEPRICEWITHTAX" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_priceWithoutTax" type="radio"  default="0" label="CATPRODUCT_PRICEWITHOUTTAX" description="CATPRODUCT_PRICEWITHOUTTAX" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_salesPrice" type="radio"  default="0" label="CATPRODUCT_SALESPRICE" description="CATPRODUCT_SALESPRICE" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_taxAmount" type="radio"  default="0" label="CATPRODUCT_TAXAMOUNT" description="CATPRODUCT_TAXAMOUNT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_discountAmount" type="radio"  default="0" label="CATPRODUCT_DISCOUNTAMOUNT" description="CATPRODUCT_DISCOUNTAMOUNT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_sum_weight" type="radio"  default="0" label="CATPRODUCT_SUM_WEIGHT" description="CATPRODUCT_SUM_WEIGHT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_sum_basePrice" type="radio"  default="0" label="CATPRODUCT_SUM_BASEPRICE" description="CATPRODUCT_SUM_BASEPRICE" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_sum_basePriceWithTax" type="radio"  default="0" label="CATPRODUCT_SUM_BASEPRICEWITHTAX" description="CATPRODUCT_SUM_BASEPRICEWITHTAX" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_sum_priceWithoutTax" type="radio"  default="0" label="CATPRODUCT_SUM_PRICEWITHOUTTAX" description="CATPRODUCT_SUM_PRICEWITHOUTTAX" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_sum_salesPrice" type="radio"  default="0" label="CATPRODUCT_SUM_SALESPRICE" description="CATPRODUCT_SUM_SALESPRICE" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_sum_taxAmount" type="radio"  default="0" label="CATPRODUCT_SUM_TAXAMOUNT" description="CATPRODUCT_SUM_TAXAMOUNT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_sum_discountAmount" type="radio"  default="0" label="CATPRODUCT_SUM_DISCOUNTAMOUNT" description="CATPRODUCT_SUM_DISCOUNTAMOUNT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_total_weight" type="radio"  default="0" label="CATPRODUCT_TOTAL_WEIGHT" description="CATPRODUCT_TOTAL_WEIGHT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_total_basePrice" type="radio"  default="0" label="CATPRODUCT_TOTAL_BASEPRICE" description="CATPRODUCT_TOTAL_BASEPRICE" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_total_basePriceWithTax" type="radio"  default="0" label="CATPRODUCT_TOTAL_BASEPRICEWITHTAX" description="CATPRODUCT_TOTAL_BASEPRICEWITHTAX" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_total_priceWithoutTax" type="radio"  default="0" label="CATPRODUCT_TOTAL_PRICEWITHOUTTAX" description="CATPRODUCT_TOTAL_PRICEWITHOUTTAX" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_total_salesPrice" type="radio"  default="0" label="CATPRODUCT_TOTAL_SALESPRICE" description="CATPRODUCT_TOTAL_SALESPRICE" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_total_taxAmount" type="radio"  default="0" label="CATPRODUCT_TOTAL_TAXAMOUNT" description="CATPRODUCT_TOTAL_TAXAMOUNT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>
+		<field name="show_total_discountAmount" type="radio"  default="0" label="CATPRODUCT_TOTAL_DISCOUNTAMOUNT" description="CATPRODUCT_TOTAL_DISCOUNTAMOUNT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</field>	
+	</fieldset>
+    </fields>
+</config>
+
+    <params addpath="/administrator/components/com_virtuemart/elements">
+        <param type="vmjpluginwarning" />
+		<param type="spacer" default="Default layout settings" />
+		<param name="use_default2" type="radio" default="0" label="CATPRODUCT_USEDEFAULT" description="CATPRODUCT_USEDEFAULT_DESC" >
+			<option value="0">Нет</option>
+			<option value="1">Да</option>		
+		</param>
+		<param name="hide_original_addtocart" type="list" default="0" label="CATPRODUCT_HIDE_ADDTOCART" description="CATPRODUCT_HIDE_ADDTOCART" >
+			<option value="css">Hide with css (may hide button also on page without catproduct)</option>
+			<option value="js">Hide with JavaScript (may not work on some templates)</option>
+			<option value="no">Don't hide original addtocart button</option>			
+		</param>
+		<param name="sorting_field" type="list" default="default" label="CATPRODUCT_CHOOSE_SORTING" description="CATPRODUCT_CHOOSE_SORTING" >
+			<option value="default">Default</option>
+			<option value="sortid">Product ID</option>
+			<option value="sortname">Product SKU</option>
+			<option value="sortname">Product Name</option>
+			<option value="sortweight">Product Weight</option>
+			<option value="sortlength">Product Length</option>
+			<option value="sortwidth">Product Width</option>
+			<option value="sortheight">Product Height</option>
+			<option value="sortprice">Product Price</option>
+		</param>
+		<param name="original_addtocart_css" default=".productdetails-view .addtocart-area" type="text"  label="CATPRODUCT_ORIGINAL_ADDTOCART_CSS" description="CATPRODUCT_ORIGINAL_ADDTOCART_CSS" />
+		<param name="orig_add_area" type="text" default=".productdetails-view .addtocart-area" label="CATPRODUCT_ORIGINALADDTOCARTAREACLASS" description="CATPRODUCT_ORIGINALADDTOCARTAREACLASS" />
+		<param name="layout_field" type="filelist" default="default.php" label="CATPRODUCT_CHOOSE_LAYOUT" directory="plugins/vmcustom/catproduct/catproduct/tmpl" hide_none="true" hide_default="true" filter ="php" />
+		<param name="layout_field_children" type="filelist" default="default.php" label="CATPRODUCT_CHOOSE_LAYOUT_CHILDREN" directory="plugins/vmcustom/catproduct/catproduct/tmpl/group_layouts" hide_none="true" hide_default="true" filter ="php" />
+		<param name="layout_field_parent" type="filelist" default="default.php" label="CATPRODUCT_CHOOSE_LAYOUT_PARENT" directory="plugins/vmcustom/catproduct/catproduct/tmpl/group_layouts" hide_none="true" hide_default="true" filter ="php" />
+		<param name="def_qty_children" default="0" type="text"  label="CATPRODUCT_DEFAULT_QTY_CHILDREN" description="CATPRODUCT_DEFAULT_QTY_CHILDREN" />
+		<param name="def_qty_parent" default="0" type="text"  label="CATPRODUCT_DEFAULT_QTY_PARENT" description="CATPRODUCT_DEFAULT_QTY_PARENT" />
+		<param type="spacer" default="Functions settings" />
+		<param name="enable_cs" type="radio" default="0" label="CATPRODUCT_USE_CUSTOM_STRING" description="CATPRODUCT_USE_CUSTOM_STRING_DESC" >
+			<option value="0">Нет</option><option value="1">Да</option>		
+		</param>
+		<param type="spacer" default="Default fields settings" />
+		<param name="use_default" type="radio" default="0" label="CATPRODUCT_USEDEFAULT" description="CATPRODUCT_USEDEFAULT_DESC" >
+			<option value="0">Нет</option><option value="1">Да</option>		
+		</param>
+		<param name="show_image" type="radio" default="0" label="CATPRODUCT_SHOWIMAGE" description="CATPRODUCT_SHOWIMAGE" >
+			<option value="0">Нет</option><option value="1">Да</option>		
+		</param>
+        <param name="show_id" type="radio" default="0" label="CATPRODUCT_SHOWID" description="CATPRODUCT_SHOWID" >
+			<option value="0">Нет</option><option value="1">Да</option>		
+		</param>
+        <param name="show_sku" type="radio"  default="0" label="CATPRODUCT_SHOWSKU" description="CATPRODUCT_SHOWSKU" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+        <param name="show_name" type="radio"  default="0" label="CATPRODUCT_SHOWNAME" description="CATPRODUCT_SHOWNAME" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_s_desc" type="radio"  default="0" label="CATPRODUCT_SHOWSDESC" description="CATPRODUCT_SHOWSDESC" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_weight" type="radio"  default="0" label="CATPRODUCT_WEIGHT" description="CATPRODUCT_WEIGHT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_sizes" type="radio"  default="0" label="CATPRODUCT_SIZES" description="CATPRODUCT_SIZES" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_stock" type="radio"  default="0" label="CATPRODUCT_STOCK" description="CATPRODUCT_STOCK" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_min_qty" type="radio"  default="0" label="CATPRODUCT_SHOW_MIN_QTY" description="CATPRODUCT_SHOW_MIN_QTY" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_max_qty" type="radio"  default="0" label="CATPRODUCT_SHOW_MAX_QTY" description="CATPRODUCT_SHOW_MAX_QTY" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_step_qty" type="radio"  default="0" label="CATPRODUCT_SHOW_STEP_QTY" description="CATPRODUCT_SHOW_STEP_QTY" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_basePrice" type="radio"  default="0" label="CATPRODUCT_BASEPRICE" description="CATPRODUCT_BASEPRICE" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_basePriceWithTax" type="radio"  default="0" label="CATPRODUCT_BASEPRICEWITHTAX" description="CATPRODUCT_BASEPRICEWITHTAX" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_priceWithoutTax" type="radio"  default="0" label="CATPRODUCT_PRICEWITHOUTTAX" description="CATPRODUCT_PRICEWITHOUTTAX" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_salesPrice" type="radio"  default="0" label="CATPRODUCT_SALESPRICE" description="CATPRODUCT_SALESPRICE" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_taxAmount" type="radio"  default="0" label="CATPRODUCT_TAXAMOUNT" description="CATPRODUCT_TAXAMOUNT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_discountAmount" type="radio"  default="0" label="CATPRODUCT_DISCOUNTAMOUNT" description="CATPRODUCT_DISCOUNTAMOUNT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_sum_weight" type="radio"  default="0" label="CATPRODUCT_SUM_WEIGHT" description="CATPRODUCT_SUM_WEIGHT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_sum_basePrice" type="radio"  default="0" label="CATPRODUCT_SUM_BASEPRICE" description="CATPRODUCT_SUM_BASEPRICE" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_sum_basePriceWithTax" type="radio"  default="0" label="CATPRODUCT_SUM_BASEPRICEWITHTAX" description="CATPRODUCT_SUM_BASEPRICEWITHTAX" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_sum_priceWithoutTax" type="radio"  default="0" label="CATPRODUCT_SUM_PRICEWITHOUTTAX" description="CATPRODUCT_SUM_PRICEWITHOUTTAX" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_sum_salesPrice" type="radio"  default="0" label="CATPRODUCT_SUM_SALESPRICE" description="CATPRODUCT_SUM_SALESPRICE" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_sum_taxAmount" type="radio"  default="0" label="CATPRODUCT_SUM_TAXAMOUNT" description="CATPRODUCT_SUM_TAXAMOUNT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_sum_discountAmount" type="radio"  default="0" label="CATPRODUCT_SUM_DISCOUNTAMOUNT" description="CATPRODUCT_SUM_DISCOUNTAMOUNT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_total_weight" type="radio"  default="0" label="CATPRODUCT_TOTAL_WEIGHT" description="CATPRODUCT_TOTAL_WEIGHT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_total_basePrice" type="radio"  default="0" label="CATPRODUCT_TOTAL_BASEPRICE" description="CATPRODUCT_TOTAL_BASEPRICE" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_total_basePriceWithTax" type="radio"  default="0" label="CATPRODUCT_TOTAL_BASEPRICEWITHTAX" description="CATPRODUCT_TOTAL_BASEPRICEWITHTAX" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_total_priceWithoutTax" type="radio"  default="0" label="CATPRODUCT_TOTAL_PRICEWITHOUTTAX" description="CATPRODUCT_TOTAL_PRICEWITHOUTTAX" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_total_salesPrice" type="radio"  default="0" label="CATPRODUCT_TOTAL_SALESPRICE" description="CATPRODUCT_TOTAL_SALESPRICE" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_total_taxAmount" type="radio"  default="0" label="CATPRODUCT_TOTAL_TAXAMOUNT" description="CATPRODUCT_TOTAL_TAXAMOUNT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>
+		<param name="show_total_discountAmount" type="radio"  default="0" label="CATPRODUCT_TOTAL_DISCOUNTAMOUNT" description="CATPRODUCT_TOTAL_DISCOUNTAMOUNT" >
+			<option value="0">Нет</option><option value="1">Да</option>
+		</param>	
+    </params>
+	
+</extension>

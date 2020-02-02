@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.5.0" method="upgrade">
+	<name>RuposTel VirtueMart Ajax Search Pro</name>
+	<author>www.rupostel.com</author>
+	<creationDate>20110107</creationDate>
+	<copyright>(C) rupostel.com</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@rupostel.com</authorEmail>
+	<authorUrl>http://www.rupostel.com</authorUrl>
+	<version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+	<description><![CDATA[
+Virtuemart Ajax Search Module created by <a href="http://www.rupostel.com/">rupostel.com</a> team. <br />
+Language variables that you may want to adjust: <br />
+COM_RUPSEARCH_NEXT="JNEXT"<br />
+COM_RUPSEARCH_HASNEXT="There are more products found than shown"<br />
+	]]>
+	</description>
+	<files>
+		<filename module="mod_virtuemart_ajax_search_pro">mod_virtuemart_ajax_search_pro.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>fields</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+	</files>
+	
+	<config>
+	 <fields name = "params" addfieldpath="/modules/mod_virtuemart_ajax_search_pro/fields">
+	   <fieldset name="basic">
+		<field
+            name="cache"
+            type="list"
+            default="0"
+            label="Joomla Caching"
+            description="Module caching is not supperted by this extension in order for head data to load properly.">
+            <option
+                value="0">Not supported</option>
+        </field>
+		<field name="internal_caching" type="radio" default="0" label="Internal HTML caching." description="Enable this feature so this component does not slow down your database queries. Remember to delete content of cache if any of your product names or links change" >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		
+	   <field name="debug" type="radio" default="0" label="Debug mode" description="Debug mode will not hide the results with timer automatically, you can use it to style CSS." >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		</fieldset>
+		
+		<fieldset name="design" label="MOD_VIRTUEMART_AJAX_SEARCH_PRO_DESIGN_FIELDSET_LABEL">
+		<field name="moduleclass_sfx" type="text" default=" ajax_srch" label="Module Class Suffix" description="Add a class to the module" />
+		<field name="pretext" type="textarea" cols="30" rows="5" default="" label="Pre-text" description="Text to appear before the search box" />
+		<field name="posttext" type="textarea" cols="30" rows="5" label="Post-text" description="Text to appear after the search box" />
+		
+		<field name="@spacer" type="spacer" default="" label="Style options" description="" />
+		<field name="include_but" type="radio" default="0" label="Show 'Submit' button" description="Set this option to yes, if you want a button to submit the query to the VM search page.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+			</field>
+		
+		<field name="add_next" type="radio" default="0" label="Add Next Button to Category Product List (Link to more results)." description="Show Next button at the end of the category page" >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+
+		
+		
+		<field name="min_height" type="text" default="" label="Min-height of module" description="Minimum height of the module without the results." />
+		<field name="results_width" type="text" default="272px" label="Results width in px (0 for 100%)" description="Set results width." />
+		
+		<field name="image_width" type="text" default="30" label="Image width in px" description="Set image width as an integer number." />
+		<field name="image_height" type="text" default="30" label="Image height in px" description="Set image height as an integer number." />
+		
+		<field name="results_max_height" type="text" default="" label="Results valid for width style property (incl px or %)." description="Example: 300px" />
+		<field name="css_position" type="list" default="relative" label="CSS position of the results." >
+			<option value="relative">relative</option>
+			<option value="absolute">absolute</option>
+		</field>
+		
+		<field name="resize_component" type="radio" default="1" label="Resize component div" description="Set to No if your theme is fully responsive so the component section does not resize by calculation." >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="left_id" type="text" default="" label="Left column area ID or class" />
+		<field name="right_id" type="text" default="" label="Right column area ID or class" />
+		<field name="component_area_id" type="text" default="" label="Component Area ID or class (check your theme)." description="If left empty, the drop down will be used." />
+		
+		<field name="button_class" type="text" default="" label="Search button CSS class." description="Set CSS class of the search button, if used." />
+		<field name="search_input_class" type="text" default="" label="Search input CSS class." description="Set CSS class of the search input." />
+		<field name="text_width" type="text" default="" label="Search input width." description="Set width of the search input." />
+		<field name="custom_layout" type="modulelayout" default="default" label="Choose search input design" description="Choose whether to load input as shadow dom, or standard html5" />
+		</fieldset>
+		<fieldset name="search" label="MOD_VIRTUEMART_AJAX_SEARCH_PRO_SEARCH_FIELDSET_LABEL">
+		
+		<field name="search_method" type="radio" default="0" label="MOD_VIRTUEMART_AJAX_SEARCH_PRO_METHOD_LABEL" description="MOD_VIRTUEMART_AJAX_SEARCH_PRO_METHOD_DESC">
+			<option value="0">MOD_VIRTUEMART_AJAX_SEARCH_PRO_METHOD_OPT1</option>
+			<option value="1">MOD_VIRTUEMART_AJAX_SEARCH_PRO_METHOD_OPT2</option>
+			</field>
+		
+		<field name="only_in_stock" type="radio" default="0" label="Search products in stock only" description="Search products in stock only">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+			</field>
+		
+		<field name="only_current" type="radio" default="0" label="Search only current category" description="Will search only the current virtuemart category">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+			</field>
+		
+		
+		<field name="cat_search" type="radio" default="0" label="Display categories" description="If a category search is enabled, the search will be applied only per current category or category selected.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		
+		<field name="category_list" type="text" default="" label="Category List IDs" description="By default module picks up all top published categories. You can override the list here by entering category IDs separated by a comma." />
+		
+		<field name="no_ajax" type="radio" default="0" label="No ajax mode" description="When set to Yes, it will not show the drop down while typing. User has to press search or submit (enter).">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+			</field>
+		
+		<field name="text_box_width" type="text" default="" label="MOD_VIRTUEMART_AJAX_SEARCH_PRO_SEARCH_WIDTH" description="MOD_VIRTUEMART_AJAX_SEARCH_PRO_SEARCH_WIDTH_DESC" />
+		
+		<field name="min_chars" type="text" default="0" label="MOD_VIRTUEMART_AJAX_SEARCH_PRO_MINCHARS" />
+		<field name="number_of_products" type="text" default="5" label="MOD_VIRTUEMART_AJAX_SEARCH_PRO_NUMPRODS" />
+		
+		<field name="optional_search" type="list" default="2" label="Optional search parameters" description="Choose if the checkbox to search PRODUCT DESCRIPTION should be available" >
+					<option value="0">Show</option>
+					<option value="1">Do not show and do not search product description</option>
+					<option value="2">Do not show and search always product description</option>
+		</field>			
+		<field name="search_priority" type="uikitorderable" default="PRODUCT_SKU,PRODUCT_NAME,PRODUCT_NAME_WORDS,PRODUCT_NAME_MULTI_WORDS,PRODUCT_SKU_STARTS_WITH,PRODUCT_DESC,PRODUCT_S_DESC,PRODUCT_ATTRIBS,MF_NAME,CAT_NAME,PRODUCT_SKU_ENDS"  values="PRODUCT_SKU,PRODUCT_NAME,PRODUCT_NAME_WORDS,PRODUCT_NAME_MULTI_WORDS,PRODUCT_SKU_STARTS_WITH,PRODUCT_DESC,PRODUCT_S_DESC,PRODUCT_ATTRIBS,MF_NAME,CAT_NAME,PRODUCT_SKU_ENDS" label="MOD_VIRTUEMART_AJAX_SEARCH_PRO_SEARCH_ORDERING"/>
+		
+		
+		<field name="no_short" type="radio" default="0" label="MOD_VIRTUEMART_AJAX_SEARCH_PRO_SHORTENING_LABEL" description="Shortened words may give a better results especially for adjectives">
+			<option value="0">MOD_VIRTUEMART_AJAX_SEARCH_PRO_SHORTENING_V1</option>
+			<option value="1">MOD_VIRTUEMART_AJAX_SEARCH_PRO_SHORTENING_V2</option>
+			</field>
+		
+		
+			<field name="my_itemid" type="text" default="" label="Itemid of the search results." description="Set Itemid of the search results." />
+		
+	
+		
+		
+		<field name="child_products" type="list" default="0" label="Child products handling">
+		  <option value="0">Include both child and parent products</option>
+		  <option value="2">Include only child products and products without child products (skip parent products)</option>
+		  <option value="3">Include only parent products</option>
+		  
+		</field>
+		
+		<field name="order_byf" type="list" default="none" label="Sort by" description="Choose product sorting options" >
+					<option value="none">No sorting (Fastest, sorted only by relevance)</option>
+					<option value="product_name">Sort by product name</option>
+					<option value="created_on">Sort by product creation date</option>
+					<option value="available_on">Sort by product availability</option>
+					
+					<option value="price">Sort by price (calculation plugins are not taken into account and only default shopper group is used)</option>
+		</field>	
+		
+		
+	
+		
+		
+		
+		<field name="use_fulltext" type="fulltext" default="0" label="Add and use fulltext indexes (#__virtuemart_products_{lang}.product_desc, #__virtuemart_products_{lang}.product_s_desc, #__virtuemart_product_customfields.customfield_value)." description="Will alter the tables and use select match against queries." />
+			
+		
+		
+		 </fieldset>
+	</fields>
+	</config> 
+	
+	
+</extension>

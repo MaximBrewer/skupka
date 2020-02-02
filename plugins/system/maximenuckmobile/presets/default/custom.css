@@ -1,0 +1,23 @@
+.mobilemaximenuck {
+    text-shadow: 1px -1px 2px #000;
+}
+
+.mobilemaximenuck div span.descck {
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.mobilemaximenuck div.maximenuck {
+    cursor: pointer;
+    background: url(../../presets/default/separateur.jpg) left bottom repeat-x;
+    min-height: 35px;
+    line-height: 35px;
+    padding: 0;
+    padding-bottom: 3px;
+	position: relative;
+}
+
+
+.open .mobilemaximenucktogglericon:after {
+	background-image: url(../../presets/default/minus.jpg)
+}

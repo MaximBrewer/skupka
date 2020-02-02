@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5.0" type="plugin" group="system" method="upgrade" >
+    <name>PLG_SYSTEM_PRODUCTRESTRICTIONS</name>
+    <creationDate>June 2016</creationDate>
+    <author>The VirtueMart Development Team</author>
+    <authorUrl>http://www.virtuemart.net</authorUrl>
+    <copyright>Copyright (C) 2004-2014 Virtuemart Team. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description><![CDATA[System - Product Restrictions per Country (OPC)]]></description>
+    <languages folder="language/en-GB/">
+        <language tag="en-GB" >en-GB.plg_system_productrestrictions.ini</language>
+		 <language tag="en-GB" >en-GB.plg_system_productrestrictions.sys.ini</language>
+		
+    </languages>
+    <files>
+        <filename plugin="productrestrictions">productrestrictions.php</filename>
+		  
+		   <folder >fields</folder>
+		   <folder >language</folder>
+		   <folder >tmpl</folder>
+    </files>
+	
+	 <config>
+        <fields name="params" addfieldpath="/plugins/system/productrestrictions/fields">
+            <fieldset name="basic">
+				
+				
+				
+				
+				
+				
+				<field name="rederingtype" type="list"  default="" label="PLG_SYSTEM_PRODUCTRESTRICTIONS_RENDERINGTYPE" description="" >
+				 <option value="">PLG_SYSTEM_PRODUCTRESTRICTIONS_RENDERINGTYPE1</option>
+				 <option value="2">PLG_SYSTEM_PRODUCTRESTRICTIONS_RENDERINGTYPE2</option>
+				 <option value="3">PLG_SYSTEM_PRODUCTRESTRICTIONS_RENDERINGTYPE3</option>
+				 <option value="4">PLG_SYSTEM_PRODUCTRESTRICTIONS_RENDERINGTYPE4</option>
+				 
+				</field>
+				
+				<field name="maxnum" type="text"  default="" label="PLG_SYSTEM_PRODUCTRESTRICTIONS_MAXNUM" description="PLG_SYSTEM_PRODUCTRESTRICTIONS_MAXNUM_DESC" ></field>
+				
+				<field name="debug" type="list"  default="0" label="PLG_SYSTEM_PRODUCTRESTRICTIONS_DEBUG" description="PLG_SYSTEM_PRODUCTRESTRICTIONS_DEBUG" >
+				 <option value="0">PLG_SYSTEM_PRODUCTRESTRICTIONS_DISABLED</option>
+				 <option value="1">PLG_SYSTEM_PRODUCTRESTRICTIONS_ENABLED</option>
+				 
+				 
+				</field>
+				 			
+				
+				
+ </fieldset>
+ <fieldset name="advanced">
+	<field name="disabled_for_sg" type="shoppergroups"  multiple="multiple" default="" label="PLG_SYSTEM_PRODUCTRESTRICTIONS_DISABLEDFORTHIS" description="PLG_SYSTEM_PRODUCTRESTRICTIONS_DISABLEDFORTHIS_DESC" ></field>
+ </fieldset>
+        </fields>
+    </config>
+	
+</extension>

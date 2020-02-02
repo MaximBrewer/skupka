@@ -1,0 +1,6 @@
+<root>
+    <params name="picasaimages" label="Picasa">
+        <param name="picasaalbums" label="Source album" type="picasaalbums" default="0" multiple="0"/>
+        <param name="picasarandom" label="Randomize after cache expiration" type="onoff" default="0"/>
+    </params>
+</root>

@@ -1,0 +1,50 @@
+<root>
+    <params name="area-item" hidetitle="1">
+        <param type="group">
+            <param name="color" type="color" label="Background color" default="00000000" alpha="1" post="break"/>
+
+            <param name="gradient" type="list" label="Gradient" default="off" translateable="1">
+                <option value="off">Off</option>
+                <option value="vertical">↓</option>
+                <option value="horizontal">→</option>
+                <option value="diagonal1">↗</option>
+                <option value="diagonal2">↘</option>
+            </param>
+            <param name="color2" type="color" alpha="1" label="Color end" default="ffffff00"/>
+        </param>
+        <param type="group">
+
+            <param name="width" type="text" label="Fixed width" default="" style="width:32px;">
+                <unit value="px">px</unit>
+            </param>
+            <param name="height" type="text" label="Fixed height" default="" style="width:32px;">
+                <unit value="px">px</unit>
+            </param>
+        </param>
+        <param name="css" type="textarea" label="Custom CSS" default="" class="n2-expert"/>
+        <param type="group">
+            <param type="number" name="borderWidth" label="Border width" default="0" style="width: 14px;">
+                <unit>px</unit>
+            </param>
+            <param type="number" name="borderRadius" label="Radius" default="0" style="width: 14px;">
+                <unit>px</unit>
+            </param>
+            <param name="borderColor" type="color" label="Color" default="00000000" alpha="1"/>
+        </param>
+        <param name="link" type="mixed" default="#|*|_self">
+            <param type="url" label="Link" style="width:236px;"/>
+            <param type="list" label="Target" translateable="1">
+                <option value="_self">Self</option>
+                <option value="_blank">Blank</option>
+            </param>
+            <param type="list" label="Rel">
+                <option value=""></option>
+                <option value="nofollow">nofollow</option>
+                <option value="noreferrer">noreferrer</option>
+                <option value="author">author</option>
+                <option value="external">external</option>
+                <option value="help">help</option>
+            </param>
+        </param>
+    </params>
+</root>

@@ -1,0 +1,34 @@
+<root>
+    <params name="virtuemartproducts" label="Filter">
+        <param type="group" label="Source">
+            <param name="virtuemartcategories" label="Categories" type="virtuemartcategories" default="0"
+                   multiple="1" size="10"/>
+            <param name="virtuemartmanufacturers" label="Manufacturers" type="virtuemartmanufacturers"
+                   default="0"
+                   multiple="1" size="10"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="virtuemartfeatured" label="Featured" type="filter" default="0"/>
+            <param name="virtuemartinstock" label="In stock" type="filter" default="0"/>
+            <param name="virtuemartlanguage" label="Language filter" type="text" default="en_gb"/>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="virtuemartproductsorder" type="mixed" label="Order" default="prod.created_on|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="prod_ext.product_name">Product name</option>
+                <option value="cat.category_name">Category title</option>
+                <option value="prod.product_special">Special</option>
+                <option value="cat_x.ordering">Ordering</option>
+                <option value="prod.hits">Hits</option>
+                <option value="prod.created_on">Creation time</option>
+                <option value="prod.modified_on">Modification time</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

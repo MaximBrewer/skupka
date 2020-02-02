@@ -1,0 +1,26 @@
+<root>
+    <params name="text" label="Text settings" hidetitle="1">
+
+        <param name="widget-arrow-style" type="style" previewmode="button" set="1900" font="sliderwidget-arrow-font"
+               label="Style" >
+            <![CDATA[
+<div class="{fontClassName}"><a href="#" class="{styleClassName}" onclick="return false;">{$('#sliderwidget-arrow-previous-label').val();}</a></div>
+]]>
+        </param>
+
+        <param name="widget-arrow-font" type="font" previewmode="link" set="1900" style="sliderwidget-arrow-style" label="Font" >
+            <![CDATA[
+<div class="{fontClassName}"><a href="#" class="{styleClassName}" onclick="return false;">{$('#sliderwidget-arrow-previous-label').val();}</a></div>
+]]>
+        </param>
+
+
+        <param name="widget-arrow-previous-position" type="widgetposition" label="Previous position"/>
+
+        <param name="widget-arrow-previous-label" type="text" label="Previous label" />
+
+        <param name="widget-arrow-next-position" type="widgetposition" label="Next position" />
+
+        <param name="widget-arrow-next-label" type="text" label="Next label" />
+    </params>
+</root>

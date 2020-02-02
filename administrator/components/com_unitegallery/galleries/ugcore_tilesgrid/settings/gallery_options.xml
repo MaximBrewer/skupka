@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fields>
+		<fieldset name="gallery_options" label="Gallery Options" icon="eg-icon-cog-alt">
+			
+			<field name="tile_width" 
+				type="text"
+				default="180" 
+				label="Tile Width"
+				unit="px"
+				description="Tile width, fixed width of the tile"></field>	
+			
+			<field name="tile_height" 
+				type="text"
+				default="150"
+				label="Tile Height"
+				unit="px"
+				description="Tile height. fixed height of the tile"></field>
+
+			<field type="hr"></field>
+
+			<field name="theme_gallery_padding" 
+				type="text"
+				default="0" 
+				label="Gallery Padding Sides"
+				unit="px"
+				description="The padding from the sides of the gallery"></field>
+			
+			<field name="grid_padding" 
+				type="text"
+				default="10" 
+				label="Grid Padding"
+				unit="px"
+				description="The padding of the grid. Needed for the shadow or the outline not to be cut off."></field>
+			
+			<field name="grid_space_between_cols" 
+				type="text"
+				default="20" 
+				label="Space Between Columns"
+				unit="px"
+				description="The space between grid columns"></field>
+				
+			<field name="grid_space_between_rows" 
+				type="text"
+				default="20" 
+				label="Space Between Rows"
+				unit="px"
+				description="The space between grid rows"></field>
+	
+			<field name="grid_space_between_mobile" 
+				type="text"
+				default="15" 
+				label="Space Between - Mobile"
+				unit="px"
+				description="The space between rows and columns in mobile mode, when the screen is small"></field>
+
+			<field name="grid_min_cols" 
+				type="text"
+				default="2"
+				label="Minimum Number Of Columns"
+				unit="cols"
+				description="The minimum number of columns. For better view on mobile"></field>
+			
+			<field type="hr"></field>
+			
+			<field name="gallery_shuffle" 
+				type="boolean"
+				default="false" 
+				label="Shuffle Items At Start"
+				description="Shuffle (randomize) items at gallery start">	
+			</field>
+
+				<field type="hr"></field>
+				
+				<field name="theme_open_lightbox_at_start" 
+					type="boolean"
+					default="false"
+					label="&lt;b&gt;Open Lightbox At Start&lt;/b&gt;"
+					description="Open lightbox at page init">
+				</field>
+				
+				<field name="theme_auto_open" 
+					type="text"
+					default="0" 
+					label="&amp;nbsp; Open Lightbox At Tile"
+					unit="tile number"
+					description="Enter the tile index that the lightbox will be open at start">
+				</field>
+				
+				<field type="control" 
+					parent="theme_open_lightbox_at_start"
+					ctype="show" 
+					child="theme_auto_open"
+					value="true"
+				/>
+	
+		</fieldset>
+		
+</fields>

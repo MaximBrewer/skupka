@@ -1,0 +1,1359 @@
+/*------------------------------------------------------------------------
+* Advanced Virtuemart Invoices
+* author    CMSMart Team
+* copyright Copyright (C) 2012 Cmsmart Team. All Rights Reserved.
+* @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+* Websites: http://cmsmart.net
+* Technical Support:  Forum - http://cmsmart.net/forum
+* version 2.0
+-------------------------------------------------------------------------*/
+
+@CHARSET "UTF-8";
+
+/* override default form fields from template */
+
+
+ul.adminformlist > li > label, fieldset.adminform label {
+    width:180px!important;
+    margin:0px!important;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: bold;
+    height: 34px;
+    text-align: center;
+}
+ul.adminformlist select {
+    margin:0px!important;
+}
+
+fieldset.adminform fieldset.radio label, 
+ul.adminformlist fieldset.radio label { /* for 1.6 */
+    min-width:30px!important;
+    width:auto!important;
+}
+
+.applyStatus_button {
+    margin-left: 96px !important;
+}
+table.admintable td {
+
+}
+#limit {
+    margin-left: 7px;
+}
+#filter_email {
+    margin-left: 15px;
+}
+.batch_mail_force,
+.batch_generate_force,
+.batch_notify_customer{
+
+    margin-left: 5px;
+    margin-top: 2px;
+    position: absolute;
+}
+.key {
+    padding-bottom: 5px;
+}
+.batch_process_button {
+    margin-right: 584px !important;
+    margin-top: -30px !important;
+}
+.label_status {
+    margin-left: 5px;
+    margin-top: 5px;
+
+}
+table.paramlist td {
+    padding: 2px!important;
+}
+
+table.admintable label,table.admintable img {
+    display:inline!important;
+    clear:none!important;
+    margin:2px;
+    float: left !important;
+    line-height: 18px;
+}
+
+input.input_bg applyStatus_button{
+    float:left;
+}
+.virtuemart-admin-area fieldset.adminform label{
+    line-height: 33px;
+}
+table.paramlist label, table.paramlist input, table.paramlist select, table.paramlist img {
+    margin:0px;
+}
+#popup_edit textarea{
+    width: 100%;
+    height: 45px;
+}
+#popup_edit label {
+    clear: both;
+    display: inline;
+    float: left;
+}
+#popup_edit input {
+    cursor: pointer;
+    padding: 0;
+}
+.modcoder_input.modcoder_rgb{
+    height: 16px;
+}
+#popup_edit > p{
+    padding-right: 10px;
+}
+textarea.mce_editable {
+    float:left;
+}
+
+fieldset #editor-xtd-buttons {
+    float:left;
+    clear:left;
+    margin-bottom:10px;
+    padding-top:10px;
+}
+
+fieldset  .toggle-editor {
+    float:left;
+    margin-bottom:10px;
+    padding-top:10px;
+}
+/*
+label[style*=display:none]{
+        display:none!important;
+}
+*/
+input[disabled], select[disabled], textearea[disabled] {
+    background-color:#E0E0E0;
+    color: #E0E0E0;
+}
+
+/*
+label {
+        
+        float:none!important;
+        display:inline!important;
+        clear:both!important;
+        
+}
+
+input[type=checkbox],input[type=radio],input[type=select],input[type=text]{
+         float:none!important;
+}
+*/
+input[type=checkbox],input[type=radio]{
+    border:0px;
+    margin: 2px 5px !important;
+}
+
+input.price {
+    width:50px;
+}
+
+.col {
+    float:left;
+}
+
+.unseen {
+    display: none;
+}
+
+.icon-48-customer {
+    background-image: url("../images/icon-48-customer.png");
+}
+
+a.addProduct {
+    background-image: url("../images/icon-16-add.png");
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 24px;
+    height: 24px;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+a.editProduct {
+    background-image: url("../images/icon-16-edit.png");
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 18px;
+    height: 18px;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+.readonly { background-color: #CCCCCC; }
+
+span.registration {
+    display: block;
+    /*float: right;*/
+    height: 18px;
+    /*padding-left: 10px;*/
+    padding-top: 6px;
+    margin-right: 10px;
+}
+
+span.customerid {
+    display: block;
+    /*float: right;*/
+    height: 18px;
+    /*padding-left: 10px;*/
+    padding-top: 6px;
+    margin-right: 10px;
+}
+
+table.registration {
+    padding: 10px;
+    width: 50%;
+}
+
+.fill {
+    background-image: url("../images/icon-24-fill.png");
+    background-repeat: no-repeat;
+    display: block;
+    /*float: right;*/
+    height: 40px;
+    width: 40px;
+}
+
+.editOrder {
+    background-image: url("../images/edit.png");
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    height: 18px;
+    width:17px;
+    margin: 0 0 3px -3px;
+}
+.editOrder:hover {
+    background-image: url("../images/edit-hover.png");
+}
+
+.compulsory {
+    /*
+    background-image: url("../images/icon-10-star.png");
+    background-repeat: no-repeat;
+    display: block;
+    float: right;
+    padding-left: 15px;*/
+}
+
+#user {
+    display: block;
+    float: left;
+    position: relative;
+    top: 4px;
+    width: 200px;
+}
+
+a.refreshOrder {
+    background-image: url("../images/icon-24-refresh.png");
+    background-repeat: no-repeat;
+    display: block;
+    float: right;
+    height: 28px;
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-top: 5px;
+    width: auto;
+}
+
+h2.addProduct {
+    background-image: url("../images/icon-24-add.png");
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    color: #0B55C4;
+    display: block;
+    font-size: 13px;
+    height: 18px;
+    line-height: 18px;
+    margin: 0;
+    padding-bottom: 20px;
+    padding-left: 45px;
+    padding-top: 20px;
+    width: auto;
+}
+
+h2.customer {
+    background-image: url("../images/icon-32-customer.png");
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    color: #0B55C4;
+    display: block;
+    font-size: 18px;
+    height: 33px;
+    line-height: 18px;
+    margin: 5px 0;
+    padding-left: 45px;
+    padding-top: 15px;
+    width: auto;
+}
+
+h2.basket {
+    background-image: url("../images/icon-32-basket.png");
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    color: #0B55C4;
+    display: block;
+    font-size: 18px;
+    height: 33px;
+    line-height: 18px;
+    margin: 5px 0;
+    padding-left: 45px;
+    padding-top: 15px;
+    width: auto;
+}
+
+.deleteProduct {
+    background-image: url("../images/icon-16-delete.png");
+    background-repeat: no-repeat;
+    display: block;
+    height: 14px;
+    padding-left: 23px;
+    padding-right: 5px;
+    padding-top: 2px;
+    width: auto;
+}
+
+.productTitle {
+    color: #0B55C4;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.rightCol30 {
+    float: right;
+    width: 30%;
+    min-width:300px;
+}
+
+.leftCol50 {
+    float: left;
+    width: 50%;
+}
+
+#element-box .autoWidth {
+    width: auto;
+}
+
+#naseptavac {
+    width: 400px;
+    position: absolute;
+    z-index:99999;
+}
+
+.generated:hover {
+    /*background-color: #fff !important;*/
+}
+
+.red {
+    font-weight:bold;
+    color:red;
+}
+
+.green {
+    font-weight:bold;
+    color:green;
+}
+
+.yellow {
+    font-weight:bold;
+    color:#E0B91B;
+}
+
+.adminlist td.title {
+    padding-left: 20%;
+}
+
+.adminlist td.title h3 {
+    margin: 10px 0 0;
+}
+
+div.purchase-order.left {
+    float: left;
+    /*width: 50%;*/
+    width: 100%;
+}
+
+div.purchase-order.right {
+    float: right;
+    width: 50%;
+}
+
+/* toolbat icons */
+
+div.icons h2 {
+    font-family: Tahoma,Arial,Verdana;
+    font-size: 110%;
+}
+
+.icon-vminvoice { background-image: url("../images/icon-48-vminvoice.png"); height: 48px !important;
+                  width: 48px !important;}
+.icon-help { background-image: url("../images/icon-48-help.png"); height: 48px !important;
+             width: 48px !important;}
+.icon-config { background-image: url("../images/icon-48-config.png"); height: 48px !important;
+               width: 48px !important;}
+.icon-iconfig { background-image: url("../images/icon-48-config-invoices.png"); height: 48px !important;
+                width: 48px !important;}
+.icon-dnconfig { background-image: url("../images/icon-48-config-dn.png"); height: 48px !important;
+                 width: 48px !important;}
+.icon-fields { background-image: url("../images/icon-48-fields.png"); height: 48px !important;
+               width: 48px !important;}
+.icon-update { background-image: url("../images/icon-48-vmupdate.png"); height: 48px !important;
+               width: 48px !important;}
+.icon-invoices { background-image: url("../images/icon-48-invoices.png"); height: 48px !important;
+                 width: 48px !important;}
+.icon-order { background-image: url("../images/icon-48-addorder.png"); height: 48px !important;
+              width: 48px !important;}
+
+hr.system-pagebreak {
+    color:green;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+h2.billing_shipping {
+
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    color: #0B55C4;
+    display: block;
+    font-size: 18px;
+    height: 33px;
+    line-height: 18px;
+    margin: 5px 0;
+    padding-left: 45px;
+    padding-top: 15px;
+    width: auto;
+}
+
+legend {
+    border: 1px solid !important;
+    color: #146295;
+    font-size: 1.182em;
+    font-weight: bold;
+    padding: 5px !important;
+    width: auto !important;
+    margin: 0 !important;
+}
+
+input.hasTip
+{
+    background-color:#146295 !important;
+    color:#ffffff !important;
+    padding:5px !important;
+}
+
+/* Template invoices */
+h1 { padding: .2em; margin: 0; }
+#products { float:left; width: 500px; margin-right: 2em; }
+#cart { width: 200px; float: left; margin-top: 1em; }
+/* style the list to maximize the droppable hitarea */
+#cart ol,.droptrue { margin: 0; padding: 1em 0 1em 0; }
+
+#catalog li
+{
+    cursor:move;
+}
+.ui-accordion-content 
+{
+    height:auto !important;
+}
+#allcontent
+{
+    position:relative;
+}
+#view_template
+{
+    position:absolute;
+    top:0px;
+    right:0px;
+}
+.span_button
+{
+    cursor:pointer;
+}
+
+.txt_align
+{
+    float:right;
+}
+.virtuemart-admin-area fieldset td
+{
+    position:relative;
+}
+.virtuemart-admin-area fieldset input{
+
+}
+.virtuemart-admin-area fieldset input.bt_a
+{
+    float:left !important;
+    margin:0px !important;
+    cursor:pointer;
+    font-size:10px;
+}
+
+.virtuemart-admin-area fieldset input.bt_
+{
+    float:right !important;
+    display:none;
+    margin:0px 2px !important;
+    cursor:pointer;
+}
+
+/* CSS for popup edit */
+#popup_edit,
+#popup_edit_space,
+#config_table_
+{
+    display:none;
+    width:400px;
+    background-color:#fff;
+    padding:20px;
+
+    position:fixed !important;
+    top:0px !important;
+    left:0px !important;
+}
+.b-modal
+{
+    /* Theoretically for IE 8 & 9 (more valid) */	
+    /* ...but not required as filter works too */
+    /* should come BEFORE filter */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)" !important;
+
+    /* This works in IE 8 & 9 too */
+    /* ... but also 5, 6, 7 */
+    filter: alpha(opacity=20) !important;
+
+    /* Older than Firefox 0.9 */
+    -moz-opacity:0.2 !important;
+
+    /* Safari 1.x (pre WebKit!) */
+    -khtml-opacity: 0.2 !important;
+
+    /* Modern!
+    /* Firefox 0.9+, Safari 2?, Chrome any?
+    /* Opera 9+, IE 9+ */
+    opacity: 0.2 !important;
+}
+
+
+#modcoder_colorpicker
+{
+    z-index:999999;
+}
+
+
+/* CSS if use tag DIV */
+#tbl_,
+#tbl_products
+{
+    display:inline-block;
+
+}
+
+div.droptrue
+{
+    padding:5px;
+    min-height:200px;
+}
+
+span.droptrue
+{
+    padding:5px;
+    min-width:50px;
+    min-height:50px;
+    border:1px solid #ccc;
+}
+span.dragme
+{
+    background-color:#fff;
+    color : #004a80 !important;
+    font-size: 11px !important;
+}
+#tbl_products,
+#tbl_products tr,
+#tbl_products td,
+table.tbl_table_inner,
+table.tbl_table_inner tr,
+table.tbl_table_inner td,
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default
+{
+    border:medium none !important;
+}
+
+table.tbl_table_inner div.droptrue
+{
+    padding:5px;
+    min-height:20px !important;
+}
+
+#custom_text
+{
+    display:none;
+}
+.dragme
+{
+    cursor:move;
+    padding:5px;
+
+}
+
+input.del
+{
+    background-image: url("../images/icon-16-delete.png");
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    background-color:transparent;
+    margin:0px 0px 0px 5px;
+    padding:2px;
+    border:none;
+}
+input.edit
+{
+    background-image: url("../images/icon-16-edit.png");
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    background-color:transparent;
+    margin:0px 0px 0px 5px;
+    padding:0px;
+    border:none;
+}
+
+#template_general,
+#template_products
+{
+    cursor:pointer;
+    font-size:14px;
+    color:#202020;
+    border-bottom: 1px solid #CCCCCC;
+}
+.template_general_boder {
+
+}
+
+.template_products-border {
+
+}
+
+#catalog h2.ui-accordion-header
+{
+    padding:12px 0px;
+    border-top: 1px solid #ccc !important;
+}
+
+
+/* CSS for new design */
+dl.tabs
+{
+    width:100%;
+    display: inline-block;
+}
+dl.tabs dt
+{
+    border:1px solid #CCCCCC !important;
+    width:49.7%;
+    padding:7px 0px !important;
+    text-align:center !important;
+    background-color: transparent !important;
+    background-image:url(../images/bg_tabs.png) !important;
+    background-repeat:repeat-x !important;
+}
+#new-order dt
+{
+    width:25% !important;
+}
+dl.tabs dt.filter-batch-order
+{
+    border-right:1px solid #CCCCCC !important;
+    float: right;
+}
+dl.tabs dt.filter-order.closed
+{
+    border-left:1px solid #CCCCCC !important;
+    width:49.9% !important;
+    float: left;
+}
+dl.tabs dt a
+{
+    font-size:13px !important;
+    font-weight:bold !important;
+    color:#000 !important;
+}
+dl.tabs dt.open
+{
+    background-color:#1E90FF !important;
+    background-image:none !important;
+    float:left;
+}
+dl.tabs dt.open a
+{
+    color:#fff !important;
+}
+input.input_bg,
+span.span_button
+{
+
+    background-color:transparent !important;
+    border: 1px solid;
+    background-repeat:repeat-x !important;
+    padding:4px 4px !important;
+    color:#a4a4a4;
+    font-weight: bold;
+    font-size: 11px;
+}
+input.input_bg, span.span_button
+{
+    background: #1462af !important;
+    color: #FFFFFF;
+}
+
+input.input_bg:hover,
+span.span_button:hover
+{
+    background-color:	#1462af !important;
+    border: 1px solid;
+    background-repeat:repeat-x !important;
+    padding:4px 4px !important;
+    color:#fff;
+    font-weight: bold;
+    font-size: 11px;
+}
+img.calendar
+{
+    margin-bottom:-5px !important;
+    margin-left:5px !important;
+}
+
+table.listorder thead th,
+table.add-new-order thead th
+{
+    background-color:#c2c2c2 !important;
+    color:#000 !important;
+    font-weight:normal !important;
+    border-left:none !important;
+}
+table.listorder,
+table.add-new-order
+{
+    border-spacing:0px !important;
+}
+table.add-new-order td
+{
+    padding:10px 0px !important;
+}
+table.listorder tbody tr td,
+table.add-new-order tbody tr td
+{
+    border:none !important;
+    border-left:1px solid #ebebeb !important;
+}
+
+table.listorder tbody tr.row1 td,
+table.add-new-order tbody  tr.row1 td
+{
+    background-color:#f5f5f5 !important;
+}
+table.add-new-order
+{
+    border:1px solid #EBEBEB !important;
+}
+div.current fieldset
+{
+    padding:10px !important;
+    margin:0px !important;
+
+}
+div.current
+{
+    position:relative;
+}
+dd.tabs{
+    margin: 0;
+}
+dl#list-orders{
+    margin: 0;    
+}
+#batch_action th
+{
+    border-bottom:1px solid #000;
+    text-align:left;
+    font-weight:bold;
+    height:30px;
+}
+#batch_action td
+{
+    height:25px;
+}
+
+#editcell
+{
+    width:99.5% !important;
+    margin-left:3px !important;
+}
+.pagination_order .pagination div.limit
+{
+    float:none;
+    padding:10px;
+}
+#admin-content
+{
+    font-size:13px !important;
+}
+
+.addProduct {
+    background-image: url("../images/add_products.png");
+    background-repeat: no-repeat;
+    background-position:top -4px left 5px;
+    color: #000;
+    display: block;
+    font-size: 13px;
+    height: 18px;
+    line-height: 18px;
+    padding:0px 5px 0px 34px !important;
+    margin:0px 5px !important;
+    border:none !important;
+}
+
+a.addProduct {
+    background-image: url("../images/add_products_2.png");
+    width:25px;
+    height:20px;
+}
+
+.basket {
+    background-image: url("../images/order_items.png");
+    background-position:top 0px left 5px;
+    background-repeat: no-repeat;
+
+    display: block;
+    line-height: 18px;
+    margin:0px 5px !important;
+    padding:5px 5px 5px 40px !important;
+
+}
+.user_info_form{
+    background-image: url("../images/user_info.png");
+    background-position:top 0px left 5px;
+    background-repeat: no-repeat;
+
+    display: block;
+    line-height: 18px;
+    margin:0px 5px !important;
+    padding:5px 5px 5px 40px !important;
+}
+a.refreshOrder {
+    background-image: url("../images/refresh.png");
+    background-position:top 17px left 0px !important;
+    padding-left:20px !important;
+    padding-right:0px !important;
+    padding-top:15px !important;
+}
+
+.deleteProduct {
+    background-image: url("../images/delete.png") !important;
+    background-repeat: no-repeat;
+    background-position:left 5px top 6px;
+    display: block;
+    height: 17px;
+    padding-left: 22px;
+    padding-right: 5px;
+    padding-top: 2px;
+    width: auto;
+}
+
+h2.customer {
+    background-image: url("../images/customer_info.png");
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    color: #000;
+    display: block;
+    font-size: 18px;
+    height: 33px;
+    line-height: 18px;
+    margin: 5px 0;
+    padding-left: 26px;
+    padding-top: 15px;
+    width: auto;
+    font-size:13px;
+
+}
+
+h2.billing_shipping {
+    text-align: center;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    color: #000;
+    display: block;
+    font-size: 13px;
+    height: 33px;
+    line-height: 18px;
+    margin: 5px 0;
+    padding-left: 28px;
+    padding-top: 15px;
+    width: auto;
+    position:relative;
+    color : #11417a;
+    border-bottom: 1px solid #444444;
+}
+#billing_address fieldset,
+#shipping_address fieldset
+{
+
+}
+#billing_address fieldset table,
+#shipping_address fieldset table
+{
+    padding:5px;
+}
+#billing_address fieldset table td,
+#shipping_address fieldset table td
+{
+    height:30px !important;
+
+}
+#billing_address select,
+#shipping_address select
+{
+    margin-bottom:10px !important;
+    margin-top:10px !important;
+}
+#billing_address input,
+#shipping_address input,
+input#newproduct,
+.adminlist.admintable.add-new-order input
+{
+    width: 68%;	
+}
+#billing_address legend,
+#shipping_address legend
+{
+    border:none !important;
+    color:#000 !important;
+}
+.fill {
+    background-image: url("../images/copy_address.png");
+    background-repeat: no-repeat;
+    display: block;
+    /*float: right;*/
+    height: 21px;
+    width: 19px;
+}
+#catalog
+{
+    margin-top:0px !important;
+}
+#catalog h2
+{
+    margin:0px !important;
+
+}
+
+#catalog h2 a
+{
+    font-size:12px !important;
+    color:#003471 !important;
+    font-weight: bold;
+}
+
+#list_fields legend,
+#template_invoices legend
+{
+    border:none !important;
+
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    display: block;
+    font-size: 14px;
+    height: 33px;
+    line-height: 18px;
+    margin: 5px 0;
+    padding-left: 26px !important;
+    padding-top: 15px !important;
+    width: auto;
+    font-weight:bold;
+    color:#003471;
+}
+
+input.del,
+input.edit
+{
+    cursor:pointer;
+}
+
+table.admintable th, table.admintable td,
+form label, form span.faux-label
+{
+    font-size:13px !important;
+}
+.ui-accordion-header, .ui-accordion-content {
+    border: medium none !important;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr{
+    border-top-right-radius: 0px !important;
+    border-top-left-radius : 0px !important;
+}
+.ui-icon.ui-icon-triangle-1-s.ui-draggable, .ui-icon.ui-draggable.ui-icon-triangle-1-e {
+    float: left;
+}
+.info-vendor-text, .info-text, .break-line-text, .custom-text-text, .info-order-text {
+    margin-left: 5px;
+}
+
+.ui-draggable {
+    color: #003471;
+}
+#list_fields {
+    width: 190px;
+    padding-left: 15px;
+    padding-right: 22px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+}
+.cms-pdf {
+    background-image: url("../images/pdf.png");
+    background-position: 8px 7px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 58px;
+    text-indent: -999em;
+    margin-left: -5px;
+}
+.cms-pdf:hover {
+    background-image: url("../images/pdf-hover.png");
+}
+.order-items td {
+    border-bottom: 1px solid;
+}
+.input_bg {
+    cursor: pointer;
+}
+.table_user_info_h2_ship {
+    width: 50% !important;
+}
+.table_user_info_h2_bill {
+    width: 50%;
+    margin-right: -100px !important;
+}
+
+.muiten {
+    background-image: url("../images/muitentrai.png");
+    float: right;
+    height: 25px;
+    margin-top: -14px;
+    text-indent: -99em;
+    width: 25px;
+}
+.virtuemart-admin-area fieldset{
+    border-radius: inherit !important;
+}
+.invoice_extend{
+    background: url("../images/invoice_extend.png") repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    height: 18px !important;
+    width: 18px !important;
+}
+.icon-16-invoice_extend{
+    background: url("../images/invoice_extend.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    height: 18px !important;
+}
+.invoice_new{
+    background: url("../images/new_invoice.png") repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    height: 18px !important;
+    width: 18px !important;
+
+}
+.icon-16-new_invoice{
+    background: url("../images/new_invoice.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    height: 18px !important;
+}
+.invoice_template{
+    background: url("../images/template_invoice.png") repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    height: 18px !important;
+    width: 18px !important;
+}
+.icon-16-template_invoice{
+    background: url("../images/template_invoice.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    height: 18px !important;
+}
+.static_invoice{
+    background: url("../images/static_invoice.png") repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    height: 18px !important;
+    width: 18px !important;
+}
+.icon-16-static_invoice{
+    background: url("../images/static_invoice.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    height: 18px !important;
+}
+.icon-Statistics{
+    background: url("../images/icon-menu-stat.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    height: 48px !important;
+    width: 48px !important;
+}
+.icon-48-generic{
+    background: url("../images/icon-menu-temp.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+}
+#fromdate_picker, #todate_picker{
+    background: url("../images/datepicker.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    border: medium none;
+    cursor: pointer;
+    height: 20px;
+    text-indent: -99em;
+    width: 25px;
+}
+#cms_todate,#cms_fromdate {
+    border-color: #75BBF4;
+}
+
+#cms_submitdate {
+    background: none repeat scroll 0 0 #2172A7;
+    color: #FFFFFF;
+    height: 20px;
+    width: 65px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.cms_no_data {
+    font-size: 20px;
+    margin-left: 91px;
+    margin-top: -204px;
+    position: absolute;
+}
+.start_date, .filter_id{
+    margin-top: -15px !important;
+    position: absolute;
+}
+.filter_name{
+    margin-top: -10px !important;
+}
+/*-------------------------------------------------------------Statistic------------------------------------------------*/
+#admin-content-wrapper{
+    background:#ffffff!important;
+}
+#admin-content-wrapper #admin-content{
+   overflow: hidden;
+}
+.alltimetopbestsellers_cms{
+    overflow: none !important;
+}
+#admin-content-wrapper #admin-content #container{
+    padding: 15px;
+    width: 100%;
+    float: left;
+    clear: both;
+    display: block;
+}
+#container_left{
+    width:48%!important;
+    float: left!important;
+}
+#container_left #box_1,#box_2,#box_3{
+    display: block;
+    clear: both;
+}
+#container_left #box_1 table tr td,#container_left #box_2 table tr td,
+#container_left #box_3 table tr td{
+    background: #ffffff;
+}
+
+#box_2 table tr td h5 div span#dailyorders10daysma_title{
+    color: #3D7AAC;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+#alltimetopbestsellers_title{
+    color: #3D7AAC;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+#container_left .boxBodyLeft{
+    border: 1px solid #efefef;
+    padding: 15px;
+    border-top: 3px solid #3d7aac;
+}
+#container_left .boxBodyRight{
+    border: 0;
+}
+.boxBodyRight table tr td{
+    padding: 0;
+    font-size: 12px;
+    color: #303030;
+    font-weight: normal;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#admin-content-wrapper #admin-content #container .cms_datepciker{
+    border: 1px solid #E6E6E6;
+    background: #f8f8f8;
+    font-size: 14px;
+    font-family: arial;
+    color: #303030;
+    padding: 12px 10px;
+}
+.cms_datepciker select#cms_typedate{
+    padding: 2px 5px;
+}
+.cms_datepciker input#cms_fromdate,.cms_datepciker input#cms_todate,.cms_datepciker select#cms_typedate{
+    border: 1px solid #efefef;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #303030;
+}
+.cms_datepciker input#cms_submitdate{
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    border: 0;
+    margin-left: 25px;
+}
+.cms_datepciker input#cms_submitdate:hover{
+    opacity:0.7;
+}
+#cms_totalalltime{
+    width:505px;
+    border: 1px solid #efefef;
+    padding: 12px;
+    color: #303030;
+    border-top: 3px solid #3d7aac;
+}
+#cms_totalpritime{
+    width: 505px;
+    border: 1px solid #efefef;
+    padding: 12px;
+    color: #303030;
+    border-top: 3px solid #f16421;
+}
+.cms_totalpritimeleft{
+    width: 550px;
+
+}
+.cms_totalpritimeleft h2{
+    font-size: 14px;
+    color: #3d7aac;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: normal;
+    padding: 10px 0;
+}
+#container_right{
+    width: 48%!important;
+    float: left !important;
+    padding-left:1.5%;
+}
+.basicBoxBodyText > div {
+    overflow: hidden !important;
+}
+#container_right .cms_totalpritimeright h2{
+    color: #f16421;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+#container_right #box_4,#box_5,#box_6,#box_7{
+    display: block;
+    clear: both;
+}
+#container_left span#periodordersbystatus_title, #last12monthincome_title{
+    color: #3D7AAC;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+#container_right span#periodorderslist_title,
+#container_right span#periodtopbestsellers_title,
+#container_right span#totalordersbycountry_title{
+    color: #f16421;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+#container_right .boxBodyLeft{
+    border: 1px solid #efefef;
+    padding: 15px;
+    border-top: 3px solid #f16421;
+}
+#container_right .boxBodyRight{
+    border: 0;
+}
+.clear{
+    padding: 0!important;
+}
+.container_left > .google-visualization-table-tr-over, .google-visualization-table-tr-over td, .google-visualization-table-tr-over-nonstrict{
+    background : #ff874e !important;
+    color: #ffffff !important;
+}
+#periodordersbystatus_cms {
+    height: 317px !important;
+}
+text{
+    font-size: 8px;
+}
+.img-send-mail{
+    margin-right: 6px;
+}
+#box_6 .boxBodyLeft .boxBodyRight table.basicBoxBody td.basicBoxBodyText{
+    position:relative;
+}
+.input-append, .input-prepend{
+    float: left;
+}
+#start_date_img, #end_date_img{
+    margin: 2px;
+}
+input.del,input.edit{
+    min-width: 20px !important;
+}
+.span_button {
+    width: auto !important;
+}
+
+.tabs.filter-order.open h3,.tabs.filter-batch-order.closed h3,
+.tabs.filter-order.closed h3, .tabs.filter-batch-order.open h3{
+    margin: 0;
+}
+.virtuemart-admin-area .menu-wrapper{
+    display: none;
+}
+.virtuemart-admin-area .toggler{
+    display: none;
+}
+.virtuemart-admin-area fieldset input{
+    float: left;
+    margin: 0;
+}
+.chzn-container.chzn-container-single {
+    float: none;
+}
+/*-------------------------------------------------------------End Statistic-----------------------------------------------*/

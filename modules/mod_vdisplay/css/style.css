@@ -1,0 +1,5 @@
+.vdata_display input[type="text"]{width:auto;max-width:100%;}
+.vdata_display .addMoreField input[type="text"]{margin:0;}
+.vdata_display .addMoreField{margin:0 0 9px;}
+.vdata_display .addMoreField label{display:inline-block;}
+.vdata_display .addMoreField input[type="radio"]{margin:0;}

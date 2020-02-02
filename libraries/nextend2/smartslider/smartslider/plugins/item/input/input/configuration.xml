@@ -1,0 +1,42 @@
+<root>
+  <params name="input-item" label="Input item settings" hidetitle="1">
+    <param name="style" type="style" previewmode="heading" set="1000" label="Container style" class="n2-hidden">
+      <![CDATA[ <div style="width:{nextend.activeLayer.width()}px;height:{nextend.activeLayer.height()}px;" class="{styleClassName}"></div> ]]>
+    </param>
+    <param type="group" name="Input">
+      <param name="name" type="text" label="Name" default="q" style="width:80px;"/>
+      <param name="placeholder" type="text" label="Placeholder text" default="What are you looking for?" style="width:170px;"/>
+      <param name="inputfont" type="font" previewmode="paragraph" set="1000" style="item_inputinputstyle" label="Input Font" class="n2-hidden">
+        <![CDATA[ <div style="width:{nextend.activeLayer.prop('style').width};display:inline-block;"><div class="{styleClassName} {fontClassName}">{$('#item_inputplaceholder').val();}</div></div> ]]>
+      </param>
+      <param name="inputstyle" type="style" previewmode="heading" set="1000" font="item_inputinputfont" label="Input Style" class="n2-hidden">
+        <![CDATA[ <div style="width:{nextend.activeLayer.prop('style').width};display:inline-block;"><div class="{styleClassName} {fontClassName}">{$('#item_inputplaceholder').val();}</div></div> ]]>
+      </param>
+    </param>
+    <param type="group" name="Button">
+      <param name="buttonlabel" type="text" label="Label" default="Button" style="width:280px;"/>
+      <param name="buttonfont" type="font" previewmode="hover" set="1000" style="item_inputbuttonstyle" label="Button Font" class="n2-hidden">
+        <![CDATA[ <div class="{fontClassName} {styleClassName}" style="width:{nextend.activeLayer.prop('style').width};">{$('#item_inputbuttonlabel').val();}</div> ]]>
+      </param>
+      <param name="buttonstyle" type="style" previewmode="heading" set="1000" font="item_inputbuttonfont" label="Button Style" class="n2-hidden">
+        <![CDATA[ <div class="{fontClassName} {styleClassName}" style="width:{nextend.activeLayer.prop('style').width};">{$('#item_inputbuttonlabel').val();}</div> ]]>
+      </param>
+    </param>
+    <param type="group" name="Form">
+      <param name="submit" type="text" label="Slide action to submit" default="" class="n2-expert"/>
+      <param name="action" type="text" label="Action" default="https://www.google.com/search" style="width: 280px;"/>
+      <param name="method" type="list" label="Method" default="GET">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+      </param>
+      <param name="target" type="list" label="Target" default="_self">
+        <option value="_self">Self</option>
+        <option value="_blank">New tab</option>
+      </param>
+      <param name="parameters" type="textarea" label="Parameters" default="ie=utf-8&amp;oe=utf-8" style2="width: 280px;resize: vertical;"/></param>
+    <param name="fullwidth" type="onoff" label="Full width" default="0"/>
+    <param name="class" type="text" label="Custom css class" default="" class="n2-expert"/>
+    <param name="onsubmit" type="text" label="Event on submit" class="n2-expert" default=""/>
+    <param name="onkeyup" type="text" label="Event on key up" class="n2-expert" default=""/>
+  </params>
+</root>

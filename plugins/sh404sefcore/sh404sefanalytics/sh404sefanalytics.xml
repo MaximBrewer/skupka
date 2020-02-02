@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="sh404sefcore" method="upgrade">
+	<name>sh404sef - Analytics plugin</name>
+	<author>Yannick Gaultier</author>
+  <creationDate>2016-03-15</creationDate>
+  <copyright>(c) Yannick Gaultier - Weeblr llc - 2016</copyright>
+  <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>contact@weeblr.com</authorEmail>
+	<authorUrl>https://weeblr.com</authorUrl>
+	<version>4.7.3.3292</version>
+	<description>Create analytics custom tags
+	</description>
+	<files>
+		<filename plugin="sh404sefanalytics">sh404sefanalytics.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>

@@ -1,0 +1,6 @@
+<root>
+    <params name="filter" label="Filter">
+        <param name="source" label="Source text" type="textarea" default="" style2="width:300px;height: 200px;"/>
+        <param name="delimiter" label="Delimiter" type="text" default=","/>
+    </params>
+</root>

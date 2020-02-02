@@ -1,0 +1,141 @@
+/* css for the mobile menu */
+.mobilemaximenuck {
+    background: #32373b;
+    color: #fff;
+    text-shadow: 1px -1px 2px #000;
+    font-size: 15px;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    left: 0;
+    top: 0;
+}
+
+.mobilemaximenuck .mobilemaximenucktopbar{
+    height: 53px;
+    background: url(fond_haut.jpg) left top repeat-x;
+}
+
+.mobilemaximenuck .mobilemaximenucktitle {
+    font-size: 20px;
+    padding: 3px 0 0 20px;
+    display: block;
+    float: left;
+}
+
+.mobilemaximenuck .mobilemaximenuckclose {
+    display: block;
+    float:right;
+    margin: 5px 10px;
+    background: url(close.jpg) center center no-repeat;
+    width: 31px;
+    height: 31px;
+    cursor: pointer;
+}
+
+.mobilemaximenuck div.maximenuck {
+    cursor: pointer;
+    background: url(separateur.jpg) left bottom repeat-x;
+    min-height: 35px;
+    line-height: 35px;
+    padding: 0;
+    padding-bottom: 3px;
+	position: relative;
+}
+
+.mobilemaximenuck div.maximenuck:hover,
+.mobilemaximenuck div.maximenuck:focus {
+    background-color: #525a61;
+}
+
+.mobilemaximenuck div.maximenuck > a {
+    color: #fff !important;
+    font-family: Arial;
+    display: block;
+    padding-left: 45px;
+    text-decoration: none;
+    text-align: left;
+    min-height: 35px;
+    /*width: 100%;*/
+}
+
+.mobilemaximenuck div span.descck {
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.mobilemaximenuck div.current {
+    /* background: none; */
+    border: none;
+}
+
+.mobilemaximenuck div.current > a:after {
+    content: " ";
+    display: block;
+    float: right;
+    height: 35px;
+    width: 16px;
+    margin-right: 10px;
+    background: url(arrow_right.png) center center no-repeat;
+}
+
+.mobilemaximenuck div.level1.maximenuck > a {
+    background: url(arrow.jpg) left center no-repeat;
+    padding-left: 45px;
+}
+
+.mobilemaximenuck div.level2.maximenuck > a {
+    background: url(arrow2.jpg) left center no-repeat;
+    padding-left: 55px;
+}
+
+.mobilemaximenuck div.level3.maximenuck > a {
+    background: url(arrow3.png) 20px center no-repeat;
+    padding-left: 65px;
+}
+
+.mobilebarmaximenuck {
+    display: none;
+    position: absolute;
+    z-index: 100; 
+    top: 0;
+    left: 0;
+    background: #444;
+    width: 100%;
+    height: 35px;
+}
+
+.mobilebuttonmaximenuck {
+    position: relative;
+    z-index: 100; 
+    height: 24px;
+    width: 35px;
+    background: url(icon_launch.jpg) left center no-repeat;
+    float: right;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.mobilebarmenutitleck {
+    padding-left: 20px;
+    line-height: 30px;
+    color: #eee;
+    font-size: 16px;
+}
+
+/* for accordeon */
+.mobilemaximenucktogglericon {
+	background: url('plus.jpg') center center no-repeat;
+    position: absolute;
+	right: 0;
+	top: 0;
+    height: 35px;
+    margin-right: 50px;
+    width: 35px;
+}
+
+.open .mobilemaximenucktogglericon {
+	background-image: url('minus.jpg')
+}

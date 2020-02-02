@@ -1,0 +1,33 @@
+<root>
+    <params name="firstrow" type="horizontal">
+        <param name="family" label="FONTMANAGER_Family" style="width:920px;" type="text" default="Arial, Helvetica" />
+    </params>
+    <params name="secondrow" type="horizontal">
+        <param name="color" label="FONTMANAGER_Color" type="color" alpha="1" default="000000FF" />
+        <param name="size" label="FONTMANAGER_Size" type="mixed" default="14|*|px" translateable="0" >
+            <param type="text" style="width: 22px;" />
+            <param type="switcher">
+                <unit value="px">pixel</unit>
+                <unit value="%">percent</unit>
+            </param>
+        </param>
+        <param name="lineheight" label="FONTMANAGER_Line_height" type="text" default="18px" style="width:70px;" />
+        <param name="decoration" label="FONTMANAGER_Decoration" type="decoration" default="" />
+        <param name="paddingleft" label="FONTMANAGER_Padding_left" type="text" default="0" style="width:40px;" >
+            <unit value="px">pixel</unit>
+        </param>
+        <param name="textalign" type="textalign" label="FONTMANAGER_Text_align" default="left" />
+        <param name="tshadow" label="FONTMANAGER_Text_shadow" type="mixed" default="0|*|0|*|1|*|000000FF" translateable="0" >
+            <param type="text" style="width: 32px;">
+                <unit value="px">pixel</unit>    
+            </param>
+            <param type="text" style="width: 32px;">
+                <unit value="px">pixel</unit>    
+            </param>
+            <param type="text" style="width: 32px;">
+                <unit value="px">pixel</unit>    
+            </param>
+            <param type="color" alpha="1" />
+        </param>
+    </params>
+</root>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6.0" type="plugin" group="vmee" method="upgrade">
+	<name>Dynamic AwoCoupon Codes for InteraMind VM Emails</name>
+	<author>InteraMind</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>(C) 2011 InteraMind Advanced Analytics, http://www.interamind.com</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>sales@interamind.com</authorEmail>
+	<authorUrl>http://www.interamind.com</authorUrl>
+	<version>2.2.0</version>
+	<description>DYNAMIC AWO COUPONS FOR INTERAMIND EMAILS</description>
+	<files>
+		<filename plugin="dynamicCouponVMEEAWO">dynamicCouponVMEEAWO.php</filename>
+		<folder>dynamicCouponVMEEAWO</folder>
+	</files>
+	<languages>
+	   <language tag="en-GB">en-GB.plg_vmee_dynamicCouponVMEEAWO.ini</language>
+	   <language tag="ru-RU">ru-RU.plg_vmee_dynamicCouponVMEEAWO.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="GENERAL_PARAMETERS_TITLE" label="GENERAL_PARAMETERS_TITLE" addfieldpath="/plugins/vmee/dynamicCouponVMEEAWO/dynamicCouponVMEEAWO/fields" >
+				<field type="title" default="COUPON_EXTRA_TEXT_TITLE" />
+				<field name="coupon_prefix" type="textarea" default="" label="COUPON_PREFIX_LABEL" description="COUPON_PREFIX_DESC" rows="5" cols="35" />
+				<field name="coupon_suffix" type="textarea" default="" label="COUPON_SUFFIX_LABEL" description="COUPON_SUFFIX_DESC" rows="5" cols="35" />
+				<field type="title" default="COUPON_ORDER_STATUS_TITLE"/>
+				<field name="status" type="orderstatuslist" default="" label="FINAL_STATUS_LABEL" description="FINAL_STATUS_DESC" multiple="true" />
+				<field name="coupon_style" type="textarea" default="font-size:18px;" label="COUPON_STYLE_LABEL" description="COUPON_STYLE_DESC" rows="5" cols="35" />
+				<field name="@couponstyle" type="couponstyle" label="COUPON_DISPLAY_LABEL" description="COUPON_DISPLAY_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

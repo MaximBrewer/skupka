@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="OfficeSpec">
+	</layout>
+	<state>
+		<name>OfficeSpec</name>
+		<url>
+			<param name="office" type="sql" default="0" label="Выберите учреждение" query="SELECT id AS value, name as office FROM #__ttfsp_sprsect WHERE published=1 ORDER BY ordering" />
+			<param name="sid" type="sql" default="0" label="Выберите специализацию" query="SELECT id AS value, name as sid FROM #__ttfsp_sprspec  WHERE published=1 ORDER BY ordering" />
+		</url>
+	</state>
+<fields name="request">
+<fieldset name="request" label="OfficeSpec">
+			<field name="office" type="sql" default="0" label="Выберите учреждение" query="SELECT id AS value, name as office FROM #__ttfsp_sprsect WHERE published=1 ORDER BY ordering" />
+			<field name="sid" type="sql" default="0" label="Выберите специализацию" query="SELECT id AS value, name as sid FROM #__ttfsp_sprspec  WHERE published=1 ORDER BY ordering" />
+</fieldset>
+</fields>
+</metadata>

@@ -1,0 +1,17 @@
+<root>
+  <params name="image" label="Image settings" hidetitle="1">
+    <param name="widget-arrow-style" type="style" previewmode="button" set="1900" label="Style">
+      <![CDATA[ <div><div class="{styleClassName}" style="display: inline-block;"><img style="display: block;" src="{nextend.imageHelper.fixed($('#sliderwidget-arrow-previous-image').val() || N2Color.colorizeSVG($('[data-image="'+$('#sliderwidget-arrow-previous').val()+'"]').attr('src'), $('#sliderwidget-arrow-previous-color').val()));}" /></div></div> ]]>
+    </param>
+    <param name="widget-arrow-font" type="font" previewmode="link" set="1900" style="sliderwidget-arrow-style" label="Font">
+      <![CDATA[ <div class="{fontClassName}"><a href="#" class="{styleClassName}" style="line-height: 48px;display:inline-block;" onclick="return false;">Slide title</a></div> ]]>
+    </param>
+    <param type="group" label="Previous">
+      <param type="imagelistfromfolder" name="widget-arrow-previous" label="Shape" folder="previous" required="1" post="break"/>
+      <param type="color" name="widget-arrow-previous-color" label="Color" alpha="1"/></param>
+    <param type="mirror" name="widget-arrow-mirror" label="Mirror" class="n2-expert"/>
+    <param type="group" label="Next" class="n2-expert">
+      <param type="imagelistfromfolder" name="widget-arrow-next" label="Shape" folder="next" required="1" post="break"/>
+      <param type="color" name="widget-arrow-next-color" label="Color" alpha="1"/></param>
+  </params>
+</root>

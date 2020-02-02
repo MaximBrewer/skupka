@@ -1,0 +1,9 @@
+<root>
+    <params name="html-item" label="Html item settings" hidetitle="1">
+        <param name="textalign" type="textalign" label="Text align" default="inherit"/>
+        <param name="html" type="textarea" label="HTML" default=""
+               style2="height: 200px; width: 230px;resize: vertical;"/>
+        <param name="css" type="textarea" label="CSS" default=""
+               style2="height: 200px; width: 230px;resize: vertical;"/>
+    </params>
+</root>

@@ -1,0 +1,145 @@
+#coolrunner_map .narrow-droppoints .droppoint-filter label { margin: 0px !important; vertical-align: middle !important; border-radius: 5px !important; position: relative !important; padding: 5px 13px 6px 35px !important; cursor: pointer !important; background-color: rgb(236,  236,  236) !important; 
+
+height: 24px; 
+min-height: 24px; 
+
+}
+
+#coolrunner_map label { display: inline-block !important; font-size: 13px !important; font-family: Raleway, 'Helvetica Neue', Verdana, Arial, sans-serif !important; font-weight: 600 !important; -webkit-user-select: none !important; }
+
+#coolrunner_map  label, .pager .amount,#coolrunner_map  .pages a,#coolrunner_map  .pages .current,#coolrunner_map  .button,#coolrunner_map  .cart-table .product-cart-actions .button,#coolrunner_map  #co-shipping-method-form .buttons-set .button,#coolrunner_map  .footer .button,#coolrunner_map  .cart-table thead th,#coolrunner_map  .cart-table tbody td,#coolrunner_map  body,#coolrunner_map  button,#coolrunner_map  input,#coolrunner_map  select,#coolrunner_map  table,#coolrunner_map  textarea,#coolrunner_map  .cart .cart-totals table tfoot strong span,#coolrunner_map  .cart .cart-totals table tfoot span.price,#coolrunner_map  .cart-table .price,#coolrunner_map  .cart-table .product-cart-price::before,#coolrunner_map  .data-table tbody td,#coolrunner_map  .data-table tfoot td,#coolrunner_map  body.customer-account .data-table td a,#coolrunner_map  .data-table th,#coolrunner_map  .dashboard .box-account p,#coolrunner_map  .dashboard .box-account address,#coolrunner_map  form .legend,#coolrunner_map  .cms-page-view .std p,#coolrunner_map  .cms-no-route .std p,#coolrunner_map  .cms-page-view .std li,#coolrunner_map  .cms-no-route .std li,#coolrunner_map  form .form-instructions { font-family: Arial,  sans-serif !important; }
+
+#coolrunner_map label { font-size: 18px !important; }
+
+#coolrunner_map label { text-transform: uppercase !important; font-size: 12px !important; font-family: Arial,  sans-serif !important; font-weight: normal !important; letter-spacing: 0.05em !important; margin-bottom: 3px !important; display: block !important; }
+
+#coolrunner_map .narrow-droppoints .droppoint-filter input:checked + label::before { color: rgb(43,  151,  214) !important; }
+
+#coolrunner_map .narrow-droppoints .droppoint-filter input + label::before { content: ""; font-family: FontAwesome; font-size: 16px; position: absolute; color: rgb(212, 212, 212); left: 10px; top: 5px; }
+
+#coolrunner_map .narrow-droppoints .droppoint-filter input { float: left !important; vertical-align: middle !important; height: 24px !important; margin-right: 8px !important; display: none !important; }
+
+#coolrunner_map .narrow-droppoints .droppoint-filter input:checked + label::before { color: rgb(43,  151,  214) !important; }
+
+
+#coolrunner_map .narrow-droppoints .search-droppoints {  
+ margin: 0px auto !important; vertical-align: middle !important; }
+
+
+#coolrunner_map .narrow-droppoints .search-droppoints #search-street { 
+
+width: 38% !important; float: left !important; margin-right: 2% !important; }
+
+#coolrunner_map .narrow-droppoints .droppoint-filters { height: 31px !important; }
+
+#coolrunner_map .narrow-droppoints .droppoint-filter { display: inline-block !important; }
+
+#coolrunner_map .narrow-droppoints .droppoint-filter + .droppoint-filter { margin-left: 10px !important; }
+
+
+
+#coolrunner_map input[type="email"], 
+#coolrunner_map input[type="search"], 
+#coolrunner_map input[type="number"], 
+#coolrunner_map input[type="password"], 
+#coolrunner_map input[type="tel"], 
+#coolrunner_map input[type="text"] { 
+height: 24px !important; 
+padding: 0px 8px !important; 
+border: 2px solid rgb(236,  236,  236) !important; font-size: 18px !important; color: rgb(37,  37,  37) !important; margin: 0px !important; display: inline-block !important; padding: 8px 15px 10px !important; font-weight: normal !important; width: 100% !important; line-height: normal !important;
+
+}
+
+
+#coolrunner_map .search-droppoints {
+ float: left; 
+ clear: rigth;
+ width: 60%; 
+margin: 0; padding: 0; 
+clear: right;  
+}
+#coolrunner_map .search-droppoints button {
+ float: left; 
+ clear; rigth; 
+}
+
+#coolrunner_map #carrier-selection {
+ float: left; 
+ clear: none; 
+ width: 40%;
+margin: 0; padding: 0;  
+}
+
+#coolrunner_map .narrow-droppoints {
+box-sizing: border-box; 
+float: left; 
+width: 100%; 
+clear: both; 
+
+padding: 15px 25px;
+background-color: rgb(250,  250,  250) !important;
+min-height: 45px; 
+}
+
+
+#coolrunner_map .droppoint-filters  > span, #coolrunner_map .droppoint-filters   div.droppoint-filter {
+
+ margin-top: 10px; 
+ 
+}
+#coolrunner_map .narrow-droppoints {
+	margin-bottom: 10px !important; 
+}
+
+/* opening hours */
+#coolrunner_map #all-droppoint-map .droppoint-infowindow-content ul.opening-hours li div { display: inline-block !important; float: left !important; }
+
+#coolrunner_map #all-droppoint-map .droppoint-infowindow-content ul.opening-hours li div.droppoint-weekday { width: 65px !important; }
+#coolrunner_map #all-droppoint-map .droppoint-infowindow-content ul.opening-hours li span.from::after { content: " - " !important; }
+
+#coolrunner_map #all-droppoint-opening-hours-weekday-container { display: none !important; }
+
+#coolrunner_map #all-droppoint-map .droppoint-infowindow-content ul.opening-hours li div { display: inline-block !important; float: left !important; }
+
+
+.droppoint-infowindow-content > droppoint-infowindow-content {
+ display: block; 
+}
+
+.droppoint-infowindow-content ul{
+	list-style-type: none !important;
+	display: inline-block; 
+	clear: both; 
+}
+
+.droppoint-infowindow-content img, .droppoint-infowindow-content strong {
+	display: inline-block; 
+	clear: both; 
+
+}
+
+.gm-style-iw > div, .gm-style-iw > div > div {
+	 overflow: overlay; 
+}
+
+.droppoint-infowindow-content img {
+ float: left; 
+}
+.droppoint-infowindow-content strong {
+float: left; 
+clear:both; 
+}
+
+.droppoint-infowindow-content span.address {
+float: left; 
+clear: both; 
+}
+
+
+.selected_addres_span, .img_comes_here {
+ width: 100%; 
+ float: left; 
+ clear: both; 
+}
+
+

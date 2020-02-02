@@ -1,0 +1,131 @@
+/*------------------------------------------------------------------------
+* Advanced Virtuemart Invoices
+* author    CMSMart Team
+* copyright Copyright (C) 2012 Cmsmart Team. All Rights Reserved.
+* @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+* Websites: http://cmsmart.net
+* Technical Support:  Forum - http://cmsmart.net/forum
+* version 2.0
+-------------------------------------------------------------------------*/
+
+.basicBoxTitle
+{
+	border-collapse:collapse;
+	border-spacing:0pt 0pt;
+	height:10px;
+	line-height:10px;
+	width:100%;
+	margin-top:10px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	background-color: #ffffff;
+}
+
+.BBTitleMiddle h2 
+{
+	color: #FFFFFF;
+	font-size:120%;
+	margin:0px;
+	padding:0px;
+	overflow:none;
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+.commentBodyLeft, .boxBodyLeft
+{
+    border-left: 1px solid #E6E6E6 !important;
+    border-right: 1px solid #E6E6E6 !important;
+    border-bottom : 1px solid #e6e6e6 !important;
+	margin-right:0px;
+	margin-left:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+
+}
+
+.commentBodyRight, .boxBodyRight
+{
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-color:#C0C0C0;
+	margin-right:0px;
+	margin-left:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+.commentBody, .basicBoxBody
+{
+	background-color: #FFFFFF;
+	border-collapse:collapse;
+	border-spacing:0pt 0pt;
+	color:#000000;
+	width:100%;
+}
+
+.bottomComment, .basicBoxFooter, .tbFooter
+{
+	background-color: #FFFFFF;
+	border-collapse:collapse;
+	border-spacing:0pt 0pt;
+	height:10px;
+	line-height:10px;
+	color:#ffffff;
+	width:100%;
+}
+
+.commentBodyText, .basicBoxBodyText
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+.tbTitleMiddle h5, .tbTitleMiddleRed h5 
+{
+	color: #FFFFFF;
+	font-size:120%;
+	margin:0px;
+	padding:0px;
+	overflow:none;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.titleComment, .tbTitle
+{
+	border-collapse:collapse;
+	border-spacing:0pt 0pt;
+	height:28px;
+	line-height:28px;
+	color:#ffffff;
+	width:100%;
+	margin-top:10px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.clear 
+{ 
+	clear: both; 
+	padding-top: 8px;
+}
+
+.qmark
+{
+background-color: #c0d2ec;
+color: #ff0000;
+font-weight: bold;
+}

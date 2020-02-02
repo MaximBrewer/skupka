@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="accordeonmenu_mobileparams" label="MOD_ACCORDEONCK_MOBILEPARAMS_FIELDSET_LABEL">
+			<field
+				name="accordeonmobile_enable"
+				type="ckradio"
+				default="0"
+				label="PLG_ACCORDEONMENUMOBILECK_MOBILEENABLE_LABEL"
+				description="PLG_ACCORDEONMENUMOBILECK_MOBILEENABLE_DESC"
+				class="btn-group"
+				icon="ipod.png"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="accordeonmobile_container"
+				type="cklist"
+				default="menucontainer"
+				label="PLG_ACCORDEONMENUMOBILECK_CONTAINER_LABEL"
+				description="PLG_ACCORDEONMENUMOBILECK_CONTAINER_DESC"
+				icon="application_side_list.png"
+			>
+				<option value="body">PLG_ACCORDEONMENUMOBILECK_BODY</option>
+				<option value="menucontainer">PLG_ACCORDEONMENUMOBILECK_MENUCONTAINER</option>
+				<option value="topfixed">PLG_ACCORDEONMENUMOBILECK_TOPFIXED</option>
+			</field>
+			<field 
+				type="ckspacer"
+				name="maximenumobile_displayinfo"
+				label="PLG_ACCORDEONMENUMOBILECK_DISPLAYTYPE_INFO_LABEL"
+			/>
+			<field
+				name="accordeonmobile_display"
+				type="cklist"
+				default="flat"
+				label="PLG_ACCORDEONMENUMOBILECK_DISPLAYTYPE_LABEL"
+				description="PLG_ACCORDEONMENUMOBILECK_DISPLAYTYPE_DESC"
+				icon="application_view_list.png"
+			>
+				<option value="flat">PLG_ACCORDEONMENUMOBILECK_FLAT</option>
+				<option value="accordion">PLG_ACCORDEONMENUMOBILECK_ACCORDION</option>
+				<option value="fade">PLG_ACCORDEONMENUMOBILECK_FADELEVELS</option>
+				<option value="push">PLG_ACCORDEONMENUMOBILECK_PUSHLEVELS</option>
+			</field>
+			<field
+				name="accordeonmobile_displayeffect"
+				type="cklist"
+				default="0"
+				label="PLG_ACCORDEONMENUMOBILECK_DISPLAYEFFECT_LABEL"
+				description="PLG_ACCORDEONMENUMOBILECK_DISPLAYEFFECT_DESC"
+				icon="chart_curve.png"
+			>
+				<option value="normal">PLG_ACCORDEONMENUMOBILECK_NORMAL</option>
+				<option value="slideleft">PLG_ACCORDEONMENUMOBILECK_SLIDELEFT</option>
+				<option value="slideright">PLG_ACCORDEONMENUMOBILECK_SLIDERIGHT</option>
+				<option value="topfixed">PLG_ACCORDEONMENUMOBILECK_TOPFIXED</option>
+				<option value="open">PLG_ACCORDEONMENUMOBILECK_OPEN_SLIDE</option>
+			</field>
+			<field
+				name="accordeonmobile_useimage"
+				type="cklist"
+				default="0"
+				label="PLG_ACCORDEONMENUMOBILECK_USEIMAGE_LABEL"
+				description="PLG_ACCORDEONMENUMOBILECK_USEIMAGE_DESC"
+				class="btn-group"
+				icon="application_view_gallery.png"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="accordeonmobile_usemodule"
+				type="cklist"
+				default="0"
+				label="PLG_ACCORDEONMENUMOBILECK_USEMODULE_LABEL"
+				description="PLG_ACCORDEONMENUMOBILECK_USEMODULE_DESC"
+				class="btn-group"
+				icon="application_form.png"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="accordeonmobile_showdesc"
+				type="cklist"
+				default="0"
+				label="PLG_ACCORDEONMENUMOBILECK_SHOWDESC_LABEL"
+				description="PLG_ACCORDEONMENUMOBILECK_SHOWDESC_DESC"
+				icon="application_view_list.png"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="accordeonmobile_showmobilemenutext"
+				type="cklist"
+				default="normal"
+				label="PLG_ACCORDEONMENUMOBILECK_SHOWMOBILEMENUTEXT_LABEL"
+				description="PLG_ACCORDEONMENUMOBILECK_SHOWMOBILEMENUTEXT_DESC"
+				icon="font.png"
+			>
+				<option value="default">PLG_ACCORDEONMENUMOBILECK_DEFAULTTEXT</option>
+				<option value="custom">PLG_ACCORDEONMENUMOBILECK_CUSTOMTEXT</option>
+				<option value="none">PLG_ACCORDEONMENUMOBILECK_NONE</option>
+			</field>
+			<field
+				name="accordeonmobile_mobilemenutext"
+				type="cktext"
+				default=""
+				label="PLG_ACCORDEONMENUMOBILECK_MOBILEMENUTEXT_LABEL"
+				description="PLG_ACCORDEONMENUMOBILECK_MOBILEMENUTEXT_DESC"
+				icon="text_signature.png" />
+		</fieldset>
+	</fields>
+</form>

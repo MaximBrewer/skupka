@@ -1,0 +1,203 @@
+.clear(){
+    (~'@{class}'){
+        overflow: hidden;
+    }
+    .accordiontransforminit(@a) when (@a = 1) {
+        transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+    }
+    .accordiontransforminit(@transform);
+    
+    div,
+    dl,
+    dt,
+    dd,
+    span,
+    a,
+    img,
+    h3{
+        width: auto;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        float: none;
+        clear: none;
+        line-height: normal;
+        position: static;
+        list-style: none;
+    }
+    
+    .dj_ie7 & div,
+    .dj_ie7 & dl,
+    .dj_ie7 & dt,
+    .dj_ie7 & dd,
+    /*.dj_ie7 & span,
+    .dj_ie7 & a,
+    .dj_ie7 & img,*/
+    .dj_ie7 & h3{
+        width: 100%;
+    }
+    
+    span,
+    a,
+    img{
+      vertical-align: middle;
+    }
+    
+    a{
+        /* For testing*/
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        &,
+        :focus,
+        :active{
+            background: none;
+            outline: 0;
+            -moz-outline-style: none;
+        }
+    }
+    
+    img{
+        margin: 0 4px;
+    }
+    
+    .snaptobottom (@a) when (@a = 1) {
+        bottom: 0;
+    }
+    
+    .css3animation(@a) when (@a = 1) {
+        .accordiontransform(@transform);
+        &.opening{
+            .transition(@animationinterval, @animationopening);
+        }
+        &.closing{
+            .transition(@animationinterval, @animationclosing);
+        }
+        &.opening.notransition,
+        &.closing.notransition{
+            .notransition();
+        }
+    }
+    
+    .accordiontransform(@a) when (@a = 1) {
+        perspective: @transformperspective;
+        -webkit-perspective: @transformperspective;
+        > dl{
+            opacity: @opacity;
+            transform-origin:@transformorigin;
+            -ms-transform-origin:@transformorigin;
+            -webkit-transform-origin:@transformorigin;
+            transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+            transform: @transformvalue;
+            -ms-transform: @transformvalue;
+            -webkit-transform: @transformvalue;
+            -webkit-backface-visibility: hidden;
+            outline: 1px solid transparent;
+        }
+        &.opening > dl,
+        &.opened > dl{
+            opacity: 1;
+            .transition(@animationinterval, @animationopening);
+            transform: translate3d(0,0,0) scale3d(1,1,1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            -ms-transform: translate3d(0,0,0) scale3d(1,1,1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            -webkit-transform: translate3d(0,0,0) scale3d(1,1,1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+        &.closing > dl{
+            .transition(@animationinterval, @animationclosing);
+        }
+        &.opening.notransition > dl,
+        &.closing.notransition > dl{
+            .notransition();
+        }
+    }
+    
+    .css3animationimproved(@a) when (@a = 2) {
+        transform: translate3d(0px, 0px, 0px);
+        .transition(@animationinterval, @animationopening);
+    }
+    
+    dl{
+        zoom: 1;
+        .css3animationimproved(@accordionmode);
+    }
+    
+    dl.level1{
+        dl{
+            position: absolute;
+            width: 100%;
+            top: @snaptobottom;
+            .snaptobottom(@snaptobottom);
+        }
+        
+        .hiddenwhennowcss3(@a) when (@a = 0) {
+            display: none;
+        }
+    
+        dd{
+            .hiddenwhennowcss3(@css3animation);
+            overflow: hidden;
+            height: 0px;
+            width: 100%;
+            margin: 0;
+            position: relative;
+    
+            &.opening, 
+            &.closing,
+            &.opened{
+                display: block;
+            }
+        
+            &.parent{
+                .css3animation(@css3animation);
+                &.opened{
+                    height: auto;
+                    > dl{
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+    
+    .nextend-productnum{
+        display: inline-block;
+        float: right;
+        vertical-align: middle;
+        margin: -1px 5px 0 5px;
+        min-width: 8px;
+        padding-left: 8px !important;
+        padding: 0 8px;
+        text-align: center !important;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 9px 9px 9px 9px;
+        .box-shadow(~"0 0 2px 1px rgba(0, 0, 0, 0.2), 1px 1px 2px rgba(0, 0, 0, 0.1) inset");
+    }
+    
+    .dj_ie6 & span.nextend-productnum,
+    .dj_ie7 & span.nextend-productnum{
+        float: none;
+        display: inline;
+        margin: 0 10px;
+    }
+    
+    .dj_ie6 & span.nextend-productnum,
+    .dj_ie7 & span.nextend-productnum,
+    .dj_ie8 & span.nextend-productnum{
+        border: 1px solid #ffffff;
+    }
+    
+    &.noscript dl.level1{
+        dl{
+            position: static;
+        }
+        dd.parent{
+            height: auto !important;
+            display: block;
+            visibility: visible;
+        }
+    }
+}

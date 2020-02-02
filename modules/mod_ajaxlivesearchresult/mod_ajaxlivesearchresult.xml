@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.5.0" method="upgrade" client="site">
+  <name>AJAX Live Search results</name>
+  <author>Janos Biro</author>
+  <copyright>Copyright (C) 2013 Offlajn. All rights reserved.</copyright>
+  <authorEmail>janos.biro@offlajn.com</authorEmail>
+  <authorUrl>http://www.offlajn.com</authorUrl>
+  <version>1.0.0</version>
+  <description>This module is created for Universal AJAX Live Search Tile theme to load results in custom module postioin.</description>
+  <files>
+    <filename>index.html</filename>
+    <filename>mod_ajaxlivesearchresult.xml</filename>
+    <filename module="mod_ajaxlivesearchresult">mod_ajaxlivesearchresult.php</filename>
+  </files>
+  <params name="params" addPath="/modules/mod_universal_ajaxlivesearch/params">
+    <param type="spacer" label="This is only the result module in case of you are using the minimal theme. The Live Search settings can be found in the Universal AJAX Live Search module, or &lt;a href='index.php?option=com_modules&amp;filter_module=mod_universal_ajaxlivesearch'&gt;click here&lt;/a&gt;."/>    
+  </params>
+  <config>
+    <fields name="params" addfieldpath="/modules/mod_universal_ajaxlivesearch/params">
+      <fieldset name="basic">
+         <field type="spacer" label="This is only the result module in case of you are using the minimal theme. The Live Search settings can be found in the Universal AJAX Live Search module, or &lt;a href='index.php?option=com_modules&amp;filter_module=mod_universal_ajaxlivesearch'&gt;click here&lt;/a&gt;."/>
+      </fieldset>
+    </fields>
+  </config>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <creationDate>2013-03</creationDate>
+</extension>

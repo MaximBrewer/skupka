@@ -1,0 +1,23 @@
+<root>
+    <params name="filter" label="Filter">
+        <param name="userID" label="User name or ID" type="text" default="me"/>
+        <param name="tags" label="Tags" type="text" default=""/>
+        <param name="text" label="Search in title, description or tags" type="text" default=""/>
+        <param type="list" name="privacy" label="Privacy" default="1" translateable="1">
+            <option value="1">Public photos</option>
+            <option value="2">Private photos visible to friends</option>
+            <option value="3">Private photos visible to family</option>
+            <option value="4">Private photos visible to friends &amp; family</option>
+            <option value="5">Completely private photos</option>
+        </param>
+        <param type="list" name="type" label="Type" default="7" translateable="1">
+            <option value="7">All</option>
+            <option value="1">Photos only</option>
+            <option value="2">Screenshots only</option>
+            <option value="3">'Other' only</option>
+            <option value="4">Photos and screenshots</option>
+            <option value="5">Screenshots and 'other'</option>
+            <option value="6">Photos and 'other'</option>
+        </param>
+    </params>
+</root>

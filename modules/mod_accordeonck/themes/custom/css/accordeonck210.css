@@ -1,0 +1,79 @@
+
+				
+/*---------------------------------------------
+---	 Module styles from Accordeon CK Params     ---
+----------------------------------------------*/
+
+#accordeonck210 {
+	 padding:0;
+	margin:0;
+	 } 
+#accordeonck210 li.accordeonck {
+	 list-style: none;
+	overflow: hidden;
+	 }
+#accordeonck210 ul[class^="content"] {
+	 margin:0;
+	padding:0;
+	 }
+#accordeonck210 li.accordeonck > span {
+	 position: relative;
+	 display: block;
+	 font-family: Open_Sans_L;
+	}
+#accordeonck210 li.accordeonck.parent > span {
+	 }
+#accordeonck210 li.parent > span span.toggler_icon {
+	 position: absolute;
+	 cursor: pointer;
+	 display: block;
+	 height: 100%;
+	 z-index: 10;
+	right:0;
+	 background: url(/) center center no-repeat !important;
+	}
+#accordeonck210 li.parent.open > span span.toggler_icon {
+	 right:0;
+	 background: url(/) center center no-repeat !important;
+	}
+#accordeonck210 li.accordeonck.level2 > span {
+	 padding-right: 0px;
+	}
+#accordeonck210 li.level3 li.accordeonck > span {
+	 padding-right: 0px;
+	}
+#accordeonck210 a.accordeonck {
+	 display: block;
+	text-decoration: none;
+	 color: #3C3C3C;
+	font-size: 14px;
+	}
+#accordeonck210 a.accordeonck:hover {
+	 text-decoration: none;
+	 color: #339ADE;
+	}
+#accordeonck210 li.parent > span a {
+	 display: block;
+	outline: none;
+	 }
+#accordeonck210 li.parent.open > span a {
+	  }
+#accordeonck210 li.level1 > span {
+	 border-top: #E4E4E4 1px solid ;
+	 } 
+#accordeonck210 li.level1 > span a {
+	 padding-top: 15px;
+	padding-bottom: 15px;
+	color: #3C3C3C;
+	font-size: 14px;
+	 } 
+#accordeonck210 li.level1:hover > span {
+	  } 
+#accordeonck210 li.level1:hover > span a {
+	 color: #339ADE;
+	 } 
+#accordeonck210 li.level1.active > span {
+	  } 
+#accordeonck210 li.level1.active > span a {
+	 color: #339ADE;
+	 } 

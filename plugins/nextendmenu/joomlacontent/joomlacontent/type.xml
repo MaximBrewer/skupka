@@ -1,0 +1,31 @@
+<root translate="accordionmenu">
+    <params label="Joomla_categories_and_articles_menu_properties">
+        <param type="joomlacategories" name="root" default="1" label="Menu_root" multiple="1" size="10" description="If_enabled_and_one_selected_in_the_previous__" />
+        <param name="rootasitem" type="onoff" default="0" label="Singe_root_as_menuitem" description="If_enabled_and_one_selected_in_the_previous__"/>
+        <param name="showproducts" type="onoff" default="0" label="Show_articles" description="If_enabled_articles_are_included_in_the_menu"/>
+        <param name="maxitemsincat" type="text" default="20" label="Max_articles_per_Category" description="Used_if_Show_articles_enabled_0_means_unlimited" />
+        <param name="displaynum" type="radio" default="0" label="Display_number_of_articles" description="Display_the_articles_count_available_in_a_category_if_any">
+            <option value="0">No</option>
+            <option value="1">Yes_the_real_count</option>
+            <option value="2">Yes_the_aggregated_count</option>
+        </param> 
+        <param name="categorylayout" type="radio" default="" label="Category_layout">
+            <option value="">List</option>
+            <option value="blog">Blog</option>
+        </param>
+        <param name="emptycategory" type="onoff" default="1" label="Show_empty_categories" />
+        <param name="order" type="radio" label="Order" default="0">
+            <option value="0">Components_default</option>
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+        </param>
+        <param name="menuicons" type="mixed" label="Menu_icons" default="0|*|0|*|0" description="If_enabled_the_menu_will_add_the_specified_image_from_the_menu_item">
+            <param type="onoff" label="Show" />
+            <param type="radio" label="Alignment">
+                <option value="0">Left</option>
+                <option value="1">Right</option>
+            </param>
+            <param type="onoff" label="Only_icon" />
+        </param>
+    </params>
+</root>

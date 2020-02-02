@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" group="vmshipment" method="upgrade">
+    <name>weight_countries2</name>
+    <creationDate>November 21 2016</creationDate>
+    <author>The VirtueMart Development Team</author>
+    <authorUrl>http://www.virtuemart.net</authorUrl>
+    <copyright>Copyright (C) 2004 - 2016 Virtuemart Team. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>OPC DEBUGGING PLUGIN FOR ADDRESS TESTING - DO NOT USE ON PRODUCTION ENVIROMENT</description>
+    <languages folder="language/en-GB/" >
+        <language tag="en-GB">en-GB.plg_vmshipment_weight_countries2.ini</language>
+    </languages>
+    <files>
+        <filename plugin="weight_countries2">weight_countries2.php</filename>
+        <folder>tmpl</folder>
+		<folder>language</folder>
+    </files>
+
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="template">
+                <field name="shipment_logos" type="vmfiles" multiple="true" directory="/images/stories/virtuemart/shipment"
+                        label="VMSHIPMENT_weight_countries2_LOGOS"
+                       size="40"
+                       default="" hide_default="1" hide_none="true"
+                       stripext="0" exclude="index.html"
+                       description="VMSHIPMENT_weight_countries2_LOGOS_DESC"/>
+            </fieldset>
+            <fieldset name="restrictions">
+                <field name="show_on_pdetails" type="radio" default="0"
+                        label="VMSHIPMENT_weight_countries2_SHOW_ON_PRDETAILS"
+                        extension="com_virtuemart"
+                        description="VMSHIPMENT_weight_countries2_SHOW_ON_PRDETAILS_TIP">
+                    <option value="0">COM_VIRTUEMART_NO</option>
+                    <option value="1">COM_VIRTUEMART_YES</option>
+                </field>
+                <field name="categories" value_field="category_name" type="vmcategories" multiple="true" size="10" default="" label="VMSHIPMENT_WEIGHT_CATEGORIES"
+                       description="VMSHIPMENT_WEIGHT_CATEGORIES_DESC"/>
+                <field name="blocking_categories" value_field="category_name" type="vmcategories" multiple="true" size="10" default="" label="VMSHIPMENT_WEIGHT_BLOCKING_CATEGORIES"
+                       description="VMSHIPMENT_WEIGHT_CATEGORIES_DESC"/>
+                <field name="countries" type="vmcountries" multiple="true" scope="com_virtuemart" default=""
+                       label="VMSHIPMENT_weight_countries2_COUNTRIES" description="VMSHIPMENT_weight_countries2_COUNTRIES_DESC"/>
+                <field name="zip_start" type="text" size="10" default="" label="VMSHIPMENT_weight_countries2_ZIP_START"
+                       description="VMSHIPMENT_weight_countries2_ZIP_START_DESC"/>
+                <field name="zip_stop" type="text" size="10" default="" label="VMSHIPMENT_weight_countries2_ZIP_STOP"
+                       description="VMSHIPMENT_weight_countries2_ZIP_STOP_DESC"/>
+                <field name="weight_start" type="text" size="10" default=""
+                       label="VMSHIPMENT_weight_countries2_WEIGHT_START"
+                       description="VMSHIPMENT_weight_countries2_WEIGHT_START_DESC"/>
+                <field name="weight_stop" type="text" size="10" default=""
+                       label="VMSHIPMENT_weight_countries2_WEIGHT_STOP"
+                       description="VMSHIPMENT_weight_countries2_WEIGHT_STOP_DESC"/>
+                <field name="weight_unit" type="vmweightunit" size="10" default=""
+                       label="VMSHIPMENT_weight_countries2_WEIGHT_UNIT"
+                       description="VMSHIPMENT_weight_countries2_WEIGHT_UNIT_DESC"/>
+                <field name="nbproducts_start" type="text" size="10" default=""
+                       label="VMSHIPMENT_weight_countries2_NBPRODUCTS_START"
+                       description="VMSHIPMENT_weight_countries2_NBPRODUCTS_START_DESC"/>
+                <field name="nbproducts_stop" type="text" size="10" default=""
+                       label="VMSHIPMENT_weight_countries2_NBPRODUCTS_STOP"
+                       description="VMSHIPMENT_weight_countries2_NBPRODUCTS_STOP_DESC"/>
+                <field name="orderamount_start" type="text" size="10" default=""
+                       label="VMSHIPMENT_weight_countries2_ORDERAMOUNT_START"
+                       description="VMSHIPMENT_weight_countries2_ORDERAMOUNT_START_DESC"/>
+                <field name="orderamount_stop" type="text" size="10" default=""
+                       label="VMSHIPMENT_weight_countries2_ORDERAMOUNT_STOP"
+                       description="VMSHIPMENT_weight_countries2_ORDERAMOUNT_STOP_DESC"/>
+            </fieldset>
+            <fieldset name="fee">
+                <field name="shipment_cost" type="text" label="VMSHIPMENT_weight_countries2_COST"
+                       description="VMSHIPMENT_weight_countries2_COST_DESC" default="0"/>
+                <field name="package_fee" type="text" label="VMSHIPMENT_weight_countries2_PACKAGE_FEE"
+                       description="VMSHIPMENT_weight_countries2_PACKAGE_FEE_DESC"/>
+                <field name="tax_id" type="vmtaxes" scope="com_virtuemart" label="VMSHIPMENT_weight_countries2_TAX"
+                       description="VMSHIPMENT_weight_countries2_TAX_DESC" default="0"/>
+                <field name="free_shipment" type="text" label="VMSHIPMENT_weight_countries2_FREE_SHIPPING_AMOUNT"
+                       description="VMSHIPMENT_weight_countries2_FREE_SHIPPING_AMOUNT_DESC" default=""/>
+            </fieldset>
+        </fields>
+    </vmconfig>
+	
+	
+	<params addpath="/administrator/components/com_virtuemart/elements">
+        <param type="vmjpluginwarning"/>
+        <param type="spacer" default="VMSHIPMENT_WEIGHT_COUNTRIES_PLUGIN" level="level1"/>
+        <param name="shipment_logos" type="vmfiles" label="VMSHIPMENT_WEIGHT_COUNTRIES_LOGOS"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_LOGOS_DESC"
+               directory="/images/stories/virtuemart/shipment"
+               default="default" hide_default="1" hide_none="1"
+               stripext="0" exclude="^_"/>
+        <param name="show_on_pdetails" type="radio" scope="com_virtuemart" default="1"
+               label="VMSHIPMENT_WEIGHT_COUNTRIES_SHOW_ON_PRDETAILS"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_SHOW_ON_PRDETAILS_TIP">
+            <option value="0">COM_VIRTUEMART_NO</option>
+            <option value="1">COM_VIRTUEMART_YES</option>
+        </param>
+        <param name="countries" type="vmcountries" scope="com_virtuemart" default=""
+               label="VMSHIPMENT_WEIGHT_COUNTRIES_COUNTRIES" description="VMSHIPMENT_WEIGHT_COUNTRIES_COUNTRIES_DESC"/>
+        <param name="zip_start" type="text" size="10" default="" label="VMSHIPMENT_WEIGHT_COUNTRIES_ZIP_START"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_ZIP_START_DESC"/>
+        <param name="zip_stop" type="text" size="10" default="" label="VMSHIPMENT_WEIGHT_COUNTRIES_ZIP_STOP"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_ZIP_STOP_DESC"/>
+        <param name="weight_start" type="text" size="10" default="" label="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_START"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_START_DESC"/>
+        <param name="weight_stop" type="text" size="10" default="" label="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_STOP"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_STOP_DESC"/>
+        <param name="weight_unit" type="vmweightunit" size="10" default=""
+               label="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_UNIT"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_UNIT_DESC"/>
+        <param name="nbproducts_start" type="text" size="10" default=""
+               label="VMSHIPMENT_WEIGHT_COUNTRIES_NBPRODUCTS_START"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_NBPRODUCTS_START_DESC"/>
+        <param name="nbproducts_stop" type="text" size="10" default=""
+               label="VMSHIPMENT_WEIGHT_COUNTRIES_NBPRODUCTS_STOP"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_NBPRODUCTS_STOP_DESC"/>
+        <param name="orderamount_start" type="text" size="10" default=""
+               label="VMSHIPMENT_WEIGHT_COUNTRIES_ORDERAMOUNT_START"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_ORDERAMOUNT_START_DESC"/>
+        <param name="orderamount_stop" type="text" size="10" default=""
+               label="VMSHIPMENT_WEIGHT_COUNTRIES_ORDERAMOUNT_STOP"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_ORDERAMOUNT_STOP_DESC"/>
+
+        <param name="cost" type="text" label="VMSHIPMENT_WEIGHT_COUNTRIES_COST"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_COST_DESC"/>
+        <param name="package_fee" type="text" label="VMSHIPMENT_WEIGHT_COUNTRIES_PACKAGE_FEE"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_PACKAGE_FEE_DESC"/>
+        <param name="tax_id" type="vmtaxes" scope="com_virtuemart" label="VMSHIPMENT_WEIGHT_COUNTRIES_TAX"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_TAX_DESC"/>
+        <param name="free_shipment" type="text" label="VMSHIPMENT_WEIGHT_COUNTRIES_FREE_SHIPPING_AMOUNT"
+               description="VMSHIPMENT_WEIGHT_COUNTRIES_FREE_SHIPPING_AMOUNT_DESC"/>
+    </params>
+	
+    
+</extension>

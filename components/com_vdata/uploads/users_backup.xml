@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROWSET>
+ <ROW>
+  <id>870</id>
+  <name>John Doe</name>
+  <username>john doe</username>
+  <email>info@example.com</email>
+  <password>$2y$10$45NPwR.YJPVaYC.aq0Gou.ljsWvqHOslE717T4K6RfI97PbwS0O.q</password>
+  <block>0</block>
+  <sendEmail>0</sendEmail>
+  <registerDate>0000-00-00 00:00:00</registerDate>
+  <lastvisitDate>0000-00-00 00:00:00</lastvisitDate>
+  <activation></activation>
+  <params></params>
+  <lastResetTime>0000-00-00 00:00:00</lastResetTime>
+  <resetCount>0</resetCount>
+  <otpKey></otpKey>
+  <otep>{&quot;name&quot;:&quot;Klaus Oppermann&quot;,&quot;id&quot;:&quot;794&quot;}</otep>
+  <requireReset>0</requireReset>
+  <user_usergroup_map>
+   <CHILD>
+    <user_id>abc</user_id>
+    <group_map_title>Registered</group_map_title>
+   </CHILD>
+  </user_usergroup_map>
+  <usergroups>
+   <CHILD>
+    <group_title>Registered</group_title>
+   </CHILD>
+  </usergroups>
+ </ROW>
+</ROWSET>

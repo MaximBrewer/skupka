@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/component-install.dtd">
+<install version="1.5" type="plugin" group="authentication" method="upgrade">
+	<name>Authentication - Email or Username</name>
+	<author>RuposTel.com</author>
+	<creationDate>May 2013</creationDate>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved. modified by RuposTel.com</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@rupostel.com</authorEmail>
+	<authorUrl>www.rupostel.com</authorUrl>
+	<version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+	<description>
+	<![CDATA[
+	This authentication plugin checks for a match of either username or an email address with the password entered. It is a modified plugin of the default Joomla! authentication plugin. Please disable the deafult authentication plugin after you enable Email OR Username Plugin<br /><strong> Warning! You must have at least one authentication plugin enabled or you will lose all access to your site.</strong>
+	]]>
+	</description>
+	<files>
+		<filename plugin="emailorusername">emailorusername.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<params />
+</install>

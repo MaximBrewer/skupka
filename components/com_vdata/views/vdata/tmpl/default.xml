@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="vData">
+		<help key="vData Dashboard" />
+		<message>
+			<![CDATA[Show Dashboard.]]>
+		</message>
+	</layout>
+	
+</metadata>

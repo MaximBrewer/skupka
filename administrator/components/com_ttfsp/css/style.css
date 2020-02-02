@@ -1,0 +1,65 @@
+div.tlord {
+
+	float: left;
+	display: block;
+	margin-right: 10px;
+	font-size: 12px;
+}
+
+div.select_ord {
+	margin-top: 30px;
+	background: #1c3966;
+	width: 100%;
+	display: inline-block;
+	padding: 10px 0 20px 10px;
+	color: #fff;
+}
+div.tlord select {
+	height: 30px;
+}
+input.submorders {
+	height: 30px !important;
+	padding: 4px 30px 4px 30px;
+	margin-top: 14px;
+}
+
+div.tlordfltr {
+	float: left;
+	display: inline-block;
+	margin-right: 5px;
+}
+div.fspcnt.ordtbl input {
+	min-width: 100px;
+	height: 25px;
+	border-radius: 4px;
+}
+div.row-fluid div.select_ord {
+	padding: 10px 0 0 10px;
+}
+div.row-fluid div.fspcnt.ordtbl input {
+	min-width: inherit;
+	height: 18px;
+	border-radius: 4px;
+}
+div.row-fluid input.submorders {
+	height: 30px !important;
+	padding: 4px 30px 4px 30px;
+	margin-top: 18px;
+}
+div.bottom_ordtbl, div.top_ordtbl {
+	display: inline-block;
+	width: 100%;
+	clear: both;
+}
+div.top_ordtbl {
+	padding-bottom: 3px;
+	border-bottom: solid #fff 1px;
+}
+div.top_tlord {
+	margin-left: 5px;
+	display: inline-block;
+}
+div.select_ord  select {
+	width: 120px;
+	height: 30px;
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="pluginform">
+        <fieldset name="fieldcombine">
+            <field name="source"
+                   type="textarea"
+                   rows="5"
+                   required="true"
+                   class="input-xxlarge"
+                   filter="raw"/>
+
+            <field name="target"
+                   type="text"
+                   required="true"
+                   class="input-normal"/>
+
+            <field name="operation"
+                   type="list"
+                   size="1"
+                   default="onlycombine"
+                   onchange="if (this.value === 'combine') { Csvi.showFields(1, '#combine'); Csvi.showFields(0, '#calculate'); } else if (this.value === 'calculate') { Csvi.showFields(1, '#calculate'); Csvi.showFields(0, '#combine'); }"
+                   class="advancedSelect">
+                <option value="combine">COM_CSVI_PLUGINFORM_OPERATION_COMBINE</option>
+                <option value="calculate">COM_CSVI_PLUGINFORM_OPERATION_CALCULATE</option>
+            </field>
+        </fieldset>
+
+        <fieldset name="combine">
+            <field name="combine_character"
+                   type="text"
+                   required="false"
+                   class="input-mini"/>
+
+            <field name="combine_empty"
+                   type="list"
+                   default="0"
+                   class="input-small advancedSelect">
+                <option value="0">COM_CSVI_NO</option>
+                <option value="1">COM_CSVI_YES</option>
+            </field>
+        </fieldset>
+
+        <fieldset name="calculate" class="advancedUser">
+            <field name="calculate"
+                   type="list"
+                   required="false"
+                   class="advancedSelect"
+                   default="addition">
+                <option value="addition">COM_CSVI_PLUGINFORM_ADDITION</option>
+                <option value="subtraction">COM_CSVI_PLUGINFORM_SUBTRACTION</option>
+                <option value="multiplication">COM_CSVI_PLUGINFORM_MULTIPLICATION</option>
+                <option value="division">COM_CSVI_PLUGINFORM_DIVISION</option>
+            </field>
+
+            <field name="decimals"
+                   type="text"
+                   required="false"
+                   class="input-mini"
+                   default="2"/>
+        </fieldset>
+    </fields>
+</form>

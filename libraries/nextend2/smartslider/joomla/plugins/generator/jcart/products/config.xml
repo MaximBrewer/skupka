@@ -1,0 +1,33 @@
+<root>
+    <params name="jcartproducts" label="Filter">
+        <param type="group" label="Source">
+            <param name="jcartsourcecategories" label="Categories" type="jcartcategories" default="0"
+                   multiple="1" size="10"/>
+        </param>
+        <param type="group" label="Limit" class="n2-expert">
+            <param name="jcartsourceinstock" label="In stock" type="filter" default="0"/>
+            <param name="jcartsourceavailable" label="Available by date" type="filter" default="0"/>
+            <param name="jcartsourceshipping" label="Requires shipping" type="filter" default="0"/>
+            <param name="jcartsourcelanguage" label="Language filter" type="jcartlanguages" default="0"/>
+            <param name="jcartsourceminimum" label="Minimum order quantity" type="text" default="0"/>
+            <param name="jcartitemid" label="Target menuitem for urls (item ID)" type="menuitems" default="0"/>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="jcartorder" type="mixed" label="Order" default="p.date_added|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="pd.name">Product name</option>
+                <option value="p.sort_order">Ordering</option>
+                <option value="p.viewed">Viewed</option>
+                <option value="p.price">Price</option>
+                <option value="p.date_added">Creation time</option>
+                <option value="p.date_modified">Modification time</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

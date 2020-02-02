@@ -1,0 +1,29 @@
+<root>
+    <params name="odudefilter" label="Filter">
+        <param type="group" label="Source">
+            <param name="odudecategories" label="Categories" type="odudecategories"
+                   default="0"
+                   multiple="1" size="10"/>
+            <param name="odudetypes" type="list" label="Type" translateable="1" default="J">
+                <option value="J">JPEG or GIF E-Card</option>
+                <option value="F">FLASH / SWF E-Card</option>
+            </param>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="odudeorder" type="mixed" label="Order" default="ddate|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="">None</option>
+                <option value="ordering">Ordering</option>
+                <option value="ddate">Date</option>
+                <option value="hits">Hits</option>
+                <option value="title">Title</option>
+                <option value="id">ID</option>
+            </param>
+            <param type="radio" label="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>

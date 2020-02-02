@@ -1,0 +1,49 @@
+#popup_compare{padding:0px 0px 40px 0px;overflow-x: auto;}
+table.popup_table {
+	font-size:12px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+    border:1px solid #e1e1e1;
+    border-radius:6px;
+    width:100%
+}
+.header_compare{
+    border:0px;
+    margin:0px;
+    padding:0px 0px 0px 15px;
+    width:120px;
+    border-right:1px solid #e1e1e1;
+    border-bottom:1px solid #e1e1e1;
+
+}
+td.product_compare_item{width:230px!important;padding:0px 0px 0px 15px;border-bottom:1px solid #e1e1e1;border-right:1px solid #e1e1e1}
+tr.tr_compare_images{height:120px}
+tr.tr_compare_images img{border:1px solid #fafafa;width:100px;height:85px}
+tr.tr_compare_rating,tr.tr_compare_price,tr.tr_compare_name,tr.tr_compare_manufacturer,tr.tr_compare_availability,
+tr.tr_compare_sku,tr.tr_compare_weight,tr.tr_compare_length,tr.tr_compare_category{height:50px}
+tr.tr_compare_action{height:50px}
+tr.tr_compare_description{height:170px;vertical-align:top}
+.tr_compare_description .header_compare{vertical-align:middle}
+td.name_compare{color: #095197;font-size: 14px;}
+.description_compare > div.description_product_compare{height:170px;overflow:auto;padding:15px 10px 4px 0px}
+div.description_product_compare p{margin:0px 0px 0px;text-align: left!important;}
+td.price_compare{color:#e13b47}
+.availability_TF{display:inline-block;color:#008e00; margin-right:7px}
+div.remove_compare_popup{float:left;border:1px solid #e13b47; border-radius:6px;width:85px;height:25px;
+	line-height:25px;color:#e13b47;font-size:14px;font-family: "times new roman";cursor:pointer;padding-left: 10px;
+}
+div.remove_compare_popup i{margin-right:10px;font-size: 18px;margin-top: 4px;}
+.addtocart-bar-plg .quantity-box{}
+.addtocart-plg-button{background:none; border:1px solid #095197;width:110px;float:left;margin-left:10px;
+	height:27px;line-height:27px; border-radius:6px;font-size:14px;font-family: "times new roman";cursor:pointer;padding-left:15px;color: #095197;
+}
+
+.addtocart-button-plg{position:relative;border:0px solid #eee!important;margin:0px!important;
+	padding:0px!important;display:block;
+}
+.addtocart-button-plg i{margin-right:10px;position:absolute;top:5px;left:117px;color: #095197;font-size: 17px;}
+.manufacturer_compare{color:#666666}
+.rating_compare img{width:75px!important;height:auto!important}
+

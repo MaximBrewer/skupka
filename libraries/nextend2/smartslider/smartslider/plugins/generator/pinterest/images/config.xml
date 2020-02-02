@@ -1,0 +1,6 @@
+<root>
+    <params name="filter" label="Filter">
+        <param type="text" name="pinterestusername" label="Username"/>
+        <param type="text" name="pinterestboard" label="Board slug" default="All"/>
+    </params>
+</root>

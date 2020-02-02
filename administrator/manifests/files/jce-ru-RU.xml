@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="file" version="2.5" method="upgrade">
+	<name>JCE - Russian</name>
+	<version>2.6.12</version>
+	<creationDate>2017-05-07</creationDate>
+	<author>JCE Transifex Russian Team</author>
+	<authorEmail>info@joomlacontenteditor.net</authorEmail>
+	<authorUrl>https://www.transifex.com/projects/p/jce/language/ru-RU/</authorUrl>
+	<copyright>© 2017 Widget Factory Limited</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<url>https://www.transifex.com/projects/p/jce/language/ru-RU/</url>
+	<description>Russian Language Pack for JCE 2.6.12</description>
+	<fileset>
+		<files folder="administrator/language/ru-RU" target="administrator/language/ru-RU">
+				<file>ru-RU.com_jce.ini</file>
+		<file>ru-RU.com_jce.menu.ini</file>
+		<file>ru-RU.com_jce_pro.sys.ini</file>
+		<file>ru-RU.com_jce.sys.ini</file>
+		<file>ru-RU.mod_jce_quickicon.ini</file>
+		<file>ru-RU.pkg_jce_pro.sys.ini</file>
+		<file>ru-RU.pkg_jce.sys.ini</file>
+		<file>ru-RU.plg_content_jce.ini</file>
+		<file>ru-RU.plg_content_jce.sys.ini</file>
+		<file>ru-RU.plg_editors_jce.ini</file>
+		<file>ru-RU.plg_editors_jce.sys.ini</file>
+		<file>ru-RU.plg_extension_jce.ini</file>
+		<file>ru-RU.plg_extension_jce.sys.ini</file>
+		<file>ru-RU.plg_installer_jce.ini</file>
+		<file>ru-RU.plg_installer_jce.sys.ini</file>
+		<file>ru-RU.plg_quickicon_jce.ini</file>
+		<file>ru-RU.plg_quickicon_jce.sys.ini</file>
+		<file>ru-RU.plg_system_jce.ini</file>
+		<file>ru-RU.plg_system_jcemediabox.ini</file>
+		<file>ru-RU.plg_system_jcemediabox.sys.ini</file>
+		<file>ru-RU.plg_system_jce.sys.ini</file>
+		</files>
+		<files folder="language/ru-RU" target="language/ru-RU">
+				<file>ru-RU.com_jce.ini</file>
+		<file>ru-RU.com_jce_pro.ini</file>
+		</files>
+  	</fileset>
+</extension>

@@ -1,0 +1,21 @@
+<root>
+    <params name="audio-item" hidetitle="1">
+        <param name="audio_mp3" type="video" label="MP3 audio" default="" style="width:236px;"/>
+        <param type="group">
+            <param name="volume" type="list" label="Volume" default="1" translateable="1">
+                <option value="0">Mute</option>
+                <option value="0.25">25%</option>
+                <option value="0.5">50%</option>
+                <option value="0.75">75%</option>
+                <option value="1">100%</option>
+            </param>
+            <param name="autoplay" type="onoff" label="Autoplay" default="0"/>
+            <param name="loop" type="onoff" label="Loop" default="0"/>
+            <param name="reset" type="onoff" label="Reset on slide change" default="0"/>
+        </param>
+        <param type="group">
+            <param name="color" type="color" label="Main color" alpha="1"/>
+            <param name="color2" type="color" label="Secondary color"/>
+        </param>
+    </params>
+</root>

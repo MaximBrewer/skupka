@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<access component="com_vdata">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+		<action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+		
+		<action name="core.import" title="JACTION_IMPORT" description="JACTION_IMPORT_COMPONENT_DESC" />
+		<action name="core.export" title="JACTION_EXPORT" description="JACTION_EXPORT_COMPONENT_DESC" />
+		<action name="core.widget" title="JACTION_WIDGET" description="JACTION_WIDGET_COMPONENT_DESC" />
+		
+		<action name="core.access.dashboard" title="JACTION_DASHBOARD_VIEW" description="JACTION_DASHBOARD_COMPONENT_VIEW_DESC" />
+		<action name="core.access.config" title="JACTION_CONFIG_VIEW" description="JACTION_CONFIG_COMPONENT_VIEW_DESC" />
+		<action name="core.access.profiles" title="JACTION_PROFILES_VIEW" description="JACTION_PROFILES_COMPONENT_VIEW_DESC" />
+		<action name="core.access.import" title="JACTION_IMPORT_VIEW" description="JACTION_IMPORT_COMPONENT_VIEW_DESC" />
+		<action name="core.access.export" title="JACTION_EXPORT_VIEW" description="JACTION_EXPORT_COMPONENT_VIEW_DESC" />
+		<action name="core.access.cron" title="JACTION_CRON_FEED_VIEW" description="JACTION_CRON_FEED_COMPONENT_VIEW_DESC" />
+		<action name="core.access.log" title="JACTION_LOG_VIEW" description="JACTION_LOG_COMPONENT_VIEW_DESC" />
+		<action name="core.access.quick" title="JACTION_QUICK_VIEW" description="JACTION_QUICK_COMPONENT_VIEW_DESC" />
+		<action name="core.access.notifications" title="JACTION_NOTIFICATIONS_VIEW" description="JACTION_NOTIFICATIONS_COMPONENT_VIEW_DESC" />
+		<action name="core.access.display" title="JACTION_DISPLAY_VIEW" description="JACTION_DISPLAY_COMPONENT_VIEW_DESC" />
+	</section>
+</access>

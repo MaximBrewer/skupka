@@ -1,0 +1,850 @@
+/**
+ * @name		Maximenu CK params
+ * @package		com_maximenuck
+ * @copyright	Copyright (C) 2014. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @author		Cedric Keiflin - http://www.template-creator.com - http://www.joomlack.fr
+ */
+
+html {
+	height: 101%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body.contentpane {
+	background: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, div.contentheading, .componentheading {
+	padding: 3px 0;
+	margin: 0;
+	line-height: 1.2;
+	font-weight: bold;
+	font-style: normal;
+}
+h1, .componentheading {
+	font-size: 1.75em;
+}
+h2, div.contentheading {
+	font-size: 1.5em;
+}
+h3 {
+	font-size: 1.25em;
+}
+h4 {
+	font-size: 1em;
+}
+
+ul, ol {
+	padding: .75em 0 .75em 0;
+	margin: 0 0 0 35px;
+}
+
+ul.menu {
+	margin: 0;
+	padding: 0;
+}
+
+ul.menu li {
+	list-style: none;
+}
+
+p {
+	padding: 5px 0;
+}
+
+address {
+	margin: .75em 0;
+	font-style: normal;
+}
+
+a:focus {
+    outline: none;
+}
+
+img {
+	border: none;
+}
+
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: bold;
+}
+
+form, fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+input, button, select {
+	vertical-align: middle;
+}
+
+.clr {
+	clear: both;
+}
+
+.ckwait {
+	background-image: url(../images/ajax-loader.gif) !important;
+	min-height: 16px;
+}
+
+.ckwait.black {
+	background-image: url(../images/ajax-loader-black.gif) !important;
+}
+
+.ckbutton.blackhover:hover .ckwait {
+	background-image: url(../images/ajax-loader-black.gif) !important;
+}
+
+#ckoverlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background: rgba(255,255,255, 0.8) url(../images/ajax-loader-2.gif) center center no-repeat !important;
+	left: 0;
+	top: 0;
+	display:none;
+}
+
+#ckmessage {
+	float: left;
+	margin: 10px 10px 0;
+	max-width: 100%;
+	min-height: 60px;
+	overflow: hidden;
+}
+
+#ckmessage > div {
+
+}
+
+
+/*------------------------------------------
+	For the component layout
+----------------------------------------------*/
+
+.ckheader {
+	background: #3d3d3d url(../images/fondheader.png) left bottom repeat-x;
+	min-height: 82px;
+	padding: 0 0 1px 0;
+}
+
+.ckheadertitle {
+	font-size: 18px;
+	color: #777777;
+	margin: 20px 0 0 15px;
+	float: left;
+}
+
+.ckheadersubtitle {
+	font-size: 18px;
+	padding: 10px;
+	border-bottom: 1px solid #333;
+}
+
+.ckheaderlogo {
+	background: url(../images/logo_maximenuck_large.png) left top no-repeat;
+	width: 161px;
+	height: 46px;
+	margin: 10px 5px 0 10px;
+	top: 0px;
+	float: left;
+}
+
+.ckheaderoverlay {
+	position: fixed;
+	background: #fff;
+	z-index: -1;
+	width:100%;
+	height: 100%;
+}
+
+/*** for the main menu ***/
+#mainmenuck {
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	margin: 0;
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	text-transform: none;
+	vertical-align: middle;
+	line-height: 20px;
+}
+
+#mainmenuck div.ck_button {
+	padding: 0 5px;
+	margin: 0;
+	float: left;
+	text-align: center;
+	font-size: 12px;
+	color: #c1c1c1;
+}
+
+#mainmenuck div.ck_button:hover {
+	box-shadow: none;
+}
+
+#mainmenuck span.infotipdesc {
+	display: block;
+	text-align: left;
+	font-size: 11px;
+	color: #d8d8d8;
+	margin: 5px;
+	padding: 0;
+	height: 25px;
+}
+
+#mainmenuck div.ck_button.expert > a {
+	color: #3DE5DF;
+}
+
+#elementscontainer .expert {
+	color: #3DE5DF !important;
+}
+
+#mainmenuck div.ck_button.noeditor > a {
+	color: red;
+}
+
+#mainmenuck div.ck_button a {
+	display: block;
+	margin: 5px;
+	padding: 0;
+	font-size: 12px;
+	text-align: center;
+	color: #c1c1c1;
+	height: 25px;
+	color: #c1c1c1;
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	text-decoration: none;
+	text-transform: none;
+	background-position: 0px 2px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#mainmenuck div.ck_button a:hover {
+	color: #fff;
+}
+
+#mainmenuck div.ck_button.big a {
+	display: block;
+	float: right;
+	width: 60px;
+	height: 45px;
+	color: #c1c1c1;
+	padding-top: 25px;
+	text-align: center;
+	margin: 10px 6px 0 0;
+	background-position: center 0px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#mainmenuck div.ck_button.big a:hover {
+	color: #fff;
+}
+
+.ck_buttons_right {
+	float: right;
+}
+
+#mainmenuck div.ck_button a.ckcancel {
+	background-image: url(../images/cancel.png);
+}
+
+#mainmenuck div.ck_button a.ckcancel:hover {
+	background-image: url(../images/cancel_hover.png);
+}
+
+#mainmenuck div.ck_button a.cksave {
+	width: 75px;
+	background-image: url(../images/validate.png);
+}
+
+#mainmenuck div.ck_button a.cksave:hover {
+	background-image: url(../images/validate_hover.png);
+}
+
+#mainmenuck div.ck_button a.ckpreview {
+    background-image: url(../images/preview_button.png);
+}
+
+#mainmenuck div.ck_button:hover a.ckpreview {
+	background-image: url(../images/preview_button_active.png);
+}
+
+#mainmenuck div.ck_button a.ckexpert {
+	background-image: url(../images/expert_button.png);
+}
+
+#mainmenuck div.ck_button.expert a.ckexpert {
+	background-image: url(../images/expert_button_active.png);
+}
+
+#mainmenuck div.ck_button a.ckfullscreen {
+	background-image: url(../images/fullscreen.png);
+}
+
+#mainmenuck div.ck_button a.ckfullscreen:hover {
+	background-image: url(../images/fullscreen_hover.png);
+}
+
+#mainmenuck div.ck_button a.ckimport {
+	width: 75px;
+	background-image: url(../images/import.png);
+}
+
+#mainmenuck div.ck_button a.ckimport:hover {
+	background-image: url(../images/import_hover.png);
+}
+
+#mainmenuck div.ck_button a.ckexport {
+	width: 75px;
+	background-image: url(../images/export.png);
+}
+
+#mainmenuck div.ck_button a.ckexport:hover {
+	background-image: url(../images/export_hover.png);
+}
+
+
+/*--------------------------------------------
+--- 			Options interface 			--
+----------------------------------------------*/
+
+
+#ckoverlayer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0, 0.5);
+	z-index: 9999;
+}
+
+.ckpopupwizard_save {
+	background-image: url('validate.png');
+}
+
+.ckpopupwizard_save:hover {
+	background-image: url('validate_hover.png');
+}
+
+.ckpopupwizard_cancel {
+	background-image: url('cancel.png');
+}
+
+.ckpopupwizard_cancel:hover {
+	background-image: url('cancel_hover.png');
+}
+
+.ckpopupwizard_button {
+	color: #aaa;
+	padding: 5px 20px 5px 5px;
+	background-color: #333;
+	background-position: right center;
+	background-repeat: no-repeat;
+	border-top: #666 1px solid;
+	border-left: #444 1px solid;
+	border-right: #444 1px solid;
+	border-bottom: #000 1px solid;
+	float: right;
+	margin: 3px 3px 15px 3px;
+	width: 50px;
+	cursor: pointer;
+	font-family: 'Segoe UI';
+}
+
+.ckpopupwizard_button:hover {
+	background-color: #222;
+	color: #fff;
+}
+
+.ckpopupwizard_title {
+	color: #fff;
+	font-size: 16px;
+	font-family: 'Segoe UI';
+}
+
+.tooltip {
+	z-index: 10001 !important;
+}
+
+.tab {
+	min-height: 500px;
+	overflow-y: auto;
+	position: relative;
+}
+
+.menulink {
+	float: left;
+	padding: 5px 10px;
+	margin: 5px 5px 0 5px;
+	cursor: pointer;
+	color: #a6a6a6;
+	background: #eee;
+	border-radius: 5px 5px 0 0;
+	border: 1px solid #ddd;
+	position: relative;
+	z-index: 1;
+}
+
+.tablinkdesc {
+	text-align: center;
+	font-size: 10px;
+	color: #a6a6a6;
+	line-height: 10px;
+}
+
+.menulink:hover, .menulink.current {
+	color: #000;
+	background: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.menulink + .clr {
+	clear: both;
+	border-top: 1px solid #ddd;
+	margin-bottom: 5px;
+	position: relative;
+	z-index: 0;
+	top: -1px;
+	visibility: visible;
+}
+
+.tab input[type="radio"], input[type="checkbox"] {
+	border: none;
+}
+
+#ckpopupstyleswizard_options {
+	/*margin-top: 20px;*/
+}
+
+#ckpopupstyleswizard label {
+	display: inline-block !important;
+	width: 150px;
+}
+
+#ckpopupstyleswizard input {
+	display: inline-block !important;
+	max-width: 100px;
+	border-radius: 0;
+	height: 18px;
+}
+
+#ckpopupstyleswizard span {
+	margin-right: 3px;
+}
+
+#ckpopupstyleswizard img {
+	vertical-align: 0;
+}
+
+#ckpopupstyleswizard label.radiobutton {
+	display: inline-block !important;
+	width: 30px;
+	padding: 3px;
+	margin: 0 1px 0 0;
+	text-align: center;
+	background: #f1f1f1;
+	border: 1px solid #bbb;
+	height: 20px;
+	vertical-align: top;
+}
+
+.btn-group > .btn {
+	vertical-align: top;
+}
+
+.btn-group > input + .btn {
+	margin-left: -1px;
+}
+
+#ckpopupstyleswizard input[type=radio].radiobutton {
+	display: none !important;
+}
+
+#ckpopupstyleswizard input[type=radio].radiobutton:checked + label {
+	background: #2e9fd2; /* Old browsers */
+	background: -moz-linear-gradient(top,  #2e9fd2 0%, #21759b 100%, #21759b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2e9fd2), color-stop(100%,#21759b), color-stop(100%,#21759b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #2e9fd2 0%,#21759b 100%,#21759b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #2e9fd2 0%,#21759b 100%,#21759b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #2e9fd2 0%,#21759b 100%,#21759b 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #2e9fd2 0%,#21759b 100%,#21759b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e9fd2', endColorstr='#21759b',GradientType=0 ); /* IE6-9 */
+	color: #FFFFFF;
+	border: 1px solid #21759b ;
+}
+
+.ckrow {
+	margin-top: 3px;
+}
+
+.ckheading {
+	color: #2EA2CC;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.ckheading:first-child {
+	margin-top: 0px;
+}
+
+#ckpopupstyleswizard_preview {
+	height: 200px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 10px;
+	background: #fff;
+	overflow: hidden;
+}
+
+#ckpopupstyleswizard_preview > .inner {
+	margin: 5px 10px;
+}
+
+.imgfake {
+	display:inline-block;
+	width:16px;
+}
+
+.ckpopupstyleswizard_col_left {
+	float: left;
+	width: 170px;
+	height: 250px;
+}
+
+.ckpopupstyleswizard_col_right {
+	float: left;
+	width: 610px;
+}
+
+.menulink2 {
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+	height: 20px;
+	margin: 5px 0 3px 3px;
+	padding: 15px;
+	color: #a6a6a6;
+	background: #eee;
+	border-radius: 5px 0 0 5px;
+	border: 1px solid #ddd;
+}
+
+.menulink2:hover, .menulink2.current {
+	background: #fff;
+	border-right: 1px solid #fff;
+	color: #21759b;
+}
+
+.tab2 {
+	padding: 0 0 0 10px;
+}
+
+.tab.hascol:after {
+	border-right: 1px solid #ddd;
+	content: "";
+	display: block;
+	float: left;
+	height: 100%;
+	left: 169px;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	width: 0;
+}
+
+.ckwaiticon {
+	padding: 0 8px;
+}
+
+.themethumb, .layoutthumb {
+	float: left;
+	padding: 3px;
+	margin: 3px;
+	border: 1px solid transparent;
+	cursor: pointer;
+}
+
+.themethumb:hover, .themethumb.selected,
+.layoutthumb:hover, .layoutthumb.selected {
+	border: 1px solid #3399ff;
+	box-shadow: 0 0 5px #3399ff;
+}
+
+#tab_layout .layoutthumb {
+	height: 110px;
+	width: 220px;
+	overflow: hidden;
+}
+
+.themename, .layoutname {
+	text-align: center;
+	text-transform: uppercase;
+	padding: 2px;
+	border-top: 1px solid #ddd;
+}
+
+#level2menustyles_iilustration img {
+	margin-left: 150px;
+}
+
+.ckbutton_cont {
+	float: right;
+}
+
+.ckbutton {
+	display: inline-block;
+	padding: 8px 15px 8px 0;
+	margin: 4px;
+	background: #F0F0F0;
+	background-color: #F0F0F0;
+	background: -moz-linear-gradient(top, #F0F0F0 0%, #DBDBDB 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F0F0F0), color-stop(100%,#DBDBDB)); 
+	background: -webkit-linear-gradient(top, #F0F0F0 0%,#DBDBDB 100%);
+	background: -o-linear-gradient(top, #F0F0F0 0%,#DBDBDB 100%);
+	background: -ms-linear-gradient(top, #F0F0F0 0%,#DBDBDB 100%);
+	background: linear-gradient(top, #F0F0F0 0%,#DBDBDB 100%); 
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+	-moz-box-shadow: 0px 3px 2px -1px #2E2E2E;
+	-webkit-box-shadow: 0px 3px 2px -1px #2E2E2E;
+	box-shadow: 0px 3px 2px -1px #2E2E2E;
+	color: #525252;
+	text-shadow: 0px 1px 1px #FFFFFF;
+	cursor: pointer;
+}
+
+.ckbutton:hover {
+	background-color: #525050;
+	background: -moz-linear-gradient(top, #525050 0%, #242424 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#525050), color-stop(100%,#242424)); 
+	background: -webkit-linear-gradient(top, #525050 0%,#242424 100%);
+	background: -o-linear-gradient(top, #525050 0%,#242424 100%);
+	background: -ms-linear-gradient(top, #525050 0%,#242424 100%);
+	background: linear-gradient(top, #525050 0%,#242424 100%);
+	color :#fff;
+	text-shadow: 0px 1px 1px #000;
+}
+
+.infock {
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	color: #468847;
+	padding: 10px;
+}
+
+.errorck {
+	background-color: #f2dede;
+	border-color: #ebccd1;
+	color: #a94442;
+	padding: 10px;
+}
+
+
+.vertical_separator {
+	display: inline-block;
+	height: 20px;
+	width: 0;
+	border-right: 1px solid #ccc;
+	margin: 0 !important;
+	padding: 3px 0;
+	vertical-align: top;
+}
+
+#ckmodal_title {
+	font-size: 18px;
+	text-align: center;
+	color: #a94442;
+}
+
+/*--------------------------------
+	Migration page 
+---------------------------------*/
+
+#mainck ol {
+	margin: 0;
+	padding: 0;
+}
+
+#mainck ol li {
+	list-style: none;
+}
+
+#mainck ol li ol{
+	padding-left: 15px;
+}
+
+#mainck .itemwrapper{
+	background: #f5f5f5;
+	border: 1px solid #d8d8d8;
+	border-radius: 4px;
+	padding: 3px 10px;
+	margin: 2px;
+}
+
+#mainck .itemtitle {
+	color: #1d6cb0;
+}
+
+#mainck .itemparamstate {
+	display: inline-block;
+	width: 200px;
+}
+
+/*------------------------------------
+	For Sortable elements
+---------------------------------------*/
+
+.ckmenuselectsortable  li {
+	display: block !important;
+}
+
+.placeholder {
+	outline: 1px dashed #4183C4;
+}
+
+.mjs-nestedSortable-error {
+	background: #fbe3e4;
+	border-color: transparent;
+}
+
+ol {
+	margin: 0;
+	padding: 0;
+	padding-left: 30px;
+}
+
+ol.sortable, ol.sortable ol {
+	margin: 0 0 0 25px;
+	padding: 0;
+	list-style-type: none;
+}
+
+ol.sortable {
+	margin: 0;
+}
+
+.sortable li {
+	margin: 5px 0 0 0;
+	padding: 0;
+}
+
+.sortable li  > div.itemwrapper  {
+	border: 1px solid #d4d4d4;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border-color: #D4D4D4 #D4D4D4 #BCBCBC;
+	padding: 5px;
+	margin: 0;
+	cursor: move;
+	background: #f6f6f6;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+}
+
+.sortable li.mjs-nestedSortable-branch > div.itemwrapper {
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #f0ece9 100%);
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#f0ece9 100%);
+
+}
+
+.sortable li.mjs-nestedSortable-leaf > div.itemwrapper {
+
+}
+
+li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div.itemwrapper {
+	border-color: #999;
+	background: #fafafa;
+}
+
+.disclose {
+	display: inline-block;
+	float: left;
+	cursor: pointer;
+	width: 10px;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 2px 4px;
+}
+
+.sortable li.mjs-nestedSortable-collapsed > ol {
+	display: none;
+}
+
+.sortable li.mjs-nestedSortable-branch > div.itemwrapper > .disclose {
+	display: inline-block;
+}
+
+.disclose > span:before {
+	content: '  ';
+	display: block;
+}
+
+.sortable li.mjs-nestedSortable-collapsed > div.itemwrapper > .disclose > span:before {
+	content: '+ ';
+}
+
+.sortable li.mjs-nestedSortable-expanded > div.itemwrapper > .disclose > span:before {
+	content: '- ';
+}
+
+#sortable  {
+	min-height: 50px;
+}
+
+#sortable span.small {
+	padding: 0 5px;
+}
+
+.itemtoggler i {
+	-webkit-transition: -webkit-transform 0.8s ease;
+	-moz-transition: -moz-transform 0.8s ease;
+	-ms-transition: -ms-transform 0.8s ease;
+	-o-transition: -o-transform 0.8s ease;
+	transition: transform 0.8s ease;
+}
+
+.itemtoggler.opened i {
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg); 
+	-ms-transform: rotate(60deg);
+	-o-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+
+#maximenuckexportfile {
+	text-align: center;
+	padding: 20px;
+}

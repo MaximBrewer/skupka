@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>plg_system_simplecdn</name>
+	<author>RuposTel.com</author>
+	<creationDate>February 2014</creationDate>
+	<copyright>Copyright (C) RuposTel.com</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@rupostel.com</authorEmail>
+	<authorUrl>www.rupostel.com</authorUrl>
+	<version>10.346.1454</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+	<description>CDN buffer rewrite system plugin. It replaces all your www.domain.com with cdn.domain.com. Please configure a proper search domain at the configuration of this plugin. Note that you may need to add these lines to your htaccess on your CDN server to allow full cross site access: &lt;br /&gt;
+		Header add Access-Control-Allow-Origin &quot;*&quot;&lt;br /&gt;
+		Header add Access-Control-Allow-Headers &quot;origin, x-requested-with, content-type&quot;&lt;br /&gt;
+		Header add Access-Control-Allow-Methods &quot;PUT, GET, POST, DELETE, OPTIONS&quot;&lt;br /&gt;
+	</description>
+	<files>
+		<filename plugin="simplecdn">simplecdn.php</filename>
+		
+		<filename>index.html</filename>
+		
+	</files>
+  
+
+	<config>
+	<fields name="params">
+
+			<fieldset name="basic">
+		
+		<field name="domainname"
+		  
+		  description="Set your domain name without http prefix, example: www.domain.com"
+		  label="Your domain name"
+		  type="text"
+		  defualt=""
+		  >
+		  
+		 </field>
+		
+		
+		
+		<field name="cdndomainname"
+		  
+		  description="Set your CDN domain name without http prefix, example: cdn.domain.com"
+		  label="Your CDN domain name"
+		  type="text"
+		  defualt=""
+		  >
+		  
+		 </field>
+
+	
+		<field name="directory"
+		  
+		  description="If site runs in a folder, enter your /folder/ and if site does not run in a folder, enter only / "
+		  label="Folder (see desciption)"
+		  type="text"
+		  default="/"
+		  >
+		  
+		 </field>
+
+		 <field name="cdndirectory"
+		  
+		  description="If CDN runs in a folder, enter your /cdnfolder/ and if site does not run in a folder, enter only / "
+		  label="Folder (see desciption)"
+		  type="text"
+		  default="/"
+		  >
+		  
+		 </field>
+		 
+		
+		</fieldset>
+
+	</fields>
+	</config>
+</extension>

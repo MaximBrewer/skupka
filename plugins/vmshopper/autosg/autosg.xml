@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" group="vmshopper"  method="upgrade">
+    <name>Automatic Shopper Group</name>
+    <author>EasyJoomla.org</author>
+	<creationDate>April 2013</creationDate>
+	<copyright>Copyright (C) EasyJoomla.org. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>support@easyjoomla.org</authorEmail>
+	<authorUrl>www.easyjoomla.org</authorUrl>
+	<version>1.0.3</version>
+	<description>
+	  <![CDATA[
+		<link rel="stylesheet" href="http://www.easyjoomla.org/free_packages/install.css" type="text/css">
+		<p>
+			<a class="easylogo" href="http://www.easyjoomla.org" target="_blank">
+			  	<img src="http://www.easyjoomla.org/free_packages/logo.png" />
+			</a>
+		</p>
+		<p>Plugin can automatically change VirtueMart shopper group when some user field is filled during registration or shopper info update.</p>
+		<p>More info about plugin at <a href="http://www.easyjoomla.org"  target="_blank" >EasyJoomla.org</a>.</p>
+	  ]]>
+	</description>
+    <languages>
+        <language tag="en-GB">en-GB.plg_vmshopper_autosg.ini</language>
+        <language tag="en-GB">en-GB.plg_vmshopper_autosg.sys.ini</language>
+    </languages>
+    <files>
+        <filename plugin="autosg">autosg.php</filename>
+    </files>
+	<config>
+        <fields name="params" addpath="/administrator/components/com_virtuemart/elements">
+            <fieldset name="basic">
+                <field
+					name="user_field"
+					type="sql"
+					default="0"
+					query="SELECT name AS id, title FROM #__virtuemart_userfields"
+					key_field="id"
+					value_field="title"
+                  	description="PLG_VMSHOPPER_AUTOSG_USER_FIELD_DESC"
+                  	label="PLG_VMSHOPPER_AUTOSG_USER_FIELD">
+                    <option value="0">JSELECT</option>
+                </field>
+				<field
+					name="shopper_group"
+					type="sql"
+					default="0"
+					query="SELECT virtuemart_shoppergroup_id AS id, shopper_group_name AS title FROM #__virtuemart_shoppergroups"
+					key_field="id"
+					value_field="title"
+                  	description="PLG_VMSHOPPER_AUTOSG_SHOPPER_GROUP_DESC"
+                  	label="PLG_VMSHOPPER_AUTOSG_SHOPPER_GROUP">
+                    <option value="0">JSELECT</option>
+                </field>
+				<field
+					name="shopper_group_remove"
+					type="list"
+					default="0"
+                  	description="PLG_VMSHOPPER_AUTOSG_SHOPPER_GROUP_REMOVE_DESC"
+                  	label="PLG_VMSHOPPER_AUTOSG_SHOPPER_GROUP_REMOVE">
+                    <option value="1">JYES</option>
+					<option value="0">JNO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+	<updateservers>
+		<server type="easyjoomla" priority="1" name="Easy Joomla Update"><![CDATA[http://www.easyjoomla.org/index.php?option=com_easyupdate&view=easyupdate&element=plg_autosg]]></server>
+	</updateservers>
+</extension>

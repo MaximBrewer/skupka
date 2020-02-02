@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="2.5" method="upgrade">
+	<name>Themes for Mobile - Maximenu CK</name>
+	<author>Cédric KEIFLIN</author>
+	<creationDate>Janvier 2014</creationDate>
+	<copyright>(C) 2012 Cédric KEIFLIN</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail></authorEmail>
+	<authorUrl>http://www.joomlack.fr</authorUrl>
+	<version>1.0.0</version>
+	<description>This is a mobile theme package for Maximenu CK</description>
+ 
+	<fileset>
+		<files folder="" target="plugins/system/maximenuckmobile/themes">
+			<folder>mobiletheme1</folder>
+			<folder>mobiletheme2</folder>
+			<folder>mobiletheme3</folder>
+		</files>
+	</fileset>
+</extension>

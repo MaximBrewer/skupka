@@ -1,0 +1,1358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- start of configuration html -->
+<config>
+
+    <!--TAB1-->
+
+    <!--Main configurations-->
+    <fieldset
+            name="main"
+            label="COM_SH404SEF_CONF_TAB_MAIN"
+            description=""
+            groupname="COM_SH404SEF_CONFIG"
+            >
+        <field menu="hide" name="Enabled" type="radio" class="btn-group" default="0" label="COM_SH404SEF_SEF_ENABLED"
+               description="COM_SH404SEF_TT_SEF_ENABLED">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="canReadRemoteConfig" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_CAN_READ_REMOTE_CONFIG" description="COM_SH404SEF_TT_CAN_READ_REMOTE_CONFIG">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="replacement" type="text" default="" size="1" maxlength="1"
+               label="COM_SH404SEF_REPLACE_CHAR" description="COM_SH404SEF_TT_REPLACE_CHAR"/>
+        <field menu="hide" name="pagerep" type="text" default="" size="1" maxlength="1"
+               label="COM_SH404SEF_PAGEREP_CHAR" description="COM_SH404SEF_TT_PAGEREP_CHAR"/>
+        <field menu="hide" name="stripthese" type="text" default="" size="60" maxlength="255"
+               label="COM_SH404SEF_STRIP_CHAR" description="COM_SH404SEF_TT_STRIP_CHAR"/>
+        <field menu="hide" name="shReplacements" type="textarea" default="" cols="60" rows="5"
+               label="COM_SH404SEF_REPLACEMENTS" description="COM_SH404SEF_TT_REPLACEMENTS"/>
+        <field menu="hide" name="friendlytrim" type="text" default="" size="60" maxlength="255"
+               label="COM_SH404SEF_FRIENDTRIM_CHAR" description="COM_SH404SEF_TT_FRIENDTRIM_CHAR"/>
+        <field menu="hide" name="suffix" type="text" default="" size="10" maxlength="10" label="COM_SH404SEF_SUFFIX"
+               description="COM_SH404SEF_TT_SUFFIX"/>
+        <field menu="hide" name="alwaysAppendItemsPerPage" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_ALWAYS_APPEND_ITEMS_PER_PAGE"
+               description="COM_SH404SEF_TT_ALWAYS_APPEND_ITEMS_PER_PAGE">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="addFile" type="text" default="" size="60" maxlength="60" label="COM_SH404SEF_ADDFILE"
+               description="COM_SH404SEF_TT_ADDFILE"/>
+        <field menu="hide" name="LowerCase" type="radio" class="btn-group" default="1" label="COM_SH404SEF_LOWER"
+               description="COM_SH404SEF_TT_LOWER">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+    </fieldset>
+
+    <!--shURL-->
+
+    <fieldset
+            name="shURL"
+            label="COM_SH404SEF_CONF_TAB_PAGEID"
+            description="COM_SH404SEF_ENABLE_PAGEID_HELP"
+            groupname="COM_SH404SEF_CONFIG"
+            >
+
+        <!--<field type="spacer" class="text" hr="true"/>-->
+        <field menu="hide" name="enablePageId" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_ENABLE_PAGEID" description="COM_SH404SEF_TT_ENABLE_PAGEID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="stopCreatingShurls" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_STOP_CREATING_SHURLS" description="COM_SH404SEF_TT_STOP_CREATING_SHURLS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="shurlBlackList" type="text" default="" size="60" maxlength="255"
+               label="COM_SH404SEF_SHURL_BLACKLIST" description="COM_SH404SEF_TT_SHURL_BLACKLIST"/>
+        <field menu="hide" name="shurlNonSefBlackList" type="text" default="" size="60" maxlength="255"
+               label="COM_SH404SEF_SHURL_NON_SEF_BLACKLIST" description="COM_SH404SEF_TT_SHURL_NON_SEF_BLACKLIST"/>
+        <field menu="hide" name="insertShortlinkTag" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_INSERT_SHORTLINK_TAG" description="COM_SH404SEF_TT_INSERT_SHORTLINK_TAG">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="insertRevCanTag" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_INSERT_REV_CAN_TAG" description="COM_SH404SEF_TT_INSERT_REV_CAN_TAG">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="insertAltShorterTag" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_INSERT_ALT_SHORT_TAG" description="COM_SH404SEF_TT_INSERT_ALT_SHORT_TAG">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+    </fieldset>
+
+
+    <!--Advanced-->
+
+    <fieldset
+            name="advanced"
+            label="COM_SH404SEF_CONF_TAB_ADVANCED"
+            description=""
+            groupname="COM_SH404SEF_CONFIG"
+            addfieldpath="/administrator/components/com_sh404sef/models/fields"
+            >
+        <field type="shlegend" shlrenderer="shlegend" class="text" label="COM_SH404SEF_CACHE_TITLE"/>
+        <!--<field type="spacer" class="text" hr="true"/>-->
+        <field menu="hide" name="shUseURLCache" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_USE_URL_CACHE" description="COM_SH404SEF_TT_USE_URL_CACHE">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="shMaxURLInCache" type="text" default="10000" size="10" maxlength="10"
+               label="COM_SH404SEF_MAX_URL_IN_CACHE" description="COM_SH404SEF_TT_MAX_URL_IN_CACHE"/>
+        <field menu="hide" name="UrlCacheHandler" type="shlist" default="File" label="COM_SH404SEF_URL_CACHE_HANDLER"
+               description="COM_SH404SEF_TT_URL_CACHE_HANDLER" additionaltext="">
+            <option value="File">COM_SH404SEF_URL_CACHE_HANDLER_FILE</option>
+            <option value="Sharedmemory">COM_SH404SEF_URL_CACHE_HANDLER_SHARED_MEMORY</option>
+        </field>
+        <field menu="hide" name="displayUrlCacheStats" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_DISPLAY_URL_CACHE_STATS" description="COM_SH404SEF_TT_DISPLAY_URL_CACHE_STATS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field type="shlegend" shlrenderer="shlegend" class="text" label="COM_SH404SEF_TITLE_ADV"/>
+        <!--<field type="spacer" class="text" hr="true"/>-->
+        <field menu="hide" name="shRedirectNonSefToSef" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_REDIRECT_NON_SEF_TO_SEF" description="COM_SH404SEF_TT_REDIRECT_NON_SEF_TO_SEF">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="shAutoRedirectWww" type="list" default="0" label="COM_SH404SEF_REDIRECT_WWW"
+               description="COM_SH404SEF_TT_REDIRECT_WWW">
+            <option value="0">COM_SH404SEF_WWW_DONT_ENFORCE</option>
+            <option value="1">COM_SH404SEF_WWW_ENFORCE_WWW</option>
+            <option value="2">COM_SH404SEF_WWW_ENFORCE_NO_WWW</option>
+        </field>
+        <field menu="hide" name="redirectToCorrectCaseUrl" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_REDIRECT_CORRECT_CASE_URL" description="COM_SH404SEF_TT_REDIRECT_CORRECT_CASE_URL">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="shLog404Errors" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_LOG_404_ERRORS" description="COM_SH404SEF_TT_LOG_404_ERRORS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="referrerPolicyMeta" type="list" default="none" label="COM_SH404SEF_REFERRER_POLICY"
+               description="COM_SH404SEF_TT_REFERRER_POLICY">
+            <option value="none">COM_SH404SEF_REFERRER_POLICY_NONE</option>
+            <option value="no-referrer">COM_SH404SEF_REFERRER_POLICY_NO_REFERRER</option>
+            <option value="no-referrer-when-downgrade">COM_SH404SEF_REFERRER_POLICY_NO_REFERRER_WHEN_DOWNGRADE</option>
+            <option value="origin">COM_SH404SEF_REFERRER_POLICY_ORIGIN_ONLY</option>
+            <option value="origin-when-cross-origin">COM_SH404SEF_REFERRER_POLICY_ORIGIN_WHEN_CROSS_ORIGIN</option>
+            <option value="unsafe-url">COM_SH404SEF_REFERRER_POLICY_ORIGIN_UNSAFE_URL</option>
+        </field>
+        <field menu="hide" name="shForceNonSefIfHttps" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_FORCE_NON_SEF_HTTPS" description="COM_SH404SEF_TT_FORCE_NON_SEF_HTTPS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="shForcedHomePage" type="text" default="" size="30" maxlength="60"
+               label="COM_SH404SEF_FORCED_HOMEPAGE" description="COM_SH404SEF_TT_FORCED_HOMEPAGE"/>
+        <field menu="hide" name="slowServer" type="radio" class="btn-group" default="0" label="COM_SH404SEF_SLOW_SERVER"
+               description="COM_SH404SEF_TT_SLOW_SERVER">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field type="shlibpluginlink" label="COM_SH404SEF_DEBUG_TO_LOG_FILE"
+               description="COM_SH404SEF_TT_DEBUG_TO_LOG_FILE_PLUGIN" name="loggingHandler"/>
+        <field menu="hide" name="extensionToExtractGetVars" type="text" default="com_chronoforums" size="30"
+               maxlength="255" label="COM_SH404SEF_EXTRACT_GET_VARS" description="COM_SH404SEF_TT_EXTRACT_GET_VARS"/>
+        <field type="shlegend" shlrenderer="shlegend" class="text" label="COM_SH404SEF_ITEMID_TITLE"/>
+        <!--<field type="spacer" class="text" hr="true"/>-->
+        <field menu="hide" name="guessItemidOnHomepage" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_GUESS_HOMEPAGE_ITEMID" description="COM_SH404SEF_TT_GUESS_HOMEPAGE_ITEMID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="shInsertGlobalItemidIfNone" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_INSERT_GLOBAL_ITEMID_IF_NONE"
+               description="COM_SH404SEF_TT_INSERT_GLOBAL_ITEMID_IF_NONE">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="shInsertTitleIfNoItemid" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_INSERT_TITLE_IF_NO_ITEMID" description="COM_SH404SEF_TT_INSERT_TITLE_IF_NO_ITEMID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="shAlwaysInsertMenuTitle" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_ALWAYS_INSERT_MENU_TITLE" description="COM_SH404SEF_TT_ALWAYS_INSERT_MENU_TITLE">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="shAlwaysInsertItemid" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_ALWAYS_INSERT_ITEMID" description="COM_SH404SEF_TT_ALWAYS_INSERT_ITEMID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="shDefaultMenuItemName" type="text" default="" size="30" maxlength="30"
+               label="COM_SH404SEF_DEFAULT_MENU_ITEM_NAME" description="COM_SH404SEF_TT_DEFAULT_MENU_ITEM_NAME"/>
+        <field type="shlegend" shlrenderer="shlegend" class="text" label="COM_SH404SEF_UPGRADE_TITLE"/>
+        <!--<field type="spacer" class="text" hr="true"/>-->
+        <field menu="hide" name="autoCheckNewVersion" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_UPGRADE_ENABLE_CHECK" description="COM_SH404SEF_TT_UPGRADE_ENABLE_CHECK">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="shKeepConfigOnUpgrade" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_UPGRADE_KEEP_CONFIG" description="COM_SH404SEF_TT_UPGRADE_KEEP_CONFIG">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="shKeepStandardURLOnUpgrade" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_UPGRADE_KEEP_URL" description="COM_SH404SEF_TT_UPGRADE_KEEP_URL">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="shKeepCustomURLOnUpgrade" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_UPGRADE_KEEP_CUSTOM" description="COM_SH404SEF_TT_UPGRADE_KEEP_CUSTOM">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="shKeepMetaDataOnUpgrade" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_UPGRADE_KEEP_META" description="COM_SH404SEF_TT_UPGRADE_KEEP_META">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+    </fieldset>
+
+    <!--Logging-->
+
+    <fieldset
+            name="logging"
+            label="COM_SH404SEF_CONF_TAB_DATA_RECORDING"
+            description=""
+            groupname="COM_SH404SEF_CONFIG"
+            addfieldpath="/administrator/components/com_sh404sef/models/fields"
+            minJoomlaVersion="3.0"
+            maxJoomlaVersion=""
+            >
+
+        <field type="shlegend" shlrenderer="shlegend" class="text" label="COM_SH404SEF_URL_HITS_RECORDING_TITLE"/>
+        <field menu="hide" name="log404sHits" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_LOG_404_HITS" description="COM_SH404SEF_TT_LOG_404_HITS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="logAliasesHits" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_LOG_ALIASES_HITS" description="COM_SH404SEF_TT_LOG_ALIASES_HITS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="logShurlsHits" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_LOG_SHURLS_HITS" description="COM_SH404SEF_TT_LOG_SHURLS_HITS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field type="shlegend" shlrenderer="shlegend" class="text" label="COM_SH404SEF_URL_CREATION_RECORDING_TITLE"/>
+        <field menu="hide" name="logUrlsSource" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_LOG_URLS_SOURCE" description="COM_SH404SEF_TT_LOG_URLS_SOURCE">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+    </fieldset>
+
+    <!--END_TAB1-->
+
+    <!--TAB2-->
+    <!--start joomla fieldset-->
+    <fieldset
+            name="joomla"
+            label="Joomla"
+            description=""
+            groupname="COM_SH404SEF_CONFIG_EXT"
+            >
+
+        <field type="shlegend" shlrenderer="shlegend" class="text" label="COM_SH404SEF_PARAMS_URLS"/>
+
+        <field menu="hide" name="UseAlias" type="radio" class="btn-group" default="1" label="COM_SH404SEF_USE_ALIAS"
+               description="COM_SH404SEF_TT_USE_ALIAS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="useCatAlias" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_USE_CAT_ALIAS" description="COM_SH404SEF_TT_USE_CAT_ALIAS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="useMenuAlias" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_USE_MENU_ALIAS" description="COM_SH404SEF_TT_USE_MENU_ALIAS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field menu="hide" name="includeContentCat" type="list" default="2" label="COM_SH404SEF_INCLUDE_CONTENT_CAT"
+               description="COM_SH404SEF_TT_INCLUDE_CONTENT_CAT">
+            <option value="5">COM_SH404SEF_CAT_NONE</option>
+            <option value="1">COM_SH404SEF_CAT_FIRST</option>
+            <option value="2">COM_SH404SEF_CAT_LAST</option>
+            <option value="3">COM_SH404SEF_CAT_2_FIRST</option>
+            <option value="4">COM_SH404SEF_CAT_2_LAST</option>
+            <option value="0">COM_SH404SEF_CAT_ALL_NESTED_CAT</option>
+        </field>
+
+        <field menu="hide" name="includeContentCatCategories" type="list" default="4"
+               label="COM_SH404SEF_INCLUDE_CONTENT_CAT_CATEGORIES"
+               description="COM_SH404SEF_TT_INCLUDE_CONTENT_CAT_CATEGORIES">
+            <option value="1">COM_SH404SEF_CAT_FIRST</option>
+            <option value="2">COM_SH404SEF_CAT_LAST</option>
+            <option value="3">COM_SH404SEF_CAT_2_FIRST</option>
+            <option value="4">COM_SH404SEF_CAT_2_LAST</option>
+            <option value="0">COM_SH404SEF_CAT_ALL_NESTED_CAT</option>
+        </field>
+
+        <field menu="hide" type="text" name="contentCategoriesSuffix" default="" size="30" maxlength="30"
+               label="COM_SH404SEF_CATEGORIES_SUFFIX" description="COM_SH404SEF_TT_CATEGORIES_SUFFIX"/>
+
+        <field menu="hide" name="slugForUncategorizedContent" type="list" default="0"
+               label="COM_SH404SEF_SLUG_FOR_UNCATEGORIZED_ITEMS"
+               description="COM_SH404SEF_TT_SLUG_FOR_UNCATEGORIZED_ITEMS">
+            <option value="0">COM_SH404SEF_UNCAT_ITEM_SLUG_NO_CAT</option>
+            <option value="1">COM_SH404SEF_UNCAT_ITEM_SLUG_USE_MENU_ITEM</option>
+        </field>
+
+        <field menu="hide" name="shInsertContentTableName" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_INSERT_CONTENT_TABLE_NAME" description="COM_SH404SEF_TT_INSERT_CONTENT_TABLE_NAME">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" type="text" name="shContentTableName" default="" size="30" maxlength="30"
+               label="COM_SH404SEF_CONTENT_TABLE_NAME" description="COM_SH404SEF_TT_CONTENT_TABLE_NAME"/>
+
+        <field menu="hide" name="shInsertContentBlogName" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_INSERT_CONTENT_BLOG_NAME" description="COM_SH404SEF_TT_INSERT_CONTENT_BLOG_NAME">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" type="text" name="shContentBlogName" default="" size="30" maxlength="30"
+               label="COM_SH404SEF_CONTENT_BLOG_NAME" description="COM_SH404SEF_TT_CONTENT_BLOG_NAME"/>
+
+        <field menu="hide" name="shMultipagesTitle" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_INSERT_CONTENT_MULTIPAGES_TITLE"
+               description="COM_SH404SEF_TT_INSERT_CONTENT_MULTIPAGES_TITLE">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="ContentTitleInsertArticleId" type="list" default="0"
+               label="COM_SH404SEF_INSERT_ARTICLE_ID_TITLE" description="COM_SH404SEF_TT_INSERT_ARTICLE_ID_TITLE">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_PREPEND_NUM_ID</option>
+            <option value="2">COM_SH404SEF_APPEND_NUM_ID</option>
+        </field>
+        <!-- values are added dynamically here-->
+        <field menu="hide" name="shInsertContentArticleIdCatList" type="list" multiple="true" default=""
+               label="COM_SH404SEF_INSERT_NUMERICAL_ID_CAT_LIST"
+               description="COM_SH404SEF_TT_INSERT_NUMERICAL_ID_CAT_LIST">
+        </field>
+
+        <!--<field type="spacer" hr="true" />-->
+        <field menu="hide" name="shInsertNumericalId" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_INSERT_NUMERICAL_ID_TITLE" description="COM_SH404SEF_TT_INSERT_NUMERICAL_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <!-- values are added dynamically here-->
+        <field menu="hide" name="shInsertNumericalIdCatList" type="list" multiple="true" default=""
+               label="COM_SH404SEF_INSERT_NUMERICAL_ID_CAT_LIST"
+               description="COM_SH404SEF_TT_INSERT_NUMERICAL_ID_CAT_LIST">
+        </field>
+
+        <field menu="hide" name="insertDate" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_INSERT_DATE_TITLE" description="COM_SH404SEF_TT_INSERT_DATE">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <!-- values are added dynamically here-->
+        <field menu="hide" name="insertDateCatList" type="list" multiple="true" default=""
+               label="COM_SH404SEF_INSERT_DATE_CAT_LIST"
+               description="COM_SH404SEF_TT_INSERT_DATE_CAT_LIST">
+        </field>
+
+        <field type="shlegend" shlrenderer="shlegend" class="text" label="COM_SH404SEF_PARAMS_SEO"/>
+
+        <!--start joomla content page title fieldset-->
+
+
+        <field menu="hide" name="ContentTitleUseAlias" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_CONTENT_TITLE_USE_ALIAS" description="COM_SH404SEF_TT_CONTENT_TITLE_USE_ALIAS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="contentTitleIncludeCat" type="list" default="0"
+               label="COM_SH404SEF_CONTENT_TITLE_INCLUDE_CAT" description="COM_SH404SEF_TT_CONTENT_TITLE_INCLUDE_CAT">
+            <option value="5">COM_SH404SEF_CAT_NONE</option>
+            <option value="1">COM_SH404SEF_CAT_FIRST</option>
+            <option value="2">COM_SH404SEF_CAT_LAST</option>
+            <option value="3">COM_SH404SEF_CAT_2_FIRST</option>
+            <option value="4">COM_SH404SEF_CAT_2_LAST</option>
+            <option value="0">COM_SH404SEF_CAT_ALL_NESTED_CAT</option>
+        </field>
+
+        <field menu="hide" name="ContentTitleUseCatAlias" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_CONTENT_TITLE_USE_CAT_ALIAS"
+               description="COM_SH404SEF_TT_CONTENT_TITLE_USE_CAT_ALIAS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <!--end joomla content title fielset-->
+
+    </fieldset>
+    <!--end joomla fieldset
+
+    start contact fieldset-->
+    <fieldset
+            name="contact"
+            label="Contacts"
+            description=""
+            groupname="COM_SH404SEF_CONFIG_EXT"
+            >
+
+        <field type="shlegend" shlrenderer="shlegend" class="text" label="COM_SH404SEF_PARAMS_URLS"/>
+
+        <field menu="hide" name="useContactCatAlias" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_USE_CAT_ALIAS" description="COM_SH404SEF_TT_USE_CAT_ALIAS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="includeContactCat" type="list" default="5" label="COM_SH404SEF_INCLUDE_CONTENT_CAT"
+               description="COM_SH404SEF_TT_INCLUDE_CONTENT_CAT">
+            <option value="5">COM_SH404SEF_CAT_NONE</option>
+            <option value="1">COM_SH404SEF_CAT_FIRST</option>
+            <option value="2">COM_SH404SEF_CAT_LAST</option>
+            <option value="3">COM_SH404SEF_CAT_2_FIRST</option>
+            <option value="4">COM_SH404SEF_CAT_2_LAST</option>
+            <option value="0">COM_SH404SEF_CAT_ALL_NESTED_CAT</option>
+        </field>
+
+        <field menu="hide" name="includeContactCatCategories" type="list" default="2"
+               label="COM_SH404SEF_INCLUDE_CONTENT_CAT_CATEGORIES"
+               description="COM_SH404SEF_TT_INCLUDE_CONTENT_CAT_CATEGORIES">
+            <option value="1">COM_SH404SEF_CAT_FIRST</option>
+            <option value="2">COM_SH404SEF_CAT_LAST</option>
+            <option value="3">COM_SH404SEF_CAT_2_FIRST</option>
+            <option value="4">COM_SH404SEF_CAT_2_LAST</option>
+            <option value="0">COM_SH404SEF_CAT_ALL_NESTED_CAT</option>
+        </field>
+
+        <field menu="hide" type="text" name="contactCategoriesSuffix" default="" size="30" maxlength="30"
+               label="COM_SH404SEF_CATEGORIES_SUFFIX" description="COM_SH404SEF_TT_CATEGORIES_SUFFIX"/>
+
+        <field menu="hide" name="slugForUncategorizedContact" type="list" default="0"
+               label="COM_SH404SEF_SLUG_FOR_UNCATEGORIZED_ITEMS"
+               description="COM_SH404SEF_TT_SLUG_FOR_UNCATEGORIZED_ITEMS">
+            <option value="0">COM_SH404SEF_UNCAT_ITEM_SLUG_NO_CAT</option>
+            <option value="1">COM_SH404SEF_UNCAT_ITEM_SLUG_USE_MENU_ITEM</option>
+        </field>
+
+    </fieldset>
+    <!--end contact fieldset
+
+    start weblinks fieldset-->
+    <fieldset
+            name="weblinks"
+            label="Weblinks"
+            description=""
+            groupname="COM_SH404SEF_CONFIG_EXT">
+
+        <field type="shlegend" shlrenderer="shlegend" class="text" label="COM_SH404SEF_PARAMS_URLS"/>
+
+        <field menu="hide" name="useWeblinksCatAlias" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_USE_CAT_ALIAS" description="COM_SH404SEF_TT_USE_CAT_ALIAS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="includeWeblinksCat" type="list" default="2" label="COM_SH404SEF_INCLUDE_CONTENT_CAT"
+               description="COM_SH404SEF_TT_INCLUDE_CONTENT_CAT">
+            <option value="5">COM_SH404SEF_CAT_NONE</option>
+            <option value="1">COM_SH404SEF_CAT_FIRST</option>
+            <option value="2">COM_SH404SEF_CAT_LAST</option>
+            <option value="3">COM_SH404SEF_CAT_2_FIRST</option>
+            <option value="4">COM_SH404SEF_CAT_2_LAST</option>
+            <option value="0">COM_SH404SEF_CAT_ALL_NESTED_CAT</option>
+        </field>
+
+        <field menu="hide" name="includeWeblinksCatCategories" type="list" default="2"
+               label="COM_SH404SEF_INCLUDE_CONTENT_CAT_CATEGORIES"
+               description="COM_SH404SEF_TT_INCLUDE_CONTENT_CAT_CATEGORIES">
+            <option value="1">COM_SH404SEF_CAT_FIRST</option>
+            <option value="2">COM_SH404SEF_CAT_LAST</option>
+            <option value="3">COM_SH404SEF_CAT_2_FIRST</option>
+            <option value="4">COM_SH404SEF_CAT_2_LAST</option>
+            <option value="0">COM_SH404SEF_CAT_ALL_NESTED_CAT</option>
+        </field>
+
+        <field menu="hide" type="text" name="weblinksCategoriesSuffix" default="" size="30" maxlength="30"
+               label="COM_SH404SEF_CATEGORIES_SUFFIX" description="COM_SH404SEF_TT_CATEGORIES_SUFFIX"/>
+
+        <field menu="hide" name="slugForUncategorizedWeblinks" type="list" default="0"
+               label="COM_SH404SEF_SLUG_FOR_UNCATEGORIZED_ITEMS"
+               description="COM_SH404SEF_TT_SLUG_FOR_UNCATEGORIZED_ITEMS">
+            <option value="0">COM_SH404SEF_UNCAT_ITEM_SLUG_NO_CAT</option>
+            <option value="1">COM_SH404SEF_UNCAT_ITEM_SLUG_USE_MENU_ITEM</option>
+        </field>
+
+    </fieldset>
+    <!--end weblinks fieldset
+
+    start virtuemart fieldset-->
+    <fieldset
+            name="virtuemart"
+            label="Virtuemart"
+            description=""
+            groupname="COM_SH404SEF_CONFIG_EXT">
+
+        <field type="shlegend" shlrenderer="shlegend" class="text" label="COM_SH404SEF_PARAMS_URLS"/>
+
+        <field menu="hide" name="shVmInsertShopName" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_VM_INSERT_SHOP_NAME" description="COM_SH404SEF_TT_VM_INSERT_SHOP_NAME">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="vmUseMenuItems" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_VM_USE_MENU_ITEMS" description="COM_SH404SEF_TT_VM_USE_MENU_ITEMS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="vmWhichProductDetailsCat" type="list" default="0"
+               label="COM_SH404SEF_VM_INSERT_CATEGORIES"
+               description="COM_SH404SEF_TT_INCLUDE_VM_CAT_CATEGORIES_PRODUCTS">
+            <option value="1">COM_SH404SEF_CAT_FIRST</option>
+            <option value="2">COM_SH404SEF_CAT_LAST</option>
+            <option value="3">COM_SH404SEF_CAT_2_FIRST</option>
+            <option value="4">COM_SH404SEF_CAT_2_LAST</option>
+            <option value="5">COM_SH404SEF_CAT_NONE</option>
+            <option value="0">COM_SH404SEF_CAT_ALL_NESTED_CAT</option>
+        </field>
+
+        <field type="shlegend" shlrenderer="shlegend" class="text" label="COM_SH404SEF_PARAMS_SEO"/>
+
+        <field menu="hide" name="vmWhichVmProductDetailsTitleCat" type="list" default="2"
+               label="COM_SH404SEF_VM_TITLE_INSERT_CATEGORIES_PRODUCTS"
+               description="COM_SH404SEF_TT_VM_TITLE_INSERT_CATEGORIES_PRODUCTS">
+            <option value="1">COM_SH404SEF_CAT_FIRST</option>
+            <option value="2">COM_SH404SEF_CAT_LAST</option>
+            <option value="3">COM_SH404SEF_CAT_2_FIRST</option>
+            <option value="4">COM_SH404SEF_CAT_2_LAST</option>
+            <option value="5">COM_SH404SEF_CAT_NONE</option>
+            <option value="0">COM_SH404SEF_CAT_ALL_NESTED_CAT</option>
+        </field>
+
+        <field menu="hide" name="vmWhichVmCategoryTitleCat" type="list" default="2"
+               label="COM_SH404SEF_VM_TITLE_INSERT_CATEGORIES_CATEGORY"
+               description="COM_SH404SEF_TT_VM_TITLE_INSERT_CATEGORIES_CATEGORY">
+            <option value="1">COM_SH404SEF_CAT_FIRST</option>
+            <option value="2">COM_SH404SEF_CAT_LAST</option>
+            <option value="3">COM_SH404SEF_CAT_2_FIRST</option>
+            <option value="4">COM_SH404SEF_CAT_2_LAST</option>
+            <option value="0">COM_SH404SEF_CAT_ALL_NESTED_CAT</option>
+        </field>
+
+    </fieldset>
+    <!--end virtuemart fieldset
+
+    start community builder fieldset-->
+    <fieldset
+            name="cb"
+            label="Community Builder"
+            description=""
+            groupname="COM_SH404SEF_CONFIG_EXT">
+
+        <field type="shlegend" shlrenderer="shlegend" class="text" label="COM_SH404SEF_PARAMS_URLS"/>
+
+        <field menu="hide" name="shInsertCBName" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_CB_INSERT_NAME" description="COM_SH404SEF_TT_CB_INSERT_NAME">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shCBInsertUserName" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_CB_INSERT_USER_NAME" description="COM_SH404SEF_TT_CB_INSERT_USER_NAME">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shCBInsertUserId" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_CB_INSERT_USER_ID" description="COM_SH404SEF_TT_CB_INSERT_USER_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shCBUseUserPseudo" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_CB_USE_USER_PSEUDO" description="COM_SH404SEF_TT_CB_USE_USER_PSEUDO">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shCBShortUserURL" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_CB_SHORT_USER_URL" description="COM_SH404SEF_TT_CB_SHORT_USER_URL">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+    </fieldset>
+    <!--end community buider fieldset
+
+    start jomsocial fieldset-->
+    <fieldset
+            name="jomsocial"
+            label="Jomsocial"
+            description=""
+            groupname="COM_SH404SEF_CONFIG_EXT">
+
+        <field type="shlegend" shlrenderer="shlegend" class="text" label="COM_SH404SEF_PARAMS_URLS"/>
+
+        <field menu="hide" name="shJSInsertJSName" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_JS_INSERT_NAME" description="COM_SH404SEF_TT_JS_INSERT_NAME">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shJSShortURLToUserProfile" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_CB_SHORT_USER_URL" description="COM_SH404SEF_TT_CB_SHORT_USER_URL">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shJSInsertUsername" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_JS_INSERT_USER_NAME" description="COM_SH404SEF_TT_JS_INSERT_USER_NAME">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shJSInsertUserFullName" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_JS_INSERT_USER_FULL_NAME" description="COM_SH404SEF_TT_JS_INSERT_USER_FULL_NAME">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shJSInsertUserId" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_CB_INSERT_USER_ID" description="COM_SH404SEF_TT_CB_INSERT_USER_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shJSInsertGroupCategory" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_JS_INSERT_GROUP_CATEGORY" description="COM_SH404SEF_TT_JS_INSERT_GROUP_CATEGORY">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shJSInsertGroupCategoryId" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_JS_INSERT_GROUP_CATEGORY_ID"
+               description="COM_SH404SEF_TT_JS_INSERT_GROUP_CATEGORY_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shJSInsertGroupId" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_JS_INSERT_GROUP_ID" description="COM_SH404SEF_TT_JS_INSERT_GROUP_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shJSInsertGroupBulletinId" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_JS_INSERT_GROUP_BULLETIN_ID"
+               description="COM_SH404SEF_TT_JS_INSERT_GROUP_BULLETIN_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shJSInsertDiscussionId" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_JS_INSERT_DISCUSSION_ID" description="COM_SH404SEF_TT_JS_INSERT_DISCUSSION_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shJSInsertMessageId" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_JS_INSERT_MESSAGE_ID" description="COM_SH404SEF_TT_JS_INSERT_MESSAGE_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shJSInsertPhotoAlbum" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_JS_INSERT_PHOTO_ALBUM" description="COM_SH404SEF_TT_JS_INSERT_PHOTO_ALBUM">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shJSInsertPhotoAlbumId" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_JS_INSERT_PHOTO_ALBUM_ID" description="COM_SH404SEF_TT_JS_INSERT_PHOTO_ALBUM_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shJSInsertPhotoId" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_JS_INSERT_PHOTO_ID" description="COM_SH404SEF_TT_JS_INSERT_PHOTO_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shJSInsertVideoCat" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_JS_INSERT_VIDEO_CAT" description="COM_SH404SEF_TT_JS_INSERT_VIDEO_CAT">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shJSInsertVideoCatId" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_JS_INSERT_VIDEO_CAT_ID" description="COM_SH404SEF_TT_JS_INSERT_VIDEO_CAT_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shJSInsertVideoId" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_JS_INSERT_VIDEO_ID" description="COM_SH404SEF_TT_JS_INSERT_VIDEO_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+    </fieldset>
+    <!--end jomsocial fieldset
+
+    start kunena fieldset-->
+    <fieldset
+            name="kunena"
+            label="Kunena"
+            description=""
+            groupname="COM_SH404SEF_CONFIG_EXT">
+
+        <field type="shlegend" shlrenderer="shlegend" class="text" label="COM_SH404SEF_PARAMS_URLS"/>
+
+        <field menu="hide" name="shInsertFireboardName" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_FB_INSERT_NAME" description="COM_SH404SEF_TT_FB_INSERT_NAME">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+    </fieldset>
+
+    <!--end kunera fieldset
+
+    start MyBlog fieldset-->
+    <!-- fieldset
+         name="MyBlog"
+         label="MyBlog"
+         description=""
+         groupname="COM_SH404SEF_CONFIG_EXT">
+        
+        <field menu="hide" name="shInsertMyBlogName" type="radio" class="btn-group" default="0" label="COM_SH404SEF_MYBLOG_INSERT_NAME" description="COM_SH404SEF_TT_MYBLOG_INSERT_NAME">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>     
+        </field>
+        
+        <field menu="hide" name="shMyBlogInsertPostId" type="radio" class="btn-group" default="1" label="COM_SH404SEF_MYBLOG_INSERT_POST_ID" description="COM_SH404SEF_TT_MYBLOG_INSERT_POST_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>     
+        </field>
+
+        <field menu="hide" name="shMyBlogInsertTagId" type="radio" class="btn-group" default="0" label="COM_SH404SEF_MYBLOG_INSERT_TAG_ID" description="COM_SH404SEF_TT_MYBLOG_INSERT_TAG_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>     
+        </field>
+        
+        <field menu="hide" name="shMyBlogInsertBloggerId" type="radio" class="btn-group" default="1" label="COM_SH404SEF_MYBLOG_INSERT_BLOGGER_ID" description="COM_SH404SEF_TT_MYBLOG_INSERT_BLOGGER_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>     
+        </field>
+    </fieldset -->
+    <!--end Myblog fieldset
+
+    start mosets fieldset-->
+    <!-- fieldset
+         name="Mtree"
+         label="Mosets tree"
+         description=""
+         groupname="COM_SH404SEF_CONFIG_EXT">
+        
+        <field menu="hide" name="shInsertMTreeName" type="radio" class="btn-group" default="0" label="COM_SH404SEF_MTREE_INSERT_NAME" description="COM_SH404SEF_TT_MTREE_INSERT_NAME">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>     
+        </field>
+        
+        <field menu="hide" name="shMTreeInsertListingId" type="radio" class="btn-group" default="1" label="COM_SH404SEF_MTREE_INSERT_LISTING_ID" description="COM_SH404SEF_TT_MTREE_INSERT_LISTING_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>     
+        </field>
+
+        <field menu="hide" name="shMTreePrependListingId" type="radio" class="btn-group" default="1" label="COM_SH404SEF_MTREE_PREPEND_LISTING_ID" description="COM_SH404SEF_TT_MTREE_PREPEND_LISTING_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>     
+        </field>
+        
+        <field menu="hide" name="shMTreeInsertListingName" type="radio" class="btn-group" default="1" label="COM_SH404SEF_MTREE_INSERT_LISTING_NAME" description="COM_SH404SEF_TT_MTREE_INSERT_LISTING_NAME">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>     
+        </field>
+        
+        <field menu="hide" name="shMTreeInsertCategoryId" type="radio" class="btn-group" default="0" label="COM_SH404SEF_DOCMAN_INSERT_CAT_ID" description="COM_SH404SEF_TT_DOCMAN_INSERT_CAT_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>        
+                
+        <field menu="hide" name="shMTreeInsertCategories" type="list" default="1" label="COM_SH404SEF_DOCMAN_INSERT_CATEGORIES" description="COM_SH404SEF_TT_DOCMAN_INSERT_CATEGORIES">
+    
+            <option value="0">COM_SH404SEF_CAT_NONE</option>
+            <option value="1">COM_SH404SEF_VM_SHOW_LAST_CATEGORY</option>
+            <option value="2">COM_SH404SEF_CAT_ALL_NESTED_CAT</option>          
+        </field>
+
+        <field menu="hide" name="shMTreeInsertUserId" type="radio" class="btn-group" default="1" label="COM_SH404SEF_CB_INSERT_USER_ID" description="COM_SH404SEF_TT_CB_INSERT_USER_ID">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>     
+        </field>
+        
+        <field menu="hide" name="shMTreeInsertUserName" type="radio" class="btn-group" default="1" label="COM_SH404SEF_CB_INSERT_USER_NAME" description="COM_SH404SEF_TT_CB_INSERT_USER_NAME">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>     
+        </field>
+    </fieldset -->
+    <!--end mosets-->
+    <!--END_TAB2-->
+    <!--TAB3 -->
+    <!--start seo managament fieldset-->
+    <fieldset
+            name="content"
+            label="COM_SH404SEF_TITLE_META_MANAGEMENT"
+            description="COM_SH404SEF_CONF_META_DOC"
+            groupname="COM_SH404SEF_CONFIG_SEO">
+
+        <field menu="hide" name="shMetaManagementActivated" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_META_MANAGEMENT_ACTIVATED" description="COM_SH404SEF_TT_META_MANAGEMENT_ACTIVATED">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="insertGoogleSitename" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_ENABLE_GOOGLE_SITENAME" description="COM_SH404SEF_TT_ENABLE_GOOGLE_SITENAME">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="insertGoogleBreadcrumb" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_ENABLE_GOOGLE_BREADCRUMB" description="COM_SH404SEF_TT_ENABLE_GOOGLE_BREADCRUMB">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="insertGoogleSitelinksSearch" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_ENABLE_GOOGLE_SITELINKS_SEARCH"
+               description="COM_SH404SEF_TT_ENABLE_GOOGLE_SITELINKS_SEARCH">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="insertGoogleSitelinksSearchCustom" type="text" default="" size="100" maxlength="1024"
+               label="COM_SH404SEF_ENABLE_GOOGLE_SITELINKS_SEARCH_CUSTOM"
+               description="COM_SH404SEF_TT_ENABLE_GOOGLE_SITELINKS_SEARCH_CUSTOM">
+        </field>
+
+        <field menu="hide" name="removeOtherCanonicals" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_REMOVE_OTHER_CANONICALS" description="COM_SH404SEF_TT_REMOVE_OTHER_CANONICALS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="insertPaginationTags" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_INSERT_PAGINATION_TAGS" description="COM_SH404SEF_TT_INSERT_PAGINATION_TAGS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shMultipleH1ToH2" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_MULTIPLE_H1_TO_H2" description="COM_SH404SEF_TT_MULTIPLE_H1_TO_H2">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shInsertOutboundLinksImage" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_INSERT_OUTBOUND_LINKS_IMAGE"
+               description="COM_SH404SEF_TT_INSERT_OUTBOUND_LINKS_IMAGE">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shImageForOutboundLinks" type="list" default="external-black.png"
+               label="COM_SH404SEF_OUTBOUND_LINKS_IMAGE" description="COM_SH404SEF_TT_OUTBOUND_LINKS_IMAGE">
+            <option value="external-black.png">COM_SH404SEF_OUTBOUND_LINKS_IMAGE_BLACK</option>
+            <option value="external-white.png">COM_SH404SEF_OUTBOUND_LINKS_IMAGE_WHITE</option>
+        </field>
+
+        <field menu="hide" name="shRemoveGeneratorTag" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_REMOVE_JOOMLA_GENERATOR" description="COM_SH404SEF_TT_REMOVE_JOOMLA_GENERATOR">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+    </fieldset>
+    <!--end seo managament fieldset-->
+
+    <!--start page title configurations fieldset-->
+    <fieldset
+            name="pagetitle"
+            label="COM_SH404SEF_PAGE_TITLE_TITLE"
+            description=""
+            groupname="COM_SH404SEF_CONFIG_SEO">
+
+        <field menu="hide" type="text" name="pageTitleSeparator" default="" label="COM_SH404SEF_PAGE_TITLE_SEPARATOR"
+               description="COM_SH404SEF_TT_PAGE_TITLE_SEPARATOR" size="5" maxlength="15"/>
+        <field menu="hide" type="text" name="prependToPageTitle" default="" label="COM_SH404SEF_PREPEND_TO_PAGE_TITLE"
+               description="COM_SH404SEF_TT_PREPEND_TO_PAGE_TITLE" size="60" maxlength="250"/>
+        <field menu="hide" type="text" name="appendToPageTitle" default="" label="COM_SH404SEF_APPEND_TO_PAGE_TITLE"
+               description="COM_SH404SEF_TT_APPEND_TO_PAGE_TITLE" size="60" maxlength="250"/>
+
+    </fieldset>
+    <!--end page title configurations fieldset-->
+
+    <!--start mobile content fieldset-->
+    <fieldset
+            name="mobileconfig"
+            label="COM_SH404SEF_MOBILE_CONFIG"
+            description=""
+            groupname="COM_SH404SEF_CONFIG_SEO">
+
+        <field menu="hide" name="mobile_switch_enabled" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_MOBILE_SWITCH_ENABLED" description="COM_SH404SEF_TT_MOBILE_SWITCH_ENABLED">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" type="text" name="mobile_template" default="" label="COM_SH404SEF_MOBILE_SWITCH_TEMPLATE"
+               description="COM_SH404SEF_TT_MOBILE_SWITCH_TEMPLATE" size="30" maxlength="30"/>
+
+    </fieldset>
+    <!--end mobile content ieldset-->
+    <!--END_TAB3-->
+    <!--TAB4-->
+    <!--start social network fieldset-->
+    <fieldset
+            name="ogconfig"
+            label="COM_SH404SEF_OG_CONFIG"
+            description=""
+            groupname="COM_SH404SEF_CONFIG_SOCIAL_SEO">
+
+        <field menu="hide" name="enableOpenGraphData" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_OG_DATA_ENABLED" description="COM_SH404SEF_TT_OG_DATA_ENABLED">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" type="spacer" label="COM_SH404SEF_OG_REQUIRED_TITLE" class="text"/>
+        <!--        <field menu="hide" type="spacer" hr="true"/>
+        -->
+        <field menu="hide" name="ogType" type="list" default="article" label="COM_SH404SEF_OG_TYPE_SELECT"
+               description="COM_SH404SEF_TT_OG_TYPE_SELECT">
+            <option value="article">COM_SH404SEF_OG_TYPES_ARTICLE</option>
+            <option value="blog">COM_SH404SEF_OG_TYPES_BLOG</option>
+            <option value="book">COM_SH404SEF_OG_TYPES_BOOK</option>
+            <option value="profile">COM_SH404SEF_OG_TYPES_PROFILE</option>
+            <option value="video.movie">COM_SH404SEF_OG_TYPES_MOVIE</option>
+            <option value="video.episode">COM_SH404SEF_OG_TYPES_TV_EPISODE</option>
+            <option value="video.tv_show">COM_SH404SEF_OG_TYPES_TV_SHOW</option>
+            <option value="video.other">COM_SH404SEF_OG_TYPES_TV_VIDEO</option>
+            <option value="website">COM_SH404SEF_OG_TYPES_WEBSITE</option>
+        </field>
+
+        <field menu="hide" type="text" name="ogImage" default="" label="COM_SH404SEF_OG_IMAGE_PATH"
+               description="COM_SH404SEF_TT_OG_IMAGE_PATH" size="50" maxlength="255"/>
+
+    </fieldset>
+    <!--end social networc fieldset-->
+    <!--start optional tags fieldset-->
+    <fieldset
+            name="ogoptional"
+            label="COM_SH404SEF_OG_OPTIONAL_TITLE"
+            description=""
+            groupname="COM_SH404SEF_CONFIG_SOCIAL_SEO">
+
+        <field menu="hide" name="ogEnableDescription" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_OG_INSERT_DESCRIPTION" description="COM_SH404SEF_TT_OG_INSERT_DESCRIPTION">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="ogEnableSiteName" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_OG_INSERT_SITE_NAME" description="COM_SH404SEF_TT_OG_INSERT_SITE_NAME">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" type="text" name="ogSiteName" default="" label="COM_SH404SEF_OG_SITE_NAME"
+               description="COM_SH404SEF_TT_OG_SITE_NAME" size="50" maxlength="255"/>
+
+        <field menu="hide" type="text" name="fbAdminIds" default="" label="COM_SH404SEF_FB_ADMIN_IDS"
+               description="COM_SH404SEF_TT_FB_ADMIN_IDS" size="50" maxlength="255"/>
+
+    </fieldset>
+    <!--end optional tags fieldset-->
+    <!--start twitter cards tags fieldset-->
+    <fieldset name="twittercards" label="COM_SH404SEF_TWITTER_CARDS_TITLE"
+              description="" groupname="COM_SH404SEF_CONFIG_SOCIAL_SEO">
+
+        <field name="enableTwitterCards" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_SOCIAL_ENABLE_TWITTER_CARDS"
+               description="COM_SH404SEF_SOCIAL_ENABLE_TWITTER_CARDS_DESC">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field name="twitterCardsSiteAccount" type="text" default=""
+               size="20" label="COM_SH404SEF_SOCIAL_TWITTER_CARDS_SITE_ACCOUNT"
+               description="COM_SH404SEF_SOCIAL_TWITTER_CARDS_SITE_ACCOUNT_DESC"/>
+        <field name="twitterCardsCreatorAccount" type="text" default=""
+               size="20" label="COM_SH404SEF_SOCIAL_TWITTER_CARDS_CREATOR_ACCOUNT"
+               description="COM_SH404SEF_SOCIAL_TWITTER_CARDS_CREATOR_ACCOUNT_DESC"/>
+        <field name="twitterCardsCategories" multiple="multiple" type="category" size="10" extension="com_content"
+               default="show_on_all"
+               label="COM_SH404SEF_SOCIAL_TWITTER_CARDS_CATEGORIES"
+               description="COM_SH404SEF_SOCIAL_TWITTER_CARDS_CATEGORIES_DESC">
+            <option value="show_on_all">COM_SH404SEF_SOCIAL_TWITTER_CARDS_CATEGORIES_SHOW_ON_ALL</option>
+        </field>
+    </fieldset>
+    <!--end twitter cards tags fieldset-->
+    <!--start Google Authorship tags fieldset-->
+    <fieldset name="googleAuthorship" label="COM_SH404SEF_GOOGLE_AUTHORSHIP_TITLE"
+              description="" groupname="COM_SH404SEF_CONFIG_SOCIAL_SEO">
+
+        <field name="enableGoogleAuthorship" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_SOCIAL_ENABLE_GOOGLE_AUTHORSHIP"
+               description="COM_SH404SEF_SOCIAL_ENABLE_GOOGLE_AUTHORSHIP_DESC">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field name="googleAuthorshipAuthorProfile" type="text" default=""
+               size="20" label="COM_SH404SEF_GOOGLE_AUTHORSHIP_PROFILE"
+               description="COM_SH404SEF_GOOGLE_AUTHORSHIP_PROFILE_DESC"/>
+        <field name="googleAuthorshipAuthorName" type="text" default=""
+               label="COM_SH404SEF_GOOGLE_AUTHORSHIP_AUTHOR_NAME"
+               description="COM_SH404SEF_GOOGLE_AUTHORSHIP_AUTHOR_NAME_DESC" size="40" maxlength="80"/>
+        <field name="googleAuthorshipCategories" multiple="multiple" type="category" size="10" extension="com_content"
+               default="show_on_all"
+               label="COM_SH404SEF_GOOGLE_AUTHORSHIP_CATEGORIES"
+               description="COM_SH404SEF_GOOGLE_AUTHORSHIP_CATEGORIES_DESC">
+            <option value="show_on_all">COM_SH404SEF_GOOGLE_AUTHORSHIP_CATEGORIES_SHOW_ON_ALL</option>
+        </field>
+        <field name="enableGooglePublisher" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_SOCIAL_ENABLE_GOOGLE_PUBLISHER"
+               description="COM_SH404SEF_SOCIAL_ENABLE_GOOGLE_PUBLISHER_DESC">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+        <field name="googlePublisherUrl" type="text" default=""
+               label="COM_SH404SEF_GOOGLE_PUBLISHER_URL"
+               description="COM_SH404SEF_GOOGLE_PUBLISHER_URL_DESC" size="40" maxlength="255"/>
+    </fieldset>
+    <!--end Google Authorship tags fieldset-->
+    <!--END_TAB4-->
+    <!--TAB5-->
+    <!--start analitycs fieldset-->
+    <fieldset
+            name="analytics"
+            label="COM_SH404SEF_CONFIG_ANALYTICS"
+            description="COM_SH404SEF_CONF_ANALYTICS_HELP"
+            groupname="COM_SH404SEF_CONFIG_ANALYTICS"
+            addfieldpath="/administrator/components/com_sh404sef/models/fields">
+
+        <field menu="hide" type="shlegend" shlrenderer="shlegend" label="COM_SH404SEF_TITLE_BASIC" class="text"/>
+        <!--<field menu="hide" type="spacer" hr="true"/>-->
+
+        <field menu="hide" name="analyticsEdition" type="list" class="btn-group" default="none"
+               label="COM_SH404SEF_ANALYTICS_ENABLED" description="COM_SH404SEF_TT_ANALYTICS_EDITION">
+            <option value="none">COM_SH404SEF_ANALYTICS_NONE</option>
+            <option value="uga">COM_SH404SEF_ANALYTICS_UNIVERSAL</option>
+            <option value="gtm">COM_SH404SEF_ANALYTICS_GOOGLE_TAGS_MANAGER</option>
+        </field>
+
+        <field menu="hide" type="text" name="analyticsUgaId" default="" label="COM_SH404SEF_ANALYTICS_ID"
+               description="COM_SH404SEF_TT_ANALYTICS_UGA_ID" size="15" maxlength="30"/>
+        <field menu="hide" type="text" name="analyticsGtmId" default="" label="COM_SH404SEF_ANALYTICS_GTM_ID"
+               description="COM_SH404SEF_TT_ANALYTICS_GTM_ID" size="15" maxlength="30"/>
+
+        <field menu="hide" name="analyticsEnableAnonymization" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_ANALYTICS_ENABLE_ANONYMIZATION"
+               description="COM_SH404SEF_TT_ANALYTICS_ENABLE_ANONYMIZATION">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="analyticsEnableDisplayFeatures" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_ANALYTICS_ENABLE_DISPLAY_FEATURES"
+               description="COM_SH404SEF_TT_ANALYTICS_ENABLE_DISPLAY_FEATURES">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="analyticsEnableEnhancedLinkAttr" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_ANALYTICS_ENABLE_ENHANCED_LINK"
+               description="COM_SH404SEF_TT_ANALYTICS_ENABLE_ENHANCED_LINK">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" type="textarea" name="analyticsExcludeIP" default=""
+               label="COM_SH404SEF_ANALYTICS_EXCLUDE_IP" description="COM_SH404SEF_TT_ANALYTICS_EXCLUDE_IP" cols="30"
+               rows="5"/>
+
+        <field menu="hide" name="analyticsUserGroups" type="list" multiple="true" size="10" default="[1]"
+               label="COM_SH404SEF_ANALYTICS_USER_GROUPS" description="COM_SH404SEF_TT_ANALYTICS_USER_GROUPS">
+        </field>
+
+        <field menu="hide" name="analyticsUserGroupsDisabled" type="list" multiple="true" size="10" default="[1]"
+               label="COM_SH404SEF_ANALYTICS_USER_GROUPS_DISABLED"
+               description="COM_SH404SEF_TT_ANALYTICS_USER_GROUPS_DISABLED">
+        </field>
+
+        <!-- field menu="hide" name="analyticsEnableTimeCollection" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_ANALYTICS_ENABLE_TIME_COLLECTION"
+               description="COM_SH404SEF_TT_ANALYTICS_ENABLE_TIME_COLLECTION">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="analyticsEnableUserCollection" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_ANALYTICS_ENABLE_LOGGED_IN_USER"
+               description="COM_SH404SEF_TT_ANALYTICS_ENABLE_LOGGED_IN_USER">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field -->
+
+        <field menu="hide" type="shlegend" shlrenderer="shlegend" label="COM_SH404SEF_ANALYTICS_REPORTS_TITLE"
+               class="text"/>
+        <!--<field menu="hide" type="spacer" hr="true"/>-->
+
+        <field menu="hide" name="analyticsReportsEnabled" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_ANALYTICS_REPORTS_ENABLED" description="COM_SH404SEF_TT_ANALYTICS_REPORTS_ENABLED">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" type="wbgaauth" name="wbgaauth" default="" label="COM_SH404SEF_ANALYTICS_AUTHORIZATION"
+               description="COM_SH404SEF_ANALYTICS_AUTHORIZATION_DESC"/>
+
+        <field menu="hide" name="autoCheckNewAnalytics" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_ANALYTICS_ENABLE_AUTO_CHECK"
+               description="COM_SH404SEF_TT_ANALYTICS_ENABLE_AUTO_CHECK">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="analyticsDashboardDateRange" type="list" default="week"
+               label="COM_SH404SEF_ANALYTICS_DASHBOARD_DATE_RANGE"
+               description="COM_SH404SEF_TT_ANALYTICS_DASHBOARD_DATE_RANGE">
+            <option value="week">COM_SH404SEF_WEEK</option>
+            <option value="month">COM_SH404SEF_MONTH</option>
+            <option value="year">COM_SH404SEF_YEAR</option>
+        </field>
+
+        <field menu="hide" name="analyticsDashboardDataType" type="list" default="ga:pageviews"
+               label="COM_SH404SEF_ANALYTICS_DASHBOARD_DATA_TYPE"
+               description="COM_SH404SEF_TT_ANALYTICS_DASHBOARD_DATA_TYPE">
+            <option value="ga:pageviews">COM_SH404SEF_ANALYTICS_DATA_PAGEVIEWS</option>
+            <option value="ga:visits">COM_SH404SEF_ANALYTICS_REPORT_VISITS_ONLY</option>
+            <option value="ga:visitors">COM_SH404SEF_ANALYTICS_DATA_VISITORS</option>
+        </field>
+
+        <field name="wbgaauth_auth_required" type="hidden" default="1"/>
+        <field name="wbgaauth_access_token" type="hidden" default=""/>
+        <field name="wbgaauth_refresh_token" type="hidden" default=""/>
+        <field name="wbgaauth_expires_on" type="hidden" default=""/>
+        <field name="wbgaauth_token_type" type="hidden" default=""/>
+        <field name="wbgaauth_client_id_key" type="hidden" default=""/>
+
+    </fieldset>
+    <!--end analitycs fieldset-->
+    <!--END_TAB5-->
+    <!--TAB6-->
+    <!--start security fieldset-->
+    <fieldset
+            name="Title-Sec"
+            label="COM_SH404SEF_SECURITY_TITLE"
+            description=""
+            groupname="COM_SH404SEF_CONFIG_SEC">
+
+        <field menu="hide" name="shSecEnableSecurity" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_ACTIVATE_SECURITY" description="COM_SH404SEF_TT_ACTIVATE_SECURITY">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shSecLogAttacks" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_LOG_ATTACKS" description="COM_SH404SEF_TT_LOG_ATTACKS">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" type="text" name="monthsToKeepLogs" default="" label="COM_SH404SEF_MONTHS_TO_KEEP_LOGS"
+               description="COM_SH404SEF_TT_MONTHS_TO_KEEP_LOGS" size="5" maxlength="2"/>
+
+        <field menu="hide" name="shSecCheckPOSTData" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_CHECK_POST_DATA" description="COM_SH404SEF_TT_CHECK_POST_DATA">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shSecOnlyNumVars" type="textarea" default="" label="COM_SH404SEF_ONLY_NUM_VARS"
+               description="COM_SH404SEF_TT_ONLY_NUM_VARS" cols="20" rows="5"/>
+
+
+        <field menu="hide" name="shSecAlphaNumVars" type="textarea" default="" label="COM_SH404SEF_ONLY_ALPHA_NUM_VARS"
+               description="COM_SH404SEF_TT_ONLY_ALPHA_NUM_VARS" cols="20" rows="5"/>
+
+        <field menu="hide" name="shSecNoProtocolVars" type="textarea" default="" label="COM_SH404SEF_NO_PROTOCOL_VARS"
+               description="COM_SH404SEF_TT_NO_PROTOCOL_VARS" cols="20" rows="5"/>
+
+        <field menu="hide" name="ipWhiteList" type="textarea" default="" label="COM_SH404SEF_IP_WHITE_LIST"
+               description="COM_SH404SEF_TT_IP_WHITE_LIST" cols="20" rows="5"/>
+
+        <field menu="hide" name="ipBlackList" type="textarea" default="" label="COM_SH404SEF_IP_BLACK_LIST"
+               description="COM_SH404SEF_TT_IP_BLACK_LIST" cols="20" rows="5"/>
+
+        <field menu="hide" name="uAgentWhiteList" type="textarea" default="" label="COM_SH404SEF_UAGENT_WHITE_LIST"
+               description="COM_SH404SEF_TT_UAGENT_WHITE_LIST" cols="60" rows="5"/>
+
+        <field menu="hide" name="uAgentBlackList" type="textarea" default="" label="COM_SH404SEF_UAGENT_BLACK_LIST"
+               description="COM_SH404SEF_TT_UAGENT_BLACK_LIST" cols="60" rows="5"/>
+    </fieldset>
+    <!--end security fieldset-->
+    <!--start anti-floor fieldset-->
+    <fieldset
+            name="antiflood"
+            label="COM_SH404SEF_ANTIFLOOD_TITLE"
+            description=""
+            groupname="COM_SH404SEF_CONFIG_SEC">
+
+        <field menu="hide" name="shSecActivateAntiFlood" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_ACTIVATE_ANTIFLOOD" description="COM_SH404SEF_TT_ACTIVATE_ANTIFLOOD">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="shSecAntiFloodOnlyOnPOST" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_ANTIFLOOD_ONLY_ON_POST" description="COM_SH404SEF_TT_ANTIFLOOD_ONLY_ON_POST">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" type="text" name="shSecAntiFloodPeriod" default="" label="COM_SH404SEF_ANTIFLOOD_PERIOD"
+               description="COM_SH404SEF_TT_ANTIFLOOD_PERIOD" size="5" maxlength="5"/>
+
+        <field menu="hide" type="text" name="shSecAntiFloodCount" default="" label="COM_SH404SEF_ANTIFLOOD_COUNT"
+               description="COM_SH404SEF_TT_ANTIFLOOD_COUNT" size="5" maxlength="5"/>
+    </fieldset>
+    <!--end anti-floor fieldset-->
+    <!--start project honey fieldset-->
+    <fieldset
+            name="honeypot"
+            label="COM_SH404SEF_HONEYPOT_TITLE"
+            description="COM_SH404SEF_CONF_HONEYPOT_DOC"
+            groupname="COM_SH404SEF_CONFIG_SEC">
+
+        <field menu="hide" name="shSecCheckHoneyPot" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_CHECK_HONEY_POT" description="COM_SH404SEF_TT_CHECK_HONEY_POT">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" type="text" name="shSecHoneyPotKey" default="" label="COM_SH404SEF_HONEYPOT_KEY"
+               description="COM_SH404SEF_TT_HONEYPOT_KEY" size="30" maxlength="30"/>
+
+
+        <field menu="hide" name="shSecEntranceText" type="textarea" default=""
+               label="COM_SH404SEF_HONEYPOT_ENTRANCE_TEXT" description="COM_SH404SEF_TT_HONEYPOT_ENTRANCE_TEXT"
+               cols="60" rows="5"/>
+
+        <field menu="hide" name="shSecSmellyPotText" type="textarea" default="" label="COM_SH404SEF_SMELLYPOT_TEXT"
+               description="COM_SH404SEF_TT_SMELLYPOT_TEXT" cols="60" rows="5"/>
+    </fieldset>
+    <!--end project honey fieldset-->
+    <!--END_TAB6-->
+    <!--TAB7-->
+    <!--start basic configuration fieldset-->
+    <fieldset
+            name="main2"
+            label="COM_SH404SEF_TITLE_BASIC"
+            description=""
+            groupname="COM_SH404SEF_CONFIG_ERROR_PAGE">
+
+        <field menu="hide" name="autoRedirect404" type="radio" class="btn-group" default="0"
+               label="COM_SH404SEF_AUTO_REDIRECT_404" description="COM_SH404SEF_TT_AUTO_REDIRECT_404">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field menu="hide" name="autoRedirect404WithMessage" type="radio" class="btn-group" default="1"
+               label="COM_SH404SEF_AUTO_REDIRECT_404_WITH_MESSAGE"
+               description="COM_SH404SEF_TT_AUTO_REDIRECT_404_WITH_MESSAGE">
+            <option value="0">COM_SH404SEF_NO</option>
+            <option value="1">COM_SH404SEF_YES</option>
+        </field>
+
+        <field type="color" name="error404MsgColor" default="#FFFFFF" label="COM_SH404SEF_PAGE_NOT_FOUND_MSG_COLOR"
+               description="COM_SH404SEF_TT_PAGE_NOT_FOUND_MSG_COLOR"/>
+        <field menu="hide" type="color" name="error404MsgBackgroundColor" default="#327DCB"
+               label="COM_SH404SEF_PAGE_NOT_FOUND_MSG_BACKGROUND_COLOR"
+               description="COM_SH404SEF_TT_PAGE_NOT_FOUND_MSG_BACKGROUND_COLOR"/>
+        <field menu="hide" type="text" name="error404MsgOpacity" default="0.9"
+               label="COM_SH404SEF_PAGE_NOT_FOUND_MSG_OPACITY" description="COM_SH404SEF_TT_PAGE_NOT_FOUND_MSG_OPACITY"
+               size="30" maxlength="30"/>
+
+        <field menu="hide" name="notFoundErrorHandling" type="list" default="1" label="COM_SH404SEF_404_HANDLING"
+               description="COM_SH404SEF_TT_404_HANDLING">
+            <option value="0">COM_SH404SEF_404_HANDLING_HANDLE</option>
+            <option value="1">COM_SH404SEF_404_HANDLING_OVERRIDE_JOOMLA</option>
+            <option value="2">COM_SH404SEF_404_HANDLING_USE_JOOMLA</option>
+        </field>
+
+        <field menu="hide" type="text" name="error404SubTemplate" default=""
+               label="COM_SH404SEF_PAGE_NOT_FOUND_TEMPLATE" description="COM_SH404SEF_TT_PAGE_NOT_FOUND_TEMPLATE"
+               size="30" maxlength="50"/>
+
+    </fieldset>
+    <!--end basic configuration fieldset-->
+    <!--start default 404error fieldset-->
+    <!--end default 404error fieldset-->
+    <!--END_TAB7-->
+
+    <fieldset
+            name="permissions"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            description="JCONFIG_PERMISSIONS_DESC"
+            groupname="JCONFIG_PERMISSIONS_LABEL">
+        >
+
+        <field
+                name="rules"
+                type="rules"
+                label="JCONFIG_PERMISSIONS_LABEL"
+                class="inputbox"
+                filter="rules"
+                validate="rules"
+                component="com_sh404sef"
+                section="component"
+                shlrenderer="Rules"/>
+    </fieldset>
+
+    <fieldset
+            name="updates"
+            label="COM_SH404SEF_CONF_TAB_UPDATES"
+            description="COM_SH404SEF_UPDATES_DESCRIPTION"
+            groupname="COM_SH404SEF_UPDATES"
+            >
+        <field menu="hide" name="update_credentials_access" type="text" default="" size="50" maxlength="50"
+               label="COM_SH404SEF_UPDATE_ACCESS_KEY" description="COM_SH404SEF_TT_UPDATE_ACCESS_KEY"/>
+        <field menu="hide" name="update_credentials_secret" type="text" default="" size="50" maxlength="50"
+               label="COM_SH404SEF_UPDATE_SECRET_KEY" description="COM_SH404SEF_TT_UPDATE_SECRET_KEY"/>
+    </fieldset>
+
+</config>

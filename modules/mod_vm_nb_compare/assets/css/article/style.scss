@@ -1,0 +1,46 @@
+.tr_compare_action {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: auto;
+  td {
+    padding: 10px !important;
+  }
+}
+
+.product_compare_item {
+  text-align: center;
+
+   form.product{
+    display: block;
+    float: left;
+    width: 60%;
+   }
+  .over_data {
+    input[type=submit] {
+      width: 100% !important;
+      float: none;
+      margin-left: 0;
+    }
+    .quantity-box {
+      display: block;
+      .item_span {
+        display: inline-block;
+        background-color: #179eeb;
+        width: 27px;
+        height: 27px;
+        cursor: pointer;
+        color: #fff;
+        line-height: 27px;
+      }
+    }
+    .cust_field {
+      margin-top: 10px;
+      display: block;
+    }
+
+  }
+  .remove_compare_popup {
+    margin: auto;
+    float: right;
+  }
+}

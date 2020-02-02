@@ -1,0 +1,95 @@
+<root>
+    <params name="imagebox-item" hidetitle="1">
+
+        <param type="group">
+            <param name="layout" type="list" label="Layout">
+                <option value="top">Top</option>
+                <option value="left">Left</option>
+                <option value="right">Right</option>
+                <option value="bottom">Bottom</option>
+            </param>
+
+            <param name="spacing" label="Spacing" type="numberautocompleteslider" style="width: 22px;"
+                   min="0" max="300" slmax="300" step="1">
+                <unit value="px">px</unit>
+            </param>
+        </param>
+
+        <param type="group">
+            <param name="inneralign" type="inneralign" label="Inner align"/>
+            <param name="verticalalign" type="list" label="Vertical align">
+                <option value="flex-start">Top</option>
+                <option value="center">Center</option>
+                <option value="flex-end">Bottom</option>
+            </param>
+        </param>
+
+        <param type="group">
+
+            <param name="image" type="image" label="Image" fixed="1" style="width:236px;" alt="item_imagealt"/>
+
+            <param name="imagewidth" label="Width" type="numberautocompleteslider" style="width: 22px;"
+                   min="0" max="100" slmax="100" step="1">
+                <unit value="%">%</unit>
+            </param>
+
+            <param name="imagealt" type="text" label="Alt" style="width:125px;"/>
+        </param>
+
+        <param type="group">
+            <param name="icon" type="icon2manager" label="Icon" clearable="1"/>
+
+            <param name="iconsize" label="Size" type="numberautocompleteslider" style="width: 22px;"
+                   min="8" max="400" slmax="200" step="4">
+                <unit value="px">px</unit>
+            </param>
+            <param name="iconcolor" type="color" label="Color" alpha="1"/>
+        </param>
+
+        <param type="group">
+            <param name="heading" type="textarea" label="Text"/>
+            <param name="headingpriority" type="list" label="Tag" class="n2-expert">
+                <option value="div">div</option>
+                <option value="h1">H1</option>
+                <option value="h2">H2</option>
+                <option value="h3">H3</option>
+                <option value="h4">H4</option>
+                <option value="h5">H5</option>
+                <option value="h6">H6</option>
+            </param>
+        </param>
+        <param name="fonttitle" type="font" previewmode="hover" set="1000" label="Title font"
+               class="n2-hidden"><![CDATA[
+<div class="{fontClassName}">{$('#item_imageboxheading').val().replace(/\\n/g, '<br />');}</div>
+]]></param>
+
+
+        <param name="description" type="richtextarea" label="Description"
+               style2="height: 120px;"/>
+        <param name="fontdescription" type="font" previewmode="paragraph" set="1000" label="Description font"
+               class="n2-hidden"><![CDATA[
+<div style="width:{nextend.activeLayer.width()}px;"><p class="{fontClassName}">{$('#item_textcontent').val();}</p></div>
+]]></param>
+
+        <param name="style" type="style" previewmode="box" label="Style" class="n2-hidden">
+            <![CDATA[<div class="{styleClassName}" style="width:{nextend.activeLayer.width()}px;height:{nextend.activeLayer.height()}px;"></div>]]>
+        </param>
+
+        <param name="link" type="mixed" default="#|*|_self">
+            <param type="url" label="Link" style="width:236px;"/>
+            <param type="list" label="Target" translateable="1">
+                <option value="_self">Self</option>
+                <option value="_blank">Blank</option>
+            </param>
+            <param type="list" label="Rel">
+                <option value=""></option>
+                <option value="nofollow">nofollow</option>
+                <option value="noreferrer">noreferrer</option>
+                <option value="author">author</option>
+                <option value="external">external</option>
+                <option value="help">help</option>
+            </param>
+        </param>
+
+    </params>
+</root>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="jform">
+		<fieldset name="file">
+			<field name="fieldgroup"
+			       type="CsviField.Groups"
+			       class="advancedSelect"
+			       multiple="true"
+			       default="none">
+				<option value="none">COM_CSVI_DONT_USE</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

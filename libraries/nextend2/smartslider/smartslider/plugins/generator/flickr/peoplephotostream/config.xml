@@ -1,0 +1,12 @@
+<root>
+    <params name="filter" label="Filter">
+        <param type="list" name="peoplephotostreamprivacy" label="Privacy" default="1" translateable="1">
+            <option value="1">Public photos</option>
+            <option value="2">Private photos visible to friends</option>
+            <option value="3">Private photos visible to family</option>
+            <option value="4">Private photos visible to friends &amp; family</option>
+            <option value="5">Completely private photos</option>
+        </param>
+    </params>
+
+</root>

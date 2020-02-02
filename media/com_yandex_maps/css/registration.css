@@ -1,0 +1,178 @@
+#xdsoft_registration_organization_save *, #xdsoft_registration_organization_save{
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+}
+#xdsoft_registration_organization_save input:not([type=checkbox]),
+#xdsoft_registration_organization_save select,
+#xdsoft_registration_organization_save textarea{
+width:100%;
+min-height:28px;
+}
+#xdsoft_registration_organization_save fieldset{
+background:#fafafa;
+padding:0px 0px;
+margin-bottom:5px;
+}
+#xdsoft_registration_organization_save fieldset>div{
+padding:0px 10px;
+border: 1px solid #C9C9C9;
+border-width: 1px  1px 1px 1px;
+padding-top: 10px;
+padding-bottom: 10px;
+position:relative;
+}
+#xdsoft_registration_organization_save .control-group{
+  margin-top: 0px;
+  position:relative;
+}
+#xdsoft_registration_organization_save fieldset>legend>span{
+padding:0px 10px;
+display:block;
+border: 1px solid #C9C9C9;
+border-width: 1px  1px 0px 1px;
+}
+#xdsoft_registration_organization_save fieldset legend{
+background: -moz-linear-gradient(top,  rgba(234,185,45,0.51) 0%, rgba(199,152,16,0.59) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(234,185,45,0.51)), color-stop(100%,rgba(199,152,16,0.59)));
+background: -webkit-linear-gradient(top,  rgba(234,185,45,0.51) 0%,rgba(199,152,16,0.59) 100%);
+background: -o-linear-gradient(top,  rgba(234,185,45,0.51) 0%,rgba(199,152,16,0.59) 100%);
+background: -ms-linear-gradient(top,  rgba(234,185,45,0.51) 0%,rgba(199,152,16,0.59) 100%);
+background: linear-gradient(to bottom, rgba(221, 221, 221, 0.51) 0%,rgba(219, 219, 219, 1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82eab92d', endColorstr='#96c79810',GradientType=0 );
+text-shadow: 0px 0px 2px rgba(221, 221, 221, 1);
+color: #7A7A7A;
+padding:0px;
+border-bottom: 0px solid #C9C9C9;
+margin-bottom: 0px;
+font-size:14px;
+/*font-weight:700;*/
+line-height:22px;
+text-transform:lowercase;
+}	
+#xdsoft_registration_organization_save fieldset h4{
+margin-top:0px;
+}/*
+#xdsoft_registration_organization_save fieldset:nth-child(odd){
+	background:#f6f6f6;
+}
+#xdsoft_registration_organization_save fieldset:nth-child(odd) legend{
+	background: #67B3E0;
+	color: rgb(251, 250, 250);
+}*/
+
+#xdsoft_registration_organization_save .xdsoft_tooltip {
+  position: absolute;
+  top: 16px;
+  left: 100%;
+  min-width:160px;
+  color: #b94a48;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #eed3d7;
+  background-color: #f2dede;
+  opacity: 0.8;
+  z-index:1;
+  visibility:hidden;
+  opacity: 0;
+  transition: opacity 1.0s, visibility 0s linear 1.0s;
+  display:block;
+}
+#xdsoft_registration_organization_save .xdsoft_tooltip {
+	top: 100%;
+	left: 30px;
+}
+
+#xdsoft_registration_organization_save .control-group.error .xdsoft_tooltip {
+	visibility: visible;
+	opacity: 1;
+	transition-delay: 0s;
+}
+
+#xdsoft_registration_organization_save .xdsoft_tooltip:before {
+  position: absolute;
+  content:"&nbsp;";
+  display: block;
+  left: -14px;
+  width: 0;
+  height: 0;
+  color: transparent;
+  border: 7px solid;
+  border-right-color: #f2dede;
+}
+
+#xdsoft_registration_organization_save .xdsoft_tooltip:before {
+  left: auto;
+  top: -14px;
+  border: 7px solid;
+  border-bottom-color: #f2dede;
+}
+
+
+.iconpicker,.iconpicker *{
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.iconpicker{
+	display:inline-block;
+	margin-right:10px;
+}
+.iconpicker .iconpickerfile{
+	display:none;
+}
+.iconpicker .iconpickersuggestions{
+	display:none;
+	position:absolute;
+	z-index:20;
+	background:#fff;
+	border:1px solid #ccc;
+	padding:10px;
+	width:410px;
+	top:100%;
+	left:-1px;
+}
+.iconpicker .iconpickersuggestions a{
+	cursor:pointer;
+	border:1px solid transparent;
+	display:inline-block;
+	padding:5px;
+}
+.iconpicker .iconpickersuggestions a:hover{
+border:1px solid #ccc;
+}
+.iconpicker .iconpickersuggestions img{
+	max-width:48px;
+}
+.iconpicker .iconpickervariants{
+	position:relative;
+	display:inline-block;
+	width:50px;
+	height:50px;
+	border:1px solid #ccc;
+	padding:5px;
+}
+.iconpicker .iconpickervariants > span{
+	display:block;
+	width:15px;
+	position:absolute;
+	right:-10px;
+	top:-1px;
+	bottom:-1px;
+	border:1px solid #ccc;
+	border-width:1px 1px 1px 0px;
+}
+.iconpicker .iconpickervariants > span:after{
+	display:inline-block;
+	content:"";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 4px 0 4px 8px;
+	border-color: transparent transparent transparent #999999;
+	top:50%;
+	left:7px;
+	margin-top:-4px;
+	position:absolute;
+}
+.iconpicker .iconpickervariants:not(.xdsoft_i_closed):hover .iconpickersuggestions{
+	display:block;
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>OPC Tracking - Sklik.cz</name>
+    <creationDate>Oct 2013</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+
+	<license_key>6bda8a13a90e6c233902f2ed1176cb93_13026</license_key>
+    <description>Sklik Tracking. Seznam retargeting je možné zapnúť pre Košík, Produkt, Kategóriu alebo pre Objednávku (objednávka je zapnutá automaticky pre vybraný stav)</description>
+    <files>
+        <filename>sklik.php</filename>
+    </files>
+
+<params>
+    
+    
+			<param
+        type="text"
+        name="seznam_retargeting_id"
+        id="seznam_retargeting_id"
+        label="Seznam Retageting ID"
+        description="1234"
+        size="80"
+		default=""
+        maxLength="255" />
+		
+		
+		<param
+        type="list"
+        name="seznam_retargeting"
+        id="seznam_retargeting"
+        label="Použiť seznam retargeting"
+        description="Vyžaduje retargeting ID"
+		default="1"
+        maxLength="255" >
+		 <option value="1">Zapnúť</option>
+		 <option value="0">Nepoužívať</option>
+		</param>
+		
+		<param
+        type="text"
+        name="par_c"
+        id="par_c"
+        label="Parameter C z meriaceho kodu"
+        description=""
+        size="80"
+		default="99999961"
+        maxLength="255" />
+		
+		
+		
+		
+			
+		
+       
+    
+</params>	
+</extension>

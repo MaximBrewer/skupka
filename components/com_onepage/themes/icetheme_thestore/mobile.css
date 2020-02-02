@@ -1,0 +1,167 @@
+
+@media screen and (min-width: 100px) and (max-width: 700px) {
+div#vmMainPageOPC {
+ margin-left: auto; 
+ margin-right: auto;
+ 
+}
+div#vmMainPageOPC div.op_rounded {
+ margin-left:0;
+ 
+}
+div.input_coupon_div {
+ right:auto;
+ float: right;
+ right: 170px; 
+ bottom:5px;
+ min-width:auto;
+ }
+div#vmMainPageOPC input#coupon_code {
+ width:auto;
+}
+div.details-button, div.details-button button {
+ bottom:auto;
+} 
+div#vmMainPageOPC div#onepage_info_above_button {
+ padding-left:2%;
+ position:relative;
+ 
+ }
+div#vmMainPageOPC div#onepage_total_inc_sh {
+ display:none;
+}
+
+div#basket_container div.op_basket_row div.op_col1, div#basket_container div.op_basket_row div.op_col4, div#basket_container div.op_basket_row div.op_col5 {
+  display: none; 
+}
+div#basket_container div.op_basket_header {
+ position: relative; 
+}
+div#basket_container div.op_basket_header div.op_col6 {
+  position: absolute; 
+  min-width: 200px; 
+  left: 35%;
+}
+div#basket_container div.op_basket_row div.op_col2_2, div.op_col2 {
+ margin-left: 5%; 
+}
+div#basket_container div.vm-customfield-cart span {
+ width: 100%; 
+}
+
+
+#vmMainPageOPC  div.left_column_ice {
+ width: 100% !important; 
+ padding-left: 0 !important; 
+}
+div#vmMainPageOPC select {
+ max-width: 95%; 
+}
+#vmMainPageOPC  div.right_column_ice {
+  width: 100%; 
+  float: left;
+}
+
+
+
+div#basket_container div.op_basket_row div.op_col7 {
+ float: right; 
+ position: relative; 
+ width: 27%; 
+ padding-right:5px;
+}
+
+
+div#vmMainPageOPC div#ajaxshipping span.hasTip, div#vmMainPageOPC div#payment_html span.hasTip {
+  float: left; 
+  clear: both; 
+  
+}
+
+
+
+div.st_min_height {
+   width: 100%; 
+   min-height: auto;
+}
+#onepage_main_div div#confirmbtn_area{
+	float:left;
+	clear: both;
+
+}
+
+input#confirmbtn { 
+ width: 100%; 
+}
+
+div#vmMainPageOPC div.op_rounded div.op_rounded_fix div  div#rbsubmit {
+ padding-top: 0px;
+ vertical-align: bottom;
+ text-align: right;
+ width: 100%; 
+ float: left;
+ clear: both; 
+}
+
+div#vmMainPageOPC div.op_rounded div.op_rounded_fix div div#customer_note_place {
+  width: 100%; 
+  float: left;
+}
+
+/* end CSS  for two column theme but modified for table */
+div#vmMainPageOPC div#onepage_main_div div.bill_to_section,div#vmMainPageOPC  div#onepage_main_div div#bill_to_section {
+ width: 100%; 
+ float: left;
+ margin-right: 0%;  
+ margin-left: 0; 
+ padding-left: 0; 
+ padding-right: 0; 
+ clear: both; 
+}
+
+div#vmMainPageOPC div#onepage_main_div div.shipto_section, div#vmMainPageOPC div#onepage_main_div div.shipping_method_section, div#vmMainPageOPC div#onepage_main_div div.payment_method_section {
+  width: 100%; 
+ padding-left: 0; 
+ padding-right: 0; 
+
+  float: left;
+ margin-left: 0%;  
+ margin-right: 0; 
+ clear: both; 
+}
+div#couponcode_field {
+ float: left; 
+ clear: both; 
+ width: 100%; 
+}
+form#userForm div, form#userForm div.details-button, div#vmMainPageOPC div.op_rounded div.op_rounded_fix div div.formLabel, div#vmMainPageOPC div.op_rounded div.op_rounded_fix div div.formField,divm#vmMainPageOPC #onepage_info_above_button, divm#vmMainPageOPC #rbsubmit {
+ width: 100%; 
+ clear: both; 
+ text-align: left; 
+ float: left; 
+}
+#rbsubmit label > a {
+ clear: both; 
+ width: 100%; 
+ float: left; 
+}
+div#vmMainPageOPC input#coupon_code {
+ float: left; 
+}
+div#vmMainPageOPC div#couponcode_field form button {
+ float: left; 
+}
+
+div#vmMainPageOPC select {
+ max-width: 90% !important; 
+}
+div#vmMainPageOPC  {
+ box-sizing: border-box; 
+}
+
+
+/* end CSS  for two column theme but modified for table */
+
+
+
+}
