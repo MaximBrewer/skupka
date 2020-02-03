@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Modules Anywhere
- * @version         7.7.2
+ * @version         7.9.0
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -61,6 +61,7 @@ class Params
 
 		return [
 			'loadmodule',
+			'loadmoduleid',
 			'loadposition',
 		];
 	}
@@ -105,13 +106,14 @@ class Params
 
 		// Tag character start and end
 		list($tag_start, $tag_end) = Params::getTagCharacters();
-		$tag_start = RL_RegEx::quote($tag_start);
-		$tag_end   = RL_RegEx::quote($tag_end);
 
 		$pre        = RL_PluginTag::getRegexLeadingHtml();
 		$post       = RL_PluginTag::getRegexTrailingHtml();
-		$inside_tag = RL_PluginTag::getRegexInsideTag();
+		$inside_tag = RL_PluginTag::getRegexInsideTag($tag_start, $tag_end);
 		$spaces     = RL_PluginTag::getRegexSpaces();
+
+		$tag_start = RL_RegEx::quote($tag_start);
+		$tag_end   = RL_RegEx::quote($tag_end);
 
 		self::$regexes = (object) [];
 

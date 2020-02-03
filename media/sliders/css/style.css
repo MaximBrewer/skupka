@@ -1,10 +1,10 @@
 /**
  * @package         Sliders
- * @version         6.0.8
+ * @version         7.7.8
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2016 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2019 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 /*
@@ -30,7 +30,7 @@
 .rl_sliders .collapse {
   display: block;
   position: relative;
-  height: 0;
+  height: auto;
   overflow: hidden;
   -webkit-transition: height 1ms ease;
   -moz-transition: height 1ms ease;
@@ -63,6 +63,10 @@
   display: block;
   padding: 8px 15px;
   cursor: pointer;
+}
+.rl_sliders.accordion > .accordion-group > .accordion-body {
+  padding: 0;
+  border: none;
 }
 .rl_sliders.accordion > .accordion-group > .accordion-body > .accordion-inner {
   padding: 9px 15px;
@@ -110,7 +114,7 @@
   transition-duration: 0.2s;
 }
 .rl_sliders.accordion > .accordion-group > .accordion-heading > a.accordion-toggle:hover {
-  background-color: #eeeeee;
+  background-color: #eee;
   color: #1f496e;
   text-decoration: none;
 }
@@ -162,7 +166,7 @@
 }
 .rl_sliders.accordion > .accordion-group.icon > .accordion-heading > a.accordion-toggle span.rl_sliders-toggle-inner:before {
   display: inline-block;
-  *margin-right: .3em;
+  *margin-right: 0.3em;
   font-family: 'IcoMoon';
   font-style: normal;
   speak: none;

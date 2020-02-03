@@ -26,7 +26,7 @@
 		//currentInput = false,
 		ctrlDown = false,
 		shiftDown = false,
-		interval_for_visibility,
+		interval_for_visibility = {},
 		publics = {},
 		accent_map = {
 			'ẚ':'a','Á':'a','á':'a','À':'a','à':'a','Ă':'a','ă':'a','Ắ':'a','ắ':'a','Ằ':'a','ằ':'a','Ẵ':'a','ẵ':'a','Ẳ':'a',
@@ -957,18 +957,19 @@
 					}
 				}, options.timeoutUpdate||1);
 			});
-		
+
+		var keyRnd = 'key' + Math.random();
 		if ($input.is(':visible')) {
 			$input
 				.trigger('updateHelperPosition.xdsoft');
 		} else {
-			interval_for_visibility = setInterval(function () {
+			interval_for_visibility[keyRnd] = (setInterval(function () {
 				if ($input.is(':visible')) {
 					$input
 						.trigger('updateHelperPosition.xdsoft');
-					clearInterval(interval_for_visibility);
+					clearInterval(interval_for_visibility[keyRnd]);
 				}
-			},100);
+			},100));
 		}
 		
 		$(window).on('resize',function () {
@@ -977,7 +978,7 @@
 			});
 			$input
 				.trigger('updateHelperPosition.xdsoft');
-		})
+		});
 		
 		$input	
 			.on('close.xdsoft',function(){

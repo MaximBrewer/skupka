@@ -1,16 +1,3 @@
-i.icon-key {
-	display: none;
-}
-
-
-a.menu-jmap-16x16 {
-	padding-left: 0px !important;	
-}
-
-a.menu-redirect, a.menu-postinstall, a.dropdown-toggle.menu-messages, a.menu-joomlaupdate, a.menu-search{
-	display: none !important;
-}
-
 article,
 aside,
 details,
@@ -7773,6 +7760,9 @@ input.field-media-input {
 		display: none;
 	}
 }
+.ventral-space {
+	margin-bottom: 5px;
+}
 ul.manager .height-50 .icon-folder-2 {
 	height: 35px;
 	width: 35px;
@@ -8241,7 +8231,10 @@ body .navbar-fixed-top {
 		font-size: 16px;
 	}
 }
-
+.nav-collapse .nav li a,
+.dropdown-menu a {
+	background-image: none;
+}
 .nav-collapse .dropdown-menu > li img {
 	max-width: none;
 }

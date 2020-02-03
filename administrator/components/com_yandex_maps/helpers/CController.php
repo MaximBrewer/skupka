@@ -7,34 +7,65 @@ abstract class CController extends JControllerAdmin{
 	public $_view = '{view}';
 	
 	public $_close = false;
-	
+
+	protected function isOrgMode() {
+		$form = JFactory::getApplication()->input->get('jform', array(), 'ARRAY');
+
+		if ($form['organization_data']) {
+			return true;
+		}
+
+		return JFactory::getApplication()->input->get('mode') == 'organization';
+	}
+
 	abstract public function add();
+
+	public function addorg() {
+		JFactory::getApplication()->input->set('mode', 'organization');
+		$this->add();
+	}
+
 	abstract public function edit();
 	
 	public function getModel($name = '', $prefix = 'Yandex_MapsModel', $config = Array()){
 		return parent::getModel($name ? $name : $this->_model, $prefix, array('ignore_request' => true));
 	}
+
 	public function addandnew() {
 		$this->_close = 2;
-		$this->add();
+		if ($this->isOrgMode()) {
+			$this->addorg();
+		} else {
+			$this->add();
+		}
 	}
+
 	public function editandnew() {
 		$this->_close = 2;
 		$this->edit();
 	}
+
 	public function addandclose() {
 		$this->_close = 1;
-		$this->add();
+
+		if ($this->isOrgMode()) {
+			$this->addorg();
+		} else {
+			$this->add();
+		}
 	}
+
 	public function editandclose() {
 		$this->_close = 1;
 		$this->edit();
 	}
+
 	public function __construct() {
 		parent::__construct();
 		$this->model 	= $this->getModel($this->_model);
 		$this->view 	= $this->getView($this->_view, 'html');
 	}
+
 	public function publish() {
 		$data = array('publish' => 1, 'unpublish' => 0);
 		$task = $this->getTask();

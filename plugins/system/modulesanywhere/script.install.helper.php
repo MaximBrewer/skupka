@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Modules Anywhere
- * @version         7.7.2
+ * @version         7.9.0
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -42,6 +42,7 @@ class PlgSystemModulesAnywhereInstallerScriptHelper
 		JFactory::getLanguage()->load('plg_system_regularlabsinstaller', JPATH_PLUGINS . '/system/regularlabsinstaller');
 
 		$this->installed_version = $this->getVersion($this->getInstalledXMLFile());
+
 
 		if ($this->show_message && $this->isInstalled())
 		{
@@ -162,7 +163,7 @@ class PlgSystemModulesAnywhereInstallerScriptHelper
 
 		switch ($type)
 		{
-			case 'plugin';
+			case 'plugin':
 				$folders[] = JPATH_PLUGINS . '/' . $folder . '/' . $extname;
 				break;
 
@@ -358,7 +359,7 @@ class PlgSystemModulesAnywhereInstallerScriptHelper
 	{
 		JFactory::getApplication()->enqueueMessage(
 			JText::sprintf(
-				JText::_($this->install_type == 'update' ? 'RLI_THE_EXTENSION_HAS_BEEN_UPDATED_SUCCESSFULLY' : 'RLI_THE_EXTENSION_HAS_BEEN_INSTALLED_SUCCESSFULLY'),
+				$this->install_type == 'update' ? 'RLI_THE_EXTENSION_HAS_BEEN_UPDATED_SUCCESSFULLY' : 'RLI_THE_EXTENSION_HAS_BEEN_INSTALLED_SUCCESSFULLY',
 				'<strong>' . JText::_($this->name) . '</strong>',
 				'<strong>' . $this->getVersion() . '</strong>',
 				$this->getFullType()
@@ -370,7 +371,7 @@ class PlgSystemModulesAnywhereInstallerScriptHelper
 	{
 		switch ($this->extension_type)
 		{
-			case 'plugin';
+			case 'plugin':
 				return JText::_('plg_' . strtolower($this->plugin_folder));
 
 			case 'component':
@@ -533,6 +534,7 @@ class PlgSystemModulesAnywhereInstallerScriptHelper
 
 	public function onAfterInstall($route)
 	{
+		return true;
 	}
 
 	public function delete($files = [])

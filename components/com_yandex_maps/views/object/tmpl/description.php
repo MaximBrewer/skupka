@@ -3,10 +3,13 @@ defined("_JEXEC") or die("Access deny");
 
 $input = JFactory::getApplication()->input;
 
+if (!isset($object)) {
+	$object = new stdClass();
+}
 ?>
 <div class="xdsoft_object_description_ballon">
 <?php
-$meta = is_string($object->metadata) ? (json_decode($object->metadata)?:new stdClass()) : $object->metadata;
+$meta = is_string($object->metadata) ? (json_decode($object->metadata)?: new stdClass()) : $object->metadata;
 if (isset($meta->image) and trim($meta->image)!='') { ?>
 	<div class="xdsoft_imagebox"><img src="<?php echo jhtml::_('xdwork.thumb', $meta->image, 300);?>" alt="<?php echo $object->title;?>"></div>
 <?php }

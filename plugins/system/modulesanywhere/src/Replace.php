@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Modules Anywhere
- * @version         7.7.2
+ * @version         7.9.0
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -235,18 +235,26 @@ class Replace
 
 		if ( ! empty($data['type_core']))
 		{
-			// Convert core loadmodule tag
-			if ($type == 'loadmodule')
+			switch ($type)
 			{
-				$data['id'] = self::convertLoadModuleSyntax($data['id_core']);
-				$type       = $params->tag_module;
-			}
 
-			// Convert core loadposition tag
-			if ($type == 'loadposition')
-			{
-				$data['id'] = self::convertLoadPositionSyntax($data['id_core']);
-				$type       = $params->tag_pos;
+				// Convert core loadmodule tag
+				case 'loadmodule':
+					$data['id'] = self::convertLoadModuleSyntax($data['id_core']);
+					$type       = $params->tag_module;
+					break;
+
+				// Convert core loadmoduleid tag
+				case 'loadmoduleid':
+					$data['id'] = $data['id_core'];
+					$type       = $params->tag_module;
+					break;
+
+				// Convert core loadposition tag
+				case 'loadposition':
+					$data['id'] = self::convertLoadPositionSyntax($data['id_core']);
+					$type       = $params->tag_pos;
+					break;
 			}
 
 			unset($data['id_core']);
@@ -262,11 +270,6 @@ class Replace
 
 		$ignores   = [];
 		$overrides = [];
-
-		if ($params->override_style && isset($tag->style))
-		{
-			$chrome = $tag->style;
-		}
 
 		foreach ($tag as $key => $val)
 		{
@@ -432,7 +435,7 @@ class Replace
 	{
 		$string = RL_String::html_entity_decoder($data['id']);
 
-		if (strpos($string, '="') == false)
+		if (strpos($string, '="') == false && strpos($string, '=\'') == false)
 		{
 			$string = self::convertTagToNewSyntax($string, $data['type']);
 		}

@@ -9,20 +9,27 @@
 			valid: function () {
 				return true;
 			},
-			getTitle: function (item) {
+
+            getTitle: function (item) {
 				return item.GeoObject.metaDataProperty.GeocoderMetaData.text;
 			},
-			getValue: function (item) {
+
+            getValue: function (item) {
 				return item.GeoObject.metaDataProperty.GeocoderMetaData.text;
 			},
-			source: [
+
+            source: [
 				function (q, add) {
-					$.getJSON("//geocode-maps.yandex.ru/1.x/?callback=?&format=json&sco=latlong&geocode=" + encodeURIComponent(q), function (data) {
+			        var key = (window.XDsoftMapOptions && window.XDsoftMapOptions.api_key || window.YANDEX_MAPS_API_KEY) || false;
+
+					$.getJSON("//geocode-maps.yandex.ru/1.x/?callback=?&format=json&sco=latlong&geocode=" + encodeURIComponent(q) + (key ? '&apikey=' + encodeURIComponent(key): ''), function (data) {
 						var suggestions = [];
+
 						if (data.response) {
 							$.each(data.response.GeoObjectCollection.featureMember, function (i, val) {
 								suggestions.push(val);
 							});
+
 							add(suggestions);
 						}
 					});
@@ -30,7 +37,9 @@
 			]
 		});
 	};
+
 	$(window.initAutoComplete);
+
 	if (document.readyState !== 'complete') {
 		window.initAutoComplete();
 	}

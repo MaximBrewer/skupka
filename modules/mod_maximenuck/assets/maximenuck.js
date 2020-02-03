@@ -27,7 +27,10 @@
 			menuposition: '0',
 			showactivesubitems: '0',
 			topfixedeffect: '1',
-			effecttype: 'dropdown'
+			topfixedoffset: '',
+			clickclose: '0',
+			effecttype: 'dropdown',
+			closeclickoutside: '0'
 		};
 
 		//call in the default otions
@@ -63,7 +66,15 @@
 					$(document.body).attr('data-margintop', $(document.body).css('margin-top'));
 					maximenuObj.menuHeight = $(this).height();
 					$(window).bind('scroll', function() {
-						if ($(window).scrollTop() > menuy && !maximenuObj.hasClass('maximenufixed')) {
+						var topfixedoffset = menuy;
+						if (defaults.topfixedoffset) {
+							if (isNumeric(defaults.topfixedoffset)) {
+								topfixedoffset = menuy + parseInt(defaults.topfixedoffset);
+							} else {
+								topfixedoffset = parseInt($(defaults.topfixedoffset).offset().top);
+							}
+						}
+						if ($(window).scrollTop() > topfixedoffset && !maximenuObj.hasClass('maximenufixed')) {
 							if (defaults.topfixedeffect == '0') {
 								maximenuObj.after('<div id="'+maximenuObj.attr('id')+'tmp"></div>')
 //								$('#'+maximenuObj.attr('id')+'tmp').css('visibility', 'hidden').html(maximenuObj.html());
@@ -82,6 +93,10 @@
 					});
 			} else if (defaults.menuposition == 'bottomfixed') {
 				$(this).addClass('maximenufixed').find('ul.maximenuck').css('position', 'static');
+			}
+
+			function isNumeric(n) {
+				return !isNaN(parseFloat(n)) && isFinite(n);
 			}
 
 			function openMaximenuck(el) {
@@ -138,6 +153,7 @@
 									status[el.data('level')] = '';
 									el.submenu.css('overflow', 'visible');
 									el.data('status', 'opened');
+									hideSubmenuckOutsideClick(el);
 								}
 							});
 						} else {
@@ -152,6 +168,7 @@
 									status[el.data('level')] = '';
 									el.submenu.css('overflow', 'visible');
 									el.data('status', 'opened');
+									// hideSubmenuckOutsideClick(el);
 								}
 							});
 							el.submenu.animate({
@@ -164,6 +181,7 @@
 									status[el.data('level')] = '';
 									el.submenu.css('overflow', 'visible');
 									el.data('status', 'opened');
+									hideSubmenuckOutsideClick(el);
 								}
 							});
 						}
@@ -176,6 +194,7 @@
 							complete: function() {
 								status[el.data('level')] = '';
 								el.data('status', 'opened');
+								hideSubmenuckOutsideClick(el);
 							}
 						});
 						el.data('status', 'opened');
@@ -188,6 +207,7 @@
 							complete: function() {
 								status[el.data('level')] = '';
 								el.data('status', 'opened');
+								hideSubmenuckOutsideClick(el);
 							}
 						});
 						el.data('status', 'opened');
@@ -205,6 +225,7 @@
 							complete: function() {
 								status[el.data('level')] = '';
 								el.data('status', 'opened');
+								hideSubmenuckOutsideClick(el);
 							}
 						});
 						el.data('status', 'opened');
@@ -221,6 +242,7 @@
 							complete: function() {
 								status[el.data('level')] = '';
 								// el.data('status','opened');
+								hideSubmenuckOutsideClick(el);
 							}
 						});
 						el.data('status', 'opened');
@@ -254,6 +276,7 @@
 							complete: function() {
 								status[el.data('level')] = '';
 								// el.data('status','opened');
+								hideSubmenuckOutsideClick(el);
 							}
 						});
 						el.data('status', 'opened');
@@ -275,6 +298,7 @@
 									status[el.data('level')] = '';
 									if (effecttype == 'dropdown') el.submenu.css('overflow', 'visible');
 									el.data('status', 'opened');
+									hideSubmenuckOutsideClick(el);
 								}
 							});
 						} else {
@@ -289,6 +313,7 @@
 									status[el.data('level')] = '';
 									if (effecttype == 'dropdown') el.submenu.css('overflow', 'visible');
 									el.data('status', 'opened');
+									hideSubmenuckOutsideClick(el);
 								}
 							});
 						}
@@ -426,6 +451,28 @@
 				}
 			}
 
+			function hideSubmenuckOutsideClick(el) {
+				if (defaults.closeclickoutside == '0') return;
+				$(window).one("click", function(event){
+					if ( 
+						el.hasClass('clickedck')
+						&&
+						el.submenu.has(event.target).length == 0 //checks if descendants of submenu was clicked
+						&&
+						!el.submenu.is(event.target) //checks if the submenu itself was clicked
+						&&
+						!el.is(event.target) //checks if the submenu itself was clicked
+						){
+						// is outside
+						// submenu.hide('fast').removeClass('opened');
+						hideSubmenuck(el);
+					} else {
+						// is inside, do nothing
+						hideSubmenuckOutsideClick(el);
+					}
+				});
+			}
+			
 			function maximenuInit() {
 				if (effecttype == 'pushdown') {
 					$('li.maximenuck.level1', maximenuObj).each(function(i, el) {
@@ -489,7 +536,8 @@
 					//manage active submenus
 					if ( (showactivesubitems == '1' && el.hasClass('active')) || el.hasClass('openck')) {
 						if (el.hasClass('fullwidth')) {
-							el.submenu.css('display', 'block').css('left', '0');
+							el.submenu.css('display', 'block');
+							if (orientation == 'horizontal') el.submenu.css('left', '0');
 						} else {
 							el.submenu.css('display', 'block');
 						}
@@ -538,8 +586,9 @@
 							showSubmenuck(el);
 						});
 
-						$('> div > .maxiclose', el).click(function() {
+						$('> .maxiclose', el.submenu).click(function() {
 							hideSubmenuck(el);
+							el.removeClass('clickedck');
 						});
 					} else if (itembehavior == 'clickclose') {
 						el.mouseenter(function() {
@@ -563,11 +612,15 @@
 
 						$('> div > .maxiclose', el).click(function() {
 							hideSubmenuck(el);
+							el.removeClass('clickedck');
 						});
 					} else if (itembehavior == 'click') {
 						if (el.hasClass('parent') && $('> a.maximenuck', el).length) {
 							el.redirection = $('> a.maximenuck', el).prop('href');
-							$('> a.maximenuck', el).prop('href', 'javascript:void(0)');
+							$('> a.maximenuck', el).each(function() {
+								$(this).attr('data-href', $(this).attr('href'));
+								$(this).attr('href', 'javascript:void(0)');
+							});
 							el.hasBeenClicked = false;
 						}
 
@@ -612,7 +665,10 @@
 								showSubmenuck(el);
 							}
 						});
-
+						$('> .maxiclose', el.submenu).click(function() {
+							hideSubmenuck(el);
+							el.removeClass('clickedck');
+						});
 					} else {
 						el.mouseenter(function() {
 							if (effecttype == 'pushdown') {
@@ -629,11 +685,11 @@
 							}
 							showSubmenuck(el);
 						});
-						if (effecttype == 'pushdown') {
+						if (effecttype == 'pushdown' && defaults.clickclose != '1') {
 							maximenuObj.mouseleave(function() {
 								hideSubmenuck(el);
 							});
-						} else {
+						} else if (defaults.clickclose != '1') {
 							el.mouseleave(function() {
 								hideSubmenuck(el);
 								el.find('li.maximenuck.parent.level'+el.attr('data-level')+':not(.nodropdown)').each(function(j, el2) {
@@ -647,6 +703,10 @@
 								});
 							});
 						}
+						$('> .maxiclose', el.submenu).click(function() {
+							hideSubmenuck(el);
+							el.removeClass('clickedck');
+						});
 					}
 				});
 

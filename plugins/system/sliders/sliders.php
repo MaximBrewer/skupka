@@ -1,194 +1,61 @@
 <?php
 /**
  * @package         Sliders
- * @version         6.0.8
+ * @version         7.7.8
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2016 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2019 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
+use RegularLabs\Plugin\System\Sliders\Plugin;
+
+// Do not instantiate plugin on install pages
+// to prevent installation/update breaking because of potential breaking changes
+$input = \Joomla\CMS\Factory::getApplication()->input;
+if (in_array($input->get('option'), ['com_installer', 'com_regularlabsmanager']) && $input->get('action') != '')
+{
+	return;
+}
+
+if ( ! is_file(__DIR__ . '/vendor/autoload.php'))
+{
+	return;
+}
+
+require_once __DIR__ . '/vendor/autoload.php';
+
 /**
  * System Plugin that places a Sliders code block into the text
  */
-class PlgSystemSliders extends JPlugin
+class PlgSystemSliders extends Plugin
 {
-	private $_alias       = 'sliders';
-	private $_title       = 'SLIDERS';
-	private $_lang_prefix = 'SLD';
+	public $_alias       = 'sliders';
+	public $_title       = 'SLIDERS';
+	public $_lang_prefix = 'SLD';
 
-	private $_init   = false;
-	private $_helper = null;
+	public $_has_tags              = true;
+	public $_disable_on_components = true;
 
-	public function onAfterRoute()
+	/*
+	 * Below are the events that this plugin uses
+	 * All handling is passed along to the parent run method
+	 */
+	public function onContentPrepare()
 	{
-		$this->getHelper();
-	}
-
-	public function onContentPrepare($context, &$article, &$params)
-	{
-		if ($context == 'com_zoo.element.textarea')
-		{
-			return;
-		}
-
-		if (!$this->getHelper())
-		{
-			return;
-		}
-
-		$this->_helper->onContentPrepare($article, $context, $params);
+		$this->run();
 	}
 
 	public function onAfterDispatch()
 	{
-		if (!$this->getHelper())
-		{
-			return;
-		}
-
-		$this->_helper->onAfterDispatch();
+		$this->run();
 	}
 
 	public function onAfterRender()
 	{
-		if (!$this->getHelper())
-		{
-			return;
-		}
-
-		$this->_helper->onAfterRender();
-	}
-
-	/*
-	 * Below methods are general functions used in most of the Regular Labs extensions
-	 * The reason these are not placed in the Regular Labs Library files is that they also
-	 * need to be used when the Regular Labs Library is not installed
-	 */
-
-	/**
-	 * Create the helper object
-	 *
-	 * @return object The plugins helper object
-	 */
-	private function getHelper()
-	{
-		// Already initialized, so return
-		if ($this->_init)
-		{
-			return $this->_helper;
-		}
-
-		$this->_init = true;
-
-		if (!$this->isFrameworkEnabled())
-		{
-			return false;
-		}
-
-		if (JFactory::getApplication()->input->get('option') == 'com_plugins')
-		{
-			return false;
-		}
-
-		require_once JPATH_LIBRARIES . '/regularlabs/helpers/protect.php';
-
-		if (RLProtect::isProtectedPage($this->_alias, 1))
-		{
-			return false;
-		}
-
-		// Load plugin parameters
-		require_once JPATH_LIBRARIES . '/regularlabs/helpers/parameters.php';
-		$params = RLParameters::getInstance()->getPluginParams($this->_name);
-
-		// allow in admin?
-		if (!$params->enable_admin && RLProtect::isAdmin())
-		{
-			return false;
-		}
-
-		require_once JPATH_LIBRARIES . '/regularlabs/helpers/helper.php';
-		$this->_helper = RLHelper::getPluginHelper($this, $params);
-
-		return $this->_helper;
-	}
-
-	/**
-	 * Check if the Regular Labs Library is enabled
-	 *
-	 * @return bool
-	 */
-	private function isFrameworkEnabled()
-	{
-		// Return false if Regular Labs Library is not installed
-		if (!$this->isFrameworkInstalled())
-		{
-			return false;
-		}
-
-		$regularlabs = JPluginHelper::getPlugin('system', 'regularlabs');
-		if (!isset($regularlabs->name))
-		{
-			$this->throwError($this->_lang_prefix . '_REGULAR_LABS_LIBRARY_NOT_ENABLED');
-
-			return false;
-		}
-
-		return true;
-	}
-
-	/**
-	 * Check if the Regular Labs Library is installed
-	 *
-	 * @return bool
-	 */
-	private function isFrameworkInstalled()
-	{
-		jimport('joomla.filesystem.file');
-
-		if (!JFile::exists(JPATH_PLUGINS . '/system/regularlabs/regularlabs.php'))
-		{
-			$this->throwError($this->_lang_prefix . '_REGULAR_LABS_LIBRARY_NOT_INSTALLED');
-
-			return false;
-		}
-
-		return true;
-	}
-
-	/**
-	 * Place an error in the message queue
-	 */
-	private function throwError($text)
-	{
-		// Return if page is not an admin page or the admin login page
-		if (
-			!JFactory::getApplication()->isAdmin()
-			|| JFactory::getUser()->get('guest')
-		)
-		{
-			return;
-		}
-
-		// load the admin language file
-		JFactory::getLanguage()->load('plg_' . $this->_type . '_' . $this->_name, JPATH_PLUGINS . '/' . $this->_type . '/' . $this->_name);
-
-		$text = JText::_($text) . ' ' . JText::sprintf($this->_lang_prefix . '_EXTENSION_CAN_NOT_FUNCTION', JText::_($this->_title));
-
-		// Check if message is not already in queue
-		$messagequeue = JFactory::getApplication()->getMessageQueue();
-		foreach ($messagequeue as $message)
-		{
-			if ($message['message'] == $text)
-			{
-				return;
-			}
-		}
-
-		JFactory::getApplication()->enqueueMessage($text, 'error');
+		$this->run();
 	}
 }

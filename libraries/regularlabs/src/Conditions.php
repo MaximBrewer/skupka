@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -139,6 +139,28 @@ class Conditions
 			return $conditions;
 		}
 
+		$type_params = [];
+
+		foreach ($attributes as $type_param => $value)
+		{
+			if (strpos($type_param, '_') === false)
+			{
+				continue;
+			}
+
+			list($type, $param) = explode('_', $type_param, 2);
+
+			$condition_type = self::getType($type, $only_types);
+
+			if ( ! $condition_type)
+			{
+				continue;
+			}
+
+			$type_params[$type_param] = $value;
+			unset($attributes->{$type_param});
+		}
+
 		foreach ($attributes as $type => $value)
 		{
 			if (empty($value))
@@ -153,8 +175,11 @@ class Conditions
 				continue;
 			}
 
-			$value   = html_entity_decode($value);
-			$params  = self::getDefaultParamsByType($condition_type, $type);
+			$value = html_entity_decode($value);
+
+			$params             = self::getDefaultParamsByType($condition_type, $type);
+			$params->conditions = $type_params;
+
 			$reverse = false;
 
 			$selection = self::getSelectionFromTagAttribute($condition_type, $value, $params, $reverse);
@@ -441,30 +466,30 @@ class Conditions
 
 	private static function addParams(&$object, $type, $id, &$params)
 	{
-		$bool_params  = [];
+		$extra_params = [];
 		$array_params = [];
 		$includes     = [];
 
 		switch ($type)
 		{
 			case 'Menu':
-				$bool_params = ['inc_children', 'inc_noitemid'];
+				$extra_params = ['inc_children', 'inc_noitemid'];
 				break;
 
 			case 'Date.Date':
-				$bool_params = ['publish_up', 'publish_down', 'recurring', 'ignore_time_zone'];
+				$extra_params = ['publish_up', 'publish_down', 'recurring', 'ignore_time_zone'];
 				break;
 
 			case 'Date.Season':
-				$bool_params = ['hemisphere'];
+				$extra_params = ['hemisphere'];
 				break;
 
 			case 'Date.Time':
-				$bool_params = ['publish_up', 'publish_down'];
+				$extra_params = ['publish_up', 'publish_down'];
 				break;
 
 			case 'User.Grouplevel':
-				$bool_params = ['inc_children'];
+				$extra_params = ['inc_children'];
 				break;
 
 			case 'Url':
@@ -493,12 +518,12 @@ class Conditions
 				break;
 
 			case 'Tag':
-				$bool_params = ['inc_children'];
+				$extra_params = ['inc_children'];
 				break;
 
 			case 'Content.Category':
-				$bool_params = ['inc_children'];
-				$includes    = ['cats' => 'categories', 'arts' => 'articles', 'others'];
+				$extra_params = ['inc_children'];
+				$includes     = ['cats' => 'categories', 'arts' => 'articles', 'others'];
 				break;
 
 			case 'Easyblog.Category':
@@ -507,13 +532,13 @@ class Conditions
 			case 'Mijoshop.Category':
 			case 'Redshop.Category':
 			case 'Virtuemart.Category':
-				$bool_params = ['inc_children'];
-				$includes    = ['cats' => 'categories', 'items'];
+				$extra_params = ['inc_children'];
+				$includes     = ['cats' => 'categories', 'items'];
 				break;
 
 			case 'Zoo.Category':
-				$bool_params = ['inc_children'];
-				$includes    = ['apps', 'cats' => 'categories', 'items'];
+				$extra_params = ['inc_children'];
+				$includes     = ['apps', 'cats' => 'categories', 'items'];
 				break;
 
 			case 'Easyblog.Tag':
@@ -523,25 +548,31 @@ class Conditions
 				break;
 
 			case 'Content.Article':
-				$bool_params = ['content_keywords', 'keywords' => 'meta_keywords', 'authors'];
+				$extra_params = [
+					'featured',
+					'content_keywords', 'keywords' => 'meta_keywords',
+					'authors',
+					'date', 'date_comparison', 'date_type', 'date_date', 'date_from', 'date_to',
+					'fields',
+				];
 				break;
 
 			case 'K2.Item':
-				$bool_params = ['content_keywords', 'meta_keywords', 'authors'];
+				$extra_params = ['content_keywords', 'meta_keywords', 'authors'];
 				break;
 
 			case 'Easyblog.Item':
-				$bool_params = ['content_keywords', 'authors'];
+				$extra_params = ['content_keywords', 'authors'];
 				break;
 
 			case 'Zoo.Item':
-				$bool_params = ['authors'];
+				$extra_params = ['authors'];
 				break;
 		}
 
 		if (in_array($type, self::getMatchAllTypes()))
 		{
-			$bool_params[] = 'match_all';
+			$extra_params[] = 'match_all';
 
 			if (count($object->selection) == 1 && strpos($object->selection[0], '+') !== false)
 			{
@@ -550,17 +581,17 @@ class Conditions
 			}
 		}
 
-		if (empty($bool_params) && empty($array_params) && empty($includes))
+		if (empty($extra_params) && empty($array_params) && empty($includes))
 		{
 			return;
 		}
 
-		self::addParamsByType($object, $id, $params, $bool_params, $array_params, $includes);
+		self::addParamsByType($object, $id, $params, $extra_params, $array_params, $includes);
 	}
 
-	private static function addParamsByType(&$object, $id, $params, $bool_params = [], $array_params = [], $includes = [])
+	private static function addParamsByType(&$object, $id, $params, $extra_params = [], $array_params = [], $includes = [])
 	{
-		foreach ($bool_params as $key => $param)
+		foreach ($extra_params as $key => $param)
 		{
 			$key                      = is_numeric($key) ? $param : $key;
 			$object->params->{$param} = self::getTypeParamValue($id, $params, $key);
@@ -578,6 +609,11 @@ class Conditions
 		}
 
 		$incs = self::getTypeParamValue($id, $params, 'inc', true);
+
+		if (empty($incs) && ! empty($params->conditions[$id]) && ! isset($params->conditions[$id . '_inc']))
+		{
+			$incs = ['inc_items', 'inc_arts', 'inc_cats', 'inc_others', 'x'];
+		}
 
 		foreach ($includes as $key => $param)
 		{
@@ -610,7 +646,7 @@ class Conditions
 			return [];
 		}
 
-		return 0;
+		return '';
 	}
 
 	private static function getTypes($only_types = [])

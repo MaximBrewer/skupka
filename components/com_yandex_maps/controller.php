@@ -1,6 +1,7 @@
 <?php
 defined('_JEXEC') or die('Access Deny');
 jimport('joomla.filesystem.file');
+
 class Yandex_MapsController extends JControllerLegacy{
 	function display($cachable = null, $urlparams = null) {
 		$model = $this->getModel('Maps');
@@ -109,10 +110,14 @@ class Yandex_MapsController extends JControllerLegacy{
 		if (!$object->id) {
 			JError::raiseError(404, "Объект не найден");
 		}
+
 		$object->link = JRoute::_('index.php?option=com_yandex_maps&task=object&id='.$object->slug);
         JPluginHelper::importPlugin('yandexmapssource');
+
+        jHtml::_('xdwork.organization', $object);
         jHtml::_('xdwork.description', $object, $object->map);
-		echo (json_encode($object->_data));
+
+        echo (json_encode($object->_data));
 		JFactory::getApplication()->close();
 	}
 
@@ -135,6 +140,7 @@ class Yandex_MapsController extends JControllerLegacy{
 		$path[1]->name = $object->map->title;
 		$path[0]->link = 'index.php?option=com_yandex_maps';
 		$path[0]->name = 'Яндекс карты';
+
 		if (!$params->get('show_category_in_breadcrumbs', 1)) {
 			unset($path[2]);
 		}

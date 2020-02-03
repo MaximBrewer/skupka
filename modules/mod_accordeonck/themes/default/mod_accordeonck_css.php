@@ -92,3 +92,7 @@ $id = 'ul#'.htmlspecialchars ( $_GET['cssid'] , ENT_QUOTES );
 <?php echo $id; ?> li.level3 a span.accordeonckdesc {
 
 }
+
+<?php echo $id; ?> a.accordeonck > .badge {
+    margin: 0 0 0 5px;
+}

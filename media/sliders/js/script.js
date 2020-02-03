@@ -1,50 +1,48 @@
 /**
  * @package         Sliders
- * @version         6.0.8
+ * @version         7.7.8
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2016 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2019 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
-
-var rl_sliders_urlscroll = 0;
-var rl_sliders_use_hash       = rl_sliders_use_hash || 0;
-var rl_sliders_reload_iframes = rl_sliders_reload_iframes || 0;
-var rl_sliders_init_timeout   = rl_sliders_init_timeout || 0;
 
 var RegularLabsSliders = null;
 
 (function($) {
 	"use strict";
 
-	$(document).ready(function() {
-		if (typeof( window['rl_sliders_use_hash'] ) != "undefined") {
-			setTimeout(function() {
-				RegularLabsSliders.init();
-			}, rl_sliders_init_timeout);
-		}
-	});
-
 	RegularLabsSliders = {
-		timers       : [],
-		scroll_to    : null,
-		scroll_offset: 0,
-		scrolling    : false,
+		options  : {},
+		timers   : [],
+		scroll_to: null,
+		scrolling: false,
 
-		init: function() {
+		init: function(options) {
 			var self = this;
+
+			options      = options ? options : this.getOptions();
+			this.options = options;
 
 			try {
 				this.hash_id = decodeURIComponent(window.location.hash.replace('#', ''));
+				// Ignore the url hash if it contains weird characters
+				if (this.hash_id.indexOf('/') > -1 || this.hash_id.indexOf('/') > -1) {
+					this.hash_id = '';
+				}
 			} catch (err) {
 				this.hash_id = '';
 			}
 
 			this.current_url = window.location.href;
-			if (this.current_url.indexOf('#') !== -1) {
+			if (this.current_url.indexOf('#') > -1) {
 				this.current_url = this.current_url.substr(0, this.current_url.indexOf('#'));
 			}
+			this.current_path = this.current_url.replace(/^.*\/\/.*?\//, '');
+
+			// Hide all non-active slider bodies
+			$('.rl_sliders-body:not(.in)').height(0);
 
 			// Remove the transition durations off to make initial setting of active tabs as fast as possible
 			$('.rl_sliders').removeClass('has_effects');
@@ -64,13 +62,13 @@ var RegularLabsSliders = null;
 					self.initClickMode();
 
 
-					if (rl_sliders_use_hash) {
+					if (options.use_hash) {
 						self.initHashHandling();
 					}
 
 					self.initHashLinkList();
 
-					if (rl_sliders_reload_iframes) {
+					if (options.reload_iframes) {
 						self.initIframeReloading();
 					}
 
@@ -96,27 +94,48 @@ var RegularLabsSliders = null;
 				return;
 			}
 
+			$el.one('hidden.bs.collapse', function() {
+				$('a#slider-' + id).attr('aria-expanded', false);
+				$('div#' + id).attr('aria-hidden', true);
+			});
+
 
 			if (this.scroll_to) {
 				this.setScrollOnLoad($el);
 			}
 
-			$el.collapse({
-				toggle: true,
-				parent: $el.parent().parent()
-			});
+			var show = (!$el.hasClass('in') && !$el.hasClass('active'));
 
-			$el.collapse('show');
+			if (show) {
+				$el.collapse({
+					toggle: true,
+					parent: $el.parent().parent()
+				});
+
+				$el.collapse('show');
+
+				$el.closest('div.rl_sliders').find('.rl_sliders-toggle').attr('aria-expanded', false);
+				$('a#slider-' + id).attr('aria-expanded', true);
+
+				$el.closest('div.rl_sliders').find('.rl_sliders-body').attr('aria-hidden', true);
+				$('div#' + id).attr('aria-hidden', false);
+
+				// trigger resize event to make certain scripts (like galleries) work
+				window.dispatchEvent(new Event('resize'));
+			}
 
 			this.updateActiveClassesOnSliderLinks($el);
 
-			$el.focus();
+			// For some reason Chrome 67 throws an error when not using a small delay
+			setTimeout(function() {
+				$el[0].focus();
+			}, 10);
 		},
 
 		setScrollOnLoad: function($el) {
 			var self = this;
 
-			// If slider is already open, do scroll immediatly
+			// If slider is already open, do scroll immediately
 			if ($el.hasClass('in')) {
 				self.scrollOnLoad();
 				return;
@@ -223,11 +242,11 @@ var RegularLabsSliders = null;
 			}
 
 			// hash is a slider
-			if (!rl_sliders_use_hash) {
+			if (!this.options.use_hash) {
 				return;
 			}
 
-			if (!rl_sliders_urlscroll) {
+			if (!this.options.urlscroll) {
 				// Prevent scrolling to anchor
 				$('html,body').animate({scrollTop: 0});
 			}
@@ -240,7 +259,7 @@ var RegularLabsSliders = null;
 				return;
 			}
 
-			var $anchor = $('#' + id + ',a[name="' + id + '"],a#anchor-' + id + '');
+			var $anchor = $('[id="' + id + '"],a[name="' + id + '"],a#anchor-' + id);
 
 			if (!$anchor.length) {
 				return;
@@ -321,7 +340,7 @@ var RegularLabsSliders = null;
 
 			switch (parent.type) {
 				case 'tab':
-					if (typeof( window['RegularLabsTabs'] ) == "undefined") {
+					if (typeof RegularLabsTabs === 'undefined') {
 						self.stepThroughParents(parents, parent);
 						break;
 					}
@@ -370,11 +389,21 @@ var RegularLabsSliders = null;
 
 		initActiveClasses: function() {
 			$('.rl_sliders-body').on('show.bs.collapse', function(e) {
+				if (!$(e.target).hasClass('rl_sliders-body')) {
+					return;
+				}
+
 				$(this).parent().addClass('active');
+				$('a[data-toggle="collapse"][data-id="' + this.id + '"]').removeClass('collapsed');
 				e.stopPropagation();
 			});
 			$('.rl_sliders-body').on('hidden hidden.bs.collapse', function(e) {
+				if (!$(e.target).hasClass('rl_sliders-body')) {
+					return;
+				}
+
 				$(this).parent().removeClass('active');
+				$('a[data-toggle="collapse"][data-id="' + this.id + '"]').addClass('collapsed');
 				e.stopPropagation();
 			});
 		},
@@ -401,7 +430,16 @@ var RegularLabsSliders = null;
 		initHashLinkList: function() {
 			var self = this;
 
-			$('a[href^="#"],a[href^="' + this.current_url + '#"]').each(function($i, el) {
+			$(
+				'a[href^="#"],'
+				+ 'a[href^="' + this.current_url + '#"],'
+				+ 'a[href^="' + this.current_path + '#"],'
+				+ 'a[href^="/' + this.current_path + '#"],'
+				+ 'area[href^="#"],'
+				+ 'area[href^="' + this.current_url + '#"]'
+				+ 'area[href^="' + this.current_path + '#"]'
+				+ 'area[href^="/' + this.current_path + '#"]'
+			).each(function($i, el) {
 				self.initHashLink(el);
 			});
 		},
@@ -411,29 +449,41 @@ var RegularLabsSliders = null;
 			var $link = $(el);
 
 			// link is a tab or slider or list link, so ignore
-			if ($link.attr('data-toggle') || $link.hasClass('rl_tabs-link') || $link.hasClass('rl_tabs-toggle-sm') || $link.hasClass('rl_sliders-toggle-sm')) {
+			if ($link.attr('data-toggle')
+				|| $link.hasClass('rl_sliders-toggle')
+				|| $link.hasClass('rl_tabs-toggle')
+				|| $link.hasClass('rl_tabs-toggle-sm')
+				|| $link.hasClass('rl_tabs-link')
+			) {
 				return;
 			}
 
 			var id = $link.attr('href').substr($link.attr('href').indexOf('#') + 1);
 
+			// clean up weird hash values
+			id = id.replace(/^\//, '');
+			id = id.replace(/^(.*?) .*$/, '$1');
+
 			// No id found
 			if (id == '') {
 				return;
 			}
+
 			var scroll = false;
 
-			var $anchor = $('a[data-toggle="collapse"][data-id="' + id + '"]');
+			var is_slider = true;
+			var $anchor   = $('a[data-toggle="collapse"][data-id="' + id + '"]');
 
 			if (!$anchor.length) {
-				$anchor = $('#' + id + ',a[name="' + id + '"]');
+				$anchor = $('[id="' + id + '"],a[name="' + id + '"]');
 
 				// No accompanying link found
 				if (!$anchor.length) {
 					return;
 				}
 
-				scroll = $anchor.first();
+				scroll    = true;
+				is_slider = false;
 			}
 
 			$anchor = $anchor.first();
@@ -456,6 +506,8 @@ var RegularLabsSliders = null;
 			$link.click(function(e) {
 				// Open parent slider and parents
 				e.preventDefault();
+
+
 				self.showByID(slider_id);
 				e.stopPropagation();
 			});
@@ -536,7 +588,7 @@ var RegularLabsSliders = null;
 			var search = 'slider';
 			var query  = window.location.search.substring(1);
 
-			if (query.indexOf(search + '=') == -1) {
+			if (query.indexOf(search + '=') < 0) {
 				return '';
 			}
 
@@ -552,21 +604,87 @@ var RegularLabsSliders = null;
 			}
 
 			return '';
+		},
+
+		getOptions: function() {
+			if (typeof rl_sliders_options !== 'undefined') {
+				return rl_sliders_options;
+			}
+
+			if (typeof Joomla === 'undefined' || typeof Joomla.getOptions === 'undefined') {
+				console.error('Joomla.getOptions not found!\nThe Joomla core.js file is not being loaded.');
+				return false;
+			}
+
+			return Joomla.getOptions('rl_sliders');
 		}
 	};
+
+	$(document).ready(function() {
+		var options = RegularLabsSliders.getOptions();
+
+		if (!options) {
+			return;
+		}
+
+		if (typeof options.init_timeout === 'undefined') {
+			return;
+		}
+
+		setTimeout(function() {
+			RegularLabsSliders.init(options);
+		}, options.init_timeout);
+	});
 })(jQuery);
 
 /* For custom use */
-function openAllSliders(id) {
-	var parent = findSliderSetBy(id);
 
-	parent.find('.rl_sliders-body:not(.in)').collapse('show');
+// Open the sliders inside the given element (by id)
+// If no id is given, all sliders will be opened
+// If the id of a single slider is given, only that slider will be opened
+function openSliders(id) {
+	var parent   = findSliderSetBy(id);
+	var elements = parent.find('.rl_sliders-body:not(.in)');
+
+	if (!elements.length) {
+		return;
+	}
+
+	elements.collapse('show');
 }
 
-function closeAllSliders(id) {
-	var parent = findSliderSetBy(id);
+// Alias for openSliders
+function openAllSliders(id) {
+	openSliders(id);
+}
 
-	parent.find('.rl_sliders-body.in').collapse('hide');
+// Alias for openSliders
+function openSlider(id) {
+	openSliders(id);
+}
+
+// Close the sliders inside the given element (by id)
+// If no id is given, all sliders will be closed
+// If the id of a single slider is given, only that slider will be closed
+function closeSliders(id) {
+	var parent   = findSliderSetBy(id);
+	var elements = parent.find('.rl_sliders-body.in');
+
+	if (!elements.length) {
+		return;
+	}
+
+	elements.collapse('hide');
+}
+
+// Alias for closeSliders
+function closeAllSliders(id) {
+	closeSliders(id);
+}
+
+// Alias for closeSliders
+function closeSlider(id) {
+	closeSliders(id);
 }
 
 function findSliderSetBy(id) {

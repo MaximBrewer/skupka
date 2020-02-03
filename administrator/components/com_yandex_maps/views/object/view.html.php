@@ -11,7 +11,9 @@ class Yandex_MapsViewObject extends JViewLegacy{
 		$doc->addStyleSheet(JURI::root().'media/com_yandex_maps/css/yandex_maps.css');
 		$lang = in_array(JFactory::getLanguage()->getTag(), ['ru-RU','en-US','tr-TR','uk-UA']) ? JFactory::getLanguage()->getTag() : 'en-US';
 		JToolBarHelper::cancel('objects');
+
 		$this->assign('lang', $lang);
+
 		parent::display($tpl);
 	}
 }

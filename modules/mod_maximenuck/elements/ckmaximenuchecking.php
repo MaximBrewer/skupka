@@ -17,7 +17,7 @@ class JFormFieldCkmaximenuchecking extends JFormField {
 
 	protected $type = 'ckmaximenuchecking';
 
-	protected function getLabel() {
+	protected function getInput() {
 		$imgpath = JUri::root(true) . '/modules/mod_maximenuck/elements/images/';
 		$js_checking = '';
 
@@ -71,6 +71,20 @@ class JFormFieldCkmaximenuchecking extends JFormField {
 			$plugin_params_text = '<img src="' . $imgpath . 'cross.png"  />' . JText::_('MOD_MAXIMENUCK_PLUGIN_PARAMS_NOT_INSTALLED');
 		}
 
+		// check for mobile menu ck instead of maximenu mobile
+		// if mobile menu ck active and not maximenu mobile, then hide maximenu mobile options
+		if (file_exists(JPATH_ROOT . '/plugins/system/mobilemenuck/mobilemenuck.php')) {
+//			$db = JFactory::getDbo();
+//			$db->setQuery("SELECT enabled FROM #__extensions WHERE `element` = 'maximenuckmobile' AND `type` = 'plugin'");
+//			$enabled = $db->loadResult();
+//			if (! $enabled) {
+//				$plugin_mobile_text = '<style>a[href*="mobileparams"], #attrib-maximenu_mobileparams { display: none !important; }</style>';
+//			}
+			$plugin_mobile_text = '<img src="' . $imgpath . 'accept.png"  />' . JText::_('MOD_MAXIMENUCK_MOBILE_MENU_INSTALLED');
+			if (! JPluginHelper::isEnabled('system', 'mobilemenuck') ) {
+				$plugin_mobile_text .= '<img src="' . $imgpath . 'error.png"  />' . '<a href="' . JUri::root(true) . '/administrator/index.php?option=com_plugins&filter_folder=system&filter_search=mobile+menu" class="modal" rel="{handler: \'iframe\', size: {x: 900, y: 550}}">' . JText::_('MOD_MAXIMENUCK_ACTIVATE_PLUGIN') . '</a>';
+			}
+		} else 
 		// check if the maximenu mobile plugin is installed
 		if ( file_exists(JPATH_ROOT . '/plugins/system/maximenuckmobile/maximenuckmobile.php') ) {
 			$plugin_mobile_text = '<img src="' . $imgpath . 'accept.png"  />' . JText::_('MOD_MAXIMENUCK_PLUGIN_MOBILE_INSTALLED');
@@ -78,8 +92,9 @@ class JFormFieldCkmaximenuchecking extends JFormField {
 				$plugin_mobile_text .= '<img src="' . $imgpath . 'error.png"  />' . '<a href="' . JUri::root(true) . '/administrator/index.php?option=com_plugins&filter_folder=system&filter_search=maximenu" class="modal" rel="{handler: \'iframe\', size: {x: 900, y: 550}}">' . JText::_('MOD_MAXIMENUCK_ACTIVATE_PLUGIN') . '</a>';
 			}
 		} else {
-			$plugin_mobile_text = '<img src="' . $imgpath . 'cross.png"  />' . JText::_('MOD_MAXIMENUCK_PLUGIN_MOBILE_NOT_INSTALLED');
+			$plugin_mobile_text = '<img src="' . $imgpath . 'cross.png"  />' . JText::_('MOD_MAXIMENUCK_MOBILE_MENU_NOT_INSTALLED') . '. ' . JText::_('MOD_MAXIMENUCK_CHECK_MOBILEMENUCK') . ' <a href="https://www.joomlack.fr/en/joomla-extensions/mobile-menu-ck" target="_blank">Mobile Menu CK</a>';
 		}
+		
 
 		// to inform that you can add some themes
 		$themes_text = '<img src="' . $imgpath . 'information.png"  />' . JText::_('MAXIMENUCK_WIZARD_MENU_DOWNLOAD_THEMES');
@@ -93,6 +108,8 @@ class JFormFieldCkmaximenuchecking extends JFormField {
 	margin: 3px 0;
     text-align: left;
     text-decoration: none;
+	min-width: 300px;
+	box-sizing: border-box;
     }
 	.maximenuckchecking img {
 	margin: 5px;
@@ -114,7 +131,7 @@ class JFormFieldCkmaximenuchecking extends JFormField {
 		return $html;
 	}
 
-	protected function getInput() {
+	protected function getLabel() {
 
 		return '';
 	}

@@ -1,1 +1,0 @@
-slider default layout

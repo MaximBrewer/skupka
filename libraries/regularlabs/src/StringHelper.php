@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -14,6 +14,7 @@ namespace RegularLabs\Library;
 defined('_JEXEC') or die;
 
 use Joomla\String\Normalise;
+use Normalizer;
 
 /**
  * Class StringHelper
@@ -225,7 +226,7 @@ class StringHelper
 	 *
 	 * @return string
 	 */
-	public static function convertToUtf8(&$string = '')
+	public static function convertToUtf8($string = '')
 	{
 		if (self::detectUTF8($string))
 		{
@@ -280,5 +281,28 @@ class StringHelper
 	public static function removeHtml($string)
 	{
 		return Html::removeHtmlTags($string);
+	}
+
+	/**
+	 * Normalizes the input provided and returns the normalized string
+	 *
+	 * @param string $string
+	 *
+	 * @return string
+	 */
+	public static function normalize($string, $tolowercase = false)
+	{
+		// Normalizer-class missing!
+		if (class_exists('Normalizer', $autoload = false))
+		{
+			$string = Normalizer::normalize($string);
+		}
+
+		if ( ! $tolowercase)
+		{
+			return $string;
+		}
+
+		return strtolower($string);
 	}
 }

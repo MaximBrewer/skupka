@@ -5,13 +5,9 @@ JHtml::_('formbehavior.chosen', 'select');
 if (method_exists('JHtmlBehavior', 'tabstate')) {
 	JHtml::_('behavior.tabstate');
 }
-$params_ = JComponentHelper::getParams('com_yandex_maps');
-$api_key=$params_->get('api_key','');
-?>
-<script>
-    window.api_key='<?php echo $api_key;?>';
-</script>
-<?php
+
+JHtml::_('xdwork.yapi');
+
 JHtml::stylesheet(JURI::root() . 'media/com_yandex_maps/js/rangeslider.css',[], true);
 JHtml::script(JURI::root() . 'media/com_yandex_maps/js/rangeslider.min.js');
 JHtml::script(JURI::root() . 'media/com_yandex_maps/js/object.js');
@@ -19,9 +15,12 @@ JHtml::stylesheet(JURI::root() . 'media/com_yandex_maps/js/colpick/colpick.css',
 JHtml::script(JURI::root() . 'media/com_yandex_maps/js/colpick/colpick.js');
 JHtml::stylesheet(JURI::root() . 'media/com_yandex_maps/js/chosenImage/chosenImage.css',[], true);
 JHtml::script(JURI::root() . 'media/com_yandex_maps/js/chosenImage/chosenImage.js');
+
 $params = JComponentHelper::getParams('com_yandex_maps');
+
+$organization_mode = JFactory::getApplication()->input->get('mode') == 'organization';
 ?>
-<form action="index.php?option=com_yandex_maps&task=objects.<?php echo JFactory::getApplication()->input->getCmd('task')?>&id=<?php echo (int)$this->item->id?>" method="post" name="adminForm" id="adminForm" class="form-validate form-horizontal">
+<form action="index.php?option=com_yandex_maps&task=objects.<?php echo JFactory::getApplication()->input->getCmd('task')?>&id=<?php echo (int)$this->item->id?>" method="post" name="adminForm" id="adminForm" class="form-validate form-horizontal" enctype="multipart/form-data">
 	<?php if (count($this->item->error)) {?>
 		<div class="alert alert-error"><?php echo implode('<br>', array_values($this->item->error))?></div>
 	<?php }?>
@@ -176,30 +175,38 @@ $params = JComponentHelper::getParams('com_yandex_maps');
 							</div>
 						</div>
 					<?php echo JHtml::_('bootstrap.endTab');?>
-					<?php if ($this->item->organization_object_id) {
+
+					<?php if ($this->item->organization_object_id or $organization_mode) {
 						echo JHtml::_('bootstrap.addTab', 'myTab', 'organization', 'Организация');
 						include 'organization.php';
 						echo JHtml::_('bootstrap.endTab');
 					} ?>
-					<?php 
+
+					<?php
 						JFactory::getLanguage()->load('com_content', JPATH_ADMINISTRATOR, 'ru-RU', true);
-					//echo JLayoutHelper::render('joomla.edit.params', $this); ?>
-					<?php 
+					?>
+
+					<?php
 						echo JHtml::_('bootstrap.addTab', 'myTab', 'metadata', 'Публикация');
 						echo JLayoutHelper::render('joomla.edit.publishingdata', $this);
+
 						$fieldSets = $this->form->getFieldsets('metadata');
+
 						foreach ($fieldSets as $name => $fieldSet) {
 							foreach ($this->form->getFieldset($name) as $field) {
 								echo $field->renderField();
 							}
 						};
+
 						$fieldSets = $this->form->getFieldsets('params');
+
 						foreach ($fieldSets as $name => $fieldSet) {
 							foreach ($this->form->getFieldset($name) as $field) {
 								echo $field->renderField();
 							}
 						};
-						echo JHtml::_('bootstrap.endTab'); 
+
+						echo JHtml::_('bootstrap.endTab');
 					?>
 				<?php echo JHtml::_('bootstrap.endTabSet');?>
 			</div>

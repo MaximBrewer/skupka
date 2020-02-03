@@ -4,7 +4,7 @@
 		<author>Chupurnov Valeriy</author>
 		<creationDate>Mart 2015</creationDate>
 		<packagename>yandex_maps</packagename>
-		<version>4.0.34</version>
+		<version>4.0.50</version>
 		<url>https://xdan.ru/komponent-yandeks-karty-dlya-joomla.html</url>
 		<packager>Chupurnov Valeriy</packager>
 		<packagerurl>https://xdan.ru</packagerurl>
@@ -18,7 +18,7 @@
 		<file type="plugin" id="plg_yandexmapssource_content" group="yandexmapssource">plg_yandexmapssource_content.v.1.1.2.zip</file>
 		<file type="plugin" id="plg_yandexmapssource_user" group="yandexmapssource">plg_yandexmapssource_user.v.1.1.2.zip</file>
 			<file type="module" id="yandex_maps" client="site">mod_yandex_maps.medium.v.2.2.5.zip</file>
-			<file type="component" id="com_yandex_maps">com_yandex_maps.medium.v.4.0.34.zip</file>
+			<file type="component" id="com_yandex_maps">com_yandex_maps.medium.v.4.0.50.zip</file>
 		</files>
 		
 		<updateservers>

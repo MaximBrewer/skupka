@@ -19,7 +19,7 @@
 	.collapse {
 		display:  block;
 		position: relative;
-		height:   0;
+		height:   auto;
 		overflow: hidden;
 		.transition(height 1ms ease);
 		&.in {
@@ -39,6 +39,7 @@
 			margin-bottom: 2px;
 			border:        1px solid #e5e5e5;
 			.border-radius(4px);
+
 			.accordion-heading {
 				border-bottom: 0;
 				.accordion-toggle {
@@ -49,14 +50,19 @@
 			}
 
 			// Inner needs the styles because you can't animate properly with any styles on the element
-			> .accordion-body > .accordion-inner {
-				padding:    9px 15px;
-				border-top: 1px solid #e5e5e5;
-			}
+			> .accordion-body {
+				padding: 0;
+				border:  none;
 
-			// Accordion overflow fix
-			> .accordion-body.in:hover {
-				overflow: visible;
+				> .accordion-inner {
+					padding:    9px 15px;
+					border-top: 1px solid #e5e5e5;
+				}
+
+				// Accordion overflow fix
+				&.in:hover {
+					overflow: visible;
+				}
 			}
 		}
 	}

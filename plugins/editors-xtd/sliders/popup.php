@@ -1,85 +1,56 @@
 <?php
 /**
  * @package         Sliders
- * @version         6.0.8
+ * @version         7.7.8
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2016 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2019 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
+namespace RegularLabs\Plugin\EditorButton\Sliders\Popup;
+
 defined('_JEXEC') or die;
 
-if (JFactory::getUser()->get('guest'))
+use Joomla\CMS\Factory as JFactory;
+use Joomla\CMS\Language\Text as JText;
+use RegularLabs\Library\Document as RL_Document;
+use RegularLabs\Library\RegEx as RL_RegEx;
+
+class Popup
+	extends \RegularLabs\Library\EditorButtonPopup
 {
-	JError::raiseError(403, JText::_("ALERTNOTAUTH"));
-}
+	var $require_core_auth = false;
 
-require_once JPATH_LIBRARIES . '/regularlabs/helpers/parameters.php';
-$parameters = RLParameters::getInstance();
-$params     = $parameters->getPluginParams('sliders');
-
-if (JFactory::getApplication()->isSite() && !$params->enable_frontend)
-{
-	JError::raiseError(403, JText::_("ALERTNOTAUTH"));
-}
-
-$class = new PlgButtonSlidersPopup($params);
-$class->render();
-
-class PlgButtonSlidersPopup
-{
-	var $params = null;
-
-	function __construct(&$params)
+	public function loadScripts()
 	{
-		$this->params = $params;
-	}
-
-	function render()
-	{
-		require_once JPATH_LIBRARIES . '/regularlabs/helpers/functions.php';
-
-		jimport('joomla.filesystem.file');
-
-		// Load plugin language
-		RLFunctions::loadLanguage('plg_system_regularlabs');
-		RLFunctions::loadLanguage('plg_editors-xtd_sliders');
-		RLFunctions::loadLanguage('plg_system_sliders');
-
-		RLFunctions::script('regularlabs/script.min.js');
-		RLFunctions::stylesheet('regularlabs/popup.min.css');
-		RLFunctions::stylesheet('regularlabs/style.min.css');
-
 		// Tag character start and end
 		list($tag_start, $tag_end) = explode('.', $this->params->tag_characters);
 
+		$editor = JFactory::getApplication()->input->getString('name', 'text');
+		// Remove any dangerous character to prevent cross site scripting
+		$editor = RL_RegEx::replace('[\'\";\s]', '', $editor);
+
 		$script = "
-			var sliders_tag_open = '" . preg_replace('#[^a-z0-9-_]#s', '', $this->params->tag_open) . "';
-			var sliders_tag_close = '" . preg_replace('#[^a-z0-9-_]#s', '', $this->params->tag_close) . "';
+			var sliders_tag_open = '" . RL_RegEx::replace('[^a-z0-9-_]', '', $this->params->tag_open) . "';
+			var sliders_tag_close = '" . RL_RegEx::replace('[^a-z0-9-_]', '', $this->params->tag_close) . "';
 			var sliders_tag_delimiter = '" . (($this->params->tag_delimiter == '=') ? '=' : ' ') . "';
 			var sliders_tag_characters = ['" . $tag_start . "', '" . $tag_end . "'];
-			var sliders_editorname = '" . JFactory::getApplication()->input->getString('name', 'text') . "';
+			var sliders_editorname = '" . $editor . "';
 			var sliders_content_placeholder = '" . JText::_('SLD_TEXT', true) . "';
 			var sliders_error_empty_title = '" . JText::_('SLD_ERROR_EMPTY_TITLE', true) . "';
 			var sliders_max_count = " . (int) $this->params->button_max_count . ";
 		";
-		JFactory::getDocument()->addScriptDeclaration($script);
+		RL_Document::scriptDeclaration($script);
 
-		RLFunctions::script('sliders/popup.min.js', '6.0.8');
-		RLFunctions::stylesheet('sliders/popup.min.css', '6.0.8');
-
-		echo $this->getHTML();
+		RL_Document::script('sliders/popup.min.js', '7.7.8');
 	}
 
-	function getHTML()
+	public function loadStyles()
 	{
-		ob_start();
-		include __DIR__ . '/popup.tmpl.php';
-		$html = ob_get_contents();
-		ob_end_clean();
-
-		return $html;
+		RL_Document::style('sliders/popup.min.css', '7.7.8');
 	}
 }
+
+(new Popup('sliders'))->render();

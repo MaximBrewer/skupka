@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.4" type="plugin" group="editors-xtd" method="upgrade">
+<extension version="3.9" type="plugin" group="editors-xtd" method="upgrade">
 	<name>plg_editors-xtd_sourcerer</name>
 	<description>PLG_EDITORS-XTD_SOURCERER_DESC</description>
-	<version>7.1.4</version>
-	<creationDate>March 2017</creationDate>
+	<version>8.2.0</version>
+	<creationDate>September 2019</creationDate>
 	<author>Regular Labs (Peter van Westen)</author>
 	<authorEmail>info@regularlabs.com</authorEmail>
 	<authorUrl>https://www.regularlabs.com</authorUrl>
-	<copyright>Copyright © 2017 Regular Labs - All Rights Reserved</copyright>
+	<copyright>Copyright © 2018 Regular Labs - All Rights Reserved</copyright>
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 
 	<scriptfile>script.install.php</scriptfile>
 
 	<files>
 		<filename plugin="sourcerer">sourcerer.php</filename>
-		<filename>popup.php</filename>
+		<filename>fields.xml</filename>
 		<filename>helper.php</filename>
+		<filename>popup.php</filename>
+		<filename>popup.tmpl.php</filename>
 		<filename>script.install.helper.php</filename>
 		<folder>language</folder>
+		<folder>layouts</folder>
 	</files>
 
 	<config>
 		<fields name="params" addfieldpath="/libraries/regularlabs/fields">
-			<fieldset name="description">
+			<fieldset name="basic">
 				<field name="@license" type="rl_license" extension="SOURCERER" />
 				<field name="@version" type="rl_version" extension="SOURCERER" />
 				<field name="@dependency" type="rl_dependency"
@@ -33,7 +36,7 @@
 					   description="SOURCERER_DESC"
 					   url="https://www.regularlabs.com/sourcerer" />
 
-				<field name="@notice_settings" type="rl_plaintext"
+				<field name="@notice_settings" type="note" class="alert alert-info"
 					   description="SRC_SETTINGS,&lt;a href=&quot;index.php?option=com_plugins&amp;filter_folder=system&amp;filter_search=sourcerer&quot; target=&quot;_blank&quot;&gt;,&lt;/a&gt;" />
 			</fieldset>
 		</fields>

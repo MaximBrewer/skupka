@@ -2,9 +2,12 @@
 defined("_JEXEC") or die("Access deny");
 JHtml::addIncludePath(JPATH_COMPONENT_ADMINISTRATOR.'/helpers/html');
 JHtml::_('formbehavior.chosen', 'select');
+JHtml::_('xdwork.yapi');
+
 if (method_exists('JHtmlBehavior', 'tabstate')) {
 	JHtml::_('behavior.tabstate');
 }
+
 JHtml::stylesheet(JURI::root() . 'media/com_yandex_maps/js/rangeslider.css', array(), true);
 JHtml::script(JURI::root() . 'media/com_yandex_maps/js/rangeslider.min.js');
 JHtml::stylesheet(JURI::root() . 'media/com_yandex_maps/js/colpick/colpick.css', array(), true);
@@ -58,20 +61,7 @@ JHtml::script(JURI::root() . 'media/com_yandex_maps/js/maps.js');
 						<?php include 'controls.php';?>
 					<?php echo JHtml::_('bootstrap.endTab');?>
 					<?php echo JLayoutHelper::render('joomla.edit.params', $this); ?>
-					<?php 
-						//print_r($this->item->params);
-					
-					/* 
-						echo JHtml::_('bootstrap.addTab', 'myTab', 'metadata', 'Публикация');
-						echo JLayoutHelper::render('joomla.edit.publishingdata', $this);
-						$fieldSets = $this->form->getFieldsets('metadata');
-						foreach ($fieldSets as $name => $fieldSet) {
-							foreach ($this->form->getFieldset($name) as $field) {
-								echo $field->renderField();
-							}
-						};
-						echo JHtml::_('bootstrap.endTab'); */
-					?>
+
 					<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'map_options', 'Настройки карты'); ?> 
 						<div class="control-group <?php echo (isset($this->item->error['lat']) ? 'error' : '')?>">
 							<label class="control-label" for="jform_lat" >Широта</label>
@@ -147,12 +137,7 @@ JHtml::script(JURI::root() . 'media/com_yandex_maps/js/maps.js');
 					</table>
 					<div></div>
 				</div>
-				<?php 
-                 $params_ = JComponentHelper::getParams('com_yandex_maps');
-                 $api_key=$params_->get('api_key','');
-				?>
 				<script>
-					window.api_key='<?php echo $api_key;?>';
 					window.defaultSettings = {
 						defaultCategoryId: '<?php echo !$this->item->getCategoriesCount() ? 0 : $this->item->categories[0]->id?>',
 						iconLayout: '<?php echo $this->item->settings->get('object_show_title_with_image', 0) ? 'default#imageWithContent' : 'default#image'?>',
@@ -166,7 +151,6 @@ JHtml::script(JURI::root() . 'media/com_yandex_maps/js/maps.js');
 						iconImageSize: [<?php echo $this->item->settings->get('object_iconImageSize', '32,32')?>]
 					};
 					window.ymOptions = <?php echo jhtml::_('map.getOptions', $this->item ?: new Yandex_MapsModelMaps(), clone(JComponentHelper::getParams('com_yandex_maps')));?>
-                   
 				</script>
 				<div id="map" style="height: 650px;" data-base="<?php echo JURI::root()?>" data-lang="<?php echo $this->lang;?>"></div>
 				<div id="objectStore"></div>

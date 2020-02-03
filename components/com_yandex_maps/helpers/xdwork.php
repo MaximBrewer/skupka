@@ -29,19 +29,25 @@ abstract class JHtmlXDWork {
 			echo '<link rel="stylesheet" href="'.$url.'" type="text/css" />';
 		}
 	}
+
 	static function includemodeinline($enable){
 		self::$_includemodeinline = $enable;
 	}
+
 	static function coordinate($x){
 		return preg_replace(array('#[^0-9\.]#', '#,#'), array('', '.') , $x);
 	}
+
 	static function isAjax() {
 		return isset($_SERVER['HTTP_X_REQUESTED_WITH']) and $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest';
 	}
+
 	static public function isAssoc($array) {
 		return is_array($array) and (bool)count(array_filter(array_keys($array), 'is_string'));
 	}
+
 	static public $extensions = ['png','jpg','jpeg','gif'];
+
 	static public function upload($name = 'files') {
 		$result = array('res'=>1,'files'=>array(),'error'=>array());
 		jimport('joomla.filesystem.file');
@@ -100,6 +106,7 @@ abstract class JHtmlXDWork {
 		}
 		return $result;
 	}
+
 	static public function autocomplete() {
 		static $autocomplete = true;
 		if ($autocomplete) {
@@ -109,11 +116,15 @@ abstract class JHtmlXDWork {
 			$autocomplete = false;
 		}
 	}
+
 	static public function yapi() {
 		static $included = true;
+
 		if ($included) {
 			$lang = in_array(JFactory::getLanguage()->getTag(),['ru-RU','en-US','tr-TR','uk-UA']) ? JFactory::getLanguage()->getTag():'en-US';
 			$params = JComponentHelper::getParams('com_yandex_maps');
+
+			self::includejs('window.YANDEX_MAPS_API_KEY = "' . $params->get('api_key','') .  '";', true);
 
 			self::includejs('https://api-maps.yandex.ru/2.1/?' .
                 'lang='. $lang .
@@ -224,6 +235,7 @@ abstract class JHtmlXDWork {
 	}
 	static public function imagepath (){return JPATH_ROOT . self::$imagepath;}
 	static public function imageurl (){return self::$imagepath;}
+
 	static public function organization (&$organization){
 		if ($organization->organization_object_id) {
 			static $allparams = array();

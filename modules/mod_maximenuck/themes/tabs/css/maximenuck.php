@@ -301,6 +301,12 @@ div#<?php echo $id; ?> ul.maximenuck2 a {
 	display: block;
 }
 
+div#<?php echo $id; ?> ul.maximenuck li ul.maximenuck2 li.maximenuck:hover,
+div#<?php echo $id; ?> ul.maximenuck li ul.maximenuck2 li.maximenuck.openck,
+div#<?php echo $id; ?> ul.maximenuck li ul.maximenuck2 li.maximenuck.clickedck {
+	background: #fff;
+}
+
 div#<?php echo $id; ?> ul.maximenuck li.maximenuck ul.maximenuck2 li:hover > a,
 div#<?php echo $id; ?> ul.maximenuck li.maximenuck ul.maximenuck2 li:hover > h2 a,
 div#<?php echo $id; ?> ul.maximenuck li.maximenuck ul.maximenuck2 li:hover > h3 a,
@@ -319,7 +325,6 @@ div#<?php echo $id; ?> ul.maximenuck li ul.maximenuck2 li.maximenuck.clickedck >
 div#<?php echo $id; ?> ul.maximenuck li ul.maximenuck2 li.maximenuck.openck > span,
 div#<?php echo $id; ?> ul.maximenuck li ul.maximenuck2 li.maximenuck.clickedck > span {
 	color: #372D2A;
-	background: #fff;
 }
 
 div#<?php echo $id; ?> ul.maximenuck li.maximenuck ul.maximenuck2 li.maximenuck li:hover > a,

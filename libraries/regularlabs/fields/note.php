@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -53,7 +53,7 @@ class JFormFieldRL_Note extends \RegularLabs\Library\Field
 		if ($close)
 		{
 			$close  = $close == 'true' ? 'alert' : $close;
-			$html[] = '<button type="button" class="close" data-dismiss="' . $close . '">&times;</button>';
+			$html[] = '<button type="button" class="close" data-dismiss="' . $close . '" aria-label="Close">&times;</button>';
 		}
 
 		$html[] = ! empty($title) ? '<' . $heading . '>' . JText::_($title) . '</' . $heading . '>' : '';

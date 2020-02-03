@@ -480,6 +480,7 @@
 			range.select();
 		}
 	};
+
 	$.fn.submitForm = function () {
 		return this.each(function () {
 			var $that = $(this),
@@ -506,7 +507,7 @@
 					}
 				})
 				.always(function () {
-					dialog.dialog('hide');
+					dialog.dialogBox('hide');
 					$that.find('[type=submit]').removeAttr('disabled');
 				});
 		});

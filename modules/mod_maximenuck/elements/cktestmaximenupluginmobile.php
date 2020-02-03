@@ -17,17 +17,23 @@ class JFormFieldCktestmaximenupluginmobile extends JFormField {
     }
 
     protected function getLabel() {
-        $app = JFactory::getApplication();
-        $html = array();
-        $class = $this->element['class'] ? (string) $this->element['class'] : '';
+		$app = JFactory::getApplication();
+		$html = array();
+		$class = $this->element['class'] ? (string) $this->element['class'] : '';
 
-        $style = $this->element['style'];
-        // $styles = '';
-        // if ($style == 'title')
-            // $styles = ' style="display:block;background:#666;padding:5px;color:#eee;min-width:300px;text-transform:uppercase;font-size:14px;"';
-        // if ($style == 'link')
-            // $styles = ' style="display:block;background:#efefef;padding:5px;color:#000;min-width:300px;line-height:25px;"';
+		$style = $this->element['style'];
 
+		// check for mobile menu ck instead of maximenu mobile
+		// if mobile menu ck active and not maximenu mobile, then hide maximenu mobile options
+		if (function_exists('loadMobileMenuCK')) {
+			$db = JFactory::getDbo();
+			$db->setQuery("SELECT enabled FROM #__extensions WHERE `element` = 'maximenuckmobile' AND `type` = 'plugin'");
+			$enabled = $db->loadResult();
+			if (! $enabled) {
+				$html[] = '<style>a[href*="mobileparams"], #attrib-maximenu_mobileparams { display: none !important; }</style>';
+				return implode('', $html);
+			}
+		}
         $html[] = '<div class="maximenuckchecking">';
         // $html[] = '<span class="before"></span>';
         // $html[] = '<span class="' . $class . '">';
@@ -82,14 +88,15 @@ class JFormFieldCktestmaximenupluginmobile extends JFormField {
         return $this->getLabel();
     }
 
-    protected function testPatch($component) {
-        if (JFile::exists(JPATH_ROOT . '/plugins/system/' . $component .'/'. $component . '.php')
-                && JPluginHelper::isEnabled('system',$component)) {
-            $this->element['icon'] = 'accept.png';
-            return JText::_('MOD_MAXIMENUCK_SPACER_' . strtoupper($component) . '_PATCH_INSTALLED');
-        } else {
+	protected function testPatch($component) {
+		if (JFile::exists(JPATH_ROOT . '/plugins/system/' . $component .'/'. $component . '.php')
+				&& JPluginHelper::isEnabled('system',$component)) {
+			$this->element['icon'] = 'accept.png';
+			return JText::_('MOD_MAXIMENUCK_SPACER_' . strtoupper($component) . '_PATCH_INSTALLED');
+		} else {
 			$this->element['icon'] = 'cross.png';
+			return JText::_('MOD_MAXIMENUCK_CHECK_MOBILEMENUCK') . ' <a href="https://www.joomlack.fr/en/joomla-extensions/mobile-menu-ck" target="_blank">Mobile Menu CK</a>';
 		}
-        return false;
-    }
+		return false;
+	}
 }

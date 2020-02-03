@@ -1,19 +1,19 @@
 <?php
 /**
  * @package         Sourcerer
- * @version         7.1.4
+ * @version         8.2.0
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2017 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2019 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
-namespace RegularLabs\Sourcerer;
+namespace RegularLabs\Plugin\System\Sourcerer;
 
 defined('_JEXEC') or die;
 
-use JFactory;
+use Joomla\CMS\Factory as JFactory;
 use RegularLabs\Library\Parameters as RL_Parameters;
 use RegularLabs\Library\PluginTag as RL_PluginTag;
 use RegularLabs\Library\RegEx as RL_RegEx;
@@ -24,9 +24,14 @@ class Params
 	protected static $regexes = null;
 	protected static $areas   = null;
 
-	public static function get()
+	public static function get($key = '', $default = '')
 	{
-		if (!is_null(self::$params))
+		if ($key != '')
+		{
+			return self::getByKey($key, $default);
+		}
+
+		if ( ! is_null(self::$params))
 		{
 			return self::$params;
 		}
@@ -47,6 +52,13 @@ class Params
 		return self::$params;
 	}
 
+	private static function getByKey($key, $default = '')
+	{
+		$params = self::get();
+
+		return ! empty($params->{$key}) ? $params->{$key} : $default;
+	}
+
 	public static function getTags($only_start_tags = false)
 	{
 		$params = self::get();
@@ -62,7 +74,7 @@ class Params
 			],
 		];
 
-		return $only_start_tags ? $tags['0'] : $tags;
+		return $only_start_tags ? $tags[0] : $tags;
 	}
 
 	public static function getRegex($type = 'tag')
@@ -74,7 +86,7 @@ class Params
 
 	private static function getRegexes()
 	{
-		if (!is_null(self::$regexes))
+		if ( ! is_null(self::$regexes))
 		{
 			return self::$regexes;
 		}
@@ -94,15 +106,15 @@ class Params
 		self::$regexes = (object) [];
 
 		self::$regexes->tag = '('
-			. '(?P<start_pre>' . $pre . ')'
-			. $tag_start . RL_RegEx::quote($params->tag) . $spaces . '(?P<data>( .*?)?)' . $tag_end
-			. '(?P<start_post>' . $post . ')'
+			. '(?<start_pre>' . $pre . ')'
+			. $tag_start . RL_RegEx::quote($params->tag) . $spaces . '(?<data>( .*?)?)' . $tag_end
+			. '(?<start_post>' . $post . ')'
 
-			. '(?P<content>.*?)'
+			. '(?<content>.*?)'
 
-			. '(?P<end_pre>' . $pre . ')'
+			. '(?<end_pre>' . $pre . ')'
 			. $tag_start . '\/' . RL_RegEx::quote($params->tag) . $tag_end
-			. '(?P<end_post>' . $post . ')'
+			. '(?<end_post>' . $post . ')'
 			. ')';
 
 		return self::$regexes;
@@ -117,7 +129,7 @@ class Params
 
 	public static function getAreaSettings()
 	{
-		if (!is_null(self::$areas))
+		if ( ! is_null(self::$areas))
 		{
 			return self::$areas;
 		}
@@ -151,7 +163,7 @@ class Params
 	{
 		$params = self::get();
 
-		if (!isset($params->tag_character_start))
+		if ( ! isset($params->tag_character_start))
 		{
 			self::setTagCharacters();
 		}

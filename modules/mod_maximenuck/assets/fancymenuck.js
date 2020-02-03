@@ -56,7 +56,7 @@
 				$('ul.maximenuck', maximenuObj).append('<li class="maxiFancybackground"><div class="maxiFancycenter"><div class="maxiFancyleft"><div class="maxiFancyright"></div></div></div></li>');
 				fancyItem = $('.maxiFancybackground', maximenuObj);
 
-				if (maximenuObj.currentItem)
+				if (maximenuObj.currentItem.length)
 					setCurrent(maximenuObj.currentItem);
 
 				$('li.level1', maximenuObj).each(function(i, el) {

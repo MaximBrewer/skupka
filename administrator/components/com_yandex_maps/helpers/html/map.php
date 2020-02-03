@@ -41,6 +41,7 @@ abstract class JHtmlMap{
 	static public function getOptions($map, $params) {
 		configHelper::addParams($map->settings, 0);
 		configHelper::addParams($params, 1);
+
 		return "{
 			address:". ($map->getAddress() ? "'".addslashes($map->getAddress())."'" : 'false').",
 			cluster:{
@@ -102,6 +103,8 @@ abstract class JHtmlMap{
                     preset: '" . configHelper::get('object_preset', 'islands#blueClusterIcons') . "'
                 }
             },
+			
+			api_key: '" . configHelper::get('api_key', '') . "',
 			show_description_in_custom_balloon: ".configHelper::get('show_description_in_custom_balloon', 0).",
 			use_search_only_in_self_objects: ".configHelper::get('use_search_only_in_self_objects', 0)." ? true : false,
 			registration_organization_use_addres_position: ".configHelper::get('registration_organization_use_addres_position', 0)." ? true : false,
@@ -245,7 +248,7 @@ abstract class JHtmlMap{
 					object;
 
 				if (window.map{$map->id} === undefined) {
-					map{$map->id} = new XDsoftMap(".self::getOptions($map,$params).");
+					map{$map->id} = new XDsoftMap(" . self::getOptions($map, $params) . ");
 				}
 
 				map{$map->id}.setMap(map);

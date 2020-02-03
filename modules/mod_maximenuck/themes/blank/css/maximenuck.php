@@ -25,7 +25,7 @@ div#<?php echo $id; ?> ul.maximenuck {
     position : relative;
     z-index:999;
     overflow: visible !important;
-    display: block;
+    display: block !important;
     float: none !important;
     visibility: visible !important;
 	opacity: 1 !important;
@@ -68,7 +68,7 @@ div#<?php echo $id; ?> ul.maximenuck li.maximenuck.level1 {
 
 /* vertical menu */
 div#<?php echo $id; ?>.maximenuckv ul.maximenuck li.maximenuck.level1 {
-	display: block;
+	display: block !important;
 	/*margin: 0;
 	padding: 0;*/
 	text-align: left;
@@ -565,14 +565,15 @@ div#<?php echo $id; ?> .maxiFancybackground {
 	position: absolute;
     top : 0;
     list-style : none;
-    padding: 0 !important;
-    margin: 0 !important;
-    border: none !important;
+    padding: 0;
+    margin: 0;
+    border: none;
 	z-index: -1;
+	border-top: 1px solid #fff;
 }
 
 div#<?php echo $id; ?> .maxiFancybackground .maxiFancycenter {
-    border-top: 1px solid #fff;
+    /*border-top: 1px solid #fff;*/
 }
 
 

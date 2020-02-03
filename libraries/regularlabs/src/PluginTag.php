@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -71,7 +71,7 @@ class PluginTag
 		$string = RegEx::replace('((?:^|")\s*)&nbsp;(\s*(?:[a-z]|$))', '\1 \2', $string);
 
 		// Only one value, so return simple key/value object
-		if (strpos($string, '|') == false && ! RegEx::match('=\s*"', $string))
+		if (strpos($string, '|') == false && ! RegEx::match('=\s*["\']', $string))
 		{
 			self::unprotectSpecialChars($string, $keep_escaped_chars);
 
@@ -79,7 +79,7 @@ class PluginTag
 		}
 
 		// No foo="bar" syntax found, so assume old syntax
-		if ( ! RegEx::match('=\s*"', $string))
+		if ( ! RegEx::match('=\s*["\']', $string))
 		{
 			self::unprotectSpecialChars($string, $keep_escaped_chars);
 
@@ -90,7 +90,7 @@ class PluginTag
 		}
 
 		// Cannot find right syntax, so return simple key/value object
-		if ( ! RegEx::matchAll('(?:^|\s)(?<key>[a-z0-9-_]+)\s*(?<not>\!?)=\s*"(?<value>.*?)"', $string, $matches))
+		if ( ! RegEx::matchAll('(?:^|\s)(?<key>[a-z0-9-_\:]+)\s*(?<not>\!?)=\s*(["\'])(?<value>.*?)\3', $string, $matches))
 		{
 			self::unprotectSpecialChars($string, $keep_escaped_chars);
 
@@ -139,20 +139,17 @@ class PluginTag
 		}
 
 		// Convert boolean values to actual booleans
-		switch ($value)
+		if ($value === 'true' || $value === true)
 		{
-			case 'true':
-				return $match['not'] ? false : true;
-				break;
-
-			case 'false':
-				return $match['not'] ? true : false;
-				break;
-
-			default:
-				return $match['not'] ? '!NOT!' . $value : $value;
-				break;
+			return $match['not'] ? false : true;
 		}
+
+		if ($value === 'false' || $value === false)
+		{
+			return $match['not'] ? true : false;
+		}
+
+		return $match['not'] ? '!NOT!' . $value : $value;
 	}
 
 	/**
@@ -286,19 +283,21 @@ class PluginTag
 			}
 
 			// unprotect tags in key and val
-			foreach ($keyval as $key => $val)
+			foreach ($keyval as $key => $value)
 			{
-				RegEx::matchAll(RegEx::quote($tag_start) . '(.*?)' . RegEx::quote($tag_end), $val, $tags);
+				RegEx::matchAll(RegEx::quote($tag_start) . '(.*?)' . RegEx::quote($tag_end), $value, $tags);
 
-				if ( ! empty($tags))
+				if (empty($tags))
 				{
-					foreach ($tags as $tag)
-					{
-						$val = str_replace($tag[0], base64_decode($tag[1]), $val);
-					}
-
-					$keyval[trim($key)] = $val;
+					continue;
 				}
+
+				foreach ($tags as $tag)
+				{
+					$value = str_replace($tag[0], base64_decode($tag[1]), $value);
+				}
+
+				$keyval[trim($key)] = $value;
 			}
 
 			if (isset($keys[$i]))
@@ -306,12 +305,14 @@ class PluginTag
 				$key = trim($keys[$i]);
 				// if value is in the keys array add as defined in keys array
 				// ignore equal sign
-				$val = implode($equal, $keyval);
-				if (substr($val, 0, strlen($key) + 1) == $key . '=')
+				$value = implode($equal, $keyval);
+
+				if (substr($value, 0, strlen($key) + 1) == $key . '=')
 				{
-					$val = substr($val, strlen($key) + 1);
+					$value = substr($value, strlen($key) + 1);
 				}
-				$attributes->{$key} = $val;
+
+				$attributes->{$key} = $value;
 				unset($keys[$i]);
 
 				continue;
@@ -320,7 +321,21 @@ class PluginTag
 			// else add as defined in the string
 			if (isset($keyval[1]))
 			{
-				$attributes->{$keyval[0]} = $keyval[1];
+				$value = $keyval[1];
+
+				$value = trim($value, '"');
+
+				if ($value === 'true' || $value === true)
+				{
+					$value = true;
+				}
+
+				if ($value === 'false' || $value === false)
+				{
+					$value = false;
+				}
+
+				$attributes->{$keyval[0]} = $value;
 				continue;
 			}
 
@@ -461,9 +476,12 @@ class PluginTag
 	 *
 	 * @return string
 	 */
-	public static function getRegexInsideTag()
+	public static function getRegexInsideTag($start_character = '{', $end_character = '}')
 	{
-		return '(?:[^\{\}]*\{[^\}]*\})*.*?';
+		$s = RegEx::quote($start_character);
+		$e = RegEx::quote($end_character);
+
+		return '(?:[^' . $s . $e . ']*' . $s . '[^' . $e . ']*' . $s . ')*.*?';
 	}
 
 	/**

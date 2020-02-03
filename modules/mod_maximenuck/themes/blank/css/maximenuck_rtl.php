@@ -570,14 +570,15 @@ div#<?php echo $id; ?> .maxiFancybackground {
 	position: absolute;
     top : 0;
     list-style : none;
-    padding: 0 !important;
-    margin: 0 !important;
-    border: none !important;
+    padding: 0;
+    margin: 0;
+    border: none;
 	z-index: -1;
+	border-top: 1px solid #fff;
 }
 
 div#<?php echo $id; ?> .maxiFancybackground .maxiFancycenter {
-    border-top: 1px solid #fff;
+    /*border-top: 1px solid #fff;*/
 }
 
 

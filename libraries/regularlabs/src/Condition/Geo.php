@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -13,6 +13,7 @@ namespace RegularLabs\Library\Condition;
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Factory as JFactory;
 use Joomla\CMS\Log\Log as JLog;
 
 /**
@@ -41,7 +42,7 @@ abstract class Geo
 
 		$this->geo = $geo->get();
 
-		if (JDEBUG)
+		if (JFactory::getApplication()->get('debug'))
 		{
 			JLog::addLogger(['text_file' => 'regularlabs_geoip.log.php'], JLog::ALL, ['regularlabs_geoip']);
 			JLog::add(json_encode($this->geo), JLog::DEBUG, 'regularlabs_geoip');

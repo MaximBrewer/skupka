@@ -75,6 +75,7 @@
     margin: 0;
     padding: 0 5px;
     text-align: center;
+	min-width: 300px;
 }
 
 #ckpopupwizard div.ck_button a {
@@ -184,7 +185,7 @@
 }
 
 .ckpopupwizardmanager_button {
-    padding: 5px 5px 5px 30px;
+	padding: 5px 5px 5px 30px;
 	color: #333;
 	text-decoration: none;
 	font-weight: normal;
@@ -197,8 +198,9 @@
 	background: #e1e1e1 url('magic.png') 5px center no-repeat;
 	text-indent: 30px;
 	height: 65px;
-    width: 100%;
-    text-align: left;
+	width: 100%;
+	text-align: left;
+	min-width: 300px;
 }
 
 .ckpopupwizardmanager_button:hover {

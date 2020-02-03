@@ -25,7 +25,7 @@ $column_width = new stdClass();
 					$logoheight = $logoheight ? ' height="' . $logoheight . '"' : '';
 					$logowidth = $logowidth ? ' width="' . $logowidth . '"' : '';
 					$logofloat = ($params->get('orientation', 'horizontal') == 'vertical') ? '' : 'float: ' . $params->get('logoposition', 'left') . ';';
-					$styles = 'style="' . $logofloat . 'margin: ' . $params->get('logomargintop', '0') . 'px ' . $params->get('logomarginright', '0') . 'px ' . $params->get('logomarginbottom', '0') . 'px ' . $params->get('logomarginleft', '0') . 'px' . '"';
+					$styles = ' style="' . $logofloat . 'margin: ' . $params->get('logomargintop', '0') . 'px ' . $params->get('logomarginright', '0') . 'px ' . $params->get('logomarginbottom', '0') . 'px ' . $params->get('logomarginleft', '0') . 'px' . '"';
 					$logolinkstart = $logolink ? '<a href="' . JRoute::_($logolink) . '" style="margin-bottom: 0 !important;margin-left: 0 !important;margin-right: 0 !important;margin-top: 0 !important;padding-bottom: 0 !important;padding-left: 0 !important;padding-right: 0 !important;padding-top: 0 !important;background: none !important;">' : '';
 					$logolinkend = $logolink ? '</a>' : '';
 					?>
@@ -33,10 +33,7 @@ $column_width = new stdClass();
 						<?php echo $logolinkstart ?><img src="<?php echo $logoimage ?>" alt="<?php echo $params->get('logoalt', '') ?>" <?php echo $logowidth . $logoheight . $styles ?> /><?php echo $logolinkend ?>
 					</li>
 				<?php } ?>
-				<?php if ($params->get('maximenumobile_enable') === '1') {
-					echo '<label for="' . $params->get('menuid', 'maximenuck') . '-maximenumobiletogglerck" class="maximenumobiletogglericonck" style="display:none;">&#x2261;</label>'
-							. '<input id="' . $params->get('menuid', 'maximenuck') . '-maximenumobiletogglerck" class="maximenumobiletogglerck" type="checkbox" style="display:none;"/>';
-				} ?>
+				<?php require dirname(__FILE__) . '/_mobile.php'; ?>
 				<?php
 				$zindex = 12000;
 				foreach ($items as $i => &$item) {
@@ -46,6 +43,7 @@ $column_width = new stdClass();
 					// test if need to be dropdown
 					//    $stopdropdown = ($item->level > 120) ? '-nodrop' : '';
 					$itemlevel = ($start > 1) ? $item->level - $start + 1 : $item->level;
+					$closeHtml = ($itemlevel > 1) ? '' : ( ($params->get('clickclose', '0') == '1' || $params->get('behavior', 'mouseover') == 'clickclose' || stristr($item->liclass, 'clickclose') != false) ? $close : '' );
 					$stopdropdown = $params->get('stopdropdownlevel', '0');
 					$stopdropdownclass = ($stopdropdown != '0' && $item->level >= $stopdropdown) ? ' nodropdown' : '';
 
@@ -115,7 +113,7 @@ $column_width = new stdClass();
 						// }
 						
 
-						echo "\n\t<div class=\"floatck\" " . $item->styles . ">" . ( ($params->get('behavior', 'mouseover') == 'clickclose' || stristr($item->liclass, 'clickclose') != false) ? $close : '' ) . "<div class=\"maxidrop-top\"><div class=\"maxidrop-top2\"></div></div><div class=\"maxidrop-main\" style=\"width:auto;\"><div class=\"maxidrop-main2\"><div class=\"maximenuck2 first \" " . $nextcolumnstyles . ">\n\t<ul class=\"maximenuck2\" style=\"" . $ulstyles . "\">";
+						echo "\n\t<div class=\"floatck\" " . $item->styles . ">" . $closeHtml . "<div class=\"maxidrop-top\"><div class=\"maxidrop-top2\"></div></div><div class=\"maxidrop-main\" style=\"width:auto;\"><div class=\"maxidrop-main2\"><div class=\"maximenuck2 first \" " . $nextcolumnstyles . ">\n\t<ul class=\"maximenuck2\" style=\"" . $ulstyles . "\">";
 						// if (isset($item->coltitle))
 						// echo $item->coltitle;
 					}

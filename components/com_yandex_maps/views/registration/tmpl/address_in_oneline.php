@@ -1,8 +1,10 @@
 <?php 
 $address = "organization_address$type";
-if ($organization->$address and is_string($organization->$address)) {
+
+if (@$organization->$address and is_string($organization->$address)) {
 	$organization->$address = json_decode($organization->$address);
 }
+
 if (is_array($organization->$address)) {
 	$organization->$address = (object)$organization->$address;
 }

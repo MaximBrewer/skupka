@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -173,15 +173,18 @@ class Protect
 	 * Return the Regular Expressions string to match:
 	 * The edit form
 	 *
-	 * @param int $regex_format
+	 * @param array $form_classes
 	 *
 	 * @return string
 	 */
-	public static function getFormRegex()
+	public static function getFormRegex($form_classes = [])
 	{
+		$form_classes = ArrayHelper::toArray($form_classes);
+
 		return '(<form\s[^>]*('
 			. '(id|name)="(adminForm|postform|submissionForm|default_action_user|seblod_form|spEntryForm)"'
 			. '|action="[^"]*option=com_myjspace&(amp;)?view=see"'
+			. (! empty($form_classes) ? '|class="([^"]* )?(' . implode('|', $form_classes) . ')( [^"]*)?"' : '')
 			. '))';
 	}
 
@@ -511,7 +514,7 @@ class Protect
 	 * @param array  $tags
 	 * @param bool   $include_closing_tags
 	 */
-	public static function protectForm(&$string, $tags = [], $include_closing_tags = true)
+	public static function protectForm(&$string, $tags = [], $include_closing_tags = true, $form_classes = [])
 	{
 		if ( ! Document::isEditPage())
 		{
@@ -520,7 +523,7 @@ class Protect
 
 		list($tags, $protected_tags) = self::prepareTags($tags, $include_closing_tags);
 
-		$string = RegEx::replace(self::getFormRegex(), '<!-- TMP_START_EDITOR -->\1', $string);
+		$string = RegEx::replace(self::getFormRegex($form_classes), '<!-- TMP_START_EDITOR -->\1', $string);
 		$string = explode('<!-- TMP_START_EDITOR -->', $string);
 
 		foreach ($string as $i => &$string_part)

@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -130,6 +130,11 @@ class RegEx
 			return '(' . $prefix . implode('|', $array) . ')';
 		}
 
+		if ( ! empty($name))
+		{
+			return '(?<' . $name . '>' . preg_quote($data, $delimiter) . ')';
+		}
+
 		return preg_quote($data, $delimiter);
 	}
 
@@ -179,7 +184,7 @@ class RegEx
 	public static function quoteArray($array = [], $delimiter = '#')
 	{
 		array_walk($array, function (&$part, $key, $delimiter) {
-			$part = self::quote($part, $delimiter);
+			$part = self::quote($part, '', $delimiter);
 		}, $delimiter);
 
 		return $array;

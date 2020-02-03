@@ -3,7 +3,7 @@
  * @package     Joomla.Plugins
  * @subpackage  System.actionlogs
  *
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -847,7 +847,13 @@ class PlgActionlogJoomla extends ActionLogPlugin
 			return;
 		}
 
-		$loggedOutUser      = User::getInstance($user['id']);
+		$loggedOutUser = User::getInstance($user['id']);
+
+		if ($loggedOutUser->block)
+		{
+			return;
+		}
+
 		$messageLanguageKey = 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT';
 
 		$message = array(

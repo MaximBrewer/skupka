@@ -314,15 +314,9 @@ ul + .xdsoft_search_object_pagination {
 
 .xdsoft_organization {
     margin-bottom: 10px;
-}
-
-.xdsoft_organization > div {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.xdsoft_organization > div > img {
-    vertical-align: top;
+    display: flex;
+    justify-content: stretch;
+    align-items: flex-start;
 }
 
 .xdsoft_organization > div.description_organization {

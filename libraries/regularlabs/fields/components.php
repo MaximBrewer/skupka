@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -85,6 +85,11 @@ class JFormFieldRL_Components extends \RegularLabs\Library\Field
 			}
 
 			$component_folder = ($frontend ? JPATH_SITE : JPATH_ADMINISTRATOR) . '/components/' . $component->element;
+
+			if ( ! JFolder::exists($component_folder) && $admin)
+			{
+				$component_folder = JPATH_ADMINISTRATOR . '/components/' . $component->element;
+			}
 
 			// return if there is no main component folder
 			if ( ! JFolder::exists($component_folder))

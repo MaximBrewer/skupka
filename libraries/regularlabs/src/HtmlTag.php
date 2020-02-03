@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -160,9 +160,10 @@ class HtmlTag
 	{
 		foreach ($attributes as $key => &$val)
 		{
+			$val = str_replace('"', '&quot;', $val);
 			$val = $key . '="' . $val . '"';
 		}
 
-		return implode(' ', $attributes);
+		return implode(' ', (array) $attributes);
 	}
 }

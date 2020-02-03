@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Modules Anywhere
- * @version         7.7.2
+ * @version         7.9.0
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -31,13 +31,22 @@ class PlgSystemModulesAnywhereInstallerScript extends PlgSystemModulesAnywhereIn
 
 	public function onBeforeInstall($route)
 	{
+		if ( ! parent::onBeforeInstall($route))
+		{
+			return false;
+		}
+
 		$this->showDivMessage();
+
+		return true;
 	}
 
 	public function onAfterInstall($route)
 	{
 		$this->fixOldParams();
 		$this->disableCoreEditorPlugin();
+
+		return parent::onAfterInstall($route);
 	}
 
 	private function fixOldParams()

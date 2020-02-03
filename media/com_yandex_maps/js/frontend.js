@@ -1,5 +1,10 @@
 window.XDsoftMap = function (options) {
     'use strict';
+
+    if (!window.XDsoftMapOptions) {
+        window.XDsoftMapOptions = options;
+    }
+
     var that = this,
         map = null,
         clusterer = null,
@@ -28,8 +33,8 @@ window.XDsoftMap = function (options) {
     /**
      * Фикс для показа диалоговых окон там где zIndex слишком маленький. По умолчанию там 10
      */
-    if (jQ.fn.dialog && jQ.fn.dialog.default_options) {
-        jQ.fn.dialog.default_options.zIndex = 1000;
+    if (jQ.fn.dialogBox && jQ.fn.dialogBox.default_options) {
+        jQ.fn.dialogBox.default_options.zIndex = 1000;
     }
 
     /**
@@ -40,6 +45,7 @@ window.XDsoftMap = function (options) {
     function totint(val) {
         return (/^[0-9]+$/).test(val) ? parseInt(val, 10) : val;
     }
+
     /**
      * Парсит параметр из JSON строки в PlainObject
      *
@@ -52,7 +58,10 @@ window.XDsoftMap = function (options) {
         }
 
         try {
-            return jQ.parseJSON(code);
+            return jQ.parseJSON(code
+                .replace(/^[\s\n\t]+/g, '')
+                .replace(/[\s\n\t]+$/g, '')
+            );
 
         } catch (e) {
             console.log(e);
@@ -97,7 +106,7 @@ window.XDsoftMap = function (options) {
     /**
      * Перебирает все элементы массива или объекта и передает индекс каждого элемента и элемент в callback функцию
      *
-     * @param mixed haystack Массив или объект элементы которого нужно преребрать 
+     * @param mixed haystack Массив или объект элементы которого нужно преребрать
      * @param function callback Функция обработки, первым параметром получает индекс элемента(ключ), вторым сам элемент. Если функция фозвращает false то происходит сброс
      */
     function eachMix(haystack, callback) {
@@ -111,21 +120,23 @@ window.XDsoftMap = function (options) {
             }
         }
     }
+
     that.eachMix = eachMix;
 
     /**
      * Находит относительное расстояние между двумя точкамя
-     * @param Point p1 Координаты первой точки вида [x,y] 
+     * @param Point p1 Координаты первой точки вида [x,y]
      * @param Point p2 Координаты первой точки вида [x,y]
      * @return float
      */
     function distance(p1, p2) {
         return Math.sqrt(Math.pow(p2[0] - p1[0], 2) + Math.pow(p2[1] - p1[1], 2));
     }
+
     /**
      * Проверяет входит ли точка в ограничивающий двумя координатами прямоугольник
      *
-     * @params Point point Координаты проверяемой точки вида [x,y] 
+     * @params Point point Координаты проверяемой точки вида [x,y]
      * @params array bound Координаты верхней правой и нижней левой точек ограничивающего прямоугольника [[x,y],[x1,y1]]
      * @return boolean true - входит, false - не входит
      */
@@ -145,9 +156,11 @@ window.XDsoftMap = function (options) {
             return array2.indexOf(n) !== -1;
         }) : [];
     };
+
     function Events() {
         return this;
     }
+
     Events.prototype.parent = window;
     Events.prototype.timers = {};
     Events.prototype.callbacks = {};
@@ -213,7 +226,7 @@ window.XDsoftMap = function (options) {
     }
 
     CustomSearchProvider.prototype.geocode = function (request, options) {
-        var    deferred = new ymaps.vow.defer(),
+        var deferred = new ymaps.vow.defer(),
             offset = options.skip || 0,
             geoObjects = new ymaps.GeoObjectCollection(),
             limit = options.results || 20;
@@ -237,7 +250,7 @@ window.XDsoftMap = function (options) {
                 metaData: {
                     geocoder: {
                         request: request,
-                        found : geoObjects.getLength(),
+                        found: geoObjects.getLength(),
                         results: limit,
                         skip: offset
                     }
@@ -294,7 +307,7 @@ window.XDsoftMap = function (options) {
     /**
      * Устанавливает фильтр по элементам
      *
-     * @param array nfilter 
+     * @param array nfilter
      */
     that.setFilter = function (nfilter) {
         filter = nfilter;
@@ -333,7 +346,7 @@ window.XDsoftMap = function (options) {
     /**
      * Устанавливает расширенный фильтр. Не применяет его к текущим показанным элементам. Скрывает все элементы и показывает только те, что вернул сервер. Вся логика прописана на сервере
      *
-     * @param {string} key Ключ фильтра. По этому значению можно будет идентифицировать значение в плагине в методе system.onGenerateFilterWhere 
+     * @param {string} key Ключ фильтра. По этому значению можно будет идентифицировать значение в плагине в методе system.onGenerateFilterWhere
      * @param {string} value Значение для ключа фильтра. В методе любого плагина system.onGenerateFilterWhere по этому значению можно задавать дополнительные условия
      */
     that.setExtendedFilter = function (key, value) {
@@ -353,7 +366,7 @@ window.XDsoftMap = function (options) {
     /**
      * Возвращает текущий фильтр по элементам
      *
-     * @return array  
+     * @return array
      */
     that.getFilter = function () {
         if (jQ.inArray(0, filter) !== -1) {
@@ -367,14 +380,14 @@ window.XDsoftMap = function (options) {
      *
      * @param integer/string id Идентификатор объекта, на деле просто ключ из  хеша objects
      * @param boolean cold Если не указан или false то объект будет скрыт/показан в зависимости от того находится ли он в фильтре или нет. Если объект находится в кластере то удаляет его
-     * @return boolean true - объект виден (входит в фильтр), false - объект не виден 
+     * @return boolean true - объект виден (входит в фильтр), false - объект не виден
      */
     that.checkObjectInFilter = function (id, cold) {
         var visibility = true, bound, state;
         if (filter) {
             bound = map.getBounds();
             if (that.pointInBound([objects[id].lat, objects[id].lan], bound) && !objects[id].hidden) {
-                visibility = !filter || jQ.inArray(0, filter) !== -1 || (jQ.inArray(-1, filter) === -1  && !!(that.arrayIntersect(categoriesToObject[id], filter).length));
+                visibility = !filter || jQ.inArray(0, filter) !== -1 || (jQ.inArray(-1, filter) === -1 && !!(that.arrayIntersect(categoriesToObject[id], filter).length));
                 if (cold) {
                     return visibility;
                 }
@@ -507,16 +520,22 @@ window.XDsoftMap = function (options) {
         if (that.events.fire('beforeBallonOpen', id, objects[id]) === false) {
             return false;
         }
+
         setTimeout(function () {
             if (options.show_description_in_custom_balloon && customballoon.length) {
-                customballoon.find('.xdm_wg_title,.xdm_wg_object_name').html(objects[id].properties.get('iconContent'));
+                customballoon.find('.xdm_wg_title,.xdm_wg_object_name').html(
+                    jQuery.trim(objects[id].title || String(objects[id].properties.get('iconContent')))
+                );
+
                 customballoon.find('.xdm_wg_item_view>a')
                     .attr('href', objects[id].link)
                     .off('click')
                     .on('click', function () {
                         return that.goTo(id);
                     });
+
                 customballoon.find('.xdm_wg_description').html(objects[id].properties.get('balloonContent'));
+
                 customballoon.show();
             } else {
                 if (!clusterer) {
@@ -575,18 +594,18 @@ window.XDsoftMap = function (options) {
                 objects[id].options.set('visible', true);
             }
 
-            options.we_go_to  = true;
+            options.we_go_to = true;
             switch (options.howmoveto) {
-            case 1:
-                map
-                    .setCenter([objects[id].lat, objects[id].lan], objects[id].zoom);
-                break;
-            case 2:
-                return true;
-            default:
-                ymaps
-                    .geoQuery(objects[id])
-                    .applyBoundsToMap(map, {checkZoomRange: true});
+                case 1:
+                    map
+                        .setCenter([objects[id].lat, objects[id].lan], objects[id].zoom);
+                    break;
+                case 2:
+                    return true;
+                default:
+                    ymaps
+                        .geoQuery(objects[id])
+                        .applyBoundsToMap(map, {checkZoomRange: true});
             }
 
             if (options.update_category_selector_onboundsechange && jQ('.xdsoft_select_category_input' + map.id).length) {
@@ -602,7 +621,7 @@ window.XDsoftMap = function (options) {
 
             clearTimeout(we_go_to_timer);
             we_go_to_timer = setTimeout(function () {
-                options.we_go_to  = false;
+                options.we_go_to = false;
             }, 1500);
 
             return false;
@@ -623,24 +642,24 @@ window.XDsoftMap = function (options) {
      */
     that.buildLayout = function (layout, obj, properties, options) {
         switch (layout) {
-        case "circle_ballon_simple":
-        case "circle_ballon":
-            if (layouts[layout] === undefined) {
-                layouts[layout] = ymaps.templateLayoutFactory.createClass('<div class="xdsoft_circle_ballon xdsoft_' + layout + '"><div style="border-color:{{ properties.iconColor }};background-image:url({{ properties.iconImageHref }});" class="xdsoft_circle_ballon_clowd"><div style="border-top-color:{{ properties.iconColor }} !important;" class="xdsoft_circle_ballon_clowd_triangle"></div></div></div>');
-            }
+            case "circle_ballon_simple":
+            case "circle_ballon":
+                if (layouts[layout] === undefined) {
+                    layouts[layout] = ymaps.templateLayoutFactory.createClass('<div class="xdsoft_circle_ballon xdsoft_' + layout + '"><div style="border-color:{{ properties.iconColor }};background-image:url({{ properties.iconImageHref }});" class="xdsoft_circle_ballon_clowd"><div style="border-top-color:{{ properties.iconColor }} !important;" class="xdsoft_circle_ballon_clowd_triangle"></div></div></div>');
+                }
 
-            properties.iconColor = options.iconColor || '#fff';
-            properties.iconImageHref = options.iconImageHref;
-            options.iconLayout = layouts[layout];
-            options.iconShape = {
-                type: 'Rectangle',
-                coordinates: layout === 'circle_ballon' ? [
-                    [-20, -20], [20, 20]
-                ] : [
-                    [-30, -60], [30, 0]
-                ]
-            };
-            break;
+                properties.iconColor = options.iconColor || '#fff';
+                properties.iconImageHref = options.iconImageHref;
+                options.iconLayout = layouts[layout];
+                options.iconShape = {
+                    type: 'Rectangle',
+                    coordinates: layout === 'circle_ballon' ? [
+                        [-20, -20], [20, 20]
+                    ] : [
+                        [-30, -60], [30, 0]
+                    ]
+                };
+                break;
         }
     };
 
@@ -648,11 +667,11 @@ window.XDsoftMap = function (options) {
      * Выполняет заданное через настройку options.howmoveto_on_category_change(либо параметр forse) действие. Выполняется при клике по категории или смене ее в контроллерах.
      * при options.howmoveto_on_category_change = 0 происходит переход на страницу категории
      * при options.howmoveto_on_category_change = 1 если у категории есть объекты то находиться координаты включающие все объекты если нет то происходит переход на заданные координаты
-     * при options.howmoveto_on_category_change = 4 происходит действие 1 и при этом закрываются все остальные категории 
+     * при options.howmoveto_on_category_change = 4 происходит действие 1 и при этом закрываются все остальные категории
      * при options.howmoveto_on_category_change = 3 аналогично 4
      * иное options.howmoveto_on_category_change происходит переход на заданные координаты
      *
-     * @param integer id Идентификатор категории 
+     * @param integer id Идентификатор категории
      * @param string href Ссылка на страницу категории
      * @param integer forse В случае когда задан этот параметр, он выполняет роль options.howmoveto_on_category_change
      */
@@ -663,35 +682,35 @@ window.XDsoftMap = function (options) {
             if (categories[id] !== undefined) {
                 state = forse !== undefined ? forse : options.howmoveto_on_category_change;
                 switch (state) {
-                case 0:
-                    if (href) {
-                        window.location.href = href;
-                    }
-                    return false;
-                case 4:
-                case 3:
-                    jQ('.category_' + id).toggleClass('xdsoft_close').toggleClass('xdsoft_open');
-                    jQ('.xdsoft_category_id' + id).toggleClass('xdsoft_hidden');
-                    that.goToCategory(id, href, 1);
-                    break;
-                case 1:
-                    if (objectsToCategory[id] !== undefined) {
-                        ymaps
-                            .geoQuery(that.getObjectsByCategory(id))
-                            .applyBoundsToMap(map, {checkZoomRange: true});
-                    } else {
+                    case 0:
+                        if (href) {
+                            window.location.href = href;
+                        }
+                        return false;
+                    case 4:
+                    case 3:
+                        jQ('.category_' + id).toggleClass('xdsoft_close').toggleClass('xdsoft_open');
+                        jQ('.xdsoft_category_id' + id).toggleClass('xdsoft_hidden');
+                        that.goToCategory(id, href, 1);
+                        break;
+                    case 1:
+                        if (objectsToCategory[id] !== undefined) {
+                            ymaps
+                                .geoQuery(that.getObjectsByCategory(id))
+                                .applyBoundsToMap(map, {checkZoomRange: true});
+                        } else {
+                            map
+                                .setCenter([categories[id].lat, categories[id].lan], categories[id].zoom);
+                        }
+                        break;
+                    case 5:
+                        that.setFilter([id]);
+                        that.goToCategory(id, href, 1);
+                        break;
+                    default:
                         map
                             .setCenter([categories[id].lat, categories[id].lan], categories[id].zoom);
-                    }
-                    break;
-                case 5:
-                    that.setFilter([id]);
-                    that.goToCategory(id, href, 1);
-                    break;
-                default:
-                    map
-                        .setCenter([categories[id].lat, categories[id].lan], categories[id].zoom);
-                    break;
+                        break;
                 }
             }
             return false;
@@ -707,7 +726,7 @@ window.XDsoftMap = function (options) {
     /**
      * Добавляет объекты на карту и в кластер если он используется
      *
-     * @param mixed nobjects Массив либо hash объектов 
+     * @param mixed nobjects Массив либо hash объектов
      */
     that.addObjectsToMap = function (nobjects) {
         var object,
@@ -723,7 +742,10 @@ window.XDsoftMap = function (options) {
             var category = categories[obj.category_id];
 
             if (!objects[obj.id] && window.ymaps) {
-                lcoordinates = that.parseJSON(obj.coordinates);
+                if (obj.coordinates) {
+                    lcoordinates = that.parseJSON(obj.coordinates);
+                }
+
                 lproperties = that.parseJSON(obj.properties);
                 loptions = that.parseJSON(obj.options);
 
@@ -755,7 +777,7 @@ window.XDsoftMap = function (options) {
                             delete loptions.iconColor;
 
                             if (!loptions.iconImageSize) {
-                                loptions.iconImageSize = options.defaultView.options.iconImageSize || [16 , 16];
+                                loptions.iconImageSize = options.defaultView.options.iconImageSize || [16, 16];
                             }
 
                             if (typeof loptions.iconImageSize === 'string') {
@@ -763,7 +785,9 @@ window.XDsoftMap = function (options) {
                             }
 
                             if (!loptions.iconImageOffset) {
-                                loptions.iconImageOffset = loptions.iconImageSize.map(function (a) { return -Math.round(a / 2)});
+                                loptions.iconImageOffset = loptions.iconImageSize.map(function (a) {
+                                    return -Math.round(a / 2)
+                                });
                             }
                         }
                     }
@@ -965,12 +989,12 @@ window.XDsoftMap = function (options) {
 
         if (cache[hash] === undefined || $forseid !== undefined) {
             xhr = jQ.post(options.url_root + 'index.php?option=com_yandex_maps&task=load', jQ.extend({
-                forse_id:    $forseid || 0,
-                filters:    that.getFilter(),
-                map_id:        map.id,
-                bound:        bounds,
-                offset:        offset,
-                limit:        limit
+                forse_id: $forseid || 0,
+                filters: that.getFilter(),
+                map_id: map.id,
+                bound: bounds,
+                offset: offset,
+                limit: limit
             }, extendedFilter), function (data) {
                 cache[hash] = data;
                 processData(data);
@@ -987,7 +1011,7 @@ window.XDsoftMap = function (options) {
      * @param integer offset Смещение от уже загруженного числа объектов
      * @param integer limit Число объектов которое грузим за один раз
      * @param string search Фильтрующий запрос
-     * @param function callback Вызывается после успешного запроса, в первый параметр подаются объекты уже добавленные на карту и 
+     * @param function callback Вызывается после успешного запроса, в первый параметр подаются объекты уже добавленные на карту и
      **/
     that.loadFree = function (offset, limit, search, callback) {
         offset = offset || 0;
@@ -1041,13 +1065,13 @@ window.XDsoftMap = function (options) {
                     vars[i] = /(center|zoom)=([0-9,\.]+)/.exec(vars[i]);
                     if (vars[i]) {
                         switch (vars[i][1]) {
-                        case 'center':
-                            vars[i][2] = vars[i][2].split(',');
-                            map.setCenter([vars[i][2][0], vars[i][2][1]]);
-                            break;
-                        case 'zoom':
-                            map.setZoom(parseInt(vars[i][2], 10));
-                            break;
+                            case 'center':
+                                vars[i][2] = vars[i][2].split(',');
+                                map.setCenter([vars[i][2][0], vars[i][2][1]]);
+                                break;
+                            case 'zoom':
+                                map.setZoom(parseInt(vars[i][2], 10));
+                                break;
                         }
                     }
                 }
@@ -1158,9 +1182,11 @@ window.XDsoftMap = function (options) {
             paginator.html('');
             return;
         }
+
         function link(i, t) {
             return '<a ' + (i === page ? 'class="active"' : '') + (i !== page ? ' href="javascript:void(0)" onclick="map' + map.id + '.openPage(' + i + ',\'' + search.replace(/'"/g, '$1') + '\'' + (bounds ? ',' + JSON.stringify(bounds) : '') + ')"' : '') + '>' + t + '</a>';
         }
+
         search = search || '';
         page = page || 1;
         i = page;
@@ -1197,13 +1223,13 @@ window.XDsoftMap = function (options) {
         }
         search = search || '';
         xhr = jQ.post(options.url_root + 'index.php?option=com_yandex_maps&task=load', jQ.extend({
-            search: search,
-            map_id: map.id,
-            bound: bounds,
-            generate: 1,
-            offset: options.counonpage * (page - 1),
-            limit: options.counonpage
-        }, extendedFilter),
+                search: search,
+                map_id: map.id,
+                bound: bounds,
+                generate: 1,
+                offset: options.counonpage * (page - 1),
+                limit: options.counonpage
+            }, extendedFilter),
             function (data) {
                 if (data.objects) {
                     that.addObjectsToMap(data.objects);
@@ -1251,12 +1277,12 @@ window.XDsoftMap = function (options) {
             paginator = jQ('<div class="xdsoft_search_object_pagination"></div>');
 
             switch (options.show_pagination) {
-            case 1:
-                list.find('.items_box').after(paginator);
-                break;
-            case 2:
-                list.find('.items_box').before(paginator);
-                break;
+                case 1:
+                    list.find('.items_box').after(paginator);
+                    break;
+                case 2:
+                    list.find('.items_box').before(paginator);
+                    break;
             }
 
             generatePagination(1, full_count);
@@ -1275,7 +1301,7 @@ window.XDsoftMap = function (options) {
             lan: e ? e.get('coords')[1] : 0
         }, function (resp) {
             function closedialog(e, id) {
-                dialog2.dialog('hide');
+                dialog2.dialogBox('hide');
                 if (id !== undefined) {
                     that.load(0, 1, [], false, id);
                 }
@@ -1284,14 +1310,15 @@ window.XDsoftMap = function (options) {
                     e.stopPropagation();
                 }
             }
-            dialog2 = jQ('<div style="max-width:700px;" class="container">' + resp + '</div>').dialog({
+
+            dialog2 = jQ('<div style="max-width:700px;" class="container">' + resp + '</div>').dialogBox({
                 title: 'Регистрация объектов',
                 onAfterShow: function () {
                     if (window.initRegistration) {
                         window.initRegistration();
                     }
                     jQ('body').on('successAddObject.xdsoft', function () {
-                        dialog2.dialog('hide');
+                        dialog2.dialogBox('hide');
                         jQ('body').off('successAddObject.xdsoft', closedialog);
                     });
                 },
@@ -1303,7 +1330,7 @@ window.XDsoftMap = function (options) {
             });
             jQ('body').on('successAddObject.xdsoft', closedialog);
         }).always(function () {
-            dialog.dialog('hide');
+            dialog.dialogBox('hide');
         });
     };
 
@@ -1358,17 +1385,17 @@ window.XDsoftMap = function (options) {
         }
         if (!ymaps.control.storage.get('addUserPoint')) {
             ymaps.control.storage.add('addUserPoint', function () {
-                var btn =  new ymaps.control.Button({
-                        data: {
-                            image: options.url_root + 'media/com_yandex_maps/images/add.svg',
-                            content: 'Добавить объект',
-                            title: 'Нажмите чтобы добавить новую точку'
-                        },
-                        options: {
-                            selectOnClick: false,
-                            maxWidth: [30, 100, 150]
-                        }
-                    });
+                var btn = new ymaps.control.Button({
+                    data: {
+                        image: options.url_root + 'media/com_yandex_maps/images/add.svg',
+                        content: 'Добавить объект',
+                        title: 'Нажмите чтобы добавить новую точку'
+                    },
+                    options: {
+                        selectOnClick: false,
+                        maxWidth: [30, 100, 150]
+                    }
+                });
                 btn.events.add('click', function () {
                     if (options.registration_organization_use_addres_position) {
                         that.addPointonMap.apply(btn.getMap());
@@ -1394,5 +1421,6 @@ window.XDsoftMap = function (options) {
             });
         }
     };
+
     return that;
 };

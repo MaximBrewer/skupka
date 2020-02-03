@@ -11,56 +11,69 @@
 defined('_JEXEC') or die('Restricted access');
 require_once (dirname(__FILE__) . '/helper.php');
 
-// retrieve menu items
-$thirdparty = $params->get('thirdparty', 'none');
-switch ($thirdparty) :
-	default:
-	case 'none':
-		// Include the syndicate functions only once
-		// require_once dirname(__FILE__).'/helper.php';
-		$list = modAccordeonckHelper::getItems($params, $module);
-		break;
-	case 'virtuemart':
-		// Include the syndicate functions only once
-		if (JFile::exists(dirname(__FILE__) . '/helper_virtuemart.php')) {
-			require_once dirname(__FILE__) . '/helper_virtuemart.php';
-			$list = modAccordeonckvirtuemartHelper::getItems($params, $params->get('vmcategoryroot', '0'), '1');
-		} else {
-			echo '<p style="color:red;font-weight:bold;">File helper_virtuemart.php not found ! Please download the patch for Accordeonmenu - Virtuemart on <a href="http://www.joomlack.fr">http://www.joomlack.fr</a></p>';
-			return false;
-		}
-		break;
-	case 'hikashop':
-		// Include the syndicate functions only once
-		if (JFile::exists(dirname(__FILE__) . '/helper_hikashop.php')) {
-			require_once dirname(__FILE__) . '/helper_hikashop.php';
-			$list = modAccordeonckhikashopHelper::getItems($params, false);
-		} else {
-			echo '<p style="color:red;font-weight:bold;">File helper_hikashop.php not found ! Please download the patch for Accordeonmenu - Hikashop on <a href="http://www.joomlack.fr">http://www.joomlack.fr</a></p>';
-			return false;
-		}
-		break;
-	case 'articles':
-		// Include the syndicate functions only once
-		if (JFile::exists(dirname(__FILE__) . '/helper_articles.php')) {
-			require_once dirname(__FILE__) . '/helper_articles.php';
-			$list = modAccordeonckarticlesHelper::getItems($params);
-		} else {
-			echo '<p style="color:red;font-weight:bold;">File helper_articles.php not found ! Please download the patch for Accordeonmenu - Articles on <a href="http://www.joomlack.fr">http://www.joomlack.fr</a></p>';
-			return false;
-		}
-		break;
-	case 'k2':
-		// Include the syndicate functions only once
-		if (JFile::exists(dirname(__FILE__) . '/helper_k2.php')) {
-			require_once dirname(__FILE__) . '/helper_k2.php';
-			$list = modAccordeonckk2Helper::getItems($params);
-		} else {
-			echo '<p style="color:red;font-weight:bold;">File helper_k2.php not found ! Please download the patch for Accordeonmenu - K2 on <a href="http://www.joomlack.fr">http://www.joomlack.fr</a></p>';
-			return false;
-		}
-		break;
-endswitch;
+// load the items
+$source = $params->get('source', 'menu');
+if ($source != 'menu') {
+	$sourceFile = JPATH_ROOT . '/plugins/accordeonmenuck/' . strtolower($source) . '/helper/helper_' . strtolower($source) . '.php';
+	if (! file_exists($sourceFile)) {
+		echo '<p syle="color:red;">Error : File plugins/accordeonmenuck/' . strtolower($source) . '/helper/helper_' . strtolower($source) . '.php not found !</p>';
+		return;
+	}
+	include_once $sourceFile;
+	$loaderClass = 'AccordeonmenuckHelpersource' . ucfirst($source);
+	$list = $items = $loaderClass::getItems($params);
+} else {
+	// retrieve menu items
+	$thirdparty = $params->get('thirdparty', 'none');
+	switch ($thirdparty) :
+		default:
+		case 'none':
+			// Include the syndicate functions only once
+			// require_once dirname(__FILE__).'/helper.php';
+			$list = modAccordeonckHelper::getItems($params, $module);
+			break;
+		case 'virtuemart':
+			// Include the syndicate functions only once
+			if (JFile::exists(dirname(__FILE__) . '/helper_virtuemart.php')) {
+				require_once dirname(__FILE__) . '/helper_virtuemart.php';
+				$list = modAccordeonckvirtuemartHelper::getItems($params, $params->get('vmcategoryroot', '0'), '1');
+			} else {
+				echo '<p style="color:red;font-weight:bold;">File helper_virtuemart.php not found ! Please download the patch for Accordeonmenu - Virtuemart on <a href="http://www.joomlack.fr">http://www.joomlack.fr</a></p>';
+				return false;
+			}
+			break;
+		case 'hikashop':
+			// Include the syndicate functions only once
+			if (JFile::exists(dirname(__FILE__) . '/helper_hikashop.php')) {
+				require_once dirname(__FILE__) . '/helper_hikashop.php';
+				$list = modAccordeonckhikashopHelper::getItems($params, false);
+			} else {
+				echo '<p style="color:red;font-weight:bold;">File helper_hikashop.php not found ! Please download the patch for Accordeonmenu - Hikashop on <a href="http://www.joomlack.fr">http://www.joomlack.fr</a></p>';
+				return false;
+			}
+			break;
+		case 'articles':
+			// Include the syndicate functions only once
+			if (JFile::exists(dirname(__FILE__) . '/helper_articles.php')) {
+				require_once dirname(__FILE__) . '/helper_articles.php';
+				$list = modAccordeonckarticlesHelper::getItems($params);
+			} else {
+				echo '<p style="color:red;font-weight:bold;">File helper_articles.php not found ! Please download the patch for Accordeonmenu - Articles on <a href="http://www.joomlack.fr">http://www.joomlack.fr</a></p>';
+				return false;
+			}
+			break;
+		case 'k2':
+			// Include the syndicate functions only once
+			if (JFile::exists(dirname(__FILE__) . '/helper_k2.php')) {
+				require_once dirname(__FILE__) . '/helper_k2.php';
+				$list = modAccordeonckk2Helper::getItems($params);
+			} else {
+				echo '<p style="color:red;font-weight:bold;">File helper_k2.php not found ! Please download the patch for Accordeonmenu - K2 on <a href="http://www.joomlack.fr">http://www.joomlack.fr</a></p>';
+				return false;
+			}
+			break;
+	endswitch;
+}
 
 // $list = modAccordeonckHelper::getMenu($params);
 if (!$list)
@@ -152,6 +165,7 @@ $js = "
 		. "imageminus : '" . JURI::base(true) . '/' . $imageminus . "',"
 		. "defaultopenedid : '" . $params->get('defaultopenedid') . "',"
 		. "activeeffect : '" . (bool) $params->get('activeeffect') . "',"
+		. "showcounter : '" . (bool) $params->get('showcounter', false) . "',"
 		. "duree : " . $mooduration
 		. "});
 }); ";

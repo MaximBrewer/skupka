@@ -52,6 +52,7 @@ attachEventsToMap = function (map) {
 						"metaType":"Circle"
 					});
 				break;
+
 				case 'placemark':
 					var val, tmp_object = addObject(map, object_type, cur, {
 						preset: $get('#preset').val(),
@@ -69,19 +70,13 @@ attachEventsToMap = function (map) {
 						tmp_object.options.set('iconImageSize', validateArray($get('#iconImageSize').val()));
 						tmp_object.options.set('iconImageOffset', validateArray($get('#iconImageOffset').val()));
 					}
-					/*
-					else if ($get('#iconColor').val() && (val = validateColor($get('#iconColor').val()))) {
-						tmp_object.options.set('iconColor', val);
-						if (val && $get('#preset').val().match(/Stretchy|geolocation/)) {
-							$get('#preset').val('islands#icon').trigger('change');
-						}
-					}*/
 					
 				break;
 			}
 		}
 		e.preventDefault();
 	});
+
 	$get('#option_and_properties').find('.properties,.options,#balloonContent').on('change changex blur keypress keydown', function () {
 		if (!object || !this.getAttribute('id')) {
 			return;
@@ -103,6 +98,7 @@ attachEventsToMap = function (map) {
 			break;
 			case 'iconColor':
 				val = validateColor(val);
+
 				if (val && $get('#preset').val().match(/Stretchy|geolocation/)) {
 					$get('#preset').val('islands#icon').trigger('change');
 				}
@@ -122,10 +118,12 @@ attachEventsToMap = function (map) {
 		object[mode].set(this.getAttribute('id'), val);
 	});
 };
+
 var _opt = {
 		options:['strokeColor','strokeOpacity','strokeWidth','fillColor','fillOpacity','preset','iconColor','iconImageHref', 'iconImageSize', 'iconImageOffset','visible'],
 		properties:['metaType','iconContent','balloonContent']
-	}
+	};
+
 initForm = function (object_type,object){
 	var options = getObjectData(object),
 		option_and_properties = top.jQuery.extend(true, {}, options[1], options[2]);
@@ -143,6 +141,7 @@ initForm = function (object_type,object){
 		}
 	});
 };
+
 getObjectData = function (object){
 	if (!object)
 		return;
@@ -179,8 +178,10 @@ getObjectData = function (object){
 		optes['options'],
 		optes['properties'],
 	]
-}
+};
+
 var timeoutupdate;
+
 objectWasUpdated = function  (object) {
 	clearTimeout(timeoutupdate);
 	timeoutupdate = setTimeout(function(){
@@ -190,6 +191,7 @@ objectWasUpdated = function  (object) {
 		$get('#jform_properties').val(JSON.stringify(opt[2]));
 	}, 100);
 };
+
 loadImage = function (fimage, callback) {
     var loaded = false;
     function loadHandler() {
@@ -206,6 +208,7 @@ loadImage = function (fimage, callback) {
         loadHandler();
     }
 };
+
 validateArray = function (value) {
 	var i = 0;
 	value = value.split(',');
@@ -214,6 +217,7 @@ validateArray = function (value) {
 	}
 	return value;
 };
+
 validateColor = function (color) {
 	if (!color) {
 		return '';
@@ -225,23 +229,29 @@ validateColor = function (color) {
 		color = '#ffffff';
 	}
 	return color.toUpperCase();
-}
+};
+
 deleteObject = function (map, object){
 	map.geoObjects.remove(object);
 	sizerBox.hide();
 	delete object;
 };
+
 addObject = function (map, object_type, coordinates, options, properties, created){
 	properties = top.jQuery.extend(true, {}, properties);
 	options = top.jQuery.extend(true, {}, options);
 	if (object) {
 		deleteObject(map, object, sizerBox);
 	}
-	if( !coordinates||!coordinates.length )
-		return;
-	if( options )
-		options['draggable'] = true;
-	
+
+	if (!coordinates||!coordinates.length){
+        return;
+    }
+
+	if (options) {
+        options['draggable'] = true;
+    }
+
 	switch( object_type ){
 		case 'polygon':case 'polyline':
 			object = new ymaps[object_type=='polygon'?'Polygon':'Polyline']( coordinates,properties,options)
@@ -255,17 +265,10 @@ addObject = function (map, object_type, coordinates, options, properties, create
 	}
 	
 	object.events.add('dblclick',function(e){
-		/*initForm(object_type,object);
-		sizerBox.init(object);
-		map.setCenter(getPosition(object.geometry.getCoordinates()));
-		e.preventDefault();
-		e.stopPropagation();*/
 		return false;
 	});
 
 	object.events.add('click',function(e){
-		//initForm(object_type,object,window.selectOneObject == object);
-		//sizerBox.init(object);
 	});
 	
 	sizerBox.init(object);
@@ -277,6 +280,7 @@ addObject = function (map, object_type, coordinates, options, properties, create
 		.add(['geometrychange','optionschange','propertieschange'],function(){
 			objectWasUpdated(object);
 		});
+
 	return object;
 };
 

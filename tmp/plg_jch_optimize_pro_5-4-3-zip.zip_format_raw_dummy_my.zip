@@ -1,0 +1,960 @@
+<!doctype html>
+<html xml:lang="en-gb" lang="en-gb" >
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="https://www.jch-optimize.net/index.php" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="jch optimize, increase website download speed, improve site performance, combine css javascript, search engine optimization, seo, speed up joomla, minimize http requests, reduce http requests, minify, optimize download, increase pagespeed score, increase gtmetrix score, speed up wordpress, optimize joomla, optimize wordpress" />
+	<meta name="description" content="Speed up your website! Plugin for Joomla! and WordPress to optimize web page download speed by aggregating and minifying css and javascript files." />
+	<meta name="generator" content="MYOB" />
+	<title>Joomla Starter</title>
+	<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="https://www.jch-optimize.net/templates/rt_epsilon/media/com_akeebasubs/css/frontend.css?8b1a7e868ca2fda16351b8626a159409" rel="stylesheet" type="text/css" />
+	<link href="https://www.jch-optimize.net/media/com_akeebasubs/css/validationEngine.jquery.css?8b1a7e868ca2fda16351b8626a159409" rel="stylesheet" type="text/css" />
+	<link href="/libraries/gantry/css/grid-responsive.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/rt_epsilon/css-compiled/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/rt_epsilon/css-compiled/master-1fef1fa5501ffaeee90b5ffb352f22dd.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/rt_epsilon/css-compiled/demo-1fef1fa5501ffaeee90b5ffb352f22dd.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/rt_epsilon/css-compiled/mediaqueries.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+#rt-logo {background: url(/images/logo.png) 50% 0 no-repeat !important;}
+#rt-logo {width: 173px;height: 60px;}
+
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"03aab16ad9b9d2ee2c85a7a51175a02d","system.paths":{"root":"","base":""}}</script>
+	<script src="/media/jui/js/jquery.min.js?e1b90996b80401ea33d586c2002cf3c9" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?e1b90996b80401ea33d586c2002cf3c9" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?e1b90996b80401ea33d586c2002cf3c9" type="text/javascript"></script>
+	<script src="/media/system/js/core.js?e1b90996b80401ea33d586c2002cf3c9" type="text/javascript"></script>
+	<script src="https://www.jch-optimize.net/media/com_akeebasubs/js/jquery.validationEngine-en.js?8b1a7e868ca2fda16351b8626a159409" type="text/javascript"></script>
+	<script src="https://www.jch-optimize.net/media/com_akeebasubs/js/jquery.validationEngine.js?8b1a7e868ca2fda16351b8626a159409" type="text/javascript"></script>
+	<script src="https://www.jch-optimize.net/media/com_akeebasubs/js/autosubmit.js?8b1a7e868ca2fda16351b8626a159409" type="text/javascript"></script>
+	<script src="/media/jui/js/bootstrap.min.js?e1b90996b80401ea33d586c2002cf3c9" type="text/javascript"></script>
+	<script src="/media/system/js/mootools-core.js?e1b90996b80401ea33d586c2002cf3c9" type="text/javascript"></script>
+	<script src="/media/system/js/mootools-more.js?e1b90996b80401ea33d586c2002cf3c9" type="text/javascript"></script>
+	<script src="/templates/rt_epsilon/js/chart.js" type="text/javascript"></script>
+	<script src="/libraries/gantry/js/browser-engines.js" type="text/javascript"></script>
+	<script src="/templates/rt_epsilon/js/rokmediaqueries.js" type="text/javascript"></script>
+	<script src="/templates/rt_epsilon/js/headroom.js" type="text/javascript"></script>
+	<script src="/templates/rt_epsilon/js/headroom_init.js" type="text/javascript"></script>
+	<script src="/templates/rt_epsilon/js/scrolling-header.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+akeebasubs_level_id = 9;
+
+var akeebasubs_validate_url = "https://www.jch-optimize.net/index.php";
+var akeebasubs_blocked_gui = false;
+
+function hideShowBusiness(){
+	// Do I have to show the business fields?
+	var elIsBusiness = jQuery("#isbusiness");
+
+	if (elIsBusiness.val() === "1")
+	{
+		jQuery("#businessfields").show();
+	}
+	else
+	{
+		jQuery("#businessfields").hide();
+	}
+};
+
+
+function checkState(field, rules, i, options){
+	if (jQuery('#country').val() == "US" && field.val() == '') {
+		// this allows to use i18 for the error msgs
+		return options.allrules.required.alertText;
+	}
+};
+
+
+function blockInterface ()
+{
+	(function ($)
+	{
+		var btnSubscribeNow = $("#subscribenow");
+
+		btnSubscribeNow.attr("disabled", "disabled");
+
+		akeebasubs_blocked_gui = true;
+
+	})(jQuery);
+}
+
+function enableInterface ()
+{
+	(function ($)
+	{
+		var btnSubscribeNow = $("#subscribenow");
+
+		btnSubscribeNow.unbind("click");
+		btnSubscribeNow.removeAttr("disabled");
+
+		akeebasubs_blocked_gui = false;
+
+	})(jQuery);
+}
+
+function loadStateLists()
+{
+	(function($)
+	{
+		var elCountry = $("#country");
+		var elCoupon = $("#coupon");
+		var elIsBusiness = $("#isbusiness");
+
+		var data = {
+		country     : elCountry.val(),
+			state       : $("#state").val(),
+			city        : $("#city").val(),
+			zip         : $("#zip").val(),
+			isbusiness  : elIsBusiness.val(),
+			businessname: $("#businessname").val(),
+			occupation  : $("#occupation").val(),
+			coupon      : (elCoupon.length > 0) ? elCoupon.val() : ""
+		};
+
+		blockInterface();
+
+		$.ajax({
+		type    : "POST",
+			url     : akeebasubs_validate_url + "?option=com_akeebasubs&view=Validate&task=getpayment&format=json",
+			data    : data,
+			dataType: "text",
+			success : function (result)
+			{
+				var html = /###(\{.*?\})###/.exec(result);
+
+				if (html && html[1] !== "undefined" && html[1].html !== "undefined")
+				{
+					// Before building the new payment list, let's save the select method, so I can select
+					// it again
+					var cur_method = $("input[name=\"paymentmethod\"]:checked").val();
+					$("#paymentlist-container").html(JSON.parse(html[1]).html);
+					$("input[name=\"paymentmethod\"][value=\"" + cur_method + "\"]").prop("checked", true);
+
+					if (html[1].states !== "undefined")
+					{
+						$("#akeebasubs-statescontainer").html(JSON.parse(html[1]).states);
+					}
+				}
+
+				enableInterface();
+			},
+			error   : function ()
+			{
+				enableInterface();
+			}
+		});
+	})(jQuery);
+
+};
+
+jQuery(document).ready(function(){
+	hideShowBusiness();
+
+	jQuery("#isbusiness").change(hideShowBusiness);
+	jQuery("#country").change(loadStateLists);
+
+	// binds form submission and fields to the validation engine
+	jQuery("#signupForm").validationEngine();
+});jQuery(function($){ initPopovers(); $("body").on("subform-row-add", initPopovers); function initPopovers (event, container) { $(container || document).find(".hasPopover").popover({"html": true,"trigger": "hover focus","container": "body"});} });
+	</script>
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61484543-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- Universal Google Analytics Plugin by PB Web Development -->
+
+
+</head>
+<body  class="logo-type-custom header-type-headroom demoroksprocket-type-custom top-type-epsilon maintop-type-epsilon mainbody-overlay-dark footer-type-epsilon font-family-epsilon font-size-is-default menu-type-dropdownmenu menu-dropdownmenu-position-header-b layout-mode-responsive col12 option-com-akeebasubs menu-jmstarter ">
+	<div id="rt-page-surround">
+				<header id="rt-header-surround">
+						<div id="rt-header" class="scrollheader">
+				<div class="rt-container">
+					<div class="rt-grid-12 rt-alpha rt-omega">
+            <div class="rt-logo-block">
+            <a href="/" id="rt-logo"></a>
+        </div>
+        
+</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+									<div id="rt-drawer">
+				<div class="rt-container">
+										<div class="clear"></div>
+				</div>
+			</div>
+																	</header>
+		
+				<section id="rt-main-surround">
+			<div id="rt-transition">
+				<div id="rt-mainbody-surround">
+																																								          
+<div id="rt-main" class="mb12">
+                <div class="rt-container">
+                    <div class="rt-grid-12 ">
+                                                						<div class="rt-block">
+	                        <div id="rt-mainbody">
+								<div class="component-content">
+	                            	<div id="akeeba-renderer-fef" class="akeeba-renderer-fef ">
+
+<!--Begin Level/default-->
+<div id="akeebasubs">
+
+		
+		 			            <div class="rt-block  nopaddingleft nomarginleft nopaddingtop nomargintop nomarginbottom">
+           	<div class="module-surround">
+	           		                	<div class="module-content">
+	                		
+
+<div class="custom nopaddingleft nomarginleft nopaddingtop nomargintop nomarginbottom"  >
+	<h2>
+  JCH Optimize Pro for Joomla!
+</h2></div>
+	                	</div>
+                	</div>
+           </div>
+	
+	<div class="clearfix"></div>
+
+		<noscript>
+		<div class="alert alert-warning">
+			<h3>
+				<span class="glyphicon glyphicon-alert"></span>
+				Javascript is blocked or not enabled			</h3>
+			<p>Javascript needs to be enabled to process your payment. Please enable Javascript on your browser and turn off any Javascript blockers (e.g. NoScript). Thank you for your understanding!</p>
+			<p>
+				<a href="http://enable-javascript.com" class="btn btn-primary" target="_blank">
+					<span class="glyphicon glyphicon-info-sign"></span>
+					Learn how to enable Javascript and why				</a>
+			</p>
+		</div>
+	</noscript>
+
+	<form
+		action="/subscribes/jmstarter/subscribe/jmstarter.html?layout=default"
+		method="post"
+		id="signupForm" class="form form-horizontal">
+		<input type="hidden" name="03aab16ad9b9d2ee2c85a7a51175a02d" value="1"/>
+
+<div class="rt-container">
+		<div class="rt-grid-6 rt-alpha">
+						<div id="akeebasubs-panel-account" class="rt-block box3">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						Your Account					</h3>
+				</div>
+				<div class="panel-body">
+					
+<div class="form form-horizontal akeebasubs-signup-fields">
+        <fieldset>
+                
+		<legend>Personal Information</legend>
+
+		<div id="akeebasubs-level-login" class="control-group">
+		<div class="col-sm-8 controls">
+			<a href="/user-component.html?return=aHR0cHM6Ly93d3cuamNoLW9wdGltaXplLm5ldC9pbmRleC5waHA/SXRlbWlkPTkxMQ=="
+			   class="rt-btn btn btn-primary" rel="nofollow,noindex">
+				<span class="icon-signin"></span>
+				Do you have an account already?			</a>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
+		<div class="form-group control-group ">
+                <div class="control-label">
+		<label for="username" class="col-sm-4">
+			Username		</label>
+                </div>
+
+		<div class="col-sm-8 controls">
+			<input type="text" class="form-control" name="username" id="username"
+				   value="" data-validation-engine="validate[required,ajax[ajaxUserCall]]" data-prompt-position="bottomLeft"/>
+		</div>
+	</div>
+
+		<div class="form-group control-group ">
+                <div class="control-label">
+		<label for="password" class=" col-sm-4">
+			Password		</label>
+                </div>
+
+		<div class="col-sm-8 controls">
+			<input type="password" class="form-control" name="password" id="password"
+				   value="" data-validation-engine="validate[required]" data-prompt-position="bottomLeft"/>
+		</div>
+	</div>
+
+		<div class="form-group control-group ">
+                <div class="control-label">
+		<label for="password2" class="col-sm-4">
+			Retype Password		</label>
+                </div>
+
+		<div class="col-sm-8 controls">
+			<input type="password" class="form-control" name="password2" id="password2"
+				   value="" data-validation-engine="validate[equals[password]]" data-prompt-position="bottomLeft" />
+		</div>
+	</div>
+	
+	
+		<div class="form-group control-group ">
+                <div class="control-label">
+		<label for="email" class="col-sm-4">
+			Email		</label>
+                </div>
+
+		<div class="col-sm-8 controls">
+			<input type="text" class="form-control" name="email" id="email"
+				   value="" data-validation-engine="validate[required,custom[email],ajax[ajaxEmailCall]]" data-prompt-position="bottomLeft"/>
+		</div>
+	</div>
+
+		<div class="form-group control-group ">
+                <div class="control-label">
+		<label for="email2" class="col-sm-4">
+			Email <small>(repeat it)</small>		</label>
+                </div>
+
+		<div class="col-sm-8 controls">
+			<input type="text" class="form-control" name="email2" id="email2"
+				   value="" data-validation-engine="validate[equals[email]]" data-prompt-position="bottomLeft" />
+		</div>
+	</div>
+</fieldset>
+        <fieldset>
+	<legend>Country information</legend>
+
+<!--	<div class="alert alert-default">
+		<span class="glyphicon glyphicon-info-sign"></span>
+		We need this information to charge you the correct VAT amount.	</div>-->
+
+		<div class="form-group control-group ">
+                <div class="control-label">
+		<label for="country" class="col-sm-4">
+			Country		</label>
+                </div>
+
+		<div class="col-sm-8 controls">
+			<select id="country" name="country"  class="form-control" data-validation-engine="validate[required]" data-prompt-position="bottomLeft">
+	<option value="">----</option>
+	<option value="AF">Afghanistan</option>
+	<option value="AX">Aland Islands</option>
+	<option value="AL">Albania</option>
+	<option value="DZ">Algeria</option>
+	<option value="AS">American Samoa</option>
+	<option value="AD">Andorra</option>
+	<option value="AO">Angola</option>
+	<option value="AI">Anguilla</option>
+	<option value="AQ">Antarctica</option>
+	<option value="AG">Antigua and Barbuda</option>
+	<option value="AR">Argentina</option>
+	<option value="AM">Armenia</option>
+	<option value="AW">Aruba</option>
+	<option value="AU">Australia</option>
+	<option value="AT">Austria</option>
+	<option value="AZ">Azerbaijan</option>
+	<option value="BS">Bahamas</option>
+	<option value="BH">Bahrain</option>
+	<option value="BD">Bangladesh</option>
+	<option value="BB">Barbados</option>
+	<option value="BY">Belarus</option>
+	<option value="BE">Belgium</option>
+	<option value="BZ">Belize</option>
+	<option value="BJ">Benin</option>
+	<option value="BM">Bermuda</option>
+	<option value="BT">Bhutan</option>
+	<option value="BO">Bolivia, Plurinational State of</option>
+	<option value="BQ">Bonaire, Saint Eustatius and Saba</option>
+	<option value="BA">Bosnia and Herzegovina</option>
+	<option value="BW">Botswana</option>
+	<option value="BV">Bouvet Island</option>
+	<option value="BR">Brazil</option>
+	<option value="IO">British Indian Ocean Territory</option>
+	<option value="BN">Brunei Darussalam</option>
+	<option value="BG">Bulgaria</option>
+	<option value="BF">Burkina Faso</option>
+	<option value="BI">Burundi</option>
+	<option value="KH">Cambodia</option>
+	<option value="CM">Cameroon</option>
+	<option value="CA">Canada</option>
+	<option value="CV">Cape Verde</option>
+	<option value="KY">Cayman Islands</option>
+	<option value="CF">Central African Republic</option>
+	<option value="TD">Chad</option>
+	<option value="CL">Chile</option>
+	<option value="CN">China</option>
+	<option value="CX">Christmas Island</option>
+	<option value="CC">Cocos (Keeling) Islands</option>
+	<option value="CO">Colombia</option>
+	<option value="KM">Comoros</option>
+	<option value="CG">Congo</option>
+	<option value="CD">Congo, the Democratic Republic of the</option>
+	<option value="CK">Cook Islands</option>
+	<option value="CR">Costa Rica</option>
+	<option value="CI">Cote d'Ivoire</option>
+	<option value="HR">Croatia</option>
+	<option value="CU">Cuba</option>
+	<option value="CW">Cura&ccedil;ao</option>
+	<option value="CY">Cyprus</option>
+	<option value="CZ">Czech Republic</option>
+	<option value="DK">Denmark</option>
+	<option value="DJ">Djibouti</option>
+	<option value="DM">Dominica</option>
+	<option value="DO">Dominican Republic</option>
+	<option value="EC">Ecuador</option>
+	<option value="EG">Egypt</option>
+	<option value="SV">El Salvador</option>
+	<option value="GQ">Equatorial Guinea</option>
+	<option value="ER">Eritrea</option>
+	<option value="EE">Estonia</option>
+	<option value="ET">Ethiopia</option>
+	<option value="FK">Falkland Islands (Malvinas)</option>
+	<option value="FO">Faroe Islands</option>
+	<option value="FJ">Fiji</option>
+	<option value="FI">Finland</option>
+	<option value="FR">France</option>
+	<option value="GF">French Guiana</option>
+	<option value="PF">French Polynesia</option>
+	<option value="TF">French Southern Territories</option>
+	<option value="GA">Gabon</option>
+	<option value="GM">Gambia</option>
+	<option value="GE">Georgia</option>
+	<option value="DE">Germany</option>
+	<option value="GH">Ghana</option>
+	<option value="GI">Gibraltar</option>
+	<option value="GR">Greece</option>
+	<option value="GL">Greenland</option>
+	<option value="GD">Grenada</option>
+	<option value="GP">Guadeloupe</option>
+	<option value="GU">Guam</option>
+	<option value="GT">Guatemala</option>
+	<option value="GG">Guernsey</option>
+	<option value="GN">Guinea</option>
+	<option value="GW">Guinea-Bissau</option>
+	<option value="GY">Guyana</option>
+	<option value="HT">Haiti</option>
+	<option value="HM">Heard Island and McDonald Islands</option>
+	<option value="VA">Holy See (Vatican City State)</option>
+	<option value="HN">Honduras</option>
+	<option value="HK">Hong Kong</option>
+	<option value="HU">Hungary</option>
+	<option value="IS">Iceland</option>
+	<option value="IN">India</option>
+	<option value="ID">Indonesia</option>
+	<option value="IR">Iran, Islamic Republic of</option>
+	<option value="IQ">Iraq</option>
+	<option value="IE">Ireland</option>
+	<option value="IM">Isle of Man</option>
+	<option value="IL">Israel</option>
+	<option value="IT">Italy</option>
+	<option value="JM">Jamaica</option>
+	<option value="JP">Japan</option>
+	<option value="JE">Jersey</option>
+	<option value="JO">Jordan</option>
+	<option value="KZ">Kazakhstan</option>
+	<option value="KE">Kenya</option>
+	<option value="KI">Kiribati</option>
+	<option value="KP">Korea, Democratic People's Republic of</option>
+	<option value="KR">Korea, Republic of</option>
+	<option value="KW">Kuwait</option>
+	<option value="KG">Kyrgyzstan</option>
+	<option value="LA">Lao People's Democratic Republic</option>
+	<option value="LV">Latvia</option>
+	<option value="LB">Lebanon</option>
+	<option value="LS">Lesotho</option>
+	<option value="LR">Liberia</option>
+	<option value="LY">Libyan Arab Jamahiriya</option>
+	<option value="LI">Liechtenstein</option>
+	<option value="LT">Lithuania</option>
+	<option value="LU">Luxembourg</option>
+	<option value="MO">Macao</option>
+	<option value="MK">Macedonia, the former Yugoslav Republic of</option>
+	<option value="MG">Madagascar</option>
+	<option value="MW">Malawi</option>
+	<option value="MY">Malaysia</option>
+	<option value="MV">Maldives</option>
+	<option value="ML">Mali</option>
+	<option value="MT">Malta</option>
+	<option value="MH">Marshall Islands</option>
+	<option value="MQ">Martinique</option>
+	<option value="MR">Mauritania</option>
+	<option value="MU">Mauritius</option>
+	<option value="YT">Mayotte</option>
+	<option value="MX">Mexico</option>
+	<option value="FM">Micronesia, Federated States of</option>
+	<option value="MD">Moldova, Republic of</option>
+	<option value="MC">Monaco</option>
+	<option value="MN">Mongolia</option>
+	<option value="ME">Montenegro</option>
+	<option value="MS">Montserrat</option>
+	<option value="MA">Morocco</option>
+	<option value="MZ">Mozambique</option>
+	<option value="MM">Myanmar</option>
+	<option value="NA">Namibia</option>
+	<option value="NR">Nauru</option>
+	<option value="NP">Nepal</option>
+	<option value="NL">Netherlands</option>
+	<option value="NC">New Caledonia</option>
+	<option value="NZ">New Zealand</option>
+	<option value="NI">Nicaragua</option>
+	<option value="NE">Niger</option>
+	<option value="NG">Nigeria</option>
+	<option value="NU">Niue</option>
+	<option value="NF">Norfolk Island</option>
+	<option value="MP">Northern Mariana Islands</option>
+	<option value="NO">Norway</option>
+	<option value="OM">Oman</option>
+	<option value="PK">Pakistan</option>
+	<option value="PW">Palau</option>
+	<option value="PS">Palestinian Territory, Occupied</option>
+	<option value="PA">Panama</option>
+	<option value="PG">Papua New Guinea</option>
+	<option value="PY">Paraguay</option>
+	<option value="PE">Peru</option>
+	<option value="PH">Philippines</option>
+	<option value="PN">Pitcairn</option>
+	<option value="PL">Poland</option>
+	<option value="PT">Portugal</option>
+	<option value="PR">Puerto Rico</option>
+	<option value="QA">Qatar</option>
+	<option value="RE">Reunion</option>
+	<option value="RO">Romania</option>
+	<option value="RU" selected="selected">Russian Federation</option>
+	<option value="RW">Rwanda</option>
+	<option value="BL">Saint Barth&eacute;lemy</option>
+	<option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+	<option value="KN">Saint Kitts and Nevis</option>
+	<option value="LC">Saint Lucia</option>
+	<option value="MF">Saint Martin (French part)</option>
+	<option value="PM">Saint Pierre and Miquelon</option>
+	<option value="VC">Saint Vincent and the Grenadines</option>
+	<option value="WS">Samoa</option>
+	<option value="SM">San Marino</option>
+	<option value="ST">Sao Tome and Principe</option>
+	<option value="SA">Saudi Arabia</option>
+	<option value="SN">Senegal</option>
+	<option value="RS">Serbia</option>
+	<option value="SC">Seychelles</option>
+	<option value="SL">Sierra Leone</option>
+	<option value="SG">Singapore</option>
+	<option value="SX">Sint Maarten</option>
+	<option value="SK">Slovakia</option>
+	<option value="SI">Slovenia</option>
+	<option value="SB">Solomon Islands</option>
+	<option value="SO">Somalia</option>
+	<option value="ZA">South Africa</option>
+	<option value="GS">South Georgia and the South Sandwich Islands</option>
+	<option value="SS">South Sudan</option>
+	<option value="ES">Spain</option>
+	<option value="LK">Sri Lanka</option>
+	<option value="SD">Sudan</option>
+	<option value="SR">Suriname</option>
+	<option value="SJ">Svalbard and Jan Mayen</option>
+	<option value="SZ">Swaziland</option>
+	<option value="SE">Sweden</option>
+	<option value="CH">Switzerland</option>
+	<option value="SY">Syrian Arab Republic</option>
+	<option value="TW">Taiwan</option>
+	<option value="TJ">Tajikistan</option>
+	<option value="TZ">Tanzania, United Republic of</option>
+	<option value="TH">Thailand</option>
+	<option value="TL">Timor-Leste</option>
+	<option value="TG">Togo</option>
+	<option value="TK">Tokelau</option>
+	<option value="TO">Tonga</option>
+	<option value="TT">Trinidad and Tobago</option>
+	<option value="TN">Tunisia</option>
+	<option value="TR">Turkey</option>
+	<option value="TM">Turkmenistan</option>
+	<option value="TC">Turks and Caicos Islands</option>
+	<option value="TV">Tuvalu</option>
+	<option value="UG">Uganda</option>
+	<option value="UA">Ukraine</option>
+	<option value="AE">United Arab Emirates</option>
+	<option value="GB">United Kingdom</option>
+	<option value="US">United States</option>
+	<option value="UM">United States Minor Outlying Islands</option>
+	<option value="UY">Uruguay</option>
+	<option value="UZ">Uzbekistan</option>
+	<option value="VU">Vanuatu</option>
+	<option value="VE">Venezuela, Bolivarian Republic of</option>
+	<option value="VN">Viet Nam</option>
+	<option value="VG">Virgin Islands, British</option>
+	<option value="VI">Virgin Islands, U.S.</option>
+	<option value="WF">Wallis and Futuna</option>
+	<option value="EH">Western Sahara</option>
+	<option value="YE">Yemen</option>
+	<option value="ZM">Zambia</option>
+	<option value="ZW">Zimbabwe</option>
+</select>
+
+		</div>
+	</div>
+
+		<div class="form-group control-group " id="stateField">
+                <div class="control-label">
+		<label for="state" class="col-sm-4">
+			State/Province		</label>
+                </div>
+
+		<div class="col-sm-8 controls">
+			<div id="akeebasubs-statescontainer">
+				<select id="state" name="state" class="form-control" data-validation-engine="validate[funcCall[checkState]]">
+	<option value="" selected="selected">N/A</option>
+</select>
+
+			</div>
+		</div>
+	</div>
+</fieldset>
+        <fieldset>
+                <legend>Invoicing information</legend>
+
+	<div class="alert alert-default">
+		<span class="glyphicon glyphicon-info-sign"></span>
+		An invoice will be e-mailed to you for your tax records	</div>
+
+		<div class="form-group control-group {">
+                <div class="control-label">
+		<label for="name" class="col-sm-4">
+			Full name<br/><small>(in latin characters)</small>		</label>
+                </div>
+
+		<div class="col-sm-8 controls">
+			<input type="text" class="form-control" name="name" id="name"
+				   value="" data-validation-engine="validate[required,custom[fullname]]" />
+		</div>
+	</div>
+
+		<div class="form-group control-group">
+                <div class="control-label">
+		<label for="isbusiness" class="col-sm-4">
+			Purchasing as a company		</label>
+                </div>
+<div class="col-sm-6 col-md-3 col-lg-2 controls" style="width: 90px;">
+	<select id="isbusiness" name="isbusiness" class="form-control">
+	<option value="0" selected="selected">No</option>
+	<option value="1">Yes</option>
+</select>
+</div>
+	</div>
+
+	<div id="businessfields">
+				<div class="form-group control-group ">
+                        <div class="control-label">
+			<label for="businessname" class="col-sm-4">
+				Company name			</label>
+                        </div>
+			<div class="col-sm-8 controls">
+				<input type="text" class="form-control" name="businessname" id="businessname"
+					   value="" data-validation-engine="validate[required]" />
+			</div>
+		</div>
+
+				<div class="form-group control-group ">
+                        <div class="control-label">
+			<label for="occupation" class="control-label col-sm-4">
+				Business activity<br/><small>e.g. <i>Web design</i></small>			</label>
+                        </div>
+			<div class="col-sm-8 controls">
+				<input type="text" class="form-control" name="occupation" id="occupation"
+					   value=""/>
+			</div>
+		</div>
+
+				<div class="form-group control-group " id="vatfields">
+                        <div class="control-label">
+			<label for="vatnumber" class="col-sm-4" id="vatlabel">
+				VAT Number			</label>
+                        </div>
+			<div class="col-sm-8 controls">
+				<div class="input-group">
+					<span class="input-group-addon" id="vatcountry">EU</span>
+					<input type="text" name="vatnumber" id="vatnumber" class="form-control"
+						   value=""/>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<div class="form-group control-group ">
+                <div class="control-label">
+		<label for="address1" class="col-sm-4">
+			Address		</label>
+                </div>
+
+		<div class="col-sm-8 controls">
+			<input type="text" class="form-control" name="address1" id="address1"
+				   value="" data-validation-engine="validate[required]" />
+		</div>
+	</div>
+
+		<div class="form-group control-group">
+                <div class="control-label">
+		<label for="address2" class="col-sm-4">
+			Address (continued from above)		</label>
+                </div>
+		<div class="col-sm-8 controls">
+			<input type="text" class="form-control" name="address2" id="address2"
+				   value=""/>
+		</div>
+	</div>
+
+		<div class="form-group control-group ">
+                <div class="control-label">
+		<label for="city" class="col-sm-4">
+			City		</label>
+                </div>
+		<div class="col-sm-8 controls">
+			<input type="text" class="form-control" name="city" id="city"
+				   value="" data-validation-engine="validate[required]" />
+		</div>
+	</div>
+
+		<div class="form-group control-group ">
+                <div class="control-label">
+		<label for="zip" class="control-label col-sm-4">
+			ZIP / Postal Code		</label>
+                </div>
+		<div class="col-sm-8 controls">
+			<input type="text" class="form-control" name="zip" id="zip"
+				   value=""  data-validation-engine="validate[required]"/>
+		</div>
+	</div>
+
+			
+	        </fieldset>
+</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="rt-grid-6 rt-omega">
+						<div id="akeebasubs-panel-order" class="rt-block box3">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						Your order						<span class="label label-default label-inverse">JMSTARTER</span>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<fieldset>
+<div>
+        <ul style="list-style-type: none;">
+	<li class="subscribe-length"><strong>Six month's</strong> access to downloads, ticket support, and Optimize Image API</li>
+<li class="subscribe-license">License for unlimited sites/domain owned by subscriber only</li>
+<li class="subscribe-subscriber-id">One Download ID</li>        </ul>
+</div>
+
+<hr />
+
+<div id="akeebasubs-sum-original-container" style="display: none">
+	<div class="col-xs-6" id="akeebasubs-original-label">
+		Regular price	</div>
+
+	<div class="col-xs-6" id="akeebasubs-sum-original-field">
+		<del>
+					<span class="akeebasubs-level-price-currency">$</span>
+				<span class="akeebasubs-level-price" id="akeebasubs-sum-original">0.00</span>
+				</del>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<div id="akeebasubs-sum-discount-container" style="display: none">
+	<div class="col-xs-6" id="akeebasubs-discount-label">
+		Discount applied	</div>
+
+	<div class="col-xs-6" id="akeebasubs-sum-discount-field">
+					<span class="akeebasubs-level-price-currency">$</span>
+				– <span class="akeebasubs-level-price" id="akeebasubs-sum-discount">0</span>
+			</div>
+	<div class="clearfix"></div>
+</div>
+<div id="akeebasubs-sum-container">
+	<div class="col-xs-6" id="akeebasubs-sum-label" style="width: 40%; float:left;">
+		Total charge	</div>
+
+	<div class="col-xs-6" id="akeebasubs-sum-price">
+	<span class="label label-success">
+					<span class="akeebasubs-level-price-currency">$</span>
+				<span class="akeebasubs-level-price" id="akeebasubs-sum-total">29.00</span>
+			</span>
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<div id="akeebasubs-vat-container" style="display:none">
+	<div class="col-xs-6 pull-right" id="akeebasubs-sum-vat-container">
+		Prices include VAT <span id="akeebasubs-sum-vat-percent">0.00</span>%
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<noscript>
+	<div class="alert alert-warning">
+		<h5>
+			<span class="glyphicon glyphicon-alert"></span>
+			Javascript is blocked or not enabled		</h5>
+		<p>
+			You have disabled or blocked Javascript. We can't update the price information, therefore it is not legally binding.		</p>
+	</div>
+</noscript>
+
+<hr />
+</fieldset>
+<fieldset>
+	<legend>
+		Coupon code	</legend>
+	<div class="input-group input-append">
+		<input type="text" class="form-control" name="coupon" id="coupon"
+			   placeholder="Coupon code"
+			   value=""/>
+<!--		<span class="input-group-btn">-->
+			<button class="btn" type="button" style="padding: 12px; 15px;" onclick="validateBusiness()">
+				Apply			</button>
+<!--		</span>-->
+	</div>
+</fieldset>
+
+<fieldset>
+	<legend>Subscribe</legend>
+
+	
+						
+<div class="form-group control-group ">
+
+	<label for="agreetotos" class="col-sm-4 hidden control-label">
+		* 
+	</label>
+
+	<div class="col-sm-8" style="padding: 12px;">
+		<label class="checkbox">
+	<input type="checkbox" name="custom[agreetotos]" id="agreetotos" data-validation-engine="validate[required]" data-prompt-position="topLeft:-32" />
+	<span class="akion-information-circled hasPopover" title="I agree to the Terms of Service" data-content="I hereby confirm that I have read and unreservedly accept the Terms of Service before subscribing."></span>
+	I agree to the <a href="javascript:return false;" onclick="window.open('/index.php?option=com_content&view=article&id=93&Itemid=677','toswindow','width=640,height=480,resizable=yes,scrollbars=yes,toolbar=no,location=no,directories=no,status=no,menubar=no');">Terms of Service</a>
+</label>
+	</div>
+</div>
+			
+
+<div id="paymentmethod-container" class="">
+	<div class="form-group control-group">
+                <div class="control-label">
+		<label for="paymentmethod" class="sr-only" style="display: none;">
+			Payment method		</label>
+                </div>
+
+		<div id="paymentlist-container" class="col-xs-12">
+			<div class="akeebasubs-paymentmethod-images"><div class="radio"><label><input type="radio" name="paymentmethod" id="paymentmethodpaypal" value="paypal" checked="checked"/><img border="0" src="https://www.paypal.com/en_US/i/bnr/horizontal_solution_PPeCheck.gif" alt="Payments powered by PayPal, Inc." /><span></span> Payments powered by PayPal, Inc.</label></div><div class="radio"><label><input type="radio" name="paymentmethod" id="paymentmethod2checkout" value="2checkout" /><img border="0" src="https://www.2checkout.com/upload/images/paymentlogoshorizontal.png" alt="Credit cards / PayPal payments by 2Checkout.com, Inc." /><span></span> Credit cards / PayPal payments by 2Checkout.com, Inc.</label></div></div>		</div>
+	</div>
+</div>
+
+<div style="margin: 20px 20px 50px;">
+	<img class="ui-disable-spinner pull-left" src="https://www.jch-optimize.net/media/com_akeebasubs/images/throbber.gif"
+		 style="display: none"/>
+	<button id="subscribenow" class="btn btn-large btn-primary button" type="submit"
+			style="display:block;margin:auto">
+		Subscribe now!	</button>
+</div>
+
+</fieldset>				</div>
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+</div>
+	</form>
+
+		
+	<div class="clearfix"></div>
+</div>
+<!--End Level/default-->
+
+</div>
+
+								</div>
+	                        </div>
+						</div>
+                                                                    </div>
+                                        <div class="clear"></div>
+                </div>
+            </div>
+																								</div>
+			</div>
+		</section>
+		
+				<footer id="rt-footer-surround">
+			<div class="rt-footer-surround-pattern">
+																<div id="rt-copyright">
+					<div class="rt-container">
+						<div class="rt-grid-3 rt-alpha">
+     			            <div class="rt-block ">
+           	<div class="module-surround">
+	           		                	<div class="module-content">
+	                		<ul class="nav menu mod-list">
+<li class="item-677"><a href="/terms-of-use.html" >Terms of Use</a></li><li class="item-676"><a href="/privacy-policy.html" >Privacy Policy</a></li><li class="item-678"><a href="/refund-policy.html" >Refund Policy</a></li><li class="item-679"><a href="/contact-us.html" >Contact Us</a></li></ul>
+	                	</div>
+                	</div>
+           </div>
+	
+</div>
+<div class="rt-grid-6">
+    	<div class="rt-copyright-content rt-block">
+		Copyright © 2019 JCH Optimize, All rights reserved.	</div>
+	
+ 			            <div class="rt-block ">
+           	<div class="module-surround">
+	           		                	<div class="module-content">
+	                		
+
+<div class="custom"  >
+	<a href="https://www.siteground.com/web-hosting.htm?afbannercode=4b835f69d70364676ad918a570d6eb18" target="_blank"><img src="https://ua.siteground.com/img/banners/general/2019_EN/no_price/start_site_728x90_green.jpg" alt="Web Hosting" width="728" height="90" border="0"></a></div>
+	                	</div>
+                	</div>
+           </div>
+	
+</div>
+<div class="rt-grid-3 rt-omega">
+    		<div class="rt-social-buttons rt-block">
+						<a class="social-button rt-social-button-1" href="https://www.facebook.com/jchoptimize" target="_blank">
+				<span class="icon-facebook"></span>
+									<span class="social-button-text">Facebook</span>
+							</a>
+			
+						<a class="social-button rt-social-button-2" href="https://twitter.com/jchoptimize" target="_blank">
+				<span class="icon-twitter"></span>
+									<span class="social-button-text">Twitter</span>
+							</a>
+			
+			
+			
+			
+			
+			<div class="clear"></div>
+		</div>
+		
+</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+							</div>
+		</footer>
+		
+		
+		
+									</div>
+</body>
+</html>

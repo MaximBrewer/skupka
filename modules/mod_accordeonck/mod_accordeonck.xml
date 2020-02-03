@@ -11,7 +11,7 @@
 	<license>GNU/GPL 3 http://www.gnu.org/licenses/gpl.html</license>
 	<authorEmail>ced1870@gmail.com</authorEmail>
 	<authorUrl>http://www.joomlack.fr</authorUrl>
-	<version>2.1.3</version>
+	<version>2.2.3</version>
 	<description>MOD_ACCORDEONCK_DESC</description>
 	<files>
 		<filename module="mod_accordeonck">mod_accordeonck.php</filename>
@@ -36,93 +36,6 @@
 	</updateservers>
 	<config>
 		<fields name="params">
-			<fieldset name="basic" addfieldpath="/modules/mod_accordeonck/elements">
-				<field
-					name="menutype"
-					type="ckmenu"
-					label="MOD_ACCORDEONCK_MENUTYPE"
-					description="MOD_ACCORDEONCK_MENUTYPE_DESC"
-					icon="text_list_numbers.png" />
-				<field
-					name="base"
-					type="ckmenuitem"
-					label="MOD_ACCORDEONCK_FIELD_ACTIVE_LABEL"
-					description="MOD_ACCORDEONCK_FIELD_ACTIVE_DESC"
-					icon="house.png"
-					>
-					<option value="">JCURRENT</option>
-				</field>
-				<field
-					name="startLevel"
-					type="cklist"
-					default="1"
-					label="MOD_ACCORDEONCK_STARTLEVEL"
-					description="MOD_ACCORDEONCK_STARTLEVEL_DESC"
-					icon="chart_organisation_add.png" >
-					<option value="1">J1</option>
-					<option value="2">J2</option>
-					<option value="3">J3</option>
-					<option value="4">J4</option>
-					<option value="5">J5</option>
-					<option value="6">J6</option>
-					<option value="7">J7</option>
-					<option value="8">J8</option>
-					<option value="9">J9</option>
-					<option value="10">J10</option>
-				</field>
-
-				<field
-					name="endLevel"
-					type="cklist"
-					default="0"
-					label="MOD_ACCORDEONCK_ENDLEVEL"
-					description="MOD_ACCORDEONCK_ENDLEVEL_DESC"
-					icon="chart_organisation_delete.png" >
-					<option value="0">JALL</option>
-					<option value="1">J1</option>
-					<option value="2">J2</option>
-					<option value="3">J3</option>
-					<option value="4">J4</option>
-					<option value="5">J5</option>
-					<option value="6">J6</option>
-					<option value="7">J7</option>
-					<option value="8">J8</option>
-					<option value="9">J9</option>
-					<option value="10">J10</option>
-				</field>
-				<field
-					name="ckspaceradvanced1"
-					type="ckspacer"
-					label="MOD_ACCORDEONCK_SPACER_IMAGES"
-					style="title" />
-				<field
-					name="imgalignement"
-					type="ckradio"
-					default="none"
-					label="MOD_ACCORDEONCK_IMGALIGNEMENT"
-					description="MOD_ACCORDEONCK_IMGALIGNEMENT_DESC"
-					icon="text_padding_left.png"
-					class="btn-group">
-					<option value="none">MOD_ACCORDEONCK_NONE</option>
-					<option value="left">MOD_ACCORDEONCK_LEFT</option>
-					<option value="right">MOD_ACCORDEONCK_RIGHT</option>
-				</field>
-				<field
-					name="imagerollprefix"
-					type="cktext"
-					default="_hover"
-					label="MOD_ACCORDEONCK_ROLLOVERPREFIX_LABEL"
-					description="MOD_ACCORDEONCK_ROLLOVERPREFIX_DESC"
-					icon="text_signature.png" />
-				<field
-					name="imageactiveprefix"
-					type="cktext"
-					default="_active"
-					label="MOD_ACCORDEONCK_ACTIVEPREFIX_LABEL"
-					description="MOD_ACCORDEONCK_ACTIVEPREFIX_DESC"
-					icon="text_signature.png" />
-			</fieldset>
-
 			<fieldset
 				name="advanced">
 				<field
@@ -182,6 +95,111 @@
 						value="itemid">
 					</option>
 				</field>
+			</fieldset>
+
+			<fieldset name="editionfieldset" addfieldpath="/modules/mod_accordeonck/elements" label="MOD_ACCORDEONCK_SOURCE_FIELDSET">
+				<field
+					name="source"
+					type="cksource"
+					label="MOD_ACCORDEONCK_SOURCE"
+					description="MOD_ACCORDEONCK_SOURCE_DESC"
+					icon="folder_add.png"
+					default="menu"
+				>
+					<option value="menu">MOD_ACCORDEONCK_SOURCE_MENU</option>
+				</field>
+				<field
+					name="menutype"
+					type="ckmenu"
+					label="MOD_ACCORDEONCK_MENUTYPE"
+					description="MOD_ACCORDEONCK_MENUTYPE_DESC"
+					showon="source:menu"
+					icon="text_list_numbers.png" />
+				<field
+					name="base"
+					type="ckmenuitem"
+					label="MOD_ACCORDEONCK_FIELD_ACTIVE_LABEL"
+					description="MOD_ACCORDEONCK_FIELD_ACTIVE_DESC"
+					showon="source:menu"
+					icon="house.png"
+					>
+					<option value="">JCURRENT</option>
+				</field>
+				<field
+					name="startLevel"
+					type="cklist"
+					default="1"
+					label="MOD_ACCORDEONCK_STARTLEVEL"
+					description="MOD_ACCORDEONCK_STARTLEVEL_DESC"
+					showon="source:menu"
+					icon="chart_organisation_add.png" >
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field
+					name="endLevel"
+					type="cklist"
+					default="0"
+					label="MOD_ACCORDEONCK_ENDLEVEL"
+					description="MOD_ACCORDEONCK_ENDLEVEL_DESC"
+					showon="source:menu"
+					icon="chart_organisation_delete.png" >
+					<option value="0">JALL</option>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+				<field
+					name="ckspaceradvanced1"
+					type="ckspacer"
+					label="MOD_ACCORDEONCK_SPACER_IMAGES"
+					showon="source:menu"
+					style="title" />
+				<field
+					name="imgalignement"
+					type="ckradio"
+					default="none"
+					label="MOD_ACCORDEONCK_IMGALIGNEMENT"
+					description="MOD_ACCORDEONCK_IMGALIGNEMENT_DESC"
+					icon="text_padding_left.png"
+					showon="source:menu"
+					class="btn-group">
+					<option value="none">MOD_ACCORDEONCK_NONE</option>
+					<option value="left">MOD_ACCORDEONCK_LEFT</option>
+					<option value="right">MOD_ACCORDEONCK_RIGHT</option>
+				</field>
+				<field
+					name="imagerollprefix"
+					type="cktext"
+					default="_hover"
+					label="MOD_ACCORDEONCK_ROLLOVERPREFIX_LABEL"
+					description="MOD_ACCORDEONCK_ROLLOVERPREFIX_DESC"
+					showon="source:menu"
+					icon="text_signature.png" />
+				<field
+					name="imageactiveprefix"
+					type="cktext"
+					default="_active"
+					label="MOD_ACCORDEONCK_ACTIVEPREFIX_LABEL"
+					description="MOD_ACCORDEONCK_ACTIVEPREFIX_DESC"
+					showon="source:menu"
+					icon="text_signature.png" />
 			</fieldset>
 
 			<fieldset name="effects" label="MOD_ACCORDEONCK_EFFECTS">
@@ -543,6 +561,17 @@
 				>
 					<option value="left">MOD_ACCORDEONCK_LEFT</option>
 					<option value="right">MOD_ACCORDEONCK_RIGHT</option>
+				</field>
+				<field 
+					name="showcounter" 
+					type="ckradio" 
+					label="MOD_ACCORDEONCK_SHOWCOUNTER" 
+					description="MOD_ACCORDEONCK_SHOWCOUNTER_DESC" 
+					default="0"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 			</fieldset>
 

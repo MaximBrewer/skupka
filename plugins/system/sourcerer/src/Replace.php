@@ -1,23 +1,26 @@
 <?php
 /**
  * @package         Sourcerer
- * @version         7.1.4
+ * @version         8.2.0
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2017 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2019 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
-namespace RegularLabs\Sourcerer;
+namespace RegularLabs\Plugin\System\Sourcerer;
 
 defined('_JEXEC') or die;
 
 use JFile;
-use JText;
+use Joomla\CMS\Factory as JFactory;
+use Joomla\CMS\Language\Text as JText;
+use Joomla\CMS\Uri\Uri as JUri;
 use RegularLabs\Library\ArrayHelper as RL_Array;
 use RegularLabs\Library\Document as RL_Document;
 use RegularLabs\Library\Html as RL_Html;
+use RegularLabs\Library\ObjectHelper as RL_Object;
 use RegularLabs\Library\PluginTag as RL_PluginTag;
 use RegularLabs\Library\Protect as RL_Protect;
 use RegularLabs\Library\RegEx as RL_RegEx;
@@ -28,7 +31,7 @@ class Replace
 
 	public static function replace(&$string, $area = 'article', $article = '', $remove = false)
 	{
-		if (!is_string($string) || $string == '')
+		if ( ! is_string($string) || $string == '')
 		{
 			return;
 		}
@@ -47,7 +50,7 @@ class Replace
 
 		for ($i = 1; $i < $array_count - 1; $i++)
 		{
-			if (!fmod($i, 2) || !RL_RegEx::match($regex, $array[$i], $match))
+			if ( ! fmod($i, 2) || ! RL_RegEx::match($regex, $array[$i], $match))
 			{
 				continue;
 			}
@@ -62,7 +65,7 @@ class Replace
 
 	public static function replaceInTheRest(&$string)
 	{
-		if (!is_string($string) || $string == '')
+		if ( ! is_string($string) || $string == '')
 		{
 			return;
 		}
@@ -97,8 +100,8 @@ class Replace
 		$components = Area::get($string, 'component');
 		foreach ($components as $component)
 		{
-			self::replace($component['1'], 'components', '');
-			$string = str_replace($component['0'], $component['1'], $string);
+			self::replace($component[1], 'components', '');
+			$string = str_replace($component[0], $component[1], $string);
 		}
 
 		// EVERYWHERE
@@ -116,10 +119,20 @@ class Replace
 
 		$params = Params::get();
 
-		$data    = RL_PluginTag::getAttributesFromStringOld(trim($match['data']), []);
+		$data        = trim($match['data']);
+		$remove_html = ! isset($data[0]) || $data[0] !== '0';
+
+		$data = trim($match['data'], '0 ');
+		// Remove spaces inside list values
+		$data = RL_RegEx::replace('(="[^"]*,) ', '\1', $data);
+		// Convert new syntax to old
+		$data = str_replace(['"', ' '], ['', '|'], $data);
+		// Get attributes from old syntax (we still need this to handle the unquoted stuff)
+		$data = RL_PluginTag::getAttributesFromStringOld($data, []);
+
 		$content = trim($match['content']);
 
-		$remove_html = !in_array('0', $data->params);
+		$remove_html = (isset($data->raw) && $data->raw) ? false : $remove_html;
 
 		// Remove html tags if code is placed via the WYSIWYG editor
 		if ($remove_html)
@@ -129,16 +142,10 @@ class Replace
 
 		self::replacePhpShortCodes($content);
 
-		// Add the include file if file=... or include=... is used in the {source} tag
-		$file = !empty($data->file) ? $data->file : (!empty($data->include) ? $data->include : '');
-		if (!empty($file) && JFile::exists(JPATH_SITE . $params->include_path . $file))
-		{
-			$content = '<?php include JPATH_SITE . \'' . $params->include_path . $file . '\'; ?>' . $content;
-		}
 
 		self::replaceTags($content, $area, $article);
 
-		if (!$remove_html)
+		if ( ! $remove_html)
 		{
 			return $content;
 		}
@@ -150,27 +157,28 @@ class Replace
 			$tags = RL_Html::cleanSurroundingTags([
 				'start_pre'  => $match['start_pre'],
 				'start_post' => $match['start_post'],
-			], ['div','p','span']);
+			], ['div', 'p', 'span']);
 
 			$match = array_merge($match, $tags);
 
 			$tags = RL_Html::cleanSurroundingTags([
 				'end_pre'  => $match['end_pre'],
 				'end_post' => $match['end_post'],
-			], ['div','p','span']);
+			], ['div', 'p', 'span']);
 
 			$match = array_merge($match, $tags);
 
 			$tags = RL_Html::cleanSurroundingTags([
 				'start_pre' => $match['start_pre'],
 				'end_post'  => $match['end_post'],
-			], ['div','p','span']);
+			], ['div', 'p', 'span']);
 
 			$match = array_merge($match, $tags);
 		}
 
 		return $content;
 	}
+
 
 	private static function replacePhpShortCodes(&$string)
 	{
@@ -182,15 +190,13 @@ class Replace
 
 	private static function replaceTags(&$string, $area = 'article', $article = '')
 	{
-		if (!is_string($string) || $string == '')
+		if ( ! is_string($string) || $string == '')
 		{
 			return;
 		}
 
-		$params = Params::get();
-
 		// allow in component?
-		if (RL_Protect::isRestrictedComponent(isset($params->components) ? $params->components : [], $area))
+		if (RL_Protect::isRestrictedComponent(Params::get('components', []), $area))
 		{
 			Protect::protectTags($string);
 
@@ -205,7 +211,7 @@ class Replace
 
 	private static function replaceTagsByType(&$string, $area = 'article', $type = 'all', $article = '')
 	{
-		if (!is_string($string) || $string == '')
+		if ( ! is_string($string) || $string == '')
 		{
 			return;
 		}
@@ -243,12 +249,12 @@ class Replace
 	 */
 	private static function replaceTagsAll(&$string, $enabled = true, $security_pass = true)
 	{
-		if (!is_string($string) || $string == '')
+		if ( ! is_string($string) || $string == '')
 		{
 			return;
 		}
 
-		if (!$enabled)
+		if ( ! $enabled)
 		{
 			// replace source block content with HTML comment
 			$string = Protect::getMessageCommentTag(JText::_('SRC_CODE_REMOVED_NOT_ENABLED'));
@@ -256,7 +262,7 @@ class Replace
 			return;
 		}
 
-		if (!$security_pass)
+		if ( ! $security_pass)
 		{
 			// replace source block content with HTML comment
 			$string = Protect::getMessageCommentTag(JText::sprintf('SRC_CODE_REMOVED_SECURITY', ''));
@@ -277,14 +283,14 @@ class Replace
 		$has_forbidden_tags = false;
 		foreach ($forbidden_tags_array as $forbidden_tag)
 		{
-			if (!(strpos($string, '<' . $forbidden_tag) == false))
+			if ( ! (strpos($string, '<' . $forbidden_tag) == false))
 			{
 				$has_forbidden_tags = true;
 				break;
 			}
 		}
 
-		if (!$has_forbidden_tags)
+		if ( ! $has_forbidden_tags)
 		{
 			return;
 		}
@@ -293,17 +299,17 @@ class Replace
 		$tag_regex = '<\s*([a-z\!][^>\s]*?)(?:\s+.*?)?>.*?</\1>';
 		RL_RegEx::matchAll($tag_regex, $string, $matches);
 
-		if (!empty($matches))
+		if ( ! empty($matches))
 		{
 			foreach ($matches as $match)
 			{
-				if (!in_array($match['1'], $forbidden_tags_array))
+				if ( ! in_array($match[1], $forbidden_tags_array))
 				{
 					continue;
 				}
 
-				$tag    = Protect::getMessageCommentTag(JText::sprintf('SRC_TAG_REMOVED_FORBIDDEN', $match['1']));
-				$string = str_replace($match['0'], $tag, $string);
+				$tag    = Protect::getMessageCommentTag(JText::sprintf('SRC_TAG_REMOVED_FORBIDDEN', $match[1]));
+				$string = str_replace($match[0], $tag, $string);
 			}
 		}
 
@@ -311,17 +317,17 @@ class Replace
 		$tag_regex = '<\s*([a-z\!][^>\s]*?)(?:\s+.*?)?>';
 		RL_RegEx::matchAll($tag_regex, $string, $matches);
 
-		if (!empty($matches))
+		if ( ! empty($matches))
 		{
 			foreach ($matches as $match)
 			{
-				if (!in_array($match['1'], $forbidden_tags_array))
+				if ( ! in_array($match[1], $forbidden_tags_array))
 				{
 					continue;
 				}
 
-				$tag    = Protect::getMessageCommentTag(JText::sprintf('SRC_TAG_REMOVED_FORBIDDEN', $match['1']));
-				$string = str_replace($match['0'], $tag, $string);
+				$tag    = Protect::getMessageCommentTag(JText::sprintf('SRC_TAG_REMOVED_FORBIDDEN', $match[1]));
+				$string = str_replace($match[0], $tag, $string);
 			}
 		}
 	}
@@ -332,7 +338,7 @@ class Replace
 	 */
 	private static function replaceTagsPHP(&$string, $enabled = 1, $security_pass = 1, $article = '')
 	{
-		if (!is_string($string) || $string == '')
+		if ( ! is_string($string) || $string == '')
 		{
 			return;
 		}
@@ -355,21 +361,21 @@ class Replace
 			return;
 		}
 
-		if (!$enabled)
+		if ( ! $enabled)
 		{
 			// replace source block content with HTML comment
-			$string_array      = [];
-			$string_array['0'] = Protect::getMessageCommentTag(JText::sprintf('SRC_CODE_REMOVED_NOT_ALLOWED', JText::_('SRC_PHP'), JText::_('SRC_PHP')));
+			$string_array    = [];
+			$string_array[0] = Protect::getMessageCommentTag(JText::sprintf('SRC_CODE_REMOVED_NOT_ALLOWED', JText::_('SRC_PHP'), JText::_('SRC_PHP')));
 
 			$string = implode('', $string_array);
 
 			return;
 		}
-		if (!$security_pass)
+		if ( ! $security_pass)
 		{
 			// replace source block content with HTML comment
-			$string_array      = [];
-			$string_array['0'] = Protect::getMessageCommentTag(JText::sprintf('SRC_CODE_REMOVED_SECURITY', JText::_('SRC_PHP')));
+			$string_array    = [];
+			$string_array[0] = Protect::getMessageCommentTag(JText::sprintf('SRC_CODE_REMOVED_SECURITY', JText::_('SRC_PHP')));
 
 			$string = implode('', $string_array);
 
@@ -383,18 +389,18 @@ class Replace
 			{
 				if (fmod($i, 2) == 0)
 				{
-					$string_array['1'] .= "<!-- SRC_SEMICOLON --> ?>" . $string_array[$i] . "<?php ";
+					$string_array[1] .= "<!-- SRC_SEMICOLON --> ?>" . $string_array[$i] . "<?php ";
 					unset($string_array[$i]);
 					continue;
 				}
 
-				$string_array['1'] .= $string_array[$i];
+				$string_array[1] .= $string_array[$i];
 				unset($string_array[$i]);
 			}
 		}
 
 		$semicolon = '<!-- SRC_SEMICOLON -->';
-		$script    = trim($string_array['1']) . $semicolon;
+		$script    = trim($string_array[1]) . $semicolon;
 		$script    = RL_RegEx::replace('(;\s*)?' . RL_RegEx::quote($semicolon), ';', $script);
 
 		$area = Params::getArea('default');
@@ -406,19 +412,19 @@ class Replace
 
 		RL_RegEx::matchAll($forbidden_php_regex, ' ' . $script, $functions);
 
-		if (!empty($functions))
+		if ( ! empty($functions))
 		{
 			$functionsArray = [];
 			foreach ($functions as $function)
 			{
-				$functionsArray[] = $function['1'] . ')';
+				$functionsArray[] = $function[1] . ')';
 			}
 
 			$comment = JText::_('SRC_PHP_CODE_REMOVED_FORBIDDEN') . ': ( ' . implode(', ', $functionsArray) . ' )';
 
-			$string_array['1'] = RL_Document::isHtml()
+			$string_array[1] = RL_Document::isHtml()
 				? Protect::getMessageCommentTag($comment)
-				: $string_array['1'] = '';
+				: $string_array[1] = '';
 
 			$string = implode('', $string_array);
 
@@ -429,9 +435,9 @@ class Replace
 
 		$src_variables['article'] = $article;
 
-		$output = Code::run($script, $src_variables);
+		$output = Code::run($script, $src_variables, Params::get('tmp_path'));
 
-		$string_array['1'] = $output;
+		$string_array[1] = $output;
 
 		$string = implode('', $string_array);
 	}
@@ -441,7 +447,7 @@ class Replace
 	 */
 	private static function replaceTagsJS(&$string, $enabled = 1, $security_pass = 1)
 	{
-		if (!is_string($string) || $string == '')
+		if ( ! is_string($string) || $string == '')
 		{
 			return;
 		}
@@ -476,7 +482,7 @@ class Replace
 			return;
 		}
 
-		if (!$enabled)
+		if ( ! $enabled)
 		{
 			// replace source block content with HTML comment
 			$string = Protect::getMessageCommentTag(JText::sprintf('SRC_CODE_REMOVED_NOT_ALLOWED', JText::_('SRC_JAVASCRIPT'), JText::_('SRC_JAVASCRIPT')));
@@ -484,7 +490,7 @@ class Replace
 			return;
 		}
 
-		if (!$security_pass)
+		if ( ! $security_pass)
 		{
 			// replace source block content with HTML comment
 			$string = Protect::getMessageCommentTag(JText::sprintf('SRC_CODE_REMOVED_SECURITY', JText::_('SRC_JAVASCRIPT')));
@@ -498,7 +504,7 @@ class Replace
 	 */
 	private static function replaceTagsCSS(&$string, $enabled = 1, $security_pass = 1)
 	{
-		if (!is_string($string) || $string == '')
+		if ( ! is_string($string) || $string == '')
 		{
 			return;
 		}
@@ -533,7 +539,7 @@ class Replace
 			return;
 		}
 
-		if (!$enabled)
+		if ( ! $enabled)
 		{
 			// replace source block content with HTML comment
 			$string = Protect::getMessageCommentTag(JText::sprintf('SRC_CODE_REMOVED_NOT_ALLOWED', JText::_('SRC_CSS'), JText::_('SRC_CSS')));
@@ -541,7 +547,7 @@ class Replace
 			return;
 		}
 
-		if (!$security_pass)
+		if ( ! $security_pass)
 		{
 			// replace source block content with HTML comment
 			$string = Protect::getMessageCommentTag(JText::sprintf('SRC_CODE_REMOVED_SECURITY', JText::_('SRC_CSS')));
@@ -554,7 +560,7 @@ class Replace
 	{
 		$params = Params::get();
 
-		if (!$tags)
+		if ( ! $tags)
 		{
 			$string = RL_RegEx::replace($search, $params->splitter . '\1' . $params->splitter, $string);
 

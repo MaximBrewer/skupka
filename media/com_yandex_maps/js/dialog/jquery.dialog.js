@@ -6,7 +6,7 @@
 /*global jQuery,window,document,clearInterval,setInterval*/
 (function ($) {
     'use strict';
-	var plugin_name = 'dialog',
+	var plugin_name = 'dialogBox',
 		tpl_button = '<button class="xdsoft_btn" type="button"></button>',
 		tpl_dialog = '<div class="xdsoft_dialog xdsoft_dialog_shadow_effect">' +
 				'<div class="xdsoft_dialog_popup_title">' +
@@ -118,6 +118,7 @@
 		}
 		return result;
 	}
+
 	function getScrollbarWidth() {
 		var outer = document.createElement("div"),
 			widthNoScroll,
@@ -136,6 +137,7 @@
 		outer.parentNode.removeChild(outer);
 		return widthNoScroll - widthWithScroll;
 	}
+
 	$.fn[plugin_name] = function (_options, second, third) {
 		var	that = this,
 			dialog_box = that,
@@ -226,7 +228,7 @@
 									.data('old_width', dialog.width())
 									.data('resize_interval', setInterval(function () {
 										if (dialog.width() !== dialog_box.data('old_width')) {
-											dialog_box.dialog('resize');
+											dialog_box[plugin_name]('resize');
 										}
 									}, 300));
 							}
@@ -284,7 +286,7 @@
 
 		dialog_box.append(dialog);
 
-		dialog_box.dialog('content', that.length ? that[0] : '<div>' + that.selector + '</div>');
+		dialog_box[plugin_name]('content', that.length ? that[0] : '<div>' + that.selector + '</div>');
 
 		dialog
 			.find('.xdsoft_close')
@@ -298,10 +300,10 @@
 		$('body').append(dialog_box);
 
 		if (options.shown) {
-			dialog_box.dialog('show');
+			dialog_box[plugin_name]('show');
 		}
 		if (!options.modal) {
-			dialog_box.dialog('resize');
+			dialog_box[plugin_name]('resize');
 		}
 
 		return dialog_box;
@@ -343,7 +345,7 @@
 					if (callback && $.isFunction(callback)) {
 						return callback.call(this);
 					}
-					this.dialog('hide');
+					this[plugin_name]('hide');
 				}
 			}
 		});

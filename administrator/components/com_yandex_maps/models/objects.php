@@ -11,9 +11,11 @@ class Yandex_MapsModelObjects extends CModel{
 		// для организаций
 		'organization_object_id', 'organization_name', 'organization_form', 'organization_lider_fio', 'organization_lider_position', 'organization_acting_basis', 'organization_acting_basis_date', 'organization_acting_basis_number', 'organization_type', 'organization_trademark', 'organization_contact_fio', 'organization_contact_position', 'organization_contact_phone', 'organization_address_legal', 'organization_address', 'organization_phone', 'organization_email', 'organization_website', 'organization_image', 'organization_shedule_24', 'organization_shedule_days', 'organization_start_in', 'organization_end_in', 'organization_service_delivery', 'organization_service_delivery_variants', 'organization_license_number', 'organization_license_date', 'organization_bank_inn', 'organization_bank_kpp', 'organization_bank_rs', 'organization_bank_name', 'organization_bank_ks', 'organization_bank_bik', 'organization_info', 'organization_self_schedule_text', 'organization_compile'
 	);
+
 	public function setCategoryIds($ids) {
 		$this->_categoryids = (array)$ids;
 	}
+
 	public function getCategoryIds() {
 		if (!$this->_categoryids) {
 			$db = JFactory::getDBO();
@@ -22,6 +24,7 @@ class Yandex_MapsModelObjects extends CModel{
 		}
 		return $this->_categoryids;
 	}
+
 	public function defaults() {
 		if (!$this->type) {
 			$this->type = $this->settings->get('object_type', 'placemark');
@@ -42,6 +45,7 @@ class Yandex_MapsModelObjects extends CModel{
 	);
 	
 	static public $_maps = null;
+
 	public function getMap() {
 		if (!self::$_maps[$this->id]) {
 			self::$_maps[$this->id] = JModelLegacy::getInstance('Maps', 'Yandex_MapsModel')->modelBySQL('select * from #__yandex_maps_maps where id in (select map_id from #__yandex_maps_category_to_map where category_id in (select category_id from #__yandex_maps_object_to_category where object_id='.((int)$this->id).')) limit 1');
@@ -50,6 +54,7 @@ class Yandex_MapsModelObjects extends CModel{
 	}
 	
 	static public $_categories = null;
+
 	public function getCategory() {
 		if (!self::$_categories[$this->id]) {
 			self::$_categories[$this->id] = JModelLegacy::getInstance('Categories', 'Yandex_MapsModel')->modelBySQL('select * from #__yandex_maps_categories where id in (select category_id from #__yandex_maps_object_to_category where object_id='.((int)$this->id).') limit 1');
@@ -57,53 +62,58 @@ class Yandex_MapsModelObjects extends CModel{
 		return self::$_categories[$this->id];
 	}
 
+	private function saveOrganization($obj_id, $forceInsert = false) {
+		$organization = JModelLegacy::getInstance( 'Organizations', 'Yandex_MapsModel');
+
+		$this->organization_address = json_encode($this->organization_address);
+		$this->organization_address_legal = json_encode($this->organization_address_legal);
+		$this->organization_service_delivery = isset($_REQUEST['jform']['organization_service_delivery']) ? 1 : 0;
+		$this->organization_shedule_days = is_array($this->organization_shedule_days) ? implode(',', $this->organization_shedule_days) : '';
+		$this->organization_service_delivery_variants = is_array($this->organization_service_delivery_variants) ? implode(',', $this->organization_service_delivery_variants) : '';
+
+		$this->organization_object_id = $obj_id;
+
+		$organization->_attributes = $this->_data;
+
+		$organization->save($forceInsert);
+	}
+
 	public function beforeSave() {
 		if ($this->organization_object_id) {
-			$organization = JModelLegacy::getInstance( 'Organizations', 'Yandex_MapsModel');
-			$this->organization_address = json_encode($this->organization_address);
-			$this->organization_address_legal = json_encode($this->organization_address_legal);
-			$this->organization_service_delivery = isset($_REQUEST['jform']['organization_service_delivery']) ? 1 : 0;
-			$this->organization_shedule_days = is_array($this->organization_shedule_days) ? implode(',', $this->organization_shedule_days) : '';
-			$this->organization_service_delivery_variants = is_array($this->organization_service_delivery_variants) ? implode(',', $this->organization_service_delivery_variants) : '';
-			$organization->_attributes = $this->_data;
-			return $organization->save();
+			$this->saveOrganization($this->organization_object_id);
 		}
+
 		return parent::beforeSave();
 	}
+
 	public function afterSave() {
 		$categoryids = $this->getCategoryIds();
+
 		$db = JFactory::getDBO();
 		$db->setQuery('delete from #__yandex_maps_object_to_category where object_id='.(int)$this->id);
 		$db->execute();
 		$link = new stdClass();
 		$link->object_id = (int)$this->id;
+
 		foreach ($categoryids as $id){
 			if ((int)$id) {
 				$link->category_id = (int)$id;
 				JFactory::getDbo()->insertObject('#__yandex_maps_object_to_category', $link);
 			}
 		}
+
+		$form = JFactory::getApplication()->input->get('jform', array(), 'ARRAY');
+
+		if (!$this->organization_object_id && $form['organization_data']) {
+			$this->saveOrganization((int)$this->id, true);
+		}
 	}
+
 	public function validate() {
 		if (mb_strlen($this->title)<=0) {
 			$this->error['title'] = 'Слишком короткое название';
 		}
-		
-		/*$this->map_id = (int)$this->map_id;
-		$map = JModelLegacy::getInstance( 'Maps', 'Yandex_MapsModel');
-		
-		if (!$map->model($this->map_id)->id) {
-			$this->error['map_id'] = 'Вы должны выбрать карту';
-		}
-		
-		$this->category_id = (int)$this->category_id;
-		$category = JModelLegacy::getInstance( 'Categories', 'Yandex_MapsModel');
-		$category = $category->model($this->category_id);
-		if (!$category->id or $category->map_id!=$this->map_id) {
-			$this->error['category_id'] = 'Вы должны выбрать категорию';
-		}*/
-		
-		
+
 		$categoryids = array_map('intval', (array)$this->categoryids);
 
 		if (!count($categoryids)) {
@@ -122,23 +132,10 @@ class Yandex_MapsModelObjects extends CModel{
 		$copy->save();
 		return $copy;
 	}
+
 	public function getListQuery(){
 		$query = parent::getListQuery();
-		
-		/*$query->select('m.title AS map_title');
-		$query->leftJoin('#__yandex_maps_maps AS m ON m.id = a.map_id');
-		
-		*/
-		
-		/*$query->leftJoin('#__yandex_maps_object_to_category AS otc ON otc.object_id = a.id');
-		$query->select('c.title AS category_title, c.id as category_id');
-		$query->innerJoin('#__yandex_maps_categories  AS c ON c.id = otc.category_id');
-		
 
-		$query->leftJoin('#__yandex_maps_category_to_map AS ctm ON ctm.map_id = otc.category_id');
-		$query->select('m.title AS map_title, m.id as map_id');
-		$query->innerJoin('#__yandex_maps_maps AS m ON m.id in (select map_id from #__yandex_maps_category_to_map where category_id in (select category_id from #__yandex_maps_object_to_category where object_id=a.id))');
-*/
 		$query->select('o.*');
 		$query->leftJoin('#__yandex_maps_organizations  AS o ON a.id = o.organization_object_id');
 		
@@ -153,7 +150,7 @@ class Yandex_MapsModelObjects extends CModel{
         if (is_numeric($mapid) and (int)$mapid>0){
             $query->where('a.id in (select object_id from #__yandex_maps_object_to_category where category_id in (select category_id from #__yandex_maps_category_to_map where map_id = '.((int) $mapid).'))');
         }
-		//$query->group('a.`id`');
+
 		return $query;
 	}
 	
@@ -164,6 +161,7 @@ class Yandex_MapsModelObjects extends CModel{
 			left join #__yandex_maps_organizations as o on o.organization_object_id=a.id
 			where id='.((int)$id).' '.$where.' 
 			limit 1');
+
 		$item = new $this->classname;
 		$item->_attributes = $db->loadObject();
 		if ($item->organization_address) {
@@ -173,9 +171,11 @@ class Yandex_MapsModelObjects extends CModel{
 		if ($item->organization_address_legal) {
 			$item->organization_address_legal = json_decode($item->organization_address_legal);
 		}
+
 		$this->afterLoad();
 		return $item;
 	}
+
 	public function models($select = 'a.*, o.*', $return = false, $filter = '', $orderby = 'a.title asc', $limit = 1000) {
 		$db = JFactory::getDBO();
 		$this->_condition = $filter ? ' where '.$filter : 'where 1';
@@ -209,6 +209,7 @@ class Yandex_MapsModelObjects extends CModel{
 		}
 		return $items;
 	}
+
 	public function beforeRealDelete() {
 		$db = JFactory::getDBO();
 		$pid = $this->primary_id;

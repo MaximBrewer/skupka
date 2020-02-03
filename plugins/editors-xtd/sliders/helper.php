@@ -1,88 +1,51 @@
 <?php
 /**
  * @package         Sliders
- * @version         6.0.8
+ * @version         7.7.8
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2016 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2019 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Language\Text as JText;
+use Joomla\CMS\Object\CMSObject as JObject;
+use RegularLabs\Library\Document as RL_Document;
+use RegularLabs\Library\RegEx as RL_RegEx;
+
 /**
  ** Plugin that places the button
  */
 class PlgButtonSlidersHelper
+	extends \RegularLabs\Library\EditorButtonHelper
 {
-	public function __construct(&$params)
-	{
-		$this->params = $params;
-	}
 
 	/**
 	 * Display the button
 	 *
-	 * @return array A two element array of ( imageName, textToInsert )
+	 * @param string $editor_name
+	 *
+	 * @return JObject|null A button object
 	 */
-	function render($name)
+	public function render($editor_name)
 	{
-		$button = new JObject;
-
-		if (JFactory::getUser()->get('guest'))
-		{
-			return $button;
-		}
-
-		if (JFactory::getApplication()->isSite() && !$this->params->enable_frontend)
-		{
-			return $button;
-		}
+		RL_Document::loadEditorButtonDependencies();
 
 		if ($this->params->button_use_simple_button)
 		{
-			return $this->renderSimpleButton($name);
+			return $this->renderSimpleButton($editor_name);
 		}
 
-		return $this->renderButton($name);
+		return $this->renderPopupButton($editor_name);
 	}
 
-	private function renderButton($name)
+	private function renderSimpleButton($editor_name)
 	{
-		require_once JPATH_LIBRARIES . '/regularlabs/helpers/functions.php';
-
-		RLFunctions::stylesheet('regularlabs/style.min.css');
-
-		$button = new JObject;
-
-		$icon = 'reglab icon-sliders';
-		$link = 'index.php?rl_qp=1'
-			. '&folder=plugins.editors-xtd.sliders'
-			. '&file=popup.php'
-			. '&name=' . $name;
-
-		$button->modal   = true;
-		$button->class   = 'btn';
-		$button->link    = $link;
-		$button->text    = $this->getButtonText();
-		$button->name    = $icon;
-		$button->options = "{handler: 'iframe', size: {x:window.getSize().x-100, y: window.getSize().y-100}}";
-
-		return $button;
-	}
-
-	private function renderSimpleButton($name)
-	{
-		require_once JPATH_LIBRARIES . '/regularlabs/helpers/functions.php';
-
-		RLFunctions::loadLanguage('plg_editors-xtd_sliders');
-
-		RLFunctions::script('regularlabs/script.min.js');
-		RLFunctions::stylesheet('regularlabs/style.min.css');
-
-		$this->params->tag_open      = preg_replace('#[^a-z0-9-_]#s', '', $this->params->tag_open);
-		$this->params->tag_close     = preg_replace('#[^a-z0-9-_]#s', '', $this->params->tag_close);
+		$this->params->tag_open      = RL_RegEx::replace('[^a-z0-9-_]', '', $this->params->tag_open);
+		$this->params->tag_close     = RL_RegEx::replace('[^a-z0-9-_]', '', $this->params->tag_close);
 		$this->params->tag_delimiter = ($this->params->tag_delimiter == '=') ? '=' : ' ';
 
 		$text = $this->getExampleText();
@@ -100,32 +63,18 @@ class PlgButtonSlidersHelper
 				jInsertEditorText(text, editor);
 			}
 		";
-		JFactory::getDocument()->addScriptDeclaration($js);
+		RL_Document::scriptDeclaration($js);
 
 		$button = new JObject;
-
-		$icon = 'reglab icon-sliders';
 
 		$button->modal   = false;
 		$button->class   = 'btn';
 		$button->link    = '#';
-		$button->onclick = 'insertSliders(\'' . $name . '\');return false;';
+		$button->onclick = 'insertSliders(\'' . $editor_name . '\');return false;';
 		$button->text    = $this->getButtonText();
-		$button->name    = $icon;
+		$button->name    = $this->getIcon();
 
 		return $button;
-	}
-
-	private function getButtonText()
-	{
-		$text_ini = strtoupper(str_replace(' ', '_', $this->params->button_text));
-		$text     = JText::_($text_ini);
-		if ($text == $text_ini)
-		{
-			$text = JText::_($this->params->button_text);
-		}
-
-		return trim($text);
 	}
 
 	private function getExampleText()
@@ -152,9 +101,13 @@ class PlgButtonSlidersHelper
 	private function getCustomText()
 	{
 		$text = trim($this->params->button_custom_code);
-		$text = str_replace(array("\r", "\n"), array('', '</p>\n<p>'), trim($text)) . '</p>';
-		$text = preg_replace('#^(.*?)</p>#', '\1', $text);
-		$text = str_replace(array('{slider ', '{/sliders}'), array('{' . $this->params->tag_open . $this->params->tag_delimiter, '{/' . $this->params->tag_close . '}'), trim($text));
+		$text = str_replace(["\r", "\n"], ['', '</p>\n<p>'], trim($text)) . '</p>';
+		$text = RL_RegEx::replace('^(.*?)</p>', '\1', $text);
+		$text = str_replace(
+			['{slider ', '{/sliders}'],
+			['{' . $this->params->tag_open . $this->params->tag_delimiter, '{/' . $this->params->tag_close . '}']
+			, trim($text)
+		);
 
 		return $text;
 	}

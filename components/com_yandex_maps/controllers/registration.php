@@ -137,6 +137,7 @@ class Yandex_MapsControllerRegistration extends Yandex_MapsController{
 		$app->redirect('index.php?option=com_yandex_maps&task=map&id='.$model->map->id, 'Объект '. ($model->active ? 'активирован' : 'деактивирован'));
 		jexit();
 	}
+
 	public function save() {
 		$result = (object)array('status'=>0, 'error_message'=>'Произошла неизвестная ошибка');
 		if (!JSession::checkToken()) {
@@ -167,9 +168,12 @@ class Yandex_MapsControllerRegistration extends Yandex_MapsController{
 		}
 
 		$data = array();
-		$address = array(); $address_has = false;
+		$address = array();
+		$address_has = false;
+
 		foreach ($dataInput as $key=>$value) {
 			switch ($key) {
+				case 'organization_image2':
 				case 'organization_image':
 				case 'organization_icon':
 				case 'organization_password2':
@@ -210,19 +214,8 @@ class Yandex_MapsControllerRegistration extends Yandex_MapsController{
 			}
 		}
 
-		
-		if ($params->get('registration_organization_image', 1)) {
-			$file = jHtml::_('xdwork.upload','organization_image');
-			if (!$file['error']){
-				if (count($file['files'])) {
-					$data['organization_image'] = $file['files'][0][1];
-				}
-			} else {
-				$result->error_message = implode("\n<br>", $file['error']);
-				jExit(json_encode($result));
-			}	
-		}
 		$icon = $params->get('object_iconImageHref', "media/com_yandex_maps/images/organizations/arrow.png");
+
 		if (empty($dataInput['organization_icon']) or !$dataInput['organization_icon']) {
 			if ($params->get('registration_organization_icon_some_file', 1)) {
 				$file = jHtml::_('xdwork.upload','organization_icon_file');
@@ -301,9 +294,11 @@ class Yandex_MapsControllerRegistration extends Yandex_MapsController{
 		$organization->save(true);
 		
 		$result->error_message = 'Объект добавлен на сайт. <a href="'.JRoute::_('index.php?option=com_yandex_maps&task=object&id='.$object->slug).'">Метка</a> добавлена в <a href="'.JRoute::_('index.php?option=com_yandex_maps&task=map&id='.$category->map->slug).'">карту</a>';
+
 		if (!(int)$params->get('registration_organization_moderation', 1)) {
 			$result->error_message = 'Объект добавлен в базу. После модерации, он будет добавлен на сайт';
 		}
+
 		if ($params->get('registration_organization_send_notification_to_admin', 1)) {
 			$body = 'Объект добавлен на сайт. <a href="'.JRoute::_('index.php?option=com_yandex_maps&task=object&id='.$object->slug, true, -1).'">Метка</a> добавлена в <a href="'.JRoute::_('index.php?option=com_yandex_maps&task=map&id='.$category->map->slug, true, -1).'">карту</a>';
 			
@@ -317,6 +312,7 @@ class Yandex_MapsControllerRegistration extends Yandex_MapsController{
 			$body.= '<br>Для удаления пройдите по ссылке <a href="'.JRoute::_('index.php?option=com_yandex_maps&task=registration.remove&id='.$object->id, true, -1).'">Удалить</a>';
 			jhtml::_('xdwork.sendmail', 'Добавлен новый объект на сайте %s', $body);
 		}
+
 		$result->status = 1;
 		jExit(json_encode($result));
 		exit;

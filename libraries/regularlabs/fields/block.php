@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -35,6 +35,7 @@ class JFormFieldRL_Block extends \RegularLabs\Library\Field
 		$description = $this->get('description');
 		$class       = $this->get('class');
 		$showclose   = $this->get('showclose', 0);
+		$nowell      = $this->get('nowell', 0);
 
 		$start = $this->get('start', 0);
 		$end   = $this->get('end', 0);
@@ -44,26 +45,33 @@ class JFormFieldRL_Block extends \RegularLabs\Library\Field
 		if ($start || ! $end)
 		{
 			$html[] = '</div>';
+
 			if (strpos($class, 'alert') !== false)
 			{
-				$html[] = '<div class="alert ' . $class . '">';
+				$class = 'alert ' . $class;
 			}
-			else
+			else if ( ! $nowell)
 			{
-				$html[] = '<div class="well well-small ' . $class . '">';
+				$class = 'well well-small ' . $class;
 			}
+
+			$html[] = '<div class="' . $class . '">';
+
 			if ($showclose && JFactory::getUser()->authorise('core.admin'))
 			{
-				$html[] = '<button type="button" class="close rl_remove_assignment">&times;</button>';
+				$html[] = '<button type="button" class="close rl_remove_assignment" aria-label="Close">&times;</button>';
 			}
+
 			if ($title)
 			{
 				$html[] = '<h4>' . $this->prepareText($title) . '</h4>';
 			}
+
 			if ($description)
 			{
 				$html[] = '<div>' . $this->prepareText($description) . '</div>';
 			}
+
 			$html[] = '<div><div>';
 		}
 

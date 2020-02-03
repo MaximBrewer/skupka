@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -123,13 +123,18 @@ class DB
 		return ' ' . $operator . ' (' . $values . ')';
 	}
 
-	public static function prepareValue($value, $handle_now)
+	public static function prepareValue($value, $handle_now = false)
 	{
 		$dates = ['now', 'now()', 'date()', 'jfactory::getdate()'];
 
 		if ($handle_now && ! is_array($value) && in_array(strtolower($value), $dates))
 		{
 			return 'NOW()';
+		}
+
+		if (is_numeric($value))
+		{
+			return $value;
 		}
 
 		return JFactory::getDbo()->quote($value);
@@ -144,6 +149,8 @@ class DB
 
 		if (is_array($value))
 		{
+			$value = array_values($value);
+
 			$operator = self::getOperatorFromValue($value[0], $default);
 
 			// remove operators from other array values
@@ -209,8 +216,11 @@ class DB
 	 */
 	public static function like($value)
 	{
-		$db = JFactory::getDbo();
+		$operator = self::getOperator($value);
+		$value    = str_replace('*', '%', self::prepareValue($value));
 
-		return ' LIKE ' . $db->quote($value);
+		$operator = $operator == '!=' ? 'NOT LIKE' : 'LIKE';
+
+		return ' ' . $operator . ' ' . $value;
 	}
 }

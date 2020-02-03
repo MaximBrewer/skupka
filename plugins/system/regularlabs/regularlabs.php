@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -87,9 +87,30 @@ class PlgSystemRegularLabs extends JPlugin
 			return;
 		}
 
+		$this->fixQuotesInTooltips();
+
 		RL_AdminMenu::combine();
 
 		RL_AdminMenu::addHelpItem();
+	}
+
+	private function fixQuotesInTooltips()
+	{
+		$html = JFactory::getApplication()->getBody();
+
+		if ($html == '')
+		{
+			return;
+		}
+
+		if (strpos($html, '&amp;quot;rl_code&amp;quot;') === false)
+		{
+			return;
+		}
+
+		$html = str_replace('&amp;quot;rl_code&amp;quot;', '&quot;rl_code&quot;', $html);
+
+		JFactory::getApplication()->setBody($html);
 	}
 
 	public function onInstallerBeforePackageDownload(&$url, &$headers)

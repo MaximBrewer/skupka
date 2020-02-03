@@ -1,16 +1,17 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\HTML\HTMLHelper as JHtml;
 use Joomla\CMS\Language\Text as JText;
 use Joomla\Registry\Registry;
 
@@ -32,24 +33,31 @@ class JFormFieldRL_Users extends \RegularLabs\Library\Field
 			$this->value = explode(',', $this->value);
 		}
 
-		$size     = (int) $this->get('size');
-		$multiple = $this->get('multiple');
+		$size         = (int) $this->get('size');
+		$multiple     = $this->get('multiple');
+		$show_current = $this->get('show_current');
 
 		return $this->selectListSimpleAjax(
 			$this->type, $this->name, $this->value, $this->id,
-			compact('size', 'multiple')
+			compact('size', 'multiple', 'show_current')
 		);
 	}
 
 	function getAjaxRaw(Registry $attributes)
 	{
-		$name     = $attributes->get('name', $this->type);
-		$id       = $attributes->get('id', strtolower($name));
-		$value    = $attributes->get('value', []);
-		$size     = $attributes->get('size');
-		$multiple = $attributes->get('multiple');
+		$name         = $attributes->get('name', $this->type);
+		$id           = $attributes->get('id', strtolower($name));
+		$value        = $attributes->get('value', []);
+		$size         = $attributes->get('size');
+		$multiple     = $attributes->get('multiple');
+		$show_current = $attributes->get('show_current');
 
 		$options = $this->getUsers();
+
+		if ($show_current)
+		{
+			array_unshift($options, JHtml::_('select.option', 'current', '- ' . JText::_('RL_CURRENT_USER') . ' -'));
+		}
 
 		return $this->selectListSimple($options, $name, $value, $id, $size, $multiple);
 	}

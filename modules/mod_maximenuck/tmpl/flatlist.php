@@ -19,7 +19,7 @@ $direction = $langdirection == 'rtl' ? 'right' : 'left';
             <ul class="maximenuck2 <?php echo $params->get('moduleclass_sfx'); ?>">
 <?php
 $zindex = 12000;
-
+$lastitem = '';
 foreach ($items as $i => &$item) {
 	$item->mobile_data = isset($item->mobile_data) ? $item->mobile_data : '';
 	$itemlevel = ($start > 1) ? $item->level - $start + 1 : $item->level;

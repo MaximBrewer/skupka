@@ -126,6 +126,7 @@ abstract class CModel extends JModelList{
 		}
 		return $html;
 	}
+
 	public function getIntro() {
 		$text = $this->description;
 		if (preg_match('#^(.*)<hr[\s]*id=("|\')system-readmore("|\')[\s]*(/)?>#Uusi',$text, $intro)) {
@@ -134,10 +135,12 @@ abstract class CModel extends JModelList{
 			return $this->truncate($text, $this->settings->get('description_intro_length', 200));
 		}
 	}
+
 	public function getFull() {
 		$text = $this->description;
 		return preg_replace('#<hr[\s]*id=("|\')system-readmore("|\')[\s]*(/)?>#usi','',$text);
 	}
+
 	public function save($forseIsert = false) {
 		if (!$this->withOutValidate and !$this->validate()) {
 			return false;
@@ -171,8 +174,11 @@ abstract class CModel extends JModelList{
 		$this->afterSave();
 		return true;
 	}
+
 	public function beforeRealDelete() {}
+
 	public function afterRealDelete() {}
+
 	public function realDelete() {
 		$this->beforeRealDelete();
 		$db = JFactory::getDBO();
@@ -216,14 +222,18 @@ abstract class CModel extends JModelList{
 	}
 	public function afterLoad() {}
 	public function afterSave() {}
+
 	public function beforeSave() {
 		jimport('joomla.filter.output');
+
 		if (empty($this->alias)){
 			$this->alias = $this->title;
 		}
+
 		$this->alias = JFilterOutput::stringURLSafe($this->alias);
 		return true;
 	}
+
 	public function findNearest($pid) {
 		if (is_numeric($pid)) {
 			return $this->model($pid);

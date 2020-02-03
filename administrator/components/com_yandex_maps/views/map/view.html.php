@@ -13,8 +13,6 @@ class Yandex_MapsViewMap extends JViewLegacy {
 		$doc->addStyleSheet(JURI::root() . 'media/com_yandex_maps/css/yandex_maps.css');
 		$lang = in_array(JFactory::getLanguage()->getTag(), ['ru-RU','en-US','tr-TR','uk-UA']) ? JFactory::getLanguage()->getTag() : 'en-US';
 		JToolBarHelper::cancel('maps');
-		
-
 		$this->assign('lang', $lang);
 		parent::display($tpl);
 	}

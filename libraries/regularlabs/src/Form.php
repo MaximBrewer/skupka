@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -15,6 +15,7 @@ defined('_JEXEC') or die;
 
 use Joomla\CMS\HTML\HTMLHelper as JHtml;
 use Joomla\CMS\Language\Text as JText;
+use Joomla\CMS\Plugin\PluginHelper as JPluginHelper;
 
 class Form
 {
@@ -88,10 +89,17 @@ class Form
 				$input = '<input type="text" name="' . $name . '" id="' . $id . '" value="' . $value . '" size="60">';
 			}
 
+			$plugin = JPluginHelper::getPlugin('system', 'regularlabs');
+
+			$url = ! empty($plugin->id)
+				? 'index.php?option=com_plugins&task=plugin.edit&extension_id=' . $plugin->id
+				: 'index.php?option=com_plugins&filter_folder=&filter_search=Regular%20Labs%20Library';
+
 			$label   = JText::_('RL_ITEM_IDS');
 			$text    = JText::_('RL_MAX_LIST_COUNT_INCREASE');
 			$tooltip = JText::_('RL_MAX_LIST_COUNT_INCREASE_DESC,' . $params->max_list_count . ',RL_MAX_LIST_COUNT');
-			$link    = '<a href="#" id="' . $id . '_msg" class="hasPopover" title="' . $text . '" data-content="' . htmlentities($tooltip) . '">'
+			$link    = '<a href="' . $url . '" target="_blank" id="' . $id . '_msg"'
+				. ' class="hasPopover" title="' . $text . '" data-content="' . htmlentities($tooltip) . '">'
 				. '<span class="icon icon-cog"></span>'
 				. $text
 				. '</a>';
@@ -115,14 +123,19 @@ class Form
 				{
 					continue;
 				}
-				$repeat       = ($option->level - $first_level > 0) ? $option->level - $first_level : 0;
-				$option->text = str_repeat(' - ', $repeat) . $option->text;
+				$repeat = ($option->level - $first_level > 0) ? $option->level - $first_level : 0;
+				if ( ! $repeat)
+				{
+					continue;
+				}
+				//$option->text = str_repeat(' - ', $repeat) . $option->text;
+				$option->text = '[[:padding-left: ' . (5 + ($repeat * 15)) . 'px;:]]' . $option->text;
 			}
 		}
 
 		if ( ! $multiple)
 		{
-			$html = JHtml::_('select.genericlist', $options, $name, 'class="inputbox"', 'value', 'text', $value);
+			$html = JHtml::_('select.genericlist', $options, $name, 'class="inputbox"', 'value', 'text', $value, $id);
 
 			return self::handlePreparedStyles($html);
 		}
@@ -131,8 +144,25 @@ class Form
 
 		if ($simple)
 		{
-			$attr = 'style="width: ' . $size . 'px"';
-			$attr .= $multiple ? ' multiple="multiple"' : '';
+			$attr = 'style="width: ' . $size . 'px" multiple="multiple"';
+
+			if (substr($name, -2) !== '[]')
+			{
+				$name .= '[]';
+			}
+
+			if (is_array(reset($options)) && isset(reset($options)['items']))
+			{
+				return JHtml::_(
+					'select.groupedlist', $options, $name,
+					[
+						'id'          => $id,
+						'group.id'    => 'id',
+						'list.attr'   => trim($attr),
+						'list.select' => $value,
+					]
+				);
+			}
 
 			$html = JHtml::_('select.genericlist', $options, $name, trim($attr), 'value', 'text', $value, $id);
 
@@ -310,6 +340,24 @@ class Form
 	{
 		JHtml::_('jquery.framework');
 
+		$script = self::getAddToLoadAjaxListScript($field, $name, $value, $id, $attributes, $simple);
+
+		if (is_array($value))
+		{
+			$value = implode(',', $value);
+		}
+
+		Document::script('regularlabs/script.min.js');
+		Document::stylesheet('regularlabs/style.min.css');
+
+		$input = '<textarea name="' . $name . '" id="' . $id . '" cols="40" rows="5">' . $value . '</textarea>'
+			. '<div id="' . $id . '_spinner" class="rl_spinner"></div>';
+
+		return $input . $script;
+	}
+
+	public static function getAddToLoadAjaxListScript($field, $name, $value, $id, $attributes = [], $simple = false)
+	{
 		$attributes['field'] = $field;
 		$attributes['name']  = $name;
 		$attributes['value'] = $value;
@@ -326,8 +374,6 @@ class Form
 
 //			$success .= "console.log('#" . $id . "');";
 //			$success .= "console.log(data);";
-
-		Document::script('regularlabs/script.min.js');
 
 		if ($simple)
 		{
@@ -349,18 +395,7 @@ class Form
 			. ")"
 			. "});";
 
-		if (is_array($value))
-		{
-			$value = implode(',', $value);
-		}
-
-		Document::script('regularlabs/script.min.js');
-		Document::stylesheet('regularlabs/style.min.css');
-
-		$input = '<textarea name="' . $name . '" id="' . $id . '" cols="40" rows="5">' . $value . '</textarea>'
-			. '<div id="' . $id . '_spinner" class="rl_spinner"></div>';
-
-		return $input . '<script>' . $script . '</script>';
+		return '<script>' . $script . '</script>';
 	}
 
 	/**
@@ -455,6 +490,11 @@ class Form
 		// Doing following replacement in 3 steps to prevent the Regular Expressions engine from exploding
 
 		// Replace style tags right after the html tags
+		$string = RegEx::replace(
+			';?:\]\]\s*\[\[:',
+			';',
+			$string
+		);
 		$string = RegEx::replace(
 			'>\s*\[\[\:(.*?)\:\]\]',
 			' style="\1">',

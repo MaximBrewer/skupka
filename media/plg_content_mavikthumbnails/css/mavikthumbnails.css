@@ -1,7 +1,0 @@
-figure.thumbnail figcaption {
-    display: block;
-}
-
-a.zoomin {
-	cursor: url(../images/zoomin.cur), pointer;
-}

@@ -12,8 +12,10 @@ var win1;
 			};
 		return opt;
 	}
+
 	function onChangeAttachEvents() {
 		var timer;
+
 		map.events.add(['boundschange', 'typechange', 'balloonclose'], function () {
 			if (!$('#jform_lat').is(':focus')) {
 				$('#jform_lat').val(map.getCenter()[0]);
@@ -25,6 +27,7 @@ var win1;
 				$('#jform_zoom').val(map.getZoom());
 			}
 		});
+
 		map.events.add('click', function (e) {
 			var geo = ymaps.geocode(e.get('coords'));
 			geo.then(
@@ -35,28 +38,7 @@ var win1;
 				function (err) {}
 			);
 		});
-		/*$('#jform_map_id').on('change', function () {
-			var options = getMapOptions('category');
-			map.setZoom(options.zoom);
-			map.setType(options.type);
-			map.setCenter(options.center);
-		}).on('change update', function () {
-			$.get(window.juri_root + 'index.php?option=com_yandex_maps&task=maps.categories&view=select&id=' + $(this).val(), function (resp) {
-				var val = $('#jform_category_id').val();
-				$('#jform_category_id')
-					.off('change.xdsoft')
-					.html(resp)
-					.val(val)
-					.trigger("liszt:updated")
-					.on('change.xdsoft', function () {
-						var options = getMapOptions('category');
-						map.setZoom(options.zoom);
-						map.setType(options.type);
-						map.setCenter(options.center);
-					});
-					
-			});
-		});*/
+
 		$('#jform_category_id')
 			.on('change.xdsoft', function () {
 				var options = getMapOptions('category');
@@ -64,14 +46,17 @@ var win1;
 				map.setType(options.type);
 				map.setCenter(options.center);
 			});
+
 		if (!$('[name="jform[id]"]').val()) {
 			$('#jform_category_id').trigger('change.xdsoft');
 		}
+
 		$('#jform_type').on('change', function () {
 			$('.control-group.placemark,.control-group.polygon,.control-group.polyline,.control-group.circle').hide();
 			$('.control-group.' + $(this).val()).show();
 		}).trigger('change');
 	}
+
 	window.createMap = function (nmap, nymaps, win) {
 		ymaps = nymaps;
 		map  = nmap;
@@ -113,6 +98,7 @@ var win1;
 		});
 
 		onChangeAttachEvents();
+
 		if ($('#jform_coordinates').val()) {
 			coordinates = JSON.parse($('#jform_coordinates').val());
 			properties = $('#jform_properties').val() ? JSON.parse($('#jform_properties').val()) : {};
@@ -144,7 +130,7 @@ var win1;
 			'<meta http-equiv="content-type" content="text/html; charset=utf-8" />' +
 			"<base href=\"" + window.juri_root + "\">" +
 			'<link rel="stylesheet" href="' + window.juri_root + 'media/com_yandex_maps/css/iframe.css" type="text/css" />' +
-			'<script src="//api-maps.yandex.ru/2.1/?lang=' + mapparent.data('lang') + '&apikey='+api_key+'" type="text/javascript"></script>' +
+			'<script src="//api-maps.yandex.ru/2.1/?lang=' + mapparent.data('lang') + (window.YANDEX_MAPS_API_KEY ? '&apikey=' + encodeURIComponent(window.YANDEX_MAPS_API_KEY) : '') + '" type="text/javascript"></script>' +
 			'<script src="' + window.juri_root + 'media/com_yandex_maps/js/xdsoft_sizerbox.js" type="text/javascript"></script>' +
 			'<script src="' + window.juri_root + 'media/com_yandex_maps/js/xdsoft_sizerbox.js" type="text/javascript"></script>' +
 			'<script src="' + window.juri_root + 'media/com_yandex_maps/js/iframe.js" type="text/javascript"></script>' +

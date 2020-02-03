@@ -1,19 +1,19 @@
 <?php
 /**
  * @package         Sourcerer
- * @version         7.1.4
+ * @version         8.2.0
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2017 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2019 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
-namespace RegularLabs\Sourcerer;
+namespace RegularLabs\Plugin\System\Sourcerer;
 
 defined('_JEXEC') or die;
 
-use JText;
+use Joomla\CMS\Language\Text as JText;
 use RegularLabs\Library\PluginTag as RL_PluginTag;
 use RegularLabs\Library\Protect as RL_Protect;
 use RegularLabs\Library\RegEx as RL_RegEx;
@@ -30,7 +30,7 @@ class Clean
 
 		$params = Params::get();
 
-		if (!$params->place_comments)
+		if ( ! $params->place_comments)
 		{
 			RL_Protect::removeCommentTags($string, 'Sourcerer');
 		}
@@ -55,7 +55,7 @@ class Clean
 
 	public static function cleanTagsFromHead(&$string)
 	{
-		if (!RL_String::contains($string, Params::getTags(true)))
+		if ( ! RL_String::contains($string, Params::getTags(true)))
 		{
 			return;
 		}
@@ -63,15 +63,18 @@ class Clean
 		$params = Params::get();
 
 		list($tag_start, $tag_end) = Params::getTagCharacters();
+
+		$inside_tag = RL_PluginTag::getRegexInsideTag($tag_start, $tag_end);
+		$spaces     = RL_PluginTag::getRegexSpaces();
+
 		$tag_start = RL_RegEx::quote($tag_start);
 		$tag_end   = RL_RegEx::quote($tag_end);
 
-		$inside_tag = RL_PluginTag::getRegexInsideTag();
-		$spaces     = RL_PluginTag::getRegexSpaces();
+		$regex = Params::getRegex();
 
 		// Remove start tag to end tag
 		$string = RL_RegEx::replace(
-			$params->regex,
+			$regex,
 			'',
 			$string
 		);

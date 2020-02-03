@@ -3,9 +3,11 @@ defined("_JEXEC") or die("Access deny");
 
 class Yandex_MapsModelMaps extends CModel{
 	private $address = false;
+
 	public function setAddress($address) {
 		$this->address = $address;
 	}
+
 	public function getAddress() {
 		return $this->address;
 	}
@@ -83,23 +85,25 @@ class Yandex_MapsModelMaps extends CModel{
 		return $categories;
 	}
 
-	public function getOnlySelfObjectsByBound($bound = [], $offset = 0, $limit = 500, $exclude = [], $search = false, $forse_id = 0, $filters = []) {
+	public function getOnlySelfObjectsByBound($bound = [], $offset = 0, $limit = 500, $exclude = [], $search = false, $force_id = 0, $filters = []) {
 		$db = JFactory::getDBO();
 		$filter = ['(a.active=1)'];
 
-		if (!$forse_id) {
+		if (!$force_id) {
 			if ($bound && isset($bound[0]) && $bound[0]>0) {
 				$filter[] = '(a.lat > '.((float)$bound[0][0]).' and
 					a.lan > '.((float)$bound[0][1]).' and
 					a.lat < '.((float)$bound[1][0]).' and
 					a.lan < '.((float)$bound[1][1]).')';
 			}
+
 			if ($filter && $exclude && isset($exclude[0]) && $exclude[0]>0) {
 				$filter[] = '!(a.lat > '.((float)$exclude[0][0]).' and
 				a.lan > '.((float)$exclude[0][1]).' and
 				a.lat < '.((float)$exclude[1][0]).' and
 				a.lan < '.((float)$exclude[1][1]).')';
 			}
+
 			if ($search) {
 				$filter[] = ' (
 					a.title like "%'.$db->escape( $search, true ).'%" or
@@ -107,7 +111,7 @@ class Yandex_MapsModelMaps extends CModel{
 				)';
 			}
 		} else {
-			$filter[] ='(a.id='.((int)$forse_id).')';
+			$filter[] ='(a.id=' . ((int)$force_id).')';
 		}
 
 		$db->setQuery($q = 'select a.*, o.*, category.title as category_title, category.id as category_id,
@@ -146,6 +150,7 @@ class Yandex_MapsModelMaps extends CModel{
 					a.lat < '.((float)$bound[1][0]).' and
 					a.lan < '.((float)$bound[1][1]).')';
 			}
+
 			if ($filter && $exclude && isset($exclude[0]) && $exclude[0]>0) {
 				$filter[] = ' not (a.lat > '.((float)$exclude[0][0]).' and
 				a.lan > '.((float)$exclude[0][1]).' and
@@ -321,7 +326,9 @@ class Yandex_MapsModelMaps extends CModel{
 		);
 		return $db->loadResult();
 	}
+
 	public function afterLoad() {}
+
 	public function getBehaviors($element = 'behaviors') {
 		if (isset($this->_data->$element) and $this->_data->$element and is_string($this->_data->$element)) {
 			return json_decode($this->_data->$element);
@@ -329,6 +336,7 @@ class Yandex_MapsModelMaps extends CModel{
 			return array('default');
 		}
 	}
+
 	public function setBehaviors($array = false, $element = 'behaviors') {
 		if ($array) {
 			if (is_array($array)) {
@@ -346,12 +354,15 @@ class Yandex_MapsModelMaps extends CModel{
 			$this->_data->$element = '["default"]';
 		}
 	}
+
 	public function getControls() {
 		return $this->getBehaviors('controls');
 	}
+
 	public function setControls($array = false) {
 		$this->setBehaviors($array, 'controls');
 	}
+
 	public function afterSave() {
 		if ($this->fastobjects and is_array($this->fastobjects) and count($this->fastobjects)) {
 			foreach($this->_data->fastobjects as &$object) {
@@ -394,6 +405,7 @@ class Yandex_MapsModelMaps extends CModel{
 			};
 		}
 	}
+
 	public function defaults() {
 		if (!$this->lat) {
 			$this->lat = 55.745501257;
@@ -451,6 +463,7 @@ class Yandex_MapsModelMaps extends CModel{
 
 		return !count($this->error);
 	}
+
 	public function copy($mode=0) {
 		switch ($mode) {
 			case 0:
@@ -484,14 +497,14 @@ class Yandex_MapsModelMaps extends CModel{
 			break;
 		}
 	}
+
 	public function getListQuery(){
 		$query = parent::getListQuery();
 		$query->select('(select count(distinct otc.object_id) from  #__yandex_maps_object_to_category AS otc where otc.category_id in (select category_id from #__yandex_maps_category_to_map where map_id=a.id)) as objects_count');
-		//$query->leftJoin('#__yandex_maps_category_to_map AS ctm ON ctm.map_id = a.id');
-		//$query->where('o.active=1');
 		$query->group('a.id');
 		return $query;
 	}
+
 	public function beforeRealDelete() {
 		set_time_limit(0);
 		$model = JModelLegacy::getInstance('Categories', 'Yandex_MapsModel');

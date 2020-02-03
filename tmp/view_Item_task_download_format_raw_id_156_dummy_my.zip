@@ -1,0 +1,782 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html class="isIE9" lang="en-gb" dir="ltr" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en-gb" dir="ltr" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
+	<head>			
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-10961166-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-10961166-1');
+</script>
+<!-- start Omniconvert.com code 
+<link rel="dns-prefetch" href="//app.omniconvert.com"/>    
+<script type="text/javascript" src="//cdn.omniconvert.com/js/b15b5af.js"></script>
+ end Omniconvert.com code -->              
+		
+<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='22128195-1',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
+
+<meta charset="utf-8" />
+	<base href="https://breakdesigns.net/pricing" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="keywords" content="Joomla, Magento, Virtuemart,Search,Filtering Filters, Product filters, Product Search, Custom fields,Product Builder, Bundles, Moving text, Transifex, faceted navigation, product search, Virtuemart Search" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="description" content="Add ons for e-commerce solutions. Joomla! and Magento Extensions" />
+	<title>Pricing and Plans</title>
+	<link href="/templates/breakdesigns/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="https://breakdesigns.net/media/strapper30/css/bootstrap.min.css?d1b4df073ffe2f48baca440b1f780cce" rel="stylesheet" />
+	<link href="https://breakdesigns.net/media/strapper30/css/strapper.j3.min.css?d1b4df073ffe2f48baca440b1f780cce" rel="stylesheet" />
+	<link href="https://breakdesigns.net/templates/breakdesigns/media/com_akeebasubs/css/frontend.css?532038bd22fe550f55b5c5d8b3abfdf7" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet" />
+	<link href="/templates/breakdesigns/css/jquery.mmenu.all.css" rel="stylesheet" />
+	<link href="/templates/breakdesigns/css/jquery.mmenu.header.css" rel="stylesheet" />
+	<link href="/templates/breakdesigns/css/template.css" rel="stylesheet" />
+	<link href="/templates/breakdesigns/css/custom.css" rel="stylesheet" />
+	<link href="/media/plg_system_eprivacy/css/ribbon.min.css?376498704635b58801eb445652dab4b9" rel="stylesheet" />
+	<style>
+.plg_system_eprivacy_module .plg_system_eprivacy_message {
+border:1px solid #a9a900;
+background-color:#ffffe1;
+padding:5px;
+}
+.plg_system_eprivacy_module .plg_system_eprivacy_message button.plg_system_eprivacy_agreed {
+color:#000;
+background-color:#0f0;
+}
+.plg_system_eprivacy_module .plg_system_eprivacy_message button.plg_system_eprivacy_declined {
+color:#fff;
+background-color:#f00;
+}
+.plg_system_eprivacy_module div.plg_system_eprivacy_accepted,
+.plg_system_eprivacy_module div.plg_system_eprivacy_declined {
+overflow:hidden;
+border: 1px solid #ccc;
+color: #999;
+vertical-align:middle;
+
+padding:5px;
+}
+.plg_system_eprivacy_module div.plg_system_eprivacy_accepted button,
+
+.plg_system_eprivacy_module div.plg_system_eprivacy_declined button {
+float:right;
+}.activebar-container {
+background-color:#ffffe1;
+border-bottom:1px solid #000000;
+color:#000;
+text-align:center;
+}
+.activebar-container p {
+margin:5px auto;
+text-align:left;
+max-width:670px;
+}
+.activebar-container button {
+margin:5px 10px;
+padding:5px 10px;
+}
+.activebar-container button.decline {
+color:#fff;
+background-color:#f00;
+}
+.activebar-container button.accept {
+color:#fff;
+background-color:#39c;
+}
+.activebar-container ul.links,.activebar-container ul.links li {
+display:block
+}
+.activebar-container ul.links li {
+float:left;
+margin-right:5px;
+}
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"3ddc6ba8d09fce141bae3315ca031c67","system.paths":{"root":"","base":""},"joomla.jtext":{"PLG_SYS_EPRIVACY_MESSAGE":"This website uses cookies to manage authentication, navigation, and other functions.  By using our website, you agree that we can place these types of cookies on your device.","PLG_SYS_EPRIVACY_POLICYTEXT":"View Privacy Policy","PLG_SYS_EPRIVACY_LAWLINK_TEXT":"View e-Privacy Directive Documents","PLG_SYS_EPRIVACY_AGREE":"I agree","PLG_SYS_EPRIVACY_DECLINE":"I decline","PLG_SYS_EPRIVACY_CONFIRMUNACCEPT":"Performing this action will remove all cookies set by this website.  Third party cookies will no longer communicate to their parent sites, but cannot be removed by this website and must be removed by other means.\n\nAre you sure you want to disable and remove cookies?"},"plg_system_eprivacy":{"displaytype":"ribbon","autoopen":true,"accepted":false,"root":"","policyurl":"https:\/\/breakdesigns.net\/privacy-policy","policytarget":"_blank","agreeclass":"btn btn-blue","declineclass":"btn","lawlink":"http:\/\/eur-lex.europa.eu\/LexUriServ\/LexUriServ.do?uri=CELEX:32002L0058:EN:NOT"}}</script>
+	<script src="/media/jui/js/jquery.min.js?376498704635b58801eb445652dab4b9"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?376498704635b58801eb445652dab4b9"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?376498704635b58801eb445652dab4b9"></script>
+	<script src="https://breakdesigns.net/media/strapper30/js/namespace.js?d1b4df073ffe2f48baca440b1f780cce"></script>
+	<script src="https://breakdesigns.net/media/strapper30/js/bootstrap.min.js?d1b4df073ffe2f48baca440b1f780cce"></script>
+	<script src="/media/system/js/core.js?376498704635b58801eb445652dab4b9"></script>
+	
+	<script src="/media/modals/js/jquery.touchSwipe.min.js"></script>
+	<script src="/media/modals/js/jquery.colorbox-min.js"></script>
+	<script src="/media/modals/js/script.min.js?v=9.0.4.p"></script>
+	<script src="/templates/breakdesigns/js/jquery.mmenu.min.all.js"></script>
+	<script src="/templates/breakdesigns/js/behaviour.js"></script>
+	<script src="/media/plg_system_eprivacy/js/eprivacy.class.min.js?376498704635b58801eb445652dab4b9"></script>
+	<script>
+
+ var modals_class = 'modal_link'; var modals_disable_on_mobile = 0; var modals_disable_on_mobile_splash = 1; var modals_mobile_max_width = 767; var modals_open_by_url = ''; var modals_defaults = { opacity: '0.8',width: '830',height: '450',maxWidth: '100%',maxHeight: '95%',fixed: 'true',current: '{current} / {total}',previous: 'previous',next: 'next',close: 'close',xhrError: 'This content failed to load.',imgError: 'This image failed to load.' }; 
+
+	</script>
+			
+		
+	</head>
+	
+	<body id="com_akeebasubs" class=" viewIsLevels layoutIsAwesome itemIdIs326">	
+	<div class="wrapper" id="page">	
+		<div id="top">
+			<div class="row">	
+				 
+							<div id="moduleId153" class="module ">
+		
+		<div class="moduleContent">
+						
+			
+
+<div class="custom"  >
+	<p><!-- START: Modals --><a href="/pricing/levels?tmpl=login&amp;ml=1" class="modal_link" data-modal-inner-width="480" data-modal-inner-height="400" data-modal-class-name="no_title">Login</a><!-- END: Modals --></p></div>
+		</div>
+	</div>
+								    
+									
+				 
+						<div id="moduleId98" class="module ">
+		
+		<div class="moduleContent">
+						
+			
+<ul class="sfNavigation menu">
+<li class="item-106"><a href="/about" ><span>About</span></a></li><li class="item-107"><a href="/contact" ><span>Contact</span></a></li></ul>
+		</div>
+	</div>
+								    
+													
+				<div class="clr"></div>
+			</div>	
+		</div>				
+		
+		<header class="mainHeader">	
+			<div class="row">						
+				<div id="logo">
+					<a href="https://breakdesigns.net/">
+						<img itemprop="logo" src="/templates/breakdesigns/images/logo.png" alt="Breakdesigns logo" />											
+					</a>
+				</div>		
+							
+								<a href="#mm-sidebar" id="menuToggler">
+	                <span class="navbar-toggle navbar-btn">
+	                    <span class="icon-bar"></span>
+						<span class="icon-bar"></span>	
+						<span class="icon-bar"></span>	
+	                </span>
+        		</a>
+				<div id="menuWrapper" class="show-for-large-up">
+					<div id="menu">						
+						<nav class="column small-12 mainNav">							
+							
+<ul class="sfNavigation menu">
+<li class="item-101"><a href="/" ><span>Home</span></a></li><li class="item-102 deeper parent"><a href="/extensions" ><span>Extensions</span></a><ul><li class="item-154 deeper parent"><span class="nav-header ">Joomla Extensions</span>
+<ul><li class="item-159 parent"><a href="/extensions/joomla/custom-filters" ><span>Custom Filters</span></a></li><li class="item-156 parent"><a href="/extensions/joomla/custom-fields-for-all" ><span>Custom Fields For All</span></a></li><li class="item-447 parent"><a href="/extensions/joomla/dependent-custom-fields-for-all" ><span>Dependent Custom Fields For All</span></a></li><li class="item-160 parent"><a href="/extensions/joomla/stockable-custom-fields" ><span>Stockable Custom Fields</span></a></li><li class="item-157 parent"><a href="/extensions/joomla/product-builder" ><span>Product Builder</span></a></li><li class="item-158 parent"><a href="/extensions/joomla/product-bundles" ><span>Product Bundles</span></a></li></ul></li><li class="item-155 deeper parent"><span class="nav-header ">Magento Extensions</span>
+<ul><li class="item-401 parent"><a href="/extensions/magento/shiptracker" ><span>ShipTracker</span></a></li></ul></li></ul></li><li class="item-326 current active"><a href="/pricing/levels" ><span>Pricing</span></a></li><li class="item-105"><a href="/downloads" ><span>Downloads</span></a></li><li class="item-104 deeper"><a href="/support" ><span>Support</span></a><ul><li class="item-450"><a href="/extensions/joomla/dependent-custom-fields-for-all/documentation" ><span>Dependent Custom Fields For All</span></a></li><li class="item-423"><a href="/extensions/magento/shiptracker/documentation" ><span>ShipTracker</span></a></li></ul></li></ul></li></ul>
+
+						</nav>											
+					</div>
+					
+							
+						<div id="searchBlock" class="column transition">
+								<div id="moduleId87" class="module ">
+		
+		<div class="moduleContent">
+						
+			<a class="huge-search icon-si-search" id="searchOpen" href="#"></a>
+
+<div class="search">
+    <form action="/pricing/levels" method="post" class="form-inline">	
+	<div class="inputBlock">
+		<label for="mod-search-searchword" class="element-invisible">Search ...</label> <input name="searchword" id="mod-search-searchword" maxlength="200"  class="inputbox search-query" type="text" size="40" value="Search ..."  onblur="if (this.value=='') this.value='Search ...';" onfocus="if (this.value=='Search ...') this.value='';" />		
+		<input type="hidden" name="task" value="search" />
+		<input type="hidden" name="option" value="com_search" />
+		<input type="hidden" name="Itemid" value="306" />
+		<div class="clr"></div>
+	</div>	
+	<div class="clr"></div>
+	</form>
+	<a class="huge-search fa fa-close" id="searchClose" href="#"></a>
+</div>
+		</div>
+	</div>
+	
+						</div>	
+						
+					<div class="clr"></div>
+				</div>				
+								
+				<div class="clr"></div>
+			</div>
+		</header>
+	
+				
+	  	
+      
+        
+      
+       
+	  
+	  	  
+	  		  	     
+	  
+	        	
+		
+	  <section id="contentWrapper" aria-label="Content"> 
+	  		  	 	  		
+		<div id="content" class="row">	
+			 	      	
+				      						
+			<div class="column small-12 noPadding contentBlock equals"> 	
+														    
+				<div id="system-message-container">
+	</div>
+		
+				<!-- component area -->
+				<div id="akeeba-bootstrap" class="">
+<div class="akeeba-bootstrap">
+<div class="row-fluid">
+
+
+<div id="akeebasubs" class="levels awesome">
+
+
+
+<div class="akeebasubs-awesome">
+
+		<div id="toggleEvents">
+			<a class="joomla active">JOOMLA!</a>
+			<a class="">MAGENTO</a>
+		</div>
+
+		<div class="bundles clearfix">
+
+			
+
+<div class="custom"  >
+	<h3>RECOMMENDED PLANS</h3></div>
+
+			<div class="centerAlign clearfix">
+				
+								<div class="column small-12 medium-6 large-4 akeebasubs-awesome-column akeebasubs-level-8 akeebasubs-counter-1 changeWidth getMagento hidden">
+				<div class="akeebasubs-awesome-block">
+					<div class="akeebasubs-awesome-header">
+						<div class="akeebasubs-awesome-image">
+							<img src="https://breakdesigns.net/images/shipTracker_logo_s.png" />
+						</div>
+						<div class="akeebasubs-awesome-level">
+														ShipTracker Basic						</div>
+						<div class="akeebasubs-awesome-price">
+														<span class="akeebasubs-awesome-price-currency">€</span><span class="akeebasubs-awesome-price-integer">49																					</div>
+																							</div>
+					<div class="akeebasubs-awesome-body">
+						<div class="akeebasubs-awesome-description">
+							<div class="plan-block">
+<h5>6 Months Support and Updates</h5>
+<p class="plan-descript">Access to the <strong>ShipTracker </strong>extension, updates and support</p>
+</div>
+<div class="plan-block">
+<h6>Support for 3 domains</h6>
+<p>through Private Tickets</p>
+</div>
+<div class="plan-block">
+<h6>Lifetime Usage</h6>
+</div>
+<div class="plan-block">
+<h6>Unlimited Installations</h6>
+</div>						</div>
+					</div>
+					<div class="akeebasubs-awesome-footer">
+						<td class="akeebasubs-awesome-subscribe">
+							<button
+								class="btn btn-blue"
+								onclick="window.location='/pricing/new/shiptracker-basic?format=html&amp;layout=default'">
+								Subscribe Now							</button>
+						</td>
+					</div>
+				</div>
+			</div>
+			
+								<div class="column small-12 medium-6 large-4 akeebasubs-awesome-column akeebasubs-level-9 akeebasubs-counter-2 changeWidth getMagento hidden">
+				<div class="akeebasubs-awesome-block">
+					<div class="akeebasubs-awesome-header">
+						<div class="akeebasubs-awesome-image">
+							<img src="https://breakdesigns.net/images/shipTracker_logo_s_silver.png" />
+						</div>
+						<div class="akeebasubs-awesome-level">
+														ShipTracker Premium						</div>
+						<div class="akeebasubs-awesome-price">
+														<span class="akeebasubs-awesome-price-currency">€</span><span class="akeebasubs-awesome-price-integer">89																					</div>
+																							</div>
+					<div class="akeebasubs-awesome-body">
+						<div class="akeebasubs-awesome-description">
+							<div class="plan-block">
+<h5>1 Year Support and Updates</h5>
+<p class="plan-descript">Access to the <strong>ShipTracker </strong>extension, updates and support</p>
+</div>
+<div class="plan-block">
+<h6>Support for 7 domains</h6>
+<p>through Private Tickets</p>
+</div>
+<div class="plan-block">
+<h6>Lifetime Usage</h6>
+</div>
+<div class="plan-block">
+<h6>Unlimited Installations</h6>
+</div>						</div>
+					</div>
+					<div class="akeebasubs-awesome-footer">
+						<td class="akeebasubs-awesome-subscribe">
+							<button
+								class="btn btn-blue"
+								onclick="window.location='/pricing/new/shiptracker-premium?format=html&amp;layout=default'">
+								Subscribe Now							</button>
+						</td>
+					</div>
+				</div>
+			</div>
+			
+								<div class="column small-12 medium-6 large-4 akeebasubs-awesome-column akeebasubs-level-3 akeebasubs-counter-3 changeWidth getJoomla">
+				<div class="akeebasubs-awesome-block">
+					<div class="akeebasubs-awesome-header">
+						<div class="akeebasubs-awesome-image">
+							<img src="https://breakdesigns.net/images/full-access.png" />
+						</div>
+						<div class="akeebasubs-awesome-level">
+														Full Access						</div>
+						<div class="akeebasubs-awesome-price">
+														<span class="akeebasubs-awesome-price-currency">€</span><span class="akeebasubs-awesome-price-integer">59																					</div>
+																							</div>
+					<div class="akeebasubs-awesome-body">
+						<div class="akeebasubs-awesome-description">
+							<div class="plan-block">
+<div class="plan_audience">Ideal for shop owners</div>
+<h5>6 Months Membership</h5>
+<p class="plan-descript">Access to <strong>All the Extensions</strong> and their updates, plus support for all of them</p>
+</div>
+<div class="plan-block">
+<h6>Support</h6>
+<p>through Private Tickets</p>
+</div>
+<div class="plan-block">
+<h6>Unlimited domains</h6>
+</div>
+<div class="plan-block">
+<h6>Lifetime Usage</h6>
+</div>						</div>
+					</div>
+					<div class="akeebasubs-awesome-footer">
+						<td class="akeebasubs-awesome-subscribe">
+							<button
+								class="btn btn-blue"
+								onclick="window.location='/pricing/new/full-access?format=html&amp;layout=default'">
+								Subscribe Now							</button>
+						</td>
+					</div>
+				</div>
+			</div>
+			
+								<div class="column small-12 medium-6 large-4 akeebasubs-awesome-column akeebasubs-level-7 akeebasubs-counter-4 changeWidth getJoomla">
+				<div class="akeebasubs-awesome-block">
+					<div class="akeebasubs-awesome-header">
+						<div class="akeebasubs-awesome-image">
+							<img src="https://breakdesigns.net/images/corporate-dev.png" />
+						</div>
+						<div class="akeebasubs-awesome-level">
+														Premium Access						</div>
+						<div class="akeebasubs-awesome-price">
+														<span class="akeebasubs-awesome-price-currency">€</span><span class="akeebasubs-awesome-price-integer">89																					</div>
+																							</div>
+					<div class="akeebasubs-awesome-body">
+						<div class="akeebasubs-awesome-description">
+							<div class="plan-block">
+<div class="plan_audience">Ideal for web agencies</div>
+<h5>1 Year Membership</h5>
+<p class="plan-descript">Access to<strong> All the Extensions</strong> and their updates, plus support for all of them</p>
+</div>
+<div class="plan-block">
+<h6>Support</h6>
+<p>through Private Tickets</p>
+</div>
+<div class="plan-block">
+<h6>Unlimited domains</h6>
+</div>
+<div class="plan-block">
+<h6>Lifetime Usage</h6>
+</div>						</div>
+					</div>
+					<div class="akeebasubs-awesome-footer">
+						<td class="akeebasubs-awesome-subscribe">
+							<button
+								class="btn btn-blue"
+								onclick="window.location='/pricing/new/premium?format=html&amp;layout=default'">
+								Subscribe Now							</button>
+						</td>
+					</div>
+				</div>
+			</div>
+						</div>
+		</div>
+
+		<div class="single-plans clearfix">
+
+		
+
+<div class="custom"  >
+	<h3 class="getJoomla">OTHER/SINGLE PLANS</h3></div>
+
+		<div class="akeebasubs-awesome-table clearfix">
+
+<div class="column small-12 medium-6 large-3 akeebasubs-awesome-column akeebasubs-level-2 odd
+
+ getJoomla">
+			<div class="akeebasubs-awesome-block">
+				<div class="akeebasubs-awesome-header">
+					<div class="akeebasubs-awesome-image">
+						<img src="https://breakdesigns.net/images/custom-filters.png" />
+					</div>
+					<div class="akeebasubs-awesome-level">
+												Custom Filters Pro					</div>
+					<div class="akeebasubs-awesome-price">
+												<span class="akeebasubs-awesome-price-currency">€</span><span class="akeebasubs-awesome-price-integer">28</span><span class="akeebasubs-awesome-price-separator">.</span><span class="akeebasubs-awesome-price-decimal">90</span>																		</div>
+																			</div>
+				<div class="akeebasubs-awesome-body">
+					<div class="akeebasubs-awesome-description">
+						<div class="plan-block">
+<h5>4 Months Membership</h5>
+<p class="plan-descript">Access to the <strong>Custom Filters Pro </strong>extension, updates and support</p>
+</div>
+<div class="plan-block">
+<h6>Support</h6>
+<p>through Private Tickets</p>
+</div>
+<div class="plan-block">
+<h6>Unlimited domains</h6>
+</div>
+<div class="plan-block">
+<h6>Lifetime Usage</h6>
+</div>					</div>
+				</div>
+				<div class="akeebasubs-awesome-footer">
+					<td class="akeebasubs-awesome-subscribe">
+						<button
+							class="btn btn-cyan"
+							onclick="window.location='/pricing/new/custom-filters?format=html&amp;layout=default'">
+							Subscribe Now						</button>
+					</td>
+				</div>
+			</div>
+		</div>
+		
+<div class="column small-12 medium-6 large-3 akeebasubs-awesome-column akeebasubs-level-4 even
+
+ getJoomla">
+			<div class="akeebasubs-awesome-block">
+				<div class="akeebasubs-awesome-header">
+					<div class="akeebasubs-awesome-image">
+						<img src="https://breakdesigns.net/images/custom-fields-for-all.png" />
+					</div>
+					<div class="akeebasubs-awesome-level">
+												Custom Fields For All					</div>
+					<div class="akeebasubs-awesome-price">
+												<span class="akeebasubs-awesome-price-currency">€</span><span class="akeebasubs-awesome-price-integer">22</span><span class="akeebasubs-awesome-price-separator">.</span><span class="akeebasubs-awesome-price-decimal">90</span>																		</div>
+																			</div>
+				<div class="akeebasubs-awesome-body">
+					<div class="akeebasubs-awesome-description">
+						<div class="plan-block">
+<h5>4 Months Membership</h5>
+<p class="plan-descript">Access to the&nbsp;<strong>Custom Fields For All </strong>extension, updates and support</p>
+</div>
+<div class="plan-block">
+<h6>Support</h6>
+<p>through Private Tickets</p>
+</div>
+<div class="plan-block">
+<h6>Unlimited domains</h6>
+</div>
+<div class="plan-block">
+<h6>Lifetime Usage</h6>
+</div>					</div>
+				</div>
+				<div class="akeebasubs-awesome-footer">
+					<td class="akeebasubs-awesome-subscribe">
+						<button
+							class="btn btn-cyan"
+							onclick="window.location='/pricing/new/custom-fields-for-all?format=html&amp;layout=default'">
+							Subscribe Now						</button>
+					</td>
+				</div>
+			</div>
+		</div>
+		
+<div class="column small-12 medium-6 large-3 akeebasubs-awesome-column akeebasubs-level-5 odd
+
+ getJoomla">
+			<div class="akeebasubs-awesome-block">
+				<div class="akeebasubs-awesome-header">
+					<div class="akeebasubs-awesome-image">
+						<img src="https://breakdesigns.net/images/product-bundles.png" />
+					</div>
+					<div class="akeebasubs-awesome-level">
+												Product Bundles					</div>
+					<div class="akeebasubs-awesome-price">
+												<span class="akeebasubs-awesome-price-currency">€</span><span class="akeebasubs-awesome-price-integer">24</span><span class="akeebasubs-awesome-price-separator">.</span><span class="akeebasubs-awesome-price-decimal">90</span>																		</div>
+																			</div>
+				<div class="akeebasubs-awesome-body">
+					<div class="akeebasubs-awesome-description">
+						<div class="plan-block">
+<h5>4 Months Membership</h5>
+<p class="plan-descript">Access to the&nbsp;<strong>Product Bundles</strong> extension, updates and support</p>
+</div>
+<div class="plan-block">
+<h6>Support</h6>
+<p>through Private Tickets</p>
+</div>
+<div class="plan-block">
+<h6>Unlimited domains</h6>
+</div>
+<div class="plan-block">
+<h6>Lifetime Usage</h6>
+</div>					</div>
+				</div>
+				<div class="akeebasubs-awesome-footer">
+					<td class="akeebasubs-awesome-subscribe">
+						<button
+							class="btn btn-cyan"
+							onclick="window.location='/pricing/new/product-bundles?format=html&amp;layout=default'">
+							Subscribe Now						</button>
+					</td>
+				</div>
+			</div>
+		</div>
+		
+<div class="column small-12 medium-6 large-3 akeebasubs-awesome-column akeebasubs-level-1 even
+
+ getJoomla">
+			<div class="akeebasubs-awesome-block">
+				<div class="akeebasubs-awesome-header">
+					<div class="akeebasubs-awesome-image">
+						<img src="https://breakdesigns.net/images/product-builder.png" />
+					</div>
+					<div class="akeebasubs-awesome-level">
+												Product Builder					</div>
+					<div class="akeebasubs-awesome-price">
+												<span class="akeebasubs-awesome-price-currency">€</span><span class="akeebasubs-awesome-price-integer">39</span><span class="akeebasubs-awesome-price-separator">.</span><span class="akeebasubs-awesome-price-decimal">90</span>																		</div>
+																			</div>
+				<div class="akeebasubs-awesome-body">
+					<div class="akeebasubs-awesome-description">
+						<div class="plan-block">
+<h5>6 Months Membership</h5>
+<p class="plan-descript">Access to the&nbsp;<strong>Product Builder </strong>extension, updates and support</p>
+</div>
+<div class="plan-block">
+<h6>Support</h6>
+<p>through Private Tickets</p>
+</div>
+<div class="plan-block">
+<h6>Unlimited domains</h6>
+</div>
+<div class="plan-block">
+<h6>Lifetime Usage</h6>
+</div>					</div>
+				</div>
+				<div class="akeebasubs-awesome-footer">
+					<td class="akeebasubs-awesome-subscribe">
+						<button
+							class="btn btn-cyan"
+							onclick="window.location='/pricing/new/product-builder?format=html&amp;layout=default'">
+							Subscribe Now						</button>
+					</td>
+				</div>
+			</div>
+		</div>
+		
+<div class="column small-12 medium-6 large-3 akeebasubs-awesome-column akeebasubs-level-6 odd
+
+ getJoomla">
+			<div class="akeebasubs-awesome-block">
+				<div class="akeebasubs-awesome-header">
+					<div class="akeebasubs-awesome-image">
+						<img src="https://breakdesigns.net/images/stockable-custom-fields.png" />
+					</div>
+					<div class="akeebasubs-awesome-level">
+												Stockable Custom Fields					</div>
+					<div class="akeebasubs-awesome-price">
+												<span class="akeebasubs-awesome-price-currency">€</span><span class="akeebasubs-awesome-price-integer">12</span><span class="akeebasubs-awesome-price-separator">.</span><span class="akeebasubs-awesome-price-decimal">99</span>																		</div>
+																			</div>
+				<div class="akeebasubs-awesome-body">
+					<div class="akeebasubs-awesome-description">
+						<div class="plan-block">
+<h5>10 days Membership</h5>
+<p class="plan-descript">10 days of support for the <strong>Stockable Custom Fields </strong>extension</p>
+</div>
+<div class="plan-block">
+<h6>Support</h6>
+<p>through Private Tickets</p>
+</div>					</div>
+				</div>
+				<div class="akeebasubs-awesome-footer">
+					<td class="akeebasubs-awesome-subscribe">
+						<button
+							class="btn btn-cyan"
+							onclick="window.location='/pricing/new/stockable-custom-fields?format=html&amp;layout=default'">
+							Subscribe Now						</button>
+					</td>
+				</div>
+			</div>
+		</div>
+				</div>
+		<div class="VAT_note">24% VAT will be charged on top of the listed prices to residents/businesses of the European Union without a VIES-registered VAT number. Residents of Greece will be always charged with VAT. (In accordance to European Directive 2008/8/EU and its incorporation into EU member states' local laws).</div>
+		</div>
+		<div class="level-clear"></div>
+	</div>
+
+
+</div>
+</div>
+</div>
+</div>
+				
+															
+						         
+		         
+		         
+			    		         
+			</div>			 
+	        
+	         
+	        
+	        <div class="clr"></div>  
+	    </div>
+	</section>		
+	
+	    	
+	  
+		
+		
+
+	<footer id="footerWrapperOuter">
+		<div id="footerWrapper">
+			<div id="footer" class="row">
+				
+							    <div class="footerTop">
+			      	<div id="moduleId103" class="module statistics clearfix">
+		
+		<div class="moduleContent">
+							<h3 class="moduleTitle">NUMBERS THAT MAKE US PROUD!</h3>
+						
+			
+
+<div class="custom"  >
+	<ul>
+<li class="customers"><i class="icon-customer"></i><strong>12,000+</strong> customers rely on our solutions.</li>
+<li class="downloads"><i class="icon-download"></i><strong>90,000+</strong> downloads of our extensions.</li>
+</ul></div>
+		</div>
+	</div>
+	
+			    </div>
+			     
+				
+							    <div class="footerMods">
+			      	<div id="moduleId96" class="module column small-12 medium-3 large-2 alpha">
+		
+		<div class="moduleContent">
+							<h3 class="moduleTitle">Break Designs</h3>
+						
+			
+<ul class="sfNavigation menu">
+<li class="item-145"><a href="/about" ><span>About</span></a></li><li class="item-432"><a href="/blog" ><span>Blog</span></a></li><li class="item-147"><a href="/contact" ><span>Contact us</span></a></li><li class="item-146"><a href="/support" ><span>Support</span></a></li><li class="item-148"><a href="/terms-of-service" ><span>Terms of service</span></a></li><li class="item-446"><a href="/privacy-policy" ><span>Privacy Policy</span></a></li></ul>
+		</div>
+	</div>
+		<div id="moduleId97" class="module column small-12 medium-3 large-2">
+		
+		<div class="moduleContent">
+							<h3 class="moduleTitle">Premium Extensions</h3>
+						
+			
+<ul class="sfNavigation menu">
+<li class="item-149"><a href="/extensions/joomla/custom-fields-for-all" ><span>Custom Fields for all</span></a></li><li class="item-150"><a href="/extensions/joomla/product-builder" ><span>Product Builder</span></a></li><li class="item-151"><a href="/extensions/joomla/product-bundles" ><span>Product Bundles</span></a></li><li class="item-445"><a href="/extensions/magento/shiptracker" ><span>ShipTracker</span></a></li></ul>
+		</div>
+	</div>
+		<div id="moduleId178" class="module column small-24 medium-6 large-4">
+		
+		<div class="moduleContent">
+						
+			
+
+<div class="custom"  >
+	<p><a href="https://twitter.com/breakDesigns" target="_blank" rel="noopener noreferrer" title="Break Designs on Twitter">Follow us <i class="icon-twitter"></i></a></p></div>
+		</div>
+	</div>
+		<div id="moduleId172" class="module column small-12 medium-3 large-2">
+		
+		<div class="moduleContent">
+							<h3 class="moduleTitle">Cookies Consent</h3>
+						
+			<div class="plg_system_eprivacy_module">
+        <div class="plg_system_eprivacy_message" style="display:none">
+                <p>This website uses cookies to manage authentication, navigation, and other functions.  By using our website, you agree that we can place these types of cookies on your device.</p>
+                    <p><a href="https://breakdesigns.net/privacy-policy" target="_blank">View Privacy Policy</a></p>
+                            <p><a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32002L0058:EN:NOT" onclick="window.open(this.href);return false;">View e-Privacy Directive Documents</a></p>
+                <button class="plg_system_eprivacy_agreed">I agree</button>
+        <button class="plg_system_eprivacy_declined">I decline</button>
+    </div>
+    <div class="plg_system_eprivacy_declined" style="display:none">
+        <p>
+            <button class="plg_system_eprivacy_reconsider">Reconsider Cookies</button> 
+            You have declined cookies.  This decision can be reversed.        </p>
+    </div>
+        <div class="plg_system_eprivacy_accepted" style="display:none">
+        <p>
+            <button class="plg_system_eprivacy_accepted">Remove Cookies</button> 
+            You have allowed cookies to be placed on your computer.  This decision can be reversed.        </p>
+    </div>
+</div>
+<div id="plg_system_eprivacy" style="display:none"></div>		</div>
+	</div>
+	
+			      <div class="clr"></div>
+			    </div>
+			    				
+				<div class="column small-12 medium-6 copyrights omega">
+					<div id="copyrights">Copyright &copy; 2020 Breakdesigns company. All Legal Rights Reserved.</div>								
+
+				<div class="clr"></div>
+			</div>
+		</div>
+	</footer>
+	
+	<div id="mm-sidebar">
+        <div id="panel-overview">
+            <div class="icons">                
+                <a href="#page" id="closeMenuBtn"><i class="icon-close"></i></a>
+            </div>
+                                        
+<ul class="sfNavigation menu">
+<li class="item-101"><a href="/" ><span>Home</span></a></li><li class="item-102 deeper parent"><a href="/extensions" ><span>Extensions</span></a><ul><li class="item-154 deeper parent"><span class="nav-header ">Joomla Extensions</span>
+<ul><li class="item-159 parent"><a href="/extensions/joomla/custom-filters" ><span>Custom Filters</span></a></li><li class="item-156 parent"><a href="/extensions/joomla/custom-fields-for-all" ><span>Custom Fields For All</span></a></li><li class="item-447 parent"><a href="/extensions/joomla/dependent-custom-fields-for-all" ><span>Dependent Custom Fields For All</span></a></li><li class="item-160 parent"><a href="/extensions/joomla/stockable-custom-fields" ><span>Stockable Custom Fields</span></a></li><li class="item-157 parent"><a href="/extensions/joomla/product-builder" ><span>Product Builder</span></a></li><li class="item-158 parent"><a href="/extensions/joomla/product-bundles" ><span>Product Bundles</span></a></li></ul></li><li class="item-155 deeper parent"><span class="nav-header ">Magento Extensions</span>
+<ul><li class="item-401 parent"><a href="/extensions/magento/shiptracker" ><span>ShipTracker</span></a></li></ul></li></ul></li><li class="item-326 current active"><a href="/pricing/levels" ><span>Pricing</span></a></li><li class="item-105"><a href="/downloads" ><span>Downloads</span></a></li><li class="item-104 deeper"><a href="/support" ><span>Support</span></a><ul><li class="item-450"><a href="/extensions/joomla/dependent-custom-fields-for-all/documentation" ><span>Dependent Custom Fields For All</span></a></li><li class="item-423"><a href="/extensions/magento/shiptracker/documentation" ><span>ShipTracker</span></a></li></ul></li></ul></li></ul>
+
+                                </div>
+    </div>
+	</div>	
+		
+		
+	</body>
+</html>

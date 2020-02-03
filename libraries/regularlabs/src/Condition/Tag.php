@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -22,6 +22,11 @@ class Tag
 {
 	public function pass()
 	{
+		if ( ! $this->request->id)
+		{
+			return $this->_(false);
+		}
+
 		if (in_array($this->request->option, ['com_content', 'com_flexicontent']))
 		{
 			return $this->passTagsContent();
@@ -29,7 +34,6 @@ class Tag
 
 		if ($this->request->option != 'com_tags'
 			|| $this->request->view != 'tag'
-			|| ! $this->request->id
 		)
 		{
 			return $this->_(false);
@@ -66,7 +70,7 @@ class Tag
 				'INNER', '#__contentitem_tag_map AS m'
 				. ' ON m.tag_id = t.id'
 				. ' AND m.type_alias = ' . $this->db->quote($prefix)
-				. ' AND m.content_item_id = ' . $this->request->id
+				. ' AND m.content_item_id = ' . (int) $this->request->id
 			);
 		$this->db->setQuery($query);
 		$tags = $this->db->loadObjectList();

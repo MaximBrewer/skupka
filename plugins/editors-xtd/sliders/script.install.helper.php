@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Sliders
- * @version         6.0.8
+ * @version         7.7.8
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2016 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2019 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -13,16 +13,18 @@ defined('_JEXEC') or die;
 
 class PlgEditorsXtdSlidersInstallerScriptHelper
 {
-	public $name            = '';
-	public $alias           = '';
-	public $extname         = '';
-	public $extension_type  = '';
-	public $plugin_folder   = 'system';
-	public $module_position = 'status';
-	public $client_id       = 1;
-	public $install_type    = 'install';
-	public $show_message    = true;
-	public $db              = null;
+	public $name              = '';
+	public $alias             = '';
+	public $extname           = '';
+	public $extension_type    = '';
+	public $plugin_folder     = 'system';
+	public $module_position   = 'status';
+	public $client_id         = 1;
+	public $install_type      = 'install';
+	public $show_message      = true;
+	public $db                = null;
+	public $softbreak         = null;
+	public $installed_version = '';
 
 	public function __construct(&$params)
 	{
@@ -32,22 +34,26 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 
 	public function preflight($route, JAdapterInstance $adapter)
 	{
-		if (!in_array($route, array('install', 'update')))
+		if ( ! in_array($route, ['install', 'update']))
 		{
-			return;
+			return true;
 		}
 
 		JFactory::getLanguage()->load('plg_system_regularlabsinstaller', JPATH_PLUGINS . '/system/regularlabsinstaller');
+
+		$this->installed_version = $this->getVersion($this->getInstalledXMLFile());
 
 		if ($this->show_message && $this->isInstalled())
 		{
 			$this->install_type = 'update';
 		}
 
-		if ($this->onBeforeInstall() === false)
+		if ($this->onBeforeInstall($route) === false)
 		{
 			return false;
 		}
+
+		return true;
 	}
 
 	public function postflight($route, JAdapterInstance $adapter)
@@ -57,16 +63,16 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 
 		JFactory::getLanguage()->load($this->getPrefix() . '_' . $this->extname, $this->getMainFolder());
 
-		if (!in_array($route, array('install', 'update')))
+		if ( ! in_array($route, ['install', 'update']))
 		{
-			return;
+			return true;
 		}
 
 		$this->fixExtensionNames();
 		$this->updateUpdateSites();
 		$this->removeAdminCache();
 
-		if ($this->onAfterInstall() === false)
+		if ($this->onAfterInstall($route) === false)
 		{
 			return false;
 		}
@@ -83,17 +89,19 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 
 		JFactory::getCache()->clean('com_plugins');
 		JFactory::getCache()->clean('_system');
+
+		return true;
 	}
 
 	public function isInstalled()
 	{
-		if (!is_file($this->getInstalledXMLFile()))
+		if ( ! is_file($this->getInstalledXMLFile()))
 		{
 			return false;
 		}
 
 		$query = $this->db->getQuery(true)
-			->select('extension_id')
+			->select($this->db->quoteName('extension_id'))
 			->from('#__extensions')
 			->where($this->db->quoteName('type') . ' = ' . $this->db->quote($this->extension_type))
 			->where($this->db->quoteName('element') . ' = ' . $this->db->quote($this->getElementName()));
@@ -108,7 +116,7 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 		switch ($this->extension_type)
 		{
 			case 'plugin' :
-				return JPATH_SITE . '/plugins/' . $this->plugin_folder . '/' . $this->extname;
+				return JPATH_PLUGINS . '/' . $this->plugin_folder . '/' . $this->extname;
 
 			case 'component' :
 				return JPATH_ADMINISTRATOR . '/components/com_' . $this->extname;
@@ -150,12 +158,12 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 			return;
 		}
 
-		$folders = array();
+		$folders = [];
 
 		switch ($type)
 		{
-			case 'plugin';
-				$folders[] = JPATH_SITE . '/plugins/' . $folder . '/' . $extname;
+			case 'plugin':
+				$folders[] = JPATH_PLUGINS . '/' . $folder . '/' . $extname;
 				break;
 
 			case 'component':
@@ -169,13 +177,13 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 				break;
 		}
 
-		if (!$this->foldersExist($folders))
+		if ( ! $this->foldersExist($folders))
 		{
 			return;
 		}
 
 		$query = $this->db->getQuery(true)
-			->select('extension_id')
+			->select($this->db->quoteName('extension_id'))
 			->from('#__extensions')
 			->where($this->db->quoteName('element') . ' = ' . $this->db->quote($this->getElementName($type, $extname)))
 			->where($this->db->quoteName('type') . ' = ' . $this->db->quote($type));
@@ -192,18 +200,19 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 		{
 			foreach ($folders as $folder)
 			{
+				JFactory::getApplication()->enqueueMessage('2. Deleting: ' . $folder, 'notice');
 				JFolder::delete($folder);
 			}
 
 			return;
 		}
 
-		$ignore_ids = JFactory::getApplication()->getUserState('rl_ignore_uninstall_ids', array());
+		$ignore_ids = JFactory::getApplication()->getUserState('rl_ignore_uninstall_ids', []);
 
 		if (JFactory::getApplication()->input->get('option') == 'com_installer' && JFactory::getApplication()->input->get('task') == 'remove')
 		{
 			// Don't attempt to uninstall extensions that are already selected to get uninstalled by them selves
-			$ignore_ids = array_merge($ignore_ids, JFactory::getApplication()->input->get('cid', array(), 'array'));
+			$ignore_ids = array_merge($ignore_ids, JFactory::getApplication()->input->get('cid', [], 'array'));
 			JFactory::getApplication()->input->set('cid', array_merge($ignore_ids, $ids));
 		}
 
@@ -234,7 +243,7 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 		}
 	}
 
-	public function foldersExist($folders = array())
+	public function foldersExist($folders = [])
 	{
 		foreach ($folders as $folder)
 		{
@@ -290,21 +299,21 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 	{
 		// Get module id
 		$query = $this->db->getQuery(true)
-			->select('id')
+			->select($this->db->quoteName('id'))
 			->from('#__modules')
 			->where($this->db->quoteName('module') . ' = ' . $this->db->quote('mod_' . $this->extname))
 			->where($this->db->quoteName('client_id') . ' = ' . (int) $this->client_id);
 		$this->db->setQuery($query, 0, 1);
 		$id = $this->db->loadResult();
 
-		if (!$id)
+		if ( ! $id)
 		{
 			return;
 		}
 
 		// check if module is already in the modules_menu table (meaning is is already saved)
 		$query->clear()
-			->select('moduleid')
+			->select($this->db->quoteName('moduleid'))
 			->from('#__modules_menu')
 			->where($this->db->quoteName('moduleid') . ' = ' . (int) $id);
 		$this->db->setQuery($query, 0, 1);
@@ -317,7 +326,7 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 
 		// Get highest ordering number in position
 		$query->clear()
-			->select('ordering')
+			->select($this->db->quoteName('ordering'))
 			->from('#__modules')
 			->where($this->db->quoteName('position') . ' = ' . $this->db->quote($this->module_position))
 			->where($this->db->quoteName('client_id') . ' = ' . (int) $this->client_id)
@@ -339,7 +348,7 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 		// add module to the modules_menu table
 		$query->clear()
 			->insert('#__modules_menu')
-			->columns(array($this->db->quoteName('moduleid'), $this->db->quoteName('menuid')))
+			->columns([$this->db->quoteName('moduleid'), $this->db->quoteName('menuid')])
 			->values((int) $id . ', 0');
 		$this->db->setQuery($query);
 		$this->db->execute();
@@ -349,7 +358,7 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 	{
 		JFactory::getApplication()->enqueueMessage(
 			JText::sprintf(
-				JText::_($this->install_type == 'update' ? 'RLI_THE_EXTENSION_HAS_BEEN_UPDATED_SUCCESSFULLY' : 'RLI_THE_EXTENSION_HAS_BEEN_INSTALLED_SUCCESSFULLY'),
+				$this->install_type == 'update' ? 'RLI_THE_EXTENSION_HAS_BEEN_UPDATED_SUCCESSFULLY' : 'RLI_THE_EXTENSION_HAS_BEEN_INSTALLED_SUCCESSFULLY',
 				'<strong>' . JText::_($this->name) . '</strong>',
 				'<strong>' . $this->getVersion() . '</strong>',
 				$this->getFullType()
@@ -361,7 +370,7 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 	{
 		switch ($this->extension_type)
 		{
-			case 'plugin';
+			case 'plugin':
 				return JText::_('plg_' . strtolower($this->plugin_folder));
 
 			case 'component':
@@ -406,14 +415,14 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 	{
 		$file = $file ?: $this->getCurrentXMLFile();
 
-		if (!is_file($file))
+		if ( ! is_file($file))
 		{
 			return '';
 		}
 
 		$xml = JApplicationHelper::parseXMLInstallFile($file);
 
-		if (!$xml || !isset($xml['version']))
+		if ( ! $xml || ! isset($xml['version']))
 		{
 			return '';
 		}
@@ -423,26 +432,26 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 
 	public function isNewer()
 	{
-		if (!$installed_version = $this->getVersion($this->getInstalledXMLFile()))
+		if ( ! $this->installed_version)
 		{
 			return true;
 		}
 
 		$package_version = $this->getVersion();
 
-		return version_compare($installed_version, $package_version, '<=');
+		return version_compare($this->installed_version, $package_version, '<=');
 	}
 
 	public function canInstall()
 	{
 		// The extension is not installed yet
-		if (!$installed_version = $this->getVersion($this->getInstalledXMLFile()))
+		if ( ! $this->installed_version)
 		{
 			return true;
 		}
 
 		// The free version is installed. So any version is ok to install
-		if (strpos($installed_version, 'PRO') === false)
+		if (strpos($this->installed_version, 'PRO') === false)
 		{
 			return true;
 		}
@@ -486,7 +495,7 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 			return;
 		}
 
-		if (!is_string($file) || !is_file($file))
+		if ( ! is_string($file) || ! is_file($file))
 		{
 			return;
 		}
@@ -504,47 +513,74 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 		}
 
 		$contents = str_replace(
-			array('FREEFREE', 'FREEPRO', 'PROFREE', 'PROPRO'),
-			array('FREE', 'PRO', 'FREE', 'PRO'),
+			['FREEFREE', 'FREEPRO', 'PROFREE', 'PROPRO'],
+			['FREE', 'PRO', 'FREE', 'PRO'],
 			$contents
 		);
 
 		JFile::write($file, $contents);
 	}
 
-	public function onBeforeInstall()
+	public function onBeforeInstall($route)
 	{
-		if (!$this->canInstall())
+		if ( ! $this->canInstall())
 		{
 			return false;
 		}
+
+		return true;
 	}
 
-	public function onAfterInstall()
+	public function onAfterInstall($route)
 	{
 	}
 
-	public function deleteFolders($folders = array())
+	public function delete($files = [])
 	{
-		foreach ($folders as $folder)
+		foreach ($files as $file)
 		{
-			if (!is_dir($folder))
+			if (is_dir($file))
 			{
-				continue;
+				JFolder::delete($file);
 			}
 
-			JFolder::delete($folder);
+			if (is_file($file))
+			{
+				JFile::delete($file);
+			}
 		}
 	}
 
-	public function fixAssetsRules($rules = '{"core.admin":[],"core.manage":[]}')
+	public function fixAssetsRules()
 	{
-		// replace default rules value {} with the correct initial value
+		$query = $this->db->getQuery(true)
+			->select($this->db->quoteName('rules'))
+			->from('#__assets')
+			->where($this->db->quoteName('title') . ' = ' . $this->db->quote('com_' . $this->extname));
+		$this->db->setQuery($query, 0, 1);
+		$rules = $this->db->loadResult();
+
+		$rules = json_decode($rules);
+
+		if(empty($rules)) {
+			return;
+		}
+
+		foreach($rules as $key => $value) {
+			if(!empty($value)) {
+				continue;
+			}
+
+			unset($rules->$key);
+		}
+
+		$rules = json_encode($rules);
+
+
 		$query = $this->db->getQuery(true)
 			->update($this->db->quoteName('#__assets'))
 			->set($this->db->quoteName('rules') . ' = ' . $this->db->quote($rules))
-			->where($this->db->quoteName('title') . ' = ' . $this->db->quote('com_' . $this->extname))
-			->where($this->db->quoteName('rules') . ' = ' . $this->db->quote('{}'));
+			->where($this->db->quoteName('title') . ' = ' . $this->db->quote('com_' . $this->extname));
 		$this->db->setQuery($query);
 		$this->db->execute();
 	}
@@ -562,7 +598,7 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 	{
 		// Get module id
 		$query = $this->db->getQuery(true)
-			->select('id')
+			->select($this->db->quoteName('id'))
 			->from('#__modules')
 			->where($this->db->quoteName('module') . ' = ' . $this->db->quote('mod_' . $this->extname))
 			->where($this->db->quoteName('client_id') . ' = ' . (int) $this->client_id);
@@ -588,7 +624,7 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 
 		// Get asset id
 		$query = $this->db->getQuery(true)
-			->select('id')
+			->select($this->db->quoteName('id'))
 			->from('#__assets')
 			->where($this->db->quoteName('name') . ' = ' . $this->db->quote('com_modules.module.' . (int) $module_id))
 			->where($this->db->quoteName('title') . ' LIKE ' . $this->db->quote('NoNumber%'));
@@ -612,20 +648,22 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 	{
 		$this->removeOldUpdateSites();
 		$this->updateNamesInUpdateSites();
+		$this->updateHttptoHttpsInUpdateSites();
+		$this->removeDuplicateUpdateSite();
 		$this->updateDownloadKey();
 	}
 
 	private function removeOldUpdateSites()
 	{
 		$query = $this->db->getQuery(true)
-			->select('update_site_id')
+			->select($this->db->quoteName('update_site_id'))
 			->from('#__update_sites')
 			->where($this->db->quoteName('location') . ' LIKE ' . $this->db->quote('nonumber.nl%'))
 			->where($this->db->quoteName('location') . ' LIKE ' . $this->db->quote('%e=' . $this->alias . '%'));
 		$this->db->setQuery($query, 0, 1);
 		$id = $this->db->loadResult();
 
-		if (!$id)
+		if ( ! $id)
 		{
 			return;
 		}
@@ -660,63 +698,121 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 		$this->db->execute();
 	}
 
+	private function updateHttptoHttpsInUpdateSites()
+	{
+		$query = $this->db->getQuery(true)
+			->update('#__update_sites')
+			->set($this->db->quoteName('location') . ' = REPLACE('
+				. $this->db->quoteName('location') . ', '
+				. $this->db->quote('http://') . ', '
+				. $this->db->quote('https://')
+				. ')')
+			->where($this->db->quoteName('location') . ' LIKE ' . $this->db->quote('http://download.regularlabs.com%'));
+		$this->db->setQuery($query);
+		$this->db->execute();
+	}
+
+	private function removeDuplicateUpdateSite()
+	{
+		// First check to see if there is a pro entry
+
+		$query = $this->db->getQuery(true)
+			->select($this->db->quoteName('update_site_id'))
+			->from('#__update_sites')
+			->where($this->db->quoteName('location') . ' LIKE ' . $this->db->quote('%download.regularlabs.com%'))
+			->where($this->db->quoteName('location') . ' LIKE ' . $this->db->quote('%e=' . $this->alias . '%'))
+			->where($this->db->quoteName('location') . ' NOT LIKE ' . $this->db->quote('%pro=1%'));
+		$this->db->setQuery($query, 0, 1);
+		$id = $this->db->loadResult();
+
+		// Otherwise just get the first match
+		if ( ! $id)
+		{
+			$query->clear()
+				->select($this->db->quoteName('update_site_id'))
+				->from('#__update_sites')
+				->where($this->db->quoteName('location') . ' LIKE ' . $this->db->quote('%download.regularlabs.com%'))
+				->where($this->db->quoteName('location') . ' LIKE ' . $this->db->quote('%e=' . $this->alias . '%'));
+			$this->db->setQuery($query, 0, 1);
+			$id = $this->db->loadResult();
+
+			// Remove pro=1 from the found update site
+			$query->clear()
+				->update('#__update_sites')
+				->set($this->db->quoteName('location')
+					. ' = replace(' . $this->db->quoteName('location') . ', ' . $this->db->quote('&pro=1') . ', ' . $this->db->quote('') . ')')
+				->where($this->db->quoteName('update_site_id') . ' = ' . (int) $id);
+			$this->db->setQuery($query);
+			$this->db->execute();
+		}
+
+		if ( ! $id)
+		{
+			return;
+		}
+
+		$query->clear()
+			->select($this->db->quoteName('update_site_id'))
+			->from('#__update_sites')
+			->where($this->db->quoteName('location') . ' LIKE ' . $this->db->quote('%download.regularlabs.com%'))
+			->where($this->db->quoteName('location') . ' LIKE ' . $this->db->quote('%e=' . $this->alias . '%'))
+			->where($this->db->quoteName('update_site_id') . ' != ' . $id);
+		$this->db->setQuery($query);
+		$ids = $this->db->loadColumn();
+
+		if (empty($ids))
+		{
+			return;
+		}
+
+		$query->clear()
+			->delete('#__update_sites')
+			->where($this->db->quoteName('update_site_id') . ' IN (' . implode(',', $ids) . ')');
+		$this->db->setQuery($query);
+		$this->db->execute();
+
+		$query->clear()
+			->delete('#__update_sites_extensions')
+			->where($this->db->quoteName('update_site_id') . ' IN (' . implode(',', $ids) . ')');
+		$this->db->setQuery($query);
+		$this->db->execute();
+	}
+
 	// Save the download key from the Regular Labs Extension Manager config to the update sites
 	private function updateDownloadKey()
 	{
 		$query = $this->db->getQuery(true)
-			->select('e.params')
-			->from('#__extensions as e')
-			->where(array(
-				'e.element = ' . $this->db->quote('com_regularlabsmanager'),
-				'e.element = ' . $this->db->quote('com_nonumbermanager'),
-			), 'OR');
+			->select($this->db->quoteName('params'))
+			->from('#__extensions')
+			->where($this->db->quoteName('element') . ' = ' . $this->db->quote('com_regularlabsmanager'));
 		$this->db->setQuery($query);
 		$params = $this->db->loadResult();
 
-		if (!$params)
+		if ( ! $params)
 		{
 			return;
 		}
 
 		$params = json_decode($params);
 
-		if (!isset($params->key))
+		if ( ! isset($params->key))
 		{
 			return;
 		}
 
-		$query->clear()
-			->update('#__update_sites')
-			->set($this->db->quoteName('extra_query') . ' = ' . $this->db->quote(''))
-			->where(
-				'('
-				. $this->db->quoteName('location') . ' LIKE ' . $this->db->quote('%download.nonumber.nl%')
-				. ' OR '
-				. $this->db->quoteName('location') . ' LIKE ' . $this->db->quote('%download.regularlabs.com%')
-				. ')'
-			);
-		$this->db->setQuery($query);
-		$this->db->execute();
-
+		// Add the key on all regularlabs.com urls
 		$query->clear()
 			->update('#__update_sites')
 			->set($this->db->quoteName('extra_query') . ' = ' . $this->db->quote('k=' . $params->key))
-			->where($this->db->quoteName('location') . ' LIKE ' . $this->db->quote('%&pro=1%'))
-			->where(
-				'('
-				. $this->db->quoteName('location') . ' LIKE ' . $this->db->quote('%download.nonumber.nl%')
-				. ' OR '
-				. $this->db->quoteName('location') . ' LIKE ' . $this->db->quote('%download.regularlabs.com%')
-				. ')'
-			);
+			->where($this->db->quoteName('location') . ' LIKE ' . $this->db->quote('%download.regularlabs.com%'));
 		$this->db->setQuery($query);
 		$this->db->execute();
 	}
 
 	private function removeAdminCache()
 	{
-		$this->deleteFolders(array(JPATH_ADMINISTRATOR . '/cache/regularlabs'));
-		$this->deleteFolders(array(JPATH_ADMINISTRATOR . '/cache/nonumber'));
+		$this->delete([JPATH_ADMINISTRATOR . '/cache/regularlabs']);
+		$this->delete([JPATH_ADMINISTRATOR . '/cache/nonumber']);
 	}
 
 	private function removeGlobalLanguageFiles()
@@ -764,7 +860,7 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 			$installed_languages
 		);
 
-		$delete_languages = array();
+		$delete_languages = [];
 
 		foreach ($languages as $language)
 		{
@@ -777,6 +873,6 @@ class PlgEditorsXtdSlidersInstallerScriptHelper
 		}
 
 		// Remove folders
-		$this->deleteFolders($delete_languages);
+		$this->delete($delete_languages);
 	}
 }

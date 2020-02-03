@@ -1,4 +1,0 @@
-var sEstimator =  {
-getRates : function() {
-}
-}

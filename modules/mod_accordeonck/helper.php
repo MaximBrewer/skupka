@@ -87,7 +87,7 @@ class modAccordeonckHelper {
 				switch ($item->type) {
 					case 'separator':
 						// No further action needed.
-						continue;
+						break;
 
 					case 'url':
 						if ((strpos($item->link, 'index.php?') === 0) && (strpos($item->link, 'Itemid=') === false)) {
@@ -168,6 +168,18 @@ class modAccordeonckHelper {
 					$item->classe .= ' current';
 				}
 
+				// compatibility with Mobile Menu CK
+				if ($item->params->get('mobilemenuck_enablemobile', '1') == '0') {
+					$item->classe .= ' mobilemenuck-hide';
+				}
+
+				// get mobile plugin parameters that are used directly in the layout
+				$item->mobile_data = '';
+				$mobileicon = $item->params->get('mobilemenuck_icon', '');
+				$item->mobile_data .= $mobileicon ? ' data-mobileicon="' . $mobileicon . '"' : '';
+				$mobiletext = $item->params->get('mobilemenuck_textreplacement', '');
+				$item->mobile_data .= $mobiletext ? ' data-mobiletext="' . $mobiletext . '"' : '';
+
 				// if (in_array($item->id, $path)) {
 					// $item->classe .= ' active';
 					// $item->isactive = true;
@@ -224,7 +236,7 @@ class modAccordeonckHelper {
 		$attribs['style'] = 'none';
 
 		if (!isset($modulesList[$title]))
-			return "<p>No module found !</p>";
+			return "";
 		$modtitle = $modulesList[$title]->title;
 		$modname = $modulesList[$title]->module;
 		//$modname = preg_replace('/mod_/', '', $modname);
@@ -236,7 +248,7 @@ class modAccordeonckHelper {
 			}
 		}
 
-		return "<p>No module found !</p>";
+		return "";
 	}
 
 	static function CreateModulesList() {
@@ -625,6 +637,7 @@ class modAccordeonckHelper {
 		$csstoinject .= "\n#" . $menuID . " a.accordeonck:hover { text-decoration: none; " . $css->level1itemhoverstyles['fontcolor'] . "}";
 		$csstoinject .= "\n#" . $menuID . " li.parent > span a { display: block;outline: none; }";
 		$csstoinject .= "\n#" . $menuID . " li.parent.open > span a {  }";
+		$csstoinject .= "\n#" . $menuID . " a.accordeonck > .badge { margin: 0 0 0 5px; }";
 		if ($level2imageplus) $csstoinject .= "\n#" . $menuID . " li.level2.parent > span a { display: block;outline: none;background: url(" . JURI::root(true) . '/' . $level2imageplus . ") " . $imageposition . " center no-repeat !important; " . $level12magewidth . "}";
 		if ($level2imageminus) $csstoinject .= "\n#" . $menuID . " li.level2.parent.open > span a { background: url(" . JURI::root(true) . '/' . $level2imageminus . ") " . $imageposition . " center no-repeat !important; }";
 		if ($level3imageplus) $csstoinject .= "\n#" . $menuID . " li.level2 li.accordeonck.parent > span a { display: block;outline: none;background: url(" . JURI::root(true) . '/' . $level3imageplus . ") " . $imageposition . " center no-repeat !important; " . $level3imagewidth . "}";
@@ -669,6 +682,20 @@ class modAccordeonckHelper {
 			}
 		}
 
+		// level 1 styles
+		if (isset($css->level1itemactivestyles)) {
+			if ($css->level1itemactivestyles['padding'] || $css->level1itemactivestyles['margin'] || $css->level1itemactivestyles['background'] || $css->level1itemactivestyles['gradient'] || $css->level1itemactivestyles['borderradius'] || $css->level1itemactivestyles['shadow'] || $css->level1itemactivestyles['border'] || $css->level1itemactivestyles['text-align']
+				|| $css->level1itemactivestyles['fontcolor'] || $css->level1itemactivestyles['fontsize'] || $css->level1itemactivestyles['textshadow']
+					) {
+				$csstoinject .= "\n#" . $menuID . " li.level1.active > span { " . $css->level1itemactivestyles['margin'] . $css->level1itemactivestyles['background'] . $css->level1itemactivestyles['gradient'] . $css->level1itemactivestyles['borderradius'] . $css->level1itemactivestyles['shadow'] . $css->level1itemactivestyles['border'] . " } ";
+				$csstoinject .= "\n#" . $menuID . " li.level1.active > span a { " . $css->level1itemactivestyles['padding'] . $css->level1itemactivestyles['fontfamily'] . $css->level1itemactivestyles['fontcolor'] . $css->level1itemactivestyles['fontsize'] . $css->level1itemactivestyles['textshadow'] . $css->level1itemactivestyles['text-align'] . $css->level1itemactivestyles['text-transform'] . $css->level1itemactivestyles['fontweight'] . " } ";
+			}
+			if ($css->level1itemactivestyles['descfontcolor'] || $css->level1itemactivestyles['descfontsize']
+			) {
+				$csstoinject .= "\n#" . $menuID . " li.level1.active > span span.accordeonckdesc { " . $css->level1itemactivestyles['descfontcolor'] . $css->level1itemactivestyles['descfontsize'] . " } ";
+			}
+		}
+		
 		// level 2 styles
 		if (isset($css->level2menustyles)) {
 			if ($css->level2menustyles['padding'] || $css->level2menustyles['margin'] || $css->level2menustyles['background'] || $css->level2menustyles['gradient'] || $css->level2menustyles['borderradius'] || $css->level2menustyles['shadow'] || $css->level2menustyles['border']
@@ -716,6 +743,20 @@ class modAccordeonckHelper {
 			}
 		}
 
+		// level 2 styles
+		if (isset($css->level2itemactivestyles)) {
+			if ($css->level2itemactivestyles['padding'] || $css->level2itemactivestyles['margin'] || $css->level2itemactivestyles['background'] || $css->level2itemactivestyles['gradient'] || $css->level2itemactivestyles['borderradius'] || $css->level2itemactivestyles['shadow'] || $css->level2itemactivestyles['border'] || $css->level2itemactivestyles['text-align']
+				|| $css->level2itemactivestyles['fontcolor'] || $css->level2itemactivestyles['fontsize'] || $css->level2itemactivestyles['textshadow']
+					) {
+				$csstoinject .= "\n#" . $menuID . " li.level2.active > span { " . $css->level2itemactivestyles['margin'] . $css->level2itemactivestyles['background'] . $css->level2itemactivestyles['gradient'] . $css->level2itemactivestyles['borderradius'] . $css->level2itemactivestyles['shadow'] . $css->level2itemactivestyles['border'] . " } ";
+				$csstoinject .= "\n#" . $menuID . " li.level2.active > span a { " . $css->level2itemactivestyles['padding'] . $css->level2itemactivestyles['text-align'] . $css->level2itemactivestyles['fontfamily'] . $css->level2itemactivestyles['fontcolor'] . $css->level2itemactivestyles['fontsize'] . $css->level2itemactivestyles['textshadow'] . $css->level2itemactivestyles['text-align'] . $css->level2itemactivestyles['text-transform'] . $css->level2itemactivestyles['fontweight'] . " } ";
+			}
+			if ($css->level2itemactivestyles['descfontcolor'] || $css->level2itemactivestyles['descfontsize']
+			) {
+				$csstoinject .= "\n#" . $menuID . " li.level2.active > span span.accordeonckdesc { " . $css->level2itemactivestyles['descfontcolor'] . $css->level2itemactivestyles['descfontsize'] . " } ";
+			}
+		}
+		
 		// level 3 styles
 		if (isset($css->level3menustyles)) {
 			if ($css->level3menustyles['padding'] || $css->level3menustyles['margin'] || $css->level3menustyles['background'] || $css->level3menustyles['gradient'] || $css->level3menustyles['borderradius'] || $css->level3menustyles['shadow'] || $css->level3menustyles['border']
@@ -760,6 +801,20 @@ class modAccordeonckHelper {
 			) {
 				$csstoinject .= "\n#" . $menuID . " li.level2 li.accordeonck:hover > span span.accordeonckdesc { " . $css->level3itemhoverstyles['descfontcolor'] . $css->level3itemhoverstyles['descfontsize'] . " } ";
 				$csstoinject .= "\n#" . $menuID . " li.level2 li.accordeonck.active > span span.accordeonckdesc { " . $css->level3itemhoverstyles['descfontcolor'] . $css->level3itemhoverstyles['descfontsize'] . " } ";
+			}
+		}
+
+		// level 3 styles
+		if (isset($css->level3itemactivestyles)) {
+			if ($css->level3itemactivestyles['padding'] || $css->level3itemactivestyles['margin'] || $css->level3itemactivestyles['background'] || $css->level3itemactivestyles['gradient'] || $css->level3itemactivestyles['borderradius'] || $css->level3itemactivestyles['shadow'] || $css->level3itemactivestyles['border'] || $css->level3itemactivestyles['text-align']
+				|| $css->level3itemactivestyles['fontcolor'] || $css->level3itemactivestyles['fontsize'] || $css->level3itemactivestyles['textshadow']
+					) {
+				$csstoinject .= "\n#" . $menuID . " li.level2 li.accordeonck.active > span { " . $css->level3itemactivestyles['margin'] . $css->level3itemactivestyles['background'] . $css->level3itemactivestyles['gradient'] . $css->level3itemactivestyles['borderradius'] . $css->level3itemactivestyles['shadow'] . $css->level3itemactivestyles['border'] . " } ";
+				$csstoinject .= "\n#" . $menuID . " li.level2 li.accordeonck.active > span a { " . $css->level3itemactivestyles['padding'] . $css->level3itemactivestyles['text-align'] . $css->level3itemactivestyles['fontfamily'] . $css->level3itemactivestyles['fontcolor'] . $css->level3itemactivestyles['fontsize'] . $css->level3itemactivestyles['textshadow'] . $css->level3itemactivestyles['text-align'] . $css->level3itemactivestyles['text-transform'] . $css->level3itemactivestyles['fontweight'] . " } ";
+			}
+			if ($css->level3itemactivestyles['descfontcolor'] || $css->level3itemactivestyles['descfontsize']
+			) {
+				$csstoinject .= "\n#" . $menuID . " li.level2 li.accordeonck.active > span span.accordeonckdesc { " . $css->level3itemactivestyles['descfontcolor'] . $css->level3itemactivestyles['descfontsize'] . " } ";
 			}
 		}
 
@@ -995,6 +1050,36 @@ class modAccordeonckHelper {
 		}
 		return JFile::write($cssfile, $css);
 	}
+
+	/*
+	 * Make empty slide object
+	 */
+	public static function initItem() {
+		$item = new stdClass();
+		$item->path = null;
+		$item->link = null;
+		$item->title = null;
+		$item->desc = null;
+		$item->more = array();
+		$item->type = 'url';
+		$item->level = 1;
+		$item->flink = $item->link;
+		$item->classe = '';
+		$item->deeper = false;
+		$item->shallower = false;
+		$item->level_diff = 0;
+		$item->isactive = false;
+		$item->id = 0;
+		$item->content = '';
+		$item->anchor_css = '';
+		$item->anchor_title = '';
+		$item->menu_image = '';
+		$item->browserNav = '';
+		$item->rel = '';
+		$item->ftitle = $item->title;
+
+		return $item;
+	}
 }
 
 // create a new class to manage objects
@@ -1011,5 +1096,4 @@ if (!class_exists('CkCssParams')) {
 		}
 
 	}
-
 }

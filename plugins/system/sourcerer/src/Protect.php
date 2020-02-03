@@ -1,15 +1,15 @@
 <?php
 /**
  * @package         Sourcerer
- * @version         7.1.4
+ * @version         8.2.0
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2017 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2019 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
-namespace RegularLabs\Sourcerer;
+namespace RegularLabs\Plugin\System\Sourcerer;
 
 defined('_JEXEC') or die;
 
@@ -21,7 +21,7 @@ class Protect
 
 	public static function _(&$string)
 	{
-		RL_Protect::protectForm($string, Params::getTags(true));
+		RL_Protect::protectForm($string, Params::getTags(true), true, 'no-sourcerer');
 	}
 
 	public static function protectTags(&$string)

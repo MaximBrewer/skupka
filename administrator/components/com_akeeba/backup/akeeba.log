@@ -1,0 +1,68 @@
+DEBUG   |200202 22:16:25| -- Resetting Akeeba Engine factory (backend.id353)
+DEBUG   |200202 22:16:25|Fetching filter data from database
+DEBUG   |200202 22:16:25|Loading filters
+DEBUG   |200202 22:16:25|-- Loading filter Regexfiles
+DEBUG   |200202 22:16:25|-- Loading filter Extradirs
+DEBUG   |200202 22:16:25|-- Loading filter Tabledata
+DEBUG   |200202 22:16:25|-- Loading filter Directories
+DEBUG   |200202 22:16:25|-- Loading filter Regextabledata
+DEBUG   |200202 22:16:25|-- Loading filter Incremental
+DEBUG   |200202 22:16:25|-- Loading filter Regexdirectories
+DEBUG   |200202 22:16:25|-- Loading filter Files
+DEBUG   |200202 22:16:25|-- Loading filter Skipdirs
+DEBUG   |200202 22:16:25|-- Loading filter Regextables
+DEBUG   |200202 22:16:25|-- Loading filter Multidb
+DEBUG   |200202 22:16:25|-- Loading filter Tables
+DEBUG   |200202 22:16:25|-- Loading filter Regexskipdirs
+DEBUG   |200202 22:16:25|-- Loading filter Regexskipfiles
+DEBUG   |200202 22:16:25|-- Loading filter Skipfiles
+DEBUG   |200202 22:16:25|-- Loading filter Excludefiles
+DEBUG   |200202 22:16:25|-- Loading filter Cvsfolders
+DEBUG   |200202 22:16:25|-- Loading filter Excludefolders
+DEBUG   |200202 22:16:25|-- Loading filter Sitedb
+DEBUG   |200202 22:16:25|-- Loading filter Systemcachefiles
+DEBUG   |200202 22:16:25|-- Loading filter Libraries
+DEBUG   |200202 22:16:25|-- Loading filter Excludetabledata
+DEBUG   |200202 22:16:25|-- Loading filter Joomlaskipdirs
+DEBUG   |200202 22:16:25|-- Loading filter Siteroot
+DEBUG   |200202 22:16:25|-- Loading filter Joomlaskipfiles
+DEBUG   |200202 22:16:25|Loading optional filters
+DEBUG   |200202 22:16:25|-- Loading optional filter Stack\StackHoststats
+DEBUG   |200202 22:16:25|-- Loading optional filter Stack\StackErrorlogs
+DEBUG   |200202 22:16:25|-- Loading optional filter Stack\StackFinder
+DEBUG   |200202 22:16:25|-- Loading optional filter Stack\StackActionlogs
+DEBUG   |200202 22:16:25|-- Loading optional filter Stack\StackMyjoomla
+DEBUG   |200202 22:41:48| -- Resetting Akeeba Engine factory (backend.354)
+DEBUG   |200202 22:41:48|Fetching filter data from database
+DEBUG   |200202 22:41:48|Loading filters
+DEBUG   |200202 22:41:48|-- Loading filter Regexfiles
+DEBUG   |200202 22:41:48|-- Loading filter Extradirs
+DEBUG   |200202 22:41:48|-- Loading filter Tabledata
+DEBUG   |200202 22:41:48|-- Loading filter Directories
+DEBUG   |200202 22:41:48|-- Loading filter Regextabledata
+DEBUG   |200202 22:41:48|-- Loading filter Incremental
+DEBUG   |200202 22:41:48|-- Loading filter Regexdirectories
+DEBUG   |200202 22:41:48|-- Loading filter Files
+DEBUG   |200202 22:41:48|-- Loading filter Skipdirs
+DEBUG   |200202 22:41:48|-- Loading filter Regextables
+DEBUG   |200202 22:41:48|-- Loading filter Multidb
+DEBUG   |200202 22:41:48|-- Loading filter Tables
+DEBUG   |200202 22:41:48|-- Loading filter Regexskipdirs
+DEBUG   |200202 22:41:48|-- Loading filter Regexskipfiles
+DEBUG   |200202 22:41:48|-- Loading filter Skipfiles
+DEBUG   |200202 22:41:48|-- Loading filter Excludefiles
+DEBUG   |200202 22:41:48|-- Loading filter Cvsfolders
+DEBUG   |200202 22:41:48|-- Loading filter Excludefolders
+DEBUG   |200202 22:41:48|-- Loading filter Sitedb
+DEBUG   |200202 22:41:48|-- Loading filter Systemcachefiles
+DEBUG   |200202 22:41:48|-- Loading filter Libraries
+DEBUG   |200202 22:41:48|-- Loading filter Excludetabledata
+DEBUG   |200202 22:41:48|-- Loading filter Joomlaskipdirs
+DEBUG   |200202 22:41:48|-- Loading filter Siteroot
+DEBUG   |200202 22:41:48|-- Loading filter Joomlaskipfiles
+DEBUG   |200202 22:41:48|Loading optional filters
+DEBUG   |200202 22:41:48|-- Loading optional filter Stack\StackHoststats
+DEBUG   |200202 22:41:48|-- Loading optional filter Stack\StackErrorlogs
+DEBUG   |200202 22:41:48|-- Loading optional filter Stack\StackFinder
+DEBUG   |200202 22:41:48|-- Loading optional filter Stack\StackActionlogs
+DEBUG   |200202 22:41:48|-- Loading optional filter Stack\StackMyjoomla

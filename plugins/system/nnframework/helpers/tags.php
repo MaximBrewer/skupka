@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         NoNumber Framework
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -16,7 +16,7 @@ class NNTags
 	public static function getValuesFromString($string = '', $main_key = 'title', $known_boolean_keys = [])
 	{
 		// Only one value, so return simple key/value object
-		if (strpos($string, '="') == false && strpos($string, '|') == false)
+		if (strpos($string, '="') == false && strpos($string, '=\'') == false && strpos($string, '|') == false)
 		{
 			return (object) [$main_key => $string];
 		}
@@ -24,7 +24,7 @@ class NNTags
 		self::protectSpecialChars($string);
 
 		// No foo="bar" syntax found, so assume old syntax
-		if (strpos($string, '="') == false)
+		if (strpos($string, '="') == false && strpos($string, '=\'') == false)
 		{
 			self::unprotectSpecialChars($string);
 

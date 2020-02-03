@@ -1,7 +1,8 @@
 <?php defined("_JEXEC") or die;
 $params = $this->params;
 ?>
-<link rel="stylesheet" href="<?php echo JURI::root()?>media/com_yandex_maps/css/registration.css">
+<link rel="stylesheet" href="<?php echo JURI::root()?>media/com_yandex_maps/css/registration.css"/>
+<input name="jform[organization_data]" id="jform_organization_data" value="1" type="hidden"/>
 
 <?php if ($params->get('registration_organization_form', 2) or $params->get('registration_organization_name', 2)) {?>
 <fieldset>
@@ -398,7 +399,11 @@ $params = $this->params;
 		<?php if ($params->get('registration_organization_image', 2)) { ?>
 		<div class="control-group">
 			<label>Логотип</label>
-			<input class="validate <?php echo $params->get('registration_organization_image', 2)==2 ? 'required' : ''?>" data-rules="file" name="jform[organization_image]" id="jform_organization_image" type="file"/>
+			<input name="jform[organization_image]" id="jform_organization_image" type="hidden" value="<?php echo htmlspecialchars(@$organization->organization_image)?>"/>
+			<?php if ($organization->organization_image) {?>
+				<img class="jform_organization_image_preview" src="<?php  echo jURI::root()?><?php echo jhtml::_('xdwork.thumb', jhtml::_('xdwork.imageurl').$organization->organization_image, 100, 100, 1)?>?<?=rand(100000, 900000)?>"/>
+			<?php } ?>
+			<input class="validate <?php echo $params->get('registration_organization_image', 2)==2 ? 'required' : ''?>" data-rules="file" name="jform[organization_image2]" id="jform_organization_image2" type="file"/>
 			<div class="xdsoft_tooltip">Выберите логотип</div>
 		</div>
 		<?php } ?>

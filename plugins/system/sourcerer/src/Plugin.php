@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Sourcerer
- * @version         7.1.4
+ * @version         8.2.0
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2017 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2019 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -15,7 +15,7 @@
  * it also needs to be working when the Regular Labs Library is not installed
  */
 
-namespace RegularLabs\Sourcerer;
+namespace RegularLabs\Plugin\System\Sourcerer;
 
 defined('_JEXEC') or die;
 
@@ -24,90 +24,86 @@ if (is_file(JPATH_LIBRARIES . '/regularlabs/autoload.php'))
 	require_once JPATH_LIBRARIES . '/regularlabs/autoload.php';
 }
 
-use JFactory;
-use JPlugin;
-use JPluginHelper;
-use JText;
+use Joomla\CMS\Factory as JFactory;
+use Joomla\CMS\Installer\Installer as JInstaller;
+use Joomla\CMS\Language\Text as JText;
+use Joomla\CMS\Plugin\CMSPlugin as JPlugin;
+use Joomla\CMS\Plugin\PluginHelper as JPluginHelper;
+use ReflectionMethod;
 use RegularLabs\Library\Document as RL_Document;
 use RegularLabs\Library\Language as RL_Language;
 use RegularLabs\Library\Protect as RL_Protect;
 
 class Plugin extends JPlugin
 {
+	public $_alias       = '';
+	public $_title       = '';
+	public $_lang_prefix = '';
+
+	public $_has_tags              = false;
+	public $_enable_in_frontend    = true;
+	public $_enable_in_admin       = false;
+	public $_can_disable_by_url    = true;
+	public $_disable_on_components = false;
+	public $_protected_formats     = [];
+	public $_page_types            = [];
+
 	private $_init   = false;
+	private $_pass   = null;
 	private $_helper = null;
 
-	public $_has_tags           = false;
-	public $_enable_in_frontend = true;
-	public $_enable_in_admin    = false;
-	public $_can_disable_by_url = true;
-	public $_protected_formats  = [];
-	public $_page_types         = [];
-
-	public function onAfterInitialise()
+	protected function run()
 	{
-		$this->run('onAfterInitialise');
-	}
-
-	public function onAfterRoute()
-	{
-		$this->run('onAfterRoute');
-	}
-
-	public function onContentPrepare($context, &$article, &$params)
-	{
-		if ($context == 'com_zoo.element.textarea')
-		{
-			return;
-		}
-
-		if ($success = $this->run('onContentPrepare', $article, $context, $params))
-		{
-			$article = $success;
-		}
-	}
-
-	public function onContentPrepareForm($form, $data)
-	{
-		$this->run('onContentPrepareForm', $form, $data);
-	}
-
-	public function onAfterDispatch()
-	{
-		$this->run('onAfterDispatch');
-	}
-
-	public function onAfterRender()
-	{
-		$this->run('onAfterRender');
-	}
-
-	private function run()
-	{
-		if (!$this->passChecks())
-		{
-			return null;
-		}
-
-		if (!$this->getHelper())
+		if ( ! $this->passChecks())
 		{
 			return false;
 		}
 
-		$arguments = func_get_args();
-		$event     = array_shift($arguments);
-
-		if (empty($event))
+		if ( ! $this->getHelper())
 		{
 			return false;
 		}
 
-		if (!method_exists($this->_helper, $event))
+		$caller = debug_backtrace()[1];
+
+		if (empty($caller))
 		{
 			return false;
 		}
 
-		return call_user_func_array(array($this->_helper, $event), $arguments);
+		$event = $caller['function'];
+
+		if ( ! method_exists($this->_helper, $event))
+		{
+			return false;
+		}
+
+		$reflect    = new ReflectionMethod($this->_helper, $event);
+		$parameters = $reflect->getParameters();
+
+		$arguments = [];
+
+		// Check if arguments should be passed as reference or not
+		foreach ($parameters as $count => $parameter)
+		{
+			if ($parameter->isPassedByReference())
+			{
+				$arguments[] = &$caller['args'][$count];
+				continue;
+			}
+			$arguments[] = $caller['args'][$count];
+		}
+
+		// Work-around for K2 stuff :(
+		if ($event == 'onContentPrepare'
+			&& empty($arguments[1]->id)
+			&& strpos($arguments[0], 'com_k2') === 0
+		)
+		{
+			return false;
+		}
+
+		return call_user_func_array([$this->_helper, $event], $arguments);
 	}
 
 	/**
@@ -125,11 +121,6 @@ class Plugin extends JPlugin
 
 		$this->_init = true;
 
-		if (!$this->passChecks())
-		{
-			return null;
-		}
-
 		RL_Language::load('plg_' . $this->_type . '_' . $this->_name);
 
 		$this->init();
@@ -141,42 +132,64 @@ class Plugin extends JPlugin
 
 	private function passChecks()
 	{
-		if (!$this->isFrameworkEnabled())
+		if ( ! is_null($this->_pass))
+		{
+			return $this->_pass;
+		}
+
+		$this->_pass = false;
+
+		if ( ! $this->isFrameworkEnabled())
 		{
 			return false;
 		}
 
-		if (!self::passPageTypes())
+		if ( ! self::passPageTypes())
 		{
 			return false;
 		}
 
 		// allow in frontend?
-		if (!$this->_enable_in_frontend && !RL_Document::isAdmin())
+		if ( ! $this->_enable_in_frontend
+			&& ! RL_Document::isAdmin())
 		{
 			return false;
 		}
 
 		// allow in admin?
-		if (!$this->_enable_in_admin && RL_Document::isAdmin() && (!isset(Params::get()->enable_admin) || !Params::get()->enable_admin))
+		if ( ! $this->_enable_in_admin
+			&& RL_Document::isAdmin()
+			&& ( ! isset(Params::get()->enable_admin) || ! Params::get()->enable_admin))
 		{
 			return false;
 		}
 
-		if ($this->_can_disable_by_url && RL_Protect::isDisabledByUrl($this->_alias))
+		// disabled by url?
+		if ($this->_can_disable_by_url
+			&& RL_Protect::isDisabledByUrl($this->_alias))
 		{
 			return false;
 		}
 
+		// disabled by component?
+		if ($this->_disable_on_components
+			&& RL_Protect::isRestrictedComponent(isset(Params::get()->disabled_components) ? Params::get()->disabled_components : [], 'component'))
+		{
+			return false;
+		}
+
+		// restricted page?
 		if (RL_Protect::isRestrictedPage($this->_has_tags, $this->_protected_formats))
 		{
 			return false;
 		}
 
-		if (!$this->extraChecks())
+		if ( ! $this->extraChecks())
 		{
 			return false;
 		}
+
+		$this->_pass = true;
 
 		return true;
 	}
@@ -198,14 +211,19 @@ class Plugin extends JPlugin
 			return true;
 		}
 
+		if (RL_Document::isFeed())
+		{
+			return in_array('feed', $this->_page_types);
+		}
+
+		if (RL_Document::isPDF())
+		{
+			return in_array('pdf', $this->_page_types);
+		}
+
 		$page_type = JFactory::getDocument()->getType();
 
 		if (in_array($page_type, $this->_page_types))
-		{
-			return true;
-		}
-
-		if (in_array('feed', $this->_page_types) && RL_Document::isFeed())
 		{
 			return true;
 		}
@@ -230,20 +248,42 @@ class Plugin extends JPlugin
 	 */
 	private function isFrameworkEnabled()
 	{
+		if ( ! defined('REGULAR_LABS_LIBRARY_ENABLED'))
+		{
+			$this->setIsFrameworkEnabled();
+		}
+
+		if ( ! REGULAR_LABS_LIBRARY_ENABLED)
+		{
+			$this->throwError('REGULAR_LABS_LIBRARY_NOT_ENABLED');
+		}
+
+		return REGULAR_LABS_LIBRARY_ENABLED;
+	}
+
+	/**
+	 * Set the define with whether the Regular Labs Library is enabled
+	 */
+	private function setIsFrameworkEnabled()
+	{
 		// Return false if Regular Labs Library is not installed
-		if (!$this->isFrameworkInstalled())
+		if ( ! $this->isFrameworkInstalled())
 		{
-			return false;
+			define('REGULAR_LABS_LIBRARY_ENABLED', false);
+
+			return;
 		}
 
-		if (!JPluginHelper::isEnabled('system', 'regularlabs'))
+		if ( ! JPluginHelper::isEnabled('system', 'regularlabs'))
 		{
-			$this->throwError($this->_lang_prefix . '_REGULAR_LABS_LIBRARY_NOT_ENABLED');
+			$this->throwError('REGULAR_LABS_LIBRARY_NOT_ENABLED');
 
-			return false;
+			define('REGULAR_LABS_LIBRARY_ENABLED', false);
+
+			return;
 		}
 
-		return true;
+		define('REGULAR_LABS_LIBRARY_ENABLED', true);
 	}
 
 	/**
@@ -253,27 +293,73 @@ class Plugin extends JPlugin
 	 */
 	private function isFrameworkInstalled()
 	{
-		if (
-			!is_file(JPATH_PLUGINS . '/system/regularlabs/regularlabs.xml')
-			|| !is_file(JPATH_LIBRARIES . '/regularlabs/autoload.php')
-		)
+		if ( ! defined('REGULAR_LABS_LIBRARY_INSTALLED'))
 		{
-			$this->throwError($this->_lang_prefix . '_REGULAR_LABS_LIBRARY_NOT_INSTALLED');
-
-			return false;
+			$this->setIsFrameworkInstalled();
 		}
 
-		return true;
+		switch (REGULAR_LABS_LIBRARY_INSTALLED)
+		{
+			case 'outdated':
+				$this->throwError('REGULAR_LABS_LIBRARY_OUTDATED');
+
+				return false;
+
+			case 'no':
+				$this->throwError('REGULAR_LABS_LIBRARY_NOT_INSTALLED');
+
+				return false;
+
+			case 'yes':
+			default:
+				return true;
+		}
+	}
+
+	/**
+	 * set the define with whether the Regular Labs Library is installed
+	 */
+	private function setIsFrameworkInstalled()
+	{
+		if (
+			! is_file(JPATH_PLUGINS . '/system/regularlabs/regularlabs.xml')
+			|| ! is_file(JPATH_LIBRARIES . '/regularlabs/autoload.php')
+		)
+		{
+			define('REGULAR_LABS_LIBRARY_INSTALLED', 'no');
+
+			return;
+		}
+
+		$plugin  = JInstaller::parseXMLInstallFile(JPATH_PLUGINS . '/system/regularlabs/regularlabs.xml');
+		$library = JInstaller::parseXMLInstallFile(JPATH_LIBRARIES . '/regularlabs/regularlabs.xml');
+
+		if (empty($plugin) || empty($library))
+		{
+			define('REGULAR_LABS_LIBRARY_INSTALLED', 'no');
+
+			return;
+		}
+
+		if (version_compare($plugin['version'], '19.9.10668', '<')
+			|| version_compare($library['version'], '19.9.10668', '<'))
+		{
+			define('REGULAR_LABS_LIBRARY_INSTALLED', 'outdated');
+
+			return;
+		}
+
+		define('REGULAR_LABS_LIBRARY_INSTALLED', 'yes');
 	}
 
 	/**
 	 * Place an error in the message queue
 	 */
-	private function throwError($text)
+	private function throwError($error)
 	{
 		// Return if page is not an admin page or the admin login page
 		if (
-			!JFactory::getApplication()->isAdmin()
+			! JFactory::getApplication()->isClient('administrator')
 			|| JFactory::getUser()->get('guest')
 		)
 		{
@@ -283,6 +369,7 @@ class Plugin extends JPlugin
 		// load the admin language file
 		JFactory::getLanguage()->load('plg_' . $this->_type . '_' . $this->_name, JPATH_PLUGINS . '/' . $this->_type . '/' . $this->_name);
 
+		$text = JText::sprintf($this->_lang_prefix . '_' . $error, JText::_($this->_title));
 		$text = JText::_($text) . ' ' . JText::sprintf($this->_lang_prefix . '_EXTENSION_CAN_NOT_FUNCTION', JText::_($this->_title));
 
 		// Check if message is not already in queue

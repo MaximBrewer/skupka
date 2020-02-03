@@ -11,7 +11,7 @@
 	<license>GNU/GPL 3 http://www.gnu.org/licenses/gpl.html</license>
 	<authorEmail>ced1870@gmail.com</authorEmail>
 	<authorUrl>http://www.joomlack.fr</authorUrl>
-	<version>8.1.8</version>
+	<version>8.2.19</version>
 	<description>MOD_MAXIMENUCK_XML_DESCRIPTION</description>
 	<files>
 		<filename module="mod_maximenuck">mod_maximenuck.php</filename>
@@ -143,6 +143,17 @@
 					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
 					icon="layout.png" />
 
+				<field
+					name="datahover"
+					type="ckradio"
+					default="1"
+					label="MOD_MAXIMENUCK_DATAHOVER_LABEL"
+					description="MOD_MAXIMENUCK_DATAHOVER_DESC"
+					class="btn-group"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
 				<field
 					name="menuid"
 					type="cktext"
@@ -300,6 +311,15 @@
 					showon="menuposition:topfixed,bottomfixed"
 					suffix="" />
 				<field
+					name="topfixedoffset"
+					type="cktext"
+					default=""
+					label="MOD_MAXIMENUCK_FIXED_OFFSET_LABEL"
+					description="MOD_MAXIMENUCK_FIXED_OFFSET_DESC"
+					icon="hourglass_add.png"
+					showon="menuposition:topfixed"
+					suffix="" />
+				<field
 					name="topfixedeffect"
 					type="ckradio"
 					default="1"
@@ -324,7 +344,18 @@
 					<option value="click">MOD_MAXIMENUCK_CLICK</option>
 					<option value="clickclose">MOD_MAXIMENUCK_CLOSECLICK</option>
 				</field>
-
+				<field
+					name="clickclose"
+					type="ckradio"
+					default="0"
+					label="MOD_MAXIMENUCK_CLICKCLOSE_LABEL"
+					description="MOD_MAXIMENUCK_CLICKCLOSE_DESC"
+					icon="control_eject_blue.png"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 				<field
 					name="opentype"
 					type="cklist"
@@ -653,6 +684,13 @@
 					filter="raw" 
 					default="[]" />
 				<field
+					name="level1itemparentstyles"
+					identifier="level1itemparentstyles"
+					type="hidden"
+					icon=""
+					filter="raw" 
+					default="[]" />
+				<field
 					name="level2menustyles"
 					identifier="level2menustyles"
 					type="hidden"
@@ -703,6 +741,27 @@
 					filter="raw" 
 					default="[]" />
 				<field
+					name="level3menustyles"
+					identifier="level3menustyles"
+					type="hidden"
+					icon=""
+					filter="raw" 
+					default="[]" />
+				<field
+					name="level3itemnormalstyles"
+					identifier="level3itemnormalstyles"
+					type="hidden"
+					icon=""
+					filter="raw" 
+					default="[]" />
+				<field
+					name="level3itemhoverstyles"
+					identifier="level3itemnormalstyles"
+					type="hidden"
+					icon=""
+					filter="raw" 
+					default="[]" />
+				<field
 					name="headingstyles"
 					identifier="headingstyles"
 					type="hidden"
@@ -711,6 +770,21 @@
 					icon=""
 					filter="raw"
 					default="[]" />
+				<field
+					name="fancystyles"
+					identifier="headingstyles"
+					type="hidden"
+					filter="raw"
+					default="[]" />
+				<field
+					name="customcss"
+					identifier="customcss"
+					type="hidden"
+					label=""
+					description=""
+					icon=""
+					filter="raw"
+					default="" />
 			</fieldset>
 			<fieldset name="logooptions" label="MOD_MAXIMENUCK_OPTIONS_LOGO">
 				<field
@@ -934,6 +1008,16 @@
 				>
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
+				</field>
+				<field
+					name="hikashoporderby"
+					type="cklist"
+					label="PLG_MAXIMENUCK_HIKASHOP_ORDERBY_LABEL"
+					default="0"
+					description="PLG_MAXIMENUCK_HIKASHOP_ORDERBY_DESC"
+				>
+					<option value="ordering">PLG_MAXIMENUCK_HIKASHOP_ORDER</option>
+					<option value="name">PLG_MAXIMENUCK_HIKASHOP_NAME</option>
 				</field>
 				<field
 					name="thirdpartyckspacerk21"

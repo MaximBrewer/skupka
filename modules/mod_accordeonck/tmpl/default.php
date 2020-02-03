@@ -16,6 +16,7 @@ $start = (int) $params->get('startLevel');
 <ul class="menu<?php echo $class_sfx;?>" id="<?php echo $menuID; ?>">
 <?php
 foreach ($list as $i => &$item) :
+	$item->mobile_data = isset($item->mobile_data) ? $item->mobile_data : '';
 	$itemlevel = ($start > 1) ? $item->level - $start + 1 : $item->level;
 	$class = $item->classe;
 
@@ -29,7 +30,8 @@ foreach ($list as $i => &$item) :
 		$class = ' class="accordeonck '.trim($class) .' '.(isset($item->liclass) ? $item->liclass : '').'"';
 	}
 
-	echo '<li id="item-'.$item->id.'"'.$class.' data-level="' . $itemlevel . '">';
+	$countitems = (isset($item->countitems) && $params->get('showcounter', '0') == '1') ? '<span class="badge">' . $item->countitems . '</span>' : '';
+	echo '<li id="item-'.$item->id.'"'.$class.' data-level="' . $itemlevel . '" ' . $item->mobile_data . '>';
 
 	if ($item->content) {
 		echo $item->content;
@@ -98,6 +100,9 @@ foreach ($list as $i => &$item) :
 		else { 
 			$linktype = $item->ftitle.$item->desc;
 		}
+
+		// add the number of items
+		$linktype .= $countitems;
 
 		// Render the menu item.
 		switch ($item->type) :

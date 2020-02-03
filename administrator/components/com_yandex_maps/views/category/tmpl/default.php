@@ -2,9 +2,9 @@
 defined("_JEXEC") or die("Access deny");
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 JHtml::_('formbehavior.chosen', 'select');
-$params = JComponentHelper::getParams('com_yandex_maps');
-$api_key=$params->get('api_key','');
-JHtml::script(JURI::getInstance()->getScheme().'://api-maps.yandex.ru/2.1/?lang='.$this->lang.'&apikey='.$api_key);
+
+JHtml::_('xdwork.yapi');
+
 JHtml::script(JURI::root() . 'media/com_yandex_maps/js/categories.js');
 if (method_exists('JHtmlBehavior', 'tabstate')) {
 	JHtml::_('behavior.tabstate');

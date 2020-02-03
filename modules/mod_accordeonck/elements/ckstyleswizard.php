@@ -38,7 +38,7 @@ class JFormFieldCkstyleswizard extends JFormField {
 			$doc->addStylesheet(JUri::root(true) . '/modules/mod_accordeonck/elements/ckaccordeonelements.css');
 			$com_params_text = '<img src="' . $imgpath . 'accept.png" />' . JText::_('MOD_ACCORDEONCK_COMPONENT_PARAMS_INSTALLED');
 
-			$button .= '<input name="' . $this->name . '_button" id="' . $this->name . '_button" class="ckpopupwizardmanager_button" style="background-image:url(' . $imgpath . 'pencil.png);width:100%;" type="button" value="' . JText::_('ACCORDEONCK_STYLES_WIZARD') . '" onclick="if(' . $input->get('id',0,'int').' != 0) {CKBox.open({handler:\'iframe\', fullscreen: true, url:\'' . JUri::root(true) . '/administrator/index.php?option=com_accordeonck&view=modules&view=styles&&layout=modal&id=' . $input->get('id',0,'int') .'\'});} else {alert(\'Please save the module first\');}"/>';
+			$button .= '<input name="' . $this->name . '_button" id="' . $this->name . '_button" class="ckpopupwizardmanager_button" style="background-image:url(' . $imgpath . 'pencil.png);width:100%;min-width:300px;" type="button" value="' . JText::_('ACCORDEONCK_STYLES_WIZARD') . '" onclick="if(' . $input->get('id',0,'int').' != 0) {CKBox.open({handler:\'iframe\', fullscreen: true, url:\'' . JUri::root(true) . '/administrator/index.php?option=com_accordeonck&view=modules&view=styles&&layout=modal&id=' . $input->get('id',0,'int') .'\'});} else {alert(\'Please save the module first\');}"/>';
 		} else {
 			$com_params_text = '<img src="' . $imgpath . 'cross.png" />' . JText::_('MOD_ACCORDEONCK_COMPONENT_PARAMS_NOT_INSTALLED');
 			$button = '';
@@ -55,6 +55,8 @@ padding: 5px;
 margin: 3px 0;
 text-align: left;
 text-decoration: none;
+min-width: 300px;
+box-sizing: border-box;
 }
 .accordeonckchecking img {
 margin: 5px;

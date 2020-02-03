@@ -217,9 +217,7 @@
 		window.mapbox = $('<div style="height:' + window.mapparent.height() + 'px"></div>');
 
 		window.mapparent.append(iframe);
-		
-       
-         
+
 		idocument = iframe[0].contentDocument;
 		iwindow = iframe[0].contentWindow;
 		if (iwindow.jInsertFieldValue === undefined) {
@@ -284,7 +282,7 @@
 			'<link rel="stylesheet" href="' + window.mapparent.data('base') + 'media/system/css/modal.css" type="text/css" />' +
 			'<link rel="stylesheet" href="' + window.mapparent.data('base') + 'media/com_yandex_maps/js/wysiwyg/jquery.cleditor.css" type="text/css" />' +
 			'<link rel="stylesheet" href="' + window.mapparent.data('base') + 'administrator/templates/isis/css/template.css" type="text/css" />' +
-			'<script src="//api-maps.yandex.ru/2.1/?lang=' + window.mapparent.data('lang') + '&apikey='+api_key+'" type="text/javascript"></script>' +
+			'<script src="//api-maps.yandex.ru/2.1/?lang=' + window.mapparent.data('lang') + (window.YANDEX_MAPS_API_KEY ? '&apikey=' + encodeURIComponent(window.YANDEX_MAPS_API_KEY) : '') + '" type="text/javascript"></script>' +
 			'<script src="' + window.mapparent.data('base') + 'media/com_yandex_maps/js/jquery.min.js" type="text/javascript"></script>' +
 			'<script src="' + window.mapparent.data('base') + 'media/system/js/mootools-core.js" type="text/javascript"></script>' +
 			'<script src="' + window.mapparent.data('base') + 'media/system/js/core.js" type="text/javascript"></script>' +

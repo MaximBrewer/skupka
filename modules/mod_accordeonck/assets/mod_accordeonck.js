@@ -20,7 +20,8 @@
 			// menuID : 'accordeonck',
 			defaultopenedid: '0',
 			showactive: true,
-			activeeffect: true
+			activeeffect: true,
+			showcounter: false
 		};
 
 		//call in the default otions
@@ -54,6 +55,15 @@
 			} else {
 				$("li.parent > .toggler", menu).mouseenter(function() {
 					togglemenu($(this));
+				});
+			}
+			if (opts.showcounter == true) {
+				if ($('.accordeonck-counter', menu).length) return;
+				$('li.accordeonck.parent', menu).each(function() {
+					// if ($('li.accordeonck', $(this)).length) {
+						var counter = '<span class="badge accordeonck-counter">' + ($('a.accordeonck', $(this)).length - 1) + '</span>';
+						$(this).find('> .accordeonck_outer > a.accordeonck').append(counter);
+					// }
 				});
 			}
 		}

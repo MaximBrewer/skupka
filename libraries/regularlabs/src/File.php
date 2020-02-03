@@ -1,11 +1,11 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         18.12.3953
+ * @version         20.1.23725
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
- * @copyright       Copyright © 2018 Regular Labs All Rights Reserved
+ * @copyright       Copyright © 2020 Regular Labs All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -13,11 +13,11 @@ namespace RegularLabs\Library;
 
 defined('_JEXEC') or die;
 
-use JFilesystemWrapperPath;
-use JFolder;
 use Joomla\CMS\Client\ClientHelper as JClientHelper;
 use Joomla\CMS\Client\FtpClient as JFtpClient;
 use Joomla\CMS\Factory as JFactory;
+use Joomla\CMS\Filesystem\Folder as JFolder;
+use Joomla\CMS\Filesystem\Path as JPath;
 use Joomla\CMS\Language\Text as JText;
 use Joomla\CMS\Log\Log as JLog;
 use Joomla\CMS\Uri\Uri as JUri;
@@ -151,17 +151,18 @@ class File
 	/**
 	 * Delete a file or array of files
 	 *
-	 * @param   mixed   $file          The file name or an array of file names
-	 * @param   boolean $show_messages Whether or not to show error messages
+	 * @param mixed   $file               The file name or an array of file names
+	 * @param boolean $show_messages      Whether or not to show error messages
+	 * @param int     $min_age_in_minutes Minimum last modified age in minutes
 	 *
 	 * @return  boolean  True on success
 	 *
 	 * @since   11.1
 	 */
-	public static function delete($file, $show_messages = false)
+	public static function delete($file, $show_messages = false, $min_age_in_minutes = 0)
 	{
 		$FTPOptions = JClientHelper::getCredentials('ftp');
-		$pathObject = new JFilesystemWrapperPath;
+		$pathObject = new JPath;
 
 		$files = is_array($file) ? $file : [$file];
 
@@ -176,6 +177,11 @@ class File
 			$file = $pathObject->clean($file);
 
 			if ( ! is_file($file))
+			{
+				continue;
+			}
+
+			if ($min_age_in_minutes && floor((time() - filemtime($file)) / 60) < $min_age_in_minutes)
 			{
 				continue;
 			}
@@ -210,15 +216,16 @@ class File
 	/**
 	 * Delete a folder.
 	 *
-	 * @param   string  $path          The path to the folder to delete.
-	 * @param   boolean $show_messages Whether or not to show error messages
+	 * @param string  $path               The path to the folder to delete.
+	 * @param boolean $show_messages      Whether or not to show error messages
+	 * @param int     $min_age_in_minutes Minimum last modified age in minutes
 	 *
 	 * @return  boolean  True on success.
 	 */
-	public static function deleteFolder($path, $show_messages = false)
+	public static function deleteFolder($path, $show_messages = false, $min_age_in_minutes = 0)
 	{
 		@set_time_limit(ini_get('max_execution_time'));
-		$pathObject = new JFilesystemWrapperPath;
+		$pathObject = new JPath;
 
 		if ( ! $path)
 		{
@@ -226,8 +233,6 @@ class File
 
 			return false;
 		}
-
-		$FTPOptions = JClientHelper::getCredentials('ftp');
 
 		// Check to make sure the path valid and clean
 		$path = $pathObject->clean($path);
@@ -244,7 +249,7 @@ class File
 
 		if ( ! empty($files))
 		{
-			if (self::delete($files, $show_messages) !== true)
+			if (self::delete($files, $show_messages, $min_age_in_minutes) !== true)
 			{
 				// JFile::delete throws an error
 				return false;
@@ -260,7 +265,7 @@ class File
 			{
 				// Don't descend into linked directories, just delete the link.
 
-				if (self::delete($folder, $show_messages) !== true)
+				if (self::delete($folder, $show_messages, $min_age_in_minutes) !== true)
 				{
 					return false;
 				}
@@ -268,16 +273,25 @@ class File
 				continue;
 			}
 
-			if ( ! self::deleteFolder($folder, $show_messages))
+			if ( ! self::deleteFolder($folder, $show_messages, $min_age_in_minutes))
 			{
 				return false;
 			}
+		}
+
+		// Skip if folder is not empty yet
+		if ( ! empty(JFolder::files($path, '.', false, true, [], []))
+			|| ! empty(JFolder::folders($path, '.', false, true, [], [])))
+		{
+			return true;
 		}
 
 		if (@rmdir($path))
 		{
 			return true;
 		}
+
+		$FTPOptions = JClientHelper::getCredentials('ftp');
 
 		if ($FTPOptions['enabled'] == 1)
 		{
@@ -329,6 +343,8 @@ class File
 	// > some/url/to/a
 	public static function getDirName($url)
 	{
+		$url = StringHelper::normalize($url);
+
 		return rtrim(dirname($url), '/');
 	}
 
@@ -336,6 +352,8 @@ class File
 	// > file.ext
 	public static function getBaseName($url, $lowercase = false)
 	{
+		$url = StringHelper::normalize($url);
+
 		$basename = ltrim(basename($url), '/');
 
 		$parts = explode('?', $basename);
@@ -354,6 +372,8 @@ class File
 	// > file
 	public static function getFileName($url, $lowercase = false)
 	{
+		$url = StringHelper::normalize($url);
+
 		$info = pathinfo($url);
 
 		$filename = isset($info['filename']) ? $info['filename'] : $url;

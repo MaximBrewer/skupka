@@ -2,8 +2,8 @@
 <extension version="3.9" type="plugin" group="system" method="upgrade">
 	<name>plg_system_modulesanywhere</name>
 	<description>PLG_SYSTEM_MODULESANYWHERE_DESC</description>
-	<version>7.7.2</version>
-	<creationDate>December 2018</creationDate>
+	<version>7.9.0</version>
+	<creationDate>January 2020</creationDate>
 	<author>Regular Labs (Peter van Westen)</author>
 	<authorEmail>info@regularlabs.com</authorEmail>
 	<authorUrl>https://www.regularlabs.com</authorUrl>
@@ -40,29 +40,23 @@
 				<field name="@version" type="rl_version" extension="MODULES_ANYWHERE" />
 				<field name="@header" type="rl_header"
 					   label="MODULES_ANYWHERE"
-					   description="MODULES_ANYWHERE_DESC"
+					   description="MODULES_ANYWHERE_DESC,
+							&lt;span class=&quot;rl_code&quot;&gt;{module Main Menu}&lt;/span&gt;,
+							&lt;span class=&quot;rl_code&quot;&gt;{module 3}&lt;/span&gt;,
+							&lt;span class=&quot;rl_code&quot;&gt;{modulepos mainmenu}&lt;/span&gt;,
+							&lt;span class=&quot;rl_code&quot;&gt;{module title=&quot;Main Menu&quot; style=&quot;well&quot;}&lt;/span&gt;"
 					   url="https://www.regularlabs.com/modulesanywhere" />
 			</fieldset>
 
-			<fieldset name="RL_STYLING">
+			<fieldset name="RL_BEHAVIOUR">
 				<field name="style" type="text" default="none"
 					   label="MA_DEFAULT_STYLE"
 					   description="MA_DEFAULT_STYLE_DESC" />
-				<field name="styles" type="text" default="none,division,tabs,well,xhtml"
-					   label="MA_DEFAULT_STYLES"
-					   description="MA_DEFAULT_STYLES_DESC" />
-				<field name="override_style" type="radio" class="btn-group" default="1"
-					   label="MA_ENABLE_STYLE_OVERRIDING"
-					   description="MA_ENABLE_STYLE_OVERRIDING_DESC">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-			</fieldset>
-
-			<fieldset name="RL_BEHAVIOUR">
 				<field name="@notice_override_settings" type="rl_onlypro"
 					   label="MA_ENABLE_PARAMETER_OVERRIDING"
-					   description="MA_ENABLE_PARAMETER_OVERRIDING_DESC" />
+					   description="MA_ENABLE_PARAMETER_OVERRIDING_DESC,
+							&lt;span class=&quot;rl_code&quot;&gt;{module title=&quot;Main Menu&quot; moduleclass_sfx=&quot;red&quot; some_other_setting=&quot;123&quot;}&lt;/span&gt;,
+							&lt;span class=&quot;rl_code&quot;&gt;name=&quot;param[...]&quot;&lt;/span&gt;" />
 				<field name="ignore_access" type="radio" class="btn-group" default="0"
 					   label="MA_IGNORE_MODULE_ACCESS"
 					   description="MA_IGNORE_MODULE_ACCESS_DESC">
@@ -143,8 +137,11 @@
 				</field>
 
 				<field name="@block_default_tag_a" type="rl_block" start="1"
-					   label="MA_DEFAULT_DATA_TAG_SETTINGS"
-					   description="MA_DEFAULT_DATA_TAG_SETTINGS_DESC" />
+					   label="MA_DEFAULT_DATA_TAG_SETTINGS" />
+				<field name="styles" type="text" default="none,division,tabs,well,xhtml"
+					   label="MA_DEFAULT_STYLES"
+					   description="MA_DEFAULT_STYLES_DESC" />
+
 				<field name="showtitle" type="radio" class="btn-group" default=""
 					   label="COM_MODULES_FIELD_SHOWTITLE_LABEL"
 					   description="COM_MODULES_FIELD_SHOWTITLE_DESC">
@@ -186,7 +183,7 @@
 					<option value="0">JNO</option>
 					<option value="">JYES</option>
 				</field>
-				<field name="@jumper" type="note" class="text-center span4 no-animation"
+				<field name="@jumper" type="note" class="text-center span4"
 					   description="&#x3C;&#x69;&#x6D;&#x67;&#x20;&#x73;&#x72;&#x63;&#x3D;&#x22;&#x2E;&#x2E;&#x2F;&#x6D;&#x65;&#x64;&#x69;&#x61;&#x2F;&#x6D;&#x6F;&#x64;&#x75;&#x6C;&#x65;&#x73;&#x61;&#x6E;&#x79;&#x77;&#x68;&#x65;&#x72;&#x65;&#x2F;&#x69;&#x6D;&#x61;&#x67;&#x65;&#x73;&#x2F;&#x6A;&#x75;&#x6D;&#x70;&#x2E;&#x67;&#x69;&#x66;&#x22;&#x20;&#x61;&#x6C;&#x74;&#x3D;&#x22;&#x22;&#x20;&#x77;&#x69;&#x64;&#x74;&#x68;&#x3D;&#x22;&#x31;&#x30;&#x30;&#x22;&#x20;&#x68;&#x65;&#x69;&#x67;&#x68;&#x74;&#x3D;&#x22;&#x31;&#x34;&#x38;&#x22;&#x20;&#x2F;&#x3E;"
 					   showon="handle_core_tags:1[AND]activate_jumper:" />
 			</fieldset>

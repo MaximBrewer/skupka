@@ -2,7 +2,7 @@
 <extension type="component" version="3.0.0" method="upgrade">
 	<name>com_yandex_maps</name>
 	<author>Chupurnov Valeriy</author>
-	<version>4.0.34</version>
+	<version>4.0.50</version>
 	<description>COM_YANDEX_MAPS_DESC</description>
 	<media destination="com_yandex_maps" folder="media/com_yandex_maps">
 		<folder>thumbs</folder>

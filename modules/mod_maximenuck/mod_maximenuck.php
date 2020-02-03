@@ -36,6 +36,7 @@ $params->set('doCompile', $doCompile);
 
 // retrieve menu items
 $thirdparty = $params->get('thirdparty', 'none');
+if ($thirdparty == 'hikashop' && !file_exists(dirname(__FILE__) . '/helper_hikashop.php') ) $thirdparty = 'hikashop2'; // BC compatibility
 switch ($thirdparty) :
 	case 'none':
 		// Include the syndicate functions only once
@@ -94,11 +95,12 @@ switch ($thirdparty) :
 		break;
 	default: // for all thirdparty like virtuemart or adsmanager
 	// case 'adsmanager':
+		if ($thirdparty == 'hikashop2') $thirdparty = 'hikashop'; // BC compatibility
 		// Include the syndicate functions only once
 		if (JFile::exists(JPATH_ROOT . '/plugins/system/maximenuck_'.$thirdparty.'/helper/helper_maximenuck_'.$thirdparty.'.php')) {
 			require_once JPATH_ROOT . '/plugins/system/maximenuck_'.$thirdparty.'/helper/helper_maximenuck_'.$thirdparty.'.php';
 			$className = 'modMaximenuck'.$thirdparty.'Helper';
-			$items = $className::getItems($params, false);
+			$items = $className::getItems($params, $all = false);
 		} else {
 			echo '<p style="color:red;font-weight:bold;">Plugin maximenuck_'.$thirdparty.' not found ! Please download the patch for Maximenu - '.ucfirst($thirdparty).' on <a href="http://www.joomlack.fr">http://www.joomlack.fr</a></p>';
 			return false;
@@ -107,7 +109,7 @@ switch ($thirdparty) :
 endswitch;
 
 // if no item in the menu then exit
-if (!count($items) OR !$items)
+if (!$items OR !count($items))
 	return false;
 
 $document = JFactory::getDocument();
@@ -297,7 +299,8 @@ if ($menuposition) {
 	$document->addStyleDeclaration($fixedcss);
 }
 
-if ($params->get('maximenumobile_enable') === '1') {
+$isMaximenuMobilePluginActive = JPluginHelper::isEnabled('system', 'maximenuckmobile');
+if ($params->get('maximenumobile_enable') === '1' && !$isMaximenuMobilePluginActive) {
 	$mobiletogglercss = "@media screen and (max-width: 524px) {"
 		. "#" . $menuID . " .maximenumobiletogglericonck {display: block !important;font-size: 33px !important;text-align: right !important;padding-top: 10px !important;}"
 		. "#" . $menuID . " ul.maximenuck .maximenumobiletogglerck ~ li.maximenuck.level1 {display: none !important;}"
@@ -307,7 +310,7 @@ if ($params->get('maximenumobile_enable') === '1') {
 }
 
 // add the css classes to show/hide the items
-if (JPluginHelper::isEnabled('system', 'maximenuckmobile')) {
+if ($isMaximenuMobilePluginActive) {
 	$maximenuplugin = JPluginHelper::getPlugin('system', 'maximenuckmobile');
 	$pluginParams = new JRegistry($maximenuplugin->params);
 	$resolution = $pluginParams->get('maximenumobile_resolution', '640');
@@ -361,6 +364,8 @@ if ($usejavascript && $params->get('layout', 'default') != '_:flatlist' && $para
 			. "menuposition : '" . $menuposition . "',"
 			. "effecttype : '" . $effecttype . "',"
 			. "topfixedeffect : '" . $params->get('topfixedeffect', '1') . "',"
+			. "topfixedoffset : '" . $params->get('topfixedoffset', '') . "',"
+			. "clickclose : '" . $params->get('clickclose', '0') . "',"
 			. "fxduration : " . $fxduration . "});"
 			. "});";
 
